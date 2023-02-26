@@ -31,14 +31,14 @@ The interface was designed to be clean, clutter-free and therefore most buttons 
 
 ### Callouts
 
-- Callout Infobox (infobox-l, infobox)
-- multiple columns (wiki-link also to efemkey)- Quickadd/template
-- fnote, memo -Quickadd
-- Aside notes interactiv/fixed (aside-show, aside-hide, aside-in) -Quickadd
+- Callout Infobox (infobox-l, infobox-r)
+- multiple columns (Quickadd/template)
+- fnote, memo (Quickadd req.)
+- Aside notes (interactive/fixed) aside-show, aside-hide, aside-in (Quickadd req.)
 
 ### Citations
 
-- add text tips (on hover) wiki
+- add info bubbles, on hover (wiki)
 - add memo notes (wiki)
 - mini-admonitions (wiki)
 - multicolor highlights (wiki) uses html tags -Quickadd required
@@ -60,20 +60,19 @@ The interface was designed to be clean, clutter-free and therefore most buttons 
 
 ### Poetry
 
-- Initials -build-in Font Quickadd req.
+- Initials (Quickadd req.)
 - Poetry (Title, character text)
-- Trennzeichen (Welle, Normal) wave, etc
-- horizontal line styles - both for normal articles and poetry
+- Horizontal lines styled (Wave, fade, etc)
 
 ### SLIDESHOW
 
-- cleaner and bigger slideshow with the core plugin "slide"
-- features of this theme incorporated
+- cleaner and bigger slideshow area with the core plugin "slide"
+- most features added by this theme are incorporated (sidebox, picture callouts, etc)
 
 ### Pdf export
 
-- replace dark backgrounds of dark Themes with white
-- features of this theme incorporated
+- replace dark themed backgrounds with white, printer-friendly backgrounds 
+- most features added by this theme are incorporated (sidebox, picture callouts, etc)
 
 ### UI reworked
 
@@ -91,29 +90,29 @@ The interface was designed to be clean, clutter-free and therefore most buttons 
 
 ## Roadmap
 
-- [ ] support for tablets
-- [ ] fixes for uncovered devices eg. iPhone, Tablets (user support needed)
+- [ ] support for tablets (user support needed)
+- [ ] fixes for uncovered devices Apple iPhone (user support needed)
 - [ ] implementation of smaller features, if appropriate with the overall aesthetics / usage (user support needed)
 - [ ] compacter code
 - [ ] more distinct colors schemes
 
 ## Thanks
 
-**Sailkite**
-**SlRvb**
-everyone else who helped me
+* **Sailkite**
+* **SlRvb**
+* everyone else who helped me
 
 ## Resources
 
-borrowed and reworked code derived from following sources:
-Braweria - [Spectrum theme](https://github.com/nuttingd/spectrum-obsidian-theme)
-D. Dubinin - [Obsidian Obuntu](https://github.com/dmytrodubinin/Obuntu-theme-for-Obsidian)
-Efemkay - [obsidian-modular-css-layout](https://github.com/efemkay/obsidian-modular-css-layout) (link)
-Slrvb - [In the Shadows](https://github.com/SlRvb/Obsidian--ITS-Theme)
+borrowed and reworked code comes from following sources:
+* Braweria - [Spectrum theme](https://github.com/nuttingd/spectrum-obsidian-theme)
+* D. Dubinin - [Obsidian Obuntu](https://github.com/dmytrodubinin/Obuntu-theme-for-Obsidian)
+* Efemkay - [obsidian-modular-css-layout](https://github.com/efemkay/obsidian-modular-css-layout) (link)
+* Slrvb - [In the Shadows](https://github.com/SlRvb/Obsidian--ITS-Theme)
 
 inspiration from following sources:
-Chetachi - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
-BB.Houmann - [Quickadd](https://github.com/chhoumann/quickadd)
+* Chetachi - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
+* BB.Houmann - [Quickadd](https://github.com/chhoumann/quickadd)
 
 ---
 Fonts and icons added by this theme are licensed under free license models
