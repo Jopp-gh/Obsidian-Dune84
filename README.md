@@ -8,7 +8,7 @@ Printing (Export as PDF) incorporates all features added by this theme, dark the
 
 Particular attention has gotten the smartphone interface, the overall look is more compact, some buttons are slightly bigger for easier haptic feeback and most features implemented in the desktop version work for smartphones as well.
 
-The interface was designed to be a clean, clutter-free experience and therefore most buttons are semi-hidden away by default. With **Style Settings** installed, you can selectively toggle the visibility of buttons and tabs, if desired.
+The interface was designed to be a clean, clutter-free experience and therefore most buttons are semi-hidden by default. With **Style Settings** installed, you can toggle buttons and tabs on and off
 
 
 ### Required
@@ -27,7 +27,8 @@ The interface was designed to be a clean, clutter-free experience and therefore 
 ### Folders
 
 - apply folder colors, prefix your folder names with numbers (up to 10 colors, eg. "0 Name", "1 Name") 
-- apply [folder icons](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) by adding keywords to folder names (wiki use snippet link)
+- apply [folder icons](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) by adding keywords to folder names
+- Drag n Drop -to move your files from folders to your root folder, drag file(s) over the top of your last folder. A blue area will appear where you can drop your file(s)
 
 ### Tables
 
@@ -84,6 +85,8 @@ The interface was designed to be a clean, clutter-free experience and therefore 
 - desktop: to check the status menu, hover over the bottom-right corner
 - phone: easy accessible and readable find-and-replace dialog
 - minor changes to quickly access navigation buttons
+- New Find & replace buttons supported: LP as well as RV (phone, desktop)
+- Profile picture - personalize your vault (phone and desktop)
 
 ### Supported Plugins
 
