@@ -18,6 +18,12 @@ The interface was designed to be a clean, clutter-free experience and therefore 
 - to add more features eg. multiple highlights, Raisecaps, interactive help-bubbles, sideboxes, ect., install ["Quickadd"](https://github.com/chhoumann/quickadd) by chhoumann or ["Html wrapper"](https://github.com/smx0/obs-text-wrapper) by smx0
 - to create custom callouts, install [Admonition](https://github.com/valentine195/obsidian-admonition) by valentine195
 
+### Screenshots Phone
+
+<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9301.png" width="35%"> <img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9302.png" width=34%>
+
+<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9303.png" width=35%> <img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9304.png" width=36%>
+
 ## Features
 
 ### Folders
