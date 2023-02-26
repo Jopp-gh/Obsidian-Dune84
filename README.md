@@ -1,7 +1,5 @@
 # Dune84
 
-(buy coffe)
-
 As a big fan of [Frank Herbert](https://en.wikipedia.org/wiki/Frank_Herbert)'s famous "Dune" novels and its gorgeous cinematic transposition of [Dune](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [David Lynch](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm), i developed this theme to create a pleasant environment for my PKM activities in Obsidian.
 
 This installation offers many features to organize your documents with reworked notes, callouts, custom tables.
@@ -22,7 +20,6 @@ The interface was designed to be a clean, clutter-free experience and therefore 
 
 <img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9301.png" width="35%"> <img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9302.png" width=34%>
 
-<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9303.png" width=35%> <img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9304.png" width=36%>
 
 ## Features
 
@@ -122,5 +119,7 @@ inspiration from following sources:
 - Chetachi - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - BB.Houmann - [Quickadd](https://github.com/chhoumann/quickadd)
 
+## Say Thank you!
+<a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
 ---
 Fonts and icons added by this theme are licensed under free software licenses
