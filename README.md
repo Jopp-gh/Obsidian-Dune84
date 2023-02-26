@@ -13,7 +13,7 @@ The interface was designed to be a clean, clutter-free experience and therefore 
 
 ### Required
 
-- to display **Dune84** the way it was intended to, get ["Style Settings"](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
+- to display **Dune-1984** the way it was intended to, get ["Style Settings"](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
 - to add some features eg. multiple highlights, Raisecaps, interactive help-bubbles, sideboxes, ect., install ["Quickadd"](https://github.com/chhoumann/quickadd) by chhoumann
 - to create custom callouts, install ["Admonition"](https://github.com/valentine195/obsidian-admonition) by valentine195
 
