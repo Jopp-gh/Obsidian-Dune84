@@ -4,21 +4,21 @@
 As a big fan of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s famous Dune novels and its gorgeous cinematic transposition of [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm), i developed this theme to create a pleasant environment for my PKM activities in Obsidian.
 
 This theme offers many features to organize your documents with reworked notes, callouts, custom tables.
-Stilistic elements for poetry and various decorations add a particular touch to your documents, pictures can be customized in a variety of ways.
+Stilistic elements for poetry and various decorations add a particular touch to your documents, pictures are customizable in a variety of ways.
 
 Printing (**Export as PDF**) incorporates all features added by this theme, dark themes preserve their overall color scheme, save for dark backgrounds which will be printed in white.
-**Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Now this interface is bigger, less cluttered and incorporates all features added by this theme
+**Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Slides' interface is now bigger, less cluttered and incorporates all features added by this theme
   
 Particular attention has got the **phone interface**, the overall look is more compact and most features implemented in the desktop version work technically speaking, for phones as well.
-You will get more space on-screen, better bigger buttons easier to spot and an improved haptic feeback for a better flow.
+You will get more space on-screen, better bigger buttons which in return are easier to spot and enable an improved haptic feeback to stay in your flow.
 
-My main goal to design **Dune** was to get a clean, clutter-free experience and therefore most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable everything hidden, if you need to do so.
+My main goal to design **Dune** was to get a clean, clutter-free experience and therefore most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons, if you need to do so.
   
 ### Required
 
 - to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-- to add some features eg. multiple highlights, Raisecaps, sideboxes, ect., get [**Quickadd**](https://github.com/chhoumann/quickadd) by chhoumann
-- to create custom callout boxes, get [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195
+- to add some features eg. Raisecaps, sideboxes, quicker callouts, ect., get [**Quickadd**](https://github.com/chhoumann/quickadd) by chhoumann
+- to generate quickly custom callout boxes, get [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195
 
 
 ### Screenshots
@@ -28,39 +28,37 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 ### Phone
   
-<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9301.png" width="35%"> 
+<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9301.png" width="35%"> <img src="https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/imgs-phone/imgs-phone%E2%80%9302.png" width="34.5%">
 
   
 ## Features
 
-### Folders
+### Folders [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md)
 
-- apply folder colors: rename your folders with up to 10 colors from 1 to 0, eg. `1 Name`
-- apply [folder icons](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) by adding keywords to folder names
+- apply folder colors: rename your folders with up to 10 colors (0 - 9), do so by adding a number prefix before your folder names,  eg. `1 Name`
+- apply folder icons by adding [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names
 - **drag n drop**: to move your files to the root folder, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
 
-### Tables
+### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
-- table styles, eg. `cssclass: academia`  (whiteBlue, academia)
-- table highlight [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
+- table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
+- table highlight  
 
-### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+### Callouts, Notes [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 
-- Callout Infobox (infobox-l, infobox-r)  
-- multiple columns (wiki)  
-- Aside notes -interactive/fixed
-- Picture-wall (moodboard)  [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
-- add simple picture descriptions, eg. `picture#cap|description`
+- Callout Infobox 
+- multiple columns  
+- Aside notes -interactive/fixed 
+- fnote, memo 
 
-### Note highlights
+### List items [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
 
-- mini-admonitions [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
-- fnote, memo [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+- mini-admonitions 
 - theme syntax coloring
 
-### Multimedia
+### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 
-- place pictures, eg. `![[image.png|pos-r]]` (pos-r, pos-c)
+- place pictures, eg. `![[image.png|pos-r]]` (pos-r, pos-c) 
 - format pictures `![[image.png|avatar]]` (avatar, portrait, round)
 - add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
 - add simple frames `![[image.png|frame-m]]` (frame-s, frame-m)
@@ -68,10 +66,13 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
 - zoom manually is the default zoom mode: click and hold on hover
 - auto-zoom on hover (toggle in **Style Settings**)
+- Book pictures 
+- Picture-wall (moodboard) 
+- add simple picture descriptions, eg. `picture#cap|description` 
   
-### Poetry
+### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
   
-- Initials [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
+- Initials 
 - Poetry (Title, character text) - see **Style Settings** 
 - Horizontal lines - add up to 7 line styles from a - f, eg. `cssclass: wave-a`
 
