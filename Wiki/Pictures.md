@@ -1,64 +1,75 @@
+```
 ---
 cssclass: banner-a,
-tags: 
 ---
+```
 
-![[Dune (1984) Directed by David Lynch Kopie 12.jpeg|banner-a]]
+`![[Dune (1984) Directed by David Lynch.jpeg|banner-a]]`
+
+**Options**: banner-a, banner-b
+
+To add a banner, you need to define a `cssclass` AND an `alt name` 
 
 
-
-### Portrait, Avatar
+### Portrait, Avatar, Round
 `![[Pict.png|portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
-shape your images with predefined sizes
 
-![[Pict.png|portrait]]  ![[Pict.png|avatar]] ![[Pict.png|round]]
+shape your images with predefined presets
+
+![I-02](https://user-images.githubusercontent.com/48620536/222981873-06037136-9876-45eb-b0a8-468ed5227443.png)
 
 ### Left, Right and Center side
-`![[Pict.png|frame-a]]`, `![[Pict.png|frame-b]]`, `![[Pict.png#cap|capture]]`
-Frames are not included - add your own. Customize your frames under **Style Settings**
+`![[Pict.png|pos-l]]`, `![[Pict.png|pos-r]]`, `![[Pict.png|pos-c]]`
 
-![[Pict.png|frame-a]] ![[Pict.png|frame-b]]  
+place your images on the Left, Right or Center of your Note
+
+### Image Frames
+`![[Pict.png|frame-a]]` 
+Options: a-d
+
+Frames are not included - add your own frames. Customize your frames under **Style Settings**
+
+![I–03](https://user-images.githubusercontent.com/48620536/222982094-4943ac34-34be-4587-8365-78408b671aff.png)
+
+### Simple Frames
 
 `![[Pict.png|frame-m]]` `![[Pict.png|frame-s]]`
-Change frame color under **Style Settings** 
-![[Pict.png|frame-m]]   ![[Pict.png|frame-s]]
+Change frame colors under **Style Settings** 
+
+![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
+
 
 ### Image description
 ```
-> [!framed-r] 
->  ![[Pict.png|150]]
+> [!framed-l] 
+>  ![[Pict.png|frame-b | 250]]
 >  description
 ```
-> [!framed-l] 
->  ![[Pict.png|frame-a | 250]]
->  description
+Options: framed-r, framed-l
+position your images, add a image frame and description 
 
-Quis sociosqu mi nonummy mattis sagittis turpis suspendisse id, ultricies irure nec iaculis tempor aenean nec. Tellus adipisicing occaecat habitant iaculis ultrices gravida pluribus non tellus torquent consectetur justo nibh commodo adipisicing elit, facilisis nonummy est habitasse ad. Taciti cras viverra aliquet anim netus hendrerit rhoncus minim aenean neque, aenean id tempor tempor pluribus veniam deserunt proin vel ad exercitation exercitation. Pariatur dui sollicitudin cillum adipisicing, curae sem justo leo nostrud euismod phasellus.
-> [!framed-r] 
->  ![[Pict.png|150]]
->  description
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Vehicula nulla sed leo cum, netus auctor sagittis lectus pede. Lacus tempus adipiscing quam hendrerit est amet hendrerit erat, proident consectetuer egestas metus. Nulla adipiscing convallis nec diam faucibus proin minim risus curae quis mauris irure vivamus stevirota, ad metus nam tincidunt montes.
-
+![I–05](https://user-images.githubusercontent.com/48620536/222982159-2f481d4c-634e-491f-9ac6-8b73ecbda539.png)
 
 
 ### Simple description
 `![[Pict.png#cap|capture]]`
-![[Pict.png#cap|capture]]
+
+![I–06](https://user-images.githubusercontent.com/48620536/222982200-63caf748-6a65-42e3-a927-f262103943e6.png)
+
 
 ### moodboard
-
+```
 > [!moodboard]
-> ![[Dune (1984) Directed by David Lynch Kopie 3.jpeg]] ![[Dune (1984) Directed by David Lynch Kopie 12.jpeg]]![[Dune (1984) Directed by David Lynch Kopie 5.jpeg]]
+> ![[pic1.jpeg]] ![[Pict2.jpeg]]![[Pict3.jpeg]]
 > 
-> ![[Dune (1984) Directed by David Lynch Kopie 4.jpeg]] ![[Dune (1984) Directed by David Lynch Kopie 8.jpeg]] ![[Dune (1984) Directed by David Lynch Kopie 6.jpeg]] 
->
-> ![[Dune (1984) Directed by David Lynch Kopie 7.jpeg]] ![[Dune (1984) Directed by David Lynch Kopie 10.jpeg]] ![[Dune (1984) Directed by David Lynch Kopie 9.jpeg]]
+> ![[Pict4.jpeg]] ![[Pict5.jpeg]] ![[Pict6.jpeg]] 
+```
+a picture wall. 
 
+### Video resized 
+**Options**: 20, 30, 40, 50 (120, 150, 200) 
 
+resize videos bigger or smaller, as you like
 
-### Video scaled - 20, 30, 40, 50 (120, 150, 200) 
+![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
 
-![[Bildschirmfoto 2023-02-22 um 15.45.56.png]]
