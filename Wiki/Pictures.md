@@ -4,7 +4,7 @@ cssclass: banner-a,
 ---
 ```
 
-`![[Dune (1984) Directed by David Lynch.jpeg|banner-a]]`
+`![[Pict.jpeg|banner-a]]`
 
 **Options**: banner-a, banner-b
 
@@ -16,7 +16,6 @@ To add a banner, you need to define a `cssclass` AND an `alt name`
 
 `![[Pict.png|portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
 
-shape your images with predefined presets
 
 ![I-02](https://user-images.githubusercontent.com/48620536/222981873-06037136-9876-45eb-b0a8-468ed5227443.png)
 
@@ -33,6 +32,7 @@ place your images on the Left, Right or Center of your Note
 ### Image Frames
 
 `![[Pict.png|frame-a]]` 
+
 Options: a-d
 
 Frames are not included - add your own frames. Customize your frames under **Style Settings**
@@ -50,14 +50,15 @@ Change frame colors under **Style Settings**
 
 <br>
 
-### Image description
+### Book images
 
 ```
 > [!framed-l] 
 >  ![[Pict.png|frame-b | 250]]
 >  description
 ```
-Options: framed-r, framed-l
+**Options**: framed-r, framed-l
+
 position your images, add a image frame and description 
 
 ![I–05](https://user-images.githubusercontent.com/48620536/222982159-2f481d4c-634e-491f-9ac6-8b73ecbda539.png)
@@ -89,9 +90,9 @@ a picture wall, keep an emtpy line between grouped images
 
 `![[video.mp4|vid-20]] `
 
-**Options**: 20, 30, 40, 50 (120, 150, 200) 
-
-resize videos bigger or smaller
+**Options**: 
+smaller - 20, 30, 40, 50, 
+bigger -120, 150, 200
 
 ![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
 
