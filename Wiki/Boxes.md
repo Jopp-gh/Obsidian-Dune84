@@ -1,49 +1,44 @@
----
-cssclass: fade-2,
-tags: 
----
 
 ### Aside-hide
-<s class="aside-hide">Abc</s>
+
 ```
 <s class="aside-hide">Abc</s>
 ```
-<br>
+Hover over the bar on the right to reveal a hidden box 
+
+![B1](https://user-images.githubusercontent.com/48620536/222979880-64b7d178-7804-4d3b-b089-2375df712e94.png)
+
 
 ### Aside-in
-<s class="aside-in">Abc</s>
-<br>
 
 ```
 <s class="aside-in">Abc</s>
 ```
+
+![B2](https://user-images.githubusercontent.com/48620536/222979913-e8e15146-725f-47d4-8126-b7c4055d261e.png)
+
 
 ### Multi-column
+
+```
+> [!multi-column]
+>
+>> [!check]+ Title 1
+>> 
+>> - words words words  
+>> - words words words  
+>
+>> [!info]+ Title 2
+>> - words words **words**
+```
 Generate custom callout boxes with the Admonition plugin
 
-> [!multi-column]
->
->> [!check]+ Titel 1
->> 
->> - Worte Worte Worte  
->> - Worte Worte Worte  
->
->> [!info]+ Titel 2
->> - Worte Worte **Worte**
+![B3](https://user-images.githubusercontent.com/48620536/222980074-7f5294b8-d4ad-4cf5-8436-97f909303e86.png)
 
-```
-> [!multi-column]
->
->> [!check]+ Titel 1
->> 
->> - Worte Worte Worte  
->> - Worte Worte Worte  
->
->> [!info]+ Titel 2
->> - Worte Worte **Worte**
-```
 
 ### Sidebox
+
+```
 (infobox-l, infobox-r)
   > [!infobox-r]
 > ## Title
@@ -51,31 +46,23 @@ Generate custom callout boxes with the Admonition plugin
 > ## Info
 > A|  B |
 > ---|---|
-> Text| ([Links](https://de.wikipedia.org/wiki/Madison)) |
-
-Quis sociosqu mi nonummy mattis sagittis turpis suspendisse id, ultricies irure nec iaculis tempor aenean nec. Tellus adipisicing occaecat habitant iaculis ultrices gravida pluribus non tellus torquent consectetur justo nibh commodo adipisicing elit, facilisis nonummy est habitasse ad. Taciti cras viverra aliquet anim netus hendrerit rhoncus minim aenean neque, aenean id tempor tempor pluribus veniam deserunt proin vel ad exercitation exercitation. Pariatur dui sollicitudin cillum adipisicing, curae sem justo leo nostrud euismod phasellus.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Vehicula nulla sed leo cum, netus auctor sagittis lectus pede. Lacus tempus adipiscing quam hendrerit est amet hendrerit erat, proident consectetuer egestas metus. Nulla adipiscing convallis nec diam faucibus proin minim risus curae quis mauris irure vivamus stevirota, ad metus nam tincidunt montes.
+> Text| ([Links](https://en.wikipedia.org/wiki/Frank_Herbert)) |
+```
+![B4](https://user-images.githubusercontent.com/48620536/222980230-ca87423e-20fb-4680-8997-0b1a74e3c4a3.png)
 
 
 ### Footnote, Memo
 
-```fnote
-words words words words 
-```
 ````
 ```fnote
 words words words words 
 ```
 ````
-```memo
-words words words words 
-```
+![B5](https://user-images.githubusercontent.com/48620536/222980315-de269958-b6c6-4fc8-9c2c-45376b9a2dac.png)
 
 ````
 ```memo
 words words words words 
 ```
 ````
+![B6](https://user-images.githubusercontent.com/48620536/222980320-522edae0-5a75-4ed3-ad47-a3c423ed004a.png)
