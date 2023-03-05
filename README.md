@@ -42,20 +42,20 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 ### Tables
 
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia)
-- table highlight **(wiki)** [[Tabellen]]
+- table highlight [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
-### Callouts
+### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 
-- Callout Infobox (infobox-l, infobox-r)  **(wiki)** [[Info-Felder]]
-- multiple columns (wiki)  **(wiki)** [[Info-Felder]]
-- Aside notes -interactive/fixed  **(wiki)** [[Info-Felder]]
-- Picture-wall (moodboard)  **(wiki)** [[Beispiel - Bilder]]
+- Callout Infobox (infobox-l, infobox-r)  
+- multiple columns (wiki)  
+- Aside notes -interactive/fixed
+- Picture-wall (moodboard)  [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 - add simple picture descriptions, eg. `picture#cap|description`
 
 ### Note highlights
 
-- mini-admonitions **(wiki)** [[Mini admonition]]
-- fnote, memo **(wiki)** [[Info-Felder]]
+- mini-admonitions [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
+- fnote, memo [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 - theme syntax coloring
 
 ### Multimedia
@@ -71,7 +71,7 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
   
 ### Poetry
   
-- Initials **(wiki)**  [[Beispiel Poesie]]
+- Initials [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
 - Poetry (Title, character text) - see **Style Settings** 
 - Horizontal lines - add up to 7 line styles from a - f, eg. `cssclass: wave-a`
 
@@ -89,7 +89,7 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 - #phone: new **find-and-replace** dialog
 - #phone: bigger buttons, more space on screen
-- #phone: remove **path and / or file name** from your note header - to rename, use the command palette instead
+- #phone: remove **path and / or file name** from the note header - to rename, use the command palette instead
 - #desktop: you can rename notes with right-click on your active tab, in your folder-tree (re-enable "Show note title" in **Style Settings** if you want your note title to be displayed)
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings**, if desired)
 - #desktop Readable line width is supported (see "Spacing" in **Style Settings**)
