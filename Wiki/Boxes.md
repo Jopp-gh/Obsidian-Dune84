@@ -4,7 +4,7 @@
 ```
 <s class="aside-hide">Abc</s>
 ```
-Hover over the bar on the right to reveal a hidden box 
+Hover over the thin bar on your right to reveal a hidden box 
 
 ![B1](https://user-images.githubusercontent.com/48620536/222979880-64b7d178-7804-4d3b-b089-2375df712e94.png)
 
@@ -39,8 +39,7 @@ Generate custom callout boxes with the Admonition plugin
 ### Sidebox
 
 ```
-(infobox-l, infobox-r)
-  > [!infobox-r]
+> [!infobox-r]
 > ## Title
 > ![[Pict.png]]
 > ## Info
@@ -48,6 +47,7 @@ Generate custom callout boxes with the Admonition plugin
 > ---|---|
 > Text| ([Links](https://en.wikipedia.org/wiki/Frank_Herbert)) |
 ```
+Options: (infobox-l, infobox-r)
 ![B4](https://user-images.githubusercontent.com/48620536/222980230-ca87423e-20fb-4680-8997-0b1a74e3c4a3.png)
 
 
