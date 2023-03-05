@@ -1,7 +1,8 @@
 # Customize Folders
 
-to add folder icons, download "folder-icons.css" and activate it in Obsidian.
-activate the css snippet Folder-icons.css and name your folders with one of the following names:
+This snippet is an extension of Dune, because this way you get the chance to display the icons you like with the keywords you need. 
+To add this snippet, download [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons.css), then [install folder-icons.css](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) before you change anything in Obsidian. 
+To get started, pick a random keyword listed below for a quick test (keywords which share the same icon are separated with a slash "/"): 
 
 - Workbench
 - Journal / Training / Education
@@ -25,3 +26,5 @@ activate the css snippet Folder-icons.css and name your folders with one of the 
 - Language
 - Code / Shell
 - Game
+
+**TIP:** to add colors and icons to your folders, use this name scheme, eg. `1 Project`
