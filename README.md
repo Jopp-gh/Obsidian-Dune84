@@ -6,13 +6,13 @@ As a big fan of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)
 This theme offers many features to organize your documents with reworked notes, callouts, custom tables.
 Stilistic elements for poetry and various decorations add a particular touch to your documents, pictures are customizable in a variety of ways.
 
-Printing (**Export as PDF**) incorporates all features added by this theme, dark themes preserve their overall color scheme, save for dark backgrounds which will be printed in white.
-**Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Slides' interface is now bigger, less cluttered and incorporates all features added by this theme
+Printing (**Export as PDF**) includes all features added by this theme, dark themes preserve their overall color scheme, save for dark backgrounds which will be printed in white.
+**Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Slides' interface is now bigger, less cluttered and includes as well all features added by this theme
   
-Particular attention has got the **phone interface**, the overall look is more compact and most features implemented in the desktop version work technically speaking, for phones as well.
-You will get more space on-screen, better bigger buttons which in return are easier to spot and enable an improved haptic feeback to stay in your flow.
+Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, for phones, too.
+Phone interfaces will get more space on-screen, better bigger buttons which in return are easier to spot and enable an improved haptic feeback to stay in flow.
 
-My main goal to design **Dune** was to get a clean, clutter-free experience and therefore most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons, if you need to do so.
+My main goal to design **Dune** was to get a clean, clutter-free experience and therefore most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable all of them again, if you really need so.
   
 ### Required
 
@@ -23,8 +23,8 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 ### Screenshots
 
+![B2](https://user-images.githubusercontent.com/48620536/222985186-25ca849a-bdd2-4e05-99e8-20d3f19cd176.png)
 
-  
 
 ### Phone
   
@@ -79,12 +79,12 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 ### Slideshow
 
 - cleaner and bigger slideshow section for the core plugin **Slide**
-- most features added by this theme are incorporated (sidebox, picture callouts, etc)  
+- most features added by this theme work in Slide (sidebox, picture callouts, etc)  
 
 ### Pdf export
 
 - replace dark themed backgrounds with white, printer-friendly backgrounds
-- most features added by this theme are incorporated (sidebox, picture callouts, etc)
+- most features added by this theme work with pdf export (sidebox, picture callouts, etc)
 
 ### UI improvements
 
@@ -95,7 +95,7 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings**, if desired)
 - #desktop Readable line width is supported (see "Spacing" in **Style Settings**)
 - personalize your vault with a **Profile picture** (see "Pictures" in **Style Settings**)
-- Garble your document ("cssclass: hide-doc") and / or your App interface (see "Show UI elements" in **Style Settings** toggle)
+- Garble your document `cssclass: hide-doc` and / or your App interface (see "Show UI elements" in **Style Settings** toggle)
 
 ### Supported Plugins
 
@@ -110,13 +110,13 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 - [x] Android
 - [ ] iPhone (user support needed)
 - [ ] Tablet (user support needed)
-- [ ] more colors schemes
+- [ ] minor fixes, some features 
 
 ## Thanks
 
-- **Sailkite**
-- **SlRvb**
-- everyone else who helped me  
+- **[Sailkite](https://github.com/sailKiteV)**
+- **[SlRvb](https://github.com/SlRvb)**
+- everyone else helping me  
 
 ### Resources
 
