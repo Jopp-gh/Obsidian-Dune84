@@ -10,9 +10,9 @@ Printing (**Export as PDF**) includes all features added by this theme, dark the
 **Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Slides' interface is now bigger, less cluttered and includes as well all features added by this theme
   
 Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, for phones, too.
-Phone interfaces will get more space on-screen, better bigger buttons which in return are easier to spot and enable an improved haptic feeback to stay in flow.
+Notes on phone interfaces have more breath, better and bigger buttons easier to spot and therefore a improved haptic feeback to stay in flow.
 
-My main goal to design **Dune** was to get a clean, clutter-free experience and therefore most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable all of them again, if you really need so.
+My main goal for **Dune** was to get a clean, clutter-free experience and so most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons and tabs if you are used to Obsidians default interface.
   
 ### Required
 
@@ -23,19 +23,14 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 ### Screenshots
 
-![B2](https://user-images.githubusercontent.com/48620536/222985186-25ca849a-bdd2-4e05-99e8-20d3f19cd176.png)
-
-
-### Phone
-  
-<img src="https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/imgs-phone/Dune-phone%E2%80%9301.png" width="35%"> <img src="https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/imgs-phone/imgs-phone%E2%80%9302.png" width="34.5%">
+![Titelbild-Dune-3](https://user-images.githubusercontent.com/48620536/223217014-a8210bf2-3bcb-4606-ac03-360641ac8a9c.jpg)
 
   
 ## Features
 
 ### Folders [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md)
 
-- apply folder colors: rename your folders with up to 10 colors (0 - 9), do so by adding a number prefix before your folder names,  eg. `1 Name`
+- apply folder colors: rename your folders with up to 10 colors (0 - 9), add a number in front of your folder names,  eg. `1 Name`
 - apply folder icons by adding [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names
 - **drag n drop**: to move your files to the root folder, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
 
@@ -62,7 +57,7 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 - format pictures `![[image.png|avatar]]` (avatar, portrait, round)
 - add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
 - add simple frames `![[image.png|frame-m]]` (frame-s, frame-m)
-- add Banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
+- add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
 - zoom manually is the default zoom mode: click and hold on hover
 - auto-zoom on hover (toggle in **Style Settings**)
@@ -76,9 +71,9 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 - Poetry (Title, character text) - see **Style Settings** 
 - Horizontal lines - add up to 7 line styles from a - f, eg. `cssclass: wave-a`
 
-### Slideshow
+### Slide(show)
 
-- cleaner and bigger slideshow section for the core plugin **Slide**
+- cleaner and bigger slideshow section for Obsidians core plugin **Slide**
 - most features added by this theme work in Slide (sidebox, picture callouts, etc)  
 
 ### Pdf export
@@ -90,11 +85,11 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 - #phone: new **find-and-replace** dialog
 - #phone: bigger buttons, more space on screen
-- #phone: remove **path and / or file name** from the note header - to rename, use the command palette instead
-- #desktop: you can rename notes with right-click on your active tab, in your folder-tree (re-enable "Show note title" in **Style Settings** if you want your note title to be displayed)
+- #phone: remove **path and / or file name** from the note header - to rename, use the command palette instead, 
+- #desktop: you can rename notes with right-click on your active tab, or you hover over the note bar or right-click your file/folder in the folder-tree view 
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings**, if desired)
 - #desktop Readable line width is supported (see "Spacing" in **Style Settings**)
-- personalize your vault with a **Profile picture** (see "Pictures" in **Style Settings**)
+- personalize your vault with a true **Profile picture** (see "Pictures" in **Style Settings**)
 - Garble your document `cssclass: hide-doc` and / or your App interface (see "Show UI elements" in **Style Settings** toggle)
 
 ### Supported Plugins
@@ -108,7 +103,6 @@ My main goal to design **Dune** was to get a clean, clutter-free experience and 
 
 - [x] MacOs
 - [x] Android
-- [ ] iPhone (user support needed)
 - [ ] Tablet (user support needed)
 - [ ] minor fixes, some features 
 
