@@ -8,7 +8,7 @@ cssclass: banner-a,
 
 **Options**: banner-a, banner-b
 
-To add a banner, you need to define a `cssclass` AND an `alt name` 
+To add a neat banner, you must define both `cssclass` AND `alt name`. 
 
 <br>
 
@@ -25,17 +25,17 @@ To add a banner, you need to define a `cssclass` AND an `alt name`
 
 `![[Pict.png|pos-l]]`, `![[Pict.png|pos-r]]`, `![[Pict.png|pos-c]]`
 
-place your images on the Left, Right or Center of your Note
+place your images on the Left, Right or at the Center of your note
 
 <br>
 
-### Image Frames
+### Picture Frames
 
 `![[Pict.png|frame-a]]` 
 
 Options: a-d
 
-Frames are not included - add your own frames. Customize your frames under **Style Settings**
+Frame your pictures. Download some frames like [this png template](https://pngimg.com/image/91008). Customize your frames under **Style Settings**
 
 ![I–03](https://user-images.githubusercontent.com/48620536/222982094-4943ac34-34be-4587-8365-78408b671aff.png)
 
@@ -44,13 +44,13 @@ Frames are not included - add your own frames. Customize your frames under **Sty
 ### Simple Frames
 
 `![[Pict.png|frame-m]]` `![[Pict.png|frame-s]]`
-Change frame colors under **Style Settings** 
+Change picture frame colors under **Style Settings** 
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
 <br>
 
-### Book images
+### Book pictures
 
 ```
 > [!framed-l] 
@@ -59,7 +59,7 @@ Change frame colors under **Style Settings**
 ```
 **Options**: framed-r, framed-l
 
-position your images, add a image frame and description 
+position your images, add a picture frame and description 
 
 ![I–05](https://user-images.githubusercontent.com/48620536/222982159-2f481d4c-634e-491f-9ac6-8b73ecbda539.png)
 
@@ -80,9 +80,14 @@ position your images, add a image frame and description
 > ![[pic1.jpeg]] ![[Pict2.jpeg]]![[Pict3.jpeg]]
 > 
 > ![[Pict4.jpeg]] ![[Pict5.jpeg]] ![[Pict6.jpeg]] 
+> 
+> ![[Pict7.jpeg]] ![[Pict8.jpeg]] ![[Pict9.jpeg]] 
 ```
+![I-10](https://user-images.githubusercontent.com/48620536/223212661-17a473b1-8151-4aac-b558-42c7fafe59a1.jpg)
 
-a picture wall, keep an emtpy line between grouped images
+**Options**: Configure height and width under `Style Settings>Pictures>Zoom Pictures`
+
+the more pictures in a picture wall, the more you get a seamless board. To remove empty space and build a neat picture wall, adjust sliders in **Style Settings** accordingly. Keep an empty line between each line of pictures. 
 
 <br>
 
