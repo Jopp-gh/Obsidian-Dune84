@@ -9,11 +9,12 @@ Stilistic elements for poetry and various decorations add a particular touch to 
 Printing (**Export as PDF**) keeps your overall color scheme, except for dark themed backgrounds, which will be replaced with white backgrounds.
 **Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Now Slides' interface is bigger, less cluttered and includes as well all features added by this theme
   
-Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, on the phone version, too.
+Particular attention `:has` got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, on the phone version, too.
 Your notes will have more breath, bigger buttons are easier to spot and therefore, keep your interaction in flow.
 
 My main goal for **Dune** was to get a clean, clutter-free experience and so most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons and tabs if you prefer Obsidians default interface.
 
+To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a color scheme (Dune 1 or Dune 2) for your light theme and a color scheme for your dark theme (Dune 3 or Dune 4). Enjoy!
   
 ### Required
 
@@ -32,7 +33,7 @@ My main goal for **Dune** was to get a clean, clutter-free experience and so mos
 ### Folders [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md)
 
 - apply folder colors: rename folders with up to 10 colors (0 - 9), add a number in front of your folder names,  eg. `1 Name`
-- apply folder icons by adding [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names ( the keyword must be last if you add multiple words in a name)
+- apply folder icons: add [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names (the keyword must be last if you add multiple words in a name)
 - **drag n drop**: to drop files/folders to your root vault directory, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
 
 ### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
@@ -117,7 +118,7 @@ My main goal for **Dune** was to get a clean, clutter-free experience and so mos
 
 ### Resources
 
-Fonts and icons added by this theme are licensed under free software licenses,
+Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons.css) added by this theme are licensed under free software licenses,
 borrowed and reworked code comes from following sources:
 
 - Braweria - [Spectrum](https://github.com/nuttingd/spectrum-obsidian-theme)
