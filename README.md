@@ -46,6 +46,7 @@ My main goal for **Dune** was to get a clean, clutter-free experience and so mos
 - multiple columns  
 - Aside notes -interactive/fixed 
 - fnote, memo (small boxes)
+- simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
 
 ### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
 
