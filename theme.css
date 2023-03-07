@@ -784,14 +784,8 @@ body {
     --nav-item-background-selected: rgb(244 155 31 / 40%);
 
     --text-selection: rgb(239 206 116 / 70%);
-    --text-accent: Initial;
     --header-col: #c66102;
 
-    --background-primary: Initial;
-    --background-primary-alt: Initial;
-    --background-secondary: Initial;
-    --background-secondary-alt: Initial;
-    --background-modifier-border: Initial;
 
     --h1-color: var(--header-col);
     --h2-color: var(--header-col);
@@ -800,12 +794,6 @@ body {
     --h5-color: var(--h4-color);
     --h6-color: var(--h4-color);
 
-    --text-normal: Initial;
-    --text-muted: Initial;
-    --text-faint: Initial;
-    --link-color: Initial;
-    --bold-color: Initial;
-    --italic-color: Initial;
 }
 
 body.theme-light {
