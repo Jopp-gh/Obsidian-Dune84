@@ -6,13 +6,14 @@ As a big fan of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)
 This theme offers many features to organize your documents with reworked notes, callouts, custom tables.
 Stilistic elements for poetry and various decorations add a particular touch to your documents, pictures are customizable in a variety of ways.
 
-Printing (**Export as PDF**) includes all features added by this theme, dark themes preserve their overall color scheme, save for dark backgrounds which will be printed in white.
+Printing (**Export as PDF**) keeps your overall color scheme, except for dark themed backgrounds, which will be replaced with white backgrounds.
 **Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Now Slides' interface is bigger, less cluttered and includes as well all features added by this theme
   
-Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, for the phone version, too.
-Your notes will have more breath, better and bigger buttons aid spot quickely relevant buttons and therefore improved your flow.
+Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, on the phone version, too.
+Your notes will have more breath, better and bigger buttons aid you to spot quickely relevant buttons and therefore keep you in flow.
 
 My main goal for **Dune** was to get a clean, clutter-free experience and so most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons and tabs if you prefer Obsidians default interface.
+
   
 ### Required
 
@@ -32,7 +33,7 @@ My main goal for **Dune** was to get a clean, clutter-free experience and so mos
 
 - apply folder colors: rename folders with up to 10 colors (0 - 9), add a number in front of your folder names,  eg. `1 Name`
 - apply folder icons by adding [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names ( the keyword must be last if you add multiple words in a name)
-- **drag n drop**: to move your files to the root folder, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
+- **drag n drop**: to drop files/folders to your root vault directory, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
 
 ### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
@@ -91,6 +92,7 @@ My main goal for **Dune** was to get a clean, clutter-free experience and so mos
 - #desktop **Readable line width** is supported (see **Style Settings>Spacing**)
 - personalize your vault with a true **Profile picture** (see "Pictures" in **Style Settings**)
 - garble your note `cssclass: hide-doc` and / or your App interface (see "Show UI elements" in **Style Settings** toggle)
+- pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
 
 ### Supported Plugins
 
