@@ -871,7 +871,8 @@ body.theme-dark {
 /* Color Models */
 
 body.col-mod-a .theme-light,
-body.col-mod-a.theme-light {
+body.col-mod-a.theme-light,
+body.theme-light {
     --text-selection: rgb(239 206 116 / 70%);
     --text-accent: #DD9417;
     --header-col: #c66102;
@@ -925,7 +926,8 @@ body.col-mod-b.theme-light {
 }
 
 body.col-mod-c .theme-dark,
-body.col-mod-c.theme-dark {
+body.col-mod-c.theme-dark,
+body.theme-dark {
     --text-selection: rgb(208 91 41 / 70%);
     --text-accent: #FFAA1A;
     --menu-btn-color: #f2e79c;
