@@ -10,7 +10,7 @@ Printing (**Export as PDF**) keeps your overall color scheme, except for dark th
 **Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Now Slides' interface is bigger, less cluttered and includes as well all features added by this theme
   
 Particular attention has got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, on the phone version, too.
-Your notes will have more breath, better and bigger buttons aid you to spot quickely relevant buttons and therefore keep you in flow.
+Your notes will have more breath, bigger buttons are easier to spot and therefore, keep your interaction in flow.
 
 My main goal for **Dune** was to get a clean, clutter-free experience and so most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons and tabs if you prefer Obsidians default interface.
 
