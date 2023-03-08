@@ -38,9 +38,11 @@ Use **wideTable** to cover the whole page
 
 `cssclass: wideTable, academia`
 
-![table–06](https://user-images.githubusercontent.com/48620536/222981365-70e11c1d-0f31-4e1f-82ad-f26b1cda92fe.png)
+![tableSt–01](https://user-images.githubusercontent.com/48620536/223588651-fd627851-6155-4d78-a764-d9c9094bcfb8.png)
+
 
 `cssclass: wideTable, whiteBlue`
 
-![table–07](https://user-images.githubusercontent.com/48620536/222981373-cc56b77f-df5e-4be3-8f33-7fefa5eb3ef8.png)
+![tableSt–02](https://user-images.githubusercontent.com/48620536/223588682-3fa904e0-8181-4d60-9485-0678f8d71862.png)
+
 
