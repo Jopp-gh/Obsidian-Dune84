@@ -108,6 +108,7 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
 - [x] MacOs
 - [x] Android
 - [ ] Tablet (user support needed)
+- [ ] clean embeds
 - [ ] minor fixes, some features 
 
 ## Thanks
