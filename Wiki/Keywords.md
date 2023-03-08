@@ -35,6 +35,8 @@ To get started, pick a random keyword listed below (keywords which share the sam
 
 ### Important
 
-Just make sure to add a valid number (single digit) in front of your folder name (must be the very first character of your folder name) from 0 - 9 followed by an `empty space` or `hyphen`
-Keywords are case sensitive, this means, if you add eg. "project" instead of eg "Project", then keywords won't apply icons. Check the folder-icons.css and make changes as you see fit. You can add or remove keywords, change to lowercase and change or remove icons. Find a list of available icons on top page of folder-icons.css
+Just make sure to add a valid number (single digit) in front of your folder name (must be the very first character of your folder name) from 0 - 9 followed by an `empty space` or `hyphen`.
+
+Keywords are case sensitive, this means, if you add eg. "project" instead of eg "Project", then keywords won't apply icons.
+Check the folder-icons.css snippet and make changes as you see fit. You can add or remove keywords, change keywords to lowercase and change or remove icons. Find a list of available icons on top page of the above mentioned snippet.
 
