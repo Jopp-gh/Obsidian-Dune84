@@ -50,6 +50,18 @@ Generate custom callout boxes with the Admonition plugin
 Options: (infobox-l, infobox-r)
 ![B4](https://user-images.githubusercontent.com/48620536/222980230-ca87423e-20fb-4680-8997-0b1a74e3c4a3.png)
 
+### Read more…
+Callout to shorten longer documents
+
+```
+> [!read-more…]- 
+> Lorem ipsum etc
+```
+
+```
+ > [!weiterlesen…]-
+ > Lorem ipsum etc
+```
 
 ### Footnote, Memo
 
@@ -58,11 +70,11 @@ Options: (infobox-l, infobox-r)
 words words words words 
 ```
 ````
-![B5](https://user-images.githubusercontent.com/48620536/222980315-de269958-b6c6-4fc8-9c2c-45376b9a2dac.png)
+![Lorem ipsum etc2](https://user-images.githubusercontent.com/48620536/224421103-b70f59bb-dd4d-4452-a65c-44c67b912999.png)
 
 ````
 ```memo
 words words words words 
 ```
 ````
-![B6](https://user-images.githubusercontent.com/48620536/222980320-522edae0-5a75-4ed3-ad47-a3c423ed004a.png)
+![Lorem ipsum etc1](https://user-images.githubusercontent.com/48620536/224421063-c53dd61d-7adb-4ab2-b3e1-fef9bb81787c.png)
