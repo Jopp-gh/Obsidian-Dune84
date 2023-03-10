@@ -1542,7 +1542,7 @@ body:not(.is-grabbing) .nav-folder-title:hover,
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     width: 5px;
-    /* background-color: var(--background-primary); */
+    border: none;
 }
 
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover,
