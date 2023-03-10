@@ -25,7 +25,7 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
 
 ### Screenshots
 
-![Titelbild-Dune-3](https://user-images.githubusercontent.com/48620536/223217014-a8210bf2-3bcb-4606-ac03-360641ac8a9c.jpg)
+![Titelbild-Dune-3](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Dune-Obsidian.jpg)
 
   
 ## Features
@@ -33,8 +33,8 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
 ### Folders [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md)
 
 - apply folder colors: rename folders with up to 10 colors (0 - 9), add a number in front of your folder names,  eg. `1 Name`
-- apply folder icons: add [keywords](https://github.com/Jopp-gh/Obsidian-Dune83/blob/main/folder%20keywords) to folder names (the keyword must be last if you add multiple words in a name)
-- **drag n drop**: to drop files/folders to your root vault directory, drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
+- apply folder icons: add keywords to folder names (the keyword must be last if you add multiple words in a name)
+- [drag n drop](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md): to drop files/folders to your root directory
 
 ### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
@@ -47,6 +47,7 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
 - multiple columns  
 - Aside notes -interactive/fixed 
 - fnote, memo (small boxes)
+- Callout to shorten longer documents: use `> [!read-more…]` 
 - simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
 
 ### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
@@ -72,7 +73,7 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
   
 - Initials 
 - Poetry fonts, alignment - see "Poetry fonts" and "Extra colors" in **Style Settings** 
-- Horizontal lines - add up to 7 line styles from a - f, eg. `cssclass: wave-a`
+- Horizontal lines - add up to 7 line styles from a - g, eg. `cssclass: wave-a`
 
 ### Slide(show)
 
@@ -88,11 +89,11 @@ To start using my theme, open `Style Settings>Dune>Colors>Theme` and choose a co
 
 - #phone: new **find-and-replace** dialog
 - #phone: bigger buttons, overall more space on screen
-- #phone: remove **path and / or file name** from your note header - to rename, use the command palette instead
+- #phone: remove **path and / or file name** from your note header - to rename, use the command palette or touch the topmost left-side on your display
 - #desktop: rename your notes with right-click on your active tab, or hovering over your note header or via right-click on your file/folder in the folder-tree view 
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings**, if desired)
-- #desktop **Readable line width** is supported (see **Style Settings>Spacing**)
-- personalize your vault with a true **Profile picture** (see "Pictures" in **Style Settings**)
+- #desktop **Readable line width** is supported (see `Style Settings>Spacing`)
+- personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see `Style Settings>Pictures`)
 - garble your note `cssclass: hide-doc` and / or your App interface (see "Show UI elements" in **Style Settings** toggle)
 - pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
 
