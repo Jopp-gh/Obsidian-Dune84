@@ -298,11 +298,21 @@ settings:
     collapsed: true
   -
     id: zoom-auto
-    title: Zoom on hover
+    title: zoom on hover
     description: Zoom images on hover
     title.de: Bild Vergrößerung
     description.de: Vergrößerung beim überfahren
     type: class-toggle
+  -
+    id: banner-v-align
+    title: place banner
+    title.de: Bildstreifen ausrichten
+    type: variable-number-slider
+    format: '%'
+    default: 0
+    min: 0
+    max: 90
+    step: 2
   -
     id: pictwall-height
     title: image wall height
@@ -338,9 +348,16 @@ settings:
     description.de: benutze ein Profilbild für deinen Vault
     type: class-toggle
   -
+    id: profile-banner
+    title: Vault Profile Banner
+    description: Add a banner profile
+    title.de: Vault Profilbildstreifen
+    description.de: benutze ein Profilbildstreifen
+    type: class-toggle
+  -
     id: profile-pic-mono
     title: Monochrome Vault Profile
-    description: automatic B/W switch (dark theme)
+    description: automatic B/W switch
     title.de: Schwarzweiß Profilbild
     description.de: automatisches S/W Schalter (dunkles Thema)
     type: class-toggle
@@ -571,9 +588,9 @@ settings:
   -
     id: code-utils
     title: Current Line
-    description: highlight current line / paragraph
+    description: highlight current line / paragraph (only edit mode)
     title.de: Aktuelle Zeile
-    description.de: Aktuelle Zeile hervorheben / Paragraph
+    description.de: Aktuelle Zeile / Paragraphen hervorheben - (nur Schreibmodus)
     type: class-toggle
   -
     id: extra-col-palette
@@ -658,9 +675,9 @@ settings:
   -
     id: show-tab-name
     title: Show Inactive tabs
-    description: restore inactive tabs
+    description: restore inactive tabs (tab view)
     title.de: Inaktive Reiter
-    description.de: Wiederherstellung Reiter
+    description.de: Wiederherstellung Reiter (Reiteransicht)
     type: class-toggle
   -
     id: show-status-bar
@@ -696,6 +713,13 @@ settings:
     description: restore node labels
     title.de: Canvas Knotentitel
     description.de: Wiederherstellung Knotentitel
+    type: class-toggle
+  -
+    id: stacked-tabs-focused
+    title: Focus on stacked notes
+    description: restore default stacked-view
+    title.de: Fokus auf Stapelansicht
+    description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
   -
     id: hide-gui
@@ -1072,22 +1096,47 @@ Vault loading
 NAVI BAR
 ----------------------------------------------------------------*/
 
-/* add a profile image to your vault */
-.profile-pic .mod-left-split .workspace-leaf-content[data-type="file-explorer"] .nav-header::after {
+/* normal profile */
+.profile-pic .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
     background-image: var(--profile-path);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     max-width: calc(200% - var(--profile-size));
     width: var(--profile-size);
     height: var(--profile-size);
-    margin-bottom: -12px;
-    align-self: center;
+    margin-bottom: 0px;
     content: "";
     display: block;
-    margin-left: auto;
+    margin-left: 8%;
     margin-right: auto;
+    border-radius: 4px;
 }
+
+/* hide vault name */
+.profile-pic .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+    color: transparent;
+    display: contents;
+}
+
+/* banner profile */
+body:not(.profile-pic).profile-banner .nav-folder.mod-root>.nav-folder-title {
+    background: var(--profile-path);
+}
+
+.profile-banner .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
+    width: 0;
+}
+
+.profile-banner .nav-folder.mod-root>.nav-folder-title {
+    background-image: var(--profile-path);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    max-width: calc(200% - var(--profile-size));
+    height: var(--profile-size);
+    width: auto;
+}
+
 
 /*  profile-pic for phone */
 body.profile-pic:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name-text {
@@ -1111,19 +1160,20 @@ body.profile-pic:is(.is-phone) .workspace-drawer-header-left {
     margin-left: -10px;
 }
 
-/* invert bw icons for dark themes */
+/* invert bw icons for dark themes - only normal profiles */
 body.profile-pic-mono:is(.is-phone.theme-dark) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     filter: invert(1);
 }
 
-.profile-pic .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
+body.profile-pic-mono:not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
+    filter: invert(1);
+}
+
+/* drag area */
+body:not(.profile-pic, .profile-banner) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
     height: 8px;
     background: var(--text-accent-special);
     border-radius: 4px;
-}
-
-.profile-pic .nav-folder.mod-root>.nav-folder-title {
-    height: 0;
 }
 
 
@@ -1809,40 +1859,6 @@ CITATION, Highlights
     background: none;
 }
 
-/* manual tips */
-span.addtip {
-    position: relative;
-    white-space: pre;
-    border-bottom: 1px dotted var(--background-modifier-border);
-}
-
-.tiptext {
-    font-size: 16px;
-    visibility: hidden;
-    width: fit-content;
-    margin-top: -30px;
-    background-color: hsla(0, 0%, 0%, 0.7);
-    color: white;
-    text-align: center;
-    padding: 5px 5px;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-}
-
-.addtip:hover .tiptext {
-    visibility: visible;
-    right: -20px;
-    top: -5px;
-}
-
-.is-phone .addtip:hover .tiptext {
-    visibility: visible;
-    right: -20px;
-    top: -5px;
-    font-size: small;
-}
-
 /* bullet list -messing with custom chBx*/
 .markdown-rendered ul.has-list-bullet,
 ol {
@@ -1952,7 +1968,7 @@ CALLOUT
 body {
     --callout-min-width: 200px;
     --callout-gap: 0.5rem;
-    --callout-margin: 5px;
+    --callout-margin: 4px;
     --list-min-width: 200px;
     --col-rule-color: #b3b3b3;
     --col-rule-width: 1px;
@@ -1995,7 +2011,7 @@ div[data-callout="multi-column"].callout .callout {
 }
 
 div[data-callout="multi-column"].callout:not(.is-collapsed) .callout {
-    margin: 0 var(--callout-margin) var(--callout-margin);
+    margin: 4px 0 var(--callout-margin) var(--callout-margin);
 }
 
 /* to allow spacing for box shadow */
@@ -2225,8 +2241,9 @@ Misc note boxes
 .app-container pre.language-memo,
 code.language-memo.is-loaded {
     font-size: initial;
-    color: black;
+    color: darkblue;
     background: #ebcb63;
+    white-space: pre;
 }
 
 /* footnote box */
@@ -2238,8 +2255,38 @@ code.language-fnote.is-loaded {
 
 .app-container pre.language-fnote {
     border: 1px solid;
+    max-width: fit-content;
 }
 
+/* .read-more */
+.callout[data-callout="read-more…"],
+.callout[data-callout="weiterlesen…"] {
+    background: transparent;
+    mix-blend-mode: normal;
+    border: 0;
+    margin: -4px;
+    width: auto;
+    display: block;
+    padding-left: 0;
+}
+
+.callout[data-callout="read-more…"] p,
+.callout[data-callout="weiterlesen…"] p {
+    padding: 0 0;
+}
+
+.callout[data-callout="read-more…"] .callout-icon,
+.callout[data-callout="weiterlesen…"] .callout-icon {
+    padding: 0;
+    display: none;
+}
+
+.callout[data-callout="read-more…"] .callout-title,
+.callout[data-callout="weiterlesen…"] .callout-title {
+    font-size: medium;
+    color: var(--text-accent-special);
+    /* color: var(--link-color); */
+}
 
 /*----------------------------------------------------------------
 Callout Infobox
@@ -2697,27 +2744,39 @@ a:hover {
 /* copy code at top right */
 .markdown-rendered button.copy-code-button {
     margin: 0;
-    color: revert;
+    /* color: revert; */
 }
 
 .markdown-rendered button.copy-code-button:not(:hover) {
-    background: gray;
-    color: white;
+    border: 2px solid gray;
+    background: transparent;
 }
 
 .markdown-rendered button.copy-code-button:hover {
     background-color: var(--text-accent-special);
-    color: white;
+    /* color: white; */
+}
+
+/* blob copy btn */
+.markdown-rendered button.copy-code-button {
+    height: 20px;
+    width: 21px;
+    box-shadow: none;
+    font-size: 0;
+    font-family: none;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    margin-top: 4px;
+    border-radius: 50%;
+    color: transparent !important;
 }
 
 /* copy code btn - render as blob on phone */
-.is-phone .markdown-rendered pre:not(:hover)>button.copy-code-button {
-    display: block;
+.is-phone .markdown-rendered button.copy-code-button {
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    overflow: hidden;
-    color: transparent;
+    width: 19px;
+    height: 19px;
 }
 
 /* scrollbar bg transparent */
@@ -2744,13 +2803,16 @@ Fancy Horizontal Rulers
 ----------------------------------------------------------------*/
 
 hr {
-    border: none !important;
     margin: 1em auto;
     max-width: 100%;
     background-position: 50%;
     box-sizing: border-box;
     position: relative;
     background-size: contain;
+}
+
+hr:is([class*="wave"] hr, [class*="fade"] hr) {
+    border: none;
 }
 
 .is-phone [class*="wave"] hr {
@@ -2857,6 +2919,7 @@ hr {
 }
 
 .dots hr {
+    border: none;
     height: auto;
     color: var(--hr-color);
     text-align: center;
@@ -2870,6 +2933,7 @@ hr {
 
 /*  gold; */
 .stars hr {
+    border: none;
     height: auto;
     color: gold;
     text-align: center;
@@ -3265,7 +3329,7 @@ img[alt="banner-a"] {
     object-fit: cover;
     -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
     mask-image: none;
-    object-position: 50% 0%;
+    object-position: 50% var(--banner-v-align);
     border-radius: 0;
     pointer-events: none;
 }
@@ -3671,6 +3735,41 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 }
 
 /*----------------------------------------------------------------
+EMBEDS - check
+----------------------------------------------------------------*/
+
+/* move link icon outside text lines */
+.markdown-preview-view .markdown-embed-link,
+.markdown-preview-view .file-embed-link {
+    display: none;
+}
+
+.markdown-source-view .markdown-embed-link,
+.markdown-source-view .file-embed-link {
+    right: -18px;
+}
+
+.embed-title {
+    right: -18px;
+    padding: 0;
+}
+
+.markdown-preview-view .markdown-embed {
+    border-left: 0;
+    margin-left: -24px;
+}
+
+/* remove <br> between internal embeds */
+.markdown-preview-section div>br {
+    display: none;
+}
+
+.theme-dark .file-embed.mod-generic,
+.theme-dark .file-embed.mod-empty {
+    background: gray;
+}
+
+/*----------------------------------------------------------------
 CANVAS
 ----------------------------------------------------------------*/
 
@@ -3807,14 +3906,8 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:h
 }
 
 /* hide vault Name */
-body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title {
+body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
     height: 0;
-}
-
-body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
-    height: 8px;
-    background: var(--text-accent-special);
-    border-radius: 4px;
 }
 
 /* dim tabs */
@@ -3857,19 +3950,25 @@ body:not(.show-title-parent) .view-header-title-parent {
 
 
 /* hide note name */
-
+/* body:not(.show-title-name) div.view-header-title { */
 body:not(.show-title-name) .view-header-title {
     width: 0 !important;
-    visibility: hidden;
+    opacity: 0;
+}
+
+body:not(.is-phone) .view-header-title-container:focus-within>.view-header-title {
+    /* visibility: visible !important; */
+    opacity: 1;
+    width: auto;
 }
 
 .is-phone .view-header-title[contenteditable="true"] {
-    visibility: visible !important;
+    opacity: 1;
     width: auto;
 }
 
 body:not(.is-phone).is-focused .view-header:hover .view-header-title {
-    visibility: visible;
+    opacity: 1;
 }
 
 /* stacked tabs */
@@ -3888,6 +3987,18 @@ body:not(.show-tab-name) .workspace-tabs.mod-stacked .workspace-tab-container .w
 
 body:not(.show-tab-name) .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon:hover {
     opacity: 1;
+}
+
+body:not(.stacked-tabs-focused) .workspace-leaf {
+    --tab-stacked-pane-width: 100%;
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
+    transition: ease-in-out 300ms;
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
+    font-weight: bold;
 }
 
 /*----------------------------------------------------------------
@@ -4400,6 +4511,11 @@ body:is(.theme-dark, .theme-light) .document-replace button.document-search-butt
 /*----------------------------------------------------------------
 BUTTONS
 ----------------------------------------------------------------*/
+#addChoiceTypeSelector.svelte-1newuee {
+    font-size: revert;
+    padding: 6px;
+}
+
 .empty-state-action {
     color: var(--text-normal);
 }
@@ -5407,6 +5523,11 @@ PDF EXPORT
         color: gray;
     }
 
+    pre.frontmatter,
+    .obsidian-metatable {
+        display: none;
+    }
+
     ::-webkit-scrollbar {
         width: 0 !important;
         height: 0;
@@ -5499,6 +5620,11 @@ div.kanban-plugin__lane-title-count {
     display: none;
 }
 
+/* Quickadd space btw btns */
+.quickAddModal .modal-content div {
+    gap: 4px;
+}
+
 /* cMenu flat colors*/
 #cMenuModalBar .cMenuCommandItem {
     background-color: unset !important;
@@ -5562,6 +5688,10 @@ div.kanban-plugin__lane-title-count {
 
 .theme-dark .block-language-dataview .table-view-table>tbody>tr:hover {
     background-color: var(--button-background);
+}
+
+.button-maker {
+    padding-right: 22px;
 }
 
 /*----------------------------------------------------------------
