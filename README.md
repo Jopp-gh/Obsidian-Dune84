@@ -66,7 +66,7 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - zoom manually is the default zoom mode: click and hold on hover
 - auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover**, on phone you can tap-zoom images too
 - Book pictures (custom placed, framed with description)
-- Picture-wall (moodboard), see **Style Settings>Dune>Pictures>Image wall>**
+- Picture-wall (moodboard), phone: tap and keep pressed for a few moments to zoom your picture. Single tap is not supported right now
 - add simple picture descriptions, eg. `picture#cap|description` 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
