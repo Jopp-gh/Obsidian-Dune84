@@ -48,52 +48,6 @@ settings:
     description: Century Gothic, DiehlDeco, Whattimeisit
     type: variable-text
     default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
-  -  
-    id: heading-spacing
-    title: Spacing
-    title.de: Abstände
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: custom-margin-above-header
-    title: Custom Margin Above Header
-    title.de: Überschriften Abstand-Oben
-    type: variable-number-slider
-    format: px
-    default: 20
-    min: 0
-    max: 30
-    step: 2
-  -
-    id: custom-margin-below-header
-    title: Custom Margin Below Header
-    title.de: Überschriften Abstand-Unten
-    type: variable-number-slider
-    format: px
-    default: 8
-    min: 0
-    max: 14
-    step: 2
-  -
-    id: custom-max-line-width
-    title: Custom line width
-    description: for readable line width - activate in Preferences-Editor
-    title.de: Maximale Zeilenlänge
-    description.de: lesbare Zeilenlänge - aktiviere in Einstellungen-Editor
-    type: variable-number-slider
-    format: px
-    default: 700
-    min: 500
-    max: 1400
-    step: 50
-  -
-    id: center-header
-    title: centered headers
-    description: all headers centered
-    title.de: Überschriften zentriert
-    description.de: alle Überschriften zentriert
-    type: class-toggle
   -
     id: common-fonts
     title: Font types
@@ -158,13 +112,66 @@ settings:
     default: 'Mumsies, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   -
     id: deco-scale
-    title: resize decorations
-    title.de: Skaliere Dekorationen
+    title: Resize decorations
+    title.de: Dekorationen anpassen
     type: variable-number-slider
     default: 0.6
     min: 0.1
     max: 1.2
     step: 0.1
+  -  
+    id: heading-spacing
+    title: Spacing
+    title.de: Abstände
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: custom-margin-above-header
+    title: Custom Margin Above Header
+    title.de: Überschriften Abstand-Oben
+    type: variable-number-slider
+    format: px
+    default: 20
+    min: 0
+    max: 30
+    step: 2
+  -
+    id: custom-margin-below-header
+    title: Custom Margin Below Header
+    title.de: Überschriften Abstand-Unten
+    type: variable-number-slider
+    format: px
+    default: 8
+    min: 0
+    max: 14
+    step: 2
+  -
+    id: custom-max-line-width
+    title: Custom line width
+    description: activate first "readable line width" - in Preferences-Editor
+    title.de: Maximale Zeilenlänge
+    description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
+    type: variable-number-slider
+    format: px
+    default: 700
+    min: 500
+    max: 1400
+    step: 50
+  -
+    id: center-header
+    title: Centered headers
+    description: all headers centered
+    title.de: Überschriften zentriert
+    description.de: alle Überschriften zentriert
+    type: class-toggle
+  -
+    id: stacked-tabs-focused
+    title: Focus on stacked notes
+    description: restore default stacked-view
+    title.de: Fokus auf Stapelansicht
+    description.de: Wiederherstellung normale Stapelansicht
+    type: class-toggle
   -
     id: img-options
     title: Pictures
@@ -186,7 +193,7 @@ settings:
     title: Picture frame 'frame a'
     description: add urls from local png or online png Images.
     title.de: Bilderrahmen 'frame a'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen sind png Bilder.
+    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
@@ -213,7 +220,7 @@ settings:
     title: Picture frame 'frame b'
     description: add urls from local png or online png Images.
     title.de: Bilderrahmen 'frame b'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen sind png Bilder.
+    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
@@ -240,7 +247,7 @@ settings:
     title: Picture frame 'frame c'
     description: add urls from local png or online png Images.
     title.de: Bilderrahmen 'frame c'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen sind png Bilder.
+    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
@@ -267,7 +274,7 @@ settings:
     title: Picture frame 'frame d'
     description: add urls from local png or online png Images.
     title.de: Bilderrahmen 'frame d'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen sind png Bilder.
+    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
@@ -295,18 +302,18 @@ settings:
     title.de: Vergrößerung
     type: heading
     level: 2
-    collapsed: true
+    collapsed: false
   -
     id: zoom-auto
-    title: zoom on hover
+    title: Zoom on hover
     description: Zoom images on hover
     title.de: Bild Vergrößerung
     description.de: Vergrößerung beim überfahren
     type: class-toggle
   -
     id: banner-v-align
-    title: place banner
-    title.de: Bildstreifen ausrichten
+    title: Banner - vertical placement 
+    title.de: Banner - vertikal ausrichten
     type: variable-number-slider
     format: '%'
     default: 0
@@ -314,8 +321,15 @@ settings:
     max: 90
     step: 2
   -
+    id: pictwall-opt
+    title: Image wall
+    title.de: Bilderwand
+    type: heading
+    level: 2
+    collapsed: false
+  -
     id: pictwall-height
-    title: image wall height
+    title: Image wall height
     title.de: Bilderwand Höhe
     type: variable-number-slider
     format: px
@@ -325,7 +339,7 @@ settings:
     step: 10
   -
     id: pictwall-width
-    title: image wall width
+    title: Image wall width
     title.de: Bilderwand Breite
     type: variable-number-slider
     format: px
@@ -351,8 +365,8 @@ settings:
     id: profile-banner
     title: Vault Profile Banner
     description: Add a banner profile
-    title.de: Vault Profilbildstreifen
-    description.de: benutze ein Profilbildstreifen
+    title.de: Vault Profilbanner
+    description.de: benutze ein Profilbanner
     type: class-toggle
   -
     id: profile-pic-mono
@@ -604,7 +618,7 @@ settings:
   - 
     id: frame-color
     title: Color for frames
-    description: for picture frames
+    description: for simple picture frames
     title.de: Rahmenfarbe
     description.de: Bilder Rahmenfarbe
     type: variable-themed-color
@@ -615,7 +629,7 @@ settings:
   - 
     id: hr-color
     title: Color for Hr
-    description: for horizontal dividers
+    description: for some horizontal dividers
     title.de: Eigenes Trennzeichen
     description.de: für Trennzeichen
     type: variable-themed-color
@@ -651,6 +665,13 @@ settings:
     description.de: Wiederherstellung Linke Seitenleiste
     type: class-toggle
     default: true
+  -
+    id: show-tooltips
+    title: Show tooltips 
+    description: restore help bubbles
+    title.de: Hilfeblasen
+    description.de: Wiederherstellung Hilfeblasen
+    type: class-toggle
   -
     id: show-title-name
     title: Show note title
@@ -694,13 +715,6 @@ settings:
     description.de: Wiederherstellung Tasten
     type: class-toggle
   -
-    id: show-tooltips
-    title: Show tooltips 
-    description: restore help bubbles
-    title.de: Hilfeblasen
-    description.de: Wiederherstellung Hilfeblasen
-    type: class-toggle
-  -
     id: show-canvas-ui
     title: Show canvas ui 
     description: restore canvas buttons
@@ -713,13 +727,6 @@ settings:
     description: restore node labels
     title.de: Canvas Knotentitel
     description.de: Wiederherstellung Knotentitel
-    type: class-toggle
-  -
-    id: stacked-tabs-focused
-    title: Focus on stacked notes
-    description: restore default stacked-view
-    title.de: Fokus auf Stapelansicht
-    description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
   -
     id: hide-gui
@@ -972,8 +979,8 @@ body.col-mod-c.theme-dark {
     --background-primary: #0e1741;
     --background-primary-alt: #08091b;
     --background-secondary: #131927;
-    --background-secondary-alt: #2d447d;
-    --background-modifier-border: rgb(144, 144, 144);
+    --background-secondary-alt: #383838;
+    --background-modifier-border: rgb(54, 54, 54);
 
     --h1-color: var(--header-col);
     --h2-color: var(--header-col);
@@ -1001,7 +1008,7 @@ body.col-mod-d.theme-dark {
     --background-primary-alt: #282a2d;
     --background-secondary: #2a2b30;
     --background-secondary-alt: #282a2d;
-    --background-modifier-border: rgb(144, 144, 144);
+    --background-modifier-border: rgb(54, 54, 54);
 
     --h1-color: var(--header-col);
     --h2-color: var(--header-col);
@@ -1548,6 +1555,10 @@ body:not(.is-grabbing) .nav-folder-title:hover,
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle:hover {
     color: var(--bold-color);
+}
+
+.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle {
+    border: none;
 }
 
 /* Handle to resize folder tree */
@@ -3595,13 +3606,6 @@ image placed + description
     display: none;
 }
 
-.callout.callout[data-callout=moodboard] .callout-content {
-    display: block;
-    width: 100%;
-    border: 0;
-    box-shadow: unset;
-}
-
 .callout.callout[data-callout=moodboard] .callout-content p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, auto));
@@ -3614,28 +3618,13 @@ image placed + description
     height: var(--pictwall-height);
     width: auto;
     object-fit: cover;
+    position: sticky;
+    margin: 0;
 }
 
-/* Zoom, manual -works */
-.markdown-preview-view .callout.callout[data-callout=moodboard] .image-embed img:active,
-.zoom-auto .markdown-preview-view .callout.callout[data-callout=moodboard] .image-embed img:hover {
-    display: block;
-    z-index: 3;
-    object-fit: contain;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    transform: translateY(-50%);
-    scale: 2;
-    transition: all 200ms;
-}
-
-.view-content img {
-    max-width: 100%;
-    cursor: zoom-in;
-    display: inline;
+/* align caption to bottom border */
+.callout.callout[data-callout=moodboard] .image-embed[src*="#cap"]::after {
+    margin-top: auto;
 }
 
 /* dim bright imgs for dark themes */
@@ -3643,59 +3632,40 @@ image placed + description
     filter: brightness(0.9);
 }
 
-.view-content .image-embed img:active {
-    background: rgba(0, 0, 0, 0.5);
-    cursor: zoom-out;
-    display: block;
+/* zooming */
+.mobile-image-viewer img {
     object-fit: contain;
-    position: fixed;
-    text-align: center;
-    z-index: 3;
-    top: 50%;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    /* background: rgb(0 0 0 / 70%); */
+}
+
+/* Desk */
+body:not(.is-phone) .view-content img {
+    cursor: zoom-in;
+    display: inline;
+    border-radius: 4px;
+}
+
+.zoom-auto .view-content .image-embed img:hover,
+.is-phone .markdown-preview-view .mermaid svg:hover,
+.view-content .image-embed img:active {
+    cursor: zoom-out;
+    width: 100%;
+    height: 100%;
+    top: 47%;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
-    width: 100%;
-    border-image: none;
-    border: none;
-    border-radius: 4px;
-    transform: translateY(-50%);
-    filter: brightness(1);
-    transition: all 200ms;
-}
-
-.is-phone .view-content .image-embed img:active {
-    height: 110%;
-    width: 110%;
-    border-image: none;
-    border: none;
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.7);
-    transition: all 200ms;
-}
-
-.is-phone .markdown-preview-view .mermaid svg:hover,
-.markdown-preview-view .mermaid svg:active,
-.zoom-auto img:hover {
-    cursor: zoom-out;
-    z-index: 3;
-    object-fit: contain !important;
-    position: fixed;
-    text-align: center;
     max-height: calc(100% + 1px);
     max-width: 100%;
+    object-fit: contain;
+    z-index: 3;
+    position: fixed;
+    text-align: center;
     margin: 0 auto;
-    width: 100%;
-    height: 98%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(40, 40, 40, 0.8);
     transform: translateY(-47%);
-    transition: all 200ms;
+    backdrop-filter: blur(10px);
 }
 
 /*----------------------------------------------------------------
@@ -3814,6 +3784,7 @@ body:not(.show-canvas-nl) .canvas-wrapper:not(.mod-readonly) .canvas-node-label:
     opacity: 1;
 }
 
+/* .canvas-control-item:hover */
 .canvas-card-menu .canvas-card-menu-button:hover {
     color: var(--text-accent-special);
 }
@@ -3908,6 +3879,12 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:h
 /* hide vault Name */
 body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
     height: 0;
+}
+
+body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    height: 8px;
+    background: var(--text-accent-special);
+    border-radius: 4px;
 }
 
 /* dim tabs */
@@ -4512,8 +4489,7 @@ body:is(.theme-dark, .theme-light) .document-replace button.document-search-butt
 BUTTONS
 ----------------------------------------------------------------*/
 #addChoiceTypeSelector.svelte-1newuee {
-    font-size: revert;
-    padding: 6px;
+    background: lightgray;
 }
 
 .empty-state-action {
@@ -5705,7 +5681,6 @@ div.kanban-plugin__lane-title-count {
 .hide-gui .backlink-pane,
 .hide-gui .prompt,
 .hide-gui .status-bar,
-.hide-gui .vertical-tab-content,
 .hide-gui .menu,
 .hide-gui .vertical-tab-header-group-title,
 .hide-gui .vertical-tab-nav-item:not(.is-active),
@@ -5714,7 +5689,23 @@ div.kanban-plugin__lane-title-count {
 .hide-gui .search-input-container input {
     margin: 0 !important;
     -webkit-text-security: square !important;
-    letter-spacing: -10px;
+    letter-spacing: -5px;
+}
+
+.hide-gui .vertical-tab-content {
+    margin: auto auto;
+    -webkit-text-security: square;
+    letter-spacing: -5px;
+    padding-left: 0;
+    padding-right: inherit;
+    margin-right: 48px;
+    overflow-wrap: break-word;
+    font-size: large;
+}
+
+body:not(.is-phone) .hide-gui .vertical-tab-content {
+    margin-right: 48px;
+    letter-spacing: -6px;
 }
 
 .hide-gui .vertical-tab-content h1,
@@ -5729,7 +5720,14 @@ div.kanban-plugin__lane-title-count {
 .hide-gui .dropdown,
 .hide-gui button:not(.clickable-icon) {
     -webkit-text-security: square;
-    letter-spacing: -8px;
+    width: 120px;
+    letter-spacing: -3px;
+}
+
+body:is(.is-phone) .hide-gui .dropdown,
+body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
+    -webkit-text-security: square;
+    width: initial;
 }
 
 .hide-gui input:is([type='text'], [type='search'], [type='email'], [type='password'], [type='number']) {
