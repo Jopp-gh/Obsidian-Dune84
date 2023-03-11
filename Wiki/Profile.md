@@ -1,6 +1,9 @@
 ### Pick your profile style
 
-Choose between a simple profile icon (eg a squared or round one) or a banner type profile image.
+Choose between:
+
+- simple profile icon (eg a squared or round one) 
+- banner type profile image.
 
 ### how to add a profile picture
 
@@ -11,6 +14,6 @@ Choose between a simple profile icon (eg a squared or round one) or a banner typ
 
 ### Drag n Drop area
 
-If you have a profile picture (eg. simple / banner type) activated , then drag your file(s) on top of your profile picture to move your file(s) to the root directory of Obsidian
-If you don't have any profile picture enabled and your vault name is disabled, then drag your file(s) or folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
+If you have a profile picture (eg. simple / banner type) activated , then drag your file(s) on top of your profile picture to move your file(s) to the root directory of Obsidian.
 
+If you did not activate any profile picture and your vault name is disabled, then drag your file(s) / folder(s) over the top of your last folder. A blue area will appear where you can release your file(s)
