@@ -159,6 +159,28 @@ settings:
     max: 1400
     step: 50
   -
+    title: Typesetting alignment (vault)
+    description: left, right, axis, block
+    title.de: Schriftsatzart (vault)
+    description.de: Linksb., Rechtsb. -Flattersatz, Axialsatz, Blocksatz
+    id: text-align
+    type: class-select
+    allowEmpty: false
+    default: L
+    options:
+        - 
+            label: L
+            value: align-l
+        - 
+            label: R
+            value: align-r
+        -
+            label: A
+            value: align-a
+        -
+            label: B
+            value: align-b
+  -
     id: center-header
     title: Centered headers
     description: all headers centered
@@ -658,6 +680,13 @@ settings:
     level: 1
     collapsed: true
   -
+    id: show-tooltips
+    title: Show tooltips 
+    description: restore help bubbles
+    title.de: Hilfeblasen
+    description.de: Wiederherstellung Hilfeblasen
+    type: class-toggle
+  -
     id: show-ribbon-l
     title: Show ribbon
     description: restore left ribbon
@@ -665,13 +694,6 @@ settings:
     description.de: Wiederherstellung Linke Seitenleiste
     type: class-toggle
     default: true
-  -
-    id: show-tooltips
-    title: Show tooltips 
-    description: restore help bubbles
-    title.de: Hilfeblasen
-    description.de: Wiederherstellung Hilfeblasen
-    type: class-toggle
   -
     id: show-title-name
     title: Show note title
@@ -1798,6 +1820,19 @@ span.cm-hmd-codeblock.cm-meta {
 CITATION, Highlights
 ----------------------------------------------------------------*/
 
+.align-a :is(.markdown-source-view .cm-line, .markdown-preview-view p) {
+    text-align: center;
+}
+
+.align-b :is(.markdown-source-view .cm-line, .markdown-preview-view p) {
+    text-align: justify;
+}
+
+.align-r :is(.markdown-source-view .cm-line, .markdown-preview-view p) {
+    text-align: right;
+}
+
+
 .external-link {
     background-image: none;
     background-position: 0;
@@ -2316,35 +2351,35 @@ embed deeply to get text wrap
     font-weight: bolder;
 }
 
-.callout.callout[data-callout=infobox],
-.callout.callout[data-callout=infobox-r] {
-    margin: 8px -30px 8px 0px;
-    padding: 6px;
+.is-phone .callout.callout[data-callout^=infobox] {
+    width: 200px;
+    mix-blend-mode: normal;
+    font-size: smaller;
+}
+
+body:not(.is-phone) .callout.callout[data-callout=infobox],
+body:not(.is-phone) .callout.callout[data-callout=infobox-r] {
+    padding: 6px 0 6px 12px;
+    margin-right: -24px;
+    float: right;
+}
+
+body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
+    padding: 6px 12px 6px 0;
+    margin-left: -24px;
+    float: left;
 }
 
 .is-phone .callout.callout[data-callout=infobox],
 .is-phone .callout.callout[data-callout=infobox-r] {
-    width: 200px;
-    margin: 12px -20px 12px 4px;
-    mix-blend-mode: normal;
-    font-size: smaller;
-    padding: 0 !important;
-}
-
-.is-phone .callout.callout[data-callout=infobox-l] {
-    width: 200px;
-    margin: 4px 12px 12px -20px;
-    mix-blend-mode: normal;
-    font-size: smaller;
-    padding: 0 !important;
-}
-
-.callout.callout[data-callout=infobox],
-.callout.callout[data-callout=infobox-r] {
+    padding: 6px 0 6px 6px;
+    margin-right: -24px;
     float: right;
 }
 
-.callout.callout[data-callout=infobox-l] {
+.is-phone .callout.callout[data-callout=infobox-l] {
+    padding: 6px 6px 6px 0;
+    margin-left: -24px;
     float: left;
 }
 
@@ -2379,11 +2414,10 @@ embed deeply to get text wrap
 /* .callout.callout[data-callout*=infobox] p, */
 .callout.callout[data-callout^=infobox] .internal-embed,
 .callout.callout[data-callout^=infobox] img {
-    margin: auto;
-    text-align: center;
+    display: flex;
     opacity: 1;
-    max-width: 80%;
     pointer-events: none;
+    justify-content: center;
 }
 
 .callout.callout[data-callout^=infobox] .internal-embed:hover {
@@ -3396,6 +3430,30 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
     display: none;
 }
 
+.bc-10 img[alt="banner-a"] {
+    object-position: 50% 10%;
+}
+
+.bc-20 img[alt="banner-a"] {
+    object-position: 50% 20%;
+}
+
+.bc-30 img[alt="banner-a"] {
+    object-position: 50% 30%;
+}
+
+.bc-40 img[alt="banner-a"] {
+    object-position: 50% 40%;
+}
+
+.bc-50 img[alt="banner-a"] {
+    object-position: 50% 50%;
+}
+
+.bc-60 img[alt="banner-a"] {
+    object-position: 50% 60%;
+}
+
 /* .markdown-preview-view img {
   padding: 0 !important;
   margin: 0;
@@ -3618,7 +3676,6 @@ image placed + description
     height: var(--pictwall-height);
     width: auto;
     object-fit: cover;
-    position: sticky;
     margin: 0;
 }
 
@@ -3652,7 +3709,6 @@ body:not(.is-phone) .view-content img {
 .view-content .image-embed img:active {
     cursor: zoom-out;
     width: 100%;
-    height: 100%;
     top: 47%;
     left: 0;
     right: 0;
@@ -3661,11 +3717,23 @@ body:not(.is-phone) .view-content img {
     max-width: 100%;
     object-fit: contain;
     z-index: 3;
-    position: fixed;
+    position: fixed !important;
     text-align: center;
     margin: 0 auto;
     transform: translateY(-47%);
     backdrop-filter: blur(10px);
+    border: none;
+}
+
+.zoom-auto .view-content .image-embed img:hover,
+.is-phone .markdown-preview-view .mermaid svg:hover {
+    height: 100%;
+}
+
+.view-content .image-embed img:active {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
 }
 
 /*----------------------------------------------------------------
