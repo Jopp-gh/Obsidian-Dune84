@@ -61,12 +61,12 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - shape pictures `![[image.png|avatar]]` (avatar, portrait, round)
 - add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
 - add simple frames `![[image.png|frame-m]]` (frame-s, frame-m)
-- add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) and place your banner picture vertically, see **Style Settings>Dune>Pictures>Zoom Picturs>Banner - vertical placement**
+- add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
-- zoom manually is the default zoom mode: click and hold on hover
-- auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover**, on phone you can tap-zoom images too
+- zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
+- auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
 - Book pictures (custom placed, framed with description)
-- Picture-wall (moodboard), phone: tap and keep pressed for a few moments to zoom your picture. Single tap is not supported right now
+- Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
@@ -86,6 +86,12 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - replaced dark themed backgrounds with white, printer-friendly backgrounds
 - most features added by this theme work with pdf export (sidebox, book picture callouts, infobox, etc)
 
+### Text alignment
+
+- typesetting locally: text right `cssclass: align-r`, text justified (block) `cssclass: align-b`, text centered (axial) `cssclass: align-a` (locally)
+- typesetting globally: see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment**
+- **Readable line width** is supported too (see **Preferences>Editor>Display>Readable line length**), adjust your line length with **Style Settings>Dune>Fonts>Spacing**
+
 ### UI improvements
 
 - #phone: new **find-and-replace** dialog
@@ -93,7 +99,6 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - #phone: remove **path and / or file name** from your note header - to rename, use the command palette or touch the topmost left-side on your display
 - #desktop: rename your notes with right-click on your active tab, or hovering over your note header or via right-click on your file/folder in the folder-tree view 
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
-- #desktop **Readable line width** is supported (see **Style Settings>Dune>Fonts>Spacing**)
 - personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
 - garble your note `cssclass: hide-doc` and / or your App interface (see **Style Settings>Dune>Show ui elements>**)
 - pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
