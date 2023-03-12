@@ -10,6 +10,10 @@ cssclass: banner-a,
 
 To add a neat banner, you must define both `cssclass` AND `alt name`. 
 
+To adjust your **b**anner **c**oordinates vertically 
+- locally: use 6 different sizes (10, 20, 30, 40, 50, 60), eg. `cssclass: bc-10` 
+- globally: see **Style Settings>Dune>Pictures>Zoom Pictures>Banner vertical placement** 
+
 <br>
 
 ### Portrait, Avatar, Round
@@ -35,7 +39,7 @@ place your images on the Left, Right or at the Center of your note
 
 Options: a-d
 
-Frame your pictures. Download some frames like [this png template](https://pngimg.com/image/91008). Customize your frames under **Style Settings**
+Frame your pictures. Download some frames like [this png template](https://pngimg.com/image/91008). Customize your frames under **Style Settings>Dune>Pictures>Picture frames**
 
 ![I–03](https://user-images.githubusercontent.com/48620536/222982094-4943ac34-34be-4587-8365-78408b671aff.png)
 
@@ -44,7 +48,7 @@ Frame your pictures. Download some frames like [this png template](https://pngim
 ### Simple Frames
 
 `![[Pict.png|frame-m]]` `![[Pict.png|frame-s]]`
-Change picture frame colors under **Style Settings** 
+Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** 
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
@@ -87,7 +91,7 @@ position your images, add a picture frame and description
 
 **Options**: Configure height and width under `Style Settings>Pictures>Zoom Pictures`
 
-the more pictures in a picture wall, the more you get a seamless board. To remove empty space and build a neat picture wall, adjust sliders in **Style Settings** accordingly. Keep an empty line between each line of pictures. 
+the more pictures you put in a picture wall, the more you will get a seamless board. To remove empty spaces and get a neat-looking picture wall, see (see **Style Settings>Dune>Pictures>Image Wall**) and adjust sliders accordingly. Keep an empty line between each line of pictures. 
 
 <br>
 
@@ -96,8 +100,8 @@ the more pictures in a picture wall, the more you get a seamless board. To remov
 `![[video.mp4|vid-20]] `
 
 **Options**: 
-smaller - 20, 30, 40, 50, 
-bigger -120, 150, 200
+- smaller - 20, 30, 40, 50
+- bigger -120, 150, 200
 
 ![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
 
