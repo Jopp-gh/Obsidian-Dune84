@@ -1137,8 +1137,7 @@ NAVI BAR
     margin-bottom: 0px;
     content: "";
     display: block;
-    margin-left: 8%;
-    margin-right: auto;
+    margin-left: -50%;
     border-radius: 4px;
 }
 
@@ -3821,6 +3820,10 @@ body.theme-dark {
 
 .canvas-node.is-themed .canvas-node-content {
     background-color: rgba(var(--canvas-color), 0.15);
+}
+
+.is-phone .canvas-controls {
+  top: 44px;
 }
 
 body:not(.show-canvas-ui) .canvas-controls,
