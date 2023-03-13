@@ -404,7 +404,7 @@ settings:
     type: variable-number-slider
     format: px
     default: 40
-    min: 30
+    min: 40
     max: 200
     step: 10
   - 
@@ -1126,7 +1126,7 @@ NAVI BAR
 ----------------------------------------------------------------*/
 
 /* normal profile */
-.profile-pic .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
+body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
     background-image: var(--profile-path);
     background-size: cover;
     background-position: center;
@@ -1136,19 +1136,26 @@ NAVI BAR
     height: var(--profile-size);
     margin-bottom: 0px;
     content: "";
-    display: block;
-    margin-left: -50%;
+    margin-left: -20%;
     border-radius: 4px;
 }
 
 /* hide vault name */
-.profile-pic .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
     color: transparent;
     display: contents;
+    margin-bottom: -8px;
+}
+
+body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-left: -20%;
 }
 
 /* banner profile */
-body:not(.profile-pic).profile-banner .nav-folder.mod-root>.nav-folder-title {
+.profile-banner .nav-folder.mod-root>.nav-folder-title {
     background: var(--profile-path);
 }
 
@@ -1193,7 +1200,7 @@ body.profile-pic-mono:is(.is-phone.theme-dark) .workspace-drawer.mod-left .works
     filter: invert(1);
 }
 
-body.profile-pic-mono:not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
+.profile-pic-mono.theme-dark .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
     filter: invert(1);
 }
 
@@ -3374,7 +3381,7 @@ img[alt="banner-a"] {
     -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
     mask-image: none;
     object-position: 50% var(--banner-v-align);
-    border-radius: 0;
+    border-radius: 0 !important;
     pointer-events: none;
 }
 
@@ -3386,7 +3393,7 @@ img[alt='banner-b'] {
     height: 60px;
     object-fit: cover;
     object-position: 50% 0%;
-    border-radius: 0;
+    border-radius: 0 !important;
     pointer-events: none;
 }
 
@@ -3403,11 +3410,13 @@ img[alt='banner-b'] {
     top: -4px;
     height: 150px;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .is-phone img[alt='banner-b'] {
     top: -4px;
     height: 50px;
+    border-radius: 0;
     object-fit: cover;
 }
 
@@ -3823,7 +3832,7 @@ body.theme-dark {
 }
 
 .is-phone .canvas-controls {
-  top: 44px;
+    top: 44px;
 }
 
 body:not(.show-canvas-ui) .canvas-controls,
@@ -3950,6 +3959,7 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:h
 /* hide vault Name */
 body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
     height: 0;
+    width: 0;
 }
 
 body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
