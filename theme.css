@@ -5871,3 +5871,9 @@ body .markdown-preview-view:not(.is-live-preview).hide-doc p.raisecap {
     letter-spacing: -3px;
     overflow-wrap: anywhere;
 }
+
+/* clean embed title */
+.markdown-embed-title
+{
+    display: none;
+}
