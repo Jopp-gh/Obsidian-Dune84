@@ -19,7 +19,7 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 ### Required
 
 - to display **Dune-1984** correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-- to add some features eg. Raisecaps, sideboxes, quicker callouts, ect., get [**Quickadd**](https://github.com/chhoumann/quickadd) by chhoumann
+- to add some features eg. Raisecaps, sideboxes, quicker callouts, etc., get [**Quickadd**](https://github.com/chhoumann/quickadd) by chhoumann
 - to generate quickly custom callout boxes, get [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195
 
 
@@ -114,8 +114,8 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 
 - [x] MacOs
 - [x] Android
+- [x] clean embeds
 - [ ] Tablet (user support needed)
-- [ ] clean embeds
 - [ ] minor fixes, some features 
 
 ## Thanks
