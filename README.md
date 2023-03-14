@@ -144,3 +144,20 @@ inspiration from following sources:
 Support me, if you like what you get  :)
 
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
+
+
+## Collaboration
+thanks for your interest in my theme. Right now i only accept bug reports and feature requests
+
+First, to accept collaborators i would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
+Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune.
+
+## License
+Dune for Obsidian (desktop & phone) is licensed under the GPL-2.0 License, following conditions must be preserved in your css file (including standalone snippets), if you modify and redistribute my code :
+
+- License and copyright notice
+- State changes
+- Disclose source
+- Same license
+- Also, please keep my **Buy me a coffee** -link in your Readme. Thank you very much :)
+
