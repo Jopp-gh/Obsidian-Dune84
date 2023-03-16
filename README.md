@@ -62,12 +62,13 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
 - add simple frames `![[image.png|frame-m]]` (frame-s, frame-m)
 - add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
-- Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
 - zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
 - auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
 - Book pictures (custom placed, framed with description)
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
+- add Movie-strips (use `cssclass: mov-strips`) to remember your watched movies, for setup see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
+- Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
   
