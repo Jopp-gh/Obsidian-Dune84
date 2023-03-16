@@ -95,6 +95,44 @@ the more pictures you put in a picture wall, the more you will get a seamless bo
 
 <br>
 
+### Simple Movie catalog
+
+![movie-cat](https://user-images.githubusercontent.com/48620536/225763295-6102f6a7-405e-4202-ae80-77cec4e9e9fe.png)
+
+
+my goal was to build a compact movie list / movie overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
+
+- cover image,
+- title and year (ideally a link to iMDB, eg. [Dune (1984)](https://www.imdb.com/title/tt0087182/)),
+- duration,
+- director
+- rating
+
+#### Usage
+1) To add descriptions to your movie table visit https://www.imdb.com/ 
+2) First, you need to add a cssclass in your yaml header, use `cssclass: mov-strip`
+3) secondly, use this template:
+
+```
+|          |                                   |                                   |                                   |                                   |
+| -------- | --------------------------------- | --------------------------------- | --------------------------------- | --------------------------------- |
+| cover    | ![[pict.jpg]]                     | ![[pict.jpg]]                     | ![[pict.jpg]]                     | ![[pict.jpg]]                     |
+| title    | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) |
+| duration | time min                          | time min                          | time min                          | time min                          |
+| type     | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 |
+| director | Name                              | Name                              | Name                              | Name                              |
+| rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
+```
+
+As you can see, the first column of this template is just a guide to tell you what information to enter. This column will be present as long as you edit your table, but 
+a rendered table won't show table header nor the first column. Tables in markdown are, what they are, just get used to it.
+However, to simplify your task with tables, i suggest you to:
+- toggle on `Source mode`
+- also, get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin, you will enjoy working with tables :)
+- add a short description to your movie table's very first column to remember your new preferences.
+
+<br>
+
 ### Video resized 
 
 `![[video.mp4|vid-20]] `
@@ -104,4 +142,3 @@ the more pictures you put in a picture wall, the more you will get a seamless bo
 - bigger -120, 150, 200
 
 ![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
-
