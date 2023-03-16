@@ -1063,7 +1063,6 @@ body:not(.native-scrollbars) * {
     scrollbar-color: var(--scrollbar-thumb-bg) transparent;
 }
 
-/* ::-webkit-scrollbar-thumb:not(:hover) */
 ::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
@@ -1131,7 +1130,7 @@ Vault loading
 
 
 /*----------------------------------------------------------------
-NAVI BAR
+Profile
 ----------------------------------------------------------------*/
 
 /* normal profile */
@@ -1217,6 +1216,10 @@ body:not(.profile-pic, .profile-banner) .nav-folder.mod-root>.nav-folder-title.i
     border-radius: 4px;
 }
 
+
+/*----------------------------------------------------------------
+NAVI BAR
+----------------------------------------------------------------*/
 
 /* Navi Tree */
 .is-phone .workspace-drawer .nav-buttons-container .nav-action-button {
@@ -2134,6 +2137,7 @@ div[data-callout="multi-column"].callout>.callout-content {
 
 div[data-callout="multi-column"].callout:not(.is-collapsed) {
     box-shadow: unset;
+    mix-blend-mode: normal;
 }
 
 /* new */
@@ -2637,10 +2641,6 @@ body:not(.is-phone) .modal {
 .workspace-drawer .workspace-drawer-actions,
 .workspace-drawer .nav-buttons-container {
     border-radius: 4px;
-}
-
-.workspace-drawer-inner {
-    background: linear-gradient(360deg, var(--background-secondary), transparent);
 }
 
 /* Style settings */
@@ -3171,9 +3171,85 @@ table tbody tr:nth-child(even) {
     max-width: 36em;
 }
 
-/* If you wanna change table margin, do it here   */
-/* orig = 25px */
-/* --------------------------------------------   */
+/* --------------------------------------------   
+movie tables
+--------------------------------------------   */
+
+.mov-strip:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th,
+.mov-strip:is(.markdown-preview-view, .markdown-source-view.mod-cm6) tbody tr>td:first-child {
+    display: none;
+}
+
+.mov-strip.markdown-preview-view tbody tr>td {
+    max-width: 240px;
+    white-space: break-spaces;
+}
+
+.mov-strip.markdown-preview-view table {
+    width: auto;
+}
+
+.mov-strip.markdown-preview-view table tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+/* .mov-strip.markdown-preview-view thead>th>th {
+  width: 200px;
+} */
+
+.mov-strip.markdown-preview-view table {
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+
+.mov-strip.markdown-preview-view tbody tr:first-child .internal-embed.is-loaded {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: none;
+    max-width: 200px;
+    width: 200px;
+    height: 100%;
+}
+
+.mov-strip .markdown-rendered tbody tr:first-child .internal-embed.is-loaded {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .mov-strip .cm-s-obsidian span.cm-hmd-internal-link  */
+.mov-strip .internal-embed {
+    max-width: 200px;
+}
+
+.mov-strip.markdown-preview-view table:not([class]) tr {
+    gap: 4px;
+}
+
+.mov-strip.markdown-preview-view td {
+    border: none;
+}
+
+/* no highlights */
+.mov-strip.markdown-preview-view tbody tr:hover,
+.mov-strip.markdown-preview-view tbody tr:nth-child(odd):hover {
+    background-color: transparent;
+}
+
+.mov-strip.markdown-preview-view tr:nth-child(1n + 2):not(tr:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+
+/* --------------------------------------------   
+STYLED TABLES
+--------------------------------------------   */
+
 .customMargin table {
     margin: 24px 0px;
 }
@@ -3280,7 +3356,7 @@ ASIDE NOTES
     font-weight: unset;
     float: right;
     position: relative;
-    width: 2em;
+    width: 2.4em;
     height: 0.3em;
     clear: right;
     overflow: hidden;
@@ -3765,6 +3841,7 @@ body:not(.is-phone) .view-content img {
     cursor: zoom-in;
     display: inline;
     border-radius: 4px;
+    object-fit: cover;
 }
 
 body:not(.is-phone) .markdown-preview-view .mermaid svg:hover {
@@ -4040,13 +4117,11 @@ body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .si
 }
 
 /* x */
-body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner,
-body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner {
+body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner {
     opacity: 0.2;
 }
 
-body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner:hover,
-body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:hover {
+body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner:hover {
     opacity: 1;
 }
 
@@ -4297,7 +4372,6 @@ PHONE
     scale: 1.4;
 }
 
-
 .is-phone.theme-light .menu {
     background: var(--background-primary);
 }
@@ -4311,23 +4385,25 @@ PHONE
 }
 
 .is-phone .markdown-source-view {
-    height: 100%;
-    overflow: scroll;
+    overflow: auto;
     padding-top: 44px;
 }
 
 .is-phone .markdown-preview-view {
-    height: 100%;
-    overflow: scroll;
+    overflow: auto;
     margin-bottom: 0;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 
 /* no highlight for selected menu entry */
 .is-phone .vertical-tab-header-group-items {
     background-color: transparent;
     border-radius: 0;
+}
+
+.nav-folder-title.is-being-dragged-over {
+    background: hsla(var(--interactive-accent-hsl), 0.4);
 }
 
 /* no box shadow for renaming in nav-tree */
@@ -4743,7 +4819,7 @@ Custom Checkboxes - mini admonitions
 ----------------------------------------------------------------*/
 
 /*bigger checkboxes, also for tables*/
-input[type="checkbox"] {
+input[type=checkbox] {
     border-radius: 50px;
     width: 1.8em;
     height: 1.8em;
@@ -4755,171 +4831,154 @@ input[type=checkbox]:checked:after {
     content: none;
 }
 
-input[type="checkbox"]:checked {
-    background-position: center;
-    background-size: 100%;
+input[type=checkbox]:checked,
+input[type=checkbox]:checked:hover {
     background-color: transparent;
     border: transparent;
 }
 
-/* remove orange halo in kanvas view */
-input[type=checkbox]:checked:hover {
-    background-color: white;
+/* align icons */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox {
+    vertical-align: bottom;
 }
 
 /* Color label also for subtaskts in Preview mode only .is-checked */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task='q'], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task="g"], [data-task=h], [data-task=m], [data-task=w]),
-ul>li.task-list-item[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task='q'], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task="g"], [data-task=h], [data-task=m], [data-task=w]) {
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task=g], [data-task=h], [data-task=m], [data-task=w]),
+ul>li.task-list-item[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task=g], [data-task=h], [data-task=m], [data-task=w]) {
     text-decoration: none;
-    margin: 2px 2px 0 -42px;
+    margin-left: -42px;
     border-radius: 4px;
-    padding: 0px 6px 0px 40px;
+    padding: 2px 6px 2px 44px;
 }
 
-/* Muted Text*/
-/* .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=">"], [data-task="-"]),
-ul>li.task-list-item.is-checked[data-task]:is([data-task=">"], [data-task="-"]) {
-  color: var(--text-muted);
-  text-decoration: line-through;
-} */
 
-ul>li.task-list-item .task-list-item-checkbox {
-    /* vertical-align: top; */
-    vertical-align: baseline;
-}
 
 /* input[type="checkbox"]:checked */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="x"], [data-task="X"]),
-ul>li.task-list-item.is-checked[data-task]:is([data-task="x"], [data-task="X"]) {
+/* checkmark */
+input[type=checkbox][data-task=x],
+input[type=checkbox] [data-task=X],
+ul>li.task-list-item[data-task=x] .task-list-item-checkbox,
+ul>li.task-list-item[data-task=X] .task-list-item-checkbox {
+    background-image: var(--checkbox-icon);
     text-decoration: line-through;
 }
 
-/* checkmark */
-input:is([data-task=x], [data-task=X]):checked,
-li[data-task=x]>input:checked,
-li[data-task=X]>input:checked {
-    border: transparent;
-    background-color: transparent;
-    background-image: var(--checkbox-icon);
-    vertical-align: baseline;
-}
-
 /* > — Rescheduled/Moved */
-input[data-task=">"]:checked,
-li[data-task=">"]>input:checked {
+input[type=checkbox][data-task=">"],
+ul>li.task-list-item[data-task=">"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(115, 115, 115, 1);transform: ;msFilter:;'%3E%3Cpath d='M16.813 4.419A.997.997 0 0 0 16 4H3a1 1 0 0 0-.813 1.581L6.771 12l-4.585 6.419A1 1 0 0 0 3 20h13a.997.997 0 0 0 .813-.419l5-7a.997.997 0 0 0 0-1.162l-5-7z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* < — Schedule */
-input[data-task="<"]:checked,
-li[data-task="<"]>input:checked {
+input[type=checkbox][data-task="<"],
+ul>li.task-list-item[data-task="<"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(195, 32, 105, 1);transform: ;msFilter:;'%3E%3Cpath d='M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z'%3E%3C/path%3E%3Cpath d='M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /*\! — Important */
-input[data-task="!"]:checked,
-li[data-task="!"]>input:checked {
+input[data-task="!"],
+ul>li.task-list-item[data-task="!"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(191, 173, 6, 1);transform: ;msFilter:;'%3E%3Cpath d='M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* - Cancelled */
-input[data-task="/"]:checked,
-li[data-task="/"]>input:checked {
+input[data-task="/"],
+ul>li.task-list-item[data-task="/"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(115, 115, 115, 1);transform: ;msFilter:;'%3E%3Cpath d='m8.293 16.293 1.414 1.414L12 15.414l2.293 2.293 1.414-1.414L13.414 14l2.293-2.293-1.414-1.414L12 12.586l-2.293-2.293-1.414 1.414L10.586 14z'%3E%3C/path%3E%3Cpath d='M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.002 16H5V8h14l.002 12z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /*\? Question*/
-input[data-task="?"]:checked,
-li[data-task="?"]>input:checked {
+input[data-task="?"],
+ul>li.task-list-item[data-task="?"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(115, 115, 115, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 16h-2v-2h2v2zm.976-4.885c-.196.158-.385.309-.535.459-.408.407-.44.777-.441.793v.133h-2v-.167c0-.118.029-1.177 1.026-2.174.195-.195.437-.393.691-.599.734-.595 1.216-1.029 1.216-1.627a1.934 1.934 0 0 0-3.867.001h-2C8.066 7.765 9.831 6 12 6s3.934 1.765 3.934 3.934c0 1.597-1.179 2.55-1.958 3.181z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /*n Note*/
-input[data-task=n]:checked,
-li[data-task=n]>input:checked {
+input[data-task=n],
+ul>li.task-list-item[data-task=n] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(32, 157, 207, 1);transform: ;msFilter:;'%3E%3Cpath d='M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8l8-8V5a2 2 0 0 0-2-2zm-7 16v-7h7l-7 7z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* i — Info */
-input[data-task=i]:checked,
-li[data-task=i]>input:checked {
+input[data-task=i],
+ul>li.task-list-item[data-task=i] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(32, 157, 207, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* b - Bookmark */
-input[data-task=b]:checked,
-li[data-task=b]>input:checked {
+input[data-task=b],
+ul>li.task-list-item[data-task=b] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(195, 32, 105, 1);transform: ;msFilter:;'%3E%3Cpath d='M19 10.132v-6c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2V22l7-4.666L19 22V10.132z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* " — Quote */
-input[data-task=q]:checked,
-li[data-task=q]>input:checked {
+input[data-task=q],
+ul>li.task-list-item[data-task=q] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(32, 157, 207, 1);transform: ;msFilter:;'%3E%3Cpath d='M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 17.5 10z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* I — Idea / Lightbulb */
-input[data-task=I]:checked,
-li[data-task=I]>input:checked {
+input[data-task=I],
+ul>li.task-list-item[data-task=I] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(191, 173, 6, 1);transform: ;msFilter:;'%3E%3Cpath d='M9 20h6v2H9zm7.906-6.288C17.936 12.506 19 11.259 19 9c0-3.859-3.141-7-7-7S5 5.141 5 9c0 2.285 1.067 3.528 2.101 4.73.358.418.729.851 1.084 1.349.144.206.38.996.591 1.921h-.792v2h8.032v-2h-.79c.213-.927.45-1.719.593-1.925.352-.503.726-.94 1.087-1.363z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* + Pro */
-input[data-task='+']:checked,
-li[data-task='+']>input:checked {
+input[data-task="+"],
+ul>li.task-list-item[data-task="+"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(50, 163, 30, 1);transform: ;msFilter:;'%3E%3Cpath d='M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 
 /* - Con */
-input[data-task='-']:checked,
-li[data-task='-']>input:checked {
+input[data-task="-"],
+ul>li.task-list-item[data-task="-"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(195, 32, 105, 1);transform: scale(-1, -1);msFilter:;'%3E%3Cpath d='M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* — # people */
-input[data-task="#"]:checked,
-li[data-task="#"]>input:checked {
+input[data-task="#"],
+ul>li.task-list-item[data-task="#"] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(210, 114, 40, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* w wallet */
-input[data-task="w"]:checked,
-li[data-task="w"]>input:checked {
+input[data-task=w],
+ul>li.task-list-item[data-task=w] .task-list-item-checkbox {
     background-image: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(50, 163, 30, 1);transform: ;msFilter:;' %3E%3Cpath d='M14 9h8v6h-8z' %3E%3C/path%3E%3Cpath d='M20 3H5C3.346 3 2 4.346 2 6v12c0 1.654 1.346 3 3 3h15c1.103 0 2-.897 2-2v-2h-8c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h8V5c0-1.103-.897-2-2-2z' %3E%3C/path%3E%3C/svg%3E");
 }
 
 /* — h hot */
-input[data-task=h]:checked,
-li[data-task=h]>input:checked {
+input[data-task=h],
+ul>li.task-list-item[data-task=h] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(191, 173, 6, 1);transform: ;msFilter:;'%3E%3Cpath d='M16.5 8c0 1.5-.5 3.5-2.9 4.3.7-1.7.8-3.4.3-5-.7-2.1-3-3.7-4.6-4.6-.4-.3-1.1.1-1 .7 0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5 3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5.8 5.9 5 7.5 7 7.5 1.7 0 5-1.2 5-6.4 0-3.1-1.3-5.5-2.4-6.9-.3-.5-1-.2-1.1.3'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* — T telephon */
-input[data-task=t]:checked,
-li[data-task=t]>input:checked {
+input[data-task=t],
+ul>li.task-list-item[data-task=t] .task-list-item-checkbox {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(210, 114, 40, 1);transform: ;msFilter:;'%3E%3Cpath d='m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* — G green-leaf */
-input[data-task=g]:checked,
-li[data-task=g]>input:checked {
+input[data-task=g],
+ul>li.task-list-item[data-task=g] .task-list-item-checkbox {
     background-image: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(50, 163, 30, 1);transform: ;msFilter:;' %3E%3Cpath d='m22 3.41-.12-1.26-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a9 9 0 0 0 .39 4.58 16.6 16.6 0 0 1 1.18-2.2 9.85 9.85 0 0 1 4.07-3.43 11.16 11.16 0 0 1 5.06-1A12.08 12.08 0 0 0 9.34 9.2a9.48 9.48 0 0 0-1.86 1.53 11.38 11.38 0 0 0-1.39 1.91 16.39 16.39 0 0 0-1.57 4.54A26.42 26.42 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41z' %3E%3C/path%3E%3C/svg%3E");
 }
 
 /* — M Movie */
-input[data-task=m]:checked,
-li[data-task=m]>input:checked {
+input[data-task=m],
+ul>li.task-list-item[data-task=m] .task-list-item-checkbox {
     background-image: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(210, 114, 40, 1);transform: ;msFilter:;'%3E%3Cpath d='M18 11c0-.959-.68-1.761-1.581-1.954C16.779 8.445 17 7.75 17 7c0-2.206-1.794-4-4-4-1.516 0-2.822.857-3.5 2.104C8.822 3.857 7.516 3 6 3 3.794 3 2 4.794 2 7c0 .902.312 1.726.817 2.396A1.993 1.993 0 0 0 2 11v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-2.637l4 2v-7l-4 2V11zm-5-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2zM6 5c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -4954,15 +5013,14 @@ ul>li.task-list-item[data-task]:is([data-task='?'], [data-task='>'], [data-task=
     color: #737373;
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=g], [data-task='+'], [data-task='w']),
-ul>li.task-list-item[data-task]:is([data-task=g], [data-task='+'], [data-task='w']) {
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=g], [data-task='+'], [data-task=w]),
+ul>li.task-list-item[data-task]:is([data-task=g], [data-task='+'], [data-task=w]) {
     background-color: rgba(50, 163, 30, 0.2);
     color: #32a31e;
 }
 
 ul.contains-task-list.has-list-bullet {
     padding-right: 6px;
-    margin: 4px 0 0 8px;
 }
 
 .markdown-preview-view ol>li {
@@ -5708,15 +5766,13 @@ PLUGINS
     font-size: medium;
 }
 
-/* Kanban checkbox */
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
-    margin: 4px 7px 4px 0;
-    width: 14px;
-    height: 14px;
+/* kanban checked checkboxes */
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
     background-color: white;
-    border-color: var(--checkbox-border-color);
     color: var(--checkbox-border-color) !important;
-    filter: hue-rotate(42deg);
+    background-image: var(--checkbox-icon);
+    background-repeat: no-repeat;
+    background-position: -4px -5px;
 }
 
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
@@ -5745,22 +5801,6 @@ PLUGINS
 /* bg col */
 .theme-light .kanban-plugin__lane {
     background: var(--burlywood-col);
-}
-
-/* kanban checked checkboxes */
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
-    background-color: white;
-    color: var(--checkbox-border-color) !important;
-    background-image: var(--checkbox-icon);
-}
-
-/* kanban bg */
-.theme-light .kanban-plugin__scroll-container.kanban-plugin__horizontal {
-    background: linear-gradient(360deg, var(--background-secondary), transparent);
-}
-
-.theme-dark .kanban-plugin__scroll-container.kanban-plugin__horizontal {
-    background: linear-gradient(180deg, var(--background-secondary), transparent);
 }
 
 .kanban-plugin__item-button-wrapper {
@@ -5858,6 +5898,16 @@ div.kanban-plugin__lane-title-count {
     padding-right: 22px;
 }
 
+.year.svelte-1vwr9dd.svelte-1vwr9dd,
+.today.svelte-q3wqg9 {
+    color: #a43030 !important;
+}
+
+.today.svelte-q3wqg9 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
 /*----------------------------------------------------------------
  Hide text
 ----------------------------------------------------------------*/
@@ -5886,7 +5936,6 @@ div.kanban-plugin__lane-title-count {
     letter-spacing: -5px;
     padding-left: 0;
     padding-right: inherit;
-    margin-right: 48px;
     overflow-wrap: break-word;
     font-size: large;
 }
