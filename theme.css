@@ -2599,13 +2599,6 @@ body:not(.is-phone) .tree-item-self.is-clickable:hover {
     padding-left: 28px;
 }
 
-.is-phone .menu-item:hover:not(.is-disabled):not(.is-label),
-.is-phone .tree-item-self.is-clickable:hover {
-    background-color: var(--background-primary);
-    margin-left: -30px;
-    padding-left: 22px;
-}
-
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
     text-decoration-color: initial;
 }
