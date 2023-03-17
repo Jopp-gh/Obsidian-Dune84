@@ -3248,6 +3248,11 @@ movie tables
     content: " 📖";
 }
 
+/* add space bw footnote plots */
+.mov-strip .footnotes ol>li {
+  padding: 8px 0;
+}
+
 /* --------------------------------------------   
 STYLED TABLES
 --------------------------------------------   */
@@ -5042,6 +5047,9 @@ ol {
 TAGS
 ----------------------------------------------------------------*/
 /* Tag colors */
+a.tag {
+    padding: 2px 4px;
+}
 
 .cm-hashtag {
     padding-top: 0;
