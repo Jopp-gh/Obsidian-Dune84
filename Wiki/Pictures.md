@@ -137,7 +137,7 @@ Tables in markdown are, what they are, just get used to it.
 However, to simplify your task with tables, i suggest you to:
 - toggle on `Source mode`
 - get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin on, you will enjoy working with tables :)
-- if you want to add more informations to your movie table, remember to put a short description of your new preset in your very first column in edit mode / source mode (see table template above)
+- if you want to add more informations to your movie table, remember to put a short description of your new preset in the very first column of the movie table template above
 
 <br>
 
