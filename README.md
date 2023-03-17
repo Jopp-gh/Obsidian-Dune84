@@ -89,14 +89,15 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 
 ### Text alignment
 
-- typesetting locally: text right `cssclass: align-r`, text justified (block) `cssclass: align-b`, text centered (axial) `cssclass: align-a` (locally)
-- typesetting globally: see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment**
+- typesetting **locally**: text right `cssclass: align-r`, text justified (block) `cssclass: align-b`, text centered (axial) `cssclass: align-a`
+- typesetting **globally**: see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment**
 - **Readable line width** is supported too (see **Preferences>Editor>Display>Readable line length**), adjust your line length with **Style Settings>Dune>Fonts>Spacing**
 
 ### UI improvements
 
 - #phone: new **find-and-replace** dialog
 - #phone: bigger buttons, overall more space on screen
+- #phone: to open Obsidians preferences, swipe from left to right, to open the Right sidepanel, swipe from right to left.
 - #phone: remove **path and / or file name** from your note header - to rename, use the command palette or touch the topmost left-side on your display
 - #desktop: rename your notes with right-click on your active tab, or hovering over your note header or via right-click on your file/folder in the folder-tree view 
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
