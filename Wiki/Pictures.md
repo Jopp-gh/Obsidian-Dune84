@@ -97,8 +97,7 @@ the more pictures you put in a picture wall, the more you will get a seamless bo
 
 ### Simple Movie catalog
 
-![movie-cat](https://user-images.githubusercontent.com/48620536/225763295-6102f6a7-405e-4202-ae80-77cec4e9e9fe.png)
-
+![movie-str](https://user-images.githubusercontent.com/48620536/225897413-b0a210aa-4d0e-4443-a7bc-2c391887ab5e.png)
 
 my goal was to build a compact movie list / movie overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
 
@@ -116,16 +115,22 @@ my goal was to build a compact movie list / movie overview to remember watched m
 ```
 |          |                                   |                                   |                                   |                                   |
 | -------- | --------------------------------- | --------------------------------- | --------------------------------- | --------------------------------- |
-| cover    | ![[pict.jpg]]                     | ![[pict.jpg]]                     | ![[pict.jpg]]                     | ![[pict.jpg]]                     |
+| cover    | ![[pict-1.jpg]][^pca]             | ![[pict-2.jpg]][^pcb]             | ![[pict-3.jpg]][^pcc]             | ![[pict-4.jpg]][^pcd]             |
 | title    | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) |
-| duration | time min                          | time min                          | time min                          | time min                          |
+| duration | 100 min                           | 100 min                           | 100 min                           | 100 min                           |
 | type     | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 |
 | director | Name                              | Name                              | Name                              | Name                              |
 | rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
 ```
 
-As you can see, the first column of this template is just a guide to tell you what information to enter. This column will be present as long as you edit your table, but 
-a rendered table won't show table header nor the first column. Tables in markdown are, what they are, just get used to it.
+- As you can see, the first column of this template is just a guide to tell you what information to enter. This column will be present as long as you edit your table, but 
+a rendered table won't show table header nor the first column. 
+- **cover**: add your picture wiki link with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: use the first 3 initials of your movie title or the first 3 characters to give your footnote link a name. At bottom page, write:  `[^pic]: your story plot` to add your plot.
+- **title**: add a descriptive name followed by its release year, eg. `[MovieName (Year)]` and append after a link to your movie on iMdb, eg. `(https://www.imdb.com/title/id/)`. Finally, your Title row will look like this: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)`
+
+#### working with tables
+
+Tables in markdown are, what they are, just get used to it.
 However, to simplify your task with tables, i suggest you to:
 - toggle on `Source mode`
 - also, get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin, you will enjoy working with tables :)
