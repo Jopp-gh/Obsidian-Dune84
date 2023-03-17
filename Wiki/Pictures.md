@@ -125,8 +125,10 @@ my goal was to build a compact movie list / movie overview to remember watched m
 
 - As you can see, the first column of this template is just a guide to tell you what information to enter. This column will be present as long as you edit your table, but 
 a rendered table won't show table header nor the first column. 
-- **cover**: add your picture wiki link with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: use the first 3 initials of your movie title or the first 3 characters to give your footnote link a name. At bottom page, write:  `[^pic]: your story plot` to add your plot.
-- **title**: add a descriptive name followed by its release year, eg. `[MovieName (Year)]` and append after a link to your movie on iMdb, eg. `(https://www.imdb.com/title/id/)`. Finally, your Title row will look like this: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)`
+- **cover**: add your picture wiki link with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: use the first 3 initials of your movie title or its first 3 characters to give your footnote link a name. At bottom page, write:  `[^pic]: your story plot` to add your plot.
+- **title**: add a descriptive name followed by its release year, eg. `[MovieName (Year)]` and append after a link to your movie on iMdb, eg. `(https://www.imdb.com/title/id/)`. 
+
+Finally, your Title row will look like this: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)[^dun]`. My theme will add automatically the open-book icon before the footnote link to indicate the link to your movie plot
 
 #### working with tables
 
