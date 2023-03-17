@@ -3182,7 +3182,6 @@ movie tables
 
 .mov-strip.markdown-preview-view tbody tr>td {
     max-width: 240px;
-    white-space: break-spaces;
 }
 
 .mov-strip.markdown-preview-view table {
@@ -3193,16 +3192,11 @@ movie tables
     background-color: transparent;
 }
 
-/* .mov-strip.markdown-preview-view thead>th>th {
-  width: 200px;
-} */
-
 .mov-strip.markdown-preview-view table {
     display: flex;
     justify-content: center;
     overflow: scroll;
 }
-
 
 .mov-strip.markdown-preview-view tbody tr:first-child .internal-embed.is-loaded {
     display: flex;
@@ -3245,6 +3239,13 @@ movie tables
     border-bottom: 1px solid gray;
 }
 
+.mov-strip .footnote-ref {
+    vertical-align: baseline;
+}
+
+.mov-strip .footnote-link::before {
+    content: " 📖";
+}
 
 /* --------------------------------------------   
 STYLED TABLES
