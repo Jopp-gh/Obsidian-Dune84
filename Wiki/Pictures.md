@@ -97,7 +97,7 @@ the more pictures you put in a picture wall, the more you will get a seamless bo
 
 ### Simple Movie catalog
 
-![movie-str](https://user-images.githubusercontent.com/48620536/225897413-b0a210aa-4d0e-4443-a7bc-2c391887ab5e.png)
+![Mov-coll-2](https://user-images.githubusercontent.com/48620536/225926038-afdc2964-60b9-4afd-9472-0f1057d99a49.png)
 
 my goal was to build a compact movie list / movie overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
 
@@ -108,9 +108,9 @@ my goal was to build a compact movie list / movie overview to remember watched m
 - rating
 
 #### Usage
-1) To add descriptions to your movie table visit https://www.imdb.com/ 
-2) First, you need to add a cssclass in your yaml header, use `cssclass: mov-strip`
-3) secondly, use this template:
+1) to add descriptions to your movie table visit https://www.imdb.com/ 
+2) next, add a cssclass in your yaml header, use `cssclass: mov-strip`
+3) finally, use this template:
 
 ```
 |          |                                   |                                   |                                   |                                   |
@@ -123,20 +123,18 @@ my goal was to build a compact movie list / movie overview to remember watched m
 | rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
 ```
 
-- As you can see, the first column of this template is just a guide to tell you what information to enter. This column will be present as long as you edit your table, but 
-a rendered table won't show table header nor the first column. 
-- **cover**: add your picture wiki link with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: use the first 3 initials of your movie title or its first 3 characters to give your footnote link a name. At bottom page, write:  `[^pic]: your story plot` to add your plot.
-- **title**: add a descriptive name followed by its release year, eg. `[MovieName (Year)]` and append after a link to your movie on iMdb, eg. `(https://www.imdb.com/title/id/)`. 
-
-Finally, your Title row will look like this: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)[^dun]`. My theme will add automatically the open-book icon before the footnote link to indicate the link to your movie plot
+- As you can see, its very first column is just a guide to tell you what information to enter. This column won't show up in rendered tables. 
+- **cover**: add your locally stored picture with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: to add meaningful footnote descriptions, use your movies first 3 initials or use its first 3 characters. At bottom page, write:  `[^pic]: insert here a pasted story plot` to add your plot.
+- **title**: add your movies name followed by its release year, eg. `[MovieName (Year)]` and after, append a weblink of your choice, eg iMdb, this would look so: `[MovieName (Year)](https://www.imdb.com/title/id/)`
+Example: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)[^dun]`. My theme will append automatically an open-book icon before your footnote description, to indicate the story plot 
 
 #### working with tables
 
 Tables in markdown are, what they are, just get used to it.
 However, to simplify your task with tables, i suggest you to:
 - toggle on `Source mode`
-- also, get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin, you will enjoy working with tables :)
-- add a short description to your movie table's very first column to remember your new preferences.
+- get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin on, you will enjoy working with tables :)
+- if you want to add more informations to your movie table, remember to put a short description of your new preset in your very first column in edit mode / source mode (see table template above)
 
 <br>
 
