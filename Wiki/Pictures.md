@@ -1,14 +1,17 @@
+### Banner
+
 ```
 ---
 cssclass: banner-a,
 ---
 ```
-
 `![[Pict.jpeg|banner-a]]`
 
 **Options**: banner-a, banner-b
 
-To add a neat banner, you must define both `cssclass` AND `alt name`. 
+to add a neat banner, you must define both `cssclass` AND `alt name`. 
+
+**Vertical placement**
 
 To adjust your **b**anner **c**oordinates vertically 
 - locally: use 6 different sizes (10, 20, 30, 40, 50, 60), eg. `cssclass: bc-10` 
@@ -89,9 +92,9 @@ position your images, add a picture frame and description
 ```
 ![I-10](https://user-images.githubusercontent.com/48620536/223212661-17a473b1-8151-4aac-b558-42c7fafe59a1.jpg)
 
-**Options**: Configure height and width under `Style Settings>Pictures>Zoom Pictures`
+**Options**: Configure height and width, see **Style Settings>Pictures>Image Wall**
 
-the more pictures you put in a picture wall, the more you will get a seamless board. To remove empty spaces and get a neat-looking picture wall, see (see **Style Settings>Dune>Pictures>Image Wall**) and adjust sliders accordingly. Keep an empty line between each line of pictures. 
+the more pictures you put in a picture wall, the more your picture wall will look seamless. To remove empty spaces and get a neat-looking picture wall, (see **Style Settings>Dune>Pictures>Image Wall**) and adjust H/W sliders accordingly. Remember to keep an empty line between each line of pictures. 
 
 <br>
 
@@ -99,7 +102,7 @@ the more pictures you put in a picture wall, the more you will get a seamless bo
 
 ![Mov-coll-2](https://user-images.githubusercontent.com/48620536/225926038-afdc2964-60b9-4afd-9472-0f1057d99a49.png)
 
-my goal was to build a compact movie list / movie overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
+my goal was to build a compact Movie list / overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
 
 - cover image,
 - title and year (ideally a link to iMDB, eg. [Dune (1984)](https://www.imdb.com/title/tt0087182/)),
@@ -108,8 +111,8 @@ my goal was to build a compact movie list / movie overview to remember watched m
 - rating
 
 #### Usage
-1) to add descriptions to your movie table visit https://www.imdb.com/ 
-2) next, add a cssclass in your yaml header, use `cssclass: mov-strip`
+1) to add descriptions to your movie table visit the Internet Movie Database: https://www.imdb.com/ 
+2) next, add a cssclass to your yaml header, use `cssclass: mov-strip`
 3) finally, use this template:
 
 ```
@@ -123,12 +126,12 @@ my goal was to build a compact movie list / movie overview to remember watched m
 | rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
 ```
 
-- As you can see, its very first column is just a guide to tell you what information to enter. This column won't show up in rendered tables. 
+- **first column**: As you can see, its very first column is a guide to tell you what information to enter. This column won't show up in rendered tables. 
 - **cover**: add your locally stored picture with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: to add meaningful footnote descriptions, use your movies first 3 initials or use its first 3 characters. At bottom page, write:  `[^pic]: insert here a pasted story plot` to add your plot.
 - **title**: add your movies name followed by its release year, eg. `[MovieName (Year)]` and after, append a weblink of your choice, eg iMdb, this would look so: `[MovieName (Year)](https://www.imdb.com/title/id/)`
 Example: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)[^dun]`. My theme will append automatically an open-book icon before your footnote description, to indicate the story plot 
 
-#### working with tables
+#### Working with tables
 
 Tables in markdown are, what they are, just get used to it.
 However, to simplify your task with tables, i suggest you to:
