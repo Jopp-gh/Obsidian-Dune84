@@ -126,11 +126,14 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 | rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
 ```
 
-- **first column**: As you can see, its very first column is a guide to tell you what information to enter. This column won't show up in rendered tables. 
-- **cover**: add your locally stored picture with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: to add meaningful footnote descriptions, use your movies first 3 initials or use its first 3 characters. At bottom page, write:  `[^pic]: insert here a pasted story plot` to add your plot.
-- **title**: add your movies name followed by its release year, eg. `[MovieName (Year)]` and after, append a weblink of your choice, eg iMdb, this would look so: `[MovieName (Year)](https://www.imdb.com/title/id/)`
-Example: `[Dune (1984)](https://www.imdb.com/title/tt0087182/)[^dun]`. My theme will append automatically an open-book icon before your footnote description, to indicate the story plot 
-- since Obsidian does not support popover preview for footnotes, get [obsidian-better-footnotes](https://github.com/jancbeck/obsidian-better-footnotes) by aidenlx this way you can read plots directly from your catalog view instead to jump to bottom page
+- **first column**: As you can see, the very first column is just a guide to tell you what information to enter on the right side. This column won't show up in rendered tables. 
+- **cover**: add your locally stored picture with `![[your-picture.jpg]]` followed by a footnote link `[^pic]` TIP: to add unique footnote id's, use the first 3 initials or use the first 3 characters of your movie title. At bottom page then, write:  `[^pic]: pasted story plot` to add your plot.
+- since Obsidian does not support popover preview for footnotes, get [obsidian-better-footnotes](https://github.com/jancbeck/obsidian-better-footnotes) by aidenlx this way you can read plots directly from your footnote link (open-book icon), my theme will append automatically an open-book icon before your footnote description in your movie list 
+- **title**: add movies name followed by their release year, eg. `[MovieName (Year)]` and after, append a weblink of your choice, eg iMdb, this would look like so: `[MovieName (Year)](https://www.imdb.com/title/id/)`. 
+
+Example: [Dune (1984)](https://www.imdb.com/title/tt0087182/). 
+
+<br>
 
 #### Working with tables
 
