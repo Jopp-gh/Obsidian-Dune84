@@ -2521,7 +2521,7 @@ footnotes normal
 }
 
 .is-flashing {
-    transition: background-color 0.3s ease;
+    transition: background-color 200ms ease;
     background-color: var(--text-accent);
 }
 
@@ -2629,6 +2629,7 @@ body:not(.is-phone) .modal {
 
 .is-phone .modal {
     animation: fadeIn 1.2s;
+    width: 100% !important;
 }
 
 .workspace-drawer .workspace-drawer-actions,
@@ -3175,6 +3176,7 @@ movie tables
 
 .mov-strip.markdown-preview-view tbody tr>td {
     max-width: 240px;
+    /* white-space: break-spaces; */
 }
 
 .mov-strip.markdown-preview-view table {
@@ -3223,8 +3225,8 @@ movie tables
 }
 
 /* no highlights */
-.mov-strip.markdown-preview-view tbody tr:hover,
-.mov-strip.markdown-preview-view tbody tr:nth-child(odd):hover {
+/* .mov-strip.markdown-preview-view tbody tr:nth-child(odd):hover */
+.mov-strip.markdown-preview-view tbody tr:hover {
     background-color: transparent;
 }
 
@@ -3242,8 +3244,9 @@ movie tables
 
 /* add space bw footnote plots */
 .mov-strip .footnotes ol>li {
-  padding: 8px 0;
+    padding: 8px 0;
 }
+
 
 /* --------------------------------------------   
 STYLED TABLES
@@ -3348,95 +3351,111 @@ table :not([class*="wave"], [class*="fade"], [class*="stars"])hr {
 ASIDE NOTES
 ----------------------------------------------------------------*/
 
-/* note on hover */
-.aside-hide {
-    text-decoration: unset;
-    text-align: justify;
-    font-weight: unset;
-    float: right;
-    position: relative;
-    width: 2.4em;
-    height: 0.3em;
-    clear: right;
-    overflow: hidden;
-    background-color: var(--bold-color);
-    color: transparent;
-    transition: transform 1s;
-    border-radius: 4px;
-}
-
-body:not(.is-phone) .aside-hide {
-    margin-right: -3em !important;
-}
-
-.is-phone .aside-hide {
-    height: 0.6em;
-    width: 3em;
-    white-space: normal;
-    border-radius: 4px;
-    margin-right: -1.4em !important;
-}
-
-.aside-hide:before {
-    display: block;
-    border-bottom: 2px solid var(--background-modifier-border);
-    color: none;
-    text-shadow: 0 0 0 var(--interactive-accent);
-    font-size: 12px;
-    padding-top: .1em;
-    padding-left: .3em;
-}
-
-.aside-hide:hover {
-    white-space: normal;
-    text-overflow: unset;
-    font-size: 14px;
-    width: 340px;
-    height: unset;
-    padding: 0px 12px 12px 12px;
-    color: var(--text-normal);
-    background-color: var(--background-secondary);
+.callout[data-callout="aside-l"],
+.callout[data-callout="aside-r"] {
+    background: var(--background-secondary);
+    mix-blend-mode: normal;
+    width: auto;
+    max-width: 25vw;
     box-shadow: 0.5em 0.5em var(--bold-color);
-    z-index: 3;
-    transform: translate(4px, 0px);
-    border-radius: 4px;
+    padding-bottom: 10px;
 }
 
-/* Aside Inside the Note */
-.aside-in {
-    text-decoration: none !important;
-    text-align: justify;
-    font-weight: unset;
-    font-size: 14px;
+.callout[data-callout^=aside-] :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+.callout[data-callout="aside-l"] .callout-content,
+.callout[data-callout="aside-r"] .callout-content,
+.callout[data-callout="aside-lh"] .callout-content,
+.callout[data-callout="aside-rh"] .callout-content {
+    font-size: small;
+}
+
+.callout[data-callout="aside-l"],
+.callout[data-callout="aside-lh"] {
+    float: left;
+    clear: left;
+    margin: 16px 20px 14px -1.4em !important;
+}
+
+.callout[data-callout="aside-r"],
+.callout[data-callout="aside-rh"] {
     float: right;
-    position: relative;
     clear: right;
-    width: 18em;
-    padding: 1em;
-    margin-bottom: .6em;
-    margin-right: -20px;
-    background-color: var(--background-secondary);
+    margin: 16px -1.4em 14px 20px !important;
+}
+
+.callout[data-callout="aside-lh"] .callout-title,
+.callout[data-callout="aside-rh"] .callout-title,
+.callout[data-callout="aside-l"] .callout-title,
+.callout[data-callout="aside-r"] .callout-title {
+    padding: 0;
+    display: none;
+}
+
+.is-phone .callout[data-callout="aside-l"],
+.is-phone .callout[data-callout="aside-r"],
+.is-phone .callout[data-callout="aside-lh"],
+.is-phone .callout[data-callout="aside-rh"] {
+    max-width: 60vw;
+    width: auto;
+    margin: 12px;
+}
+
+/* hide box */
+.callout[data-callout="aside-lh"],
+.callout[data-callout="aside-rh"] {
+    width: 2.6em;
+    height: 0;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 4px solid var(--bold-color);
+
+}
+
+.markdown-source-view.mod-cm6 .callout[data-callout="aside-lh"],
+.markdown-source-view.mod-cm6 .callout[data-callout="aside-rh"] {
+    pointer-events: none;
+}
+
+.callout[data-callout="aside-lh"] {
+    margin-left: -2em !important;
+}
+
+.callout[data-callout="aside-rh"] {
+    margin-right: -2em !important;
+}
+
+.markdown-preview-view .callout[data-callout="aside-lh"]:hover {
+    margin: 22px 22px 22px 0;
+}
+
+.markdown-preview-view .callout[data-callout="aside-rh"]:hover {
+    margin: 22px 0 22px 22px;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
+.markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-lh"]:after {
+    padding: 40px;
+}
+
+.markdown-preview-view .callout.callout[data-callout="aside-lh"]:hover,
+.markdown-preview-view .callout.callout[data-callout="aside-rh"]:hover {
+    background: var(--background-secondary);
+    mix-blend-mode: normal;
+    max-width: 25vw;
+    width: auto;
+    font-size: small;
+    height: 100% !important;
     box-shadow: 0.5em 0.5em var(--bold-color);
-    z-index: 3;
+    border-bottom: 0;
     border-radius: 4px;
-    margin-right: -32px;
+    pointer-events: all;
 }
 
-.is-phone .aside-in {
-    padding: 0.4em;
-    margin-top: 1em;
-    margin-right: -14px;
-}
-
-.aside-in .internal-embed.is-loaded:not(.image-embed),
-.aside-in .markdown-embed {
-    width: 100%;
-}
-
-/*Shrink Scrollbar*/
-.aside> ::-webkit-scrollbar {
-    width: 4px;
-}
 
 /*----------------------------------------------------------------
 Poetry - Preview mode
@@ -3817,11 +3836,6 @@ image placed + description
     margin: 0;
 }
 
-/* align caption to bottom border */
-.callout.callout[data-callout=moodboard] .image-embed[src*="#cap"]::after {
-    margin-top: auto;
-}
-
 /* dim bright imgs for dark themes */
 .theme-dark .view-content img {
     filter: brightness(0.9);
@@ -3851,11 +3865,14 @@ body:not(.is-phone) .markdown-preview-view .mermaid svg:hover {
 .zoom-auto .markdown-preview-view .mermaid svg:hover,
 .markdown-preview-view .mermaid svg:active {
     cursor: zoom-out;
-    height: 100%;
-    width: 100%;
+    height: 200%;
+    width: auto;
     max-width: 100%;
+    max-height: 200%;
     z-index: 3;
-    transform: translate(-50%, -45%);
+    transform: translate(-2%, -50%);
+    backdrop-filter: blur(5px);
+    position: absolute;
 }
 
 .zoom-auto .view-content .image-embed img:hover,
@@ -4383,9 +4400,11 @@ PHONE
     font-size: small;
 }
 
+/* padding top needed for F&R */
 .is-phone .markdown-source-view {
     overflow: auto;
     padding-top: 44px;
+    padding-bottom: 44px;
 }
 
 .is-phone .markdown-preview-view {
@@ -5107,8 +5126,9 @@ MERMAID - NO OVERFLOW
 /*mermaid resize and center*/
 .mermaid svg {
     max-width: 60vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* stops mermaid overflow getting cut off */
@@ -5813,7 +5833,12 @@ PLUGINS
 .kanban-plugin__lane-header-wrapper {
     background: var(--text-accent-special);
     color: white;
+    border-radius: inherit;
 }
+
+/* .is-phone .kanban-plugin__lane-header-wrapper {
+    height: auto;
+} */
 
 /* header bar same col as Title */
 .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
@@ -5826,7 +5851,86 @@ div.kanban-plugin__lane-title-count {
     display: none;
 }
 
-/* Quickadd space btw btns */
+.is-phone .kanban-plugin__lane {
+    margin-top: 28px;
+}
+
+.is-phone .kanban-plugin__item-title .markdown-preview-view {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.is-phone .workspace-leaf-content[data-type="kanban"] .view-actions {
+    margin-left: -130px;
+}
+
+.is-phone .workspace-leaf-content[data-type="kanban"] .view-header .view-action {
+    background: var(--background-primary);
+    scale: 1.1;
+    border-radius: inherit;
+    margin-right: -2px;
+    margin-left: 2px;
+    border-radius: 50%;
+}
+
+.is-phone .workspace-leaf-content[data-type="kanban"] .clickable-icon svg.svg-icon.lucide-plus-circle {
+    visibility: visible;
+    width: auto;
+}
+
+.is-phone .kanban-plugin__markdown-preview-view {
+    padding: 0;
+}
+
+.is-phone .kanban-plugin__search-wrapper input[type='text'] {
+    height: 50%;
+}
+
+.is-phone .kanban-plugin .kanban-plugin__search-wrapper input[type='text'] {
+    width: 100%;
+    margin-top: 38px;
+}
+
+.is-phone .kanban-plugin__icon[data-icon="lucide-x"] {
+    display: inline-block;
+    line-height: 1;
+    margin-top: 40px;
+    scale: 1.4;
+}
+
+/* default, without find dialog */
+.is-phone .kanban-plugin__lane-wrapper {
+    margin-top: 2%;
+}
+
+.is-phone .kanban-plugin input[type='text'] {
+    padding: 0;
+}
+
+.is-phone .kanban-plugin__board>div {
+    display: grid;
+    width: 1000px;
+    height: 100%;
+    padding-bottom: 44px;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    overflow: scroll;
+    grid-gap: 10px;
+}
+
+body:not(.is-phone) .kanban-plugin__board>div {
+    display: grid;
+    width: 1800px;
+    height: 100%;
+    padding-bottom: 44px;
+    grid-template-columns: repeat(6, minmax(280px, 1fr));
+    overflow: scroll;
+    grid-gap: 10px;
+}
+
+
+/*
+ Quickadd space btw btns 
+ */
 .quickAddModal .modal-content div {
     gap: 4px;
 }
@@ -5841,6 +5945,7 @@ div.kanban-plugin__lane-title-count {
     color: var(--text-accent-special);
 }
 
+/* my snippets */
 .MySnippets-statusbar-menu {
     background: var(--background-primary);
     border: none;
@@ -5861,6 +5966,7 @@ div.kanban-plugin__lane-title-count {
     visibility: visible;
 }
 
+/* dataview */
 .dataview.small-text {
     font-size: smaller;
     margin-left: 2px;
