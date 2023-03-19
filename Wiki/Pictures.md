@@ -145,6 +145,23 @@ However, to simplify your task with tables, i suggest you to:
 
 <br>
 
+### Zoom Svg diagrams
+
+Options: (phone) `cssclass: svg-50` ,  `cssclass: svg-100` 
+
+Options: (desktop) svg-50, svg-100, svg-150, svg-200. eg. `cssclass: svg-50` 
+
+to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) meanwhile notes with diagrams only require bigger sizes, (eg. svg-150 or svg-200). 
+
+Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom on hover**
+Otherwise click and hold over an image
+
+### Zoom Pictures
+
+just hover and click, hold click. Otherwise, activate automatic zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom on hover**
+
+<br>
+
 ### Video resized 
 
 `![[video.mp4|vid-20]] `
