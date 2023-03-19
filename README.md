@@ -44,19 +44,19 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
 - table row and column highlights
 
-### Callouts, Notes [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 
+- Multiple columns  
 - Callout Infobox 
-- multiple columns  
-- Aside notes -interactive/fixed 
-- fnote, memo (small boxes)
+- Callout Aside notes -interactive/fixed 
 - Callout to shorten longer documents: use `> [!read-more…]` 
-- simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
 
 ### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
 
+- fnote, memo (small boxes)
 - mini-admonitions (custom checkboxes)
 - theme syntax coloring
+- simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
 
 ### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 
@@ -67,6 +67,7 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
 - zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
 - auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
+- zoom svg mermaid diagrams, use svg-50, svg-100, svg-150, svg-200, eg.`cssclass: svg-50` (automatic zoom or zoom on click and hold) both for phone/desktop
 - Book pictures (custom placed, framed with description)
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
@@ -75,8 +76,8 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
   
-- Initials 
-- Poetry fonts
+- Callout for Raisecaps [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
+- Poetry fonts, see **Preferences>Style Settings>Dune>Fonts>Poetry Fonts>**
 - alignment, add `cssclass: poetry` 
 - Horizontal line decorations - add up to 7 line styles from a - g, eg. `cssclass: wave-a`
 
