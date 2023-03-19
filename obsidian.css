@@ -1636,8 +1636,24 @@ h6,
     text-align: center;
 }
 
+.mov-strip h1,
+.mov-strip h2,
+.mov-strip h3,
+.mov-strip h4,
+.mov-strip h5,
+.mov-strip h6,
+.mov-strip .HyperMD-header-1,
+.mov-strip .HyperMD-header-2,
+.mov-strip .HyperMD-header-3,
+.mov-strip .HyperMD-header-4,
+.mov-strip .HyperMD-header-5,
+.mov-strip .HyperMD-header-6 {
+    text-align: center;
+}
+
 /* Centered title */
-.center-header .inline-title {
+.center-header .inline-title,
+.mov-strip .inline-title {
     text-align: center;
 }
 
@@ -1945,30 +1961,6 @@ ul>li::marker,
     background-color: var(--text-accent-special);
 }
 
-/*First Capital Letter*/
-p.raisecap:first-letter {
-    font-family: var(--poetry-initial);
-    font-size: 110px;
-    line-height: 5px;
-    padding-top: 0;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    color: var(--drop-cap-col);
-    margin-bottom: 12px;
-    /* #800000; */
-}
-
-.is-phone p.raisecap:first-letter {
-    font-family: var(--poetry-initial);
-    font-size: 70px;
-    padding-bottom: 8px;
-    /* font-family: cursive; */
-}
-
-/* min. px 26 padding top "S" */
-p.raisecap {
-    padding-top: var(--custom-margin-above-header);
-}
 
 sup {
     line-height: 15px !important;
@@ -3482,8 +3474,6 @@ Poetry - Preview mode
 .poetry .external-link {
     font-family: var(--poetry-n);
     text-align: center !important;
-    line-height: 1.3em;
-    margin-block-end: 4%;
 }
 
 .poetry img {
@@ -3495,6 +3485,34 @@ Poetry - Preview mode
 .is-phone .poetry {
     /* font-family: cursive; */
     font-style: italic;
+}
+
+/* Raisecap */
+
+.callout[data-callout="raisecap"] {
+    background: transparent;
+    mix-blend-mode: normal;
+    width: auto;
+    padding-top: var(--custom-margin-above-header);
+    padding-bottom: inherit;
+}
+
+.callout.callout[data-callout=raisecap] .callout-title {
+    display: none;
+}
+
+.callout[data-callout="raisecap"] p:first-letter {
+    font-family: var(--poetry-initial);
+    font-size: 110px;
+    color: var(--drop-cap-col);
+    padding-top: 40px;
+    /* #800000; */
+}
+
+.callout[data-callout="raisecap"] p {
+    line-height: 1.55em;
+    padding-top: 3em;
+    margin-bottom: initial;
 }
 
 /*----------------------------------------------------------------
@@ -3857,24 +3875,79 @@ body:not(.is-phone) .view-content img {
     object-fit: cover;
 }
 
-body:not(.is-phone) .markdown-preview-view .mermaid svg:hover {
-    cursor: zoom-in;
+/* zoom svg diagrams */
+.theme-light .mermaid .edgeLabel,
+.mermaid .label text,
+.mermaid span {
+    color: black !important;
 }
 
-.is-phone .markdown-preview-view .mermaid svg:hover,
+.theme-dark .mermaid .edgeLabel {
+    color: white !important;
+}
+
 .zoom-auto .markdown-preview-view .mermaid svg:hover,
 .markdown-preview-view .mermaid svg:active {
-    cursor: zoom-out;
-    height: 200%;
-    width: auto;
-    max-width: 100%;
-    max-height: 200%;
-    z-index: 3;
-    transform: translate(-2%, -50%);
-    backdrop-filter: blur(5px);
-    position: absolute;
+    height: 125%;
+    width: 125%;
 }
 
+/* phone */
+.is-phone .svg-50 .mermaid svg:hover {
+    height: 50%;
+    width: 50%;
+}
+
+.is-phone .svg-100 .mermaid svg:hover {
+    height: 100%;
+    width: 100%;
+}
+
+/* desk - embedded small diagram */
+.zoom-auto .svg-50 .mermaid svg:hover,
+.svg-50 .mermaid svg:active {
+    height: 50% !important;
+    width: 50%;
+}
+
+.zoom-auto .svg-100 .mermaid svg:hover,
+.svg-100 .mermaid svg:active {
+    height: 100% !important;
+    width: 100%;
+}
+
+.zoom-auto .svg-150 .mermaid svg:hover,
+.svg-150 .mermaid svg:active {
+    height: 150% !important;
+    width: 150%;
+}
+
+.zoom-auto .svg-200 .mermaid svg:hover,
+.svg-200 .mermaid svg:active {
+    height: 200% !important;
+    width: 200%;
+}
+
+body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
+    cursor: zoom-out;
+    z-index: 3;
+    margin-left: 0;
+    margin-right: auto;
+    backdrop-filter: blur(5px);
+}
+
+/* phone */
+.is-phone .markdown-preview-view .mermaid svg:hover,
+.is-phone .markdown-preview-view .mermaid svg:active {
+    z-index: 3;
+    margin-left: 0;
+    margin-right: auto;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    margin-bottom: auto;
+}
+
+/* image handling */
 .zoom-auto .view-content .image-embed img:hover,
 .view-content .image-embed img:active {
     cursor: zoom-out;
@@ -5377,19 +5450,6 @@ SLIDESHOW
     /* display: inline; */
 }
 
-.reveal .slides .aside-in {
-    margin-right: 4px;
-}
-
-.reveal p.raisecap:first-letter {
-    font-size: 150px;
-    line-height: 4px;
-    padding-top: 0;
-    padding-right: 1px;
-    padding-bottom: 20px;
-    padding-top: 4px;
-}
-
 /* Hide frontmatter */
 .reveal .slides .frontmatter-container {
     display: none;
@@ -5494,21 +5554,11 @@ ol {
     visibility: hidden;
 }
 
-.is-phone .reveal .aside-hide {
+.is-phone .reveal .callout.callout[data-callout^=infobox] {
     width: 100%;
-    font-size: 34px;
-    margin-bottom: 36px;
-    margin-top: 10px;
-    padding-right: 90px;
-    border-radius: 4px;
-}
-
-/* .is-phone .reveal .aside-show */
-.is-phone .reveal .aside-in {
-    width: 60%;
-    font-size: 34px;
-    margin-right: 4px;
-    padding-bottom: 12px;
+    height: 100%;
+    align-items: center;
+    margin: 20px;
 }
 
 .is-phone .reveal .callout.callout[data-callout^=infobox] img {
@@ -5966,7 +6016,9 @@ body:not(.is-phone) .kanban-plugin__board>div {
     visibility: visible;
 }
 
-/* dataview */
+/* 
+dataview 
+*/
 .dataview.small-text {
     font-size: smaller;
     margin-left: 2px;
@@ -6002,6 +6054,11 @@ body:not(.is-phone) .kanban-plugin__board>div {
     background-color: var(--button-background);
 }
 
+input.dataview.task-list-item-checkbox {
+    margin-right: 6px;
+}
+
+/* buttons */
 .button-maker {
     padding-right: 22px;
 }
@@ -6083,8 +6140,7 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
 
 /* cssclass x */
 /* .hide-gui .cm-s-obsidian div.nav-folder-title */
-
-.hide-doc :is(p, pre):not(p.raisecap) {
+.hide-doc :is(p, pre) {
     -webkit-text-security: square !important;
     letter-spacing: -5px;
     display: contents;
@@ -6128,10 +6184,4 @@ body .markdown-preview-view:not(.is-live-preview).hide-doc img {
 body .markdown-preview-view:not(.is-live-preview).hide-doc :is(s.aside-in, s.aside-hide) {
     -webkit-text-security: square !important;
     letter-spacing: -3px;
-}
-
-body .markdown-preview-view:not(.is-live-preview).hide-doc p.raisecap {
-    -webkit-text-security: square !important;
-    letter-spacing: -3px;
-    overflow-wrap: anywhere;
 }
