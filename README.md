@@ -28,8 +28,7 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 
 ### Screenshots
 
-![Titelbild-Dune-3](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Dune-Obsidian.jpg)
-
+![Dune-Obsidian](https://user-images.githubusercontent.com/48620536/226210760-1a65804d-377d-421e-bcd1-3081dad5233c.png)
   
 ## Features
 
