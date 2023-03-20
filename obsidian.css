@@ -3241,6 +3241,52 @@ movie tables
 
 
 /* --------------------------------------------   
+Contact TABLES - (img, full nm, tel, mail, group relations)
+--------------------------------------------   */
+
+.contacts.markdown-preview-view tbody td {
+    width: auto;
+}
+
+.contacts.markdown-preview-view thead tr>th {
+    border: 0;
+    border-bottom: 0;
+}
+
+.theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
+    border: 0;
+    background-color: white;
+}
+
+.contacts.markdown-preview-view tr:nth-child(1n + 1) {
+    border-bottom: 1px solid gray;
+}
+
+.contacts.markdown-rendered tbody tr>td {
+    border: 0;
+}
+
+.contacts table tr td {
+    display: flex;
+    justify-content: center;
+    text-overflow: ellipsis;
+}
+
+/* small pic id */
+.contacts .internal-embed img {
+    width: 50px;
+    height: 50px;
+    clip-path: circle(44%);
+}
+
+.contacts:is(.markdown-source-view, .markdown-preview-view) tbody>tr>td {
+    display: flex;
+    align-items: center;
+    margin: -8px;
+    border: 0;
+}
+
+/* --------------------------------------------   
 STYLED TABLES
 --------------------------------------------   */
 
@@ -3448,7 +3494,6 @@ ASIDE NOTES
     pointer-events: all;
 }
 
-
 /*----------------------------------------------------------------
 Poetry - Preview mode
 ----------------------------------------------------------------*/
@@ -3505,7 +3550,6 @@ Poetry - Preview mode
     font-family: var(--poetry-initial);
     font-size: 110px;
     color: var(--drop-cap-col);
-    padding-top: 40px;
     /* #800000; */
 }
 
@@ -5398,8 +5442,33 @@ SLIDESHOW
     width: inherit;
 }
 
-.reveal ul>li.task-list-item .reveal .task-list-item-checkbox {
-    vertical-align: top;
+.reveal ul>li.task-list-item .task-list-item-checkbox {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.reveal .callout.callout[data-callout^=infobox] {
+    width: 25vw;
+}
+
+.reveal .callout[data-callout="aside-l"],
+.reveal .callout[data-callout="aside-r"] {
+    width: auto;
+    padding-bottom: 10px;
+    margin: 16px 0.6em !important;
+}
+
+.reveal .callout[data-callout="aside-lh"],
+.reveal .callout[data-callout="aside-rh"] {
+    visibility: hidden;
+}
+
+.reveal table th,
+.reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
+    font-size: large;
 }
 
 /* fix */
@@ -5505,7 +5574,6 @@ body:is(.is-phone) .reveal .slides>section img[alt='banner-b'] {
 .reveal.center,
 .reveal.center .slides,
 .reveal.center .slides section {
-    min-height: 200% !important;
     position: fixed;
 }
 
