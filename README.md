@@ -42,6 +42,8 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
 - table row and column highlights
+- add movies to your Movie-list (use `cssclass: mov-strips`) for a setup see [Movie list](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
+- add contacts to your Contact-list, use `cssclass: contacts`
 
 ### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 
@@ -70,7 +72,6 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - Book pictures (custom placed, framed with description)
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
-- add Movie-strips (use `cssclass: mov-strips`) to remember your watched movies, for setup see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
@@ -152,7 +153,7 @@ Support me, if you like what you get  :)
 
 
 ## Collaboration
-thanks for your interest in my theme. Right now i only accept bug reports and feature requests
+thanks for your interest in my theme. Right now i only accept bug reports and feature requests. 
 
 First, to accept collaborators i would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
 Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune.
