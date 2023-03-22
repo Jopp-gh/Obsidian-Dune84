@@ -2434,7 +2434,6 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
     text-align: center;
 }
 
-
 /* Hide collapse btn, icon and title of original Callouts in LP - attention */
 .callout.callout[data-callout^=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
     display: none;
@@ -2844,29 +2843,30 @@ a:hover {
 
 .markdown-rendered button.copy-code-button:hover {
     background-color: var(--text-accent-special);
-    /* color: white; */
+    height: 20px;
+    width: 20px;
 }
 
 /* blob copy btn */
 .markdown-rendered button.copy-code-button {
-    height: 20px;
-    width: 21px;
-    box-shadow: none;
     font-size: 0;
-    font-family: none;
-    position: absolute;
     top: -4px;
-    left: 0;
     margin-top: 4px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
+    font-family: none;
+    box-shadow: none;
     color: transparent !important;
+    position: absolute;
 }
 
-/* copy code btn - render as blob on phone */
+body:not(.is-phone) .markdown-rendered button.copy-code-button {
+    left: 0;
+}
+
 .is-phone .markdown-rendered button.copy-code-button {
-    border-radius: 50%;
-    width: 19px;
-    height: 19px;
+    right: 0;
 }
 
 /* scrollbar bg transparent */
@@ -3157,6 +3157,13 @@ table tbody tr:nth-child(even) {
     max-width: 36em;
 }
 
+/* full size table width */
+.is-phone .markdown-preview-view table,
+.is-phone .markdown-source-view table,
+.is-phone .cm-table-widget table {
+    width: max-content;
+}
+
 /* --------------------------------------------   
 movie tables
 --------------------------------------------   */
@@ -3244,45 +3251,60 @@ movie tables
 Contact TABLES - (img, full nm, tel, mail, group relations)
 --------------------------------------------   */
 
-.contacts.markdown-preview-view tbody td {
-    width: auto;
-}
+/* .contacts.markdown-preview-view tbody td {
+  width: auto;
+} */
 
-.contacts.markdown-preview-view thead tr>th {
+/* .contacts.markdown-preview-view thead tr>th {
     border: 0;
     border-bottom: 0;
+} */
+
+.contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
+    border: 0;
+    text-align: left;
 }
+
+/* .contacts.markdown-preview-view tr:nth-child(1n + 1) {
+    border-bottom: 1px solid gray;
+} */
 
 .theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
-    border: 0;
-    background-color: white;
+    color: white;
 }
 
-.contacts.markdown-preview-view tr:nth-child(1n + 1) {
-    border-bottom: 1px solid gray;
+.contacts table th:first-child {
+    border-radius: 6px 0 0 6px;
 }
 
-.contacts.markdown-rendered tbody tr>td {
-    border: 0;
+.contacts table th:last-child {
+    border-radius: 0 6px 6px 0;
 }
 
-.contacts table tr td {
-    display: flex;
-    justify-content: center;
-    text-overflow: ellipsis;
-}
+/* .contacts header::before {
+  content: "";
+  display: table;
+} */
+
+/* .contacts .markdown-rendered tbody tr:nth-child(even) tr:not(:first-child) {
+  background-color: lightgray;
+} */
 
 /* small pic id */
 .contacts .internal-embed img {
     width: 50px;
     height: 50px;
     clip-path: circle(44%);
+    object-fit: cover;
 }
 
-.contacts:is(.markdown-source-view, .markdown-preview-view) tbody>tr>td {
+
+.contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr>td {
     display: flex;
+    margin: -4px 4px;
+    width: fit-content;
     align-items: center;
-    margin: -8px;
+    padding: 0;
     border: 0;
 }
 
@@ -3413,17 +3435,32 @@ ASIDE NOTES
 }
 
 .callout[data-callout="aside-l"],
-.callout[data-callout="aside-lh"] {
+.callout[data-callout="aside-lh"]:hover {
     float: left;
     clear: left;
-    margin: 16px 20px 14px -1.4em !important;
+    margin: 16px 20px 14px -1.4em;
 }
 
 .callout[data-callout="aside-r"],
-.callout[data-callout="aside-rh"] {
+.callout[data-callout="aside-rh"]:hover {
     float: right;
     clear: right;
-    margin: 16px -1.4em 14px 20px !important;
+    margin: 16px -1.4em 14px 20px;
+}
+
+.callout[data-callout="aside-lh"] {
+    margin-left: -2em !important;
+    float: left;
+}
+
+.callout[data-callout="aside-rh"] {
+    margin-right: -2em !important;
+    float: right;
+}
+
+.is-phone.markdown-preview-view .callout[data-callout="aside-lh"]:hover,
+.is-phone.markdown-preview-view .callout[data-callout="aside-rh"]:hover {
+    max-width: 35vw;
 }
 
 .callout[data-callout="aside-lh"] .callout-title,
@@ -3438,9 +3475,7 @@ ASIDE NOTES
 .is-phone .callout[data-callout="aside-r"],
 .is-phone .callout[data-callout="aside-lh"],
 .is-phone .callout[data-callout="aside-rh"] {
-    max-width: 60vw;
-    width: auto;
-    margin: 12px;
+    max-width: 60vw !important;
 }
 
 /* hide box */
@@ -3459,20 +3494,20 @@ ASIDE NOTES
     pointer-events: none;
 }
 
-.callout[data-callout="aside-lh"] {
-    margin-left: -2em !important;
-}
-
-.callout[data-callout="aside-rh"] {
-    margin-right: -2em !important;
-}
-
 .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
     margin: 22px 22px 22px 0;
 }
 
 .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
     margin: 22px 0 22px 22px;
+}
+
+.is-phone .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
+    margin: 22px 22px 22px -22px;
+}
+
+.is-phone .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
+    margin: 22px -22px 22px 22px;
 }
 
 .markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
@@ -3527,10 +3562,10 @@ Poetry - Preview mode
     margin: auto;
 }
 
-.is-phone .poetry {
-    /* font-family: cursive; */
+/* .is-phone .poetry {
+  font-family: cursive;
     font-style: italic;
-}
+} */
 
 /* Raisecap */
 
@@ -3765,6 +3800,30 @@ img[alt~="frame-d"] {
     border-image-slice: var(--bslice-d);
 }
 
+.is-phone [alt~="frame-a"] {
+    width: 40vw;
+    border: calc(var(--bwidth-a) / 2) solid;
+    margin: 0;
+}
+
+.is-phone [alt~="frame-b"] {
+    width: 40vw;
+    border: calc(var(--bwidth-b) / 2) solid;
+    margin: 0;
+}
+
+.is-phone [alt~="frame-c"] {
+    width: 40vw;
+    border: calc(var(--bwidth-c) / 2) solid;
+    margin: 0;
+}
+
+.is-phone [alt~="frame-d"] {
+    width: 40vw;
+    border: calc(var(--bwidth-d) / 2) solid;
+    margin: 0;
+}
+
 /*Image descriptions */
 .image-embed[src*="#cap"]::after {
     content: attr(alt);
@@ -3847,7 +3906,7 @@ image placed + description
 .is-phone .callout[data-callout="framed-c"],
 .is-phone .callout[data-callout="framed-l"],
 .is-phone .callout[data-callout="framed-r"] {
-    width: 60vw;
+    width: 50vw;
     max-width: none;
 }
 
@@ -4015,6 +4074,7 @@ body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
     object-fit: contain !important;
     backdrop-filter: blur(10px);
 }
+
 
 /*----------------------------------------------------------------
 VIDEOS
@@ -4986,6 +5046,13 @@ ul>li.task-list-item[data-task]:is([data-task="!"], [data-task="?"], [data-task=
     padding: 2px 6px 2px 44px;
 }
 
+.is-phone .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task=g], [data-task=h], [data-task=m], [data-task=w]),
+ul>li.task-list-item[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=I], [data-task=b], [data-task="#"], [data-task=t], [data-task=g], [data-task=h], [data-task=m], [data-task=w]) {
+    text-decoration: none;
+    margin-left: -36px;
+    border-radius: 4px;
+    padding: 2px 6px 2px 35px;
+}
 
 
 /* input[type="checkbox"]:checked */
@@ -5242,7 +5309,7 @@ MERMAID - NO OVERFLOW
 
 /*mermaid resize and center*/
 .mermaid svg {
-    max-width: 60vw;
+    /* max-width: 60vw; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -5431,9 +5498,20 @@ SLIDESHOW
 }
 
 /* Hide scrollbar */
-.reveal ::-webkit-scrollbar {
+/* .reveal ::-webkit-scrollbar {
     width: 0 !important;
-}
+} */
+
+/* 
+Apply styles that apply directly to slides 
+Create flex container to arrange auto-generated elements by Obsidian on each slide
+*/
+/* .slides>section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
 .reveal ul,
 .reveal ul ul {
@@ -5580,7 +5658,7 @@ body:is(.is-phone) .reveal .slides>section img[alt='banner-b'] {
 .is-phone .reveal.center,
 .is-phone .reveal.center .slides,
 .is-phone .reveal.center .slides section {
-    height: 220% !important;
+    height: 200% !important;
 }
 
 /* bigger mermaid */
@@ -5620,6 +5698,24 @@ ol {
 .reveal .controls .enabled {
     display: none;
     visibility: hidden;
+}
+
+.reveal a.tag {
+    font-size: inherit;
+}
+
+.reveal .dataview.small-text,
+.reveal .block-language-dataview .table-view-table>thead>tr>th {
+    color: initial !important;
+}
+
+.reveal .callout[data-callout="read-more…"] .callout-title,
+.reveal .callout[data-callout="weiterlesen…"] .callout-title {
+    font-size: inherit;
+}
+
+.reveal blockquote {
+    background: var(--background-primary);
 }
 
 .is-phone .reveal .callout.callout[data-callout^=infobox] {
@@ -5675,6 +5771,11 @@ ol {
     display: none;
 }
 
+.is-phone .callout ::-webkit-scrollbar {
+    width: 0;
+    overflow: auto;
+}
+
 /* nicer highlight label */
 .reveal mark {
     border-radius: 16px 2px;
@@ -5705,10 +5806,17 @@ PDF EXPORT
 
 @media print {
 
-    body.theme-dark css-settings-manager,
-    body.theme-light css-settings-manager {
+    body:is(.theme-light, .theme-dark) css-settings-manager {
         --background-primary: white;
         --text-normal: black;
+
+        --table-background: transparent;
+        --table-border-width: 1px;
+        --table-border-color: lightgray;
+        --table-white-space: normal;
+        --table-header-color: gray;
+        --table-row-alt-background: lightgray;
+
     }
 
     body.theme-dark code {
@@ -5723,6 +5831,25 @@ PDF EXPORT
         --code-string: #867443;
         --code-tag: var(--color-red);
         --code-value: #94421f;
+    }
+
+    /* border */
+    .markdown-rendered tbody td {
+        border: 1px solid gray;
+    }
+
+    /* h */
+    .markdown-rendered th {
+        color: white;
+    }
+
+    .markdown-rendered thead>tr>th {
+        background-color: gray !important;
+        border: 1px solid gray;
+    }
+
+    .markdown-rendered tr:nth-child(even) {
+        background-color: lightgray !important;
     }
 
     img,
@@ -5749,8 +5876,43 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
-    img {
+    /* .print .contacts tr>th,
+    .print .contacts tr>td {
         width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        } 
+
+    .print .contacts table {
+        table-layout: fixed;
+    }
+    */
+
+    .contacts table th:first-child {
+        border-radius: 6px 0 0 6px;
+    }
+
+    .contacts table th:last-child {
+        border-radius: 0 6px 6px 0;
+    }
+
+    .contacts tbody tr:nth-child(1n + 1) {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        font-size: small !important;
+        border: 0;
+    }
+
+    .contacts tr>th {
+        display: block !important;
+        text-align: left !important;
+    }
+
+
+
+    img {
+        object-fit: cover;
         width: 80%;
     }
 
@@ -5763,14 +5925,6 @@ PDF EXPORT
         color: white;
     }
 
-    .markdown-rendered thead tr>th {
-        background-color: var(--table-hdcol);
-    }
-
-    .markdown-rendered tbody tr:nth-child(even) {
-        background-color: lightgray;
-        /* var(--table-bgcol) */
-    }
 
     .markdown-rendered tbody tr:nth-child(odd) {
         color: white;
@@ -5784,9 +5938,9 @@ PDF EXPORT
     }
 
     /* remove codeblock bg */
-    .print .cm-s-obsidian div.HyperMD-codeblock-bg,
-    .print :not(pre)>code[class*="language-"],
-    .print pre[class*="language-"] {
+    .cm-s-obsidian div.HyperMD-codeblock-bg,
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
         background: white;
     }
 
@@ -5796,7 +5950,7 @@ PDF EXPORT
         font-size: medium;
     }
 
-    .print .markdown-preview-view.markdown-preview-view {
+    .markdown-preview-view.markdown-preview-view {
         height: auto;
     }
 
@@ -5846,13 +6000,13 @@ PDF EXPORT
     }
 
     /* hide aside-hint */
-    .print .aside-hide {
+    .aside-hide {
         display: none;
     }
 
     /* infobox - resize images */
-    .print .callout.callout[data-callout^=infobox] .internal-embed,
-    .print .callout.callout[data-callout^=infobox] img {
+    .callout.callout[data-callout^=infobox] .internal-embed,
+    .callout.callout[data-callout^=infobox] img {
         justify-content: center;
     }
 
@@ -5872,16 +6026,16 @@ PDF EXPORT
         padding: 0;
     }
 
-    .print .inline-embed div:last-child {
+    .inline-embed div:last-child {
         margin-bottom: -10px;
         overflow: visible;
     }
 
-    .print .inline-embed {
+    .inline-embed {
         margin-bottom: -22px;
     }
 
-    .print .inline-embed p {
+    .inline-embed p {
         margin-top: 0;
     }
 
@@ -6053,6 +6207,11 @@ body:not(.is-phone) .kanban-plugin__board>div {
     gap: 4px;
 }
 
+.is-phone .quickAddModal .modal textarea {
+    min-height: 200px;
+    max-height: 200px;
+}
+
 /* cMenu flat colors*/
 #cMenuModalBar .cMenuCommandItem {
     background-color: unset !important;
@@ -6131,6 +6290,7 @@ input.dataview.task-list-item-checkbox {
     padding-right: 22px;
 }
 
+/* cal */
 .year.svelte-1vwr9dd.svelte-1vwr9dd,
 .today.svelte-q3wqg9 {
     color: #a43030 !important;
@@ -6173,7 +6333,7 @@ input.dataview.task-list-item-checkbox {
     font-size: large;
 }
 
-body:not(.is-phone) .hide-gui .vertical-tab-content {
+body:not(.is-phone).hide-gui .vertical-tab-content {
     margin-right: 48px;
     letter-spacing: -6px;
 }
@@ -6207,7 +6367,6 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
 
 
 /* cssclass x */
-/* .hide-gui .cm-s-obsidian div.nav-folder-title */
 .hide-doc :is(p, pre) {
     -webkit-text-security: square !important;
     letter-spacing: -5px;
