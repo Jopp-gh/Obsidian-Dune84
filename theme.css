@@ -1331,7 +1331,7 @@ NAVI BAR
 .nav-folder-title {
     color: unset;
     margin-bottom: 0;
-    padding: 2px 4px;
+    padding: 2px 0;
 }
 
 /* Navi Tree */
@@ -1497,14 +1497,21 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
     margin-left: 6px;
 }
 
+
 /* 1st level folder titles */
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
     font-size: 1.2em;
+    height: 30px;
+    font-weight: bold;
 }
 
-/* 2nd level folder titles */
-.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title {
+/* 2nd, 3th, 4th level folder titles */
+.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title,
+.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title,
+.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title {
     font-size: 1em;
+    line-height: 1.8;
+    height: 28px;
 }
 
 .nav-file.is-active>.nav-file-title,
@@ -1552,7 +1559,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
     margin-right: -16px;
 }
-
 
 /*----------------------------------------------------------------
 FOLDERs
@@ -1894,6 +1900,7 @@ body.align-r :is(h1, h2, h3, h4, h5, h6) {
     background-color: rgba(255, 243, 163, 1.4);
     color: black;
     -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 /* Html custom Highlight */
@@ -1901,7 +1908,7 @@ body.align-r :is(h1, h2, h3, h4, h5, h6) {
     border-radius: 16px 2px;
     padding: 0 4px 0 4px;
     -webkit-box-decoration-break: clone;
-    /* box-decoration-break: unset; */
+    box-decoration-break: clone;
 }
 
 /* force custom default highlight */
@@ -1986,9 +1993,9 @@ sub {
     padding: 6px;
 }
 
-.is-phone .markdown-source-view.mod-cm6 .HyperMD-quote {
+/* .is-phone .markdown-source-view.mod-cm6 .HyperMD-quote {
     padding: 6px;
-}
+} */
 
 /* wrap very long strings - invalid embeds */
 .is-phone .file-embed.mod-generic,
@@ -2333,9 +2340,16 @@ code.language-fnote.is-loaded {
     display: block;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 14px;
+}
+
+body:not(.is-phone) .markdown-preview-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
     margin-bottom: -10px;
-    margin-top: -30px;
+    margin-top: -26px;
+}
+
+body.is-phone .markdown-preview-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
+    padding-top: 0;
+    margin-top: -6px;
 }
 
 .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) .callout-fold {
@@ -2348,10 +2362,6 @@ code.language-fnote.is-loaded {
 
 .align-a .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-title {
     justify-content: center;
-}
-
-.align-a .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-content {
-    text-align: center;
 }
 
 .callout[data-callout="read-more…"] p,
@@ -2370,12 +2380,16 @@ code.language-fnote.is-loaded {
 .callout[data-callout="weiterlesen…"] .callout-title {
     font-size: medium;
     color: var(--text-accent-special);
-    padding-top: 6px;
 }
 
-.callout[data-callout="read-more…"] .callout-content,
-.callout[data-callout="weiterlesen…"] .callout-content {
+body:not(.is-phone) .callout[data-callout="read-more…"] .callout-content,
+body:not(.is-phone) .callout[data-callout="weiterlesen…"] .callout-content {
     margin-bottom: -10px;
+}
+
+.is-phone .callout[data-callout="read-more…"] .callout-content,
+.is-phone .callout[data-callout="weiterlesen…"] .callout-content {
+    margin-bottom: -12px;
 }
 
 /*----------------------------------------------------------------
@@ -2837,14 +2851,7 @@ a:hover {
 }
 
 .markdown-rendered button.copy-code-button:not(:hover) {
-    border: 2px solid gray;
     background: transparent;
-}
-
-.markdown-rendered button.copy-code-button:hover {
-    background-color: var(--text-accent-special);
-    height: 20px;
-    width: 20px;
 }
 
 /* blob copy btn */
@@ -2852,21 +2859,25 @@ a:hover {
     font-size: 0;
     top: -4px;
     margin-top: 4px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    font-family: none;
+    content: "";
     box-shadow: none;
     color: transparent !important;
     position: absolute;
 }
 
-body:not(.is-phone) .markdown-rendered button.copy-code-button {
-    left: 0;
+.theme-dark .markdown-rendered button.copy-code-button::after {
+    content: var(--copy-btn-icon);
+    filter: invert(1);
+    opacity: 0.5;
 }
 
-.is-phone .markdown-rendered button.copy-code-button {
-    right: 0;
+.theme-light .markdown-rendered button.copy-code-button::after {
+    content: var(--copy-btn-icon);
+    opacity: 0.5;
+}
+
+.markdown-rendered button.copy-code-button:hover::after {
+    opacity: 1;
 }
 
 /* scrollbar bg transparent */
@@ -2919,7 +2930,6 @@ hr:is([class*="wave"] hr, [class*="fade"] hr) {
     filter: sepia(1) contrast(0.5) saturate(14);
     transform: scale(var(--deco-scale), var(--deco-scale));
 }
-
 
 /* simple deco */
 .wave-a hr {
@@ -3076,8 +3086,8 @@ table {
     /* min-width: 750px; */
 }
 
-table thead,
-table thead tr,
+/* table thead,
+table thead tr, */
 table tbody tr:nth-child(even) {
     background: var(--table-bgcol);
 }
@@ -3263,6 +3273,7 @@ Contact TABLES - (img, full nm, tel, mail, group relations)
 .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
     border: 0;
     text-align: left;
+    border-collapse: collapse;
 }
 
 /* .contacts.markdown-preview-view tr:nth-child(1n + 1) {
@@ -4043,7 +4054,7 @@ body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
 .is-phone .markdown-preview-view .mermaid svg:hover,
 .is-phone .markdown-preview-view .mermaid svg:active {
     z-index: 3;
-    margin-left: 0;
+    margin-left: -4%;
     margin-right: auto;
     backdrop-filter: blur(5px);
     position: absolute;
@@ -4577,18 +4588,19 @@ PHONE
     font-size: small;
 }
 
-/* padding top needed for F&R */
-.is-phone .markdown-source-view {
-    overflow: auto;
+
+/* padding top needed for F&R - Footer&Header */
+.markdown-source-view.mod-cm6 .cm-contentContainer {
+    overflow-x: visible;
+    padding-bottom: 100px;
     padding-top: 44px;
-    padding-bottom: 44px;
 }
 
 .is-phone .markdown-preview-view {
     overflow: auto;
     margin-bottom: 0;
     padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 
 /* no highlight for selected menu entry */
@@ -4765,10 +4777,6 @@ PHONE
     gap: 2px;
 }
 
-.is-phone .markdown-source-view .document-search-container {
-    margin-top: -44px;
-}
-
 /* reduce large gap bw search & replace lines on phone */
 .is-phone .document-search-container {
     gap: inherit;
@@ -4894,11 +4902,6 @@ body:is(.theme-dark, .theme-light) .document-replace button.document-search-butt
 .theme-light .is-phone .document-replace input {
     background: var(--text-normal);
 }
-
-
-/*
- comment size normalized 
-*/
 
 .is-phone .vertical-tab-nav-item.is-active {
     color: transparent;
@@ -5253,14 +5256,14 @@ a.tag {
 
 .theme-dark a.tag,
 .theme-dark .editor .cm-hashtag,
-.theme-dark .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta {
+.theme-dark .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     background-color: #ede4b7;
     color: black;
 }
 
 .theme-light a.tag,
 .theme-light .editor .cm-hashtag,
-.theme-light .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta {
+.theme-light .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     background-color: var(--text-highlight-bg-active);
     color: var(--text-normal);
 }
@@ -5273,7 +5276,7 @@ a.tag:hover,
 
 .is-phone .tag,
 .is-phone .editor .cm-hashtag,
-.is-phone .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta {
+.is-phone .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     font-size: medium;
 }
 
@@ -5876,18 +5879,6 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
-    /* .print .contacts tr>th,
-    .print .contacts tr>td {
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        } 
-
-    .print .contacts table {
-        table-layout: fixed;
-    }
-    */
-
     .contacts table th:first-child {
         border-radius: 6px 0 0 6px;
     }
@@ -6199,6 +6190,10 @@ body:not(.is-phone) .kanban-plugin__board>div {
     grid-gap: 10px;
 }
 
+.is-phone .kanban-plugin__lane-form-wrapper {
+    top: 2.6rem;
+    width: 280px;
+}
 
 /*
  Quickadd space btw btns 
