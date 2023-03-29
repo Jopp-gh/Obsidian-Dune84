@@ -2,7 +2,7 @@
 
 
 **Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
-I called this theme **Dune**, after the novel sequels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert). His novel **Dune** also appeared in a gorgeous cinematic transpositions on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+I called this theme **Dune**, after the novel sequels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert). His novel **Dune** also appeared in a gorgeous cinematic transposition on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
 
 My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving and expanding on available features. Last but not least, I needed a change of colors, less extreme black and white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look, and were adapted to work on smaller interfaces too (phone).
 
@@ -48,7 +48,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
 - table row and column highlights
 - add [cookbook recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md) with `cssclass: recipes` 
-- add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md) to your Movie-list (use `cssclass: mov-strips`)  
+- add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: mov-strips`)  
 - add [contacts](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Contacts.md) to your Contact-list, use `cssclass: contacts` 
 
 ### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
