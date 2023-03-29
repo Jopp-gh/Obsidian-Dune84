@@ -1,24 +1,29 @@
 # Dune-1984
 
 
-As a big fan of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s famous Dune novels and its gorgeous cinematic transposition of [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm), i developed this theme to create a pleasant environment for my PKM activities in Obsidian.
+**Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 was an update and added support for phones as well. Just the 3rd edition of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
+I called this theme **Dune**, after the novel sequels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert) and his famous Dune novels, appeared in gorgeous cinematic transpositions on the big screen, to be exact in  [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
 
-This theme offers many features to organize your documents with reworked notes, callouts, custom tables.
-Stilistic elements for poetry and various decorations add a particular touch to your documents, pictures are customizable in a variety of ways.
+My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving and expanding on available features. Last but not least, I needed a change of colors, less extreme black and white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look, and were adapted to work on smaller interfaces too (phone).
 
-Printing (**Export as PDF**) keeps your overall color scheme, except for dark themed backgrounds, which will be replaced with white backgrounds.
-**Slide** is a core plugin of Obsidian to create slideshows on-the-fly. Now Slides' interface is bigger, less cluttered and includes as well all features added by this theme
+I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. Also, I hope, to pay my breakfast/lunch for sharing good content with you. Please see the **Buy me a coffee** button at bottom page
+Finally, i would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
+
+- architecture,
+- furniture design,
+- workflow code design,
+- cultural events,
+- entertainment art,
+- drawing,
+- photography,
+- economy,
+- world languages,
   
-Particular attention `:has` got the **phone interface**, its overall look is more compact and most features implemented for the desktop version work technically speaking, on the phone version, too.
-Your notes will have more breath, bigger buttons are easier to spot and therefore, keep your interaction in flow.
+### First steps
 
-My main goal for **Dune** was to get a clean, clutter-free experience and so most buttons are semi-hidden by default (desktop). With **Style Settings** installed, you can re-enable buttons and tabs if you prefer Obsidians default interface.
-
-To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a color scheme (`Dune 1` or `Dune 2`) for your light theme and a color scheme for your dark theme (`Dune 3` or `Dune 4`). Enjoy!
-  
-### Required
-
-- to display **Dune-1984** correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
+1. to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
+2. To activate my theme, open `Preferences>Style Settings>Dune>Colors>Theme` to choose a color scheme for your light theme  (Dune 1 or Dune 2) and a color scheme for your dark theme (Dune 3 or Dune 4)
+3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
 
 ### Recommended
 
@@ -42,6 +47,7 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
 - table row and column highlights
+- add cook recipes with `cssclass: recipes`
 - add movies to your Movie-list (use `cssclass: mov-strips`) for a setup see [Movie list](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 - add contacts to your Contact-list, use `cssclass: contacts`
 
@@ -58,13 +64,14 @@ To start using my theme, open **Style Settings>Dune>Colors>Theme** and choose a 
 - mini-admonitions (custom checkboxes)
 - theme syntax coloring
 - simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
+- custom tooltips
 
 ### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 
 - place pictures, eg. `![[image.png|pos-r]]` (pos-r, pos-c) 
 - shape pictures `![[image.png|avatar]]` (avatar, portrait, round)
 - add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
-- add simple frames `![[image.png|frame-m]]` (frame-s, frame-m)
+- add simple frames `![[image.png|frame-s]]` change color and frame thickness in **Style Settings**  
 - add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
 - zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
 - auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
