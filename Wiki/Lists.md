@@ -1,24 +1,31 @@
 
-- [q] q 
-- [n] n 
-- [i] i 
-- [<] < 
-- [-] “-” 
+- [t] t
+- [a] a
+- [>] >
+- [<] <
+- [-] -
 - [b] b 
-- [#] “#”
-- [t] t  
-- [m] m
+- [#] #
+- [p] p  
+- [e] e
 - [!] ! 
 - [I] I  
 - [h] h
-- [/] "/"  
-- [?] ? 
-- [>] “>”
 - [g] g
 - [w] w
-- [+] "+" 
+- [+] +
+- [q] q 
+- [n] n 
+- [i] i 
+- [d] d
+- [f] f
+- [m] m
+- [/] /
+- [?] ? 
+- [s] s 
 
-![L1](https://user-images.githubusercontent.com/48620536/222980612-c9b12a5d-5c0c-4f44-9e16-47775efb65c7.png)
+![bmini-admo](https://user-images.githubusercontent.com/48620536/228631190-f9878334-c1bb-4113-8fba-f62f785aba07.png)
+
 
 18 mini admonitions
 
