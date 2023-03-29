@@ -1,20 +1,19 @@
 ### Contact list
 
-First, add `cssclass: contacts` to your yaml header, otherwise this table wont look right.
-To start, add a simple table, use:
+1. First, add `cssclass: contacts` to your yaml header
+2. to start, add a simple table, use:
 
 ```
-| A   | B   | C   | D   |
-| --- | --- | --- | --- |
-| 1   | 2   | 3   | 4   |
-| x   |     |     |     |
-| y   |     |     |     |
+|     | name| tel | mail| group| relations |
+| --- | --- | --- | --- | ---- | --------- |
+|     |     |     |     |      |           |
+|     |     |     |     |      |           |
+|     |     |     |     |      |           |
 ```
 
-then and start adding data, but pay attention - the very first column of this table is reserved for profile pictures. Images in there will scale down and get a round cutout (see picture below)
+3. then start adding data, but pay attention - the very first column is reserved for profile pictures only. Images in there will scale down and get a round cutout (see picture at bottom page)
 
-If you prefer, copy the template below, add and remove columns you need in Obsidian and finally, save your table as template in your templates folder. Done.
-
+### Result
 ```
 |                    | name              | tel           | mail          | group   | relations         |
 | ------------------ | ----------------- | ------------- | ------------- | ------- | ----------------- |
