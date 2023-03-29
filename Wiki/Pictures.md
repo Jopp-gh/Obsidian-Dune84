@@ -50,8 +50,9 @@ Frame your pictures. Download some frames like [this png template](https://pngim
 
 ### Simple Frames
 
-`![[Pict.png|frame-m]]` `![[Pict.png|frame-s]]`
-Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** 
+`![[Pict.png|frame-s]]`
+ 
+Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** and adjust frame thickness in **Style Settings>Dune>Pictures>Frame (simple)**
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
@@ -102,7 +103,7 @@ the more pictures you put in a picture wall, the more your picture wall will loo
 
 ![Mov-coll-2](https://user-images.githubusercontent.com/48620536/225926038-afdc2964-60b9-4afd-9472-0f1057d99a49.png)
 
-my goal was to build a compact Movie list / overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish so):
+my goal was to build a compact Movie list / overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but i do not study movies, so i keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish):
 
 - cover image,
 - title and year (ideally a link to iMDB, eg. [Dune (1984)](https://www.imdb.com/title/tt0087182/)),
@@ -121,7 +122,7 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 | cover    | ![[pict-1.jpg]][^pca]             | ![[pict-2.jpg]][^pcb]             | ![[pict-3.jpg]][^pcc]             | ![[pict-4.jpg]][^pcd]             |
 | title    | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) | [Title (Year)](https://movie.url) |
 | duration | 100 min                           | 100 min                           | 100 min                           | 100 min                           |
-| type     | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 |
+| genre    | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 | #tag1 #tag2 #tag3                 |
 | director | Name                              | Name                              | Name                              | Name                              |
 | rating   | ⭐️                                |  ⭐️                               |  ⭐️                              |  ⭐️                               |
 ```
