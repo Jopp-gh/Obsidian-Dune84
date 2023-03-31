@@ -2,9 +2,9 @@
 
 
 **Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
-I called this theme **Dune**, after the novel sequels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert). His novel **Dune** also appeared in a gorgeous cinematic transposition on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+I called this theme **Dune**, after the novels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert) which influenced this genre. His novel **Dune** appeared also in a gorgeous cinematic transposition on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
 
-My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving and expanding on available features. Last but not least, I needed a change of colors, less extreme black and white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look, and were adapted to work on smaller interfaces too (phone).
+My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving and expanding on available features. Last but not least, I needed a change of colors, less extreme black and white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look, and were adapted to work on smaller interfaces too (phone). I tried my best to correct only some major bugs afflicting tablets.
 
 I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. Also, I hope, to pay my breakfast/lunch for sharing good content with you. Please see the **Buy me a coffee** button at bottom page.
 Finally, i would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
@@ -80,6 +80,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
+- svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
   
@@ -115,6 +116,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
 - garble your note `cssclass: hide-doc` and / or your App interface (see **Style Settings>Dune>Show ui elements>**)
 - pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
+- basic support for tablets
 
 ### Supported Plugins
 
@@ -128,8 +130,9 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - [x] MacOs
 - [x] Android
 - [x] clean embeds
-- [ ] Tablet (user support needed)
-- [ ] minor fixes, some features 
+- [x] Tablet (user support needed)
+- [ ] some features 
+- [ ] minor fixes
 
 ## Thanks
 
