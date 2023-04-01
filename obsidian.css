@@ -3836,10 +3836,6 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
     object-position: 50% 60%;
 }
 
-/* .markdown-preview-view img {
-  padding: 0 !important;
-  margin: 0;
-} */
 
 img {
     margin-top: 4px;
@@ -4242,8 +4238,76 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 }
 
 /*----------------------------------------------------------------
-MERMAID - check
+MERMAID - needs all important - next=custom colors for some shapes
 ----------------------------------------------------------------*/
+
+/* stops mermaid overflow getting cut off */
+.markdown-source-view.mod-cm6 .cm-content.cm-content>[contenteditable=false] {
+    contain: unset !important;
+}
+
+/*mermaid resize and center*/
+.mermaid svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mermaid text.titleText {
+    fill: var(--text-normal) !important;
+}
+
+.theme-light .mermaid .node path {
+    fill: lightgray !important;
+}
+
+.theme-dark .mermaid .node path {
+    fill: slategray !important;
+}
+
+.mermaid .taskText {
+    fill: darkred !important;
+}
+
+.theme-dark .mermaid text:is(.taskTextOutsideRight, .taskTextOutsideLeft) {
+    fill: lightblue !important;
+}
+
+.mermaid rect.activation0 {
+    fill: lightblue !important;
+}
+
+.theme-light .mermaid rect.basic.label-container {
+    fill: lightgray !important;
+}
+
+.theme-dark .mermaid rect.basic.label-container {
+    fill: dimgray !important;
+}
+
+.mermaid rect :not(.task) {
+    fill: rgba(173, 216, 230, 0.3) !important;
+}
+
+.mermaid polygon.label-container {
+    fill: gray !important;
+}
+
+.mermaid circle {
+    fill: gray !important;
+}
+
+.theme-light .mermaid .node circle,
+.theme-light .mermaid .node ellipse,
+.theme-light .mermaid .node polygon,
+.theme-light .mermaid .node rect {
+    fill: lightgray !important;
+}
+
+/* works on desk, not on phone */
+.theme-dark .mermaid .node .label {
+    color: black !important;
+}
 
 .theme-light .mermaid .edgeLabel,
 .mermaid .label text,
@@ -4251,12 +4315,24 @@ MERMAID - check
     color: black !important;
 }
 
+.mermaid .exclude-range {
+    fill: slategray !important;
+}
+
 .theme-dark .mermaid .edgeLabel {
     color: var(--text-normal) !important;
 }
 
 .theme-dark .mermaid .cluster rect {
-    fill: slategray !important;
+    fill: var(--soft-bg-col) !important;
+}
+
+.theme-light .mermaid .cluster rect {
+    fill: var(--soft-bg-col) !important;
+}
+
+.theme-dark .mermaid :not(span.nodeLabel) :is(.cluster span) {
+    color: var(--text-normal) !important;
 }
 
 .theme-dark .mermaid path:not(.pieCircle, g>g>path) {
@@ -4271,42 +4347,70 @@ MERMAID - check
     text-shadow: 0 0 white !important;
 }
 
-.theme-dark .mermaid text:is(.taskTextOutsideRight, .taskTextOutsideLeft) {
+.theme-light .mermaid rect.er.entityBox {
     fill: lightblue !important;
 }
 
-.theme-dark .mermaid :is(.loopText>tspan, rect.req.reqBox) {
+.theme-dark .mermaid rect.er.entityBox {
+    fill: darkblue !important;
+}
+
+/* .mermaid .statediagram-cluster.statediagram-cluster .inner */
+.mermaid .statediagram-cluster rect {
+    fill: var(--soft-bg-col) !important;
+}
+
+.mermaid path.pieCircle {
+    stroke: transparent !important;
+}
+
+.mermaid .loopText>tspan {
     fill: gray !important;
+}
+
+.theme-light .mermaid :is(rect.req.reqBox, rect.actor) {
+    fill: lightgray !important;
+}
+
+.theme-dark .mermaid :is(rect.req.reqBox, rect.actor) {
+    fill: dimgray !important;
+}
+
+.mermaid rect.note {
+    fill: var(--soft-bg-col) !important;
+}
+
+.theme-light .mermaid .req-title-line {
+    stroke: black !important;
+}
+
+.theme-dark .mermaid .divider {
+    stroke: black !important;
 }
 
 .theme-dark .mermaid rect.er.attributeBoxOdd {
-    fill: gray !important;
+    fill: dimgrey !important;
 }
 
 .theme-dark .mermaid rect.er.attributeBoxEven {
-    fill: lightslategrey !important;
+    fill: slategrey !important;
 }
 
-.theme-dark .mermaid .node path {
-    fill: salmon !important;
+.theme-light .mermaid rect.er.attributeBoxEven {
+    fill: lightgray !important;
 }
 
-.theme-dark .mermaid :is(line.loopLine) {
+.theme-dark .mermaid line.loopLine {
     filter: invert(1) !important;
 }
 
-.theme-dark .mermaid :is(rect.er.entityBox, .nodeLabel) {
-    color: black !important;
+.theme-dark .mermaid .nodeLabel {
+    color: var(--text-normal) !important;
     border-radius: 4px;
 }
 
-.theme-dark .mermaid .statediagram-cluster rect,
-.theme-dark .mermaid .statediagram-cluster.statediagram-cluster .inner {
-    fill: slategray !important;
-}
-
 .theme-dark .mermaid span.nodeLabel {
-    color: gray !important;
+    filter: contrast(1);
 }
 
 .theme-dark .mermaid .edgePaths {
@@ -5089,16 +5193,19 @@ body:not(.is-phone) .document-replace .document-search-button {
     background: var(--button-background);
 }
 
+.is-phone .document-search button.document-search-button:first-child::after,
+.is-phone .document-search button.document-search-button:nth-child(2)::after {
+    padding-bottom: 6px;
+}
+
 .document-search button.document-search-button:first-child::after {
     content: "<";
     font-size: 2.2em;
-    padding-bottom: 3px;
 }
 
 .document-search button.document-search-button:nth-child(2)::after {
     content: ">";
     font-size: 2.2em;
-    padding-bottom: 3px;
 }
 
 .document-search button.document-search-button:nth-child(3)::after {
@@ -5283,9 +5390,9 @@ button:not(.clickable-icon),
 }
 
 /* tabs */
-.workspace .mod-root .workspace-tab-header-inner::after {
-    background-color: var(--text-normal);
-    opacity: 0.3;
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    --tab-container-background: var(--titlebar-background);
 }
 
 .workspace .mod-root .workspace-tab-header {
@@ -5294,10 +5401,18 @@ button:not(.clickable-icon),
     max-width: 200px;
 }
 
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+    min-width: initial;
+}
+
 .workspace-tab-header-new-tab {
     margin-left: 12px;
 }
 
+/* .sidebar-toggle-button,
+.workspace-tab-header-container {
+    border-bottom: 0;
+} */
 
 /*----------------------------------------------------------------
 Custom Checkboxes - mini admonitions
@@ -5671,34 +5786,6 @@ Give the parent element a background color so overlapping panes don't show throu
 
 .modal-bg {
     backdrop-filter: brightness(0.4);
-}
-
-/*----------------------------------------------------------------
-MERMAID - NO OVERFLOW
-----------------------------------------------------------------*/
-
-/*mermaid resize and center*/
-.mermaid svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* stops mermaid overflow getting cut off */
-.markdown-source-view.mod-cm6 .cm-content.cm-content>[contenteditable=false] {
-    contain: unset !important;
-}
-
-.theme-dark .node circle,
-.theme-dark .node ellipse,
-.theme-dark .node polygon,
-.theme-dark .node rect {
-    fill: var(--text-muted) !important;
-}
-
-/* works on desk, not on phone */
-.theme-dark .node .label {
-    color: black !important;
 }
 
 /*----------------------------------------------------------------
@@ -6505,10 +6592,6 @@ PLUGINS
     color: white;
     border-radius: inherit;
 }
-
-/* .is-phone .kanban-plugin__lane-header-wrapper {
-    height: auto;
-} */
 
 /* header bar same col as Title */
 .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
