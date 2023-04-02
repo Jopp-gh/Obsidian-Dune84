@@ -80,7 +80,6 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
-- svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
   
@@ -93,6 +92,8 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 
 - cleaner and bigger slideshow slides for Obsidians core plugin **Slide**
 - most features added by this theme work in Slide (sidebox, picture callouts, etc)  
+- Slide smaller text - more content on-screen (see **Style Settings>Dune>Fonts>Spacing>Slide smaller text**)
+- to configure text alignment of your slides, see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment (global)**
 
 ### Pdf export
 
@@ -116,6 +117,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
 - garble your note `cssclass: hide-doc` and / or your App interface (see **Style Settings>Dune>Show ui elements>**)
 - pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
+- svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
 - basic support for tablets
 
 ### Supported Plugins
