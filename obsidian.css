@@ -195,6 +195,11 @@ settings:
     description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
   -
+    id: slides-s
+    title: Slide smaller text
+    title.de: Slide kleinerer Text
+    type: class-toggle
+  -
     id: img-options
     title: ✦ Pictures
     description: manage pictures
@@ -321,9 +326,7 @@ settings:
   - 
     id: bframe-s
     title: Frame (simple)
-    description: 'frame-s'
     title.de: Rahmen (simpel)
-    description.de: 'frame-s'
     type: heading
     level: 2
   -
@@ -342,7 +345,7 @@ settings:
     title.de: Vergrößerung
     type: heading
     level: 2
-    collapsed: false
+    collapsed: true
   -
     id: zoom-auto
     title: Zoom on hover
@@ -366,7 +369,7 @@ settings:
     title.de: Bilderwand
     type: heading
     level: 2
-    collapsed: false
+    collapsed: true
   -
     id: pictwall-height
     title: Image wall height
@@ -1271,13 +1274,6 @@ NAVI BAR
     border-right: none;
 }
 
-/* .workspace-tabs.mod-top */
-.sidebar-toggle-button,
-.workspace-tab-header-container {
-    --tab-container-background: var(--background-secondary) !important;
-}
-
-
 /* navi options L */
 .is-phone .workspace-drawer.mod-left .workspace-drawer-header-info {
     display: flex;
@@ -1635,6 +1631,7 @@ body:not(.is-grabbing) .nav-folder-title:hover,
 /*----------------------------------------------------------------
 HEADERS
 ----------------------------------------------------------------*/
+
 h5,
 .HyperMD-header .cm-header-5,
 .markdown-rendered h5,
@@ -1880,17 +1877,20 @@ CITATION, Highlights
 ----------------------------------------------------------------*/
 
 body.align-a :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-a :is(h1, h2, h3, h4, h5, h6) {
+body.align-a :is(h1, h2, h3, h4, h5, h6),
+.align-a {
     text-align: center;
 }
 
 body.align-b :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-b :is(h1, h2, h3, h4, h5, h6) {
+body.align-b :is(h1, h2, h3, h4, h5, h6),
+.align-b {
     text-align: justify;
 }
 
 body.align-r :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-r :is(h1, h2, h3, h4, h5, h6) {
+body.align-r :is(h1, h2, h3, h4, h5, h6),
+.align-r {
     text-align: right;
 }
 
@@ -2642,12 +2642,25 @@ Buttons - Preferences
 }
 
 /* sidepanel */
-body:not(.is-phone) .menu-item:hover:not(.is-disabled):not(.is-label),
-body:not(.is-phone) .tree-item-self.is-clickable:hover {
+/* .view-content  */
+body:not(.is-phone) .tree-item-self.is-clickable:hover,
+body:not(.is-phone) .menu-item:hover:not(.is-disabled):not(.is-label) {
     background-color: var(--background-primary);
+}
+
+body:not(.is-phone) .tree-item-self.is-clickable:hover {
     margin-left: -20px;
     padding-left: 28px;
 }
+
+.tree-item-inner {
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+/* .workspace-split.mod-right-split .nav-header>.nav-buttons-container {
+    opacity: 1;
+} */
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
     text-decoration-color: initial;
@@ -3898,7 +3911,7 @@ img[alt~='round'] {
     border-radius: 50%;
 }
 
-/* frame simple */
+/* frame small */
 img[alt~='frame-s'] {
     border: var(--bwidth-s) solid var(--frame-color);
     border-radius: 0 !important;
@@ -5469,6 +5482,10 @@ ul>li.task-list-item[data-task=X] .task-list-item-checkbox {
     text-decoration: line-through;
 }
 
+.task-list-item.is-checked[data-task]:is([data-task="x"], [data-task="X"]) {
+    margin: auto;
+}
+
 /* > — Rescheduled/Moved */
 input[type=checkbox][data-task=">"],
 li.task-list-item[data-task=">"] .task-list-item-checkbox {
@@ -5720,7 +5737,8 @@ ol {
 }
 
 li.task-list-item.is-checked {
-    margin: 1px;
+    margin: 2px;
+    /* padding: 2px 0; */
 }
 
 /*----------------------------------------------------------------
@@ -5967,10 +5985,33 @@ SLIDESHOW
 
 .reveal table th,
 .reveal table td {
-    text-align: left;
-    padding: 0.2em 0.5em 0.2em 0.5em;
-    border-bottom: 1px solid;
-    font-size: large;
+    font-size: initial;
+}
+
+.reveal table th {
+    font-weight: bold;
+    background: #393939;
+    color: white;
+    border-bottom: 0;
+}
+
+.reveal tbody tr>td {
+    /* border-bottom: 0; */
+    border: 1px solid gray;
+}
+
+.reveal thead tr>th {
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.reveal tbody tr:last-child {
+    border: 1px solid gray;
+}
+
+.reveal .dataview.small-text,
+.reveal .block-language-dataview .table-view-table>thead>tr>th {
+    color: initial !important;
 }
 
 /* fix */
@@ -6012,13 +6053,11 @@ SLIDESHOW
     color: black;
     word-wrap: normal;
     margin-left: 12px;
-    width: fit-content;
 }
 
-.reveal table {
-    font-size: 30px;
-    flex: 1;
-    /* display: inline; */
+.reveal table th,
+.reveal table td {
+    font-size: x-large;
 }
 
 /* Hide frontmatter */
@@ -6099,7 +6138,56 @@ body:is(.is-phone) .reveal .slides>section img[alt='banner-b'] {
 
 /* Hide close button */
 .slides-close-btn {
-    display: none;
+    scale: 2;
+    right: 18px;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.slides-close-btn:hover {
+    scale: 2;
+    right: 18px;
+    opacity: 0.5;
+}
+
+.reveal .task-list-item.is-checked[data-task]:is([data-task="x"], [data-task="X"]) {
+    margin-left: initial;
+}
+
+/* smaller slide */
+.slides-s .reveal ul>li.task-list-item .task-list-item-checkbox {
+    height: 1.8em;
+    width: 1.8em;
+    margin-bottom: 0;
+}
+
+.slides-s .callout,
+.slides-s .reveal .callout-title,
+.slides-s .reveal pre,
+.slides-s .reveal table,
+.slides-s .reveal table th,
+.slides-s .reveal table td,
+.slides-s .reveal a.tag,
+.slides-s .reveal p,
+.slides-s .reveal li {
+    font-size: initial;
+}
+
+.slides-s .reveal ul ul,
+.slides-s .reveal ul ol,
+.slides-s .reveal ol ol,
+.slides-s .reveal ol ul {
+    display: block;
+    margin-left: 0;
+}
+
+.reveal .slides p {
+    padding: 2px 0;
+    margin: auto;
+}
+
+.reveal input[type='checkbox'] {
+    bottom: -3px;
 }
 
 .is-phone .slides-close-btn {
@@ -6126,11 +6214,6 @@ ol {
 
 .reveal a.tag {
     font-size: inherit;
-}
-
-.reveal .dataview.small-text,
-.reveal .block-language-dataview .table-view-table>thead>tr>th {
-    color: initial !important;
 }
 
 .reveal .callout[data-callout="read-more…"] .callout-title,
@@ -6196,9 +6279,34 @@ ol {
     display: none;
 }
 
-.is-phone .callout ::-webkit-scrollbar {
+.is-phone .callout ::-webkit-scrollbar,
+.reveal ::-webkit-scrollbar {
     width: 0;
     overflow: auto;
+}
+
+.reveal .slides,
+.reveal :is(code) {
+    text-align: left;
+}
+
+.align-r .reveal .slides,
+.align-r .reveal :is(code) {
+    text-align: right;
+}
+
+.align-a .reveal .slides,
+.align-a .reveal :is(code) {
+    text-align: center;
+}
+
+.align-b .reveal .slides,
+.align-b .reveal :is(code) {
+    text-align: justify;
+}
+
+.reveal .addtip:hover .tiptext {
+    font-size: inherit;
 }
 
 /* nicer highlight label */
