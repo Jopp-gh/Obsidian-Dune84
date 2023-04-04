@@ -1886,6 +1886,7 @@ body.align-b :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inli
 body.align-b :is(h1, h2, h3, h4, h5, h6),
 .align-b {
     text-align: justify;
+    text-justify: inter-word;
 }
 
 body.align-r :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
@@ -2658,9 +2659,6 @@ body:not(.is-phone) .tree-item-self.is-clickable:hover {
     overflow: auto;
 }
 
-/* .workspace-split.mod-right-split .nav-header>.nav-buttons-container {
-    opacity: 1;
-} */
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
     text-decoration-color: initial;
@@ -3135,30 +3133,10 @@ TABLES -highlights
     background-color: darkblue;
 }
 
-/* equal header proportions */
-.markdown-rendered table:not([class]) tr {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-}
-
 table tr td:nth-child(1) {
     word-break: keep-all;
 }
 
-table {
-    width: 100%;
-    /* min-width: 750px; */
-}
-
-/* table row*/
-/* .theme-light table tbody tr:nth-child(even) {
-    background: var(--table-bgcol);
-}
-
-.theme-dark table tbody tr:nth-child(even) {
-    background: slategray;
-} */
 .theme-light tr:nth-child(even) {
     background: var(--table-bgcol);
 }
@@ -3212,12 +3190,6 @@ table {
     font-weight: 700;
 }
 
-
-/* Make tables width same as default note width   */
-.wideTable table {
-    min-width: 100%;
-}
-
 .fixedFc thead tr th:first-child,
 .fixedFc tbody tr td:first-child {
     width: 8em;
@@ -3253,6 +3225,35 @@ table {
 .is-phone .markdown-source-view table,
 .is-phone .cm-table-widget table {
     width: max-content;
+}
+
+table {
+    table-layout: auto;
+    width: unset;
+    max-width: 100%;
+    /* width: fit-content; */
+}
+
+.c-table table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* equal header proportions */
+.eq-table .markdown-rendered table:not([class]) tr {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+}
+
+.hl-table .markdown-rendered thead tr>th {
+    display: none;
+    height: 0;
+}
+
+/* Make tables width same as default note width   */
+.wideTable table {
+    min-width: 100%;
 }
 
 /* --------------------------------------------   
@@ -3342,17 +3343,39 @@ MOVIE tables
 CONTACT tables - (img, full nm, tel, mail, group relations)
 --------------------------------------------   */
 
+/* rem all borders */
 .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
     border: 0;
-    text-align: left;
     border-collapse: collapse;
     background-color: transparent;
 }
 
+.contacts table {
+    border-collapse: collapse;
+}
+
+.contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
+    background-color: transparent;
+}
+
+.contacts tbody tr>td {
+    border: 0 !important;
+}
 
 .theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
     color: black;
-    /* border-bottom: 1px solid gray; */
+}
+
+.theme-dark .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
+    color: white;
+}
+
+.theme-dark .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
+    border-top: 2px solid white;
+}
+
+.theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
+    border-top: 2px solid black;
 }
 
 /* small pic id */
@@ -3361,41 +3384,20 @@ CONTACT tables - (img, full nm, tel, mail, group relations)
     height: 50px;
     clip-path: circle(44%);
     object-fit: cover;
-}
-
-.contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr>th,
-.contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr>td {
-    display: flex;
-    margin: -4px 4px;
-    width: fit-content;
-    align-items: center;
-    padding: 0;
-    border: 0;
-}
-
-.theme-dark .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
-    border-top: 1px solid white;
-}
-
-.theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
-    border-top: 1px solid black;
+    margin-top: 0;
 }
 
 /* --------------------------------------------   
 RECIPE TABLES
 --------------------------------------------   */
 .recipes table {
-    width: fit-content;
     padding-left: 4px;
-    margin: 20px 10px;
     max-width: 50vw;
 }
 
 .recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
     border: 0;
     text-align: left;
-    margin-left: 0;
-    padding-left: 0;
     border-collapse: collapse;
     background: transparent;
     font-weight: bold;
@@ -3411,7 +3413,6 @@ RECIPE TABLES
 }
 
 .recipes:is(.markdown-source-view, .markdown-preview-view) tbody tr>td {
-    padding: 0;
     border: 0;
     border-bottom: 1px dotted gray;
     color: var(--text-normal);
@@ -3422,21 +3423,6 @@ RECIPE TABLES
     background: transparent !important;
 }
 
-.recipes th:first-child,
-.recipes table tr td:first-child {
-    width: 120px;
-    padding-left: 10px !important;
-    /* background-color: transparent; */
-}
-
-.recipes table td:last-child {
-    text-align: inherit;
-    margin-left: -1em;
-}
-
-.recipes table tr th:last-child {
-    margin-left: -1em;
-}
 
 .recipes table:not([class]) tr {
     display: revert !important;
@@ -3449,7 +3435,6 @@ RECIPE TABLES
 
 .recipes .callout li {
     font-size: small;
-    align-items: center;
 }
 
 .recipes hr {
@@ -6154,6 +6139,13 @@ body:is(.is-phone) .reveal .slides>section img[alt='banner-b'] {
     margin-left: initial;
 }
 
+
+.reveal input[type='checkbox'][data-task="x"] {
+    background-color: transparent;
+    border: transparent;
+    background-image: var(--checkbox-icon);
+}
+
 /* smaller slide */
 .slides-s .reveal ul>li.task-list-item .task-list-item-checkbox {
     height: 1.8em;
@@ -6388,11 +6380,13 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
-    table:not(.recipes, .contacts) tr:nth-child(even) {
+
+    table:not(.recipes) tr:nth-child(even) {
         background: lightgray;
     }
 
-    table:not(.recipes, .contacts) .markdown-rendered thead {
+    table:not(.recipes) .markdown-rendered thead,
+    table:not(.contacts) .markdown-rendered thead {
         background: gray;
         color: white;
     }
@@ -6400,38 +6394,41 @@ PDF EXPORT
     table:not(.recipes, .contacts) .markdown-rendered thead tr th,
     table:not(.recipes, .contacts) .markdown-rendered tbody tr td {
         border-collapse: collapse;
-        border: 1px solid lightgray;
     }
 
     .recipes tr:nth-child(even) {
         background: white;
     }
 
-    .contacts tr:nth-child(even) {
-        background: lightgray;
+    .recipes li.task-list-item.is-checked[data-task]:not([data-task="x"], [data-task="X"]) {
+        height: 34px;
+        margin-left: -40px;
     }
 
-    .contacts table th:first-child,
-    .contacts table td:first-child {
-        width: 60px;
-        border-bottom: 0;
+    .contacts :is(thead tr th, tbody tr td) {
+        border-collapse: collapse;
+        border: 0 !important;
     }
+
+    .contacts tbody tr>td {
+        border-bottom: 0 !important;
+    }
+
+    .contacts tr td {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
 
     .contacts tbody th:nth-child(1n + 1),
     .contacts tbody tr:nth-child(1n + 1) {
-        display: flex;
-        align-items: center;
         border: 0;
-        gap: 6px;
+        border-bottom: 0;
         font-size: small;
     }
 
-    .contacts thead th:nth-child(1n + 1) {
-        margin-left: -3em;
-    }
-
-    .contacts tbody tr:first-child {
-        border-top: 1px solid black;
+    .contacts thead {
+        border-bottom: 2px solid black;
     }
 
     .recipes div.callout[data-callout="framed-r"] .callout-content img,
@@ -6447,16 +6444,11 @@ PDF EXPORT
     }
 
     .recipes table {
-        margin-left: 0;
         margin-right: -1em;
     }
 
     .recipes :is(tr, li) {
         font-size: small;
-    }
-
-    .recipes li {
-        padding-bottom: 6px !important;
     }
 
     .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-title {
@@ -6601,6 +6593,11 @@ PDF EXPORT
 
     :not(.recipes) div.callout[data-callout="multi-column"] .callout-content {
         min-width: 300px;
+    }
+
+    .recipes tbody tr>td {
+        border-bottom: 1px dotted gray;
+        color: var(--text-normal);
     }
 
     pre.frontmatter,
