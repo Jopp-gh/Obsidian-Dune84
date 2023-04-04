@@ -45,8 +45,12 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 
 ### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
+- default table layout: dynamic columns 
+- custom table layout: equally distribuited table columns, use `cssclass: eq-table`
+- center tables: `cssclass: c-table`
+- headless tables : `cssclass: hl-table` 
+- table row and column highlights see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
-- table row and column highlights
 - add [cookbook recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md) with `cssclass: recipes` 
 - add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: mov-strips`)  
 - add [contacts](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Contacts.md) to your Contact-list, use `cssclass: contacts` 
@@ -57,7 +61,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Callout Infobox 
 - Callout Aside notes -interactive/fixed 
 - Callout to shorten longer documents: use `> [!read-more…]` 
-- add custom tooltips
+- add custom help bubbles
 
 ### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
 
