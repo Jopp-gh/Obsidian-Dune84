@@ -89,15 +89,15 @@ words words words words
 
 <br>
 
-### Custom tooltips
+### help bubbles
 
 `<span class="addtip">highlighted words<span class="tiptext">Insert here your custom help text</span></span>`
 
-![custom tooltips](https://user-images.githubusercontent.com/48620536/228632119-35088c88-6138-4787-ad7a-f7109edeef33.png)
+![help bubbles](https://user-images.githubusercontent.com/48620536/228632119-35088c88-6138-4787-ad7a-f7109edeef33.png)
 
-Tooltips on hover.
+help bubbles on hover.
 
-Beware, you cannot style text in **custom tooltips**, like bold, italic and so on wont work. Just keep things simple.
-To quickly instert custom tooltips, use [Quickadd](https://github.com/chhoumann/quickadd) by chhoumann and create a new "Capture", call this action "custom tooltip" activate the toggle **Capture to active note** , paste the code above in the bottom field of **Capture format**, then restart Obsidian to get your new  Quickadd capture available in your command palette.
+Beware, you cannot style text in **help bubbles**, like bold, italic and so on wont work. Just keep things simple.
+To quickly instert help bubbles, use [Quickadd](https://github.com/chhoumann/quickadd) by chhoumann and create a new "Capture", call this action "help bubbles" activate the toggle **Capture to active note** , paste the code above in the bottom field of **Capture format**, then restart Obsidian to get your new  Quickadd capture available in your command palette.
 
-Next time you want to add custom tooltips, select the target word(s) in your note, launch the command palette and type "custom tooltip", apply. Done this, your target word(s) will get a dotted underline. Now, click on this word(s) to expand the html tag and replace  **Insert here your custom help text** in`tiptext">Insert here your custom help text</span></span>` with your own tooltip text. 
+Next time you want to add help bubbles, select the target word(s) in your note, launch the command palette and type "help bubbles", apply. Done this, your target word(s) will get a dotted underline. Now, click on this word(s) to expand the html tag and replace  **Insert here your custom help text** in`tiptext">Insert here your custom help text</span></span>` with your own help bubble text. 
