@@ -63,11 +63,11 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Callout to shorten longer documents: use `> [!read-more…]` 
 - add custom help bubbles
 
-### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
+### List items, code 
 
-- fnote, memo (small boxes)
-- mini-admonitions (custom checkboxes)
-- theme syntax coloring
+- fnote, memo (small boxes) see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+- mini-admonitions (custom checkboxes) see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
+- theme code syntax coloring
 - simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
 
 ### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
