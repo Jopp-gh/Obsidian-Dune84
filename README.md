@@ -30,6 +30,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - to generate quickly custom callout boxes, get [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195
 - to read movie plots / footnotes on hover, get [**Better-footnotes**](https://github.com/jancbeck/obsidian-better-footnotes) by aidenlx
 - to work with tables, get [**Advanced-tables**](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger 
+- to get a complete overview of Dune's cssclasses, get the [cssclass cheatsheet of Dune](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md), not included in this cheatsheet are metadata options, which are text additions after file names  eg. `![[image.png|pos-r]]` these options are better documented and explained in the wiki articles below
 
 ### Screenshots
 
