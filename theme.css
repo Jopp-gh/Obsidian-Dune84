@@ -1661,24 +1661,24 @@ h6,
     text-align: center;
 }
 
-.mov-strip h1,
-.mov-strip h2,
-.mov-strip h3,
-.mov-strip h4,
-.mov-strip h5,
-.mov-strip h6,
-.mov-strip .HyperMD-header-1,
-.mov-strip .HyperMD-header-2,
-.mov-strip .HyperMD-header-3,
-.mov-strip .HyperMD-header-4,
-.mov-strip .HyperMD-header-5,
-.mov-strip .HyperMD-header-6 {
+.movies h1,
+.movies h2,
+.movies h3,
+.movies h4,
+.movies h5,
+.movies h6,
+.movies .HyperMD-header-1,
+.movies .HyperMD-header-2,
+.movies .HyperMD-header-3,
+.movies .HyperMD-header-4,
+.movies .HyperMD-header-5,
+.movies .HyperMD-header-6 {
     text-align: center;
 }
 
 /* Centered title */
 .center-header .inline-title,
-.mov-strip .inline-title {
+.movies .inline-title {
     text-align: center;
 }
 
@@ -2649,8 +2649,15 @@ body:not(.is-phone) .menu-item:hover:not(.is-disabled):not(.is-label) {
     background-color: var(--background-primary);
 }
 
-body:not(.is-phone) .tree-item-self.is-clickable:hover {
+.workspace-tabs.mod-top.mod-top-left-space .tree-item-self.is-clickable:hover {
+    margin-right: -20px;
+    border-radius: 4px;
+    padding-right: 28px;
+}
+
+.workspace-tabs.mod-top.mod-top-right-space .tree-item-self.is-clickable:hover {
     margin-left: -20px;
+    border-radius: 4px;
     padding-left: 28px;
 }
 
@@ -3234,19 +3241,19 @@ table {
     /* width: fit-content; */
 }
 
-.c-table table {
+.table-c table {
     margin-left: auto;
     margin-right: auto;
 }
 
 /* equal header proportions */
-.eq-table .markdown-rendered table:not([class]) tr {
+.table-eq .markdown-rendered table:not([class]) tr {
     display: grid;
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
 }
 
-.hl-table .markdown-rendered thead tr>th {
+.table-hl .markdown-rendered thead tr>th {
     display: none;
     height: 0;
 }
@@ -3260,31 +3267,31 @@ table {
 MOVIE tables
 --------------------------------------------   */
 
-.mov-strip:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th,
-.mov-strip:is(.markdown-preview-view, .markdown-source-view.mod-cm6) tbody tr>td:first-child {
+.movies:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th,
+.movies:is(.markdown-preview-view, .markdown-source-view.mod-cm6) tbody tr>td:first-child {
     display: none;
 }
 
-.mov-strip.markdown-preview-view tbody tr>td {
+.movies.markdown-preview-view tbody tr>td {
     max-width: 240px;
     /* white-space: break-spaces; */
 }
 
-.mov-strip.markdown-preview-view table {
+.movies.markdown-preview-view table {
     width: auto;
 }
 
-.mov-strip.markdown-preview-view table tbody tr:nth-child(even) {
+.movies.markdown-preview-view table tbody tr:nth-child(even) {
     background-color: transparent;
 }
 
-.mov-strip.markdown-preview-view table {
+.movies.markdown-preview-view table {
     display: flex;
     justify-content: center;
     overflow: scroll;
 }
 
-.mov-strip.markdown-preview-view tbody tr:first-child .internal-embed.is-loaded {
+.movies.markdown-preview-view tbody tr:first-child .internal-embed.is-loaded {
     display: flex;
     justify-content: center;
     padding: 12px 0;
@@ -3296,45 +3303,45 @@ MOVIE tables
     height: 100%;
 }
 
-.mov-strip .markdown-rendered tbody tr:first-child .internal-embed.is-loaded {
+.movies .markdown-rendered tbody tr:first-child .internal-embed.is-loaded {
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* .mov-strip .cm-s-obsidian span.cm-hmd-internal-link  */
-.mov-strip .internal-embed {
+/* .movies .cm-s-obsidian span.cm-hmd-internal-link  */
+.movies .internal-embed {
     max-width: 200px;
 }
 
-.mov-strip.markdown-preview-view table:not([class]) tr {
+.movies.markdown-preview-view table:not([class]) tr {
     gap: 4px;
 }
 
-.mov-strip.markdown-preview-view td {
+.movies.markdown-preview-view td {
     border: none;
 }
 
 /* no highlights */
-/* .mov-strip.markdown-preview-view tbody tr:nth-child(odd):hover */
-.mov-strip.markdown-preview-view tbody tr:hover {
+/* .movies.markdown-preview-view tbody tr:nth-child(odd):hover */
+.movies.markdown-preview-view tbody tr:hover {
     background-color: transparent;
 }
 
-.mov-strip.markdown-preview-view tr:nth-child(1n + 2):not(tr:last-child) {
+.movies.markdown-preview-view tr:nth-child(1n + 2):not(tr:last-child) {
     border-bottom: 1px solid gray;
 }
 
-.mov-strip .footnote-ref {
+.movies .footnote-ref {
     vertical-align: baseline;
 }
 
-.mov-strip .footnote-link::before {
+.movies .footnote-link::before {
     content: " 📖";
 }
 
 /* add space bw footnote plots */
-.mov-strip .footnotes ol>li {
+.movies .footnotes ol>li {
     padding: 8px 0;
 }
 
@@ -3370,12 +3377,12 @@ CONTACT tables - (img, full nm, tel, mail, group relations)
     color: white;
 }
 
-.theme-dark .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
-    border-top: 2px solid white;
-}
-
 .theme-light .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
     border-top: 2px solid black;
+}
+
+.theme-dark .contacts:is(.markdown-source-view, .markdown-preview-view) tbody tr:first-child {
+    border-top: 2px solid white;
 }
 
 /* small pic id */
@@ -4016,9 +4023,8 @@ image placed + description
 }
 
 .callout[data-callout="framed-c"] {
-    display: block;
-    margin: auto;
-    padding: 12px;
+    display: inline;
+    padding: 6px;
 }
 
 .callout[data-callout~="framed-l"] .callout-title,
@@ -4030,6 +4036,8 @@ image placed + description
 
 .is-phone .callout[data-callout="framed-c"] {
     width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
     max-width: none;
 }
 
@@ -5047,6 +5055,8 @@ PHONE
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 50px;
+    gap: 6px;
 }
 
 .is-phone .menu {
@@ -5950,6 +5960,7 @@ SLIDESHOW
 .reveal ul>li.task-list-item .task-list-item-checkbox {
     background-repeat: no-repeat;
     background-size: contain;
+    pointer-events: none;
 }
 
 .reveal .callout.callout[data-callout^=infobox] {
@@ -6967,7 +6978,7 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
 
 
 /* cssclass x */
-.hide-doc :is(p, pre) {
+.hide-note :is(p, pre) {
     -webkit-text-security: square !important;
     letter-spacing: -5px;
     display: contents;
@@ -6977,38 +6988,38 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
     overflow-wrap: anywhere;
 }
 
-body .markdown-preview-view:not(.is-live-preview).hide-doc .callout {
+body .markdown-preview-view:not(.is-live-preview).hide-note .callout {
     -webkit-text-security: square !important;
     letter-spacing: -5px;
 }
 
-.hide-doc :is(b, strong) {
+.hide-note :is(b, strong) {
     font-size: 1.5em;
 }
 
-body .markdown-preview-view:not(.is-live-preview).hide-doc :is(h1, h2, h3, h4, h5, h6) {
+body .markdown-preview-view:not(.is-live-preview).hide-note :is(h1, h2, h3, h4, h5, h6) {
     -webkit-text-security: square;
     letter-spacing: -10px;
     font-size: calc(var(--h1-size)*2);
     margin: -18px 0 0 -28px;
 }
 
-body .markdown-preview-view:not(.is-live-preview).hide-doc :is(h5, h6) {
+body .markdown-preview-view:not(.is-live-preview).hide-note :is(h5, h6) {
     -webkit-text-security: square;
     letter-spacing: -14px;
     font-size: calc(var(--h1-size)*2);
     margin: -18px 0 0 -28px;
 }
 
-body .markdown-preview-view:not(.is-live-preview).hide-doc img {
+body .markdown-preview-view:not(.is-live-preview).hide-note img {
     filter: blur(40px) !important;
 }
 
-.hide-doc button.copy-code-button {
+.hide-note button.copy-code-button {
     letter-spacing: -3px;
 }
 
-body .markdown-preview-view:not(.is-live-preview).hide-doc :is(s.aside-in, s.aside-hide) {
+body .markdown-preview-view:not(.is-live-preview).hide-note :is(s.aside-in, s.aside-hide) {
     -webkit-text-security: square !important;
     letter-spacing: -3px;
 }
