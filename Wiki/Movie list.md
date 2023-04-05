@@ -14,7 +14,7 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 
 #### Usage
 1) to add descriptions to your movie table visit the Internet Movie Database: https://www.imdb.com/ 
-2) next, add a cssclass to your yaml header, use `cssclass: mov-strip`
+2) next, add a cssclass to your yaml header, use `cssclass: movies`
 3) finally, use this template:
 
 ```
