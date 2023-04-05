@@ -46,13 +46,13 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 ### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 
 - default table layout: dynamic columns 
-- custom table layout: equally distribuited table columns, use `cssclass: eq-table`
-- center tables: `cssclass: c-table`
-- headless tables : `cssclass: hl-table` 
+- custom table layout: equally distribuited table columns, use `cssclass: table-eq`
+- center tables: `cssclass: table-c`
+- headless tables : `cssclass: table-hl` 
 - table row and column highlights see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
 - table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
 - add [cookbook recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md) with `cssclass: recipes` 
-- add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: mov-strips`)  
+- add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: movies`)  
 - add [contacts](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Contacts.md) to your Contact-list, use `cssclass: contacts` 
 
 ### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
@@ -80,7 +80,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
 - auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
 - zoom svg mermaid diagrams, use svg-50, svg-100, svg-150, svg-200, eg.`cssclass: svg-50` (automatic zoom or zoom on click and hold) both for phone/desktop
-- Book pictures (custom placed, framed with description)
+- Book pictures (custom placed, framed with description) 
 - Picture-wall (moodboard), supported `phone` / `desktop`
 - add simple picture descriptions, eg. `picture#cap|description` 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
