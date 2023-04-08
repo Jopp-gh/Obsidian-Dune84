@@ -85,7 +85,16 @@ words words words words
 words words words words 
 ```
 ````
-![Lorem ipsum etc1](https://user-images.githubusercontent.com/48620536/224421063-c53dd61d-7adb-4ab2-b3e1-fef9bb81787c.png)
+![note-yell](https://user-images.githubusercontent.com/48620536/230743665-6075fa26-ad47-4d4a-b3e0-f2d9dbcb0a0d.png)
+
+````
+```memo-b
+note
+```
+````
+![note-blue](https://user-images.githubusercontent.com/48620536/230743600-678dbdc6-1aee-40bc-b892-199823340726.png)
+
+change memo colors, use red, green and blue, eg. `memo-r`, `memo-g`, `memo-b`,
 
 <br>
 
