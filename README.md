@@ -49,9 +49,11 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - default table layout: dynamic columns 
 - custom table layout: equally distribuited table columns, use `cssclass: table-eq`
 - center tables: `cssclass: table-c`
-- headless tables : `cssclass: table-hl` 
-- table row and column highlights see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
-- table styles, eg. `cssclass: academia`  (whiteBlue, academia) 
+- headless tables: `cssclass: table-hl` 
+- table highlights for the first, last and alternate column, as well as the last row
+- table header colors: eg blue headers = `cssclass: table-b`
+- table double header colors: eg. blue xy axis = `cssclass: table-xyb`
+- table styles, eg. `cssclass: academia` 
 - add [cookbook recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md) with `cssclass: recipes` 
 - add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: movies`)  
 - add [contacts](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Contacts.md) to your Contact-list, use `cssclass: contacts` 
@@ -62,14 +64,15 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Callout Infobox 
 - Callout Aside notes -interactive/fixed 
 - Callout to shorten longer documents: use `> [!read-more…]` 
-- add custom help bubbles
 
-### List items, code 
+### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
 
-- fnote, memo (small boxes) see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+- **fnote** (small footnote box)
+- **memo** in multiple colors (small stickies) see 
 - mini-admonitions (custom checkboxes) see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
 - theme code syntax coloring
 - simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
+- add custom help bubbles
 
 ### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 
@@ -87,18 +90,20 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
   
 ### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
-  
-- Callout for Raisecaps [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
+
+- to change fonts and alignment, add `cssclass: poetry` 
 - Poetry fonts, see **Preferences>Style Settings>Dune>Fonts>Poetry Fonts>**
-- alignment, add `cssclass: poetry` 
+- Callout for Raisecaps [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
 - Horizontal line decorations - add up to 7 line styles from a - g, eg. `cssclass: wave-a`
 
 ### Slide(show)
 
 - cleaner and bigger slideshow slides for Obsidians core plugin **Slide**
 - most features added by this theme work in Slide (sidebox, picture callouts, etc)  
-- Slide smaller text - more content on-screen (see **Style Settings>Dune>Fonts>Spacing>Slide smaller text**)
+- **Slide smaller text** - more content on-screen (see **Style Settings>Dune>Fonts>Spacing>Slide smaller text**)
 - to configure text alignment of your slides, see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment (global)**
+- #phone to move back or forth in your slide, swipe bach or forth on the upper or lower margin of your slide
+
 
 ### Pdf export
 
@@ -123,7 +128,9 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - garble your note `cssclass: hide-doc` and / or your App interface (see **Style Settings>Dune>Show ui elements>**)
 - pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
 - svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
+- innovative new checkboxes - forget your old-fashion list markers, bc you wont need them anymore. From now on, you will need only checkmark buttons.
 - basic support for tablets
+
 
 ### Supported Plugins
 
