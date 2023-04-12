@@ -1538,8 +1538,9 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title,
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-title {
     font-size: 1em;
-    line-height: 1.8;
+    line-height: 2;
     height: 28px;
+    padding-bottom: inherit;
 }
 
 .nav-file.is-active>.nav-file-title,
@@ -1886,39 +1887,39 @@ span.cm-hmd-codeblock.cm-meta {
 CITATION, Highlights
 ----------------------------------------------------------------*/
 
-body.align-a :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-a :is(h1, h2, h3, h4, h5, h6),
+.align-a :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
+.align-a :is(h1, h2, h3, h4, h5, h6),
 .align-a {
     text-align: center;
 }
 
-body.align-b :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-b :is(h1, h2, h3, h4, h5, h6),
+.align-b :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
+.align-b :is(h1, h2, h3, h4, h5, h6),
 .align-b {
     text-align: justify;
     text-justify: inter-word;
 }
 
-body.align-r :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-r :is(h1, h2, h3, h4, h5, h6),
+.align-r :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
+.align-r :is(h1, h2, h3, h4, h5, h6),
 .align-r {
     text-align: right;
 }
 
 /* for compatibility */
-body.align-l :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
-body.align-l :is(h1, h2, h3, h4, h5, h6),
+.align-l :is(.markdown-source-view .cm-line, .markdown-preview-view p, .inline-embed .markdown-embed-content p),
+.align-l :is(h1, h2, h3, h4, h5, h6),
 .align-l {
     text-align: inherit;
 }
 
 .align-a table {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 6px auto;
     clear: both;
 }
 
 .align-r table {
+    margin: 6px 0 6px 6px;
     float: right;
     clear: right;
 }
@@ -2258,7 +2259,8 @@ div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callo
         padding-top: 0.8em;
     }
 
-    .markdown-reading-view div[data-callout-metadata*="left"].callout {
+    .markdown-reading-view div[data-callout-metadata~="left"].callout,
+    .markdown-source-view div[data-callout-metadata~="left"].callout {
         float: left;
     }
 
@@ -2267,7 +2269,8 @@ div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callo
         padding-top: 0.8em;
     }
 
-    .markdown-reading-view div[data-callout-metadata*="right"].callout {
+    .markdown-reading-view div[data-callout-metadata~="right"].callout,
+    .markdown-source-view div[data-callout-metadata~="right"].callout {
         float: right;
     }
 
@@ -2586,8 +2589,9 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 .callout.callout[data-callout^=infobox] img {
     opacity: 1;
     pointer-events: none;
-    justify-content: center;
     width: 10vw;
+    margin: auto;
+    display: block;
 }
 
 .is-phone .callout.callout[data-callout^=infobox] .internal-embed,
@@ -3337,13 +3341,13 @@ table {
 }
 
 /* equal header proportions */
-.table-eq .markdown-rendered table:not([class]) tr {
+.table-eq:is(.markdown-preview-view, .markdown-source-view.mod-cm6) table:not([class]) tr {
     display: grid;
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
 }
 
-.table-hl .markdown-rendered thead tr>th {
+.table-hl:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th {
     display: none;
     height: 0;
 }
@@ -6696,6 +6700,11 @@ PDF EXPORT
     p {
         margin-top: 2px;
         margin-bottom: 2px;
+    }
+
+    ol {
+        padding: 4px 0;
+        width: 100%;
     }
 
     iframe {
