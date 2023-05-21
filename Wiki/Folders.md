@@ -53,6 +53,8 @@ Check the folder-icons.css snippet and make changes as you see fit. You can add 
 
 ![Folder colors](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b3474617-369d-4f66-82c5-e37aa12a9c0b)
 
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
 - 1 Project
 - 2 Area
 - 3 Resources
