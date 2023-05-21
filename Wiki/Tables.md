@@ -86,3 +86,7 @@ Catalogize your [Movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wi
 Collect your [Recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md)
 
 Document your [Contacts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Contacts.md)
+
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
