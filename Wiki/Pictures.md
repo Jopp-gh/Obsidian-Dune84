@@ -125,3 +125,6 @@ just hover and click, hold click. Otherwise, activate automatic zoom in **Prefer
 - bigger -120, 150, 200
 
 ![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
