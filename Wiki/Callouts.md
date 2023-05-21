@@ -125,3 +125,5 @@ note
 
 change memo colors, use red, green, blue, eg. `memo-r`, `memo-g`, `memo-b`,
 
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
