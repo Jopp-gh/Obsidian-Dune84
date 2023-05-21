@@ -1,3 +1,30 @@
+## Callouts
+#### Callouts alignment
+
+`> [!note|25]`
+Callout width is reduced to 1/4
+
+`> [!note|50]`
+Callout width is reduced to 1/2
+
+`> [!note|left]`
+Callout floats left
+
+`> [!note|right]`
+Callout floats right
+
+#### Callouts colors
+`> [!note|red]`
+red tint
+
+`> [!note|green]`
+green tint
+
+`> [!note|blue]`
+blue tint
+
+`> [!note|yellow]`
+yellow tint
 
 ### Aside-hide
 
@@ -71,7 +98,7 @@ Options: `> [!read-more…]-`, `> [!weiterlesen…]-`
 
 <br>
 
-### Footnote, Memo
+## Footnote, Memo
 
 ````
 ```fnote
@@ -87,6 +114,8 @@ words words words words
 ````
 ![note-yell](https://user-images.githubusercontent.com/48620536/230743665-6075fa26-ad47-4d4a-b3e0-f2d9dbcb0a0d.png)
 
+`memo` uses the color yellow
+
 ````
 ```memo-b
 note
@@ -94,9 +123,44 @@ note
 ````
 ![note-blue](https://user-images.githubusercontent.com/48620536/230743600-678dbdc6-1aee-40bc-b892-199823340726.png)
 
-change memo colors, use red, green and blue, eg. `memo-r`, `memo-g`, `memo-b`,
+change memo colors, use red, green, blue, eg. `memo-r`, `memo-g`, `memo-b`,
 
-<br>
+
+## Text 
+### Text colors
+
+![textCol–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/10b31b18-91e2-485b-9d9c-d62bc6c2901d)
+
+`#red **Abc**`
+`#green **Abc**`
+`#blue **Abc**`
+
+red, green, blue - fat
+
+![textCol–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4cffbb42-f98e-4f99-ad98-b5bea72b7ff5)
+
+`#red *Abc*`
+`#green *Abc*`
+`#blue *Abc*`
+
+red, green, blue - italic
+
+![textCol–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c2554b97-77cc-4aca-bf94-cd766a19514e)
+
+`#red ==Abc==`
+`#green ==Abc==`
+`#blue ==Abc==`
+
+red, green, blue - highlight
+
+
+### Simple Horizontal lines
+`cssclass: fade`
+`cssclass: fade-2`
+`cssclass: fade-3`
+`cssclass: stars`
+simple hr
+
 
 ### help bubbles
 
