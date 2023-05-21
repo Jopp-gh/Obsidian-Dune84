@@ -44,3 +44,6 @@ However, to simplify your task with tables, i suggest you to:
 - toggle on `Source mode`
 - get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger to work with tables. With this plugin on, you will enjoy working with tables :)
 - if you want to add more informations to your movie table, remember to put a short description of your new preset in the very first column of the movie table template above
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
