@@ -13,7 +13,7 @@ renaming folder `Archive` reveals its color code, in this case "4"
 add keywords to folder names (the keyword must be last if you add multiple words to a name)
 
 This snippet is an extension of Dune, because this way you get the chance to display the icons you like with the keywords you need. 
-To add this snippet, download [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons.css), then [install](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) this snippet, before you change anything in Obsidian. 
+To add this snippet, download [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) this snippet, before you change anything in Obsidian. 
 To get started, pick a random keyword listed below (keywords which share the same icon are separated with a slash "/"): 
 
 - Workbench
