@@ -65,6 +65,85 @@ Movies
 `cssclass: academia`
 Academia
 
+
+## Callouts
+
+#### Callouts alignment
+
+`> [!note|25]`
+Callout width is max 1/4 
+
+`> [!note|50]`
+Callout width is max 1/2
+
+`> [!note|left]`
+Callout floats left
+
+`> [!note|right]`
+Callout floats right
+
+#### Callouts colors
+
+`> [!note|red]`
+red callout tint
+
+`> [!note|green]`
+green callout tint
+
+`> [!note|blue]`
+blue callout tint
+
+`> [!note|yellow]`
+yellow callout tint
+
+## Notes
+#### Notes colors
+````
+```memo
+notes
+```
+````
+yellow
+
+````
+```memo-r
+notes
+```
+````
+red
+
+````
+```memo-g
+notes
+```
+````
+green
+
+````
+```memo-b
+notes
+```
+````
+blue
+
+## Text colors
+
+`#red **Abc**`
+`#green **Abc**` 
+`#blue **Abc**`
+red, green, blue - fat
+
+`#red *Abc*`
+`#green *Abc*`
+`#blue *Abc*`
+red, green, blue - italic
+
+`#red ==Abc==`
+`#green ==Abc==`
+`#blue ==Abc==`
+red, green, blue - highlight
+
+---
 ## Poetry
 
 `cssclass: poetry`
@@ -88,12 +167,14 @@ poetry - horizontal line style
 simple hr
 
 ## Images
+
 #### Banner
 `cssclass: banner-a` +( `![[image.png|banner-a]]`)
 `cssclass: banner-b` +( `![[image.png|banner-b]]`)
 banner
 
 #### Vector images
+
 `cssclass: svg-50`
 `cssclass: svg-100`
 `cssclass: svg-150`
@@ -101,6 +182,7 @@ banner
 zoom svg
 
 ## Typesetting text alignment
+
 `cssclass: align-r`
 `cssclass: align-a`
 `cssclass: align-b`
