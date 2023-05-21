@@ -44,8 +44,7 @@
 
 .nav-folder-title[data-path$="Workbench"] .nav-folder-title-content::after {
     content: var(--inbox-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Workbench"] .nav-folder-title-content::after {
@@ -55,8 +54,7 @@
 
 .nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]) .nav-folder-title-content::after {
     content: var(--openbook-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]) .nav-folder-title-content::after {
@@ -66,8 +64,7 @@
 
 .nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]) .nav-folder-title-content::after {
     content: var(--design-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]) .nav-folder-title-content::after {
@@ -77,8 +74,7 @@
 
 .nav-folder-title[data-path$="Read"] .nav-folder-title-content::after {
     content: var(--bookmark-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Read"] .nav-folder-title-content::after {
@@ -88,8 +84,7 @@
 
 .nav-folder-title[data-path$="Game"] .nav-folder-title-content::after {
     content: var(--game-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Game"] .nav-folder-title-content::after {
@@ -97,32 +92,9 @@
     filter: invert(1);
 }
 
-.nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
-    content: var(--calendar-icon);
-    top: -4px;
-    position: relative;
-}
-
-.theme-dark .nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
-    content: var(--calendar-icon);
-    filter: invert(1);
-}
-
-.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
-    content: var(--key-icon);
-    top: -4px;
-    position: relative;
-}
-
-.theme-dark .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
-    content: var(--key-icon);
-    filter: invert(1);
-}
-
 .nav-folder-title[data-path$="Portfolio"] .nav-folder-title-content::after {
     content: var(--portfolio-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Portfolio"] .nav-folder-title-content::after {
@@ -132,8 +104,7 @@
 
 .nav-folder-title[data-path$="Photo"] .nav-folder-title-content::after {
     content: var(--camera-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Photo"] .nav-folder-title-content::after {
@@ -143,8 +114,7 @@
 
 .nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]) .nav-folder-title-content::after {
     content: var(--computer-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]) .nav-folder-title-content::after {
@@ -154,8 +124,7 @@
 
 .nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]) .nav-folder-title-content::after {
     content: var(--movie-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]) .nav-folder-title-content::after {
@@ -165,8 +134,7 @@
 
 .nav-folder-title:is([data-path$="Study"], [data-path$="Research"]) .nav-folder-title-content::after {
     content: var(--compass-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Study"], [data-path$="Research"]) .nav-folder-title-content::after {
@@ -176,8 +144,7 @@
 
 .nav-folder-title[data-path$="Contact"] .nav-folder-title-content::after {
     content: var(--contacts-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Contact"] .nav-folder-title-content::after {
@@ -187,8 +154,7 @@
 
 .nav-folder-title:is([data-path$="Society"], [data-path$="Social"]) .nav-folder-title-content::after {
     content: var(--people-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Society"], [data-path$="Social"]) .nav-folder-title-content::after {
@@ -198,8 +164,7 @@
 
 .nav-folder-title[data-path$="Health"] .nav-folder-title-content::after {
     content: var(--heart-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Health"] .nav-folder-title-content::after {
@@ -209,8 +174,7 @@
 
 .nav-folder-title[data-path$="Network"] .nav-folder-title-content::after {
     content: var(--globe-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Network"] .nav-folder-title-content::after {
@@ -220,8 +184,7 @@
 
 .nav-folder-title[data-path$="Travel"] .nav-folder-title-content::after {
     content: var(--takeoff-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Travel"] .nav-folder-title-content::after {
@@ -231,8 +194,7 @@
 
 .nav-folder-title[data-path$="Sport"] .nav-folder-title-content::after {
     content: var(--dumbbell-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Sport"] .nav-folder-title-content::after {
@@ -242,8 +204,7 @@
 
 .nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]) .nav-folder-title-content::after {
     content: var(--code-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]) .nav-folder-title-content::after {
@@ -251,10 +212,29 @@
     filter: invert(1);
 }
 
+.nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
+    content: var(--calendar-icon);
+
+}
+
+.theme-dark .nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
+    content: var(--calendar-icon);
+    filter: invert(1);
+}
+
+.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
+    content: var(--key-icon);
+
+}
+
+.theme-dark .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
+    content: var(--key-icon);
+    filter: invert(1);
+}
+
 .nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
     content: var(--box-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
@@ -264,8 +244,7 @@
 
 .nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
     content: var(--node-icon);
-    top: -4px;
-    position: relative;
+
 }
 
 .theme-dark .nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
@@ -273,21 +252,27 @@
     filter: invert(1);
 }
 
+/* icon placement */
 .nav-folder-title-content::after {
     background-color: transparent !important;
     padding-right: 2px;
-    margin-bottom: -6px;
+    margin-bottom: -8px;
     float: left;
-    /* vertical-align: -25%; */
+}
+
+/* icon alignment */
+body:not(.is-phone) .nav-folder-title-content::after {
+    top: -2px;
+    position: relative;
 }
 
 /* example handler to add your own icons and keywords */
 /*
 .nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
     content: var(--node-icon);
-    top: -4px;
-    position: relative;
+
 }
+
 
 .theme-dark .nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
     content: var(--node-icon);
