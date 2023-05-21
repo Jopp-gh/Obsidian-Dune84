@@ -9,3 +9,7 @@
 
 - replaced dark themed backgrounds with white, printer-friendly backgrounds
 - most features added by this theme work with pdf export (sidebox, book picture callouts, infobox, etc)
+
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
