@@ -20,7 +20,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 - #world #languages,
 
 ### Attention
-Obsidian v1.2.8 introduced several breaking changes, this means, newer versions of Dune wont be fully backward compatible with older versions of Obsidian less than v128+ 
+Obsidian v1.2.8 introduced several breaking changes, this means, newer versions of Dune wont be fully backward compatible with older versions of Obsidian lesser than v1.2.8+ 
 
 ### First steps
 
