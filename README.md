@@ -4,21 +4,24 @@
 **Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
 I called this theme **Dune**, after the novels of one of my favorite sci-fi writers [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert) which influenced this genre. His novel **Dune** appeared also in a gorgeous cinematic transposition on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
 
-My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving and expanding on available features. Last but not least, I needed a change of colors, less extreme black and white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look, and were adapted to work on smaller interfaces too (phone). I tried my best to correct  major bugs afflicting tablets, i did this in emulation so results may vary - since i do not own a tablet any support for this device is rather difficult. 
+My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
 
-I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. Also, I hope, to pay my breakfast/lunch for sharing good content with you. Please see the **Buy me a coffee** button at bottom page.
+I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. Also, I hope to pay my breakfast/lunch for sharing good content with you. Please see the **Buy me a coffee** button at bottom page.
 Finally, i would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
 
-- architecture,
-- furniture design,
-- workflow code design,
-- cultural events,
-- entertainment art,
-- drawing,
-- photography,
-- economy,
-- world languages,
-  
+- #architecture,
+- #furniture #design,
+- #workflow #code #design,
+- #cultural #events,
+- #entertainment #art,
+- #drawing,
+- #photography,
+- #economy,
+- #world #languages,
+
+### Attention
+Obsidian v1.2.8 introduced several breaking changes, this means, newer versions of Dune wont be fully backward compatible with older versions of Obsidian less than v128+ 
+
 ### First steps
 
 1. to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
@@ -38,98 +41,13 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
   
 ## Features
 
-### Folders [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md)
-
-- apply folder colors: rename folders with up to **10 colors** (0 - 9), add a number in front of your folder names,  eg. `1 Name`
-- apply folder icons: add keywords to folder names (the keyword must be last if you add multiple words to a name)
-- if your Vault name is disabled, you can [drag n drop](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md) folders and files over your Profile / blue drop area
-
-### Tables [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md)
-
-- default table layout: dynamic columns 
-- custom table layout: equally distribuited table columns, use `cssclass: table-eq`
-- center tables: `cssclass: table-c`
-- headless tables: `cssclass: table-hl` 
-- table highlights for the first, last and alternate column, as well as the last row
-- table header colors: eg blue headers = `cssclass: table-b`
-- table double header colors: eg. blue xy axis = `cssclass: table-xyb`
-- table styles, eg. `cssclass: academia` 
-- add [cookbook recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md) with `cssclass: recipes` 
-- add [movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) to your Movie-list (use `cssclass: movies`)  
-- add [contacts](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Contacts.md) to your Contact-list, use `cssclass: contacts` 
-
-### Callouts [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
-
-- Multiple columns  
-- Callout Infobox 
-- Callout Aside notes -interactive/fixed 
-- Callout to shorten longer documents: use `> [!read-more…]` 
-
-### List items, code [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
-
-- **fnote** (small footnote box)
-- **memo** in multiple colors (small stickies) see 
-- mini-admonitions (custom checkboxes) see [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Lists.md)
-- theme code syntax coloring
-- simple horizontal line styles `cssclass: fade` (fade, fade-2, fade-3) or `cssclass: stars`
-- add custom help bubbles
-
-### Pictures [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
-
-- place pictures, eg. `![[image.png|pos-r]]` (pos-r, pos-c) 
-- shape pictures `![[image.png|avatar]]` (avatar, portrait, round)
-- add picture frames, eg. `![[image.png|frame-a]]` Configure a shortcut and open **Style Settings** in a tab next to your pictures for a better control over your frames
-- add simple frames `![[image.png|frame-s]]` change color and frame thickness in **Style Settings**  
-- add true banners eg. `![[image.png|banner-a]]` + `cssclass: banner-a` small (b) and normal (a) 
-- zoom manually is the default zoom mode: click and hold on hover (desktop) or single simple-tap to zoom images (phone)
-- auto-zoom on hover, see **Style Settings>Dune>Pictures>Zoom Picturs>Zoom on hover** (desktop)
-- zoom svg mermaid diagrams, use svg-50, svg-100, svg-150, svg-200, eg.`cssclass: svg-50` (automatic zoom or zoom on click and hold) both for phone/desktop
-- Book pictures (custom placed, framed with description) 
-- Picture-wall (moodboard), supported `phone` / `desktop`
-- add simple picture descriptions, eg. `picture#cap|description` 
-- Video resizing eg . `![[video.mp4 | vid-20]]` (vid-20, vid-30, vid-40, vid-50, vid-120, vid-150, vid-200) 
-  
-### Poetry [wiki](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
-
-- to change fonts and alignment, add `cssclass: poetry` 
-- Poetry fonts, see **Preferences>Style Settings>Dune>Fonts>Poetry Fonts>**
-- Callout for Raisecaps [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
-- Horizontal line decorations - add up to 7 line styles from a - g, eg. `cssclass: wave-a`
-
-### Slide(show)
-
-- cleaner and bigger slideshow slides for Obsidians core plugin **Slide**
-- most features added by this theme work in Slide (sidebox, picture callouts, etc)  
-- **Slide smaller text** - more content on-screen (see **Style Settings>Dune>Fonts>Spacing>Slide smaller text**)
-- to configure text alignment of your slides, see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment (global)**
-- #phone to move back or forth in your slide, swipe bach or forth on the upper or lower margin of your slide
-
-
-### Pdf export
-
-- replaced dark themed backgrounds with white, printer-friendly backgrounds
-- most features added by this theme work with pdf export (sidebox, book picture callouts, infobox, etc)
-
-### Text alignment
-
-- typesetting **locally**: text right `cssclass: align-r`, text justified (block) `cssclass: align-b`, text centered (axial) `cssclass: align-a`
-- typesetting **globally**: see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment**
-- **Readable line width** is supported too (see **Preferences>Editor>Display>Readable line length**), adjust your line length with **Style Settings>Dune>Fonts>Spacing**
-
-### UI improvements
-
-- #phone: new **find-and-replace** dialog
-- #phone: bigger buttons, overall more space on screen
-- #phone: to open Obsidians preferences, swipe from left to right, to open the Right sidepanel, swipe from right to left.
-- #phone: remove **path and / or file name** from your note header - to rename, use the command palette or touch the topmost left-side on your display
-- #desktop: rename your notes with right-click on your active tab, or hovering over your note header or via right-click on your file/folder in the folder-tree view 
-- #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
-- personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
-- garble your note `cssclass: hide-doc` and / or your App interface (see **Style Settings>Dune>Show ui elements>**)
-- pick up to 4 theme color schemes (2 for each day and night) or make it your own with "Custom color" in **Style Settings**
-- svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
-- innovative new checkboxes - forget your old-fashion list markers, bc you wont need them anymore. From now on, you will need only checkmark buttons.
-- basic support for tablets
+- #### [Folders](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md) 
+- #### [Tables](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md) 
+- #### [Callouts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+- #### [Pictures](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
+- #### [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
+- #### [Slideshow & Print](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Sharing.md)
+- #### [UX design](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/UX%20Design.md)
 
 
 ### Supported Plugins
