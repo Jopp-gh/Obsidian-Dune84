@@ -14,7 +14,7 @@ to add a neat banner, you must define both `cssclass` AND `alt name`.
 **Vertical placement**
 
 To adjust your **b**anner **c**oordinates vertically 
-- locally: use 6 different sizes (10, 20, 30, 40, 50, 60), eg. `cssclass: bc-10` 
+- locally: use 8 different placements (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
 - globally: see **Style Settings>Dune>Pictures>Zoom Pictures>Banner vertical placement** 
 
 <br>
