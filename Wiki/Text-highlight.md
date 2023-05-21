@@ -89,3 +89,5 @@ Next time you want to add help bubbles, select the target word(s) in your note, 
 `cssclass: stars`
 simple hr
 
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
