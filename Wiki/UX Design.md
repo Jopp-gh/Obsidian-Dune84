@@ -12,3 +12,7 @@
 - svg mermaid diagrams -readable with dark and light themes (arrows, labels, etc)
 - innovative new checkboxes - forget your old-fashion list markers, bc you wont need them anymore. From now on, you will need only checkmark buttons.
 - for #desktop and #phone, #tablet
+
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
