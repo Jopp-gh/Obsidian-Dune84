@@ -4,8 +4,7 @@
 apply folder colors: rename folders with up to **10 colors** (0 - 9), add a number in front of your folder names,  eg. `1 Name`.
 Just make sure to add a valid number (single digit) in front of your folder name (must be the very first character of your folder name) from 0 - 9 followed by an `empty space` or `hyphen`.
 
-
-![Folder colors-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/cedbc9a6-495a-46ff-8079-0f000525ce8e)
+![Folder colors-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/460ec1dd-484e-4787-89f2-9e4bb3f6b09b)
 
 renaming folder `Archive` reveals its color code, in this case "4"
 
