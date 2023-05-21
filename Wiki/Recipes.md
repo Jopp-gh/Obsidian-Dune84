@@ -47,3 +47,7 @@ cssclass: recipes
 
 ### Result:
 ![Bildschirmfoto 2023-03-29 um 19 03 18](https://user-images.githubusercontent.com/48620536/228628983-c499f19b-c0da-4566-bb2b-f4291670f88a.png)
+
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
