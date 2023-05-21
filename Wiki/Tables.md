@@ -1,56 +1,88 @@
-```
----
-cssclass: wideTable
----
-```
-Use **wideTable** to cover the whole page
-
+# Tables
 
 ### Default table
+
+![table-hl–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/445db4c7-7852-4a29-960b-e8933df5295c)
+
 ```
-| A   | B   | C   | D   |
+|     | A   | B   | C   |
 | --- | --- | --- | --- |
 | 1   |     |     |     |
 | 2   |     |     |     |
 | 3   |     |     |     |
 ```
-![table–01](https://user-images.githubusercontent.com/48620536/222981305-a52437da-d700-431a-be7e-4e55f2dc39f6.png)
 
 ### Table highlights
+
+
+![table-hl–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8657f42d-3d19-422b-9e60-6abb866ef7c6)
+
 `cssclass: table-fc`
 
-![table–02](https://user-images.githubusercontent.com/48620536/222981323-4bcacbe3-b1f4-49fe-a2ae-cc405ba952c3.png)
+
+![table-hl–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/23dd85f2-f057-4912-81a1-81616bdcf8a8)
 
 `cssclass: table-lc`
 
-![table–04](https://user-images.githubusercontent.com/48620536/222981341-314f43dd-5e78-47c5-9721-ae9a4fa042b2.png)
+
+![table-hl–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/26df94c6-d06c-41b9-9477-ef5007bb1546)
 
 `cssclass: table-alt`
 
-![table–03](https://user-images.githubusercontent.com/48620536/222981330-2811bff8-c8ac-49b3-ade6-0c882d111117.png)
+![table-hl–05](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c0666afa-5173-4697-baff-fdb2d37a8e62)
 
 `cssclass: table-lr`
-
-![table–05](https://user-images.githubusercontent.com/48620536/222981350-e5d4cd9d-a599-454b-9365-d6f7b6216185.png)
 
 
 ## styled tables
 
-`cssclass: wideTable, academia`
+![table-hl–06](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bb84d0a8-3d8c-4a34-83e6-e3465c9395f1)
 
-![tableSt–01](https://user-images.githubusercontent.com/48620536/223588651-fd627851-6155-4d78-a764-d9c9094bcfb8.png)
+`cssclass: academia`
+
+![table-acad](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/5a00380f-16d0-45e0-81fc-0f66957419e5)
+
+`cssclass: table-wide, academia`
+
 
 ## Table colors
 
-![table-blue–01](https://user-images.githubusercontent.com/48620536/230742907-e301858e-84c8-4df5-88e9-53e34aeaf2d2.png)
+![table–r](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/e0ab79c1-86af-46cb-a88e-ecc140d5727b)
+![table–g](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/275ea630-fb3b-48a7-8f0c-f1b9a8a2fc88)
+![table–b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/5ff1adf7-acf2-4bd2-9046-36b5f3921775)
 
-cssclass: table-b
+`cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`
 
 **Options**: header in red, green, blue (r,g,b)
 
-![table-blue–02](https://user-images.githubusercontent.com/48620536/230742920-460d5025-1eea-4a9b-a307-46b09514ad1a.png)
 
-cssclass: table-xyb
+![table–xyr](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ebfb71d0-bd61-42d5-9011-2d56a9bdbee1)
+![table–xyg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dc4f72ff-9896-4b54-97da-c6236e1328ba)
+![table–xyb](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f7d50e37-70f2-4524-b2c5-d04ab7b11ce2)
+
+
+`cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`
 
 **Options**: 2 axes in a color of your choice red, green, blue (xyr, xyg, xyb)
 
+## Table alignment
+
+`cssclass: table-c`
+center tables
+
+`cssclass: table-eq`
+equally distribuited columns
+
+`cssclass: table-wide`
+stretch tables to cover the whole page
+
+`cssclass: table-hl`
+headless tables
+
+## More Tables
+
+Catalogize your [Movies](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Movie%20list.md) 
+
+Collect your [Recipes](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Recipes.md)
+
+Document your [Contacts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Contacts.md)
