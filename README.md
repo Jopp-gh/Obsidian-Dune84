@@ -41,9 +41,10 @@ Obsidian v1.2.8 introduced several breaking changes, this means, newer versions 
   
 ## Features
 
-- #### [Folders](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Keywords.md) 
+- #### [Text-highlight](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md)
+- #### [Folders](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Folders.md) 
 - #### [Tables](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md) 
-- #### [Callouts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Boxes.md)
+- #### [Callouts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md)
 - #### [Pictures](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 - #### [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
 - #### [Slideshow & Print](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Sharing.md)
