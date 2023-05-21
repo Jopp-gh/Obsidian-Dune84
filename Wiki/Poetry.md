@@ -17,3 +17,7 @@ cssclass: wave-a
 Options: a-g
 
 ![P2](https://user-images.githubusercontent.com/48620536/222981063-8ab2dc90-1729-46fc-a9d6-d82e1e00d878.png)
+
+
+---
+[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
