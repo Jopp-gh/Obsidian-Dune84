@@ -133,5 +133,7 @@ simple delimiter to divide chapters or paragraphs. If you want beautiful delimit
 1. First, pick a horizontal line style eg. **fade-2** and add this style to your yaml header
 2. add two paragraphs and write 3 dashes `---` 
 
+**Tip**: you can change delimiter color too, go to: **Style Settings>Dune>Colors>Extra Colors>Color for Hr**
+
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
