@@ -4,6 +4,7 @@
 
 ![table-hl–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/445db4c7-7852-4a29-960b-e8933df5295c)
 
+copy this template:
 ```
 |     | A   | B   | C   |
 | --- | --- | --- | --- |
@@ -15,23 +16,10 @@
 ### Table highlights
 
 
-![table-hl–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8657f42d-3d19-422b-9e60-6abb866ef7c6)
-
-`cssclass: table-fc`
+![table-hl–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8657f42d-3d19-422b-9e60-6abb866ef7c6) ![table-hl–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/23dd85f2-f057-4912-81a1-81616bdcf8a8) ![table-hl–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/26df94c6-d06c-41b9-9477-ef5007bb1546) ![table-hl–05](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c0666afa-5173-4697-baff-fdb2d37a8e62)
 
 
-![table-hl–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/23dd85f2-f057-4912-81a1-81616bdcf8a8)
-
-`cssclass: table-lc`
-
-
-![table-hl–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/26df94c6-d06c-41b9-9477-ef5007bb1546)
-
-`cssclass: table-alt`
-
-![table-hl–05](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c0666afa-5173-4697-baff-fdb2d37a8e62)
-
-`cssclass: table-lr`
+`cssclass: table-fc`, `cssclass: table-lc`, `cssclass: table-alt`, `cssclass: table-lr`
 
 
 ## styled tables
