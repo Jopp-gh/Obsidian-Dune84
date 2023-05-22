@@ -6,7 +6,7 @@
 - to **rename** a note, use the command palette or touch the top-left area on your display
 
 ## desktop
-- **rename** your notes with right-click on your active tab, or hovering over your note header or via right-click on your file/folder in the folder-tree view 
+- **rename** your notes with right-click on your active tab and confirm to rename or hover-over your note header, then click to edit or right-click on your file/folder in the *folder-tree view*
 - #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
 
 ## both devices
