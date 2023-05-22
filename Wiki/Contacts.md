@@ -29,5 +29,9 @@
 
 you can add **more columns**, *but do not change the very first column* as it is reserved for images only
 
+### Related
+
+to change your vault name and add your identity instead, check out how to apply your [Profile](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) or Avatar.
+
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
