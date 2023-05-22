@@ -10,11 +10,14 @@
 ---
 
 ### Name
-I called this theme **Dune**, after the novels of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert) which influenced the sci-fi genre. His **Dune saga** appeared as well in a gorgeous cinematic transposition on big screen, to be exact in [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk)(1984) written and directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
-**Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
+I called my theme **Dune**, after one of my favorite sci-fi writers, [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert).
+His novels were incredibly successfull and significantly influenced the **Sci-fi genre** but nobody dared to portray its universe on big screen until [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk) from 1984 directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+**Dune from 1984** was a relatively tight budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Dune, very well narrated and worth to see as a whole - i continue to watch this movie from time to time and it seems to be an evergreen for me.
+
+Recenty, we could see more movies/tv series of Dune, where i appreciated *background scenery* and *costume design*, but 2 components alone don't make a movie, so unfortunately, i wont cite them as successors here. 
 
 ### Goal
-My **goal** was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
+My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
 
 ### Motivation
 I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. 
@@ -102,6 +105,7 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 
 ### Resources
 
+**Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
 Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons.css) added by this theme are licensed under free software licenses,
 borrowed and reworked code comes from following sources:
 
