@@ -75,7 +75,7 @@ Check the folder-icons.css snippet and make changes as you see fit.
 You can add or remove keywords, change keywords to lowercase and change or remove icons. Find a list of available icons in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) or add new icons by yourself, check out icon libs like: https://lucide.dev
 
 
-### Interacting with folders
+## Interacting with folders
 
 if your Vault name is disabled, [drag n drop](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md) folders and files over your Profile / blue drop area (the blue drop area will appear if you drag files or folders over the empty space on top over your folder tree)
 
