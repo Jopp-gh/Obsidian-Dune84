@@ -17,7 +17,7 @@ Raisecap will render the first letter of a paragraph in big, gothic letters.
 Pay attention to use **Uppercase Caps** for your *very first letter*.
 
 - to change fonts, go to **Style Settings>Dune>Fonts>Poetry Fonts** 
-- to change font colors for poetry, go to  **Preferences>Style Settings>Dune>Colors>Extra Colors>Initial**
+- to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
 
 <br>
     
