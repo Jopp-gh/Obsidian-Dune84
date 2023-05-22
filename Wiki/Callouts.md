@@ -131,7 +131,7 @@ words words words words
 words words words words 
 ```
 ````
-Kind of memo notes, `memo` uses the color yellow
+Kind of memo notes, `memo` uses by default the color yellow
 
 ### more color variations
 ![note-blue](https://user-images.githubusercontent.com/48620536/230743600-678dbdc6-1aee-40bc-b892-199823340726.png)
@@ -142,7 +142,7 @@ note
 ```
 ````
 
-to add more color variation change memo colors, use: red, green, blue, eg. `memo-r`, `memo-g`, `memo-b`,
+to add more color variations, use: red, green, blue, eg. `memo-r`, `memo-g`, `memo-b`,
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
