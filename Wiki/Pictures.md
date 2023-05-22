@@ -56,7 +56,7 @@ Frame your pictures. Download some frames like [this png template](https://pngim
 
 <br>
 
-## Simple Frames
+### Simple Frames
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
