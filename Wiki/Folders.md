@@ -1,20 +1,34 @@
 # Folders
 
-### Folder colors
-apply folder colors: rename folders with up to **10 colors** (0 - 9), add a number in front of your folder names,  eg. `1 Name`.
-Just make sure to add a valid number (single digit) in front of your folder name (must be the very first character of your folder name) from 0 - 9 followed by an `empty space` or `hyphen`.
+## Folder colors
 
 ![Folder colors-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/460ec1dd-484e-4787-89f2-9e4bb3f6b09b)
 
-renaming folder `Archive` reveals its color code, in this case "4"
+**applying folder colors**: rename folders with up to **10 colors**, 
+<br>
+if you rename folder `Archive` as seen in the picture above, the name will expand and reveal its color code, in this case "4" which is the color for "lime" 
 
 
-### Folders Icons
-add keywords to folder names (the keyword must be last if you add multiple words to a name)
+### Usage
+add a number in front of your folder name from 0-9,  eg. `1 Name`.
 
-This snippet is an extension of Dune, because this way you get the chance to display the icons you like with the keywords you need. 
-To add this snippet, download [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) this snippet, before you change anything in Obsidian. 
-To get started, pick a random keyword listed below (keywords which share the same icon are separated with a slash "/"): 
+**Tip**
+- Just make sure to add a valid number 
+- the first character must be single digit and the very first position of your folder name
+- add an `empty space` or `hyphen`to divide your `color id` from the "real name" of your folder, eg. `Color-id Foldername`
+
+<br>
+
+## Folders Icons
+
+![Folder colors](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b3474617-369d-4f66-82c5-e37aa12a9c0b)
+
+add keywords to folder names, to **add icons to your folders**
+
+### Usage
+1. To get started, download [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) first.
+2. Then [install your snippet](https://help.obsidian.md/Extending+Obsidian/CSS+snippets), 
+3. pick a random keyword listed below (notice, keywords which share the same icon are separated with a slash "/"): 
 
 - Workbench
 - Journal / Training / Education
@@ -39,27 +53,31 @@ To get started, pick a random keyword listed below (keywords which share the sam
 - Code / Shell
 - Game
 
-### Usage:
+<br>
 
- to add colors and icons to your folders, use this name convention : 
-- `colorID keyword`= "1 Project"
-- `colorID JohnnyDecimalNumber folderName keyword`= "1 30 Test Project" 
+### To summarize
+and add colors and icons to your folders, use this name convention : 
+<br>
+a) `colorID keyword`= "1 Project"
+<br>
+b) `colorID JohnnyDecimalNumber folderName keyword`= "1 30 Test Project" 
 
-### Important
-
+**Tip**
+<br>
+your folder keyword must be last, if you add multiple words to a folder name
+**Folders Icons** is an extension of Dune, because this way you get the chance to display the icons you like with the keywords you need. 
 Keywords are case sensitive, this means, if you add eg. "project" instead of eg "Project", then keywords won't apply icons.
-Check the folder-icons.css snippet and make changes as you see fit. You can add or remove keywords, change keywords to lowercase and change or remove icons. Find a list of available icons on top page of the above mentioned snippet.
+
+<br>
+
+### Expanding available Iconset
+Check the folder-icons.css snippet and make changes as you see fit. 
+You can add or remove keywords, change keywords to lowercase and change or remove icons. Find a list of available icons in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) or add new icons by yourself, check out icon libs like: https://lucide.dev
 
 
-![Folder colors](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b3474617-369d-4f66-82c5-e37aa12a9c0b)
+### Interacting with folders
+
+if your Vault name is disabled, [drag n drop](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md) folders and files over your Profile / blue drop area (the blue drop area will appear if you drag files or folders over the empty space on top over your folder tree)
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
-- 1 Project
-- 2 Area
-- 3 Resources
-- 4 Archive
-
-### Profile picture
-
-if your Vault name is disabled, you can [drag n drop](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md) folders and files over your Profile / blue drop area
