@@ -10,9 +10,9 @@
 ---
 
 ### Name
-I called my theme **Dune**, after one of my favorite sci-fi writers, [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert).
-His novels were incredibly successfull and significantly influenced the **Sci-fi genre** but nobody dared to portray its universe on big screen until [**Dune**](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk) from 1984 directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
-**Dune from 1984** was a relatively tight budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Dune, very well narrated and worth to see as a whole - i continue to watch this movie from time to time and it seems to be an evergreen for me.
+I called my theme **Dune**, after a novel cycle from one of my favorite sci-fi writers, [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert).
+His novels were incredibly successful and significantly influenced the **Sci-fi genre** afterwards, but nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Frank's Dune, very well narrated and worth to see as a whole - i continue to watch this movie from time to time and it seems to be an evergreen for me, which happens rarely to me.
 
 Recenty, we could see more movies/tv series of Dune, where i appreciated *background scenery* and *costume design*, but 2 components alone don't make a movie, so unfortunately, i wont cite them as successors here. 
 
