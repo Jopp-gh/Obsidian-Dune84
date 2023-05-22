@@ -1,6 +1,6 @@
-## Movie list
+# Movie list
 
-### Simple Movie catalog
+## Simple Movie catalog
 
 ![Mov-coll-2](https://user-images.githubusercontent.com/48620536/225926038-afdc2964-60b9-4afd-9472-0f1057d99a49.png)
 
@@ -12,7 +12,7 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 - director
 - rating
 
-#### Usage
+### Usage
 1) to add descriptions to your movie table visit the Internet Movie Database: https://www.imdb.com/ 
 2) next, add a cssclass to your yaml header, use `cssclass: movies`
 3) finally, use this template:
@@ -37,7 +37,7 @@ Example: [Dune (1984)](https://www.imdb.com/title/tt0087182/).
 
 <br>
 
-#### Working with tables
+### Working with tables
 
 Tables in markdown are, what they are, just get used to it.
 However, to simplify your task with tables, i suggest you to:
