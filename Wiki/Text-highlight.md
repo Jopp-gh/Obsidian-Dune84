@@ -48,6 +48,8 @@ c) then *restart Obsidian* to get your new Quickadd capture available in your co
 #### code template
 `<span class="addtip">highlighted words<span class="tiptext">Insert here your custom help text</span></span>`
 
+<br>
+
 Next time you want to add help bubbles to your word(s): 
 1. select the target word(s) in your note
 2. launch the command palette and type "help bubbles"
@@ -55,6 +57,8 @@ Next time you want to add help bubbles to your word(s):
 4. Now, click on this word(s) to expand the html tag and replace  **Insert here your custom help text** in`tiptext">Insert here your custom help text</span></span>` with your own help bubble text. 
 
 **Note**: you cannot style text in **help bubbles**, like bold, italic and so on wont work. Just keep things simple.
+
+<br>
 
 ## Mini Admonitions
 
