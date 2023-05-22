@@ -28,10 +28,19 @@ Options: `cssclass: wave-a`, `cssclass: wave-b`, `cssclass: wave-c`, `cssclass: 
 
 simple delimiter to divide chapters, paragraphs or to add a little design to your pages. If you want simple delimiters, check out [simple delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md#simple-horizontal-lines)
 
-### Usage
-First, pick a horizontal line style eg. fade-2 and add this style to your yaml header
-add two paragraphs and write 3 dashes ---
+<br>
 
+### Usage
+First, pick a horizontal line style (see Options above) eg. `cssclass: wave-a` for your yaml header, 
+then add two paragraphs and write 3 dashes `---`
+
+### Resize Line styles
+
+to resize your horizontal line style, go to **Dune>Fonts>Poetry Fonts>Resize decorations**
+
+**Tip**
+<br>
+assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings side-by-side to your note and see in real time how your slider affects the **Line styles decoration** size
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
