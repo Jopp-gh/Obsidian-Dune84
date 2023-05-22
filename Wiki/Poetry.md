@@ -26,7 +26,7 @@ Pay attention to use **Uppercase Caps** for your *very first letter*.
 
 Options: `cssclass: wave-a`, `cssclass: wave-b`, `cssclass: wave-c`, `cssclass: wave-d`, `cssclass: wave-e`, `cssclass: wave-f`, `cssclass: wave-g`
 
-simple delimiter to divide chapters, paragraphs or to add a little design to your pages. If you want simple delimiters, check out [simple delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md)
+simple delimiter to divide chapters, paragraphs or to add a little design to your pages. If you want simple delimiters, check out [simple delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md#simple-horizontal-lines)
 
 ### Usage
 First, pick a horizontal line style eg. fade-2 and add this style to your yaml header
