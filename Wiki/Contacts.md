@@ -5,7 +5,7 @@
 
 ### Usage
 1. First, add `cssclass: contacts` to your yaml header
-2. to start, add a simple table, copy:
+2. then add a simple table, copy the template below:
 
 ```
 |     | name| tel | mail| group| relations |
@@ -15,7 +15,7 @@
 |     |     |     |     |      |           |
 ```
 
-3. then start adding data, but pay attention - the very first column is reserved for profile pictures only. Images in there will display in an uniform size and get a round cutout (see picture at bottom page)
+3. finally, add your data but pay attention - *the very first column is reserved for profile pictures only*. Images in there will display with an uniform size and a round cutout (see picture on top)
 
 ### Example
 ```
@@ -27,7 +27,7 @@
 
 ### Customize
 
-you can add more columns if you desire, but do not change the very first column as it is reserved for images only
+you can add **more columns**, *but do not change the very first column* as it is reserved for images only
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
