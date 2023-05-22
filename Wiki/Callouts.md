@@ -14,6 +14,7 @@ red tint, green tint, blue tint, yellow tint
 
 <br>
 
+## Aside notes
 ## Aside-hide
 
 ![B1](https://user-images.githubusercontent.com/48620536/222979880-64b7d178-7804-4d3b-b089-2375df712e94.png)
@@ -31,7 +32,7 @@ To edit your callout box in `Live Preview`, select the text before and/or after 
 
 <br>
 
-### Aside-in
+## Aside-in
 ![B2](https://user-images.githubusercontent.com/48620536/222979913-e8e15146-725f-47d4-8126-b7c4055d261e.png)
 
 ```
@@ -66,7 +67,7 @@ Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callou
 
 <br>
 
-### Sidebox
+## Sidebox
 
 ![B4](https://user-images.githubusercontent.com/48620536/222980230-ca87423e-20fb-4680-8997-0b1a74e3c4a3.png)
 
@@ -83,7 +84,7 @@ Sidebox to visualize quickly most important details, like pictures, text and lin
 
 <br>
 
-### Read more…
+## Read more…
 
 ```
 > [!read-more…]- 
@@ -94,7 +95,7 @@ Callout to shorten longer documents
 
 <br>
 
-#### Callouts alignment
+### Callouts alignment
 
 `> [!note|25]`
 Callout width is reduced to 1/4
@@ -122,7 +123,7 @@ words words words words
 ````
 <br>
 
-### Memo
+## Memo
 ![note-yell](https://user-images.githubusercontent.com/48620536/230743665-6075fa26-ad47-4d4a-b3e0-f2d9dbcb0a0d.png)
 
 ````
@@ -132,7 +133,7 @@ words words words words
 ````
 Kind of memo notes, `memo` uses the color yellow
 
-#### more color variations
+### more color variations
 ![note-blue](https://user-images.githubusercontent.com/48620536/230743600-678dbdc6-1aee-40bc-b892-199823340726.png)
 
 ````
