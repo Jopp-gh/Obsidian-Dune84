@@ -127,7 +127,7 @@ Next time you want to add help bubbles to your word(s):
 `cssclass: fade-3`
 `cssclass: stars`
 
-simple hr to divide chapters or paragraphs or just to add some design elements, 
+simple delimiter to divide chapters or paragraphs. If you want beautiful delimiters, check out [Poetry delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
 
 ### Usage
 1. First, pick a horizontal line style eg. **fade-2** and add this style to your yaml header
