@@ -1,11 +1,11 @@
 # Cheatsheet - Dune cssclasses
-```memo
+```
 cssclasses are case sensitive eg. Banner-a ≠ banner-a
 ```
 
 ## Tables
 
-#### Table alignment
+### Table alignment
 `cssclass: table-c`
 center tables
 
@@ -18,7 +18,7 @@ stretch tables
 `cssclass: table-hl` 
 headless tables
 
-#### Table colors
+### Table colors
 `cssclass: table-xyr`
 tint for header and first column - red
 
@@ -37,7 +37,7 @@ tint for header - green
 `cssclass: table-b`
 tint for header - blue
 
-#### Table highlights
+### Table highlights
 
 `cssclass: table-fc`
 highlight first column
@@ -52,7 +52,7 @@ highlight alternate columns
 highlight last row
 
 
-#### Special tables
+### Special tables
 `cssclass: contacts` 
 Contacts
 
@@ -68,13 +68,13 @@ Academia
 
 ## Callouts
 
-#### Callouts alignment
+### Callouts alignment
 
 `> [!note|25]`
-Callout width is max 1/4 
+Callout width is reduced to 1/4 
 
 `> [!note|50]`
-Callout width is max 1/2
+Callout width is reduced to 1/2
 
 `> [!note|left]`
 Callout floats left
@@ -82,22 +82,22 @@ Callout floats left
 `> [!note|right]`
 Callout floats right
 
-#### Callouts colors
+### Callouts colors
 
 `> [!note|red]`
-red callout tint
+red tint
 
 `> [!note|green]`
-green callout tint
+green tint
 
 `> [!note|blue]`
-blue callout tint
+blue tint
 
 `> [!note|yellow]`
-yellow callout tint
+yellow tint
 
 ## Notes
-#### Notes colors
+### Notes colors
 ````
 ```memo
 notes
@@ -143,7 +143,8 @@ red, green, blue - italic
 `#blue ==Abc==`
 red, green, blue - highlight
 
----
+<br>
+
 ## Poetry
 
 `cssclass: poetry`
@@ -168,12 +169,12 @@ simple hr
 
 ## Images
 
-#### Banner
-`cssclass: banner-a` +( `![[image.png|banner-a]]`)
-`cssclass: banner-b` +( `![[image.png|banner-b]]`)
+### Banner
+`cssclass: banner-a` and `![[image.png|banner-a]]`
+`cssclass: banner-b` and `![[image.png|banner-b]]`
 banner
 
-#### Vector images
+### Vector images
 
 `cssclass: svg-50`
 `cssclass: svg-100`
@@ -181,17 +182,12 @@ banner
 `cssclass: svg-200`
 zoom svg
 
-## Typesetting text alignment
+## Typesetting - text alignment
 
 `cssclass: align-r`
 `cssclass: align-a`
 `cssclass: align-b`
-
-```memo
-to align text with the core plugin slide(show), 
-set text alignment globally, 
-see "Preferences-Style Settings-Dune-Fonts-Spacing-Typesetting alignment"
-```
+(**Slides** needs globally enabled alignment typesettings, see *Dune preferences*)
 
 ## Hide note
 `cssclass: hide-note`
