@@ -16,7 +16,7 @@ cssclass: banner-a,
 
 **Note**
 <br>
-to add a neat banner, you must define both `cssclass` AND `alt name` with the same banner type, eg. `banner-a` or `banner-a`
+to add a neat banner, you must define `banner-a` or `banner-b` twice, for both `cssclass` AND `alt name` 
 
 <br>
 
