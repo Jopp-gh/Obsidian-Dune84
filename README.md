@@ -3,10 +3,10 @@
 ![Dune-Obsidian](https://user-images.githubusercontent.com/48620536/226210760-1a65804d-377d-421e-bcd1-3081dad5233c.png)
 
 ## Jump to:
-- [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/README.md#first-steps)
-- [Features](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/README.md#features)
-- [Contribute](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/README.md#contribute)
-- [License](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/README.md#license)
+- [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#first-steps)
+- [Features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
+- [Contribute](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#contribute)
+- [License](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#license)
 ---
 
 ### Name
