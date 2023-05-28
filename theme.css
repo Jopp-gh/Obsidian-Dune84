@@ -1384,7 +1384,6 @@ FOLDERs - Navi Tree
 /* Remove collapse arrow from top level folders */
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
     display: none;
-    padding-left: 12px;
 }
 
 /* Top Level Folder Titles */
@@ -1410,11 +1409,13 @@ FOLDERs - Navi Tree
 .theme-dark .nav-file-title-content,
 .theme-dark .nav-folder-title-content {
     color: white;
+    line-height: normal;
 }
 
 .theme-light .nav-file-title-content,
 .theme-light .nav-folder-title-content {
     color: black;
+    line-height: normal;
 }
 
 /* 10 Top level Folders By Starting Digit (0-F) */
@@ -1508,12 +1509,12 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
     font-weight: bold;
     height: 30px;
-    display: block;
+    margin-left: 0;
 }
 
 .is-phone .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
     height: 34px;
-    display: block;
+    padding-left: 2px;
 }
 
 /* 2nd, 3th, 4th level folder titles */
@@ -1525,6 +1526,11 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
     height: revert;
 }
 
+.is-phone .tree-item .tree-item-self {
+    padding-left: 26px;
+    margin-left: 0;
+}
+
 /* sidepanel */
 body:not(.is-phone) .tree-item-self.is-clickable:hover {
     background-color: var(--background-primary);
@@ -1532,10 +1538,6 @@ body:not(.is-phone) .tree-item-self.is-clickable:hover {
 
 body:not(.is-phone) .workspace-split.mod-left-split .tree-item-self {
     height: auto;
-}
-
-.workspace-tabs.mod-top.mod-top-left-space .tree-item-self.is-clickable:hover :not(.nav-file-title-content) {
-    font-weight: bold;
 }
 
 .workspace-tabs.mod-top.mod-top-right-space .tree-item-self.is-clickable:hover {
@@ -1549,7 +1551,6 @@ body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--background-primary);
     border-radius: 4px 0 0 4px;
-    transition: all 0.2s ease;
 }
 
 .is-phone .nav-file-title.is-active,
@@ -1557,7 +1558,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .is-phone body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--text-accent-special);
     border-radius: 4px 0 0 4px;
-    transition: all 0.2s ease;
 }
 
 .nav-file-title.is-active::before {
@@ -2205,6 +2205,7 @@ div[data-callout="multi-column"].callout .callout {
 
 div[data-callout="multi-column"].callout:not(.is-collapsed) .callout {
     margin: 4px 0 var(--callout-margin) var(--callout-margin);
+    mix-blend-mode: normal;
 }
 
 /* to allow spacing for box shadow */
@@ -3290,8 +3291,8 @@ hr:is([class*="wave"] hr, [class*="fade"] hr) {
 TABLES -highlights
 ----------------------------------------------------------------*/
 .theme-dark .markdown-rendered table {
-    --table-border-color: lightgray;
-    --table-header-border-color: lightgray;
+    --table-border-color: gray;
+    --table-header-border-color: gray;
 }
 
 /* Table header col */
@@ -5033,15 +5034,6 @@ Menu icon colors - Context menu
     color: cornflowerblue;
 }
 
-/* Move icon */
-.theme-light svg.svg-icon.lucide-folder-tree {
-    color: darkorchid;
-}
-
-.theme-dark svg.svg-icon.lucide-folder-tree {
-    color: #b73cf4;
-}
-
 
 /*----------------------------------------------------------------
 TABLET - basic support
@@ -6104,7 +6096,7 @@ div.popover.hover-popover {
     border-radius: 4px;
     transform: ease-in;
     transition: ease-out;
-    /* background-color: white; */
+    background-color: none;
     width: 50rem;
     overflow-x: visible;
     overflow-y: visible;
@@ -6163,32 +6155,24 @@ div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
 /*----------------------------------------------------------------
 Graph 
 ----------------------------------------------------------------*/
-.theme-dark,
-.theme-light {
-    --graph-line: var(--background-modifier-border);
-    --graph-line-highlight: #949173;
-    /* --graph-circle-outline: var(--bold-color); */
-    /* --graph-fill-attachment: var(--text-accent-hover); */
-    --graph-circle-fill: var(--text-accent);
-    --graph-circle-fill-highlight: var(--text-accent-hover);
-    --graph-circle-fill-unresolved: gray;
-    --graph-fill-tag: var(--bold-color);
-    --graph-arrow: var(--text-muted);
+.theme-dark {
+    --graph-circle-fill: var(--link-color);
+    --graph-fill-tag: #ede4b7;
 }
 
-/* .theme-light {
-  --graph-line: var(--button-background);
-  lines
-  --graph-line-highlight: var(--h4-color);
-  lines hl
-  --graph-circle-outline: var(--interactive-hover);
-  --graph-fill-attachment: var(--text-accent-hover);
-  --graph-circle-fill: rgb(193, 169, 63);
-  --graph-circle-fill-highlight: var(--interactive-accent);
-  --graph-circle-fill-unresolved: gray;
-  --graph-fill-tag: green;
-  --graph-arrow: var(--text-muted);
-} */
+.theme-light {
+    --graph-circle-fill: var(--header-col);
+    --graph-fill-tag: var(--interactive-accent-rgb);
+}
+
+.theme-dark,
+.theme-light {
+    --graph-line: rgba(128, 128, 128);
+    --graph-line-highlight: var(--text-accent-special);
+    --graph-circle-fill-highlight: var(--interactive-accent);
+    --graph-circle-fill-unresolved: gray;
+    --graph-arrow: var(--text-muted);
+}
 
 .graph-view.color-fill-tag {
     color: var(--graph-fill-tag);
@@ -6196,7 +6180,6 @@ Graph
 
 .graph-view.color-fill-attachment {
     color: #1a1a1a;
-    /* var(--graph-fill-attachment) !important; */
 }
 
 .graph-view.color-fill-unresolved {
@@ -6209,14 +6192,9 @@ Graph
     opacity: 70%;
 }
 
-/* Highlight circle */
 .graph-view.color-circle {
     color: white;
 }
-
-/* .graph-view.color-text {
-  color: #8c2ab6;
-} */
 
 .graph-view.color-line {
     color: var(--graph-line);
@@ -6232,11 +6210,16 @@ Graph
 }
 
 .graph-view.color-fill-highlight {
-    color: var(--graph-circle-fill-highlight);
+    color: var(--text-accent-special);
 }
 
 .graph-controls.is-close .graph-controls-button.mod-animate {
-    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.graph-controls.is-close .graph-controls-button.mod-animate:hover {
+    opacity: 1;
 }
 
 /*----------------------------------------------------------------
@@ -7290,7 +7273,7 @@ dataview
 
 .theme-light .dataview.small-text,
 .theme-light .block-language-dataview .table-view-table>thead>tr>th {
-    color: var(--background-primary);
+    color: black;
 }
 
 .theme-dark .block-language-dataview .table-view-table>tbody>tr:hover {
@@ -7315,6 +7298,10 @@ input.dataview.task-list-item-checkbox {
 .today.svelte-q3wqg9 {
     font-weight: bold;
     font-size: 1em;
+}
+
+.month.svelte-1vwr9dd.svelte-1vwr9dd {
+    font-weight: 600 !important;
 }
 
 /* opacity advanced-tables sidepanel */
