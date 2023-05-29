@@ -1384,6 +1384,8 @@ FOLDERs - Navi Tree
 /* Remove collapse arrow from top level folders */
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
     display: none;
+    width: 0 !important;
+    margin-left: 0;
 }
 
 /* Top Level Folder Titles */
@@ -1509,17 +1511,18 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
     font-weight: bold;
     height: 30px;
-    margin-left: 0;
+    padding-left: 4px;
 }
 
 .is-phone .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
     height: 34px;
-    padding-left: 2px;
+    padding-left: 4px;
 }
 
 /* 2nd, 3th, 4th level folder titles */
 .nav-folder>.nav-folder-title {
     font-size: inherit;
+    padding-left: 24px;
 }
 
 .is-phone .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
