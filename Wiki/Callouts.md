@@ -8,9 +8,9 @@
 > note
 ```
 ### Options:
-`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`
+`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`, `> [!note|gray]`
 
-red tint, green tint, blue tint, yellow tint
+red tint, green tint, blue tint, yellow tint, gray tint
 
 <br>
 
@@ -142,7 +142,7 @@ note
 ```
 ````
 
-to add more color variations, use: red, green, blue, eg. `memo-r`, `memo-g`, `memo-b`,
+to add more color variations, use: red, green, blue, gray (monochrome) eg. `memo-r`, `memo-g`, `memo-b`, `memo-m`
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
