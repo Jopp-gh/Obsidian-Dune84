@@ -28,6 +28,9 @@ tint for header and first column - green
 `cssclass: table-xyb`
 tint for header and first column - blue
 
+`cssclass: table-xym`
+tint for header and first column - gray (monochromatic)
+
 `cssclass: table-r`
 tint for header - red
 
@@ -36,6 +39,9 @@ tint for header - green
 
 `cssclass: table-b`
 tint for header - blue
+
+`cssclass: table-m`
+tint for header - gray (monochromatic)
 
 ### Table highlights
 
@@ -83,6 +89,8 @@ Callout floats left
 Callout floats right
 
 ### Callouts colors
+`> [!note|yellow]`
+yellow tint
 
 `> [!note|red]`
 red tint
@@ -93,8 +101,8 @@ green tint
 `> [!note|blue]`
 blue tint
 
-`> [!note|yellow]`
-yellow tint
+`> [!note|gray]`
+gray tint
 
 ## Notes
 ### Notes colors
@@ -126,22 +134,32 @@ notes
 ````
 blue
 
+````
+```memo-m
+notes
+```
+````
+gray (monochromatic)
+
 ## Text colors
 
 `#red **Abc**`
 `#green **Abc**` 
 `#blue **Abc**`
-red, green, blue - fat
+`#gray **Abc**`
+red, green, blue, gray - fat
 
 `#red *Abc*`
 `#green *Abc*`
 `#blue *Abc*`
-red, green, blue - italic
+`#gray *Abc*`
+red, green, blue, gray - italic
 
 `#red ==Abc==`
 `#green ==Abc==`
 `#blue ==Abc==`
-red, green, blue - highlight
+`#gray ==Abc==`
+red, green, blue, gray - highlight
 
 <br>
 
