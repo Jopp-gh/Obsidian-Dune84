@@ -13,7 +13,7 @@ First, add `cssclass: poetry` to your yaml header. This will center your text as
 > Words words…
 ```
 
-Raisecap will render the first letter of a paragraph in big, gothic letters. 
+Raisecap will render the first letter of a paragraph and by default in big, gothic letters (but you can choose any font you like, please see list below). 
 Pay attention to use **Uppercase Caps** for your *very first letter*.
 
 - to change fonts, go to **Style Settings>Dune>Fonts>Poetry Fonts** 
