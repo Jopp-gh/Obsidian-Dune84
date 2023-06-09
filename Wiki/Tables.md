@@ -47,11 +47,12 @@ copy this template:
 ![table–xyr](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ebfb71d0-bd61-42d5-9011-2d56a9bdbee1)
 ![table–xyg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dc4f72ff-9896-4b54-97da-c6236e1328ba)
 ![table–xyb](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f7d50e37-70f2-4524-b2c5-d04ab7b11ce2)
+![table-xym](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f43567f0-534c-468a-8370-a692756d9b47)
 
 
-`cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`
+`cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`,`cssclass: table-xym`
 
-**Options**: 2 axes in a color of your choice red, green, blue (xyr, xyg, xyb)
+**Options**: 2 axes in a color of your choice red, green, blue, gray=monochrome (xyr, xyg, xyb, xym)
 
 ## Table alignment
 
