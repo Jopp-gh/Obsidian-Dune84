@@ -29,7 +29,7 @@ tint for header and first column - green
 tint for header and first column - blue
 
 `cssclass: table-xym`
-tint for header and first column - gray (monochromatic)
+tint for header and first column - gray (monochrome)
 
 `cssclass: table-r`
 tint for header - red
@@ -137,7 +137,7 @@ blue
 notes
 ```
 ````
-gray (monochromatic)
+gray (monochrome)
 
 ## Text colors
 
