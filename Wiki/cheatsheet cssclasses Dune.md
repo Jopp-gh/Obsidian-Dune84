@@ -40,8 +40,6 @@ tint for header - green
 `cssclass: table-b`
 tint for header - blue
 
-`cssclass: table-m`
-tint for header - gray (monochromatic)
 
 ### Table highlights
 
