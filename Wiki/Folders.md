@@ -1,17 +1,22 @@
 # Folders
 
 ## Folder colors
-![Folder-colids](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/620a5eea-ff23-4a8d-89cf-7b157749d956)
+![fold-col_400Px](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/968f3fff-18a3-4128-8602-e1f27b907039)
 
-Basically, add a number, (we call it `color-id`) in front of your folder name from 0-9 (**10 colors available**),  eg. `1 Name`. 
+to add or change folder colors, choose a number from 0-9 (see figure 1 above) 
+Just rename your folder with a `color-id`, add a `space` followed by a `name of your choice.`
 
 <br>
 
 ### Example
 - add a *single-digit number* in front of your folder name, eg. add "4"in front of `Archive` (as in the picture below) separated with a `space`
-- Whenever you rename a folder with a `color-id` assigned, that folder name will expand and reveal also its `color-id`, in our example it is "4" which is the color for "lime" (see picture below)
+- Whenever you rename a folder with a `color-id` assigned, that name will expand and reveal its `color-id`, in our example it's "4" which is the color for "lime" (see figure 2 below)
 
 ![Folder colors-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/460ec1dd-484e-4787-89f2-9e4bb3f6b09b)
+
+in our example, you see following `colorID` and `keywords` combinations:
+
+`1 Project`, `2 Area`, `3 Resources`, `4 Archive`
 
 **Tip**
 - Just make sure to add a valid number 
@@ -62,6 +67,7 @@ to add *colors* AND *icons* to your folders, use following *name convention* :
 a) `colorID keyword`  eg. "1 Project"
 <br>
 b) `colorID JohnnyDecimalNumber folderName keyword`  eg. "1 30 Test Project" 
+
 
 **Tip**
 <br>
