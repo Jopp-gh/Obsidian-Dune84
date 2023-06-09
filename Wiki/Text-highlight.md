@@ -1,27 +1,30 @@
 # Text highlights
 ## Text colors
 
-![textCol–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/10b31b18-91e2-485b-9d9c-d62bc6c2901d)
+![txt-fat](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/aef8de34-c1c4-43ce-aae2-419029368c97)
 
 `#red **Abc**`
 `#green **Abc**`
 `#blue **Abc**`
+`#gray **Abc**`
 
-red, green, blue - fat
+red, green, blue, gray - fat
 
-![textCol–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4cffbb42-f98e-4f99-ad98-b5bea72b7ff5)
+![txt-ital](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/1cd27a55-eb76-4bc5-b62c-5d723e42bb39)
 
 `#red *Abc*`
 `#green *Abc*`
 `#blue *Abc*`
+`#gray *Abc*`
 
-red, green, blue - italic
+red, green, blue, gray - italic
 
-![textCol–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c2554b97-77cc-4aca-bf94-cd766a19514e)
+![txt-highl](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/7d166071-1e26-4306-80a0-ed4648a88c09)
 
 `#red ==text==`
 `#green ==text==`
 `#blue ==text==`
+`#gray ==text==`
 
 red, green, blue - highlight
 
