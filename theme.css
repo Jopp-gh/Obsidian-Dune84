@@ -907,7 +907,7 @@ body.theme-light {
     --Fold3: #69bc67;
     --Fold4: #c2d000;
     --Fold5: #d7bb00;
-    --Fold6: #cfa971;
+    --Fold6: #e1ab59;
     --Fold7: #ce7172;
     --Fold8: #c0699e;
     --Fold9: #9e67bc;
@@ -941,7 +941,7 @@ body.theme-dark {
     --Fold3: #549953;
     --Fold4: #a1ac00;
     --Fold5: #b19a00;
-    --Fold6: #a28458;
+    --Fold6: #c1924c;
     --Fold7: #a75c5d;
     --Fold8: #9c5581;
     --Fold9: #82559b;
@@ -976,10 +976,10 @@ body.col-mod-a.theme-light {
     --text-accent: #DD9417;
     --header-col: #c66102;
 
-    --background-primary: #f6dba8;
-    --background-primary-alt: #c7a36d;
-    --background-secondary: #c3a175;
-    --background-secondary-alt: #c7a36d;
+    --background-primary: #DEDBC3;
+    --background-primary-alt: #DEDBC3;
+    --background-secondary: #BEBBA1;
+    --background-secondary-alt: #BEBBA1;
     --background-modifier-border: rgb(136, 134, 123);
 
     --h1-color: var(--header-col);
@@ -1005,9 +1005,9 @@ body.col-mod-b.theme-light {
     --header-col: #c66102;
 
     --background-primary: #eec07b;
-    --background-primary-alt: #c7a36d;
+    --background-primary-alt: #eec07b;
     --background-secondary: #d29574;
-    --background-secondary-alt: #c7a36d;
+    --background-secondary-alt: #d29574;
     --background-modifier-border: rgb(136, 134, 123);
 
     --h1-color: var(--header-col);
@@ -1032,10 +1032,10 @@ body.col-mod-c.theme-dark {
     --menu-btn-color: #f2e79c;
     --header-col: #866A49;
 
-    --background-primary: #0e1741;
-    --background-primary-alt: #08091b;
-    --background-secondary: #131927;
-    --background-secondary-alt: #383838;
+    --background-primary: #142031;
+    --background-primary-alt: #141d31;
+    --background-secondary: #0c1522;
+    --background-secondary-alt: #0c1522;
     --background-modifier-border: rgb(54, 54, 54);
 
     --h1-color: var(--header-col);
@@ -1062,7 +1062,7 @@ body.col-mod-d.theme-dark {
     --header-col: #866A49;
 
     --background-primary: #121314;
-    --background-primary-alt: #282a2d;
+    --background-primary-alt: #121314;
     --background-secondary: #2a2b30;
     --background-secondary-alt: #282a2d;
     --background-modifier-border: rgb(54, 54, 54);
@@ -1983,10 +1983,6 @@ highlights
     color: black;
 }
 
-.theme-dark .markdown-rendered mark {
-    color: white;
-}
-
 /* Html custom Highlight */
 .markdown-source-view.mod-cm6 mark,
 .markdown-rendered mark {
@@ -2152,6 +2148,7 @@ a:is([href^="#red"], [href^="#green"], [href^="#blue"], [href^="#gray"]) {
 
 a[href^="#red"]+mark {
     background-color: rgb(255, 69, 0, 0.7) !important;
+    color: white;
 }
 
 a[href^="#red"]+strong,
@@ -2161,6 +2158,7 @@ a[href^="#red"]+em {
 
 a[href^="#green"]+mark {
     background-color: rgb(82, 165, 67, 0.7) !important;
+    color: white;
 }
 
 a[href^="#green"]+strong,
@@ -2170,6 +2168,7 @@ a[href^="#green"]+em {
 
 a[href^="#blue"]+mark {
     background-color: rgb(100, 149, 237, 0.7) !important;
+    color: white;
 }
 
 a[href^="#blue"]+strong,
@@ -2179,6 +2178,7 @@ a[href^="#blue"]+em {
 
 a[href^="#gray"]+mark {
     background-color: rgb(128, 128, 128, 0.7) !important;
+    color: white;
 }
 
 a[href^="#gray"]+strong,
@@ -6237,7 +6237,7 @@ Graph
 }
 
 .graph-view.color-fill-attachment {
-    color: #1a1a1a;
+    color: #3c3c3c;
 }
 
 .graph-view.color-fill-unresolved {
