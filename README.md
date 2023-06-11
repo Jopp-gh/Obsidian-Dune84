@@ -1,6 +1,6 @@
 # Dune
+![promo–big-1](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/7090ada6-9af5-4f70-a642-edc906fdfebc)
 
-![Dune-Obsidian](https://user-images.githubusercontent.com/48620536/226210760-1a65804d-377d-421e-bcd1-3081dad5233c.png)
 
 ## Jump to:
 - [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#first-steps)
