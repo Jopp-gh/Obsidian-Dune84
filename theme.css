@@ -977,7 +977,7 @@ body.col-mod-a.theme-light {
     --header-col: #c66102;
 
     --background-primary: #DEDBC3;
-    --background-primary-alt: #DEDBC3;
+    --background-primary-alt: #bbb8a5;
     --background-secondary: #BEBBA1;
     --background-secondary-alt: #BEBBA1;
     --background-modifier-border: rgb(136, 134, 123);
@@ -1005,7 +1005,7 @@ body.col-mod-b.theme-light {
     --header-col: #c66102;
 
     --background-primary: #eec07b;
-    --background-primary-alt: #eec07b;
+    --background-primary-alt: #c09b64;
     --background-secondary: #d29574;
     --background-secondary-alt: #d29574;
     --background-modifier-border: rgb(136, 134, 123);
@@ -1062,7 +1062,7 @@ body.col-mod-d.theme-dark {
     --header-col: #866A49;
 
     --background-primary: #121314;
-    --background-primary-alt: #121314;
+    --background-primary-alt: #2c2f31;
     --background-secondary: #2a2b30;
     --background-secondary-alt: #282a2d;
     --background-modifier-border: rgb(54, 54, 54);
@@ -1396,7 +1396,6 @@ FOLDERs - Navi Tree
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
     display: none;
     width: 0 !important;
-    margin-left: 0;
 }
 
 /* Top Level Folder Titles */
@@ -4534,13 +4533,8 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 }
 
 /*----------------------------------------------------------------
-MERMAID - needs all important - next=custom colors for some shapes
+MERMAID - all declarations needs important
 ----------------------------------------------------------------*/
-
-/* stops mermaid overflow getting cut off */
-.markdown-source-view.mod-cm6 .cm-content.cm-content>[contenteditable=false] {
-    contain: unset !important;
-}
 
 /*mermaid resize and center*/
 .mermaid svg {
@@ -4585,19 +4579,35 @@ MERMAID - needs all important - next=custom colors for some shapes
     fill: rgba(173, 216, 230, 0.3) !important;
 }
 
-.mermaid polygon.label-container {
+.theme-dark .mermaid polygon.label-container {
+    fill: #6b789b !important;
+}
+
+.theme-light .mermaid polygon.label-container {
+    fill: #9bb2c8 !important;
+}
+
+.mermaid polygon.state-start,
+.mermaid .node circle.state-start {
+    fill: cornflowerblue !important;
+}
+
+.mermaid polygon.state-end,
+.mermaid .node circle.state-end {
+    fill: #d99d6d !important;
+}
+
+.theme-dark .mermaid circle {
     fill: gray !important;
 }
 
-.mermaid circle {
-    fill: gray !important;
+.theme-dark .mermaid .node rect {
+    fill: rgb(99 114 125 / 50%) !important;
 }
 
-.theme-light .mermaid .node circle,
-.theme-light .mermaid .node ellipse,
-.theme-light .mermaid .node polygon,
-.theme-light .mermaid .node rect {
-    fill: lightgray !important;
+.mermaid .node .fork-join {
+    fill: slategray !important;
+    stroke: gray;
 }
 
 /* works on desk, not on phone */
@@ -4620,19 +4630,11 @@ MERMAID - needs all important - next=custom colors for some shapes
 }
 
 .theme-dark .mermaid .cluster rect {
-    fill: var(--soft-bg-col) !important;
-}
-
-.theme-light .mermaid .cluster rect {
-    fill: var(--soft-bg-col) !important;
+    fill: rgb(86 86 86 / 50%) !important;
 }
 
 .theme-dark .mermaid :not(span.nodeLabel) :is(.cluster span) {
     color: var(--text-normal) !important;
-}
-
-.theme-dark .mermaid path:not(.pieCircle, g>g>path) {
-    filter: brightness(0.5) !important;
 }
 
 .theme-dark .mermaid .legend text {
@@ -4648,32 +4650,64 @@ MERMAID - needs all important - next=custom colors for some shapes
 }
 
 .theme-dark .mermaid rect.er.entityBox {
-    fill: darkblue !important;
+    fill: #2c455f !important;
 }
 
 /* .mermaid .statediagram-cluster.statediagram-cluster .inner */
 .mermaid .statediagram-cluster rect {
-    fill: var(--soft-bg-col) !important;
+    fill: rgb(136 134 123 / 20%) !important;
 }
 
 .mermaid path.pieCircle {
     stroke: transparent !important;
 }
 
-.mermaid .loopText>tspan {
+.theme-light .mermaid .loopText>tspan {
     fill: gray !important;
 }
 
+.theme-dark .mermaid .loopText>tspan {
+    fill: white !important;
+}
+
 .theme-light .mermaid :is(rect.req.reqBox, rect.actor) {
-    fill: lightgray !important;
+    stroke: black;
+    stroke: gray !important;
 }
 
 .theme-dark .mermaid :is(rect.req.reqBox, rect.actor) {
-    fill: dimgray !important;
+    fill: #2c455f !important;
+    stroke: gray !important;
 }
 
-.mermaid rect.note {
-    fill: var(--soft-bg-col) !important;
+.theme-dark .mermaid .labelBox {
+    fill: #505050 !important;
+}
+
+.theme-light .mermaid .labelBox {
+    fill: lightgray !important;
+}
+
+.theme-light .mermaid .relation {
+    filter: contrast(0.9) brightness(0.1);
+}
+
+.theme-dark .mermaid .relation,
+.theme-dark .mermaid .messageLine0,
+.theme-dark .mermaid .messageLine1 {
+    filter: contrast(0.2) brightness(0.9) !important;
+}
+
+.theme-dark .mermaid .statediagram-note rect {
+    fill: #a3982b !important;
+}
+
+.theme-dark .mermaid rect.note {
+    fill: rgb(136 134 123 /80%) !important;
+}
+
+.theme-light .mermaid rect.note {
+    fill: lightgray !important;
 }
 
 .theme-light .mermaid .req-title-line {
@@ -4714,13 +4748,12 @@ MERMAID - needs all important - next=custom colors for some shapes
 }
 
 .theme-dark .mermaid path:is(.flowchart-link, .transition) {
-    stroke: gray !important;
-    filter: brightness(0.5);
+    stroke: var(--text-normal) !important;
+    filter: contrast(0.2) brightness(0.2) !important;
 }
 
 .theme-dark .mermaid path:is(.relationshipLine) {
-    stroke: gray !important;
-    filter: brightness(1.5) !important;
+    filter: contrast(0.2) brightness(1.4) !important;
 }
 
 /*----------------------------------------------------------------
@@ -6916,9 +6949,21 @@ PDF EXPORT
         color: black !important;
     }
 
-    .mermaid .node rect,
-    .mermaid .node circle {
+    .mermaid .node path,
+    .mermaid .node polygon {
         fill: lightgray !important;
+    }
+
+    .mermaid .node circle {
+        fill: #9f9f9f !important;
+    }
+
+    .mermaid .node rect {
+        fill: #bbbbbb !important;
+    }
+
+    .mermaid .cluster rect {
+        fill: rgb(86 86 86 / 20%) !important;
     }
 
     .markdown-rendered code {
@@ -7087,8 +7132,8 @@ PDF EXPORT
 
     @page {
         counter-increment: page !important;
-        /* font-family: Helvetica, Arial, sans-serif;
-    font-size: 12pt; */
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12pt;
         padding-bottom: 3em;
     }
 
