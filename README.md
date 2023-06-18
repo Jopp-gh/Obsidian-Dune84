@@ -22,7 +22,7 @@ My **goal** with this theme was to improve Obsidian by removing some distraction
 ### Motivation
 I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. 
 <br>
-Also, I hope to pay my breakfast/lunch for sharing good content with you. Please see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page.
+Also, I hope to pay my lunch for sharing good content with you. Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, thank you very much.
 Finally, i would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
 
 ```
@@ -131,7 +131,8 @@ Support me, if you like what you get  :)
 thanks for your interest in my theme. Right now i only accept bug reports and feature requests. 
 
 First, to accept collaborators i would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
-Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune.
+Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune. 
+I encourage you to share your ideas and issues with Dune, just open a new ticket on top page here on github or chat with me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) 
 
 <br>
 
