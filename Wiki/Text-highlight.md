@@ -49,7 +49,7 @@ b) toggle **Capture to active note** on, paste the **code template** below as it
 c) then *restart Obsidian* to get your new Quickadd capture available in your command palette.
 
 #### code template
-`<span class="addtip">highlighted words<span class="tiptext">Insert here your custom help text</span></span>`
+`<span class="addtip">{{VALUE}}<span class="tiptext">Insert here your custom help text</span></span>`
 
 <br>
 
