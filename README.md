@@ -1,5 +1,5 @@
 # Dune
-![promo–big-1](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/7090ada6-9af5-4f70-a642-edc906fdfebc)
+![promo–big-1b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/22bb4e5d-3073-4132-9f33-96afae884f24)
 
 
 ## Jump to:
