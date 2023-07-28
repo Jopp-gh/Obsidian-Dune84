@@ -9,12 +9,12 @@
 - [License](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#license)
 ---
 
-### Name
-I called my theme **Dune**, after a novel cycle from one of my favorite sci-fi writers, [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert).
-His novels were incredibly successful and significantly influenced the **Sci-fi genre** afterwards, but nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
-**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Frank's Dune, very well narrated and worth to see as a whole - i continue to watch this movie from time to time and it seems to be an evergreen for me, which happens rarely to me.
+### Dune
+I called my theme after a novel cycle of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert), one of my favorite sci-fi writers.
+His novels were incredibly successful and influenced everything related to **Sci-fi** afterwards, but nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Frank's novel, very well narrated and worth to see as a whole - i continue to watch **David Lynch**'s Dune from time to time and it feels still great, even after many times watching.
 
-Recenty, we could see more movies/tv series of Dune, where i appreciated *background scenery* and *costume design*, but 2 components alone don't make a movie, so unfortunately, i wont cite them as successors here. 
+Recenty, we could see more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them here as successors. 
 
 ### Goal
 My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
@@ -52,7 +52,7 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 1. to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
 2. To activate my theme, open `Preferences>Style Settings>Dune>Colors>Theme` and choose a color scheme for your **light theme  (Dune 1 or Dune 2)** and a color scheme for your **dark theme (Dune 3 or Dune 4)**
 3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
-4. to get a complete overview of Dune's `cssclasses`, get the [cssclass cheatsheet of Dune](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md)
+4. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
 <br>
 
