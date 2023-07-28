@@ -28,6 +28,27 @@ red, green, blue, gray - italic
 
 red, green, blue - highlight
 
+## Larger & smaller text highlights
+
+![new-features–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4e24221f-8e02-4044-bc1c-8897d9ca8d0b)
+
+`#red-s **test**` , `#green-s **test**`, `#blue-s **test**`
+`#red-s *test*` , `#green-s *test*`, `#blue-s *test*`
+
+smaller text bold/italic in 3 colors, red, green, blue
+
+`#red-l **test**`, `#green-l **test**`, `#blue-l **test**`
+`#red-l *test*`, `#green-l *test*`, `#blue-l *test*`
+
+larger text bold/italic in 3 colors, red, green, blue
+
+![new-features–01b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3d14cd11-3ddb-4698-b74e-c9278fb3d672)
+
+`#font-s ==Small==` Normal `#font-l ==Large==`
+
+#### Example
+![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
+
 
 <br>
 
@@ -125,6 +146,23 @@ Next time you want to add help bubbles to your word(s):
 	- [x] test 2
 
 ![L2](https://user-images.githubusercontent.com/48620536/222980616-5650e216-9d3e-4716-ad0f-e59cc7fdff8f.png)
+
+
+### Special checkmark button
+
+![new-features–06](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/25e13c1a-c692-476c-b7d8-27139773f23b)
+
+```
+- [.] List item without strikeout line
+	- [.] test 
+	- [ ] a
+```
+
+## Sub & Sup
+
+![new-features–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dd3b865d-d8ca-4fb8-9a78-10d109053b70)
+
+Words `#sup ==sup==` Words `#sub ==sub==`
 
 <br>
 
