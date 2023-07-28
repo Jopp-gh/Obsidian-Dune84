@@ -1,4 +1,4 @@
-# Cheatsheet - Dune cssclasses
+# Cheatsheet - cssclasses
 ```
 cssclasses are case sensitive eg. Banner-a ≠ banner-a
 ```
