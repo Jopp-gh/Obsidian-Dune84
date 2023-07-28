@@ -49,6 +49,11 @@ larger text bold/italic in 3 colors, red, green, blue
 #### Example
 ![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
 
+## Large Title
+
+![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
+
+`cssclass: h1-l` 
 
 <br>
 
