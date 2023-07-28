@@ -111,9 +111,26 @@ Callout floats right
 
 <br>
 
+### Word blocks - Small & Large
+
+![new-features–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/a6fc8aa0-42bf-4859-b5a0-b4596fb5417f)
+
+```
+>[!font-l]
+> Words Words Words Words
+> Words Words Words Words
+```
+![new-features–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/32ad5dea-1489-421a-b529-81725fc66b17)
+
+```
+>[!font-s]
+> Words Words Words Words
+> Words Words Words Words
+```
+
 ## Footnote
 
-![Lorem ipsum etc2](https://user-images.githubusercontent.com/48620536/224421103-b70f59bb-dd4d-4452-a65c-44c67b912999.png)
+![new-features–04a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6189488d-c3d3-4061-89a6-8f2317dbfbad)
 
 Kind of footnote fields
 ````
