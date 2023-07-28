@@ -138,6 +138,17 @@ Kind of footnote fields
 words words words words 
 ```
 ````
+
+## Multiple Line breaks
+
+````
+```br
+
+
+```
+````
+inside this fence, add as many linebreaks as needed (The example above breaks two lines).
+
 <br>
 
 ## Memo
