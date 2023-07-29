@@ -111,7 +111,7 @@ Callout floats right
 
 <br>
 
-### Word blocks - Small & Large
+### Text blocks - Small & Large
 
 ![new-features–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/a6fc8aa0-42bf-4859-b5a0-b4596fb5417f)
 
