@@ -1,5 +1,5 @@
 # Text highlights
-## Text colors
+## Inline - text colors
 
 ![txt-fat](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/aef8de34-c1c4-43ce-aae2-419029368c97)
 
@@ -28,7 +28,7 @@ red, green, blue, gray - italic
 
 red, green, blue - highlight
 
-## Larger & smaller text highlights
+## Inline - larger & smaller text highlights
 
 ![new-features–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4e24221f-8e02-4044-bc1c-8897d9ca8d0b)
 
@@ -49,7 +49,19 @@ larger text bold/italic in 3 colors, red, green, blue
 #### Example
 ![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
 
-## Large Title
+## Sub & Sup
+
+![new-features–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dd3b865d-d8ca-4fb8-9a78-10d109053b70)
+
+Words `#sup ==sup==` Words `#sub ==sub==`
+
+## Text blocks - smaller & larger 
+please see [Callout text blocks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
+
+## Multiple line breaks
+please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
+
+## Large H1 Title
 
 ![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
 
@@ -152,22 +164,9 @@ Next time you want to add help bubbles to your word(s):
 
 ![L2](https://user-images.githubusercontent.com/48620536/222980616-5650e216-9d3e-4716-ad0f-e59cc7fdff8f.png)
 
+## Enable strikeout line for completed tasks
 
-### Special checkmark button
-
-![new-features–06](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/25e13c1a-c692-476c-b7d8-27139773f23b)
-
-```
-- [.] List item without strikeout line
-	- [.] test 
-	- [ ] a
-```
-
-## Sub & Sup
-
-![new-features–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dd3b865d-d8ca-4fb8-9a78-10d109053b70)
-
-Words `#sup ==sup==` Words `#sub ==sub==`
+to enable strikeout for completed tasks, go to `Preferences>Style Settings>Dune>Show ui elements>Show strikeout line (checklists)`
 
 <br>
 
