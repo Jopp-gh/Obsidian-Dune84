@@ -1,21 +1,19 @@
----
-cssclass: fade, zoom-50
-tags: 
----
-
 ## Mermaid diagrams
 
-Dune covers most, if not all mermaid diagram types of Dune's dark / light theme
+Dune covers most, if not all mermaid diagram types for both dark / light theme.
+
 If some diagram type is missing, then please let me know.
 
-![[Dune-mermaid.jpg|1100]]
+![Dune-mermaid](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/623b573a-1811-45b9-aaed-c43de4a82e69)
+
 Default mermaid diagram proportions. 
 
 ### Resize Mermaid Diagrams
-![[Mm-35.png|1100]]
+
+![Mm-35](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/217aeac8-ab5d-4e37-b18f-8c296cebdc51)
+
 `cssclass: svg-20`,  `cssclass: svg-30`, `cssclass: svg-40`, `cssclass: svg-50`, `cssclass: svg-60`, `cssclass: svg-70`, `cssclass: svg-80`
-smaller proportions are useful to display large mermaid diagram charts on-screen. To zoom in, hover over with auto-zoom or press and hold the Left mouse button
-By default, 
+smaller proportions are useful to display large mermaid diagram charts on-screen. To zoom in, move your mouse over your diagram with auto-zoom on or press and hold the Left mouse button
 
 ### Zoom
 To **zoom in**, click and hold the **Left mouse button**
@@ -48,7 +46,7 @@ To learn more about diagram types, check out [mermaid-tutorials](https://mermaid
 Dune will print exacty the same output, no matter if your current theme is dark or light. 
 See example below (A4)
 
-![[Mm-pdf print.png|400]]
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/37312f3d-9404-4b6b-95e6-ad62c1a2891b" width="400" />
 
 ---
 to learn more about mermaid diagram types and other mermaid settings see [mermaid-tutorials](https://mermaid.js.org/syntax/flowchart.html)
