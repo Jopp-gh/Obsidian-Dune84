@@ -10,13 +10,14 @@
 to move between slides, 
 - swipe from right to left to move forward   
 - swipe from left to right to move backwards
-- use the upper or lower margin of your slide to swipe
+  1. use the upper or lower margin of your slide to swipe
+  2. go to `Preferences>Style Settings>Dune>❨ ❩ Show ui elements>Show touch-area`and activate the toggle to see the your touch area, wich starts from the top and finishes at the dashed line
 
 ### Tips for desktop
 to move between slides, 
 - press the arrow keys on your keyboard to move back or forth
-- click on the slide if you cannot move back or forth
-- on the last slide you cannot move forward and on the first slide you cannot move backwards
+- click once on the slide window if you cannot move back or forth, then navigate back or forth with the arrow keys
+- you cannot move forward on the last slide and you cannot move backwards on the first slide 
 - to close your slide, hover over the top right corner
 
 ## Pdf export
