@@ -42,7 +42,7 @@ copy this template:
 
 `cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`, `cssclass: table-y`
 
-**Options**: header in red, green, blue, yellow (r,g,b,y,col)
+**Options**: header in red, green, blue, yellow, favorite color (r,g,b,y,col)
 
 If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. Voilà!
 
@@ -54,7 +54,7 @@ If you want even more table colors, open `Preferences>Style Settings>Dune>Colors
 
 `cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`,`cssclass: table-xy`, `cssclass: table-xym`
 
-**Options**: 2 axes in a color of your choice red, green, blue, yellow, monochrome (xyr, xyg, xyb, xy, xym, xy-col)
+**Options**: 2 axes in a color of your choice red, green, blue, yellow, monochrome, favorite color (xyr, xyg, xyb, xy, xym, xy-col)
 
 If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. 
 
