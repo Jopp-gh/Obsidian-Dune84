@@ -12,7 +12,7 @@ Default mermaid diagram proportions.
 
 ![Mm-35](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/217aeac8-ab5d-4e37-b18f-8c296cebdc51)
 
-`cssclass: svg-20`,  `cssclass: svg-30`, `cssclass: svg-40`, `cssclass: svg-50`, `cssclass: svg-60`, `cssclass: svg-70`, `cssclass: svg-80`
+`cssclass: svg-20`,  `cssclass: svg-30`, `cssclass: svg-40`, `cssclass: svg-50`, `cssclass: svg-60`, `cssclass: svg-70`, `cssclass: svg-80`, `cssclass: svg-90`
 smaller proportions are useful to display large mermaid diagram charts on-screen. To zoom in, move your mouse over your diagram with auto-zoom on or press and hold the Left mouse button
 
 ### Zoom
