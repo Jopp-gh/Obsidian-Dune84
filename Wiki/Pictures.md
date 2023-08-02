@@ -64,6 +64,7 @@ Frame your pictures. Download some frames like [this png template](https://pngim
  
 Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** and adjust frame thickness in **Style Settings>Dune>Pictures>Frame (simple)**
 
+
 <br>
 
 ## Book pictures
@@ -87,6 +88,8 @@ If you want a soft background for text and images inside **Book Pictures**, add 
 ![I–06](https://user-images.githubusercontent.com/48620536/222982200-63caf748-6a65-42e3-a927-f262103943e6.png)
 
 `![[Pict.png#cap|capture]]`
+
+to control the max width of simple picture descriptions, and its frame under your pictures, pick a range from 15,25,35,45,55,65,75,85, eg. `cssclass: icap-25`
 
 <br>
 
