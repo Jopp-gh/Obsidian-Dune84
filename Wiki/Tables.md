@@ -44,7 +44,7 @@ copy this template:
 
 **Options**: header in red, green, blue, yellow, favorite color (r,g,b,y,col)
 
-If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. Voilà!
+If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` and define your **favorite color** for your dark theme and light theme color table. Voilà!
 
 
 ![table–xyr](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ebfb71d0-bd61-42d5-9011-2d56a9bdbee1)
@@ -56,7 +56,7 @@ If you want even more table colors, open `Preferences>Style Settings>Dune>Colors
 
 **Options**: 2 axes in a color of your choice red, green, blue, yellow, monochrome, favorite color (xyr, xyg, xyb, xy, xym, xy-col)
 
-If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. 
+If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` and define your **favorite color** for your dark theme and light theme color table. 
 
 
 ## Table alignment
