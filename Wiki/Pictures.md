@@ -77,7 +77,8 @@ Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** a
 ```
 **Options**: `framed-r`, `framed-l`
 
-position your images, add a picture frame and description 
+position your images, add a picture frame and description. 
+If you want a soft background for text and images inside **Book Pictures**, add bg as metadata, after the pipe symbol, eg `>[[!framed | bg]]`  
 
 <br>
 
@@ -108,21 +109,17 @@ the more pictures you put in a picture wall, the more your picture wall will loo
 
 <br>
 
-## Zoom images
+## Zoom Pictures
 ### Zoom Svg diagrams
 
 
-**Options**: svg-50, svg-100, svg-150, svg-200. eg. `cssclass: svg-50` 
+**Options**: svg-20, svg-30, svg-40, svg-50, svg-60, svg-70, svg-80. eg. `cssclass: svg-50` 
 
-to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) meanwhile notes with diagrams only require bigger sizes, (eg. svg-150 or svg-200). 
+to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
 
 Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom on hover**
 Otherwise click and hold over an image
 
-### Zoom Pictures
-
-on desktop, just hover and click, hold click. On phone just touch images.
-Otherwise, set *automatic zoom* in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom on hover**
 
 <br>
 
