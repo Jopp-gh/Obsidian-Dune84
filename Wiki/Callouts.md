@@ -97,11 +97,9 @@ Callout to shorten longer documents
 
 ### Callouts alignment
 
-`> [!note|25]`
-Callout width is reduced to 1/4
+`> [!note|300]`, `> [!note|400]`, `> [!note|500]`, `> [!note|600]`, `> [!note|700]`, `> [!note|800]`
+max Callout width in pixels
 
-`> [!note|50]`
-Callout width is reduced to 1/2
 
 `> [!note|left]`
 Callout floats left
