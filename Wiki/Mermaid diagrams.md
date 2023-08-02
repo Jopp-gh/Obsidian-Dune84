@@ -46,7 +46,7 @@ To learn more about diagram types, check out [mermaid-tutorials](https://mermaid
 Dune will print exacty the same output, no matter if your current theme is dark or light. 
 See example below (A4)
 
-<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/37312f3d-9404-4b6b-95e6-ad62c1a2891b" width="400" />
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/33ca7325-ec50-41d2-a318-75931c9e2ef4" width="400" />
 
 ---
 to learn more about mermaid diagram types and other mermaid settings see [mermaid-tutorials](https://mermaid.js.org/syntax/flowchart.html)
