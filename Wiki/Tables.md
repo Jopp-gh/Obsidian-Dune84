@@ -38,21 +38,26 @@ copy this template:
 ![table–r](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/e0ab79c1-86af-46cb-a88e-ecc140d5727b)
 ![table–g](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/275ea630-fb3b-48a7-8f0c-f1b9a8a2fc88)
 ![table–b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/5ff1adf7-acf2-4bd2-9046-36b5f3921775)
+![Yell-table](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d1297d75-00cf-4c70-b966-19ef4c063624)
 
-`cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`
+`cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`, `cssclass: table-y`
 
-**Options**: header in red, green, blue (r,g,b)
+**Options**: header in red, green, blue, yellow (r,g,b,y,col)
+
+If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. Voilà!
 
 
 ![table–xyr](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ebfb71d0-bd61-42d5-9011-2d56a9bdbee1)
 ![table–xyg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dc4f72ff-9896-4b54-97da-c6236e1328ba)
 ![table–xyb](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f7d50e37-70f2-4524-b2c5-d04ab7b11ce2)
-![table-xym](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f43567f0-534c-468a-8370-a692756d9b47)
+![yell-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3a4ca667-23e8-40bc-a4ff-0ebebb9c1833)
 
+`cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`,`cssclass: table-xy`, `cssclass: table-xym`
 
-`cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`,`cssclass: table-xym`
+**Options**: 2 axes in a color of your choice red, green, blue, yellow, monochrome (xyr, xyg, xyb, xy, xym, xy-col)
 
-**Options**: 2 axes in a color of your choice red, green, blue, gray=monochrome (xyr, xyg, xyb, xym)
+If you want even more table colors, open `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` to define a color for your dark theme and light them color table. 
+
 
 ## Table alignment
 
