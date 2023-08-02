@@ -11,6 +11,7 @@
 `> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`, `> [!note|gray]`
 
 red tint, green tint, blue tint, yellow tint, gray tint
+to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` and add "col" after the pipe symbol, eg `> [!note|col]` 
 
 <br>
 
@@ -169,6 +170,8 @@ note
 ````
 
 to add more color variations, use: red, green, blue, gray (monochrome) eg. `memo-r`, `memo-g`, `memo-b`, `memo-m`
+
+if you want to add your own color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>Stickies custom color`, pick a color for light / dark themes and add `memo-col` to your fences
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
