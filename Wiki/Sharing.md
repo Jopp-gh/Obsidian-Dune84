@@ -8,10 +8,11 @@
 
 ### Tips for phone/mobile
 to move between slides, 
-- swipe from right to left to move forward   
+- swipe from right to left to move forward
 - swipe from left to right to move backwards
-  1. use the upper or lower margin of your slide to swipe
-  2. go to `Preferences>Style Settings>Dune>❨ ❩ Show ui elements>Show touch-area`and activate the toggle to see the your touch area, wich starts from the top and finishes at the dashed line
+- use the upper or lower margin of your slide to swipe
+- go to `Preferences>Style Settings>Dune>❨ ❩ Show ui elements>Show touch-area`and activate a dashed line to see your available touch area, wich lies between the screen top and the dashed line
+- use two fingers and swipe back or forth on-screen, even at the center of your slide
 
 ### Tips for desktop
 to move between slides, 
