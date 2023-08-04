@@ -14,7 +14,7 @@
 ## both devices
 - new **find-and-replace** dialog
 - personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
-- to **garble** your note add `cssclass: hide-doc` to your yaml header and to garble your App interface, see **Style Settings>Dune>Show ui elements>**
+- to **garble** your note add `cssclass: hide-doc` to your yaml header and to garble your App interface, see `Preferences>Style Settings>Dune>Show ui elements>`
 - pick up to **4 theme color schemes** (2 for day and 2 for night) or make your own theme colors, see **Style Settings>Dune>Colors>Custom color**
 - **svg mermaid diagrams** -readable and scalable, zoomable diagrams for both dark and light themes (arrows, labels, etc) learn more about mermaid diagrams in [this tutorial](https://mermaid.js.org/syntax/flowchart.html)
 - innovative **tag modifiers** to change font size, font color, font highlight, add subscript and superscript strings
@@ -28,6 +28,15 @@
 - variety of table configurations and -colors and types (recipes, movie list, contact list)
 - semantic folder tree (icons and colors)
 - and much more… please see a full list of features [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
+
+### Garble Interface
+If you get lost after garbling your interface, follow this guide: 
+
+> 1. Always use a keyboard shortcut key for Obsidians Preferences
+> 2. remember that community plugins are loaded in Obsidians Preferences window on the left hand panel as the last menu section, eg. sections from top to bottom: **Options, Core plugins, Community plugins**
+> 3. remember **Community plugins** are sorted in alphabetical order in there, so **Style Settings** will be relatively low in the load order, esp. if you have lots of plugins installed
+> 4. so, after you clicked on **Style Settings**, Dune will open, then go to the last section and click the last toggle to deactivate the garbled UI
+
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
