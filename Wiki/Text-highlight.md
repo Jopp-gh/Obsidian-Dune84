@@ -50,18 +50,22 @@ larger text bold/italic in 3 colors, red, green, blue
 ![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
 
 ### Inline text highlights - custom color
-to assign your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>custom font highlight`
+to set your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>custom font highlight`
 
 ![custom-col--font](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8408875c-83c5-496a-a0ea-805d456b1b62)
 
 `#hlcol *quick*` = custom coloured inline italic 
+
 `#hlcol **lazy log**` = custom coloured inline bold
+
 `#hlcol ==brown==` = custom inline marker highlight
 
 `#hlcol-s *quick*` = custom coloured inline italic - small
+
 `#hlcol-s **quick**` = custom coloured inline bold - small
 
 `#hlcol-l *quick*` = custom coloured inline italic - large
+
 `#hlcol-l **quick**` = custom coloured inline bold - large
 
 ## Sub & Sup
@@ -73,8 +77,27 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 ## Spoiler 
 ![Spoiler-txt-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f52bcc66-3f71-4406-8f53-5ee214da3c0d)
 
-`Words Words #spoiler-txt ==Words== Words Words`
-you can read the hidden text on hover
+`Words Words #spoiler ==Words== Words Words`
+
+read the hidden text on hover or touch (mobile)
+
+## Tips
+![help–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6cd9af5b-aaf0-4e0d-b619-2b1a7ea6c187)
+
+`Words Words #tips ==Words Words Words Words Words== Words Words`
+
+read the hidden text on hover or touch (mobile)
+
+## Text Lines
+![help-4](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d7bc068c-0ba2-4065-a2a6-247d5f29cb9e)
+
+`Words Words #line-a  ==Words Words Words Words Words== Words Words`
+
+`Words Words #line-b  ==Words Words Words Words Words== Words Words`
+
+`Words Words #line-c  ==Words Words Words Words Words== Words Words`
+
+<br>
 
 ## Text blocks - smaller & larger 
 please see [Callout text blocks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
