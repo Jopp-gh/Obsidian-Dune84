@@ -30,7 +30,7 @@
 - and much more… please see a full list of features [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
 ### Garble Interface
-If you got lost after garbling your interface, follow this steps: 
+If you get lost after garbling your interface, follow this steps: 
 
 > 1. Always use a keyboard shortcut key for Obsidians Preferences
 > 2. remember that community plugins are loaded in Obsidians Preferences window on the left hand panel as the last menu section, eg. sections from top to bottom: **Options, Core plugins, Community plugins**
