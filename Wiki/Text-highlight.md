@@ -79,14 +79,14 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `Words Words #spoiler ==Words== Words Words`
 
-read the hidden text on hover or touch (mobile)
+read hidden text on hover (desktop) or touch (mobile)
 
 ## Tips
 ![help–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6cd9af5b-aaf0-4e0d-b619-2b1a7ea6c187)
 
 `Words Words #tips ==Words Words Words Words Words== Words Words`
 
-read the hidden text on hover or touch (mobile)
+read hidden text on hover (desktop) or touch (mobile)
 
 ## Text Lines
 ![help-4](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d7bc068c-0ba2-4065-a2a6-247d5f29cb9e)
@@ -95,7 +95,9 @@ read the hidden text on hover or touch (mobile)
 
 `Words Words #line-b  ==Words Words Words Words Words== Words Words`
 
-`Words Words #line-c  ==Words Words Words Words Words== Words Words`
+`Words Words #line-c  ==Words Words Words Words Words== Words Words` 
+
+`#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
 <br>
 
@@ -116,7 +118,7 @@ please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blo
 
 to highlight your current paragraph, activate `Preferences>Style Settings>Dune>Colors>Theme>Current Line`
 
->**Hint**: the yellow highlight is a selected word
+>**Hint**: selected words are highlighted with a yellow tint (see related picture, above)
 
 <br>
 
