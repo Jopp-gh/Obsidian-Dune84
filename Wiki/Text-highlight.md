@@ -111,6 +111,13 @@ please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blo
 
 `cssclass: h1-l` 
 
+## Highlight current paragraph
+![help-5](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2fdb7744-1a2d-42e8-8069-34914bda8c81)
+
+to highlight your current paragraph, activate `Preferences>Style Settings>Dune>Colors>Theme>Current Line`
+
+>**Hint**: the yellow highlight is a selected word
+
 <br>
 
 
