@@ -57,7 +57,7 @@ settings:
     collapsed: true
   - 
     id: default-font
-    title: Character font
+    title: Character Font
     description: for character fonts
     title.de: Charakterschrift
     description.de: gewöhnliche Charakterschrift
@@ -96,7 +96,7 @@ settings:
     default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
   - 
     id: poetry-h
-    title: Poetry heading
+    title: Poetry Heading
     description: for poetry titles (default=Mumsies)
     title.de: Poesie Überschrift
     description.de: für Poesie-Überschriften (Standard=Mumsies)
@@ -104,7 +104,7 @@ settings:
     default: 'Mumsies, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   - 
     id: poetry-n
-    title: Poetry text
+    title: Poetry Text
     description: for poetry character fonts
     title.de: Poesie Charakterschrift
     description.de: Charakterschrift für Poetik
@@ -112,8 +112,8 @@ settings:
     default: 'Mumsies, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   -
     id: deco-scale
-    title: Resize decorations
-    title.de: Dekorationen anpassen
+    title: Resize Poetry Decorations
+    title.de: Poesie Dekorationen anpassen
     type: variable-number-slider
     default: 0.6
     min: 0.1
@@ -149,7 +149,7 @@ settings:
   -
     id: custom-max-line-width
     title: Custom line width
-    description: activate first "readable line width" - in Preferences-Editor
+    description: first, activate "readable line width" - in Preferences-Editor
     title.de: Maximale Zeilenlänge
     description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
     type: variable-number-slider
@@ -183,7 +183,7 @@ settings:
   -
     id: center-header
     title: Centered headers
-    description: all headers centered
+    description: center all headers
     title.de: Überschriften zentriert
     description.de: alle Überschriften zentriert
     type: class-toggle
@@ -196,10 +196,17 @@ settings:
     type: class-toggle
   -
     id: slides-s
-    title: Slide compact
+    title: Slide - compact
     description: smaller text (for desktop)
     title.de: Slide kompakt
     description.de: kleinerer Text (für PCs)
+    type: class-toggle
+  -
+    id: show-touch-area
+    title: Slide - touch-area
+    description: show touch-area (for mobile)
+    title.de: Slide Berührungsfläche
+    description.de: Entferne Sichtbarkeit (Mobilgeräte)
     type: class-toggle
   -
     id: img-options
@@ -220,14 +227,14 @@ settings:
   - 
     id: bframe-a
     title: Picture frame 'frame a'
-    description: add urls from local png or online png Images.
+    description: add urls from online png Images.
     title.de: Bilderrahmen 'frame a'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
+    description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
     id: bslice-a
-    title: frame tiling
+    title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
     default: 100
@@ -236,7 +243,7 @@ settings:
     step: 4
   -
     id: bwidth-a
-    title: frame thickness
+    title: Frame thickness
     title.de: Rahmenstärke
     type: variable-number-slider
     format: px
@@ -247,14 +254,14 @@ settings:
   - 
     id: bframe-b
     title: Picture frame 'frame b'
-    description: add urls from local png or online png Images.
+    description: add urls from online png Images.
     title.de: Bilderrahmen 'frame b'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
+    description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
     id: bslice-b
-    title: frame tiling
+    title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
     default: 100
@@ -263,7 +270,7 @@ settings:
     step: 4
   -
     id: bwidth-b
-    title: frame thickness
+    title: Frame thickness
     title.de: Rahmenstärke
     type: variable-number-slider
     format: px
@@ -274,14 +281,14 @@ settings:
   - 
     id: bframe-c
     title: Picture frame 'frame c'
-    description: add urls from local png or online png Images.
+    description: add urls from online png Images.
     title.de: Bilderrahmen 'frame c'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
+    description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
     id: bslice-c
-    title: frame tiling
+    title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
     default: 100
@@ -290,7 +297,7 @@ settings:
     step: 4
   -
     id: bwidth-c
-    title: frame thickness
+    title: Frame thickness
     title.de: Rahmenstärke
     type: variable-number-slider
     format: px
@@ -301,14 +308,14 @@ settings:
   - 
     id: bframe-d
     title: Picture frame 'frame d'
-    description: add urls from local png or online png Images.
+    description: add urls from online png Images.
     title.de: Bilderrahmen 'frame d'
-    description.de: erlaubt sind lokale Urls oder Urls aus dem Netz. Empfohlen werden png Bilder.
+    description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
     default: "url('')"
   -
     id: bslice-d
-    title: frame tiling
+    title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
     default: 100
@@ -317,7 +324,7 @@ settings:
     step: 4
   -
     id: bwidth-d
-    title: frame thickness
+    title: Frame thickness
     title.de: Rahmenstärke
     type: variable-number-slider
     format: px
@@ -328,12 +335,13 @@ settings:
   - 
     id: bframe-s
     title: Frame (simple)
-    title.de: Rahmen (simpel)
+    title.de: Rahmen (einfach)
     type: heading
     level: 2
+    collapsed: true
   -
     id: bwidth-s
-    title: frame thickness
+    title: Frame thickness
     title.de: Rahmenstärke
     type: variable-number-slider
     format: px
@@ -351,20 +359,17 @@ settings:
   -
     id: zoom-auto
     title: Zoom pictures / diagrams
-    description: Zoom on hover
+    description: zoom on hover
     title.de: Bild / Diagramm Vergrößerung
     description.de: Vergrößerung beim überfahren
     type: class-toggle
   -
-    id: banner-v-align
-    title: Banner - vertical placement 
-    title.de: Banner - vertikal ausrichten
-    type: variable-number-slider
-    format: '%'
-    default: 0
-    min: 0
-    max: 90
-    step: 2
+    id: better-zoom
+    title: Mobile - Mermaid Proportions
+    description: default diagram proportions
+    title.de: Mobilgerät - Mermaid Proportionen
+    description.de: Standard Diagramm Proportionen
+    type: class-toggle
   -
     id: pictwall-opt
     title: Image wall
@@ -401,29 +406,29 @@ settings:
     collapsed: true
   -
     id: profile-pic
-    title: Vault Profile
-    description: Add a vault profile
-    title.de: Vault Profilbild
-    description.de: benutze ein Profilbild für deinen Vault
+    title: Profile
+    description: add a Profile
+    title.de: Profil
+    description.de: benutze ein Profilbild
     type: class-toggle
   -
     id: profile-banner
-    title: Vault Profile Banner
-    description: Add a banner profile
-    title.de: Vault Profilbanner
+    title: Profile Banner
+    description: add a banner profile
+    title.de: Profilbanner
     description.de: benutze ein Profilbanner
     type: class-toggle
   -
     id: profile-pic-mono
-    title: Monochrome Vault Profile
+    title: Monochrome Profile
     description: automatic B/W switch
-    title.de: Schwarzweiß Profilbild
+    title.de: Profil - Schwarzweiß
     description.de: S/W Schalter (dunkles Thema)
     type: class-toggle
   -
     id: profile-size
-    title: Vault profile icon size
-    title.de: Vault Profilbild Größe
+    title: Profile icon size
+    title.de: Profilbild Größe
     type: variable-number-slider
     format: px
     default: 40
@@ -432,10 +437,10 @@ settings:
     step: 10
   - 
     id: profile-path
-    title: Vault profile image
-    description: Image must be an equilateral png (local or remote url)
-    title.de: Vault Profilbild
-    description.de: Das Profilbild muss als gleichseitiges png vorliegen (aus dem Netz)
+    title: Profile image
+    description: Image must be an equilateral png (requires online url)
+    title.de: Profilbild Datei
+    description.de: Das Profilbild muss als gleichseitiges png vorliegen (aktives Netz erforderlich)
     type: variable-text
     default: "url('')"
   -
@@ -452,7 +457,7 @@ settings:
     title: Custom color
     description: your own color scheme
     title.de: Eigene Farben
-    description.de: wähle eigenes Farbschema
+    description.de: Wähle eigenes Farbschema
     type: heading
     level: 2
     collapsed: true
@@ -562,7 +567,7 @@ settings:
     default-dark: '#BE4824'
   -
     id: text-selection
-    title: 'Text: background highlight'
+    title: 'Text: Background highlight'
     description: for selected text
     title.de: Hervorhebung Schrifthintergrund
     description.de: für angewählten Text
@@ -655,14 +660,14 @@ settings:
     id: extra-col-palette
     title: Extra colors
     description: for simple image frames, simple delimiter
-    title.de: Extra Farben
-    description.de: für simple Bilderrahmen, simple Trenner
+    title.de: Zusätzliche Farben
+    description.de: für einfache Bilderrahmen, Trenner, Initialien, Callouts, Memos, Tabellen, Markierungen
     type: heading
     level: 3
     collapsed: true
   - 
     id: frame-color
-    title: Color for frames
+    title: Frame color
     description: for simple picture frames
     title.de: Rahmenfarbe
     description.de: Bilder Rahmenfarbe
@@ -673,7 +678,7 @@ settings:
     default-dark: '#ff7029'
   - 
     id: hr-color
-    title: Color for Hr
+    title: Horizontal lines color
     description: for some horizontal dividers
     title.de: Eigenes Trennzeichen
     description.de: für Trennzeichen
@@ -695,7 +700,7 @@ settings:
     default-dark: '#800000'
   -
     id: hl-col
-    title: 'Text: Custom font highlight'
+    title: 'Text: Font Highlight - custom'
     description: for fonts
     title.de: Eigene Farbmarkierung
     description.de: für Characterschriften
@@ -706,7 +711,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: tables-hlcol
-    title: 'Text: Table custom color'
+    title: 'Text: Table color - custom'
     description: for tables
     title.de: Eigene Tabellenfarbe
     description.de: für Tabellen
@@ -717,7 +722,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: memo-hlcol
-    title: 'Text: Stickies custom color'
+    title: 'Text: Stickies color - custom'
     description: for stickies
     title.de: Eigene Memofarbe
     description.de: für Memos
@@ -728,7 +733,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: call-hlcol
-    title: 'Text: custom callout color'
+    title: 'Text: Callout color - custom'
     description: for callouts
     title.de: Eigene 'Callout'-Farbe
     description.de: für 'Callout'
@@ -740,131 +745,117 @@ settings:
   -
     id: fade-options
     title: ❨ ❩ Show ui elements
-    description: visibility buttons, text
+    description: visibility buttons, text, etc.
     title.de: ❨ ❩ Einblenden
-    description.de: Sichtbarkeit Tasten, Text
+    description.de: Sichtbarkeit Tasten, Text, usw.
     type: heading
     level: 1
     collapsed: true
   -
     id: show-tooltips
-    title: Show tooltips 
+    title: Tooltips 
     description: restore help bubbles
     title.de: Hilfeblasen
     description.de: Wiederherstellung Hilfeblasen
     type: class-toggle
   -
-    id: show-hrs
-    title: Show horizontal lines in pdf 
-    description: restore hr in pdf
-    title.de: Horizontale Linie in pdfs
-    description.de: Wiederherstellung HRs in pdfs
-    type: class-toggle
-  -
     id: show-ribbon-l
-    title: Show ribbon
+    title: Ribbon, left
     description: restore left ribbon
-    title.de: Seitenleiste
-    description.de: Wiederherstellung Linke Seitenleiste
+    title.de: Seitenleiste, Links
+    description.de: Wiederherstellung linke Seitenleiste
     type: class-toggle
     default: true
   -
     id: sidebar-fixed
-    title: Left sidepanel
-    description: restore placement
-    title.de: Linkes Seitenpanel
-    description.de: Wiederherstellung platzierung
+    title: Sidepanel, left
+    description: restore sidepanel placement
+    title.de: Seitenfach, Links
+    description.de: Wiederherstellung position Seitenfach
     type: class-toggle
   -
     id: show-title-name
-    title: Show note title
+    title: Note title
     description: restore note title
     title.de: Notizname
-    description.de: Wiederherstellung Notizname
+    description.de: Wiederherstellung Notizname (Titelleiste)
     type: class-toggle
   -
     id: show-title-parent
-    title: Show note path 
+    title: Note path 
     description: restore path in title bar
     title.de: Notizpfad
-    description.de: Wiederherstellung Pfad in der Titelleiste
+    description.de: Wiederherstellung Pfad (Titelleiste)
     type: class-toggle
   -
     id: show-vault-name
-    title: Show Vault name
+    title: Vault name
     description: restore vault name
     title.de: Vault Name
     description.de: Wiederherstellung Vault Name
     type: class-toggle
   -
     id: show-tab-name
-    title: Show Inactive tabs
-    description: restore inactive tabs (tab view)
-    title.de: Inaktive Reiter
-    description.de: Wiederherstellung Reiter (Reiteransicht)
+    title: Tabs
+    description: restore inactive tabs
+    title.de: Reiter
+    description.de: Wiederherstellung inaktiver Reiter
     type: class-toggle
   -
     id: show-status-bar
-    title: Show status bar
+    title: Status bar
     description: restore statusbar
     title.de: Statusleiste
     description.de: Wiederherstellung Statusleiste
     type: class-toggle
   -
     id: show-ui-btns
-    title: Show buttons
+    title: Buttons
     description: restore buttons
-    title.de: Tasten
+    title.de: Tasten 
     description.de: Wiederherstellung Tasten
     type: class-toggle
   -
     id: show-graph-btns
-    title: Show graph buttons
+    title: Graph buttons
     description: restore buttons
-    title.de: Graphansicht Tasten
-    description.de: Wiederherstellung Tasten
+    title.de: Graph Tasten
+    description.de: Wiederherstellung Graph Tasten
     type: class-toggle
   -
     id: show-canvas-ui
-    title: Show canvas ui 
+    title: Canvas ui 
     description: restore canvas buttons
-    title.de: Canvas Benutzeroberfläche
+    title.de: Canvas Ansicht
     description.de: Wiederherstellung Canvas Tasten
     type: class-toggle
   -
     id: show-canvas-nl
-    title: Show canvas node labels 
+    title: Canvas node labels 
     description: restore node labels
     title.de: Canvas Knotentitel
     description.de: Wiederherstellung Knotentitel
     type: class-toggle
   -
     id: edgy-tables
-    title: Show edgy tables 
+    title: Tables, edgy
     description: restore edgy tables
-    title.de: Eckige Tabellen
-    description.de: Wiederherstellung Eckige Tabellen
+    title.de: Tabellen, Eckig
+    description.de: Wiederherstellung eckige Tabellen
     type: class-toggle
   -
     id: show-strikeout
-    title: Show strikeout line (checklists) 
+    title: Tasks Strikeout line
     description: restore strikeout line (tasks)
-    title.de: Durchstrichene Aufgabe (Listen)
-    description.de: Wiederherstellung Durchstrichene Aufgabe
-    type: class-toggle
-  -
-    id: show-touch-area
-    title: Show touch-area (core plugin 'Slide')
-    description: restore visibility touch-area
-    title.de: Zeige Berührungsfläche (Erweiterung 'Slide')
-    description.de: Wiederherstellung Sichtbarkeit Berührungsfläche
+    title.de: Aufgaben, durchstrichen
+    description.de: Wiederherstellung durchstrichene Aufgaben
     type: class-toggle
   -
     id: hide-gui
     title: Hide App UI
     description: garble ui text, buttons, etc.
-    title.de: Programm Oberfläche
-    description.de: Oberfläche temporär unkenntlich zeichnen
+    title.de: Oberfläche verstecken
+    description.de: Obsidian temporär unkenntlich zeichnen
     type: class-toggle
 */
 
@@ -2280,7 +2271,7 @@ sub {
  custom highlights
 ----------------------------------------------------------------*/
 
-a:is([href^="#red"], [href^="#green"], [href^="#blue"], [href^="#gray"], [href^="#font-s"], [href^="#red-s"], [href^="#green-s"], [href^="#blue-s"], [href^="#font-l"], [href^="#red-l"], [href^="#green-l"], [href^="#blue-l"], [href^="#hlcol"], [href^="#hlcol-s"], [href^="#hlcol-l"], [href^="#spoiler-txt"], [href^="#sub"], [href^="#sup"], [href^="#line-a"], [href^="#line-b"], [href^="#linie-a"], [href^="#linie-b"]) {
+a:is([href^="#red"], [href^="#green"], [href^="#blue"], [href^="#gray"], [href^="#font-s"], [href^="#red-s"], [href^="#green-s"], [href^="#blue-s"], [href^="#font-l"], [href^="#red-l"], [href^="#green-l"], [href^="#blue-l"], [href^="#hlcol"], [href^="#hlcol-s"], [href^="#hlcol-l"], [href^="#spoiler"], [href^="#tips"], [href^="#sub"], [href^="#sup"], [href^="#line-a"], [href^="#line-b"], [href^="#line-c"]) {
     display: none !important;
 }
 
@@ -2417,31 +2408,67 @@ a[href^="#sub"]+mark {
     font-size: smaller;
 }
 
-a[href^="#spoiler-txt"]+mark {
+a[href^="#spoiler"]+mark {
     background-color: #454545;
     border-radius: 0;
     color: transparent !important;
 }
 
-a[href^="#spoiler-txt"]+mark:hover {
+a[href^="#spoiler"]+mark:hover {
     background-color: transparent;
     color: var(--text-normal) !important;
 }
 
-a[href^="#line-a"]+mark,
-a[href^="#linie-a"]+mark {
+/* help */
+a[href^="#tips"]+mark {
+    color: transparent !important;
+    background-color: transparent;
+    width: 26px !important;
+    display: inline-block;
+    line-height: 0px;
+}
+
+a[href^="#tips"]+mark::after {
+    content: "💬";
+    color: var(--text-normal);
+}
+
+a[href^="#tips"]+mark:hover::after {
+    content: "";
+}
+
+a[href^="#tips"]+mark:hover {
+    width: max-content !important;
+    background-color: gray;
+    color: white !important;
+    border-radius: 4px;
+    align-items: baseline;
+    line-height: 1.2;
+    animation: fadeIn 1s;
+}
+
+.is-mobile .is-mobile a[href^="#tips"]+mark:hover {
+    display: inline;
+    animation: fadeIn 1s;
+}
+
+a[href^="#line-a"]+mark {
     background-color: transparent;
     color: var(--text-normal) !important;
     text-decoration: underline;
 }
 
-a[href^="#line-b"]+mark,
-a[href^="#linie-b"]+mark {
+a[href^="#line-b"]+mark {
     background-color: transparent;
     color: var(--text-normal) !important;
     text-decoration: underline double;
 }
 
+a[href^="#line-c"]+mark {
+    background-color: transparent;
+    color: var(--text-normal) !important;
+    text-decoration: line-through;
+}
 
 /*----------------------------------------------------------------
 CALLOUT
@@ -3015,19 +3042,26 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
     clear: left;
 }
 
-.is-phone .callout.callout[data-callout=infobox],
-.is-phone .callout.callout[data-callout=infobox-r] {
-    margin-left: -6px;
-    right: -40px;
+.is-phone .callout[data-callout=infobox],
+.is-phone .callout[data-callout=infobox-r] {
     float: right;
     clear: right;
 }
 
-.is-phone .callout.callout[data-callout=infobox-l] {
-    margin-right: -6px;
-    left: -40px;
+.is-phone .markdown-preview-view .callout[data-callout=infobox],
+.is-phone .markdown-preview-view .callout[data-callout=infobox-r] {
+    margin-left: -10px;
+    right: -20px;
+}
+
+.is-phone .callout[data-callout=infobox-l] {
     float: left;
     clear: left;
+}
+
+.is-phone .markdown-preview-view .callout[data-callout=infobox-l] {
+    margin-right: -10px;
+    left: -20px;
 }
 
 /* compact view */
@@ -4659,10 +4693,6 @@ img[alt~="frame-d"] {
     margin: 0;
 }
 
-.icap-15 .image-embed[src*="#cap"]::after {
-    max-width: 15vw;
-}
-
 .icap-25 .image-embed[src*="#cap"]::after {
     max-width: 25vw;
 }
@@ -4830,6 +4860,11 @@ image placed + description
     margin-top: auto;
 }
 
+/* dim bright imgs for dark themes */
+.theme-dark .view-content img {
+    filter: brightness(0.9);
+}
+
 /*Image moodboard */
 .callout.callout[data-callout=moodboard] {
     background: transparent;
@@ -4862,11 +4897,6 @@ image placed + description
     margin: 0;
 }
 
-/* dim bright imgs for dark themes */
-.theme-dark .view-content img {
-    filter: brightness(0.9);
-}
-
 /* zooming */
 .mobile-image-viewer img {
     object-fit: contain;
@@ -4875,7 +4905,6 @@ image placed + description
     background-color: rgb(0 0 0 / 60%);
 }
 
-/* mermaid diagram scale */
 .svg-20 .mermaid svg {
     width: 20%;
     height: 20%;
@@ -4909,6 +4938,11 @@ image placed + description
 .svg-80 .mermaid svg {
     width: 80%;
     height: 80%;
+}
+
+.svg-90 .mermaid svg {
+    width: 90%;
+    height: 90%;
 }
 
 .svg-20 .mermaid svg:active,
@@ -4962,14 +4996,27 @@ image placed + description
     height: 90%;
 }
 
-/* Desk */
-body:not(.is-phone) .view-content img {
-    cursor: zoom-in;
-    display: inline;
-    border-radius: 4px;
-    object-fit: cover;
+/* phone - default mermaid proportions - more overview */
+.is-phone .markdown-preview-view .mermaid svg,
+.is-phone .markdown-preview-view .mermaid svg {
+    height: 110%;
+    width: 110%;
 }
 
+/* phone - default mermaid zoom */
+.is-phone:not(.better-zoom) .markdown-preview-view .mermaid svg:hover,
+.is-phone:not(.better-zoom) .markdown-preview-view .mermaid svg:active {
+    height: 190%;
+    width: 190%;
+    transform: translateY(-24%);
+}
+
+.is-phone.better-zoom .markdown-preview-view .mermaid svg:hover,
+.is-phone.better-zoom .markdown-preview-view .mermaid svg:active {
+    height: 250%;
+    width: 250%;
+    transform: translateY(-24%);
+}
 
 body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
     cursor: zoom-out;
@@ -4991,6 +5038,14 @@ body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
 }
 
 /* image handling */
+/* Desk */
+body:not(.is-phone) .view-content img {
+    cursor: zoom-in;
+    display: inline;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
 .zoom-auto .view-content .image-embed img:hover,
 .view-content .image-embed img:active {
     cursor: zoom-out;
@@ -6918,7 +6973,7 @@ body:is(.is-phone) .reveal span.addtip {
 /* Hide close button */
 .is-phone .slides-close-btn {
     top: 12px;
-    scale: 1.2;
+    scale: 1.4;
     z-index: 12;
 }
 
@@ -7779,10 +7834,6 @@ PDF EXPORT
     .poetry h6 {
         text-align: center;
         font-family: var(--poetry-h);
-    }
-
-    body:not(.show-hrs) hr {
-        visibility: hidden;
     }
 
     div hr {
