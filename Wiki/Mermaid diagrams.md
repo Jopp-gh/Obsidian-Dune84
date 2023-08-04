@@ -13,6 +13,7 @@ Default mermaid diagram proportions.
 ![Mm-35](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/217aeac8-ab5d-4e37-b18f-8c296cebdc51)
 
 `cssclass: svg-20`,  `cssclass: svg-30`, `cssclass: svg-40`, `cssclass: svg-50`, `cssclass: svg-60`, `cssclass: svg-70`, `cssclass: svg-80`, `cssclass: svg-90`
+
 smaller proportions are useful to display large mermaid diagram charts on-screen. To zoom in, move your mouse over your diagram with auto-zoom on or press and hold the Left mouse button
 
 ### Zoom
@@ -25,7 +26,7 @@ Otherwise, activate **auto-zoom** on hover: `Preferences>Style Settings>Dune>Pic
 >- shift-mousewheel to **scroll horizontally** (auto-zoom mode only)
 >- mousewheel to **scroll vertically** (auto-zoom mode only)
 
-#### Max zoom level
+#### Max zoom level (Desktop)
 `cssclass: zoom-50`, `cssclass: zoom-60`, `cssclass: zoom-70`, `cssclass: zoom-80`, `cssclass: zoom-90`
 smaller pictures / diagrams need smaller zoom levels because they scale bigger by default
 
@@ -35,6 +36,12 @@ smaller pictures / diagrams need smaller zoom levels because they scale bigger b
 
 >**Note**: Please set zoom levels at least 10% higher than mermaid proportions, otherwise your diagram won't zoom
 
+#### Max zoom level (Phone) 
+to get more balanced Mermaid diagram proportions, you don't have to set up anything. If you prefer Obsidians default Mermaid proportions for zoomed Diagrams, go to `Preferences>Style Settings>Dune>Pictures>Mobile - Mermaid Proportions`
+
+>**Tip**: to exit from Mermaid Diagrams,
+>- touch the right edge of the screen, where your scrollbar is.
+>- Otherwise, click on the buttons on the bottom of the screen 
 
 ### Mermaid Diagrams on-the-fly
 
