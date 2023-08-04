@@ -120,7 +120,7 @@ the more pictures you put in a picture wall, the more your picture wall will loo
 
 to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
 
-Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom on hover**
+Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
 Otherwise click and hold over an image
 
 
