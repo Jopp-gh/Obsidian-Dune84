@@ -50,9 +50,10 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 ## First steps
 
 1. to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-2. To activate my theme, open `Preferences>Style Settings>Dune>Colors>Theme` and choose a color scheme for your **light theme  (Dune 1 or Dune 2)** and a color scheme for your **dark theme (Dune 3 or Dune 4)**
-3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
-4. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
+2. if you see a white or black theme, open `Preferences>Style Settings>Dune>Colors>Theme` and choose a color scheme for your **light theme  (Dune 1 or Dune 2)** and a color scheme for your **dark theme (Dune 3 or Dune 4)**
+3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). Open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
+4. download [this companion snippet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) to add icons to your folder tree
+5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
 <br>
 
