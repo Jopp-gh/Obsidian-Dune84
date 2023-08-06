@@ -60,11 +60,12 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 ## Features
 
 - #### [Text-highlight](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md)
-- #### [Folders](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Folders.md) 
+- #### [Mermaid Diagrams](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Mermaid%20diagrams.md)
 - #### [Tables](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md) 
 - #### [Callouts](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md)
 - #### [Pictures](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
 - #### [Poetry](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
+- #### [Folders](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Folders.md) 
 - #### [Slideshow & Print](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Sharing.md)
 - #### [UX design](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/UX%20Design.md)
 
