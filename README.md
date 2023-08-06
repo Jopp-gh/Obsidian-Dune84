@@ -40,7 +40,7 @@ Finally, i would be pleased to make new friends, interested in, but not limited 
 ### Attention
 ```
 Obsidian v1.2.8 introduced several breaking changes, therefore, 
-newer versions of Dune wont be fully backward compatible with versions older than v1.2.8+
+newer versions of Dune wont be fully backward compatible with versions older than v1.2.8
 ```
 → Please check out [Releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) for older versions
 
@@ -126,7 +126,7 @@ inspiration from following sources:
 Support me, if you like what you get  :)
 
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
-
+<a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me Another Beer" height="41" width="174"></a>
 
 ### Collaboration
 thanks for your interest in my theme. Right now i only accept bug reports and feature requests. 
