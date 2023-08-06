@@ -5,32 +5,22 @@ Feel free to add and remove or place elements in a way useful to you :)
 
 ```
 ---
-cssclass: recipes
+cssclass: recipes, 
 ---
-
 #lunch
 
-> [!multi-column]
->
->> [!blank-container]
->> - [#]  4 people
->
->> [!blank-container]
->> - [t] 45 Min
->
->> [!blank-container]
->> - [g]  [[salad]]
->
->> [!blank-container]
->> - [d]  [[drinks]]
+- [#]  4 people
+- [t] 45 Min
+- [g]  salad
+- [d]  [[drink]]
 
- > [!framed-r]
- > ![[Pict.jpg|300]]
+>[!framed-r]
+>![[pancakes.jpeg| 300]]
 
-| lot     | ingredients            |
+| lot  | ingredients |
 | ---- | ----------- |
 | 400g | Loremipsum  |
-| 1    | dolorsit (sed do eiusmod tempor incididunt)   |
+| 1    | dolorsit    |
 | 1    | amet        |
 | 2    | adipisicing | 
 | 500g | consectetur |
@@ -41,9 +31,9 @@ cssclass: recipes
 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-
-> [!note]
+> [!note | yellow]
 > Lorem ipsum dolor sit amet
+
 ```
 
 ### Example:
