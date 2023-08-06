@@ -10,7 +10,7 @@ cssclass: recipes,
 #lunch
 
 - [#]  4 people
-- [t] 45 Min
+- [t]  45 Min
 - [g]  salad
 - [d]  [[drink]]
 
@@ -37,7 +37,7 @@ cssclass: recipes,
 ```
 
 ### Example:
-![Bildschirmfoto 2023-03-29 um 19 03 18](https://user-images.githubusercontent.com/48620536/228628983-c499f19b-c0da-4566-bb2b-f4291670f88a.png)
+![Bon-Appetit](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/a25578a4-5a2a-4590-bb34-99c2adbcde3a)
 
 ### bon appétit! 
 
