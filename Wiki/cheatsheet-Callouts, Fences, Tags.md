@@ -2,11 +2,7 @@
 
 ### Callouts alignment
 
-`> [!note|25]`
-
-Callout width is reduced to 1/4 
-
-`> [!note|50]`
+`> [!note|300]`, `> [!note|400]`, `> [!note|500]`, `> [!note|600]`, `> [!note|700]`, `> [!note|800]`
 
 Callout width is reduced to 1/2
 
@@ -133,4 +129,50 @@ smaller text in 3 colors, red, green, blue
 
 larger text in 3 colors, red, green, blue
 
+`#hlcol *quick*`, `#hlcol **lazy log**`, `#hlcol ==brown==` 
 
+custom coloured inline normal size 
+
+`#hlcol-s *quick*`, `#hlcol-s **quick**`
+
+custom coloured inline bold - small
+
+`#hlcol-l *quick*`, `#hlcol-l **quick**` 
+
+custom coloured inline bold - large
+
+### Sub & Sup
+
+Words `#sup ==sup==` Words `#sub ==sub==`
+
+### Spoiler 
+
+`Words Words #spoiler ==Words== Words Words`
+
+### Tips
+
+`Words Words #tips ==Words Words Words Words Words== Words Words`
+
+### Lines
+`Words Words #line-a  ==Words Words Words Words Words== Words Words`
+
+`Words Words #line-b  ==Words Words Words Words Words== Words Words`
+
+`Words Words #line-c  ==Words Words Words Words Words== Words Words` 
+
+### Icon Tags
+
+```
+Words #ppl ==ppl== Words 
+Words #mail ==mail== Words
+Words #tel ==tel== Words 
+Words #read ==read== Words
+Words #edit ==edit== Words 
+Words #promo ==promo== Words
+Words #loc ==loc== Words 
+Words #key ==key== Words 
+Words #pin ==pin== Words 
+Words #cal ==cal== Words 
+Words #idea ==idea== Words 
+Words #profit ==profit== Words
+```
