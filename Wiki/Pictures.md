@@ -123,7 +123,7 @@ to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embed
 Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
 Otherwise click and hold over an image.
 
->**Phone**: To exit from Zoomed diagrams, tab on the thin, albeit visible scrollbar on the right edge of your phone
+>**Phone**: To exit from zoomed diagrams, tab on the thin, albeit visible scrollbar on the right edge of your phone
 
 
 <br>
