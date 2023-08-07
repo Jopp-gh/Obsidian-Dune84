@@ -88,6 +88,24 @@ read hidden text on hover (desktop) or touch (mobile)
 
 read hidden text on hover (desktop) or touch (mobile)
 
+## Icon tags
+![icon-tags](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b73b0e9c-a16f-4621-97a9-ed0c4895441a)
+
+```
+Words #ppl ==ppl== Words 
+Words #mail ==mail== Words
+Words #tel ==tel== Words 
+Words #read ==read== Words
+Words #edit ==edit== Words 
+Words #promo ==promo== Words
+Words #loc ==loc== Words 
+Words #key ==key== Words 
+Words #pin ==pin== Words 
+Words #cal ==cal== Words 
+Words #idea ==idea== Words 
+Words #profit ==profit== Words
+```
+
 ## Text Lines
 ![help-4](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d7bc068c-0ba2-4065-a2a6-247d5f29cb9e)
 
