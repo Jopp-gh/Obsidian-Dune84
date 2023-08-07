@@ -40,7 +40,7 @@ To move your Banner vertically, change your **b**anner **c**oordinates according
 
 `![[Pict.png|pos-l]]`, `![[Pict.png|pos-r]]`, `![[Pict.png|pos-c]]`
 
-place your images on the Left, Right or at the Center of your note
+place your images on the **Left**, **Right** or at the **Center** of your note
 
 <br>
 
@@ -52,7 +52,7 @@ place your images on the Left, Right or at the Center of your note
 
 **Options**: `frame-a`, `frame-b`, `frame-c`,`frame-d`
 
-Frame your pictures. Download some frames like [this png template](https://pngimg.com/image/91008). Customize your frames under **Style Settings>Dune>Pictures>Picture frames**
+Frame your pictures. Load some **png** frames like [this template](https://pngimg.com/image/91008). Customize your frames under **Style Settings>Dune>Pictures>Picture frames**
 
 <br>
 
@@ -78,8 +78,8 @@ Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** a
 ```
 **Options**: `framed-r`, `framed-l`
 
-position your images, add a picture frame and description. 
-If you want a soft background for text and images inside **Book Pictures**, add bg as metadata, after the pipe symbol, eg `>[[!framed | bg]]`  
+place your images, add a picture frame and description. 
+If you want a soft background too (ideally for text blocks), add bg as metadata after the pipe symbol, eg `>[[!framed | bg]]`  
 
 <br>
 
@@ -108,7 +108,7 @@ to control the max width of simple picture descriptions, and its frame under you
 
 **Options**: Configure height and width, see **Style Settings>Pictures>Image Wall**
 
-the more pictures you put in a picture wall, the more your picture wall will look seamless. To remove empty spaces and get a neat-looking picture wall, (see **Style Settings>Dune>Pictures>Image Wall**) and adjust H/W sliders accordingly. Remember to keep an empty line between each line of pictures. 
+the more pictures you put in a picture wall, the more your picture wall will look seamless. To remove empty spaces and get a neat-looking picture wall, (see **Style Settings>Dune>Pictures>Image Wall**) adjust both H/W sliders accordingly. Remember to keep an empty line between each line of pictures (see template above).
 
 <br>
 
@@ -121,7 +121,9 @@ the more pictures you put in a picture wall, the more your picture wall will loo
 to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
 
 Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
-Otherwise click and hold over an image
+Otherwise click and hold over an image.
+
+>**Phone**: To exit from Zoomed diagrams, tab on the thin, albeit visible scrollbar on the right edge of your phone
 
 
 <br>
