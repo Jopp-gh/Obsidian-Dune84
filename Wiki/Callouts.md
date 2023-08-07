@@ -83,6 +83,17 @@ Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callou
 ```
 Sidebox to visualize quickly most important details, like pictures, text and links. **Options:** `infobox-l`, `infobox-r`
 
+## Framed
+
+```
+> [!framed-l] 
+>  description
+```
+
+Options: framed-r, framed-l
+
+embed your descriptions in boxes and place them on the left or right side of your note. You can add a soft background too, eg >[[!framed-r | bg]]
+
 <br>
 
 ## Read more…
