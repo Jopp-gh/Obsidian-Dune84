@@ -1518,13 +1518,18 @@ FOLDERs - Navi Tree
     line-height: normal;
 }
 
-/* 10 Top level Folders By Starting Digit (0-F) */
+/* keep original highlight */
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]:hover>.nav-folder-title-content,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]:hover>.nav-folder-title-content {
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]:hover>.nav-folder-title-content,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]:hover>.nav-folder-title-content,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]:hover>.nav-folder-title-content,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]:hover>.nav-folder-title-content,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]:hover>.nav-folder-title-content {
+    color: white;
     background-color: revert;
 }
 
@@ -5091,7 +5096,7 @@ image placed + description
 }
 
 .is-phone .callout[data-callout="framed-r"] {
-    margin-right: 4px;
+    margin-right: -15px;
 }
 
 .is-phone .reveal .callout[data-callout="framed-r"] {
