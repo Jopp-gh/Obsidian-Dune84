@@ -138,6 +138,17 @@ Callout floats right
 > Words Words Words Words
 ```
 
+## Merge Paragraphs
+
+![mergePP-align-l](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0758e68e-c0d1-47ed-935b-034286c7abca)
+
+```
+>[!merge]
+> Abc
+```
+
+pay attention on how paragraphs are merged: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The following paragraphs highlighted with  **A, B** and **C** afterwards create a seamless text flow around the callout box
+
 ## Footnote
 
 ![new-features–04a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6189488d-c3d3-4061-89a6-8f2317dbfbad)
