@@ -129,7 +129,11 @@ please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blo
 
 ![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
 
-`cssclass: h1-l` 
+`cssclass: h1-3`, `cssclass: h1-4`, `cssclass: h1-5`, `cssclass: h1-6`, `cssclass: h1-7`, `cssclass: h1-8`
+
+change the size of H1 titles, eg "# Title", or you can set H1 size globally, go to `Preferences>Style Settings>Dune>Spacing>Custom h1 size`
+
+>**info**: the count begins with `h1-3` (3 stands for 3em) because 2em is the default H1 size.
 
 ## Highlight current paragraph
 ![help-5](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2fdb7744-1a2d-42e8-8069-34914bda8c81)
