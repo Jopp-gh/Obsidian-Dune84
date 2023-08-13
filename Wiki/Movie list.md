@@ -13,7 +13,7 @@ tags:
 my goal was to build a compact Movie list / overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish):
 
 - cover image (recommended)
-- title and year (Dune (1984)) or just the title plus a footnote reference (to display the plot, actors, etc)  (recommended)
+- title and year (Dune (1984) or just the title plus a footnote reference (to display the plot, actors, etc)  (recommended)
 - duration 
 - genre
 - director
@@ -21,7 +21,7 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 
 ### Usage
 1) to add details to your movie table, visit the Internet Movie Database: https://www.imdb.com/ 
-2) next, add to your yaml header a **cssclass**, eg `cssclass: movies, h1-7`
+2) next, add a **cssclass**, eg `cssclass: movies, h1-7` to your yaml header
 3) optinally, set a special font for your movie title, go to: `Preferences>Style Settings>Dune>Fonts>Header - Movies`
 4) finally, use this template:
 
