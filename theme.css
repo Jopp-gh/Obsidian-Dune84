@@ -26,49 +26,56 @@ settings:
     title.de: Überschrift 1
     description: Century Gothic, DiehlDeco, Whattimeisit
     type: variable-text
-    default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   - 
     id: h2-font
     title: Header 2 
     title.de: Überschrift 2
     description: Century Gothic, DiehlDeco, Whattimeisit
     type: variable-text
-    default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   - 
     id: h3-font
     title: Header 3
     title.de: Überschrift 3
     description: Century Gothic, DiehlDeco, Whattimeisit
     type: variable-text
-    default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: h4-font
     title: Header 4, 5, 6
     title.de: Überschrift 4, 5, 6
     description: Century Gothic, DiehlDeco, Whattimeisit
     type: variable-text
-    default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
-    id: movies-font
-    title: Header - Movies  
-    title.de: Überschrift - Filme
-    description: AbadiMT-CondensedLight, Helvetica, 'Century Gothic', Roboto, Arial, sans-serif
-    type: variable-text
-    default: "AbadiMT-CondensedLight, Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    id: special-fonts
+    title: Special Header Fonts
+    title.de: Spezielle Überschriften
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: contacts-font
     title: Header - Contacts
     title.de: Überschrift - Kontakte
-    description: Helvetica, 'Century Gothic', Roboto, Arial, sans-serif
+    description: Helvetica, "Century Gothic", Roboto, Arial, sans-serif
     type: variable-text
-    default: "Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: recipes-font
     title: Header - Recipes
     title.de: Überschrift - Rezepte
-    description: WCManoNegraBta, Helvetica, 'Century Gothic', Roboto, Arial, sans-serif
+    description: WCManoNegraBta, Helvetica, "Century Gothic", Roboto, Arial, sans-serif
     type: variable-text
-    default: "WCManoNegraBta, Helvetica, 'Century Gothic', Roboto, Arial, sans-serif"
+    default: 'WCManoNegraBta, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
+  -
+    id: movies-font
+    title: Header - Movies  
+    title.de: Überschrift - Filme
+    description: AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif
+    type: variable-text
+    default: 'AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: common-fonts
     title: Font types
@@ -76,6 +83,42 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  -
+    title: Font themes (global)
+    description: pick a custom font scheme
+    title.de: Schriften thema (global)
+    description.de: Wähle eigenes Schriftenthema
+    id: glob-fonts
+    type: class-select
+    allowEmpty: false
+    default: 𝞪-1
+    options:
+        - 
+            label: 𝞪-1
+            value: fontmod-1
+        - 
+            label: 𝞪-2
+            value: fontmod-2
+        -
+            label: 𝞪-3
+            value: fontmod-3
+        -
+            label: 𝞪-4
+            value: fontmod-4
+  -
+    id: font-standard
+    title: Standard
+    title.de: Standard
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: default-font-h
+    title: Standard
+    description: for Headers
+    description.de: für Kopfzeilen
+    type: variable-text
+    default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   - 
     id: default-font
     title: Character Font
@@ -84,6 +127,130 @@ settings:
     description.de: gewöhnliche Charakterschrift
     type: variable-text
     default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  - 
+    id: custom-fsz-1
+    title: Standard Font size
+    title.de: Standard Größe für Kopfzeilen
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: font-handwritten
+    title: Handwritten
+    title.de: Handschrift
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: handwritten-font-h
+    title: Handwritten Header Font
+    description: for Headers
+    title.de: Handschrift für Kopfzeilen
+    description.de: für Kopfzeilen
+    type: variable-text
+    default: 'Roddy-Bold, cursive, Mumsies, Helvetica'
+  - 
+    id: handwritten-font-c
+    title: Handwritten Character Font
+    description: for Characters
+    title.de: Handschrift für Characterschrift
+    description.de: für Charactere
+    type: variable-text
+    default: 'Quikhand, cursive, Mumsies, Helvetica'
+  -
+    id: custom-fsz-2
+    title: Handwritten Font size
+    title.de: Eigene Größe für Handschrift
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: poetry-font-chars
+    title: Poetry Fonts
+    title.de: Poesie
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: poetry-initial
+    title: Initial
+    description: for paragraph Initials (default=DieterCaps)
+    title.de: Initialie
+    description.de: Großer Anfangsbuchstabe (Standard="Manuskript Gothisch")
+    type: variable-text
+    default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
+  - 
+    id: poetry-font-h 
+    title: Poetry Heading
+    description: for poetry titles (default=Mumsies)
+    title.de: Poesie Überschrift
+    description.de: für Poesie-Überschriften (Standard=Manuskript Gothisch)
+    type: variable-text
+    default: 'Manuskript Gothisch, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  - 
+    id: poetry-font-c
+    title: Poetry Text
+    description: for poetry character fonts
+    title.de: Poesie Charakterschrift
+    description.de: Charakterschrift für Poetik
+    type: variable-text
+    default: 'cursive, Mumsies, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  -
+    id: custom-fsz-3
+    title: Poetry Font size
+    title.de: Eigene Größe für Poesieschrift
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: font-custom
+    title: Custom Thema
+    title.de: Eigenes Thema
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: custom-font-h
+    title: Custom Header Font
+    description: for Headers
+    title.de: Eigene Schrift für Kopfzeilen
+    description.de: für Kopfzeilen
+    type: variable-text
+    default: '"Century Gothic", Inter, Roboto, Helvetica'
+  - 
+    id: custom-font-c
+    title: Custom Character Font
+    description: for Characters
+    title.de: Eigene Schrift für Characterschrift
+    description.de: für Charactere
+    type: variable-text
+    default: '"Century Gothic", Inter, Roboto, Helvetica'
+  -
+    id: custom-fsz-4
+    title: Custom Font size
+    title.de: Eigene Größe für Kopfzeilen
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: font-mono
+    title: Diagrams - Monospaced
+    title.de: Diagramme - Konstantschrift
+    type: heading
+    level: 3
+    collapsed: true
   - 
     id: font-monospace
     title: Monospace Font
@@ -100,46 +267,6 @@ settings:
     description.de: für Diagramme
     type: variable-text
     default: 'Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  -
-    id: poetry-fonts
-    title: Poetry Fonts
-    title.de: Poesie
-    type: heading
-    level: 2
-    collapsed: true
-  - 
-    id: poetry-initial
-    title: Initial
-    description: for paragraph Initials (default=DieterCaps)
-    title.de: Initialie
-    description.de: Großer Anfangsbuchstabe (Standard="Manuskript Gothisch")
-    type: variable-text
-    default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
-  - 
-    id: poetry-h
-    title: Poetry Heading
-    description: for poetry titles (default=Mumsies)
-    title.de: Poesie Überschrift
-    description.de: für Poesie-Überschriften (Standard=Mumsies)
-    type: variable-text
-    default: 'Mumsies, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  - 
-    id: poetry-n
-    title: Poetry Text
-    description: for poetry character fonts
-    title.de: Poesie Charakterschrift
-    description.de: Charakterschrift für Poetik
-    type: variable-text
-    default: 'Mumsies, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  -
-    id: deco-scale
-    title: Resize Poetry Decorations
-    title.de: Poesie Dekorationen anpassen
-    type: variable-number-slider
-    default: 0.6
-    min: 0.1
-    max: 1.2
-    step: 0.1
   -  
     id: heading-spacing
     title: Spacing
@@ -194,7 +321,7 @@ settings:
     description: left, right, axis, block
     title.de: Schriftsatzart (global)
     description.de: Linksbündiger, Rechtsbündiger -Flattersatz, Axialsatz, Blocksatz
-    id: text-align
+    id: glob-align
     type: class-select
     allowEmpty: false
     default: align-l
@@ -212,11 +339,37 @@ settings:
             label: B
             value: align-b
   -
+    title: Vault name - appearance
+    description: none (0), compact (1), standard (2)
+    title.de: Vault Name - Ansicht
+    description.de: Nichts (0), kompakt (1), Standard (2)
+    id: vault-name-s
+    type: class-select
+    allowEmpty: false
+    default: vault-name-a
+    options:
+        - 
+            label: 𝒩 0
+            value: vault-name-a
+        - 
+            label: 𝒩 1
+            value: vault-name-b
+        -
+            label: 𝒩 2
+            value: vault-name-c
+  -
     id: center-header
     title: Centered headers
     description: center all headers
-    title.de: Überschriften zentriert
-    description.de: alle Überschriften zentriert
+    title.de: Überschriften mittig
+    description.de: alle Überschriften mittig ausrichten
+    type: class-toggle
+  -
+    id: hr-break
+    title: Horizontal Lines - hard break
+    description: strict line break 
+    title.de: Trennlinie - Umbruch
+    description.de: strikter Zeilenumbruch
     type: class-toggle
   -
     id: stacked-tabs-focused
@@ -268,6 +421,7 @@ settings:
     title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
+    format: px
     default: 100
     min: 50
     max: 200
@@ -295,6 +449,7 @@ settings:
     title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
+    format: px
     default: 100
     min: 50
     max: 200
@@ -322,6 +477,7 @@ settings:
     title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
+    format: px
     default: 100
     min: 50
     max: 200
@@ -349,6 +505,7 @@ settings:
     title: Frame tiling
     title.de: Rahmenteilung
     type: variable-number-slider
+    format: px
     default: 100
     min: 50
     max: 200
@@ -395,12 +552,31 @@ settings:
     description.de: Vergrößerung beim überfahren
     type: class-toggle
   -
-    id: better-zoom
+    id: zoom-svg
     title: Mobile - Mermaid Proportions
     description: default diagram proportions
     title.de: Mobilgerät - Mermaid Proportionen
     description.de: Standard Diagramm Proportionen
     type: class-toggle
+  -
+    id: banner-h
+    title: Banner height
+    title.de: Banner Höhe
+    type: variable-number-slider
+    format: px
+    default: 240
+    min: 140
+    max: 500
+    step: 50
+  -
+    id: deco-scale
+    title: Resize Poetry Decorations
+    title.de: Poesie Dekorationen anpassen
+    type: variable-number-slider
+    default: 0.6
+    min: 0.1
+    max: 1.2
+    step: 0.1
   -
     id: pictwall-opt
     title: Image wall
@@ -485,9 +661,9 @@ settings:
     collapsed: true
   -
     id: custom-colors-scheme
-    title: Custom color
+    title: Custom Theme
     description: your own color scheme
-    title.de: Eigene Farben
+    title.de: Eigenes Thema
     description.de: Wähle eigenes Farbschema
     type: heading
     level: 2
@@ -803,7 +979,7 @@ settings:
   -
     id: show-ribbon-l
     title: Sidebar, left
-    description: restore sidebar placement
+    description: restore left sidebar
     title.de: Seitenleiste, Links
     description.de: Wiederherstellung Seitenleiste
     type: class-toggle
@@ -820,13 +996,6 @@ settings:
     description: restore path in title bar
     title.de: Notizpfad
     description.de: Wiederherstellung Pfad (Titelleiste)
-    type: class-toggle
-  -
-    id: show-vault-name
-    title: Vault name
-    description: restore vault name
-    title.de: Vault Name
-    description.de: Wiederherstellung Vault Name
     type: class-toggle
   -
     id: show-tab-name
@@ -873,9 +1042,9 @@ settings:
   -
     id: edgy-tables
     title: Tables, edgy
-    description: restore edgy tables
+    description: restore edgy tables (for colored-monochrome)
     title.de: Tabellen, Eckig
-    description.de: Wiederherstellung eckige Tabellen
+    description.de: Wiederherstellung eckige Tabellen (für farbige-sw)
     type: class-toggle
   -
     id: show-strikeout
@@ -883,6 +1052,13 @@ settings:
     description: restore strikeout line (tasks)
     title.de: Aufgaben, durchstrichen
     description.de: Wiederherstellung durchstrichene Aufgaben
+    type: class-toggle
+  -
+    id: show-ls-marker
+    title: List counter marker
+    description: restore counter marker (List)
+    title.de: Listen Aufzählzeichen
+    description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
   -
     id: hide-gui
@@ -944,8 +1120,8 @@ body {
     --editor-font: var(--default-font), var(--default-font);
     --font-text-theme: var(--default-font);
     --font-interface-theme: var(--default-font);
+    --logo-text: "~DUNE~";
 
-    --large-h1: 2em;
     --h1-font: var(--header-font);
     --h2-font: var(--header-font);
     --h3-font: var(--header-font);
@@ -955,13 +1131,18 @@ body {
     --mermaid-font: Roboto;
     --font-monospace: monospace;
 
-    /* loading screen cursive */
-    --logo-text: "~DUNE~";
+    --glob-fsz: 16px;
+    --custom-fsz-1: var(--glob-fsz);
+    --custom-fsz-2: var(--glob-fsz);
+    --custom-fsz-3: var(--glob-fsz);
+    --custom-fsz-4: var(--glob-fsz);
 
+    --large-h1: 2em;
     --custom-margin-above-header: 20px;
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
 
+    --banner-h: 240px;
     --pictwall-height: 200px;
     --pictwall-width: 1400px;
 
@@ -1225,7 +1406,7 @@ Vault loading
 /* Logo */
 :not(.default-loading-page) .progress-bar-message:before {
     content: var(--logo-text);
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Louis George Cafe', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
     line-height: normal;
     font-size: 6em;
@@ -1276,6 +1457,83 @@ body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-fold
     content: "";
     margin-left: -20%;
     border-radius: 4px;
+}
+
+.vault-name-a.is-phone span.workspace-drawer-header-name-text {
+    visibility: hidden;
+    width: 0;
+}
+
+body:is(.vault-name-b, .vault-name-c).is-phone span.workspace-drawer-header-name-text {
+    visibility: visible;
+    width: initial;
+}
+
+/* hide vault Name */
+.vault-name-a .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
+    height: 0;
+    width: 0;
+}
+
+.vault-name-a .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    height: 8px;
+    background: var(--text-accent-special);
+    border-radius: 4px;
+    padding-bottom: 6px;
+}
+
+.vault-name-b .nav-folder.mod-root>.nav-folder-title {
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    /* margin-left: -1.5em; */
+    width: auto;
+}
+
+/* vault name color */
+body:is(.vault-name-b, .vault-name-c) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+    color: gray;
+}
+
+body.no-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name-text:is(:not(.vault-name-a)) {
+    visibility: visible !important;
+    width: auto;
+}
+
+/* spacing bw icon & vault name */
+.workspace-drawer-header-switcher {
+    margin-left: 0.4em;
+}
+
+body.compass-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--compass-icon);
+    scale: 1.4;
+}
+
+body.design-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--design-icon);
+    scale: 1.4;
+}
+
+body.code-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--code-icon);
+    scale: 1.4;
+}
+
+body.bible-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--bible-icon);
+    scale: 1.4;
+}
+
+body.soup-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--soup-icon);
+    scale: 1.4;
+}
+
+body.game-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+    content: var(--game-icon);
+    scale: 1.4;
 }
 
 /* hide vault name */
@@ -1340,11 +1598,17 @@ body.profile-pic-mono:is(.is-phone.theme-dark) .workspace-drawer.mod-left .works
 }
 
 /* drag area */
-body:not(.profile-pic, .profile-banner) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
+body:not(.profile-pic, .profile-banner, .vault-name-b, .vault-name-c) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
     height: 1em;
-    border: 2px solid var(--text-accent-special);
     border-radius: 4px;
 }
+
+body:not(.profile-pic, .profile-banner) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    content: " ↓";
+    align-items: center;
+    filter: opacity(0.5);
+}
+
 
 /*----------------------------------------------------------------
 NAVI BAR
@@ -1352,7 +1616,6 @@ NAVI BAR
 
 .is-phone .workspace-drawer .nav-buttons-container .nav-action-button {
     z-index: 3;
-    margin: -2px;
 }
 
 .is-phone .workspace-drawer-tab-container>* {
@@ -1441,6 +1704,8 @@ FOLDERs - Navi Tree
 /* Vault name Big */
 .nav-folder.mod-root>.nav-folder-title {
     font-size: 2em;
+    padding-left: 6px;
+    /* padding-top: 0; */
 }
 
 /* .theme-dark .nav-folder.mod-root>.nav-folder-title:hover {
@@ -1455,6 +1720,8 @@ FOLDERs - Navi Tree
 
 .nav-folder.mod-root>.nav-folder-title:hover {
     height: auto;
+    padding-left: 6px;
+    /* padding-top: 0; */
 }
 
 .nav-file-title,
@@ -1518,7 +1785,7 @@ FOLDERs - Navi Tree
     line-height: normal;
 }
 
-/* keep original highlight */
+/* 10 Top level Folders */
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]:hover>.nav-folder-title-content,
@@ -1531,6 +1798,20 @@ FOLDERs - Navi Tree
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]:hover>.nav-folder-title-content {
     color: white;
     background-color: revert;
+}
+
+/* lock colors top folder icons */
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]:hover>.nav-folder-title-content::after,
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]:hover>.nav-folder-title-content::after {
+    filter: invert(1);
 }
 
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"],
@@ -1638,7 +1919,7 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
 }
 
 .is-phone .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
-    height: revert;
+    padding: 4px 0;
 }
 
 /* folder tree selection  */
@@ -1653,15 +1934,28 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable.nav-folder-title:hov
 }
 
 /* sidepanel */
-body:not(.is-phone) .tree-item-self.is-clickable:hover {
+body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover {
     background-color: var(--interactive-accent-rgb);
     color: black;
+}
+
+body:not(.is-phone).theme-light .tree-item-self.is-clickable:hover {
+    background-color: var(--interactive-accent-rgb);
+    color: var(--text-normal);
 }
 
 body:not(.is-phone) .tree-item-self.is-clickable.nav-file-title.recent-files-title:hover .tree-item-inner.nav-file-title-content.recent-files-title-content {
     background: var(--interactive-accent-rgb);
     color: black;
 }
+
+body:not(.is-phone) .theme-dark .tree-item-self.is-clickable:hover>.nav-file-title-content {
+    color: black;
+}
+
+/* body:not(.is-grabbing, .theme-light) .tree-item-self.is-clickable:hover>.tree-item-icon {
+  filter: invert(1);
+} */
 
 .search-result-file-matched-text {
     color: black;
@@ -1680,12 +1974,16 @@ body:not(.is-phone) .tree-item-self.is-clickable.nav-file-title.recent-files-tit
     color: black;
 }
 
-.theme-dark .tree-item-self.is-clickable:hover .nav-folder-collapse-indicator {
+.theme-dark .tree-item-self.is-clickable:not(:hover)>.tree-item-icon {
+    filter: brightness(1.5);
+}
+
+body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-icon {
     filter: brightness(0.2);
 }
 
-.theme-dark .tree-item-icon.collapse-icon {
-    filter: brightness(1.5);
+.theme-dark .tree-item-self.is-clickable:hover>.nav-folder-collapse-indicator .tree-item.nav-file.recent-files-file {
+    height: 24px;
 }
 
 .theme-dark .tree-item-inner.nav-folder-title-content:hover {
@@ -1727,7 +2025,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* lists corrected */
 .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
     margin-right: -16px;
-    height: 30px;
+    border-radius: 4px;
 }
 
 .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
@@ -1756,9 +2054,9 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--background-primary);
 }
 
-.is-phone .nav-file-title-content {
-    top: 4px;
-    position: relative;
+.tree-item-self.tag-pane-tag.is-clickable:hover,
+.search-result-file-match:hover {
+    background: var(--nav-item-background-active);
 }
 
 .nav-file-title.is-being-dragged,
@@ -1782,9 +2080,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     border: none;
 }
 
-.theme-dark .tree-item-self:hover>.tree-item-icon {
-    filter: contrast(0.2) brightness(1.6);
-}
 
 /* Handle to resize folder tree */
 .workspace-leaf-resize-handle:hover {
@@ -1821,21 +2116,6 @@ h6,
 .HyperMD-header .cm-header-5,
 .HyperMD-header .cm-header-6 {
     font-family: inherit;
-}
-
-.center-header .markdown-rendered h1,
-.center-header .markdown-rendered h2,
-.center-header .markdown-rendered h3,
-.center-header .markdown-rendered h4,
-.center-header .markdown-rendered h5,
-.center-header .markdown-rendered h6,
-.center-header .HyperMD-header-1,
-.center-header .HyperMD-header-2,
-.center-header .HyperMD-header-3,
-.center-header .HyperMD-header-4,
-.center-header .HyperMD-header-5,
-.center-header .HyperMD-header-6 {
-    text-align: center;
 }
 
 .recipes h1,
@@ -1887,15 +2167,133 @@ h6,
     width: 80%;
 }
 
+
+/* 
+Font models 
+*/
+
+/* local */
+.ftheme-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--default-font-h) !important;
+}
+
+.ftheme-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--handwritten-font-h) !important;
+}
+
+.ftheme-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--poetry-font-h) !important;
+}
+
+.ftheme-4 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--custom-font-h) !important;
+}
+
+/* glob */
+/* default */
+.fontmod-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.fontmod-1 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--default-font-h);
+}
+
+.fontmod-1 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
+.fontmod-1 .markdown-source-view:not(.HyperMD-header) {
+    font-family: var(--default-font);
+    font-size: var(--custom-fsz-1);
+}
+
+/* handwritten */
+.fontmod-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.fontmod-2 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--handwritten-font-h);
+}
+
+.fontmod-2 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
+.fontmod-2 .markdown-source-view:not(.HyperMD-header) {
+    font-family: var(--handwritten-font-c);
+    font-size: var(--custom-fsz-2);
+}
+
+/* poetry */
+.fontmod-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.fontmod-3 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--poetry-font-h);
+}
+
+.fontmod-3 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
+.fontmod-3 .markdown-source-view:not(.HyperMD-header) {
+    font-family: var(--poetry-font-c);
+    font-size: var(--custom-fsz-3);
+}
+
+/* custom */
+.fontmod-4 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+.fontmod-4 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--custom-font-h);
+}
+
+.fontmod-4 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
+.fontmod-4 .markdown-source-view:not(.HyperMD-header) {
+    font-family: var(--custom-font-c);
+    font-size: var(--custom-fsz-4);
+}
+
 /* Centered title */
+.center-header .markdown-rendered h1,
+.center-header .markdown-rendered h2,
+.center-header .markdown-rendered h3,
+.center-header .markdown-rendered h4,
+.center-header .markdown-rendered h5,
+.center-header .markdown-rendered h6,
+.center-header .HyperMD-header-1,
+.center-header .HyperMD-header-2,
+.center-header .HyperMD-header-3,
+.center-header .HyperMD-header-4,
+.center-header .HyperMD-header-5,
+.center-header .HyperMD-header-6 {
+    text-align: center;
+}
+
 .center-header .inline-title,
 .movies .inline-title {
     text-align: center;
 }
 
-h1,
-.HyperMD-header-1 {
+/* 
+scale Header size
+} */
+
+
+body:not(.is-phone) :is(h1, .HyperMD-header-1, .markdown-rendered h1) {
     font-size: var(--large-h1);
+}
+
+body:not(.is-phone) :is(h2, .HyperMD-header-2, .markdown-rendered h2) {
+    font-size: calc(var(--large-h1) - 6px);
+}
+
+body:not(.is-phone) :is(h3, .HyperMD-header-3, .markdown-rendered h3) {
+    font-size: calc(var(--large-h1) - 12px);
+}
+
+body:not(.is-phone) :is(h4, .HyperMD-header-4, .markdown-rendered h4) {
+    font-size: calc(var(--large-h1) - 18px);
+}
+
+body:not(.is-phone) :is(h5, .HyperMD-header-5, .markdown-rendered h5) {
+    font-size: calc(var(--large-h1) - 24px);
+}
+
+body:not(.is-phone) :is(h6, .HyperMD-header-6, .markdown-rendered h6) {
+    font-size: calc(var(--large-h1) - 32px);
 }
 
 .h1-3 h1,
@@ -1927,6 +2325,7 @@ h1,
 .h1-8 .HyperMD-header-1 {
     font-size: 8em;
 }
+
 
 .callout[data-callout="font-s"] {
     background: transparent;
@@ -2297,10 +2696,6 @@ span.addtip {
     top: -5px;
 }
 
-/* .markdown-source-view.mod-cm6 .cm-content>.cm-line.HyperMD-list-line {
-    margin-left: 0.7em !important;
-} */
-
 ol>li::marker,
 ul>li::marker,
 .cm-s-obsidian .cm-formatting-list {
@@ -2316,6 +2711,11 @@ sup,
 sub {
     width: fit-content;
     white-space: break-spaces;
+}
+
+/* modded */
+.markdown-rendered pre {
+    width: fit-content;
 }
 
 .smaller-code .markdown-rendered pre code {
@@ -2412,11 +2812,12 @@ a[href^="#gray"]+mark {
 
 a[href^="#gray"]+strong,
 a[href^="#gray"]+em {
-    color: gray;
+    color: rgb(128, 128, 128);
 }
 
 a[href^="#hlcol"]+mark {
     background-color: var(--hl-col);
+    color: var(--text-normal);
 }
 
 a[href^="#hlcol"]+strong,
@@ -2847,14 +3248,9 @@ div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callo
     clear: both;
 }
 
-/* fix for blockquote underlap the float layout - locks phone */
-/* .markdown-preview-view :is(blockquote) {
-  overflow-x: auto;
-} */
-
 /* fix for blockquote underlap */
 .markdown-preview-view :is(p) {
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
     overflow: unset;
 }
 
@@ -3088,11 +3484,6 @@ code.language-fnote.is-loaded {
     width: 100%;
 }
 
-ul>li.task-list-item[data-task]:not([data-task=x], [data-task=X]) {
-    min-width: var(--min-boxwidth);
-    width: fit-content;
-}
-
 .align-a pre[class^="language-memo"],
 .align-a pre[class="language-fnote"] {
     display: flex;
@@ -3106,7 +3497,7 @@ ul>li.task-list-item[data-task]:not([data-task=x], [data-task=X]) {
 }
 
 /* .read-more */
-.callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
+.callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
     background: transparent;
     mix-blend-mode: normal;
     border: 0;
@@ -3116,62 +3507,59 @@ ul>li.task-list-item[data-task]:not([data-task=x], [data-task=X]) {
     padding-right: 0;
 }
 
-body:not(.is-phone) .markdown-preview-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
-    margin-bottom: -10px;
-    margin-top: -26px;
-}
-
-body:not(.is-phone) .markdown-source-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
-    margin-bottom: -10px;
-    margin-top: -8px;
-}
-
-body.is-phone .markdown-preview-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
-    margin-top: -14px;
-}
-
-body.is-phone .markdown-source-view .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) {
+/* body:not(.is-phone) */
+.markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
+    padding-bottom: 0;
     padding-top: 0;
 }
 
-.callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"]) .callout-fold {
-    display: none;
+body:not(.is-phone) .markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
+    margin-bottom: 1px;
+    margin-top: 3px;
 }
 
-.align-r .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-title {
-    justify-content: flex-end;
+.is-phone .markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
+    margin-bottom: -16px;
+    margin-top: -12px;
 }
 
-.align-a .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-title {
-    justify-content: center;
+.is-phone .callout[data-callout="read-more"] .callout-content,
+.is-phone .callout[data-callout="weiterlesen"] .callout-content {
+    margin-bottom: -18px;
 }
 
-.callout[data-callout="read-more…"] p,
-.callout[data-callout="weiterlesen…"] p {
-    padding: 0 0;
-    margin-bottom: 8px;
+body:not(.is-phone) .callout[data-callout="read-more"] .callout-content,
+body:not(.is-phone) .callout[data-callout="weiterlesen"] .callout-content {
+    margin-bottom: 0px;
+    margin-top: 1px;
 }
 
-.callout[data-callout="read-more…"] .callout-icon,
-.callout[data-callout="weiterlesen…"] .callout-icon {
+.callout[data-callout="read-more"] .callout-icon,
+.callout[data-callout="weiterlesen"] .callout-icon {
     padding: 0;
     display: none;
 }
 
-.callout[data-callout="read-more…"] .callout-title,
-.callout[data-callout="weiterlesen…"] .callout-title {
+.callout[data-callout="read-more"] .callout-title,
+.callout[data-callout="weiterlesen"] .callout-title {
     font-size: medium;
     color: var(--text-accent-special);
 }
 
-body:not(.is-phone) .callout[data-callout="read-more…"] .callout-content,
-body:not(.is-phone) .callout[data-callout="weiterlesen…"] .callout-content {
-    margin-bottom: -10px;
+.callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) .callout-fold {
+    display: none;
 }
 
-.is-phone .callout[data-callout="read-more…"] .callout-content,
-.is-phone .callout[data-callout="weiterlesen…"] .callout-content {
-    margin-bottom: -12px;
+.callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title::after {
+    content: "…";
+}
+
+.align-r .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title {
+    justify-content: flex-end;
+}
+
+.align-a .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title {
+    justify-content: center;
 }
 
 /*----------------------------------------------------------------
@@ -3242,7 +3630,27 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 }
 
 .callout.callout[data-callout^=infobox] h1 {
-    font-size: revert;
+    font-size: calc(1.8em);
+}
+
+.callout.callout[data-callout^=infobox] h2 {
+    font-size: calc(1.8em - 4px);
+}
+
+.callout.callout[data-callout^=infobox] h3 {
+    font-size: calc(1.8em - 8px);
+}
+
+.callout.callout[data-callout^=infobox] h4 {
+    font-size: calc(1.8em - 12px);
+}
+
+.callout.callout[data-callout^=infobox] h5 {
+    font-size: calc(1.8em - 16px);
+}
+
+.callout.callout[data-callout^=infobox] h6 {
+    font-size: calc(1.8em - 20px);
 }
 
 /* Hide collapse btn, icon and title of original Callouts in LP - attention */
@@ -3315,6 +3723,28 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 
 .callout.callout[data-callout^=merge] p {
     margin: 0 auto;
+}
+
+/* 
+respect breaks 
+*/
+/* no breaks */
+.padding-0.markdown-preview-view :is(p) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* default - bottom break */
+.markdown-preview-view :is(p),
+.padding-1.markdown-preview-view :is(p) {
+    margin-top: 0;
+    margin-bottom: revert;
+}
+
+/* top & bottom p */
+.padding-2.markdown-preview-view :is(p) {
+    margin-top: revert;
+    margin-bottom: revert;
 }
 
 .is-live-preview .admonition-content>*:first-child {
@@ -3497,7 +3927,7 @@ body:not(.is-phone) .modal {
 /* level 1 header */
 .setting-item.setting-item-heading.style-settings-heading[data-level="1"] {
     margin-left: -14px;
-    border-bottom: 2px solid var(--h1-color);
+    border-bottom: 2px solid var(--text-muted);
 }
 
 /* compact view for phone */
@@ -3511,27 +3941,17 @@ body:not(.is-phone) .modal {
     margin-bottom: 0;
 }
 
-.style-settings-heading[data-level="0"]+.style-settings-container .style-settings-collapse-indicator {
-    margin-left: -8px;
-}
-
-/* Theme Title */
-.style-settings-heading[data-level="0"] .setting-item-name {
-    font-size: 2em !important;
-}
-
-.style-settings-heading[data-level="1"]+.setting-item-description {
-    margin-left: 18px;
-}
-
 /* level 2 header */
-.setting-item.setting-item-heading.style-settings-heading[data-level="2"] {
+.setting-item.setting-item-heading.style-settings-heading[data-level="2"],
+.setting-item.setting-item-heading.style-settings-heading[data-level="3"] {
     margin-top: 8px;
     border-bottom: none;
 }
 
-.is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="2"] {
+.is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="2"],
+.is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="3"] {
     padding: inherit;
+    margin-top: 0.5em;
 }
 
 /* general spacing */
@@ -3678,7 +4098,11 @@ a:hover {
 }
 
 .is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
-    background-color: transparent;
+    background-color: rgb(128 128 128 / 20%);
+}
+
+.is-mobile .markdown-rendered pre.language-br>button.copy-code-button {
+    display: none;
 }
 
 /* blob copy btn */
@@ -3722,6 +4146,11 @@ a:hover {
     right: 0;
 }
 
+/* min callout height - source mode */
+.markdown-source-view .cm-embed-block.cm-callout {
+    min-height: 30px;
+}
+
 /* ignore fold icon */
 .is-phone .callout-fold {
     display: none;
@@ -3751,6 +4180,28 @@ body:not(.is-grabbing) .nav-file-title:hover,
 /*----------------------------------------------------------------
 Fancy Horizontal Rulers
 ----------------------------------------------------------------*/
+.top-br hr::before {
+    height: calc(16px * 4);
+    display: block;
+    content: "";
+}
+
+.bottom-br hr::after {
+    height: calc(16px * 4);
+    display: block;
+    content: "";
+}
+
+.tb-br hr::before,
+.tb-br hr::after {
+    height: calc(16px * 2);
+    display: block;
+    content: "";
+}
+
+.hr-break hr {
+    width: 100%;
+}
 
 hr {
     max-width: 100%;
@@ -4067,11 +4518,15 @@ body:is(.is-phone) .movies.markdown-preview-view table {
 .movies.markdown-preview-view td {
     border: none;
     min-width: 200px;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .is-phone .movies td {
     border: none;
     min-width: 150px;
+    max-width: 250px;
     white-space: nowrap;
 }
 
@@ -4116,6 +4571,7 @@ body:is(.is-phone) .movies.markdown-preview-view table {
 
 .movies .footnote-ref {
     vertical-align: baseline;
+    color: transparent !important;
 }
 
 .movies .footnote-link::before {
@@ -4315,6 +4771,15 @@ STYLED TABLES
     background: var(--color-blue);
 }
 
+.theme-light .table-m thead tr>th {
+    text-rendering: optimizeLegibility;
+}
+
+.theme-dark .table-m thead tr>th {
+    /* background: #CECECE; */
+    filter: invert(1);
+}
+
 .table-col thead tr>th {
     background: var(--tables-hlcol) !important;
     text-rendering: optimizeLegibility;
@@ -4367,13 +4832,17 @@ STYLED TABLES
 
 .theme-light .table-xym thead tr>th,
 .theme-light .table-xym tbody tr>td:first-child {
-    background: gray;
+    background: #808080;
+    color: white;
+    font-weight: bold;
     text-rendering: optimizeLegibility;
 }
 
 .theme-dark .table-xym thead tr>th,
 .theme-dark .table-xym tbody tr>td:first-child {
     background: #313131;
+    font-weight: bold;
+    filter: invert(1);
 }
 
 .table-xy-col thead tr>th,
@@ -4386,7 +4855,6 @@ STYLED TABLES
 .table-xyr tbody tr>td:first-child,
 .table-xyg tbody tr>td:first-child,
 .table-xyb tbody tr>td:first-child,
-.table-xym tbody tr>td:first-child,
 .table-xy-col tbody tr>td:first-child {
     color: white;
     font-weight: bold;
@@ -4456,36 +4924,36 @@ STYLED TABLES
     color: #4d4d4d;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) table {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) table {
     border-collapse: separate;
     border-spacing: 0px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) tr>th:not(:last-child) {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) tr>th:not(:last-child) {
     border-right: transparent;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) tr:not(:last-child)>td {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) tr:not(:last-child)>td {
     border-bottom: transparent;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) td:not(:last-child) {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) td:not(:last-child) {
     border-right: transparent;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) table th:first-of-type {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) table th:first-of-type {
     border-top-left-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) table th:last-of-type {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) table th:last-of-type {
     border-top-right-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) table tr:last-child td:first-child {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) table tr:last-child td:first-child {
     border-bottom-left-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xy-col) table tr:last-child td:last-child {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-m, .table-col, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xym, .table-xy-col) table tr:last-child td:last-child {
     border-bottom-right-radius: 6px;
 }
 
@@ -4587,11 +5055,11 @@ ASIDE NOTES
 }
 
 .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
-    margin: 22px 22px 22px 0;
+    margin: 22px 22px 22px -15px;
 }
 
 .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
-    margin: 22px 0 22px 22px;
+    margin: 22px -15px 22px 22px;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
@@ -4623,30 +5091,13 @@ ASIDE NOTES
 }
 
 /*----------------------------------------------------------------
-Poetry - Preview mode
+Poetry - Preview mode - important signpost
 ----------------------------------------------------------------*/
-.poetry .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.poetry .markdown-preview-view,
-.poetry .cm-line {
-    text-align: center;
-    font-family: var(--poetry-h);
-}
 
 /* restore zen-view */
 .poetry .markdown-preview-sizer,
 .poetry .markdown-preview-section {
     margin: auto !important;
-}
-
-.poetry p,
-.poetry i,
-.poetry ul,
-.poetry li,
-.poetry em,
-.poetry .cm-em .cm-em,
-.poetry .external-link {
-    font-family: var(--poetry-n);
-    text-align: center !important;
 }
 
 .poetry img {
@@ -4657,17 +5108,22 @@ Poetry - Preview mode
 
 /* Raisecap */
 
+.callout[data-callout="raisecap"],
+.callout[data-callout="dropcap"] {
+    padding: 0;
+}
+
 .callout[data-callout="raisecap"] {
     background: transparent;
     mix-blend-mode: normal;
     width: auto;
-    margin-left: -1.5em !important;
     padding-top: var(--custom-margin-above-header);
     padding-bottom: inherit;
 }
 
 /* remove icon & title */
-.callout.callout[data-callout=raisecap] .callout-title {
+.callout.callout[data-callout=raisecap] .callout-title,
+.callout.callout[data-callout=dropcap] .callout-title {
     display: none;
 }
 
@@ -4682,6 +5138,40 @@ Poetry - Preview mode
     line-height: 1.55em;
     padding-top: 3em;
     margin-bottom: initial;
+}
+
+/* Dropcap */
+.cm-embed-block.cm-callout .callout[data-callout="dropcap"] {
+    background: transparent;
+    mix-blend-mode: normal;
+    height: 6em;
+    line-height: 0.6;
+}
+
+.markdown-preview-view .callout[data-callout="dropcap"] {
+    background: transparent;
+    mix-blend-mode: normal;
+    float: left;
+    min-width: fit-content;
+    height: 120px;
+    margin: -2.4em 0 -1em 0;
+}
+
+.markdown-preview-view .callout[data-callout="dropcap"] p {
+    margin-top: -1em;
+    padding-right: 8px;
+    width: fit-content;
+}
+
+.markdown-preview-view .callout[data-callout="dropcap"] .callout-content {
+    width: fit-content;
+    height: 120px;
+}
+
+.callout[data-callout="dropcap"] p:first-letter {
+    font-family: var(--poetry-initial);
+    font-size: 110px;
+    color: var(--drop-cap-col);
 }
 
 /*----------------------------------------------------------------
@@ -4701,7 +5191,7 @@ img[alt="banner-a"] {
     top: 0;
     left: 0;
     width: 100%;
-    height: 240px;
+    height: var(--banner-h);
     object-fit: cover;
     -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
     mask-image: none;
@@ -4722,9 +5212,26 @@ img[alt='banner-b'] {
     pointer-events: none;
 }
 
+img[alt='banner-c'] {
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 0 !important;
+    pointer-events: none;
+}
+
 /* add banner-a as cssclass to reserve space for banner */
+
 .banner-a .markdown-preview-section {
     margin-top: 240px !important;
+}
+
+.banner-c .markdown-preview-section {
+    margin-bottom: auto;
 }
 
 .banner-b .markdown-preview-section {
@@ -4745,21 +5252,32 @@ img[alt='banner-b'] {
     border-radius: 0;
 }
 
+.is-phone img[alt='banner-c'] {
+    bottom: -4px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 body:is(.is-phone) .banner-a .markdown-preview-section {
-    margin-top: 130px !important;
+    margin-top: 150px !important;
 }
 
 body:is(.is-phone) .banner-b .markdown-preview-section {
     margin-top: 50px !important;
 }
 
-.markdown-source-view.mod-cm6 img:is([alt="banner-a"], [alt="banner-b"]) {
+body:is(.is-phone) .banner-c .markdown-preview-section {
+    margin-bottom: 50px !important;
+}
+
+.markdown-source-view.mod-cm6 img:is([alt="banner-a"], [alt="banner-b"], [alt="banner-c"]) {
     display: block;
     position: inherit;
 }
 
 /* hide frontmatter bc of transparency mask */
-.markdown-preview-view img:is([alt="banner-a"], [alt="banner-b"]) .frontmatter-container {
+.markdown-preview-view img:is([alt="banner-a"], [alt="banner-b"], [alt="banner-c"]) .frontmatter-container {
     display: none;
 }
 
@@ -4795,7 +5313,6 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
     object-position: 50% 80%;
 }
 
-
 img {
     margin-top: 4px;
     border-radius: 4px;
@@ -4807,6 +5324,7 @@ img[alt~='pos-r'] {
     float: right;
     clear: right;
     margin-left: 30px;
+    margin-top: 1em;
 }
 
 /* left */
@@ -4814,6 +5332,7 @@ img[alt~='pos-l'] {
     float: left;
     clear: left;
     margin-right: 30px;
+    margin-top: 1em;
 }
 
 /* center */
@@ -5009,7 +5528,6 @@ img[alt*=grid] {
 /* 
 image placed + description 
 */
-.callout[data-callout="framed"],
 .callout[data-callout="framed-l"],
 .callout[data-callout="framed-r"],
 .callout[data-callout="framed-c"] {
@@ -5019,13 +5537,6 @@ image placed + description
     width: auto;
     max-width: 50vw;
     min-width: fit-content;
-    margin: initial;
-    padding-bottom: initial;
-    overflow: initial;
-}
-
-.callout[data-callout="framed"] {
-    padding-left: 0;
 }
 
 .callout[data-callout="framed-l"] {
@@ -5048,7 +5559,6 @@ image placed + description
     text-align: center;
 }
 
-.callout[data-callout~="framed"] .callout-title,
 .callout[data-callout~="framed-l"] .callout-title,
 .callout[data-callout~="framed-r"] .callout-title,
 .callout[data-callout~="framed-c"] .callout-title {
@@ -5056,12 +5566,13 @@ image placed + description
     display: none;
 }
 
+.callout[data-callout^="framed"],
 .callout[data-callout^="framed"][data-callout-metadata~="bg"] {
     padding: 20px;
     white-space: normal;
     min-width: var(--min-boxwidth);
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .theme-light .callout[data-callout^="framed"][data-callout-metadata~="bg"] {
@@ -5073,11 +5584,11 @@ image placed + description
 }
 
 .callout[data-callout^="framed-l"][data-callout-metadata~="bg"] {
-    margin-right: 1em;
+    margin-right: 2em;
 }
 
 .callout[data-callout^="framed-r"][data-callout-metadata~="bg"] {
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 .zoom-auto .markdown-source-view.mod-cm6 .callout[data-callout="framed-r"] .internal-embed img {
@@ -5273,15 +5784,15 @@ image placed + description
 }
 
 /* phone - default mermaid zoom */
-.is-phone:not(.better-zoom) .markdown-preview-view .mermaid svg:hover,
-.is-phone:not(.better-zoom) .markdown-preview-view .mermaid svg:active {
+.is-phone:not(.zoom-svg) .markdown-preview-view .mermaid svg:hover,
+.is-phone:not(.zoom-svg) .markdown-preview-view .mermaid svg:active {
     height: 190%;
     width: 190%;
     transform: translateY(-24%);
 }
 
-.is-phone.better-zoom .markdown-preview-view .mermaid svg:hover,
-.is-phone.better-zoom .markdown-preview-view .mermaid svg:active {
+.is-phone.zoom-svg .markdown-preview-view .mermaid svg:hover,
+.is-phone.zoom-svg .markdown-preview-view .mermaid svg:active {
     height: 250%;
     width: 250%;
     transform: translateY(-24%);
@@ -5375,6 +5886,22 @@ VIDEOS
 
 span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
     display: inline;
+}
+
+[alt~="img-20"] img {
+    width: 20%;
+}
+
+[alt~="img-30"] img {
+    width: 30%;
+}
+
+[alt~="img-40"] img {
+    width: 40%;
+}
+
+[alt~="img-50"] img {
+    width: 50%;
 }
 
 /*----------------------------------------------------------------
@@ -5803,6 +6330,7 @@ body:not(.is-phone):not(.show-ui-btns) .side-dock-settings,
 body:not(.is-phone):not(.show-ui-btns) .side-dock-actions,
 body:not(.is-phone):not(.show-ui-btns) .nav-buttons-container {
     opacity: 0.2;
+    transition: opacity 0.4s ease-in;
 }
 
 body:not(.is-phone) .side-dock-actions:hover,
@@ -5833,13 +6361,24 @@ body:not(.show-ribbon-l) .mod-left-split .workspace-tab-header-container-inner {
     margin-left: 2em;
 }
 
-/* hide left ribbon */
-body:not(.show-ribbon-l) .workspace-ribbon.mod-left {
+body:not(.show-ribbon-l) .workspace-ribbon.mod-left,
+body:not(.show-ribbon-l) .workspace-tab-header-container:before {
     margin-left: -44px;
 }
 
 body:not(.show-ribbon-l) .sidebar-toggle-button.mod-left {
-    margin-left: 2.4em;
+    margin-left: 2em;
+    left: auto;
+    padding-left: 14px;
+}
+
+body:not(.show-ribbon-l) .sidebar-toggle-button.mod-left :not(.is-fullscreen) {
+    margin-left: -0.2em;
+}
+
+body:not(.show-ribbon-l).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
+    left: auto;
+    width: calc(var(--frame-left-space) + 24px);
 }
 
 .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tab-header-container-inner {
@@ -5864,6 +6403,7 @@ body:not(.show-ribbon-l) .sidebar-toggle-button.mod-left {
 
 .workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:hover {
     opacity: 1;
+    color: var(--text-accent-special);
 }
 
 body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right,
@@ -5879,26 +6419,15 @@ body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .si
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner,
 body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner {
     opacity: 0.2;
-    padding-left: inherit;
+    padding-left: 2.8em;
     transition: opacity 0.4s ease-in;
 }
 
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner:hover,
 body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:hover {
     opacity: 1;
-    padding-left: inherit;
-}
-
-/* hide vault Name */
-body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
-    height: 0;
-    width: 0;
-}
-
-body:not(.show-vault-name) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
-    height: 8px;
-    background: var(--text-accent-special);
-    border-radius: 4px;
+    /* padding-left: inherit; */
+    padding-left: 2.8em;
 }
 
 /* dim tabs */
@@ -5917,11 +6446,11 @@ body:not(.show-tooltips) .follow-link-popover {
     visibility: hidden;
 }
 
-.is-phone .tooltip.mod-right {
+/* .is-phone .tooltip.mod-right {
     margin-left: -8em;
     width: 120px !important;
     min-height: 12% !important;
-}
+} */
 
 .is-phone .workspace-drawer.mod-left .workspace-drawer-header-info {
     line-break: auto;
@@ -6207,7 +6736,7 @@ PHONE
     background-color: var(--background-primary);
     opacity: 1;
     border-radius: 4px;
-    scale: 1.2;
+    /* scale: 1.2; */
 }
 
 .is-phone .clickable-icon .mobile-navbar-tabs-action {
@@ -6253,10 +6782,6 @@ PHONE
 .is-phone .vertical-tab-header-group-items {
     background-color: transparent;
     border-radius: 0;
-}
-
-body:not(.is-phone) .theme-dark .tree-item-self.is-clickable:hover>.nav-file-title-content {
-    color: black;
 }
 
 /* highlight col folders -dragged items first line for backwd comp*/
@@ -6725,12 +7250,10 @@ input[type=checkbox]:checked:hover {
 ul>li.task-list-item[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
     text-decoration: none;
     border-radius: 4px;
-    padding-left: 30px;
-    padding-right: 4px;
-    margin-left: -26px;
+    margin-left: -30px;
     min-width: var(--min-boxwidth);
     width: fit-content;
-    padding-bottom: 4px;
+    padding: 4px 8px 4px 36px;
 }
 
 /* checkmark */
@@ -6744,15 +7267,20 @@ ul>li.task-list-item[data-task="X"] .task-list-item-checkbox {
     background-repeat: no-repeat;
 }
 
-.task-list-item.is-checked[data-task]:is([data-task="x"], [data-task="X"]) {
+.task-list-item[data-task]:is([data-task="x"], [data-task="X"]) {
     margin: auto;
+}
+
+ul>li.task-list-item.is-checked[data-task]:is([data-task=x], [data-task=X]),
+ul>li.task-list-item[data-task]:not([data-task=x], [data-task=X]) {
+    margin-left: -0.5em;
 }
 
 body:not(.show-strikeout) .task-list-item.is-checked[data-task]:is([data-task="x"], [data-task="X"]),
 body:not(.show-strikeout) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 body:not(.show-strikeout) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
     text-decoration: none;
-    color: var(--text-normal);
+    color: revert;
 }
 
 /* > — Rescheduled/Moved */
@@ -6984,6 +7512,7 @@ ul>li.task-list-item[data-task]:is([data-task=t], [data-task=a], [data-task='>']
     background-color: rgba(155, 93, 255, 0.2);
     color: rgb(155, 93, 255);
 }
+
 
 ul.contains-task-list.has-list-bullet {
     padding-right: 6px;
@@ -7745,8 +8274,18 @@ ol {
     border-radius: 4px;
 }
 
-ol {
+.theme-light ol {
     background: #7e756629;
+}
+
+.theme-dark ol {
+    background: rgb(126 117 102 / 30%);
+}
+
+body:not(.show-ls-marker) ol li::marker {
+    list-style-type: decimal;
+    content: counter(list-item) ") ";
+    display: list-item;
 }
 
 /* Hide controls */
@@ -7764,8 +8303,8 @@ ol {
     font-size: inherit;
 }
 
-.reveal .callout[data-callout="read-more…"] .callout-title,
-.reveal .callout[data-callout="weiterlesen…"] .callout-title {
+.reveal .callout[data-callout="read-more"] .callout-title,
+.reveal .callout[data-callout="weiterlesen"] .callout-title {
     font-size: inherit;
 }
 
@@ -8041,7 +8580,7 @@ PDF EXPORT
         font-size: small;
     }
 
-    .callout:is([data-callout="read-more…"], [data-callout="weiterlesen…"])>.callout-title {
+    .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title {
         margin-top: 14px;
     }
 
@@ -8182,7 +8721,7 @@ PDF EXPORT
     .poetry h5,
     .poetry h6 {
         text-align: center;
-        font-family: var(--poetry-h);
+        font-family: var(--poetry-font-h);
     }
 
     div hr {
@@ -8315,6 +8854,13 @@ PLUGINS
     filter: hue-rotate(0deg);
 }
 
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:not(:checked) {
+    scale: 0.5;
+}
+
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
+    scale: 1.2;
+}
 
 /* fix modwin on phone */
 .is-phone .modal.kanban-plugin__board-settings-modal .modal-content {
@@ -8617,29 +9163,21 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
     filter: contrast(0.1) invert(1) brightness(2.5);
 }
 
-
-/* Annotator */
-.pdfViewer .textLayer {
-    background: rgb(153 138 0) !important;
+.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxOdd {
+    fill: gray !important;
 }
 
-/* mindmap */
-.theme-light .mm-node .mm-node-content {
-    border-radius: 4px;
-    background: var(--soft-shadow);
-    color: darkblue;
+.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxEven {
+    fill: black !important;
 }
 
-.theme-dark .mm-node .mm-node-content {
-    border-radius: 4px;
-    background: burlywood;
-    color: darkblue;
+.theme-dark .mermaid-toolbar-elements-container rect.req.reqBox {
+    fill: var(--background-primary-alt) !important;
 }
 
-.mm-node.mm-root .mm-node-content {
-    background: var(--text-accent-special);
-    color: white;
-    font-weight: bold;
+#mermaid-toolbar-element-UserJourneyDiagram-0 .label,
+#mermaid-toolbar-element-UserJourneyDiagram-1 .label {
+    color: black !important;
 }
 
 /*----------------------------------------------------------------
