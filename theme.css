@@ -78,20 +78,20 @@ settings:
     default: 'AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: common-fonts
-    title: Font types
-    title.de: Schrifttypen
+    title: Typesets
+    title.de: Schriftsätze
     type: heading
     level: 2
     collapsed: true
   -
     title: Font themes (global)
-    description: pick a custom font scheme
+    description: Standard (1), Handwritten (2), Poetry (3), Custom Typeset (4)
     title.de: Schriften thema (global)
-    description.de: Wähle eigenes Schriftenthema
+    description.de: Standard (1), Handschrift (2), Poesie (3), Eigener Schriftsatz (4)
     id: glob-fonts
     type: class-select
     allowEmpty: false
-    default: 𝞪-1
+    default: fontmod-1
     options:
         - 
             label: 𝞪-1
@@ -107,8 +107,7 @@ settings:
             value: fontmod-4
   -
     id: font-standard
-    title: Standard
-    title.de: Standard
+    title: 1 - Standard
     type: heading
     level: 3
     collapsed: true
@@ -139,8 +138,8 @@ settings:
     step: 1
   -
     id: font-handwritten
-    title: Handwritten
-    title.de: Handschrift
+    title: 2 - Handwritten
+    title.de: 2 - Handschrift
     type: heading
     level: 3
     collapsed: true
@@ -172,8 +171,8 @@ settings:
     step: 1
   -
     id: poetry-font-chars
-    title: Poetry Fonts
-    title.de: Poesie
+    title: 3 - Poetry
+    title.de: 3 - Poesie
     type: heading
     level: 3
     collapsed: true
@@ -192,7 +191,7 @@ settings:
     title.de: Poesie Überschrift
     description.de: für Poesie-Überschriften (Standard=Manuskript Gothisch)
     type: variable-text
-    default: 'Manuskript Gothisch, cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+    default: '"Manuskript Gothisch", cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   - 
     id: poetry-font-c
     title: Poetry Text
@@ -213,8 +212,8 @@ settings:
     step: 1
   -
     id: font-custom
-    title: Custom Thema
-    title.de: Eigenes Thema
+    title: 4 - Custom Typeset
+    title.de: 4 - Eigener Schriftsatz
     type: heading
     level: 3
     collapsed: true
@@ -270,7 +269,7 @@ settings:
   -  
     id: heading-spacing
     title: Spacing
-    title.de: Abstände
+    title.de: Anordung
     type: heading
     level: 2
     collapsed: true
@@ -278,9 +277,10 @@ settings:
     id: custom-margin-above-header
     title: Custom Margin Above Header
     title.de: Überschriften Abstand-Oben
+    description: (20)
     type: variable-number-slider
     format: px
-    default: 20
+    default: 0
     min: 0
     max: 30
     step: 2
@@ -288,16 +288,17 @@ settings:
     id: custom-margin-below-header
     title: Custom Margin Below Header
     title.de: Überschriften Abstand-Unten
+    description: (8)
     type: variable-number-slider
     format: px
-    default: 8
+    default: 0
     min: 0
     max: 14
     step: 2
   -
     id: large-h1
-    title: Custom h1 size
-    title.de: Überschrift H1 - Spezial
+    title: Custom h1 size (PC)
+    title.de: Überschrift H1 - Spezial (PC)
     type: variable-number-slider
     format: em
     default: 2
@@ -339,25 +340,6 @@ settings:
             label: B
             value: align-b
   -
-    title: Vault name - appearance
-    description: none (0), compact (1), standard (2)
-    title.de: Vault Name - Ansicht
-    description.de: Nichts (0), kompakt (1), Standard (2)
-    id: vault-name-s
-    type: class-select
-    allowEmpty: false
-    default: vault-name-a
-    options:
-        - 
-            label: 𝒩 0
-            value: vault-name-a
-        - 
-            label: 𝒩 1
-            value: vault-name-b
-        -
-            label: 𝒩 2
-            value: vault-name-c
-  -
     id: center-header
     title: Centered headers
     description: center all headers
@@ -365,25 +347,18 @@ settings:
     description.de: alle Überschriften mittig ausrichten
     type: class-toggle
   -
-    id: hr-break
-    title: Horizontal Lines - hard break
+    id: prg-break
+    title: Line break
     description: strict line break 
-    title.de: Trennlinie - Umbruch
+    title.de: Umbruch - Zeile
     description.de: strikter Zeilenumbruch
-    type: class-toggle
-  -
-    id: stacked-tabs-focused
-    title: Focus on stacked notes
-    description: restore default stacked-view
-    title.de: Fokus auf Stapelansicht
-    description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
   -
     id: slides-s
     title: Slide - compact
-    description: smaller text (for desktop)
+    description: smaller text (Desktop)
     title.de: Slide - kompakt
-    description.de: kleinerer Text (für PCs)
+    description.de: kleinerer Text (PCs)
     type: class-toggle
   -
     id: show-touch-area
@@ -554,9 +529,9 @@ settings:
   -
     id: zoom-svg
     title: Mobile - Mermaid Proportions
-    description: default diagram proportions
+    description: restore default proportions
     title.de: Mobilgerät - Mermaid Proportionen
-    description.de: Standard Diagramm Proportionen
+    description.de: Wiederherstellung Standard Proportionen
     type: class-toggle
   -
     id: banner-h
@@ -612,19 +587,27 @@ settings:
     level: 2
     collapsed: true
   -
-    id: profile-pic
-    title: Profile
-    description: add a Profile
-    title.de: Profil
-    description.de: benutze ein Profilbild
-    type: class-toggle
-  -
-    id: profile-banner
-    title: Profile Banner
-    description: add a banner profile
-    title.de: Profilbanner
-    description.de: benutze ein Profilbanner
-    type: class-toggle
+    title: Vault Profile
+    description: Square (🁢), Banner (🀰), Name & Square (𝑵 + 🁢), Name & Banner (𝑵 + 🀰)
+    title.de: Vault Profil
+    description.de: Quadrat (🁢), Banner (🀰), Name & Quadrat (𝑵 + 🁢), Name & Banner (𝑵 + 🀰)
+    id: vault-name-s
+    type: class-select
+    allowEmpty: false
+    default: vault-name-f
+    options:
+        -
+            label: 🁢
+            value: vault-name-a
+        -
+            label: 🀰
+            value: vault-name-b
+        -
+            label: 𝑵 Normal
+            value: vault-name-e
+        -
+            label: 𝑵 Minimal
+            value: vault-name-f
   -
     id: profile-pic-mono
     title: Monochrome Profile
@@ -634,8 +617,8 @@ settings:
     type: class-toggle
   -
     id: profile-size
-    title: Profile icon size
-    title.de: Profilbild Größe
+    title: Profile icon size - (PC)
+    title.de: Profilbild Größe - (PC)
     type: variable-number-slider
     format: px
     default: 40
@@ -1040,6 +1023,13 @@ settings:
     description.de: Wiederherstellung Knotentitel
     type: class-toggle
   -
+    id: stacked-tabs-focused
+    title: Stacked Notes
+    description: restore default stacked-view
+    title.de: Stapelansicht
+    description.de: Wiederherstellung normale Stapelansicht
+    type: class-toggle
+  -
     id: edgy-tables
     title: Tables, edgy
     description: restore edgy tables (for colored-monochrome)
@@ -1093,7 +1083,6 @@ body {
     --checkbox-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(44, 99, 210, 1);transform: scale(1.3);msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z'%3E%3C/path%3E%3C/svg%3E");
     --grabnote-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M7 7h4v4H7zm0 6h4v4H7zm6-6h4v4h-4zm0 6h4v4h-4z'%3E%3C/path%3E%3C/svg%3E");
     --copy-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: scale(0.8, 0.8);msFilter:;'%3E%3Cpath d='M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z' %3E%3C/path%3E%3C/svg%3E");
-    --people-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(210, 114, 40, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z'%3E%3C/path%3E%3C/svg%3E");
 
 }
 
@@ -1444,138 +1433,124 @@ Vault loading
 Profile
 ----------------------------------------------------------------*/
 
-/* normal profile */
-body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content::after {
+/* Quad profile */
+body:is(.vault-name-a):not(.is-phone) .nav-folder.mod-root>.nav-folder-title {
     background-image: var(--profile-path);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     max-width: calc(200% - var(--profile-size));
-    width: var(--profile-size);
     height: var(--profile-size);
-    margin-bottom: 0px;
-    content: "";
-    margin-left: -20%;
+    width: var(--profile-size);
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 4px;
+    padding-bottom: 0;
 }
 
-.vault-name-a.is-phone span.workspace-drawer-header-name-text {
-    visibility: hidden;
-    width: 0;
+/* .vault-name-d */
+.vault-name-b:not(.is-phone) .nav-folder.mod-root>.nav-folder-title:hover {
+    margin-left: 0px;
 }
 
-body:is(.vault-name-b, .vault-name-c).is-phone span.workspace-drawer-header-name-text {
-    visibility: visible;
-    width: initial;
-}
-
-/* hide vault Name */
-.vault-name-a .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
+/* Vault Name -  hide */
+body:is(.vault-name-a, .vault-name-b):not(.is-phone) .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
     height: 0;
     width: 0;
+    color: transparent;
 }
 
-.vault-name-a .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
-    height: 8px;
-    background: var(--text-accent-special);
-    border-radius: 4px;
-    padding-bottom: 6px;
+body.vault-name-a:not(.is-phone) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+    color: transparent;
+    display: contents;
 }
 
-.vault-name-b .nav-folder.mod-root>.nav-folder-title {
-    font-size: 1em;
+/* Vault Name - Minimal */
+body:is(.vault-name-f) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+    text-align: center;
+    font-size: 0.6em;
     font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     display: flex;
-    justify-content: center;
-    /* margin-left: -1.5em; */
-    width: auto;
+    flex-direction: column;
 }
 
-/* vault name color */
-body:is(.vault-name-b, .vault-name-c) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+body:not(.vault-name-a, .vault-name-b) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
     color: gray;
 }
 
-body.no-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name-text:is(:not(.vault-name-a)) {
-    visibility: visible !important;
-    width: auto;
-}
-
-/* spacing bw icon & vault name */
-.workspace-drawer-header-switcher {
-    margin-left: 0.4em;
-}
-
-body.compass-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--compass-icon);
-    scale: 1.4;
-}
-
-body.design-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--design-icon);
-    scale: 1.4;
-}
-
-body.code-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--code-icon);
-    scale: 1.4;
-}
-
-body.bible-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--bible-icon);
-    scale: 1.4;
-}
-
-body.soup-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--soup-icon);
-    scale: 1.4;
-}
-
-body.game-prof:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
-    content: var(--game-icon);
-    scale: 1.4;
-}
-
-/* hide vault name */
-body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
-    color: transparent;
-    display: contents;
-    margin-bottom: -8px;
-}
-
-body.profile-pic:not(.is-phone) .nav-folder.mod-root>.nav-folder-title {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-left: -20%;
-}
-
 /* banner profile */
-.profile-banner .nav-folder.mod-root>.nav-folder-title {
-    background: var(--profile-path);
-}
-
-.profile-banner .nav-folder.mod-root>.nav-folder-title>.nav-folder-title-content {
-    width: 0;
-}
-
-.profile-banner .nav-folder.mod-root>.nav-folder-title {
+body:is(.vault-name-b):not(.is-phone) .nav-folder.mod-root>.nav-folder-title {
     background-image: var(--profile-path);
     background-size: cover !important;
     background-repeat: no-repeat !important;
     max-width: calc(200% - var(--profile-size));
     height: var(--profile-size);
     width: auto;
+    border-radius: 4px;
 }
 
+body:is(.vault-name-b):not(.is-phone) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+    padding-left: 6px;
+}
 
-/*  profile-pic for phone */
-body.profile-pic:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name-text {
+/* drag area */
+body:not(.vault-name-e, .vault-name-f) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
+    background-color: transparent;
+    border: 2px dashed var(--text-accent-special);
+    border-radius: 4px;
+    max-width: calc(200% - var(--profile-size));
+    height: var(--profile-size);
+    width: auto;
+    background-image: none;
+    animation: fadeIn 1.2s;
+}
+
+body:is(.vault-name-a, .vault-name-b) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    content: "↓";
+    scale: 1.5;
+    color: var(--text-accent-special);
+}
+
+/* Q */
+.vault-name-a .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    top: 0.5vh;
+    right: auto;
+    left: auto;
+    position: relative;
+}
+
+/* B */
+.vault-name-b .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
+    top: 0.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/*  
+profile for phone 
+*/
+
+/* phone - spacing bw icon & vault name */
+.workspace-drawer-header-switcher {
+    margin-left: 0.4em;
+}
+
+/* hide vault name */
+body:is(.vault-name-a, .vault-name-b).is-phone span.workspace-drawer-header-name-text {
     visibility: hidden;
     width: 0;
 }
 
-body.profile-pic:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
+body:is(.vault-name-e, .vault-name-f).is-phone span.workspace-drawer-header-name-text {
+    visibility: visible;
+    width: auto;
+}
+
+body:is(.vault-name-a, .vault-name-b).is-phone .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     background-repeat: no-repeat;
     background: var(--profile-path);
     background-size: 100%;
@@ -1587,7 +1562,7 @@ body.profile-pic:is(.is-phone) .workspace-drawer.mod-left .workspace-drawer-head
 }
 
 /* small fix for profile pic */
-body.profile-pic:is(.is-phone) .workspace-drawer-header-left {
+body:is(.vault-name-a, .vault-name-b).is-phone .workspace-drawer-header-left {
     margin-left: -10px;
 }
 
@@ -1597,18 +1572,10 @@ body.profile-pic-mono:is(.is-phone.theme-dark) .workspace-drawer.mod-left .works
     filter: invert(1);
 }
 
-/* drag area */
-body:not(.profile-pic, .profile-banner, .vault-name-b, .vault-name-c) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
-    height: 1em;
-    border-radius: 4px;
-}
 
-body:not(.profile-pic, .profile-banner) .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over::after {
-    content: " ↓";
-    align-items: center;
-    filter: opacity(0.5);
+.workspace-ribbon.mod-left:before {
+    background-color: var(--background-secondary);
 }
-
 
 /*----------------------------------------------------------------
 NAVI BAR
@@ -1705,7 +1672,12 @@ FOLDERs - Navi Tree
 .nav-folder.mod-root>.nav-folder-title {
     font-size: 2em;
     padding-left: 6px;
-    /* padding-top: 0; */
+    padding-right: 6px;
+}
+
+/* fixes vault name jitter */
+.nav-folder.mod-root>.nav-folder-title:hover {
+    margin-left: -6px;
 }
 
 /* .theme-dark .nav-folder.mod-root>.nav-folder-title:hover {
@@ -1718,10 +1690,10 @@ FOLDERs - Navi Tree
     color: revert;
 } */
 
-.nav-folder.mod-root>.nav-folder-title:hover {
+.nav-folder.mod-root>.nav-folder-title:hover :not(.nav-folder.mod-root>.nav-folder-title) {
     height: auto;
     padding-left: 6px;
-    /* padding-top: 0; */
+    padding-top: 0;
 }
 
 .nav-file-title,
@@ -1739,12 +1711,13 @@ FOLDERs - Navi Tree
     filter: brightness(2);
 }
 
-.workspace-split:not(.mod-right-split) :is(.nav-files-container, .nav-header) {
-    background: linear-gradient(270deg, var(--background-primary), transparent);
+/* .collapse-icon */
+.theme-dark .tree-item-self.is-clickable:not(:hover)>.tree-item-icon {
+    filter: brightness(1.5);
 }
 
-.workspace-split.mod-horizontal.mod-right-split .workspace-leaf {
-    background-color: var(--background-primary);
+body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-icon {
+    filter: brightness(0.2);
 }
 
 /* Remove collapse arrow from top level folders */
@@ -1753,14 +1726,16 @@ FOLDERs - Navi Tree
     /* width: 0 !important; */
 }
 
-/* Top Level Folder Titles */
-.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
-    font-size: large;
-    margin-top: 4px;
-    border-radius: var(--FolderRadius) var(--FolderRadius) 0px 0px;
+/* bg col */
+.workspace-split:not(.mod-right-split) :is(.nav-files-container, .nav-header) {
+    background: linear-gradient(270deg, var(--background-primary), transparent);
 }
 
-/* Rounded borders */
+.workspace-split.mod-horizontal.mod-right-split .workspace-leaf {
+    background-color: var(--background-primary);
+}
+
+/* Top Level Rounded borders */
 .nav-folder.mod-root>.nav-folder-children>.nav-folder.is-collapsed>.nav-folder-title {
     border-radius: var(--FolderRadius);
 }
@@ -1769,10 +1744,25 @@ FOLDERs - Navi Tree
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
     margin-left: auto;
     border-radius: 0px 0px var(--FolderRadius) var(--FolderRadius);
-    color: black;
     padding-bottom: 12px;
 }
 
+.nav-file-title,
+.nav-folder-title {
+    color: unset;
+    margin-bottom: 0;
+}
+
+/* indentation guides */
+.nav-folder.mod-root .nav-folder>.nav-folder-children {
+    border-left: 1px white dotted;
+}
+
+.is-phone .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
+    padding: 4px 0;
+}
+
+/* folder titles */
 .theme-dark .nav-file-title-content,
 .theme-dark .nav-folder-title-content {
     color: white;
@@ -1785,7 +1775,27 @@ FOLDERs - Navi Tree
     line-height: normal;
 }
 
-/* 10 Top level Folders */
+.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
+    font-size: large;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 4px;
+    padding-left: 4px;
+    border-radius: var(--FolderRadius) var(--FolderRadius) 0px 0px;
+}
+
+.is-phone .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
+    height: 34px;
+    padding-left: 4px;
+}
+
+/* 2nd, 3th, 4th level folder titles */
+.nav-folder>.nav-folder-title {
+    font-size: inherit;
+    /* padding-left: 24px; */
+}
+
+/* lock colors for top folder names */
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]:hover>.nav-folder-title-content,
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]:hover>.nav-folder-title-content,
@@ -1798,20 +1808,6 @@ FOLDERs - Navi Tree
 .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]:hover>.nav-folder-title-content {
     color: white;
     background-color: revert;
-}
-
-/* lock colors top folder icons */
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]:hover>.nav-folder-title-content::after,
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]:hover>.nav-folder-title-content::after {
-    filter: invert(1);
 }
 
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"],
@@ -1895,102 +1891,18 @@ body:is(.is-phone) .nav-folder-title-content:not(.is-being-renamed)::first-lette
     margin-left: 10px;
 }
 
-/* indentation guides */
-.nav-folder.mod-root .nav-folder>.nav-folder-children {
-    border-left: 1px white dotted;
-}
-
-/* 1st level folder titles */
-.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
-    font-weight: bold;
-    height: 30px;
-    padding-left: 4px;
-}
-
-.is-phone .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
-    height: 34px;
-    padding-left: 4px;
-}
-
-/* 2nd, 3th, 4th level folder titles */
-.nav-folder>.nav-folder-title {
-    font-size: inherit;
-    padding-left: 24px;
-}
-
-.is-phone .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
-    padding: 4px 0;
-}
-
 /* folder tree selection  */
-.is-phone.theme-dark .tree-item-self.is-clickable.nav-file-title:hover>.tree-item-inner.nav-file-title-content,
-.is-phone.theme-dark .tree-item-self.is-clickable.nav-folder-title:hover>.tree-item-inner.nav-folder-title-content {
-    color: white;
-}
-
-body:not(.is-phone).theme-dark .tree-item-self.is-clickable.nav-file-title:hover>.tree-item-inner.nav-file-title-content,
-body:not(.is-phone).theme-dark .tree-item-self.is-clickable.nav-folder-title:hover>.tree-item-inner.nav-folder-title-content {
-    color: black;
-}
-
-/* sidepanel */
-body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover {
+body:not(.is-phone) .tree-item-self.is-clickable:hover {
     background-color: var(--interactive-accent-rgb);
     color: black;
 }
 
-body:not(.is-phone).theme-light .tree-item-self.is-clickable:hover {
-    background-color: var(--interactive-accent-rgb);
-    color: var(--text-normal);
+body:not(.is-phone) .nav-file-title:hover {
+    background: var(--interactive-accent-rgb) !important;
 }
 
-body:not(.is-phone) .tree-item-self.is-clickable.nav-file-title.recent-files-title:hover .tree-item-inner.nav-file-title-content.recent-files-title-content {
-    background: var(--interactive-accent-rgb);
-    color: black;
-}
-
-body:not(.is-phone) .theme-dark .tree-item-self.is-clickable:hover>.nav-file-title-content {
-    color: black;
-}
-
-/* body:not(.is-grabbing, .theme-light) .tree-item-self.is-clickable:hover>.tree-item-icon {
-  filter: invert(1);
-} */
-
-.search-result-file-matched-text {
-    color: black;
-    background-color: var(--interactive-accent-rgb);
-}
-
-.tree-item-self.is-clickable:hover .tree-item-inner-subtext {
-    color: black;
-}
-
-.theme-dark .tree-item-self:hover .tree-item-flair {
-    color: black;
-}
-
-.workspace-split.mod-left-split .tree-item-self:hover .recent-files-file-delete {
-    color: black;
-}
-
-.theme-dark .tree-item-self.is-clickable:not(:hover)>.tree-item-icon {
-    filter: brightness(1.5);
-}
-
-body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-icon {
-    filter: brightness(0.2);
-}
-
-.theme-dark .tree-item-self.is-clickable:hover>.nav-folder-collapse-indicator .tree-item.nav-file.recent-files-file {
-    height: 24px;
-}
-
-.theme-dark .tree-item-inner.nav-folder-title-content:hover {
-    color: white;
-}
-
-.theme-light .tree-item-inner.nav-folder-title-content:hover {
+body:not(.is-mobile) .nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title:hover .nav-file-title-content,
+body:not(.is-mobile) .nav-folder:not(.mod-root)>.nav-folder-children .nav-folder-title:hover .nav-folder-title-content {
     color: black;
 }
 
@@ -2008,9 +1920,55 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     border-radius: 4px 0 0 4px;
 }
 
-.nav-file-title.is-active::before {
-    margin-top: 2px;
-    width: 22px;
+
+/* 
+Sidepanel 
+*/
+
+body:not(.is-phone) .tree-item.nav-file.recent-files-file {
+    height: 24px;
+    margin-right: -16px;
+}
+
+body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover .tree-item-flair,
+body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover .tree-item-inner-subtext {
+    color: black;
+}
+
+body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.nav-file-title-content.recent-files-title-content {
+    background: var(--interactive-accent-rgb);
+    color: black;
+}
+
+.search-result-file-matched-text {
+    color: black;
+    background-color: var(--interactive-accent-rgb);
+}
+
+.tree-item-self.tag-pane-tag.is-clickable:hover,
+.search-result-file-match:hover {
+    background: var(--nav-item-background-active);
+}
+
+.theme-light .tree-item-self.is-clickable:hover .tree-item-inner-subtext {
+    color: black;
+}
+
+.theme-dark .tree-item-self:hover .tree-item-flair {
+    color: white;
+}
+
+.workspace-split.mod-left-split .tree-item-self:hover .recent-files-file-delete {
+    color: black;
+}
+
+/* bg sidepanels */
+.is-mobile.theme-light .tree-item-self.is-clickable:hover {
+    background-color: #7e756629;
+}
+
+.is-mobile.theme-dark .tree-item-self.is-clickable:hover {
+    background-color: #7e756646;
 }
 
 .nav-file-tag {
@@ -2022,30 +1980,14 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     color: white;
 }
 
-/* lists corrected */
-.nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
-    margin-right: -16px;
-    border-radius: 4px;
+/* folder tree highlight */
+.is-phone .tree-item-self .nav-folder>.nav-folder-title:active,
+.is-phone .tree-item-self .nav-folder>.nav-folder-title:hover {
+    background-color: transparent;
 }
 
-.nav-folder:not(.mod-root)>.nav-folder-children .nav-file-title {
-    padding-left: 4px;
-    padding-top: inherit;
-}
-
-.nav-folder:not(.mod-root)>.nav-folder-children .nav-folder-title {
-    height: calc(var(--FolderHighlight) + 6px);
-}
-
-.nav-file-title.is-active,
-.nav-folder-title.is-active {
-    font-weight: bold;
-}
-
-/* flder tree highlight */
 .is-phone.theme-dark .nav-file-title.is-active,
-.is-phone.theme-dark .nav-file-title.is-active:hover,
-.is-phone.theme-dark .nav-folder>.nav-folder-title:hover {
+.is-phone.theme-dark .nav-file-title.is-active:hover {
     background-color: var(--background-secondary);
 }
 
@@ -2054,20 +1996,20 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--background-primary);
 }
 
-.tree-item-self.tag-pane-tag.is-clickable:hover,
-.search-result-file-match:hover {
-    background: var(--nav-item-background-active);
+.is-phone .nav-file-title.is-active:hover {
+    font-weight: bold;
 }
 
+/* drag files */
 .nav-file-title.is-being-dragged,
 .nav-folder-title.is-being-dragged {
     color: var(--text-normal);
 }
 
-/* DIV Nav - Doc */
+/* Handle to resize folder tree */
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    width: 4px;
+    width: 6px;
     border: none;
 }
 
@@ -2107,15 +2049,6 @@ h6,
 .markdown-rendered h6,
 .reveal h6 {
     font-size: 1em;
-}
-
-.HyperMD-header .cm-header-1,
-.HyperMD-header .cm-header-2,
-.HyperMD-header .cm-header-3,
-.HyperMD-header .cm-header-4,
-.HyperMD-header .cm-header-5,
-.HyperMD-header .cm-header-6 {
-    font-family: inherit;
 }
 
 .recipes h1,
@@ -2199,6 +2132,7 @@ Font models
 .fontmod-1 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--default-font-h);
+    color: var(--header-col);
 }
 
 .fontmod-1 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
@@ -2212,6 +2146,7 @@ Font models
 .fontmod-2 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--handwritten-font-h);
+    color: var(--header-col);
 }
 
 .fontmod-2 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
@@ -2225,6 +2160,7 @@ Font models
 .fontmod-3 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--poetry-font-h);
+    color: var(--header-col);
 }
 
 .fontmod-3 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
@@ -2238,6 +2174,7 @@ Font models
 .fontmod-4 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--custom-font-h);
+    color: var(--header-col);
 }
 
 .fontmod-4 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
@@ -2252,14 +2189,17 @@ Font models
 .center-header .markdown-rendered h3,
 .center-header .markdown-rendered h4,
 .center-header .markdown-rendered h5,
-.center-header .markdown-rendered h6,
+.center-header .markdown-rendered h6 {
+    text-align: center;
+}
+
 .center-header .HyperMD-header-1,
 .center-header .HyperMD-header-2,
 .center-header .HyperMD-header-3,
 .center-header .HyperMD-header-4,
 .center-header .HyperMD-header-5,
 .center-header .HyperMD-header-6 {
-    text-align: center;
+    text-align: center !important;
 }
 
 .center-header .inline-title,
@@ -3090,7 +3030,7 @@ div[data-callout="multi-column"].callout .callout {
 }
 
 div[data-callout="multi-column"].callout:not(.is-collapsed) .callout {
-    margin: 4px 0 var(--callout-margin) var(--callout-margin);
+    margin: 4px 0 var(--callout-margin) 0;
     mix-blend-mode: normal;
 }
 
@@ -3441,7 +3381,7 @@ code.language-fnote.is-loaded {
 /* add empty paragraphs */
 .app-container pre.language-br,
 code.language-br.is-loaded {
-    /* background-color: transparent; */
+    margin: 0;
     min-width: 200px;
 }
 
@@ -3519,13 +3459,7 @@ body:not(.is-phone) .markdown-preview-view .callout:is([data-callout="read-more"
 }
 
 .is-phone .markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
-    margin-bottom: -16px;
-    margin-top: -12px;
-}
-
-.is-phone .callout[data-callout="read-more"] .callout-content,
-.is-phone .callout[data-callout="weiterlesen"] .callout-content {
-    margin-bottom: -18px;
+    margin-top: 0;
 }
 
 body:not(.is-phone) .callout[data-callout="read-more"] .callout-content,
@@ -3611,13 +3545,13 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 
 .is-phone .markdown-preview-view .callout[data-callout=infobox],
 .is-phone .markdown-preview-view .callout[data-callout=infobox-r] {
-    margin-left: -10px;
+    margin-left: -1em;
     right: -20px;
     padding: 8px;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout=infobox-l] {
-    margin-right: -10px;
+    margin-right: -1em;
     left: -20px;
     padding: 8px;
 }
@@ -3728,24 +3662,20 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 /* 
 respect breaks 
 */
-/* no breaks */
-.padding-0.markdown-preview-view :is(p) {
+/* merge lines */
+.merge-prg .markdown-preview-view :is(p),
+body:not(.prg-break) .markdown-preview-view :is(p) {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* default - bottom break */
-.markdown-preview-view :is(p),
-.padding-1.markdown-preview-view :is(p) {
-    margin-top: 0;
-    margin-bottom: revert;
+/* default - top break */
+.break-prg .markdown-preview-view :is(p),
+body:is(.prg-break) .markdown-preview-view :is(p) {
+    /* margin-top: revert; */
+    margin-bottom: 0;
 }
 
-/* top & bottom p */
-.padding-2.markdown-preview-view :is(p) {
-    margin-top: revert;
-    margin-bottom: revert;
-}
 
 .is-live-preview .admonition-content>*:first-child {
     margin-top: 0;
@@ -3838,6 +3768,11 @@ Buttons - Preferences
 
 .modal.mod-settings .vertical-tab-header {
     border-right: 0;
+}
+
+/* modded */
+.is-phone.theme-dark .setting-item-description {
+    word-break: break-word;
 }
 
 .setting-item .style-settings-heading[data-level="2"],
@@ -4097,8 +4032,13 @@ a:hover {
     top: -6px;
 }
 
-.is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
-    background-color: rgb(128 128 128 / 20%);
+/* transparent bg x copy btn */
+.theme-dark.is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
+    background-color: rgb(128 128 128 / 80%);
+}
+
+.theme-light.is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
+    background-color: rgb(197 197 197 / 80%);
 }
 
 .is-mobile .markdown-rendered pre.language-br>button.copy-code-button {
@@ -4180,6 +4120,7 @@ body:not(.is-grabbing) .nav-file-title:hover,
 /*----------------------------------------------------------------
 Fancy Horizontal Rulers
 ----------------------------------------------------------------*/
+
 .top-br hr::before {
     height: calc(16px * 4);
     display: block;
@@ -4977,7 +4918,6 @@ ASIDE NOTES
     width: auto;
     max-width: 25vw;
     box-shadow: 0.5em 0.5em var(--bold-color);
-    padding-bottom: 10px;
 }
 
 .callout[data-callout^=aside-] :is(h1, h2, h3, h4, h5, h6) {
@@ -4997,14 +4937,12 @@ ASIDE NOTES
 .callout[data-callout="aside-lh"]:hover {
     float: left;
     clear: left;
-    margin: 16px 20px 14px -12px;
 }
 
 .callout[data-callout="aside-r"],
 .callout[data-callout="aside-rh"]:hover {
     float: right;
     clear: right;
-    margin: 16px -12px 14px 20px;
 }
 
 .callout[data-callout="aside-lh"] {
@@ -5054,20 +4992,24 @@ ASIDE NOTES
     pointer-events: none;
 }
 
+.markdown-preview-view .callout[data-callout="aside-l"],
 .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
     margin: 22px 22px 22px -15px;
 }
 
+.markdown-preview-view .callout[data-callout="aside-r"],
 .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
     margin: 22px -15px 22px 22px;
 }
 
+.is-phone .markdown-preview-view .callout[data-callout="aside-l"],
 .is-phone .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
-    margin: 22px 22px 22px -14px;
+    margin: 22px 20px 22px -18px;
 }
 
+.is-phone .markdown-preview-view .callout[data-callout="aside-r"],
 .is-phone .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
-    margin: 22px -14px 22px 22px;
+    margin: 22px -18px 22px 20px;
 }
 
 .markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
@@ -5087,7 +5029,6 @@ ASIDE NOTES
     border-bottom: 0;
     border-radius: 4px;
     pointer-events: all;
-    padding-top: 0;
 }
 
 /*----------------------------------------------------------------
@@ -5161,6 +5102,12 @@ Poetry - Preview mode - important signpost
     margin-top: -1em;
     padding-right: 8px;
     width: fit-content;
+}
+
+/* realign */
+body:is(.break-prg).is-phone .markdown-preview-view .callout[data-callout="dropcap"],
+body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropcap"] {
+    margin-bottom: -2em;
 }
 
 .markdown-preview-view .callout[data-callout="dropcap"] .callout-content {
@@ -5566,13 +5513,12 @@ image placed + description
     display: none;
 }
 
-.callout[data-callout^="framed"],
 .callout[data-callout^="framed"][data-callout-metadata~="bg"] {
-    padding: 20px;
+    padding: 8px 20px 20px;
     white-space: normal;
     min-width: var(--min-boxwidth);
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .theme-light .callout[data-callout^="framed"][data-callout-metadata~="bg"] {
@@ -5587,10 +5533,19 @@ image placed + description
     margin-right: 2em;
 }
 
+.is-phone .callout[data-callout^="framed-l"][data-callout-metadata~="bg"] {
+    margin-right: 1em;
+}
+
 .callout[data-callout^="framed-r"][data-callout-metadata~="bg"] {
     margin-left: 2em;
 }
 
+.is-phone .callout[data-callout^="framed-r"][data-callout-metadata~="bg"] {
+    margin-left: 1em;
+}
+
+.zoom-auto .markdown-source-view.mod-cm6 .callout[data-callout="framed-l"] .internal-embed img,
 .zoom-auto .markdown-source-view.mod-cm6 .callout[data-callout="framed-r"] .internal-embed img {
     pointer-events: none !important;
 }
@@ -5601,7 +5556,6 @@ image placed + description
     text-align: center;
 }
 
-.is-phone .callout[data-callout="framed"],
 .is-phone .callout[data-callout="framed-l"] {
     margin-left: -15px;
 }
@@ -5625,7 +5579,8 @@ image placed + description
 
 /* Grid view LP - very important*/
 .markdown-source-view.mod-cm6 .cm-line .internal-embed.image-embed {
-    display: inline-block;
+    display: block;
+    max-width: 100%;
 }
 
 /* align caption to bottom border */
@@ -5888,6 +5843,10 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
     display: inline;
 }
 
+[alt~="img-10"] img {
+    width: 10%;
+}
+
 [alt~="img-20"] img {
     width: 20%;
 }
@@ -5902,6 +5861,22 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 
 [alt~="img-50"] img {
     width: 50%;
+}
+
+[alt~="img-60"] img {
+    width: 60%;
+}
+
+[alt~="img-70"] img {
+    width: 70%;
+}
+
+[alt~="img-80"] img {
+    width: 80%;
+}
+
+[alt~="img-90"] img {
+    width: 90%;
 }
 
 /*----------------------------------------------------------------
@@ -6132,6 +6107,11 @@ MERMAID - all declarations needs important
 EMBEDS - check
 ----------------------------------------------------------------*/
 
+.internal-embed:not(.image-embed) {
+    overflow: visible;
+    padding-bottom: 1em;
+}
+
 .external-link {
     background-image: none;
     background-position: 0;
@@ -6181,10 +6161,6 @@ EMBEDS - check
     margin-bottom: -10px;
     pointer-events: none;
     overflow: visible;
-}
-
-.markdown-preview-view .inline-embed .markdown-embed-content {
-    margin-bottom: -22px;
 }
 
 /* correct code for printing */
@@ -8274,11 +8250,11 @@ ol {
     border-radius: 4px;
 }
 
-.theme-light ol {
+body:not(.recipes) .theme-light ol {
     background: #7e756629;
 }
 
-.theme-dark ol {
+body:not(.recipes) .theme-dark ol {
     background: rgb(126 117 102 / 30%);
 }
 
