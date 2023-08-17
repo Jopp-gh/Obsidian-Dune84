@@ -42,8 +42,20 @@
     --takeoff-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: scale(0.8, 0.8);msFilter:;'%3E%3Cpath d='M3 18h18v2H3zm18.509-9.473a1.61 1.61 0 0 0-2.036-1.019L15 9 7 6 5 7l6 4-4 2-4-2-1 1 4 4 14.547-5.455a1.611 1.611 0 0 0 .962-2.018z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.theme-dark .nav-folder-title .nav-folder-title-content::after {
+    filter: invert(1);
+}
+
+.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title:hover>.nav-folder-title-content::after {
+    filter: invert(1) !important;
+}
+
+/*----------------------------------------------------------------
+FOLDERs
+----------------------------------------------------------------*/
+
 /* Workbench */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Workbench"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Workbench"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -51,13 +63,8 @@
     content: var(--inbox-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Workbench"] .nav-folder-title-content::after {
-    content: var(--inbox-icon);
-    filter: invert(1);
-}
-
 /* Journal, Education, Training */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -65,13 +72,9 @@
     content: var(--openbook-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]) .nav-folder-title-content::after {
-    content: var(--openbook-icon);
-    filter: invert(1);
-}
 
 /* Design, Draft */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -79,13 +82,9 @@
     content: var(--design-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]) .nav-folder-title-content::after {
-    content: var(--design-icon);
-    filter: invert(1);
-}
 
 /* Read */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Read"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Read"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -93,13 +92,9 @@
     content: var(--bookmark-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Read"] .nav-folder-title-content::after {
-    content: var(--bookmark-icon);
-    filter: invert(1);
-}
 
 /* Game */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Game"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Game"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -107,13 +102,9 @@
     content: var(--game-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Game"] .nav-folder-title-content::after {
-    content: var(--game-icon);
-    filter: invert(1);
-}
 
 /* Portfolio */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Portfolio"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Portfolio"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -121,13 +112,9 @@
     content: var(--portfolio-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Portfolio"] .nav-folder-title-content::after {
-    content: var(--portfolio-icon);
-    filter: invert(1);
-}
 
 /* Photo */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Photo"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Photo"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -135,13 +122,9 @@
     content: var(--camera-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Photo"] .nav-folder-title-content::after {
-    content: var(--camera-icon);
-    filter: invert(1);
-}
 
 /* Software, Linux, Mac, Win */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -149,13 +132,9 @@
     content: var(--computer-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]) .nav-folder-title-content::after {
-    content: var(--computer-icon);
-    filter: invert(1);
-}
 
 /* Entertainment, Movie */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -163,13 +142,9 @@
     content: var(--movie-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]) .nav-folder-title-content::after {
-    content: var(--movie-icon);
-    filter: invert(1);
-}
 
 /* Study, Research */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Study"], [data-path$="Research"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Study"], [data-path$="Research"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -177,13 +152,9 @@
     content: var(--compass-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Study"], [data-path$="Research"]) .nav-folder-title-content::after {
-    content: var(--compass-icon);
-    filter: invert(1);
-}
 
 /* Contact */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Contact"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Contact"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -191,13 +162,9 @@
     content: var(--contacts-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Contact"] .nav-folder-title-content::after {
-    content: var(--contacts-icon);
-    filter: invert(1);
-}
 
 /* Society, Social */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Society"], [data-path$="Social"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Society"], [data-path$="Social"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -205,13 +172,9 @@
     content: var(--people-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Society"], [data-path$="Social"]) .nav-folder-title-content::after {
-    content: var(--people-icon);
-    filter: invert(1);
-}
 
 /* Health */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Health"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Health"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -219,13 +182,9 @@
     content: var(--heart-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Health"] .nav-folder-title-content::after {
-    content: var(--heart-icon);
-    filter: invert(1);
-}
 
 /* Network */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Network"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Network"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -233,13 +192,9 @@
     content: var(--globe-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Network"] .nav-folder-title-content::after {
-    content: var(--globe-icon);
-    filter: invert(1);
-}
 
 /* Travel */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Travel"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Travel"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -247,13 +202,9 @@
     content: var(--takeoff-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Travel"] .nav-folder-title-content::after {
-    content: var(--takeoff-icon);
-    filter: invert(1);
-}
 
 /* Sport */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Sport"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Sport"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -261,13 +212,9 @@
     content: var(--dumbbell-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Sport"] .nav-folder-title-content::after {
-    content: var(--dumbbell-icon);
-    filter: invert(1);
-}
 
 /* Code, Shell, JS */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -275,13 +222,9 @@
     content: var(--code-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]) .nav-folder-title-content::after {
-    content: var(--code-icon);
-    filter: invert(1);
-}
 
 /* Project */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Project"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Project"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -289,13 +232,9 @@
     content: var(--calendar-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
-    content: var(--calendar-icon);
-    filter: invert(1);
-}
 
 /* Responsibility, Area */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]):hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]):hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -303,13 +242,9 @@
     content: var(--key-icon);
 }
 
-.theme-dark .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
-    content: var(--key-icon);
-    filter: invert(1);
-}
 
 /* Archive */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -317,13 +252,9 @@
     content: var(--box-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
-    content: var(--box-icon);
-    filter: invert(1);
-}
 
 /* Resources */
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Resources"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Resources"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
@@ -331,10 +262,6 @@
     content: var(--node-icon);
 }
 
-.theme-dark .nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
-    content: var(--node-icon);
-    filter: invert(1);
-}
 
 
 /*----------------------------------------------------------------
@@ -348,7 +275,7 @@ ICON placement
     float: left;
 }
 
-body:not(.is-phone) .nav-folder-title-content::after {
+.nav-folder-title-content::after {
     top: -2px;
     position: relative;
 }
@@ -360,18 +287,13 @@ EXAMPLE HANDLER 1
 */
 
 /* 
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
 .nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
     content: var(--box-icon);
 
-}
-
-.theme-dark .nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
-    content: var(--box-icon);
-    filter: invert(1);
 }
 */
 
@@ -382,17 +304,12 @@ EXAMPLE HANDLER 2
 */
 
 /* 
-.theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Responsibility"]:hover>.tree-item-inner.nav-folder-title-content::after {
+body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Responsibility"]:hover>.tree-item-inner.nav-folder-title-content::after {
     filter: inherit;
 }
 
 .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
     content: var(--key-icon);
 
-}
-
-.theme-dark .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
-    content: var(--key-icon);
-    filter: invert(1);
 }
 */
