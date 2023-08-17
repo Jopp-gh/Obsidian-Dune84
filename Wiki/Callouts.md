@@ -99,11 +99,11 @@ embed your descriptions in boxes and place them on the left or right side of you
 ## Read more…
 
 ```
-> [!read-more…]- 
+> [!read-more]- 
 > Lorem ipsum etc
 ```
 Callout to shorten longer documents
-**Options:** `> [!read-more…]-`, `> [!weiterlesen…]-`
+**Options:** `> [!read-more]-`, `> [!weiterlesen]-`
 
 <br>
 
