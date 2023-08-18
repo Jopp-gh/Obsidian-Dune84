@@ -3,8 +3,8 @@
 
 - cleaner and bigger slideshow slides for Obsidians core plugin **Slide**
 - most features added by this theme work in Slide (sidebox, picture callouts, etc)  
-- Slide smaller text - more content on-screen (see **Style Settings>Dune>Fonts>Spacing>Slide smaller text**)
-- to configure text alignment of your slides, see **Style Settings>Dune>Fonts>Spacing>Typesetting alignment (global)**
+- Slide smaller text - more content on-screen (see `Style Settings>Dune>Fonts>Spacing>Slide smaller text`)
+- to configure text alignment of your slides, see `Style Settings>Dune>Fonts>Spacing>Typesetting alignment (global)`
 
 ### Tips for phone/mobile
 to move between slides, 
