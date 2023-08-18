@@ -14,11 +14,283 @@ settings:
     level: 1
     collapsed: true
   -
+    id: common-fonts
+    title: Typesets
+    title.de: Schriftsätze
+    description: Standard (1), Handwritten (2), Poetry (3), Custom Typeset (4)
+    description.de: Standard (1), Handschrift (2), Poesie (3), Eigener Schriftsatz (4)
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: glob-fonts
+    title: ""
+    type: class-select
+    allowEmpty: false
+    default: fontmod-1
+    options:
+        - 
+            label: 𝞪-1
+            value: fontmod-1
+        - 
+            label: 𝞪-2
+            value: fontmod-2
+        -
+            label: 𝞪-3
+            value: fontmod-3
+        -
+            label: 𝞪-4
+            value: fontmod-4
+  -
+    id: font-standard
+    title: 1 - Standard
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: default-font-h
+    title: Header Font
+    title.de: Überschriften
+    type: variable-text
+    default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  - 
+    id: default-font
+    title: Character Font
+    title.de: Charakterschrift
+    type: variable-text
+    default: '"Century Gothic", "Louis George Cafe", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  - 
+    id: custom-fsz-1
+    title: Custom Font size
+    title.de: Eigene Größe
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: font-handwritten
+    title: 2 - Handwritten
+    title.de: 2 - Handschrift
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: handwritten-font-h
+    title: Header Font
+    title.de: Überschriften
+    type: variable-text
+    default: 'Roddy-Bold, cursive, Mumsies, Helvetica'
+  - 
+    id: handwritten-font-c
+    title: Character Font
+    title.de: Charakterschrift
+    type: variable-text
+    default: 'Quikhand, cursive, Mumsies, Helvetica'
+  -
+    id: custom-fsz-2
+    title: Custom Font size
+    title.de: Eigene Größe
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: poetry-font-chars
+    title: 3 - Poetry
+    title.de: 3 - Poesie
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: poetry-initial
+    title: Initial
+    description: (default=DieterCaps)
+    title.de: Initialie
+    description.de: (Standard="Manuskript Gothisch")
+    type: variable-text
+    default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
+  - 
+    id: poetry-font-h 
+    title: Header Font
+    description: (default=Mumsies)
+    title.de: Überschriften
+    description.de: (Standard=Manuskript Gothisch)
+    type: variable-text
+    default: '"Manuskript Gothisch", cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  - 
+    id: poetry-font-c
+    title: Character Font
+    title.de: Charakterschrift
+    type: variable-text
+    default: 'cursive, Mumsies, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+  -
+    id: custom-fsz-3
+    title: Font size
+    title.de: Eigene Größe
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -
+    id: font-custom
+    title: 4 - Custom Fonts
+    title.de: 4 - Eigene Schrift
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: custom-font-h
+    title: Header Font
+    title.de: Überschriften
+    type: variable-text
+    default: '"Century Gothic", Inter, Roboto, Helvetica'
+  - 
+    id: custom-font-c
+    title: Character Font
+    title.de: Characterschrift
+    type: variable-text
+    default: '"Century Gothic", Inter, Roboto, Helvetica'
+  -
+    id: custom-fsz-4
+    title: Custom Font size
+    title.de: Eigene Größe
+    type: variable-number-slider
+    format: px
+    default: 16
+    min: 16
+    max: 24
+    step: 1
+  -  
+    id: heading-spacing
+    title: Spacing
+    title.de: Anordung
+    description: change spacing bw headers, characters, linebreaks, smaller slides
+    description.de: Ändere den Abstand von Überschriften, Charakterschrift, Zeilenumbruch, kleinere slides
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    title: Typesetting alignment (global)
+    description: left, right, axis, block
+    title.de: Schriftsatzart (global)
+    description.de: Linksbündiger, Rechtsbündiger -Flattersatz, Axialsatz, Blocksatz
+    id: glob-align
+    type: class-select
+    allowEmpty: false
+    default: align-l
+    options:
+        - 
+            label: L
+            value: align-l
+        - 
+            label: R
+            value: align-r
+        -
+            label: A
+            value: align-a
+        -
+            label: B
+            value: align-b
+  -
+    id: custom-max-line-width
+    title: Custom line width
+    description: first, activate "readable line width" - in Preferences-Editor
+    title.de: Maximale Zeilenlänge
+    description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
+    type: variable-number-slider
+    format: px
+    default: 700
+    min: 500
+    max: 1400
+    step: 50
+  -
+    id: custom-margin-above-header
+    title: Custom Margin Above Header
+    title.de: Überschriften Abstand-Oben
+    description: (20)
+    type: variable-number-slider
+    format: px
+    default: 0
+    min: 0
+    max: 30
+    step: 2
+  -
+    id: custom-margin-below-header
+    title: Custom Margin Below Header
+    title.de: Überschriften Abstand-Unten
+    description: (8)
+    type: variable-number-slider
+    format: px
+    default: 0
+    min: 0
+    max: 14
+    step: 2
+  -
+    id: large-h1
+    title: Custom h1 size (PC)
+    title.de: Überschrift H1 - Spezial (PC)
+    type: variable-number-slider
+    format: em
+    default: 2
+    min: 2
+    max: 10
+    step: 1
+  -
+    id: center-header
+    title: Centered headers
+    description: center all headers
+    title.de: Überschriften mittig
+    description.de: alle Überschriften mittig ausrichten
+    type: class-toggle
+  -
+    id: prg-break
+    title: Line break
+    description: strict line break 
+    title.de: Umbruch - Zeile
+    description.de: strikter Zeilenumbruch
+    type: class-toggle
+  -
+    id: hr-break
+    title: Horizontal Lines
+    description: hard line break 
+    title.de: Umbruch - Trennlinie
+    description.de: strikter Zeilenumbruch
+    type: class-toggle
+  -
+    id: slides-s
+    title: Slide - compact
+    description: smaller text (Desktop)
+    title.de: Slide - kompakt
+    description.de: kleinerer Text (PCs)
+    type: class-toggle
+  -
+    id: show-touch-area
+    title: Slide - touch-area
+    description: show touch-area (for mobile)
+    title.de: Slide - Berührungsfläche
+    description.de: Zeige Navigationsfeld (Mobilgeräte)
+    type: class-toggle
+  -
+    id: extra-fonts
+    title: Extra Fonts
+    title.de: Zusätzliche Schriften
+    description: configure additional fonts
+    description.de: verwalte zusätzliche Schriften
+    type: heading
+    level: 2
+    collapsed: true
+  -
     id: header-fonts
     title: Header Font
     title.de: Überschriften
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: h1-font
@@ -77,173 +349,6 @@ settings:
     type: variable-text
     default: 'AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
-    id: common-fonts
-    title: Typesets
-    title.de: Schriftsätze
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    title: Font themes (global)
-    description: Standard (1), Handwritten (2), Poetry (3), Custom Typeset (4)
-    title.de: Schriften thema (global)
-    description.de: Standard (1), Handschrift (2), Poesie (3), Eigener Schriftsatz (4)
-    id: glob-fonts
-    type: class-select
-    allowEmpty: false
-    default: fontmod-1
-    options:
-        - 
-            label: 𝞪-1
-            value: fontmod-1
-        - 
-            label: 𝞪-2
-            value: fontmod-2
-        -
-            label: 𝞪-3
-            value: fontmod-3
-        -
-            label: 𝞪-4
-            value: fontmod-4
-  -
-    id: font-standard
-    title: 1 - Standard
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: default-font-h
-    title: Standard
-    description: for Headers
-    description.de: für Kopfzeilen
-    type: variable-text
-    default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  - 
-    id: default-font
-    title: Character Font
-    description: for character fonts
-    title.de: Charakterschrift
-    description.de: gewöhnliche Charakterschrift
-    type: variable-text
-    default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  - 
-    id: custom-fsz-1
-    title: Standard Font size
-    title.de: Standard Größe für Kopfzeilen
-    type: variable-number-slider
-    format: px
-    default: 16
-    min: 16
-    max: 24
-    step: 1
-  -
-    id: font-handwritten
-    title: 2 - Handwritten
-    title.de: 2 - Handschrift
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: handwritten-font-h
-    title: Handwritten Header Font
-    description: for Headers
-    title.de: Handschrift für Kopfzeilen
-    description.de: für Kopfzeilen
-    type: variable-text
-    default: 'Roddy-Bold, cursive, Mumsies, Helvetica'
-  - 
-    id: handwritten-font-c
-    title: Handwritten Character Font
-    description: for Characters
-    title.de: Handschrift für Characterschrift
-    description.de: für Charactere
-    type: variable-text
-    default: 'Quikhand, cursive, Mumsies, Helvetica'
-  -
-    id: custom-fsz-2
-    title: Handwritten Font size
-    title.de: Eigene Größe für Handschrift
-    type: variable-number-slider
-    format: px
-    default: 16
-    min: 16
-    max: 24
-    step: 1
-  -
-    id: poetry-font-chars
-    title: 3 - Poetry
-    title.de: 3 - Poesie
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: poetry-initial
-    title: Initial
-    description: for paragraph Initials (default=DieterCaps)
-    title.de: Initialie
-    description.de: Großer Anfangsbuchstabe (Standard="Manuskript Gothisch")
-    type: variable-text
-    default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
-  - 
-    id: poetry-font-h 
-    title: Poetry Heading
-    description: for poetry titles (default=Mumsies)
-    title.de: Poesie Überschrift
-    description.de: für Poesie-Überschriften (Standard=Manuskript Gothisch)
-    type: variable-text
-    default: '"Manuskript Gothisch", cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  - 
-    id: poetry-font-c
-    title: Poetry Text
-    description: for poetry character fonts
-    title.de: Poesie Charakterschrift
-    description.de: Charakterschrift für Poetik
-    type: variable-text
-    default: 'cursive, Mumsies, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  -
-    id: custom-fsz-3
-    title: Poetry Font size
-    title.de: Eigene Größe für Poesieschrift
-    type: variable-number-slider
-    format: px
-    default: 16
-    min: 16
-    max: 24
-    step: 1
-  -
-    id: font-custom
-    title: 4 - Custom Typeset
-    title.de: 4 - Eigener Schriftsatz
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: custom-font-h
-    title: Custom Header Font
-    description: for Headers
-    title.de: Eigene Schrift für Kopfzeilen
-    description.de: für Kopfzeilen
-    type: variable-text
-    default: '"Century Gothic", Inter, Roboto, Helvetica'
-  - 
-    id: custom-font-c
-    title: Custom Character Font
-    description: for Characters
-    title.de: Eigene Schrift für Characterschrift
-    description.de: für Charactere
-    type: variable-text
-    default: '"Century Gothic", Inter, Roboto, Helvetica'
-  -
-    id: custom-fsz-4
-    title: Custom Font size
-    title.de: Eigene Größe für Kopfzeilen
-    type: variable-number-slider
-    format: px
-    default: 16
-    min: 16
-    max: 24
-    step: 1
-  -
     id: font-mono
     title: Diagrams - Monospaced
     title.de: Diagramme - Konstantschrift
@@ -266,107 +371,6 @@ settings:
     description.de: für Diagramme
     type: variable-text
     default: 'Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
-  -  
-    id: heading-spacing
-    title: Spacing
-    title.de: Anordung
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: custom-margin-above-header
-    title: Custom Margin Above Header
-    title.de: Überschriften Abstand-Oben
-    description: (20)
-    type: variable-number-slider
-    format: px
-    default: 0
-    min: 0
-    max: 30
-    step: 2
-  -
-    id: custom-margin-below-header
-    title: Custom Margin Below Header
-    title.de: Überschriften Abstand-Unten
-    description: (8)
-    type: variable-number-slider
-    format: px
-    default: 0
-    min: 0
-    max: 14
-    step: 2
-  -
-    id: large-h1
-    title: Custom h1 size (PC)
-    title.de: Überschrift H1 - Spezial (PC)
-    type: variable-number-slider
-    format: em
-    default: 2
-    min: 2
-    max: 10
-    step: 1
-  -
-    id: custom-max-line-width
-    title: Custom line width
-    description: first, activate "readable line width" - in Preferences-Editor
-    title.de: Maximale Zeilenlänge
-    description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
-    type: variable-number-slider
-    format: px
-    default: 700
-    min: 500
-    max: 1400
-    step: 50
-  -
-    title: Typesetting alignment (global)
-    description: left, right, axis, block
-    title.de: Schriftsatzart (global)
-    description.de: Linksbündiger, Rechtsbündiger -Flattersatz, Axialsatz, Blocksatz
-    id: glob-align
-    type: class-select
-    allowEmpty: false
-    default: align-l
-    options:
-        - 
-            label: L
-            value: align-l
-        - 
-            label: R
-            value: align-r
-        -
-            label: A
-            value: align-a
-        -
-            label: B
-            value: align-b
-  -
-    id: center-header
-    title: Centered headers
-    description: center all headers
-    title.de: Überschriften mittig
-    description.de: alle Überschriften mittig ausrichten
-    type: class-toggle
-  -
-    id: prg-break
-    title: Line break
-    description: strict line break 
-    title.de: Umbruch - Zeile
-    description.de: strikter Zeilenumbruch
-    type: class-toggle
-  -
-    id: slides-s
-    title: Slide - compact
-    description: smaller text (Desktop)
-    title.de: Slide - kompakt
-    description.de: kleinerer Text (PCs)
-    type: class-toggle
-  -
-    id: show-touch-area
-    title: Slide - touch-area
-    description: show touch-area (for mobile)
-    title.de: Slide - Berührungsfläche
-    description.de: Zeige Navigationsfeld (Mobilgeräte)
-    type: class-toggle
   -
     id: img-options
     title: ✦ Pictures
@@ -380,13 +384,15 @@ settings:
     id: heading-image-frames
     title: Picture frames
     title.de: Rahmen
+    description: Four picture frames (for pictures)
+    description.de: Vier Bilderrahmen  (für Bilder)
     type: heading
     level: 2
     collapsed: true
   - 
     id: bframe-a
     title: Picture frame 'frame a'
-    description: add urls from online png Images.
+    description: add online urls - png Images
     title.de: Bilderrahmen 'frame a'
     description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
@@ -414,7 +420,7 @@ settings:
   - 
     id: bframe-b
     title: Picture frame 'frame b'
-    description: add urls from online png Images.
+    description: add online urls - png Images
     title.de: Bilderrahmen 'frame b'
     description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
@@ -442,7 +448,7 @@ settings:
   - 
     id: bframe-c
     title: Picture frame 'frame c'
-    description: add urls from online png Images.
+    description: add online urls - png Images
     title.de: Bilderrahmen 'frame c'
     description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
@@ -470,7 +476,7 @@ settings:
   - 
     id: bframe-d
     title: Picture frame 'frame d'
-    description: add urls from online png Images.
+    description: add online urls - png Images
     title.de: Bilderrahmen 'frame d'
     description.de: erlaubt sind Urls aus dem Netz. Empfohlen werden png Bilder.
     type: variable-text
@@ -495,27 +501,12 @@ settings:
     min: 40
     max: 100
     step: 5
-  - 
-    id: bframe-s
-    title: Frame (simple)
-    title.de: Rahmen (einfach)
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: bwidth-s
-    title: Frame thickness
-    title.de: Rahmenstärke
-    type: variable-number-slider
-    format: px
-    default: 2
-    min: 2
-    max: 14
-    step: 2
   -
     id: zoom-imgs
     title: Zoom Pictures
     title.de: Vergrößerung
+    description: zoom pictures, resize banners, resize picture simple picture frames, resize poetry hr
+    description.de: Vergrößere Bilder, Banner, Bilderrahmen und Poesie Platzhalter
     type: heading
     level: 2
     collapsed: true
@@ -544,6 +535,16 @@ settings:
     max: 500
     step: 50
   -
+    id: bwidth-s
+    title: Frame (simple) thickness 
+    title.de: Rahmen (einfach) Breite 
+    type: variable-number-slider
+    format: px
+    default: 2
+    min: 2
+    max: 14
+    step: 2
+  -
     id: deco-scale
     title: Resize Poetry Decorations
     title.de: Poesie Dekorationen anpassen
@@ -556,6 +557,8 @@ settings:
     id: pictwall-opt
     title: Image wall
     title.de: Bilderwand
+    description: arrange your pictures - vertically and horizontally 
+    description.de: arrangiere Bilder - vertikal und horizontal
     type: heading
     level: 2
     collapsed: true
@@ -583,14 +586,16 @@ settings:
     id: heading-profile-pic
     title: Profile picture
     title.de: Profilbild
+    description: for your Profile picture / text
+    description.de: für dein Profilbild / Text
     type: heading
     level: 2
     collapsed: true
   -
     title: Vault Profile
-    description: Square (🁢), Banner (🀰), Name & Square (𝑵 + 🁢), Name & Banner (𝑵 + 🀰)
+    description: Square (🁢), Banner (🀰), Standard (𝑵 Normal), small (𝑵 Minimal)
     title.de: Vault Profil
-    description.de: Quadrat (🁢), Banner (🀰), Name & Quadrat (𝑵 + 🁢), Name & Banner (𝑵 + 🀰)
+    description.de: Quadrat (🁢), Banner (🀰), Standard (𝑵 Normal), klein (𝑵 Minimal)
     id: vault-name-s
     type: class-select
     allowEmpty: false
@@ -1608,7 +1613,7 @@ NAVI BAR
     border-right: none;
 }
 
-/* navi options L */
+/* SidePanel L */
 .is-phone .workspace-drawer.mod-left .workspace-drawer-header-info {
     display: flex;
     justify-content: flex-end;
@@ -1680,16 +1685,6 @@ FOLDERs - Navi Tree
     margin-left: -6px;
 }
 
-/* .theme-dark .nav-folder.mod-root>.nav-folder-title:hover {
-    background-color: transparent;
-    color: white;
-}
-
-.theme-light .nav-folder.mod-root>.nav-folder-title:hover {
-    background-color: transparent;
-    color: revert;
-} */
-
 .nav-folder.mod-root>.nav-folder-title:hover :not(.nav-folder.mod-root>.nav-folder-title) {
     height: auto;
     padding-left: 6px;
@@ -1723,7 +1718,6 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-ico
 /* Remove collapse arrow from top level folders */
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
     display: none;
-    /* width: 0 !important; */
 }
 
 /* bg col */
@@ -1928,6 +1922,15 @@ Sidepanel
 body:not(.is-phone) .tree-item.nav-file.recent-files-file {
     height: 24px;
     margin-right: -16px;
+}
+
+.is-phone .tree-item.nav-file.recent-files-file {
+    height: 28px;
+    margin-right: -16px;
+}
+
+.tree-item.nav-file.recent-files-file .nav-file-title.is-active {
+    font-weight: bold;
 }
 
 body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover .tree-item-flair,
@@ -2665,11 +2668,30 @@ sub {
 .markdown-rendered blockquote {
     font-size: medium;
     border-left: 0;
-    border-radius: 4px;
     padding: 0;
     min-width: var(--min-boxwidth);
     width: fit-content;
+}
+
+
+.theme-light .markdown-rendered blockquote> :first-child,
+.theme-light .markdown-rendered blockquote> :last-child {
     background-color: #7e756629;
+    border-radius: 4px;
+}
+
+.theme-light .cm-s-obsidian span.cm-quote {
+    background-color: #7e756629;
+}
+
+.theme-dark .markdown-rendered blockquote> :first-child,
+.theme-dark .markdown-rendered blockquote> :last-child {
+    background-color: #7e756646;
+    border-radius: 4px;
+}
+
+.theme-dark .cm-s-obsidian span.cm-quote {
+    background-color: #7e756646;
 }
 
 blockquote p {
@@ -2679,6 +2701,10 @@ blockquote p {
 
 body:is(.is-phone) blockquote p {
     padding-right: 8px;
+}
+
+span.cm-comment {
+    filter: brightness(0.5) saturate(0.1);
 }
 
 /* wrap very long strings - invalid embeds */
@@ -3546,13 +3572,13 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 .is-phone .markdown-preview-view .callout[data-callout=infobox],
 .is-phone .markdown-preview-view .callout[data-callout=infobox-r] {
     margin-left: -1em;
-    right: -20px;
+    right: -2em;
     padding: 8px;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout=infobox-l] {
     margin-right: -1em;
-    left: -20px;
+    left: -2em;
     padding: 8px;
 }
 
@@ -3889,6 +3915,10 @@ body:not(.is-phone) .modal {
     margin-top: 0.5em;
 }
 
+.setting-item.setting-item-heading.style-settings-heading[data-level="3"] {
+    margin-left: 14px;
+}
+
 /* general spacing */
 .theme-light .setting-item-name {
     font-size: 1.1em;
@@ -4107,7 +4137,6 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-file-title:hover,
 .nav-file-title:hover {
     color: var(--text-normal);
-    font-weight: bold;
     height: auto;
 }
 
@@ -4466,7 +4495,7 @@ body:is(.is-phone) .movies.markdown-preview-view table {
 
 .is-phone .movies td {
     border: none;
-    min-width: 150px;
+    min-width: 180px;
     max-width: 250px;
     white-space: nowrap;
 }
@@ -4947,12 +4976,24 @@ ASIDE NOTES
 
 .callout[data-callout="aside-lh"] {
     margin-left: -2em;
+    margin-right: 20px;
     float: left;
 }
 
 .callout[data-callout="aside-rh"] {
     margin-right: -2em;
+    margin-left: 20px;
     float: right;
+}
+
+.is-phone .callout[data-callout="aside-lh"]:not(:hover) {
+    margin-left: -20px;
+    margin-right: 20px;
+}
+
+.is-phone .callout[data-callout="aside-rh"]:not(:hover) {
+    margin-right: -20px;
+    margin-left: 20px;
 }
 
 .is-phone.markdown-preview-view .callout[data-callout="aside-lh"]:hover,
@@ -4978,8 +5019,8 @@ ASIDE NOTES
 /* hide box */
 .callout[data-callout="aside-lh"]:not(:hover),
 .callout[data-callout="aside-rh"]:not(:hover) {
-    width: 0.2em;
-    min-width: 0.2em;
+    width: 12px;
+    min-width: 12px;
     height: 0;
     border-radius: 0;
     background: transparent;
@@ -5004,12 +5045,16 @@ ASIDE NOTES
 
 .is-phone .markdown-preview-view .callout[data-callout="aside-l"],
 .is-phone .markdown-preview-view .callout[data-callout="aside-lh"]:hover {
-    margin: 22px 20px 22px -18px;
+    margin: 12px 14px 22px -18px;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout="aside-r"],
 .is-phone .markdown-preview-view .callout[data-callout="aside-rh"]:hover {
-    margin: 22px -18px 22px 20px;
+    margin: 12px -18px 22px 14px;
+}
+
+.is-phone .callout[data-callout^="aside-"] .callout-content p {
+    margin-top: 0;
 }
 
 .markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
@@ -5107,7 +5152,7 @@ Poetry - Preview mode - important signpost
 /* realign */
 body:is(.break-prg).is-phone .markdown-preview-view .callout[data-callout="dropcap"],
 body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropcap"] {
-    margin-bottom: -2em;
+    margin-bottom: 1em;
 }
 
 .markdown-preview-view .callout[data-callout="dropcap"] .callout-content {
@@ -5877,6 +5922,10 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 
 [alt~="img-90"] img {
     width: 90%;
+}
+
+.mobile-image-viewer {
+    backdrop-filter: blur(5px);
 }
 
 /*----------------------------------------------------------------
@@ -8300,7 +8349,7 @@ body:not(.is-phone) .reveal .callout[data-callout=infobox-r] {
 }
 
 body:not(.is-phone) .reveal .callout[data-callout=infobox-l] {
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .reveal .callout[data-callout^=infobox] :is(.internal-embed, img, p) {
