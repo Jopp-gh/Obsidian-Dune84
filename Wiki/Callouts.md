@@ -102,8 +102,10 @@ embed your descriptions in boxes and place them on the left or right side of you
 > [!read-more]- 
 > Lorem ipsum etc
 ```
-Callout to shorten longer documents
+Callout to shorten longer documents. 
 **Options:** `> [!read-more]-`, `> [!weiterlesen]-`
+
+> **Tip**: do not forget to add the minus after the callout, othewise this callout won't fold
 
 <br>
 
@@ -138,7 +140,24 @@ Callout floats right
 > Words Words Words Words
 ```
 
-## Merge Paragraphs
+## Continuous text flow (around boxes, images)
+for a continuous text flow, you can use 2 methods to deal with line breaks:  **merge** (ignore line breaks) or **break**  (respect line breaks) 
+
+> By default, Dune ignores line breaks, so the toggle is off.
+
+### global
+to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Line break` and toggle linebreak on, toggle it off to merge lines/paragraphs
+
+### local
+to merge or break lines/paragraphs locally add following to your yaml header:
+- add  `cssclass: merge-prg`  (in combination with `Line break` **on**)
+- add `cssclass: break-prg` (in combination with `Line break` **off**)
+- or merge paragraphs individually, using the `>[!merge]` callout (in combination with `Line break` **on**)
+
+
+<br>
+
+## Merge Paragraphs Callout
 
 ![mergePP-align-l](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0758e68e-c0d1-47ed-935b-034286c7abca)
 
@@ -147,7 +166,7 @@ Callout floats right
 > Abc
 ```
 
-pay attention on how paragraphs are merged: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The following paragraphs highlighted with  **A, B** and **C** afterwards create a seamless text flow around the callout box
+If line break is enabled, pay attention on how to merge paragraphs individually: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The paragraphs using the merge callout are highlighted with  **A, B** and **C**
 
 ## Footnote
 
