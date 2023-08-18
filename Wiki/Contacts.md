@@ -26,11 +26,11 @@
 | ![[profile2.jpg]]  | [[Anne Hubbard]]  | +765 0939885  | some@mail.com | #client | [[Frank Herbert]] |
 ```
 
->**Customize**: you can add **more columns**, *but do not change the very first column* as it is reserved for images only
+>**Customize**: you can add **more columns**, *but do not change the very first column* as it is reserved to images only
 
 ### Related
 
-to change your vault name and add your identity instead, check out how to apply your [Profile](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) or Avatar.
+to replace your vault name with a identity / profile picture, check out how to apply your [Profile](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) or Avatar.
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
