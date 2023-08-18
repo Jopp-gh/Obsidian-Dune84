@@ -1,22 +1,33 @@
 # Poetry
+## Poetry Caps
+choose how you want to display the **first letter** of your document:
 
-First, add `cssclass: poetry` to your yaml header. This will center your text as you can see in the picture below
+![poetry-caps–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4d675282-fbe2-464f-8437-0ae931b3ea6c)
+
+
+```
+>[!raisecap]
+> Raisecaps etc.
+```
+
+![poetry-caps–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cc877a0-5c6f-4874-aec5-70ed2286c42a)
+
+```
+>[!dropcap]
+> D
+
+ropcap etc.
+```
+
+> **Hint**: i emphsized the first word with bold, but you have to add bold by yourself if you want the same effect as in the example above
 
 <br>
 
-## Raisecap
 
-![Picture 1](https://user-images.githubusercontent.com/48620536/222980815-5fd5cb2d-f795-41ba-8e85-e57beb08582d.png)
+Both callouts will render its first letter in big, gothic letters (but you can choose any font you like, please see how in list below). 
+Pay attention to use **Uppercase** for your *very first letter*.
 
-```
-> [!raisecap] 
-> Words words…
-```
-
-Raisecap will render the first letter of a paragraph and by default in big, gothic letters (but you can choose any font you like, please see list below). 
-Pay attention to use **Uppercase Caps** for your *very first letter*.
-
-- to change fonts, go to **Style Settings>Dune>Fonts>Poetry Fonts** 
+- to change fonts, go to **Style Settings>Dune>Fonts>Typesets>3 - Poetry** 
 - to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
 
 <br>
