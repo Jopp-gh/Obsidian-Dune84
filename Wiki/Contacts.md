@@ -2,6 +2,7 @@
 
 ![Contact-ls](https://user-images.githubusercontent.com/48620536/228630560-99585883-7b52-4760-ac43-80b67caaf8b4.png)
 
+> **note**: for profile pictures, only use squared pictures, otherwise zoomed profiles will display cut borders.
 
 ### Usage
 1. First, add `cssclass: contacts` to your yaml header
@@ -25,9 +26,7 @@
 | ![[profile2.jpg]]  | [[Anne Hubbard]]  | +765 0939885  | some@mail.com | #client | [[Frank Herbert]] |
 ```
 
-### Customize
-
-you can add **more columns**, *but do not change the very first column* as it is reserved for images only
+>**Customize**: you can add **more columns**, *but do not change the very first column* as it is reserved for images only
 
 ### Related
 
