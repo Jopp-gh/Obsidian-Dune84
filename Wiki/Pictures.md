@@ -18,6 +18,8 @@ choose between 3 types of banners:
 
 >to add a banner, you need to insert your banner type twice, because one value is needed to create the space, another value picks up the image to transform into your banner.
 
+<br>
+
 ### Banner height
 to configure banner height of `cssclass: banner-a`, just go to: `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Banner height` (just `banner-a` is supported)
 
