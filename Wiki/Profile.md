@@ -3,8 +3,10 @@
 
 Choose between:
 
-- **Simple Profile** icon (eg a squared or round one) 
-- **Banner** type profile image.
+- profile picture (**squared**)
+- profile picture (**banner**)
+- compact Vault Name (**small Name**)
+- standard Vault Name (**default**)
 
 <br>
 
@@ -19,9 +21,7 @@ Choose between:
 
 ### Drag n Drop area
 
-If you activated a profile picture (eg. simple / banner type), then drag your file(s) on top of your *profile picture* if you want to move your file(s) to the root directory of Obsidian.
-
-If you did not activate any profile picture and your vault name is disabled, then drag your file(s) / folder(s) on the empty area over your *folder tree*. A blue area will appear where you can release your file(s)
+If you activated a profile picture (eg. simple / banner type), drag your file(s) on top of your *profile picture* and a blue drag n drop area will appear, if you want to move your file(s) to the root directory in Obsidian.
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
