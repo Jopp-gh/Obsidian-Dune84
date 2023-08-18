@@ -20,12 +20,12 @@ choose between 3 types of banners:
 
 <br>
 
-### Banner height
-to configure banner height of `cssclass: banner-a`, just go to: `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Banner height` (just `banner-a` is supported)
+### Banner height - for `banner-a`
+to configure banner height of `cssclass: banner-a`, just go to: `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Banner height`  
 
 <br>
 
-### Banner, vertical placement
+### Banner, vertical placement - for `banner-a`
 
 To move your Banner vertically in case your image looks kind of cut, add/change following **b**anner **c**oordinates: 
 - **locally**: use 8 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
