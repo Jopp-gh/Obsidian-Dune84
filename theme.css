@@ -2703,8 +2703,13 @@ body:is(.is-phone) blockquote p {
     padding-right: 8px;
 }
 
-span.cm-comment {
-    filter: brightness(0.5) saturate(0.1);
+.cm-comment,
+.cm-hmd-codeblock {
+  filter: contrast(0.4) saturate(0);
+}
+
+.cm-s-obsidian .cm-comment.cm-inline-code {
+  background-color: transparent;
 }
 
 /* wrap very long strings - invalid embeds */
