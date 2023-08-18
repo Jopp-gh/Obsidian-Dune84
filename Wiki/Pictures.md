@@ -6,23 +6,26 @@
 cssclass: banner-a,
 ---
 ```
-`![[Pict.jpeg|banner-a]]`
+`![[picture.jpeg|banner-a]]`
 
 <br>
 
-**Options**: 
-- (big banner) `banner-a`
-- (small banner) `banner-b`
+choose between 3 types of banners:
 
-**Note**
-<br>
-to add a neat banner, you must define `banner-a` or `banner-b` twice, for both `cssclass` AND `alt name` 
+- banner-a (top banner, height adjustable in **Style Settings**)
+- banner-b (top, small banner)
+- banner-c (bottom, small banner)
+
+>to add a banner, you need to insert your banner type twice, because one value is needed to create the space, another value picks up the image to transform into your banner.
+
+### Banner height
+to configure banner height of `cssclass: banner-a`, just go to: `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Banner height` (just `banner-a` is supported)
 
 <br>
 
 ### Banner, vertical placement
 
-To move your Banner vertically, change your **b**anner **c**oordinates accordingly: 
+To move your Banner vertically in case your image looks kind of cut, add/change following **b**anner **c**oordinates: 
 - **locally**: use 8 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
 - **globally**: see **Style Settings>Dune>Pictures>Zoom Pictures>Banner vertical placement** 
 
@@ -109,6 +112,13 @@ to control the max width of simple picture descriptions, and its frame under you
 **Options**: Configure height and width, see **Style Settings>Pictures>Image Wall**
 
 the more pictures you put in a picture wall, the more your picture wall will look seamless. To remove empty spaces and get a neat-looking picture wall, (see **Style Settings>Dune>Pictures>Image Wall**) adjust both H/W sliders accordingly. Remember to keep an empty line between each line of pictures (see template above).
+
+<br>
+
+## Scale images
+`![[picture.png | img-50]]`
+
+to scale your images, use: img-10, img-20, img-30, img-40, img-50, img-60, img-70, img-80, img-90
 
 <br>
 
