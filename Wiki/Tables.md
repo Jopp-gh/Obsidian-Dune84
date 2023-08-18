@@ -32,6 +32,18 @@ copy this template:
 
 `cssclass: table-wide, academia`
 
+## Monochrome tables
+
+![table-m–1](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d5dce96f-4437-461e-bdea-2f21532001cb)
+
+use `cssclass: table-m`
+
+![table-m–2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/15ea1b39-9fb9-4c26-8366-17dbb89b2e6d)
+
+use `cssclass: table-xym`
+
+replaces default tables with slightly updated versions. Dune's custom tables are available both with edgy or rounded (default) corners 
+
 
 ## Table colors
 
