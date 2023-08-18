@@ -30,12 +30,12 @@
 - and much more… please see a full list of features [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
 ### Garble Interface
-If you get lost after garbling your interface, follow this steps: 
+If you get lost with a garbled interface, follow this steps: 
 
-> 1. Always use a keyboard shortcut key for Obsidians Preferences
+> 1. Always use a keyboard shortcut for Obsidians Preferences, otherwise select **Preferences** from the top menu bar of Obsidian
 > 2. remember that community plugins are loaded in Obsidians Preferences window on the left hand panel as the last menu section, eg. sections from top to bottom: **Options, Core plugins, Community plugins**
-> 3. remember **Community plugins** are sorted in alphabetical order in there, so **Style Settings** will be relatively low in the load order, esp. if you have lots of plugins installed
-> 4. so, after you clicked on **Style Settings**, Dune will open, then go to the last section and click the last toggle to deactivate the garbled UI
+> 3. remember **Community plugins** are sorted in alphabetical order in there, so **Style Settings** with **S** will be relatively low in the load order, esp. if you have lots of plugins installed
+> 4. After you click on **Style Settings**, Dune's Preferences will open, then go to its last section and click the last toggle to deactivate the garbled UI
 
 ![help–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/cd3009db-21f1-4679-a18e-b82ea741aca9)
 
