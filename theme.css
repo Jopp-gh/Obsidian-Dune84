@@ -7,7 +7,7 @@ settings:
   -
     id: all-fonts
     title: 𝞪 Fonts
-    description: manage Fonts
+    description: manage fonts
     title.de: 𝞪 Schriften
     description.de: Schriften verwalten
     type: heading
@@ -278,7 +278,7 @@ settings:
     type: class-toggle
   -
     id: extra-fonts
-    title: Extra Fonts
+    title: Extra fonts
     title.de: Zusätzliche Schriften
     description: configure additional fonts
     description.de: verwalte zusätzliche Schriften
@@ -641,7 +641,7 @@ settings:
   -
     id: all-colors
     title: ⫸ Colors
-    description: manage Colors
+    description: manage colors
     title.de: ⫸ Farben
     description.de: Farben verwalten
     type: heading
@@ -785,7 +785,7 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#F1F0D3'
+    default-light: '#D9B98C'
     default-dark: '#2D2A28'
   -
     id: background-secondary
@@ -794,7 +794,7 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#B4B19C'
+    default-light: '#D5975F'
     default-dark: '#33362D'
   -
     id: background-modifier-border
@@ -805,7 +805,7 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#88867B'
+    default-light: '#46453D'
     default-dark: '#4B4D45'
   -
     id: theme-colors-scheme
@@ -845,12 +845,28 @@ settings:
             label: Dune-4
             value: col-mod-d
   -
-    id: code-utils
-    title: Current Line
-    description: highlight current line / paragraph (only edit mode)
-    title.de: Aktuelle Zeile
-    description.de: Aktuelle Zeile / Paragraphen hervorheben - (nur Schreibmodus)
-    type: class-toggle
+    title: Dim Pictures
+    title.de: Bilder bbdunkeln
+    id: dim-pictures
+    type: class-select
+    allowEmpty: false
+    default: dark-1
+    options: 
+        - 
+            label: ● 1
+            value: dark-1
+        -
+            label: ● 2
+            value: dark-2
+        - 
+            label: ● 3
+            value: dark-3
+        -
+            label: ● 4
+            value: dark-4
+        -
+            label: ● 5
+            value: dark-5
   -
     id: extra-col-palette
     title: Extra colors
@@ -858,7 +874,7 @@ settings:
     title.de: Zusätzliche Farben
     description.de: für einfache Bilderrahmen, Trenner, Initialien, Callouts, Memos, Tabellen, Markierungen
     type: heading
-    level: 3
+    level: 2
     collapsed: true
   - 
     id: frame-color
@@ -893,6 +909,50 @@ settings:
     format: hex
     default-light: '#800000'
     default-dark: '#800000'
+  - 
+    id: def-red
+    title: Default red
+    description: for tables, text highlight types
+    title.de: Standard Rot
+    description.de: für Tabellen, Callout, Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#db3434'
+    default-dark: '#b92b2b'
+  - 
+    id: def-green
+    title: Default green
+    description: for tables, text highlight types
+    title.de: Standard Grün
+    description.de: für Tabellen, Callout, Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#52a543'
+    default-dark: '#228b22'
+  - 
+    id: def-blue
+    title: Default blue
+    description: for tables, text highlight types
+    title.de: Standard Blau
+    description.de: für Tabellen, Callout, Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#6495ed'
+    default-dark: '#3b71d6'
+  - 
+    id: def-yellow
+    title: Default yellow
+    description: for tables, text highlight types
+    title.de: Standard Gelb
+    description.de: für Tabellen, Callout, Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#e6b300'
+    default-dark: '#c69a00'
   -
     id: hl-col
     title: 'Text: Font Highlight - custom'
@@ -1029,7 +1089,7 @@ settings:
     type: class-toggle
   -
     id: stacked-tabs-focused
-    title: Stacked Notes
+    title: Stacked notes
     description: restore default stacked-view
     title.de: Stapelansicht
     description.de: Wiederherstellung normale Stapelansicht
@@ -1038,7 +1098,7 @@ settings:
     id: edgy-tables
     title: Tables, edgy
     description: restore edgy tables (for colored-monochrome)
-    title.de: Tabellen, Eckig
+    title.de: Tabellen, eckig 
     description.de: Wiederherstellung eckige Tabellen (für farbige-sw)
     type: class-toggle
   -
@@ -1051,9 +1111,23 @@ settings:
   -
     id: show-ls-marker
     title: List counter marker
-    description: restore counter marker (List)
+    description: restore counter marker (list)
     title.de: Listen Aufzählzeichen
     description.de: Wiederherstellung Aufzählzeichen
+    type: class-toggle
+  -
+    id: show-gifs
+    title: Gif animation 
+    description: restore animated gifs
+    title.de: Gif Bilder
+    description.de: Wiederherstellung animierte gif Bilder
+    type: class-toggle
+  -
+    id: code-utils
+    title: Current Line (edit mode)
+    description: restore - highlight 
+    title.de: Aktuelle Zeile (Schreibmodus)
+    description.de: Wiederherstellung - Hervorhebung
     type: class-toggle
   -
     id: hide-gui
@@ -1202,6 +1276,11 @@ body.theme-light {
     --memo-hlcol: var(--light-cust-hl);
     --call-hlcol: var(--light-cust-hl);
 
+    --def-red: #db3434;
+    --def-green: #52a543;
+    --def-blue: cornflowerblue;
+    --def-yellow: #e6b300;
+
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
     --code-comment: var(--code-color);
@@ -1241,6 +1320,11 @@ body.theme-dark {
     --tables-hlcol: var(--dark-cust-hl);
     --memo-hlcol: var(--dark-cust-hl);
     --call-hlcol: var(--dark-cust-hl);
+
+    --def-red: #b92b2b;
+    --def-green: forestgreen;
+    --def-blue: #3b71d6;
+    --def-yellow: #c69a00;
 
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
@@ -2010,26 +2094,24 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
 }
 
 /* Handle to resize folder tree */
-.workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-.workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    width: 6px;
-    border: none;
+.workspace-leaf-resize-handle {
+    filter: opacity(0);
 }
 
+.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle:hover {
     color: var(--bold-color);
-}
-
-.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle {
+    width: 6px;
+    filter: opacity(1);
     border: none;
 }
 
-
-/* Handle to resize folder tree */
-.workspace-leaf-resize-handle:hover {
-    background-color: var(--link-color);
-    border-color: var(--divider-color-hover);
+/* horizontal */
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle:hover {
+    height: 6px;
+    filter: opacity(1);
+    border: none;
 }
 
 .nav-file-tag {
@@ -2538,11 +2620,9 @@ ALIGNMENT
     text-align: initial;
 }
 
-/* removes margins L & R */
-/* .is-phone .markdown-preview-view {
-    padding-left: 6px !important;
-    padding-right: 4px !important;
-} */
+.setting-item-info>.setting-item-description div {
+    font-size: medium;
+}
 
 /*----------------------------------------------------------------
 highlights
@@ -2705,11 +2785,11 @@ body:is(.is-phone) blockquote p {
 
 .cm-comment,
 .cm-hmd-codeblock {
-  filter: contrast(0.4) saturate(0);
+    filter: contrast(0.4) saturate(0);
 }
 
 .cm-s-obsidian .cm-comment.cm-inline-code {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 /* wrap very long strings - invalid embeds */
@@ -2746,34 +2826,49 @@ a:is([href^="#red"], [href^="#green"], [href^="#blue"], [href^="#gray"], [href^=
     display: none !important;
 }
 
+.theme-light a:is([href^="#red"],
+    [href^="#green"], [href^="#blue"],
+    [href^="#gray"], [href^="#hlcol"])+mark {
+    filter: contrast(1.2) brightness(1.2);
+}
+
+.theme-light a:is([href^="#red"],
+    [href^="#green"], [href^="#blue"],
+    [href^="#gray"])+strong,
+.theme-light a:is([href^="#red"],
+    [href^="#green"], [href^="#blue"],
+    [href^="#gray"])+em {
+    filter: contrast(1.5) brightness(0.8);
+}
+
 a[href^="#red"]+mark {
-    background-color: rgb(255, 69, 0, 0.7);
+    background-color: var(--def-red);
     color: var(--text-normal);
 }
 
 a[href^="#red"]+strong,
 a[href^="#red"]+em {
-    color: orangered;
+    color: var(--def-red);
 }
 
 a[href^="#green"]+mark {
-    background-color: rgb(82, 165, 67, 0.7);
+    background-color: var(--def-green);
     color: var(--text-normal);
 }
 
 a[href^="#green"]+strong,
 a[href^="#green"]+em {
-    color: forestgreen;
+    color: var(--def-green);
 }
 
 a[href^="#blue"]+mark {
-    background-color: rgb(100, 149, 237, 0.7);
+    background-color: var(--def-blue);
     color: var(--text-normal);
 }
 
 a[href^="#blue"]+strong,
 a[href^="#blue"]+em {
-    color: #3b71d6;
+    color: var(--def-blue);
 }
 
 a[href^="#gray"]+mark {
@@ -2799,71 +2894,71 @@ a[href^="#hlcol"]+em {
 /* small fonts */
 a[href^="#font-s"]+mark {
     background-color: transparent;
-    font-size: small;
+    font-size: small !important;
     color: var(--text-normal);
 }
 
 a[href^="#red-s"]+strong,
 a[href^="#red-s"]+em {
     background-color: transparent;
-    color: orangered;
-    font-size: small;
+    color: var(--def-red);
+    font-size: small !important;
 }
 
 a[href^="#green-s"]+strong,
 a[href^="#green-s"]+em {
     background-color: transparent;
-    color: rgb(34, 139, 34);
-    font-size: small;
+    color: var(--def-green);
+    font-size: small !important;
 }
 
 a[href^="#blue-s"]+strong,
 a[href^="#blue-s"]+em {
     background-color: transparent;
-    color: #3b71d6;
-    font-size: small;
+    color: var(--def-blue);
+    font-size: small !important;
 }
 
 a[href^="#hlcol-s"]+strong,
 a[href^="#hlcol-s"]+em {
     background-color: transparent;
     color: var(--hl-col);
-    font-size: small;
+    font-size: small !important;
 }
 
 /* large */
 a[href^="#font-l"]+mark {
     background-color: transparent;
-    font-size: large;
+    font-size: large !important;
     color: var(--text-normal);
 }
 
 a[href^="#red-l"]+strong,
 a[href^="#red-l"]+em {
     background-color: transparent;
-    color: orangered;
-    font-size: large;
+    color: var(--def-red);
+    font-size: large !important;
 }
 
 a[href^="#green-l"]+strong,
 a[href^="#green-l"]+em {
     background-color: transparent;
-    color: forestgreen;
-    font-size: large;
+    color: var(--def-green);
+    font-size: large !important;
 }
 
 a[href^="#blue-l"]+strong,
 a[href^="#blue-l"]+em {
     background-color: transparent;
-    color: #3b71d6;
-    font-size: large;
+    color: var(--def-blue);
+    font-size: large !important;
 }
 
 a[href^="#hlcol-l"]+strong,
 a[href^="#hlcol-l"]+em {
     background-color: transparent;
     color: var(--hl-col);
-    font-size: large;
+    font-size: large !important;
 }
 
 a[href^="#sup"]+mark {
@@ -3319,19 +3414,19 @@ div[data-callout-metadata*="50"].callout {
 }
 
 .callout[data-callout-metadata~="yellow"] {
-    background-color: rgba(255, 205, 43, 0.6);
+    background-color: var(--def-yellow);
 }
 
 .callout[data-callout-metadata~="red"] {
-    background-color: rgba(255, 79, 79, 0.6);
+    background-color: var(--def-red);
 }
 
 .callout[data-callout-metadata~="green"] {
-    background-color: rgba(154, 205, 50, 0.6);
+    background-color: var(--def-green);
 }
 
 .callout[data-callout-metadata~="blue"] {
-    background-color: rgba(88, 161, 251, 0.6);
+    background-color: var(--def-blue);
 }
 
 .callout[data-callout-metadata~="gray"] {
@@ -4316,12 +4411,12 @@ TABLES -highlights
     --table-header-border-color: gray;
 }
 
-/* Table header col */
-.theme-dark .markdown-rendered thead tr>th {
+/* Table header col :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col)*/
+.theme-dark .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col) thead {
     background: #313131;
 }
 
-.theme-light .markdown-rendered thead tr>th {
+.theme-light .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col) thead {
     background: gray;
 }
 
@@ -4500,7 +4595,7 @@ body:is(.is-phone) .movies.markdown-preview-view table {
 
 .is-phone .movies td {
     border: none;
-    min-width: 180px;
+    min-width: 200px;
     max-width: 250px;
     white-space: nowrap;
 }
@@ -4710,99 +4805,61 @@ RECIPE TABLES
 STYLED TABLES
 --------------------------------------------*/
 
-.theme-light .table-y thead tr>th {
-    background: #e6b300;
+.table-y thead tr {
+    background: var(--def-yellow);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-y thead tr>th {
-    background: #c69a00;
-}
-
-.theme-light .table-r thead tr>th {
-    background: indianred;
+.table-r thead tr {
+    background: var(--def-red);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-r thead tr>th {
-    background: darkred;
-}
-
-.theme-light .table-g thead tr>th {
-    background: #52a543;
+.table-g thead tr {
+    background: var(--def-green);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-g thead tr>th {
-    background: forestgreen;
-}
-
-.theme-light .table-b thead tr>th {
-    background: cornflowerblue;
+.table-b thead tr {
+    background: var(--def-blue);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-b thead tr>th {
-    background: var(--color-blue);
-}
-
-.theme-light .table-m thead tr>th {
+.theme-light .table-m thead tr {
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-m thead tr>th {
-    /* background: #CECECE; */
+.theme-dark .table-m thead {
     filter: invert(1);
 }
 
-.table-col thead tr>th {
+.table-col thead tr {
     background: var(--tables-hlcol) !important;
     text-rendering: optimizeLegibility;
 }
 
-
-.theme-light .table-xyr thead tr>th,
-.theme-light .table-xyr tbody tr>td:first-child {
-    background: indianred;
+.table-xyr thead tr,
+.table-xyr tbody tr>td:first-child {
+    background: var(--def-red);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-xyr thead tr>th,
-.theme-dark .table-xyr tbody tr>td:first-child {
-    background: darkred;
-}
-
-.theme-light .table-xyg thead tr>th,
-.theme-light .table-xyg tbody tr>td:first-child {
-    background: #52a543;
+.table-xyg thead tr,
+.table-xyg tbody tr>td:first-child {
+    background: var(--def-green);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-xyg thead tr>th,
-.theme-dark .table-xyg tbody tr>td:first-child {
-    background: forestgreen;
-}
-
-.theme-light .table-xyb thead tr>th,
-.theme-light .table-xyb tbody tr>td:first-child {
-    background: cornflowerblue;
+.table-xyb thead tr,
+.table-xyb tbody tr>td:first-child {
+    background: var(--def-blue);
     text-rendering: optimizeLegibility;
 }
 
-.theme-dark .table-xyb thead tr>th,
-.theme-dark .table-xyb tbody tr>td:first-child {
-    background: var(--color-blue);
-}
-
-.theme-light .table-xy thead tr>th,
-.theme-light .table-xy tbody tr>td:first-child {
-    background: #e6b300;
+.table-xy thead tr,
+.table-xy tbody tr>td:first-child {
+    background: var(--def-yellow);
     text-rendering: optimizeLegibility;
-}
-
-.theme-dark .table-xy thead tr>th,
-.theme-dark .table-xy tbody tr>td:first-child {
-    background: #c69a00;
 }
 
 .theme-light .table-xym thead tr>th,
@@ -5174,12 +5231,42 @@ body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropc
 /*----------------------------------------------------------------
 IMAGE PLACING
 ----------------------------------------------------------------*/
-:root {
-    /* 12px */
-    --size-3-5: 0.875em;
-    /* 30px */
-    --size-0-5: 0.125em;
-    --size-2-5: 0.625em;
+
+/* pause gif */
+body:not(.show-gifs) .markdown-source-view .image-embed[src$=".gif"] img,
+body:not(.show-gifs) .markdown-preview-view .image-embed[src$=".gif"] img {
+    display: none;
+    width: 50px;
+}
+
+body:not(.show-gifs) .image-embed[src$=".gif"]::after {
+    content: "GIF";
+    font-size: 1.6em;
+    color: gray;
+    border: 3px dashed gray;
+    display: flex;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+body:not(.show-gifs) .image-embed[src$=".gif"].is-loaded:hover img {
+    width: 70vw;
+    display: initial;
+    animation: fadeIn 0.5s ease-out;
+
+}
+
+body:not(.show-gifs) .image-embed[src$=".gif"]:hover::after {
+    display: none;
+}
+
+span.internal-embed.media-embed.image-embed[src$=".gif"].is-loaded {
+    width: fit-content;
+    display: block;
 }
 
 /* add banner-a to image */
@@ -5639,9 +5726,31 @@ image placed + description
 }
 
 /* dim bright imgs for dark themes */
-.theme-dark .view-content img {
+.theme-dark .dark-1 img,
+.dark-1.theme-dark img {
+    filter: brightness(1);
+}
+
+.theme-dark .dark-2 img,
+.dark-2.theme-dark img {
     filter: brightness(0.9);
 }
+
+.theme-dark .dark-3 img,
+.dark-3.theme-dark img {
+    filter: brightness(0.8);
+}
+
+.theme-dark .dark-4 img,
+.dark-4.theme-dark img {
+    filter: brightness(0.7);
+}
+
+.theme-dark .dark-5 img,
+.dark-5.theme-dark img {
+    filter: brightness(0.6);
+}
+
 
 /*Image moodboard */
 .callout.callout[data-callout=moodboard] {
@@ -5826,7 +5935,8 @@ body:not(.is-phone) .zoom-auto .markdown-preview-view .mermaid svg {
 
 /* image handling */
 /* Desk */
-body:not(.is-phone) .markdown-preview-view :is(.view-content img) {
+/* body:not(.is-phone) .markdown-preview-view :is(.view-content img) */
+body:not(.is-phone) .markdown-preview-view img {
     cursor: zoom-in;
     display: inline;
     border-radius: 4px;
@@ -6384,6 +6494,7 @@ body:not(.show-status-bar) .status-bar:hover {
 /* body:not(.sidebar-fixed)  */
 .sidebar-toggle-button.mod-left {
     position: fixed;
+    top: 0;
 }
 
 /* fix workspace icons - ribbon hidden obsolete */
@@ -6444,6 +6555,14 @@ body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .si
 body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right:hover,
 body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-left:hover {
     opacity: 1;
+}
+
+/* places navbar */
+.show-ui-btns .mod-left-split .workspace-tab-header-container-inner,
+.show-ui-btns .mod-right-split .workspace-tab-header-container-inner,
+.show-ui-btns .mod-left-split .workspace-tab-header-container-inner:hover,
+.show-ui-btns .mod-right-split .workspace-tab-header-container-inner:hover {
+    padding-left: 2.8em;
 }
 
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner,
@@ -7522,7 +7641,7 @@ ul>li.task-list-item[data-task]:is([data-task=d], [data-task=f], [data-task=m]) 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=q], [data-task=i], [data-task=n]),
 ul>li.task-list-item[data-task]:is([data-task=q], [data-task=i], [data-task=n]) {
     background-color: rgba(32, 157, 207, 0.2);
-    color: #0078a7;
+    color: #0091ca;
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task='?'], [data-task=s], [data-task='/']),
@@ -8505,28 +8624,28 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
-    .table-r thead tr>th,
-    .table-xyr thead tr>th,
-    .table-xyr tbody tr>td:first-child {
-        background: #e6b300 !important;
+    .table-y thead tr>th,
+    .table-xy thead tr>th,
+    .table-xy tbody tr>td:first-child {
+        background: var(--def-yellow);
     }
 
     .table-r thead tr>th,
     .table-xyr thead tr>th,
     .table-xyr tbody tr>td:first-child {
-        background: indianred !important;
+        background: var(--def-red);
     }
 
     .table-g thead tr>th,
     .table-xyg thead tr>th,
     .table-xyg tbody tr>td:first-child {
-        background: #52a543 !important;
+        background: var(--def-green);
     }
 
     .table-b thead tr>th,
     .table-xyb thead tr>th,
     .table-xyb tbody tr>td:first-child {
-        background: cornflowerblue !important;
+        background: var(--def-blue);
     }
 
     .table-xy-col thead tr>th,
@@ -8623,7 +8742,7 @@ PDF EXPORT
     }
 
     .image-embed[src*="#cap"]::after {
-        padding-left: 0;
+        /* padding-left: 0; */
         overflow-wrap: normal;
         width: fit-content;
         min-width: var(--min-boxwidth);
@@ -9048,13 +9167,12 @@ body:not(.is-phone) .kanban-plugin__lane-form-wrapper {
 }
 
 /* cMenu flat colors*/
-#cMenuModalBar .cMenuCommandItem {
-    background-color: unset !important;
-    color: var(--text-normal);
+#cMenuModalBar button.cMenuCommandItem {
+    background-color: unset;
 }
 
-#cMenuModalBar .cMenuCommandItem:hover {
-    color: var(--text-accent-special);
+.theme-dark #cMenuModalBar button.cMenuCommandItem {
+    filter: invert(1);
 }
 
 /* my snippets */
