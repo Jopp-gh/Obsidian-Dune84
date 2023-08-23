@@ -10,11 +10,10 @@
 ---
 
 ### Dune
-I called my theme after a novel cycle of [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert), one of my favorite sci-fi writers.
-His novels were incredibly successful and influenced everything related to **Sci-fi** afterwards, but nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
-**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic and spectacular cinematic transposition of Frank's novel, very well narrated and worth to see as a whole - i continue to watch **David Lynch**'s Dune from time to time and it feels still great, even after many times watching.
-
-Recenty, we could see more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them here as successors. 
+My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
+His novels were incredibly successful and influenced **Science-fiction** and everything related to coming afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic, spectacular and cinematic transposition of Frank's novel, very well narrated and worth to see as a whole. I continue to watch **David Lynch**'s Dune from time to time and this movie is still able to move me, even after so long time. 
+Recenty, we saw more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them here as successors. 
 
 ### Goal
 My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
