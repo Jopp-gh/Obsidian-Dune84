@@ -17,8 +17,8 @@ settings:
     id: common-fonts
     title: Typesets
     title.de: Schriftsätze
-    description: Standard (1), Handwritten (2), Poetry (3), Custom Typeset (4)
-    description.de: Standard (1), Handschrift (2), Poesie (3), Eigener Schriftsatz (4)
+    description: Standard (1), Handwritten (2), Poetry (3), Dashboard (4)
+    description.de: Standard (1), Handschrift (2), Poesie (3), Startseite (4)
     type: heading
     level: 2
     collapsed: true
@@ -108,17 +108,17 @@ settings:
   - 
     id: poetry-initial
     title: Initial
-    description: (default=DieterCaps)
+    description: (default = DieterCaps)
     title.de: Initialie
-    description.de: (Standard="Manuskript Gothisch")
+    description.de: (Standard = "Manuskript Gothisch")
     type: variable-text
     default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
   - 
     id: poetry-font-h 
     title: Header Font
-    description: (default=Mumsies)
+    description: (default = Mumsies)
     title.de: Überschriften
-    description.de: (Standard=Manuskript Gothisch)
+    description.de: (Standard = Manuskript Gothisch)
     type: variable-text
     default: '"Manuskript Gothisch", cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   - 
@@ -139,8 +139,8 @@ settings:
     step: 1
   -
     id: font-custom
-    title: 4 - Custom Fonts
-    title.de: 4 - Eigene Schrift
+    title: 4 - Dashboard
+    title.de: 4 - Startseite
     type: heading
     level: 3
     collapsed: true
@@ -169,9 +169,9 @@ settings:
   -  
     id: heading-spacing
     title: Spacing
-    title.de: Anordung
-    description: change spacing bw headers, characters, linebreaks, smaller slides
-    description.de: Ändere den Abstand von Überschriften, Charakterschrift, Zeilenumbruch, kleinere slides
+    title.de: Anordnung
+    description: change spacing bw headers, characters, linebreaks
+    description.de: Ändere den Abstand von Überschriften, Charakterschrift, Zeilenumbruch
     type: heading
     level: 2
     collapsed: true
@@ -198,10 +198,17 @@ settings:
             label: B
             value: align-b
   -
+    id: break-space
+    title: Newline
+    title.de: Zeilenumbruch
+    type: heading
+    level: 3
+    collapsed: true
+  -
     id: custom-max-line-width
-    title: Custom line width
-    description: first, activate "readable line width" - in Preferences-Editor
-    title.de: Maximale Zeilenlänge
+    title: Linebreak - custom width
+    description: first, activate "readable line width" in Preferences-Editor
+    title.de: Umbruch - eigene Zeilenlänge
     description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
     type: variable-number-slider
     format: px
@@ -209,6 +216,30 @@ settings:
     min: 500
     max: 1400
     step: 50
+  -
+    id: deco-scale
+    title: Linebreak - Poesie Decorations height
+    title.de: Umbruch - Dekorationen anpassen
+    description: (wave-a - wave-f)
+    type: variable-number-slider
+    default: 0.6
+    min: 0.1
+    max: 1.2
+    step: 0.1
+  -
+    id: prg-break
+    title: Linebreaks - empty
+    description: ignore empty lines
+    title.de: Umbruch - leer
+    description.de: ignoriere leere Umbrüche
+    type: class-toggle
+  -  
+    id: header-space
+    title: Headers
+    title.de: Kopfzeilen
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: custom-margin-above-header
     title: Custom Margin Above Header
@@ -233,8 +264,10 @@ settings:
     step: 2
   -
     id: large-h1
-    title: Custom h1 size (PC)
-    title.de: Überschrift H1 - Spezial (PC)
+    title: Custom h1 size
+    title.de: Überschrift H1
+    description: except phone
+    description.de: außer Telefon
     type: variable-number-slider
     format: em
     default: 2
@@ -242,39 +275,23 @@ settings:
     max: 10
     step: 1
   -
+    id: large-headers
+    title: Custom h2 - h6 size
+    title.de: Überschrift H2 - H6
+    description: except phone
+    description.de: außer Telefon
+    type: variable-number-slider
+    format: rem
+    default: 1
+    min: 1
+    max: 4
+    step: 0.4
+  -
     id: center-header
     title: Centered headers
     description: center all headers
     title.de: Überschriften mittig
     description.de: alle Überschriften mittig ausrichten
-    type: class-toggle
-  -
-    id: prg-break
-    title: Line break
-    description: strict line break 
-    title.de: Umbruch - Zeile
-    description.de: strikter Zeilenumbruch
-    type: class-toggle
-  -
-    id: hr-break
-    title: Horizontal Lines
-    description: hard line break 
-    title.de: Umbruch - Trennlinie
-    description.de: strikter Zeilenumbruch
-    type: class-toggle
-  -
-    id: slides-s
-    title: Slide - compact
-    description: smaller text (Desktop)
-    title.de: Slide - kompakt
-    description.de: kleinerer Text (PCs)
-    type: class-toggle
-  -
-    id: show-touch-area
-    title: Slide - touch-area
-    description: show touch-area (for mobile)
-    title.de: Slide - Berührungsfläche
-    description.de: Zeige Navigationsfeld (Mobilgeräte)
     type: class-toggle
   -
     id: extra-fonts
@@ -285,41 +302,6 @@ settings:
     type: heading
     level: 2
     collapsed: true
-  -
-    id: header-fonts
-    title: Header Font
-    title.de: Überschriften
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: h1-font
-    title: Header 1
-    title.de: Überschrift 1
-    description: Century Gothic, DiehlDeco, Whattimeisit
-    type: variable-text
-    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
-  - 
-    id: h2-font
-    title: Header 2 
-    title.de: Überschrift 2
-    description: Century Gothic, DiehlDeco, Whattimeisit
-    type: variable-text
-    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
-  - 
-    id: h3-font
-    title: Header 3
-    title.de: Überschrift 3
-    description: Century Gothic, DiehlDeco, Whattimeisit
-    type: variable-text
-    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
-  -
-    id: h4-font
-    title: Header 4, 5, 6
-    title.de: Überschrift 4, 5, 6
-    description: Century Gothic, DiehlDeco, Whattimeisit
-    type: variable-text
-    default: 'Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: special-fonts
     title: Special Header Fonts
@@ -383,11 +365,28 @@ settings:
   -
     id: heading-image-frames
     title: Picture frames
-    title.de: Rahmen
-    description: Four picture frames (for pictures)
-    description.de: Vier Bilderrahmen  (für Bilder)
+    title.de: Bilderrahmen
+    description: 4 Frames
+    description.de: 4 Bilderrahmen
     type: heading
     level: 2
+    collapsed: true
+  -
+    id: bwidth-s
+    title: Frame (simple) thickness 
+    title.de: Rahmen (einfach) Breite 
+    type: variable-number-slider
+    format: px
+    default: 2
+    min: 2
+    max: 14
+    step: 2
+  -
+    id: image-frames-a
+    title: 1-Picture frame
+    title.de: 1-Rahmen
+    type: heading
+    level: 3
     collapsed: true
   - 
     id: bframe-a
@@ -417,6 +416,13 @@ settings:
     min: 40
     max: 100
     step: 5
+  -
+    id: image-frames-b
+    title: 2-Picture frame
+    title.de: 2-Rahmen
+    type: heading
+    level: 3
+    collapsed: true
   - 
     id: bframe-b
     title: Picture frame 'frame b'
@@ -445,6 +451,13 @@ settings:
     min: 40
     max: 100
     step: 5
+  -
+    id: image-frames-c
+    title: 3-Picture frame
+    title.de: 3-Rahmen
+    type: heading
+    level: 3
+    collapsed: true
   - 
     id: bframe-c
     title: Picture frame 'frame c'
@@ -473,6 +486,13 @@ settings:
     min: 40
     max: 100
     step: 5
+  -
+    id: image-frames-d
+    title: 4-Picture frame
+    title.de: 4-Rahmen
+    type: heading
+    level: 3
+    collapsed: true
   - 
     id: bframe-d
     title: Picture frame 'frame d'
@@ -505,8 +525,8 @@ settings:
     id: zoom-imgs
     title: Zoom Pictures
     title.de: Vergrößerung
-    description: zoom pictures, resize banners, resize picture simple picture frames, resize poetry hr
-    description.de: Vergrößere Bilder, Banner, Bilderrahmen und Poesie Platzhalter
+    description: zoom pictures, diagrams and gif
+    description.de: Vergrößere Bilder, Diagramme, Gif
     type: heading
     level: 2
     collapsed: true
@@ -519,44 +539,22 @@ settings:
     type: class-toggle
   -
     id: zoom-svg
-    title: Mobile - Mermaid Proportions
+    title: Mermaid Proportions (Mobile)
     description: restore default proportions
-    title.de: Mobilgerät - Mermaid Proportionen
+    title.de: Mermaid Proportionen (Mobilgerät)
     description.de: Wiederherstellung Standard Proportionen
     type: class-toggle
   -
-    id: banner-h
-    title: Banner height
-    title.de: Banner Höhe
-    type: variable-number-slider
-    format: px
-    default: 240
-    min: 140
-    max: 500
-    step: 50
-  -
-    id: bwidth-s
-    title: Frame (simple) thickness 
-    title.de: Rahmen (einfach) Breite 
-    type: variable-number-slider
-    format: px
-    default: 2
-    min: 2
-    max: 14
-    step: 2
-  -
-    id: deco-scale
-    title: Resize Poetry Decorations
-    title.de: Poesie Dekorationen anpassen
-    type: variable-number-slider
-    default: 0.6
-    min: 0.1
-    max: 1.2
-    step: 0.1
+    id: show-gifs
+    title: Gif animation 
+    description: zoom and animated gifs
+    title.de: Gif Bilder
+    description.de: Vergrößere und animierte gif Bilder
+    type: class-toggle
   -
     id: pictwall-opt
-    title: Image wall
-    title.de: Bilderwand
+    title: Arrange Pictures
+    title.de: Arrangiere Bilder
     description: arrange your pictures - vertically and horizontally 
     description.de: arrangiere Bilder - vertikal und horizontal
     type: heading
@@ -582,6 +580,26 @@ settings:
     min: 500
     max: 3000
     step: 40
+  -
+    id: banner-ah
+    title: Resize banner-a (Top) 
+    title.de: Größe Banner-a (Oben)
+    type: variable-number-slider
+    format: px
+    default: 240
+    min: 140
+    max: 500
+    step: 20
+  -
+    id: banner-bh
+    title: Resize banner-b (Bottom)
+    title.de: Größe Banner-b (Unten)
+    type: variable-number-slider
+    format: px
+    default: 240
+    min: 140
+    max: 500
+    step: 20
   -
     id: heading-profile-pic
     title: Profile picture
@@ -808,107 +826,12 @@ settings:
     default-light: '#46453D'
     default-dark: '#4B4D45'
   -
-    id: theme-colors-scheme
-    title: Theme
-    description: preset color schemes for Day-Night
-    title.de: Thema
-    description.de: Voreinstellung Farbschema Tag-Nacht
+    id: interface-col-sec
+    title: Secondary Colors
+    title.de: Nebenfarben
     type: heading
-    level: 2
-    collapsed: false
-  -
-    title: ○ Light Theme colors
-    title.de: ○ Helle Farben
-    id: switch-dcol
-    type: class-select
-    allowEmpty: false
-    default: col-mod-a
-    options: 
-        - 
-            label: Dune-1
-            value: col-mod-a
-        -
-            label: Dune-2
-            value: col-mod-b
-  -
-    title: ● Dark Theme colors
-    title.de: ● Dunkle Farben
-    id: switch-lcol
-    type: class-select
-    allowEmpty: false
-    default: col-mod-c
-    options: 
-        - 
-            label: Dune-3
-            value: col-mod-c
-        -
-            label: Dune-4
-            value: col-mod-d
-  -
-    title: Dim Pictures
-    title.de: Bilder bbdunkeln
-    id: dim-pictures
-    type: class-select
-    allowEmpty: false
-    default: dark-1
-    options: 
-        - 
-            label: ● 1
-            value: dark-1
-        -
-            label: ● 2
-            value: dark-2
-        - 
-            label: ● 3
-            value: dark-3
-        -
-            label: ● 4
-            value: dark-4
-        -
-            label: ● 5
-            value: dark-5
-  -
-    id: extra-col-palette
-    title: Extra colors
-    description: for simple image frames, simple delimiter
-    title.de: Zusätzliche Farben
-    description.de: für einfache Bilderrahmen, Trenner, Initialien, Callouts, Memos, Tabellen, Markierungen
-    type: heading
-    level: 2
+    level: 3
     collapsed: true
-  - 
-    id: frame-color
-    title: Frame color
-    description: for simple picture frames
-    title.de: Rahmenfarbe
-    description.de: Bilder Rahmenfarbe
-    type: variable-themed-color
-    format: rgb
-    opacity: true
-    default-light: '#4a6cb0'
-    default-dark: '#ff7029'
-  - 
-    id: hr-color
-    title: Horizontal lines color
-    description: for some horizontal dividers
-    title.de: Eigenes Trennzeichen
-    description.de: für Trennzeichen
-    type: variable-themed-color
-    format: rgb
-    opacity: true
-    default-light: '#808080'
-    default-dark: '#808080'
-  -
-    id: drop-cap-col
-    title: 'Text: Initial'
-    description: for paragraph Initials
-    title.de: Initialie
-    description.de: Großbuchstabe
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#800000'
-    default-dark: '#800000'
   - 
     id: def-red
     title: Default red
@@ -990,7 +913,7 @@ settings:
     id: call-hlcol
     title: 'Text: Callout color - custom'
     description: for callouts
-    title.de: Eigene 'Callout'-Farbe
+    title.de: Eigene 'Callout'-Farbe 
     description.de: für 'Callout'
     type: variable-themed-color
     opacity: false
@@ -1009,6 +932,108 @@ settings:
     default-light: '#0080ff'
     default-dark: '#FFAA1A'
   -
+    id: theme-colors-scheme
+    title: Theme
+    description: preset color schemes for Day-Night
+    title.de: Thema
+    description.de: Voreinstellung Farbschema Tag-Nacht
+    type: heading
+    level: 2
+    collapsed: false
+  -
+    title: ○ Light Theme colors
+    title.de: ○ Helle Farben
+    id: switch-dcol
+    type: class-select
+    allowEmpty: false
+    default: col-mod-a
+    options: 
+        - 
+            label: Dune-1
+            value: col-mod-a
+        -
+            label: Dune-2
+            value: col-mod-b
+  -
+    title: ● Dark Theme colors
+    title.de: ● Dunkle Farben
+    id: switch-lcol
+    type: class-select
+    allowEmpty: false
+    default: col-mod-c
+    options: 
+        - 
+            label: Dune-3
+            value: col-mod-c
+        -
+            label: Dune-4
+            value: col-mod-d
+  -
+    title: Dim Pictures
+    title.de: Bilder abdunkeln
+    id: dim-pictures
+    type: class-select
+    allowEmpty: false
+    default: dark-1
+    options: 
+        - 
+            label: ● 1
+            value: dark-1
+        -
+            label: ● 2
+            value: dark-2
+        - 
+            label: ● 3
+            value: dark-3
+        -
+            label: ● 4
+            value: dark-4
+        -
+            label: ● 5
+            value: dark-5
+  -
+    id: extra-col-palette
+    title: Extra colors
+    description: for simple image frames, simple delimiter
+    title.de: Zusätzliche Farben
+    description.de: für einfache Bilderrahmen, Trenner, Initialien, Callouts, Memos, Tabellen, Markierungen
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: frame-color
+    title: Frame color
+    description: for simple picture frames
+    title.de: Rahmenfarbe
+    description.de: Bilder Rahmenfarbe
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#4a6cb0'
+    default-dark: '#ff7029'
+  - 
+    id: hr-color
+    title: Horizontal lines color
+    description: for some horizontal dividers
+    title.de: Eigenes Trennzeichen
+    description.de: für Trennzeichen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#808080'
+    default-dark: '#808080'
+  -
+    id: drop-cap-col
+    title: 'Text: Initial'
+    description: for paragraph Initials
+    title.de: Initialie
+    description.de: Großbuchstabe
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#800000'
+    default-dark: '#800000'
+  -
     id: fade-options
     title: ❨ ❩ Show ui elements
     description: visibility buttons, text, etc.
@@ -1018,12 +1043,12 @@ settings:
     level: 1
     collapsed: true
   -
-    id: show-tooltips
-    title: Tooltips 
-    description: restore help bubbles
-    title.de: Hilfeblasen
-    description.de: Wiederherstellung Hilfeblasen
-    type: class-toggle
+    id: fade-op-a
+    title: Main window
+    title.de: Hauptfenster
+    type: heading
+    level: 2
+    collapsed: true
   -
     id: show-ribbon-l
     title: Sidebar, left
@@ -1067,6 +1092,54 @@ settings:
     description.de: Wiederherstellung Tasten
     type: class-toggle
   -
+    id: stacked-tabs-focused
+    title: Stacked notes
+    description: restore default stacked-view
+    title.de: Stapelansicht
+    description.de: Wiederherstellung normale Stapelansicht
+    type: class-toggle
+  -
+    id: fade-op-b
+    title: Text body
+    title.de: Textkörper
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: edgy-tables
+    title: Tables, edgy
+    description: restore edgy tables (colored, monochrome)
+    title.de: Tabellen, eckig 
+    description.de: Wiederherstellung eckige Tabellen (farbige, monochrome)
+    type: class-toggle
+  -
+    id: show-strikeout
+    title: Tasks strikeout line
+    description: restore strikeout line (tasks)
+    title.de: Aufgaben, durchstrichen
+    description.de: Wiederherstellung durchstrichene Aufgaben
+    type: class-toggle
+  -
+    id: show-ls-marker
+    title: List counter marker
+    description: restore counter marker (list)
+    title.de: Listen Aufzählzeichen
+    description.de: Wiederherstellung Aufzählzeichen
+    type: class-toggle
+  -
+    id: code-utils
+    title: Current Line (edit mode)
+    description: restore - highlight 
+    title.de: Aktuelle Zeile (Schreibmodus)
+    description.de: Wiederherstellung - Hervorhebung
+    type: class-toggle
+  -
+    id: fade-op-c
+    title: Graph, Canvas, Slide
+    type: heading
+    level: 2
+    collapsed: true
+  -
     id: show-graph-btns
     title: Graph buttons
     description: restore buttons
@@ -1088,46 +1161,32 @@ settings:
     description.de: Wiederherstellung Knotentitel
     type: class-toggle
   -
-    id: stacked-tabs-focused
-    title: Stacked notes
-    description: restore default stacked-view
-    title.de: Stapelansicht
-    description.de: Wiederherstellung normale Stapelansicht
+    id: slides-s
+    title: Slide - compact
+    description: restore smaller text (Desktop)
+    title.de: Slide - kompakt
+    description.de: Wiederherstellung kleinerer Text (PCs)
     type: class-toggle
   -
-    id: edgy-tables
-    title: Tables, edgy
-    description: restore edgy tables (for colored-monochrome)
-    title.de: Tabellen, eckig 
-    description.de: Wiederherstellung eckige Tabellen (für farbige-sw)
+    id: show-touch-area
+    title: Slide - touch-area
+    description: touch-area (for mobile)
+    title.de: Slide - Berührungsfläche
+    description.de: Navigationsfeld (Mobilgeräte)
     type: class-toggle
   -
-    id: show-strikeout
-    title: Tasks strikeout line
-    description: restore strikeout line (tasks)
-    title.de: Aufgaben, durchstrichen
-    description.de: Wiederherstellung durchstrichene Aufgaben
-    type: class-toggle
+    id: fade-op-d
+    title: Extra toggles
+    title.de: Zusätzliche Schalter
+    type: heading
+    level: 2
+    collapsed: false
   -
-    id: show-ls-marker
-    title: List counter marker
-    description: restore counter marker (list)
-    title.de: Listen Aufzählzeichen
-    description.de: Wiederherstellung Aufzählzeichen
-    type: class-toggle
-  -
-    id: show-gifs
-    title: Gif animation 
-    description: restore animated gifs
-    title.de: Gif Bilder
-    description.de: Wiederherstellung animierte gif Bilder
-    type: class-toggle
-  -
-    id: code-utils
-    title: Current Line (edit mode)
-    description: restore - highlight 
-    title.de: Aktuelle Zeile (Schreibmodus)
-    description.de: Wiederherstellung - Hervorhebung
+    id: show-tooltips
+    title: Tooltips 
+    description: restore help bubbles
+    title.de: Hilfeblasen
+    description.de: Wiederherstellung Hilfeblasen
     type: class-toggle
   -
     id: hide-gui
@@ -1206,11 +1265,13 @@ body {
     --custom-fsz-4: var(--glob-fsz);
 
     --large-h1: 2em;
+    --large-headers: 1rem;
     --custom-margin-above-header: 20px;
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
 
-    --banner-h: 240px;
+    --banner-ah: 240px;
+    --banner-bh: 240px;
     --pictwall-height: 200px;
     --pictwall-width: 1400px;
 
@@ -1222,6 +1283,7 @@ body {
     --FolderHighlight: 24px;
     --FoldText: black;
 
+    --hr-color: #808080;
     --button-background: #91AADD;
     --slant-blue: #566370;
     --soft-bg-col: rgba(0, 0, 0, 0.5);
@@ -1281,6 +1343,8 @@ body.theme-light {
     --def-blue: cornflowerblue;
     --def-yellow: #e6b300;
 
+    --frame-color: #4a6cb0;
+
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
     --code-comment: var(--code-color);
@@ -1315,7 +1379,7 @@ body.theme-dark {
     --drop-cap-col: #b60000;
     --prop-col: var(--interactive-accent-rgb);
 
-    --dark-cust-hl: #CA6404;
+    --dark-cust-hl: #ff7029;
     --hl-col: var(--dark-cust-hl);
     --tables-hlcol: var(--dark-cust-hl);
     --memo-hlcol: var(--dark-cust-hl);
@@ -1325,6 +1389,8 @@ body.theme-dark {
     --def-green: forestgreen;
     --def-blue: #3b71d6;
     --def-yellow: #c69a00;
+
+    --frame-color: #c66102;
 
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
@@ -1452,12 +1518,6 @@ body.col-mod-d.theme-dark {
     --bold-color: #d7995c;
     --italic-color: #d7995c;
 
-}
-
-b,
-strong,
-.cm-strong {
-    font-family: var(--bold-font)
 }
 
 /* scrollbar phone */
@@ -2122,20 +2182,6 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
 HEADERS
 ----------------------------------------------------------------*/
 
-h5,
-.HyperMD-header .cm-header-5,
-.markdown-rendered h5,
-.reveal h5 {
-    font-size: 1.1em;
-}
-
-h6,
-.HyperMD-header .cm-header-6,
-.markdown-rendered h6,
-.reveal h6 {
-    font-size: 1em;
-}
-
 .recipes h1,
 .recipes h2,
 .recipes h3,
@@ -2148,7 +2194,7 @@ h6,
 .recipes .HyperMD-header-4,
 .recipes .HyperMD-header-5,
 .recipes .HyperMD-header-6 {
-    font-family: var(--recipes-font);
+    font-family: var(--recipes-font) !important;
 }
 
 .contacts h1,
@@ -2163,7 +2209,7 @@ h6,
 .contacts .HyperMD-header-4,
 .contacts .HyperMD-header-5,
 .contacts .HyperMD-header-6 {
-    font-family: var(--contacts-font);
+    font-family: var(--contacts-font) !important;
 }
 
 .movies h1,
@@ -2178,7 +2224,7 @@ h6,
 .movies .HyperMD-header-4,
 .movies .HyperMD-header-5,
 .movies .HyperMD-header-6 {
-    font-family: var(--movies-font);
+    font-family: var(--movies-font) !important;
     margin-left: auto;
     margin-right: auto;
     display: table;
@@ -2189,81 +2235,91 @@ h6,
 /* 
 Font models 
 */
-
-/* local */
-.ftheme-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--default-font-h) !important;
+/* global */
+body:not(.is-phone) :is(div.callout-content h2 em,
+    .HyperMD-header.HyperMD-header-2.cm-line,
+    .markdown-preview-section h2) {
+    font-size: calc(var(--h2-size) + var(--large-headers));
 }
 
-.ftheme-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--handwritten-font-h) !important;
+body:not(.is-phone) :is(div.callout-content h3 em,
+    .HyperMD-header.HyperMD-header-3.cm-line,
+    .markdown-preview-section h3) {
+    font-size: calc(var(--h3-size) + var(--large-headers));
 }
 
-.ftheme-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--poetry-font-h) !important;
+body:not(.is-phone) :is(div.callout-content h4 em,
+    .HyperMD-header.HyperMD-header-4.cm-line,
+    .markdown-preview-section h4) {
+    font-size: calc(var(--h4-size) + var(--large-headers));
 }
 
-.ftheme-4 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--custom-font-h) !important;
+body:not(.is-phone) :is(div.callout-content h5 em,
+    .HyperMD-header.HyperMD-header-5.cm-line,
+    .markdown-preview-section h5) {
+    font-size: calc(var(--h5-size) + var(--large-headers));
 }
+
+body:not(.is-phone) :is(div.callout-content h6 em,
+    .HyperMD-header.HyperMD-header-6.cm-line,
+    .markdown-preview-section h6) {
+    font-size: calc(var(--h6-size) + var(--large-headers));
+}
+
 
 /* glob */
 /* default */
-.fontmod-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
 .fontmod-1 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--default-font-h);
     color: var(--header-col);
+    text-align: inherit;
 }
 
-.fontmod-1 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
-.fontmod-1 .markdown-source-view:not(.HyperMD-header) {
+.fontmod-1 .markdown-source-view:not(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-1 .markdown-preview-view :is(p, code, li, th, td, .callout-title-inner) {
     font-family: var(--default-font);
     font-size: var(--custom-fsz-1);
 }
 
 /* handwritten */
-.fontmod-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
 .fontmod-2 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--handwritten-font-h);
     color: var(--header-col);
+    text-align: inherit;
 }
 
-.fontmod-2 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
-.fontmod-2 .markdown-source-view:not(.HyperMD-header) {
+.fontmod-2 .markdown-source-view:not(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-2 .markdown-preview-view :is(p, code, li, th, td, .callout-title-inner) {
     font-family: var(--handwritten-font-c);
     font-size: var(--custom-fsz-2);
 }
 
 /* poetry */
-.fontmod-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
 .fontmod-3 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--poetry-font-h);
     color: var(--header-col);
+    text-align: inherit;
 }
 
-.fontmod-3 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
-.fontmod-3 .markdown-source-view:not(.HyperMD-header) {
+.fontmod-3 .markdown-source-view:not(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-3 .markdown-preview-view :is(p, code, li, th, td, .callout-title-inner) {
     font-family: var(--poetry-font-c);
     font-size: var(--custom-fsz-3);
 }
 
 /* custom */
-.fontmod-4 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 .fontmod-4 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--custom-font-h);
     color: var(--header-col);
+    text-align: inherit;
 }
 
-.fontmod-4 .markdown-preview-view :is(p, strong, em, code, li, th, td, .callout-title-inner),
-.fontmod-4 .markdown-source-view:not(.HyperMD-header) {
+.fontmod-4 .markdown-source-view:not(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
+.fontmod-4 .markdown-preview-view :is(p, code, li, th, td, .callout-title-inner) {
     font-family: var(--custom-font-c);
     font-size: var(--custom-fsz-4);
 }
@@ -2301,26 +2357,6 @@ body:not(.is-phone) :is(h1, .HyperMD-header-1, .markdown-rendered h1) {
     font-size: var(--large-h1);
 }
 
-body:not(.is-phone) :is(h2, .HyperMD-header-2, .markdown-rendered h2) {
-    font-size: calc(var(--large-h1) - 6px);
-}
-
-body:not(.is-phone) :is(h3, .HyperMD-header-3, .markdown-rendered h3) {
-    font-size: calc(var(--large-h1) - 12px);
-}
-
-body:not(.is-phone) :is(h4, .HyperMD-header-4, .markdown-rendered h4) {
-    font-size: calc(var(--large-h1) - 18px);
-}
-
-body:not(.is-phone) :is(h5, .HyperMD-header-5, .markdown-rendered h5) {
-    font-size: calc(var(--large-h1) - 24px);
-}
-
-body:not(.is-phone) :is(h6, .HyperMD-header-6, .markdown-rendered h6) {
-    font-size: calc(var(--large-h1) - 32px);
-}
-
 .h1-3 h1,
 .h1-3 .HyperMD-header-1 {
     font-size: 3em;
@@ -2355,15 +2391,21 @@ body:not(.is-phone) :is(h6, .HyperMD-header-6, .markdown-rendered h6) {
 .callout[data-callout="font-s"] {
     background: transparent;
     padding-left: 0;
-    font-size: small;
     color: var(--text-normal);
 }
 
 .callout[data-callout="font-l"] {
     background: transparent;
     padding-left: 0;
-    font-size: large;
     color: var(--text-normal);
+}
+
+.callout[data-callout~="font-l"] .callout-content p {
+    font-size: large;
+}
+
+.callout[data-callout~="font-s"] .callout-content p {
+    font-size: small;
 }
 
 .callout[data-callout~="font-s"] .callout-title,
@@ -2537,21 +2579,24 @@ SYNTAX COL
 
 .theme-light:is(.code-utils) .cm-active.cm-line {
     background: white;
-    filter: brightness(1.3);
+    filter: brightness(1.1);
     font-weight: 600;
+    border-radius: 6px;
 }
 
 .theme-dark:is(.code-utils) .cm-active.cm-line {
     background: var(--text-highlight-bg);
-    filter: brightness(1.3);
+    filter: brightness(1.1) contrast(1.2);
     font-weight: 600;
+    border-radius: 6px;
 }
 
 .code-utils .cm-lineNumbers .cm-gutterElement.cm-active {
     font-weight: bold;
     font-size: initial;
-    filter: brightness(1.3);
+    filter: brightness(1.1);
     background: var(--text-highlight-bg);
+    border-radius: 6px;
 }
 
 .code-utils .markdown-source-view.mod-cm6 .cm-gutters {
@@ -2678,6 +2723,7 @@ highlights
     padding: 2px 5px;
 }
 
+/* todo */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -2849,6 +2895,8 @@ a[href^="#red"]+mark {
 a[href^="#red"]+strong,
 a[href^="#red"]+em {
     color: var(--def-red);
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a[href^="#green"]+mark {
@@ -2859,6 +2907,8 @@ a[href^="#green"]+mark {
 a[href^="#green"]+strong,
 a[href^="#green"]+em {
     color: var(--def-green);
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a[href^="#blue"]+mark {
@@ -2869,6 +2919,8 @@ a[href^="#blue"]+mark {
 a[href^="#blue"]+strong,
 a[href^="#blue"]+em {
     color: var(--def-blue);
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a[href^="#gray"]+mark {
@@ -2879,6 +2931,8 @@ a[href^="#gray"]+mark {
 a[href^="#gray"]+strong,
 a[href^="#gray"]+em {
     color: rgb(128, 128, 128);
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a[href^="#hlcol"]+mark {
@@ -2889,6 +2943,8 @@ a[href^="#hlcol"]+mark {
 a[href^="#hlcol"]+strong,
 a[href^="#hlcol"]+em {
     color: var(--hl-col);
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* small fonts */
@@ -2903,6 +2959,7 @@ a[href^="#red-s"]+em {
     background-color: transparent;
     color: var(--def-red);
     font-size: small !important;
+    font-family: inherit;
 }
 
 a[href^="#green-s"]+strong,
@@ -2910,6 +2967,7 @@ a[href^="#green-s"]+em {
     background-color: transparent;
     color: var(--def-green);
     font-size: small !important;
+    font-family: inherit;
 }
 
 a[href^="#blue-s"]+strong,
@@ -2917,6 +2975,7 @@ a[href^="#blue-s"]+em {
     background-color: transparent;
     color: var(--def-blue);
     font-size: small !important;
+    font-family: inherit;
 }
 
 a[href^="#hlcol-s"]+strong,
@@ -2924,6 +2983,7 @@ a[href^="#hlcol-s"]+em {
     background-color: transparent;
     color: var(--hl-col);
     font-size: small !important;
+    font-family: inherit;
 }
 
 /* large */
@@ -2938,6 +2998,7 @@ a[href^="#red-l"]+em {
     background-color: transparent;
     color: var(--def-red);
     font-size: large !important;
+    font-family: inherit;
 }
 
 a[href^="#green-l"]+strong,
@@ -2945,6 +3006,7 @@ a[href^="#green-l"]+em {
     background-color: transparent;
     color: var(--def-green);
     font-size: large !important;
+    font-family: inherit;
 }
 
 a[href^="#blue-l"]+strong,
@@ -2952,6 +3014,7 @@ a[href^="#blue-l"]+em {
     background-color: transparent;
     color: var(--def-blue);
     font-size: large !important;
+    font-family: inherit;
 }
 
 a[href^="#hlcol-l"]+strong,
@@ -2959,6 +3022,7 @@ a[href^="#hlcol-l"]+em {
     background-color: transparent;
     color: var(--hl-col);
     font-size: large !important;
+    font-family: inherit;
 }
 
 a[href^="#sup"]+mark {
@@ -3110,6 +3174,7 @@ a[href^="#profit"]+mark::before {
 /*----------------------------------------------------------------
 CALLOUT
 ----------------------------------------------------------------*/
+/* todo */
 .callout ul,
 .callout ol {
     background: transparent !important;
@@ -3263,20 +3328,11 @@ div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callo
 
 /* === Floating Callout === */
 @media (min-width: 500px) {
-    .markdown-source-view [data-callout-metadata*="float-left"].cm-embed-block.cm-callout {
-        float: left;
-        padding-top: 0.8em;
-    }
 
     .markdown-reading-view div[data-callout-metadata~="left"].callout,
     .markdown-source-view div[data-callout-metadata~="left"].callout {
         float: left;
         margin-right: 1em;
-    }
-
-    .markdown-source-view [data-callout-metadata*="float-right"].cm-embed-block.cm-callout {
-        float: right;
-        padding-top: 0.8em;
     }
 
     .markdown-reading-view div[data-callout-metadata~="right"].callout,
@@ -3287,10 +3343,6 @@ div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callo
 
     .markdown-source-view.mod-cm6 .cm-embed-block.cm-callout :is(.callout[data-callout-metadata*="left"], .callout[data-callout-metadata*="right"]) .callout-content>p:last-of-type {
         margin-bottom: auto;
-    }
-
-    [data-callout-metadata*="float-right"].cm-embed-block.cm-callout {
-        width: auto !important;
     }
 
     /* doing the gap */
@@ -3790,14 +3842,14 @@ respect breaks
 */
 /* merge lines */
 .merge-prg .markdown-preview-view :is(p),
-body:not(.prg-break) .markdown-preview-view :is(p) {
+body:is(.prg-break) .markdown-preview-view :is(p) {
     margin-top: 0;
     margin-bottom: 0;
 }
 
 /* default - top break */
 .break-prg .markdown-preview-view :is(p),
-body:is(.prg-break) .markdown-preview-view :is(p) {
+body:not(.prg-break) .markdown-preview-view :is(p) {
     /* margin-top: revert; */
     margin-bottom: 0;
 }
@@ -3988,7 +4040,11 @@ body:not(.is-phone) .modal {
 /* level 1 header */
 .setting-item.setting-item-heading.style-settings-heading[data-level="1"] {
     margin-left: -14px;
-    border-bottom: 2px solid var(--text-muted);
+    border-bottom: 2px dotted var(--text-muted);
+}
+
+body:not(.is-phone) .style-settings-collapse-indicator {
+    scale: 1.6;
 }
 
 /* compact view for phone */
@@ -4412,11 +4468,11 @@ TABLES -highlights
 }
 
 /* Table header col :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col)*/
-.theme-dark .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col) thead {
+.theme-dark .markdown-rendered table :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: #313131;
 }
 
-.theme-light .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col) thead {
+.theme-light .markdown-rendered table :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: gray;
 }
 
@@ -4673,7 +4729,7 @@ Contact TABLES - (img, full nm, tel, mail, group relations)
     background-color: transparent;
 }
 
-.contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
+.contacts:is(.markdown-source-view, .markdown-preview-view) thead {
     background-color: transparent;
 }
 
@@ -4718,6 +4774,7 @@ Contact TABLES - (img, full nm, tel, mail, group relations)
     min-width: 60px;
 }
 
+/* todo */
 .contacts .internal-embed img:active,
 .zoom-auto .contacts .internal-embed img:hover {
     clip-path: circle(6%);
@@ -4834,7 +4891,7 @@ STYLED TABLES
 }
 
 .table-col thead tr {
-    background: var(--tables-hlcol) !important;
+    background: var(--tables-hlcol);
     text-rendering: optimizeLegibility;
 }
 
@@ -4862,6 +4919,12 @@ STYLED TABLES
     text-rendering: optimizeLegibility;
 }
 
+.table-xy-col thead tr,
+.table-xy-col tbody tr>td:first-child {
+    background: var(--tables-hlcol);
+    text-rendering: optimizeLegibility;
+}
+
 .theme-light .table-xym thead tr>th,
 .theme-light .table-xym tbody tr>td:first-child {
     background: #808080;
@@ -4875,12 +4938,6 @@ STYLED TABLES
     background: #313131;
     font-weight: bold;
     filter: invert(1);
-}
-
-.table-xy-col thead tr>th,
-.table-xy-col tbody tr>td:first-child {
-    background: var(--tables-hlcol) !important;
-    text-rendering: optimizeLegibility;
 }
 
 .table-xy tbody tr>td:first-child,
@@ -5142,20 +5199,7 @@ ASIDE NOTES
 Poetry - Preview mode - important signpost
 ----------------------------------------------------------------*/
 
-/* restore zen-view */
-.poetry .markdown-preview-sizer,
-.poetry .markdown-preview-section {
-    margin: auto !important;
-}
-
-.poetry img {
-    width: 80%;
-    display: block;
-    margin: auto;
-}
-
 /* Raisecap */
-
 .callout[data-callout="raisecap"],
 .callout[data-callout="dropcap"] {
     padding: 0;
@@ -5275,7 +5319,7 @@ img[alt="banner-a"] {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--banner-h);
+    height: var(--banner-ah);
     object-fit: cover;
     -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
     mask-image: none;
@@ -5284,25 +5328,15 @@ img[alt="banner-a"] {
     pointer-events: none;
 }
 
-img[alt='banner-b'] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    object-fit: cover;
-    object-position: 50% 0%;
-    border-radius: 0 !important;
-    pointer-events: none;
-}
-
-img[alt='banner-c'] {
+img[alt="banner-b"] {
     position: absolute;
     bottom: auto;
     left: 0;
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    height: var(--banner-bh);
     object-fit: cover;
+    -webkit-mask-image: linear-gradient(360deg, white, white, white, transparent);
+    mask-image: none;
     object-position: 50% 0%;
     border-radius: 0 !important;
     pointer-events: none;
@@ -5311,15 +5345,11 @@ img[alt='banner-c'] {
 /* add banner-a as cssclass to reserve space for banner */
 
 .banner-a .markdown-preview-section {
-    margin-top: 240px !important;
-}
-
-.banner-c .markdown-preview-section {
-    margin-bottom: auto;
+    margin-top: calc(var(--banner-bh) + 1em);
 }
 
 .banner-b .markdown-preview-section {
-    margin-top: 60px !important;
+    margin-bottom: calc(var(--banner-bh) + 3em);
 }
 
 .is-phone img[alt='banner-a'] {
@@ -5330,15 +5360,8 @@ img[alt='banner-c'] {
 }
 
 .is-phone img[alt='banner-b'] {
-    top: -4px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 0;
-}
-
-.is-phone img[alt='banner-c'] {
     bottom: -4px;
-    height: 50px;
+    height: 150px;
     object-fit: cover;
     border-radius: 0;
 }
@@ -5348,20 +5371,16 @@ body:is(.is-phone) .banner-a .markdown-preview-section {
 }
 
 body:is(.is-phone) .banner-b .markdown-preview-section {
-    margin-top: 50px !important;
+    margin-bottom: 150px !important;
 }
 
-body:is(.is-phone) .banner-c .markdown-preview-section {
-    margin-bottom: 50px !important;
-}
-
-.markdown-source-view.mod-cm6 img:is([alt="banner-a"], [alt="banner-b"], [alt="banner-c"]) {
+.markdown-source-view.mod-cm6 img:is([alt="banner-a"], [alt="banner-b"]) {
     display: block;
     position: inherit;
 }
 
 /* hide frontmatter bc of transparency mask */
-.markdown-preview-view img:is([alt="banner-a"], [alt="banner-b"], [alt="banner-c"]) .frontmatter-container {
+.markdown-preview-view img:is([alt="banner-a"], [alt="banner-b"]) .frontmatter-container {
     display: none;
 }
 
@@ -5716,7 +5735,6 @@ image placed + description
 
 /* Grid view LP - very important*/
 .markdown-source-view.mod-cm6 .cm-line .internal-embed.image-embed {
-    display: block;
     max-width: 100%;
 }
 
@@ -5750,7 +5768,6 @@ image placed + description
 .dark-5.theme-dark img {
     filter: brightness(0.6);
 }
-
 
 /*Image moodboard */
 .callout.callout[data-callout=moodboard] {
@@ -5854,6 +5871,7 @@ image placed + description
     height: 100%;
 }
 
+/* todo */
 /* smaller zoom levels */
 .zoom-auto .zoom-50 .mermaid svg:hover,
 .zoom-50 .mermaid svg:active {
@@ -6595,12 +6613,6 @@ body:not(.show-tooltips) .follow-link-popover {
     visibility: hidden;
 }
 
-/* .is-phone .tooltip.mod-right {
-    margin-left: -8em;
-    width: 120px !important;
-    min-height: 12% !important;
-} */
-
 .is-phone .workspace-drawer.mod-left .workspace-drawer-header-info {
     line-break: auto;
     width: 106px;
@@ -6698,7 +6710,7 @@ Menu icon colors - Context menu
 /*----------------------------------------------------------------
 TABLET - basic support
 ----------------------------------------------------------------*/
-
+/* todo */
 .is-tablet .view-action {
     padding-top: 1.4em;
     color: var(--text-normal) !important;
@@ -7052,14 +7064,14 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
     background: var(--text-accent-special);
 }
 
-.theme-light .prompt input.prompt-input,
-.theme-dark .prompt input.prompt-input {
-    background: var(--text-accent-special) !important;
+/* todo */
+.theme-light .prompt input.prompt-input {
+    background: var(--text-accent-special);
     color: white;
 }
 
 .theme-dark .prompt input.prompt-input {
-    background: var(--text-accent-special) !important;
+    background: var(--text-accent-special);
     color: var(--text-normal);
 }
 
@@ -7798,6 +7810,7 @@ div.popover.hover-popover {
     min-height: none;
 }
 
+/* todo */
 div.popover.hover-popover .markdown-preview-view {
     font-size: 16px !important;
     padding-left: 0;
@@ -8021,6 +8034,7 @@ body:not(.is-phone) .slides-close-btn:hover {
     padding-top: 1em;
 }
 
+/* todo */
 .reveal h1 {
     color: var(--h1-color) !important;
 }
@@ -8863,22 +8877,12 @@ PDF EXPORT
         page-break-after: avoid;
     }
 
-    .poetry h1,
-    .poetry h2,
-    .poetry h3,
-    .poetry h4,
-    .poetry h5,
-    .poetry h6 {
-        text-align: center;
-        font-family: var(--poetry-font-h);
-    }
-
     div hr {
         page-break-after: always !important;
     }
 
-    div[class*="wave"] hr,
-    div[class*="fade"] hr,
+    div[class^="wave"] hr,
+    div[class^="fade"] hr,
     div[class="stars"] hr {
         page-break-inside: avoid;
     }
@@ -8899,10 +8903,6 @@ PDF EXPORT
     .callout.callout[data-callout^=infobox] .internal-embed {
         background-color: white;
         color: gray;
-    }
-
-    .recipes ul>li.task-list-item[data-task]:not([data-task=x], [data-task=X]) {
-        min-width: 160px !important;
     }
 
     div[data-callout="multi-column"].callout .callout .callout-content :is(p) {
@@ -8988,6 +8988,7 @@ PLUGINS
     font-size: medium;
 }
 
+/* todo */
 /* kanban checked checkboxes */
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
     background-color: white;
@@ -9175,6 +9176,7 @@ body:not(.is-phone) .kanban-plugin__lane-form-wrapper {
     filter: invert(1);
 }
 
+
 /* my snippets */
 .MySnippets-statusbar-menu {
     background: var(--background-primary);
@@ -9214,6 +9216,7 @@ dataview
     margin-left: 2px;
 }
 
+/* todo */
 .block-language-dataview .table-view-table>thead>tr>th {
     border-top-right-radius: 0 !important;
     border-top-left-radius: 0 !important;
@@ -9257,6 +9260,7 @@ input.dataview.task-list-item-checkbox {
 }
 
 /* cal */
+/* todo */
 .year.svelte-1vwr9dd.svelte-1vwr9dd,
 .month.svelte-1vwr9dd.svelte-1vwr9dd,
 .today.svelte-q3wqg9 {
@@ -9332,6 +9336,7 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
  Hide text
 ----------------------------------------------------------------*/
 /* toggle */
+/* todo */
 .hide-gui .view-header-title-container,
 .hide-gui .workspace .mod-root .workspace-tab-header-inner-title,
 .hide-gui .nav-folder-title-content,
