@@ -7063,14 +7063,16 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
     background: var(--text-accent-special);
 }
 
-/* todo */
+/* phone needs imp */
+.prompt input.prompt-input {
+    background: var(--text-accent-special) !important;
+}
+
 .theme-light .prompt input.prompt-input {
-    background: var(--text-accent-special);
     color: white;
 }
 
 .theme-dark .prompt input.prompt-input {
-    background: var(--text-accent-special);
     color: var(--text-normal);
 }
 
