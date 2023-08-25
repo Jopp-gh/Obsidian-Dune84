@@ -4467,12 +4467,11 @@ TABLES -highlights
     --table-header-border-color: gray;
 }
 
-/* Table header col :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col)*/
-.theme-dark .markdown-rendered table :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-dark .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: #313131;
 }
 
-.theme-light .markdown-rendered table :not(.table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-light .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: gray;
 }
 
