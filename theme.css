@@ -114,7 +114,7 @@ settings:
     type: variable-text
     default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
   - 
-    id: poetry-font-h 
+    id: poetry-font-h
     title: Header Font
     description: (default = Mumsies)
     title.de: Überschriften
@@ -272,7 +272,7 @@ settings:
     format: em
     default: 2
     min: 2
-    max: 10
+    max: 14
     step: 1
   -
     id: large-headers
@@ -2182,6 +2182,20 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
 HEADERS
 ----------------------------------------------------------------*/
 
+h5,
+.HyperMD-header .cm-header-5,
+.markdown-rendered h5,
+.reveal h5 {
+    font-size: 1.1em;
+}
+
+h6,
+.HyperMD-header .cm-header-6,
+.markdown-rendered h6,
+.reveal h6 {
+    font-size: 1em;
+}
+
 .recipes h1,
 .recipes h2,
 .recipes h3,
@@ -2235,6 +2249,46 @@ HEADERS
 /* 
 Font models 
 */
+
+/* local - needs important */
+.ftheme-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--default-font-h) !important;
+}
+
+.ftheme-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--handwritten-font-h) !important;
+}
+
+.ftheme-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--poetry-font-h) !important;
+}
+
+.ftheme-4 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
+.ftheme-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--custom-font-h) !important;
+}
+
+
+.ftheme-1 .markdown-preview-section :is(p) {
+    font-family: var(--default-font) !important;
+}
+
+.ftheme-2 .markdown-preview-section :is(p) {
+    font-family: var(--handwritten-font-c) !important;
+}
+
+.ftheme-3 .markdown-preview-section :is(p) {
+    font-family: var(--poetry-font-c) !important;
+}
+
+.ftheme-4 .markdown-preview-section :is(p) {
+    font-family: var(--custom-font-c) !important;
+}
+
+
 /* global */
 body:not(.is-phone) :is(div.callout-content h2 em,
     .HyperMD-header.HyperMD-header-2.cm-line,
@@ -2267,7 +2321,6 @@ body:not(.is-phone) :is(div.callout-content h6 em,
 }
 
 
-/* glob */
 /* default */
 .fontmod-1 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
@@ -3104,7 +3157,7 @@ a[href^="#line-c"]+mark {
 a[href^="#poetry"]+mark {
     background-color: transparent;
     color: inherit;
-    font-family: var(--poetry-h);
+    font-family: var(--poetry-font-h);
 }
 
 a[href^="#ppl"]+mark,
@@ -3508,7 +3561,6 @@ Misc note boxes
 code.language-memo.is-loaded {
     color: darkblue;
     background: #ebcb63;
-    white-space: pre;
     width: fit-content;
 }
 
@@ -3689,6 +3741,10 @@ embed deeply to get text wrap
     position: relative;
 }
 
+/* .callout[data-callout^=infobox] thead tr>th {
+  background-color: gray;
+} */
+
 .is-phone .callout.callout[data-callout^=infobox] {
     width: calc(400px / 2);
     mix-blend-mode: normal;
@@ -3853,7 +3909,6 @@ body:not(.prg-break) .markdown-preview-view :is(p) {
     /* margin-top: revert; */
     margin-bottom: 0;
 }
-
 
 .is-live-preview .admonition-content>*:first-child {
     margin-top: 0;
@@ -4052,7 +4107,6 @@ body:not(.is-phone) .style-settings-collapse-indicator {
     scale: 1.4;
 }
 
-/* compact view for phone */
 .is-phone .style-settings-heading[data-level="0"] {
     margin-top: 0;
     margin-bottom: 0;
@@ -4467,11 +4521,12 @@ TABLES -highlights
     --table-header-border-color: gray;
 }
 
-.theme-dark .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+/* Table header col :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col)*/
+.theme-dark div.markdown-rendered:not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: #313131;
 }
 
-.theme-light .markdown-rendered :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-light div.markdown-rendered:not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: gray;
 }
 
@@ -4861,22 +4916,26 @@ RECIPE TABLES
 STYLED TABLES
 --------------------------------------------*/
 
-.table-y thead tr {
+.table-y thead tr,
+.table-y thead tr:hover {
     background: var(--def-yellow);
     text-rendering: optimizeLegibility;
 }
 
-.table-r thead tr {
+.table-r thead tr,
+.table-r thead tr:hover {
     background: var(--def-red);
     text-rendering: optimizeLegibility;
 }
 
-.table-g thead tr {
+.table-g thead tr,
+.table-g thead tr:hover {
     background: var(--def-green);
     text-rendering: optimizeLegibility;
 }
 
-.table-b thead tr {
+.table-b thead tr,
+.table-b thead tr:hover {
     background: var(--def-blue);
     text-rendering: optimizeLegibility;
 }
@@ -4889,42 +4948,49 @@ STYLED TABLES
     filter: invert(1);
 }
 
-.table-col thead tr {
+.table-col thead tr,
+.table-col thead tr:hover {
     background: var(--tables-hlcol);
     text-rendering: optimizeLegibility;
 }
 
 .table-xyr thead tr,
+.table-xyr thead tr:hover,
 .table-xyr tbody tr>td:first-child {
     background: var(--def-red);
     text-rendering: optimizeLegibility;
 }
 
 .table-xyg thead tr,
+.table-xyg thead tr:hover,
 .table-xyg tbody tr>td:first-child {
     background: var(--def-green);
     text-rendering: optimizeLegibility;
 }
 
 .table-xyb thead tr,
+.table-xyb thead tr:hover,
 .table-xyb tbody tr>td:first-child {
     background: var(--def-blue);
     text-rendering: optimizeLegibility;
 }
 
 .table-xy thead tr,
+.table-xy thead tr:hover,
 .table-xy tbody tr>td:first-child {
     background: var(--def-yellow);
     text-rendering: optimizeLegibility;
 }
 
 .table-xy-col thead tr,
+.table-xy-col thead tr:hover,
 .table-xy-col tbody tr>td:first-child {
     background: var(--tables-hlcol);
     text-rendering: optimizeLegibility;
 }
 
 .theme-light .table-xym thead tr>th,
+.theme-light .table-xym thead tr>th:hover,
 .theme-light .table-xym tbody tr>td:first-child {
     background: #808080;
     color: white;
@@ -4933,6 +4999,7 @@ STYLED TABLES
 }
 
 .theme-dark .table-xym thead tr>th,
+.theme-dark .table-xym thead tr>th:hover,
 .theme-dark .table-xym tbody tr>td:first-child {
     background: #313131;
     font-weight: bold;
@@ -5078,6 +5145,7 @@ ASIDE NOTES
 .callout[data-callout="aside-lh"] .callout-content,
 .callout[data-callout="aside-rh"] .callout-content {
     font-size: small;
+    margin-top: -1em;
 }
 
 .callout[data-callout="aside-l"],
@@ -5143,7 +5211,6 @@ ASIDE NOTES
     border-radius: 0;
     background: transparent;
     border-bottom: 4px solid var(--bold-color);
-    padding-top: 0;
 }
 
 .markdown-source-view.mod-cm6 .callout[data-callout="aside-lh"],
@@ -5172,7 +5239,7 @@ ASIDE NOTES
 }
 
 .is-phone .callout[data-callout^="aside-"] .callout-content p {
-    margin-top: 0;
+    margin-top: 1em;
 }
 
 .markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
@@ -5231,6 +5298,11 @@ Poetry - Preview mode - important signpost
     margin-bottom: initial;
 }
 
+.reveal .callout[data-callout="raisecap"] p:first-letter {
+    font-size: 5em;
+}
+
+
 /* Dropcap */
 .cm-embed-block.cm-callout .callout[data-callout="dropcap"] {
     background: transparent;
@@ -5248,10 +5320,28 @@ Poetry - Preview mode - important signpost
     margin: -2.4em 0 -1em 0;
 }
 
+.is-phone .markdown-preview-view .callout[data-callout="dropcap"] {
+    margin: -2.4em 0 -0.4em 0;
+}
+
+.reveal .callout[data-callout="dropcap"] {
+    background: transparent;
+    mix-blend-mode: normal;
+    min-width: fit-content;
+    float: left;
+    margin-top: 0;
+}
+
 .markdown-preview-view .callout[data-callout="dropcap"] p {
     margin-top: -1em;
     padding-right: 8px;
     width: fit-content;
+}
+
+.reveal .callout[data-callout="dropcap"] p {
+    margin-bottom: 1em;
+    margin-top: -2em;
+    padding-top: 1em;
 }
 
 /* realign */
@@ -5265,10 +5355,19 @@ body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropc
     height: 120px;
 }
 
+.reveal .callout[data-callout="dropcap"] .callout-content {
+    margin-right: 1em;
+    margin-bottom: -3em;
+}
+
 .callout[data-callout="dropcap"] p:first-letter {
     font-family: var(--poetry-initial);
     font-size: 110px;
     color: var(--drop-cap-col);
+}
+
+.reveal .callout[data-callout="dropcap"] p:first-letter {
+    font-size: 210px;
 }
 
 /*----------------------------------------------------------------
@@ -5342,7 +5441,6 @@ img[alt="banner-b"] {
 }
 
 /* add banner-a as cssclass to reserve space for banner */
-
 .banner-a .markdown-preview-section {
     margin-top: calc(var(--banner-bh) + 1em);
 }
@@ -5460,16 +5558,6 @@ img[alt~='30v'] {
 img[alt~='40v'] {
     margin-top: 40px;
 }
-
-/* .fullpage-width {
-  width: 100%;
-  overflow: hidden;
-}
-.center-cont {
-  width: 250px;
-  margin: 0 auto;
-margin-left: 40%;
-} */
 
 /* avatar */
 img[alt~='avatar'] {
@@ -7174,8 +7262,8 @@ body:not(.is-phone) .document-replace .document-search-button {
 }
 
 .document-search button.document-search-button:nth-child(3)::after {
-    content: "O";
-    font-size: 1.8em;
+    content: "o";
+    font-size: 2.2em;
 }
 
 .document-replace button.document-search-button:first-child::after {
@@ -7204,7 +7292,7 @@ body:not(.is-phone) .document-search button.document-search-button:nth-child(2):
 body:not(.is-phone) .document-search button.document-search-button:nth-child(3)::after,
 body:not(.is-phone) .document-replace button.document-search-button:first-child::after,
 body:not(.is-phone) .document-replace button.document-search-button:nth-child(2)::after {
-    margin-top: -0.6em;
+    margin-top: -24px;
 }
 
 .is-phone .document-search button.document-search-button:first-child::after {
@@ -7216,7 +7304,8 @@ body:not(.is-phone) .document-replace button.document-search-button:nth-child(2)
 }
 
 .is-phone .document-search button.document-search-button:nth-child(3)::after {
-    margin-left: -1em;
+    margin-left: -0.8em;
+    margin-top: -0.2em;
 }
 
 .is-phone .document-replace button.document-search-button:first-child::after {
@@ -8031,6 +8120,10 @@ body:not(.is-phone) .slides-close-btn:hover {
     display: contents;
 }
 
+.reveal .slides section h1 {
+    font-size: 2em;
+}
+
 .reveal :is(h1, h2, h3, h4, h5, h6) {
     padding-top: 1em;
 }
@@ -8052,6 +8145,22 @@ body:not(.is-phone) .slides-close-btn:hover {
 .reveal h5,
 .reveal h6 {
     color: var(--h4-color) !important;
+}
+
+.reveal h1 {
+    font-size: 1.5em;
+}
+
+.reveal h2 {
+    font-size: 1.4em;
+}
+
+.reveal h3 {
+    font-size: 1.3em;
+}
+
+.reveal h4 {
+    font-size: 1.2em;
 }
 
 .reveal ul,
@@ -8077,7 +8186,14 @@ body:not(.is-phone) .slides-close-btn:hover {
 .reveal .callout[data-callout="aside-r"] {
     width: auto;
     padding-bottom: 10px;
-    margin: 16px 0.6em !important;
+}
+
+.reveal .callout[data-callout="aside-l"] {
+    margin: 16px 2em 1em 0 !important;
+}
+
+.reveal .callout[data-callout="aside-r"] {
+    margin: 16px 0 1em 2em !important;
 }
 
 .reveal .callout[data-callout="aside-l"] .callout-content,
@@ -8086,6 +8202,7 @@ body:not(.is-phone) .slides-close-btn:hover {
 .reveal .callout[data-callout="aside-rh"] .callout-content {
     font-size: revert;
     white-space: normal;
+    margin-top: -1em;
 }
 
 .reveal .callout[data-callout="aside-lh"],
@@ -8119,9 +8236,17 @@ body:not(.is-phone) .slides-close-btn:hover {
 
 .reveal table th {
     font-weight: bold;
-    background: #393939;
+    background-color: inherit;
     color: white;
     border-bottom: 0;
+}
+
+.reveal table th {
+    background: #313131;
+}
+
+.theme-dark .reveal table th {
+    filter: invert(1);
 }
 
 .reveal tbody tr>td {
@@ -8147,6 +8272,14 @@ body:not(.is-phone) .slides-close-btn:hover {
 
 .is-phone .reveal .internal-embed img:not([width]) {
     width: 50%;
+}
+
+.reveal img[alt~='pos-l'] {
+    margin-right: 1em;
+}
+
+.reveal img[alt~='pos-r'] {
+    margin-left: 1em;
 }
 
 /* fix */
@@ -8309,6 +8442,7 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 .reveal a[href^="#blue-s"]+em {
     font-size: x-large;
 }
+
 
 .reveal .image-embed[src*="#cap"]::after {
     font-size: inherit;
@@ -8482,6 +8616,11 @@ body:not(.show-ls-marker) ol li::marker {
     padding: 0 12px;
 }
 
+/* add some padding to infobox tables */
+.reveal .callout.callout[data-callout^=infobox] tbody td {
+    padding: 0 8px;
+}
+
 body:not(.is-phone) .reveal .callout[data-callout=infobox],
 body:not(.is-phone) .reveal .callout[data-callout=infobox-r] {
     margin-right: 0;
@@ -8524,8 +8663,9 @@ body:not(.is-phone) .reveal .callout[data-callout=infobox-l] {
     height: 40px;
 }
 
-.reveal .callout-icon {
+body:not(.is-phone) .reveal .callout-icon {
     padding-right: 12px;
+    scale: 1.2;
 }
 
 /* fix broken callout icons */
@@ -9340,8 +9480,6 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
 /* todo */
 .hide-gui .view-header-title-container,
 .hide-gui .workspace .mod-root .workspace-tab-header-inner-title,
-.hide-gui .nav-folder-title-content,
-.hide-gui .nav-file-title-content,
 .hide-gui .backlink-pane,
 .hide-gui .prompt,
 .hide-gui .status-bar,
@@ -9398,8 +9536,14 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
     letter-spacing: -6px;
 }
 
+.hide-gui .workspace-split.mod-right-split,
+.hide-gui .workspace-split.mod-left-split {
+    -webkit-text-security: square;
+    width: 120px;
+    letter-spacing: -6px;
+}
 
-/* cssclass x */
+/* cssclass hide note content */
 .hide-note :is(p, pre) {
     -webkit-text-security: square !important;
     letter-spacing: -5px;
