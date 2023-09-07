@@ -6,17 +6,16 @@
 cssclass: banner-a,
 ---
 ```
-`![[picture.jpeg|banner-a]]`
+`![[picture.jpg|banner-a]]`
 
 <br>
 
-choose between 3 types of banners:
+choose between 2 types of banners:
 
 - banner-a (top banner, height adjustable in **Style Settings**)
-- banner-b (top, small banner)
-- banner-c (bottom, small banner)
+- banner-b (bottom banner, height adjustable in **Style Settings**)
 
->to add a banner, you need to insert your banner type twice, because one value is needed to create the space, another value picks up the image to transform into your banner.
+>to add a banner, you need to insert your banner type (eg `banner-a`) twice, because one value is needed to create the space, another value picks up your image and transforms it into a banner.
 
 <br>
 
