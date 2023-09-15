@@ -8,10 +8,10 @@
 > note
 ```
 ### Options:
-`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`, `> [!note|gray]`
+`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`, `> [!note|gray]`, `> [!note|col]`
 
-red tint, green tint, blue tint, yellow tint, gray tint
-to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>Extra colors>custom callout color` and add "col" after the pipe symbol, eg `> [!note|col]` 
+red tint, green tint, blue tint, yellow tint, gray and favorite tint
+to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>Custom Theme>Secondary Colors>Callout color - custom`. Back to your note, add "col" after the pipe symbol, eg `> [!note|col]` 
 
 <br>
 
@@ -146,7 +146,7 @@ for a continuous text flow, you can use 2 methods to deal with line breaks:  **m
 > By default, Dune ignores line breaks, so the toggle is off.
 
 ### global
-to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Line break` and toggle linebreak on, toggle it off to merge lines/paragraphs
+to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>New Line>Linebreaks - empty` and toggle linebreak on, toggle it off to merge lines/paragraphs
 
 ### local
 to merge or break lines/paragraphs locally add following to your yaml header:
@@ -212,7 +212,7 @@ note
 
 to add more color variations, use: red, green, blue, gray (monochrome) eg. `memo-r`, `memo-g`, `memo-b`, `memo-m`
 
-if you want to add your own color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>Stickies custom color`, pick a color for light / dark themes and add `memo-col` to your fences
+if you want to add your own color, go to `Preferences>Style Settings>Dune>Colors>Custom Theme>Secondary Colors>Stickies color - custom`, pick a color for light / dark themes and add `memo-col` to your fences
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
