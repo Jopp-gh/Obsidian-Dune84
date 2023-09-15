@@ -23,8 +23,8 @@ I am very pleased with form and function of **Dune** and hope this overhaul will
 <br>
 Also, I hope to pay my lunch for sharing good content with you. Plugin authors, theme designers and other developers put not just skills but love in their code projects and a ton of time to realize the features you get. The bigger a code project grows, the harder this code maintenace becomes, because of the sheer amount of commands which need to cooperate as a whole. Debugging is called the process where Developers hunt errors and despite the tools at our fingertips and expertise we got to use them, we still have a hard time to search and track issues and this happens usually in long night sessions, before we release a new update of our products. The final status represents the new "normality" of a product but a lot happens under the hood to guarantee this high level of quality and smooth experience.
 
-Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy as well for all the people interested in my way to design and implement features. Thanks for you attention.
-Finally, i released this theme becaues I would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
+Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy as well for all the people interested in using Dune and its design choices. Thanks for you attention.
+Finally, i released this theme also becaues I would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
 
 ```
 - #architecture,
