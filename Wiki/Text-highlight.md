@@ -106,6 +106,17 @@ Words #idea ==idea== Words
 Words #profit ==profit== Words
 ```
 
+### Usage
+to add icons to wiki-links or simple text, check out the examples below. 
+
+**Examples:** 
+
+- `#ppl ==[[Monica]]==`
+- `#mail ==[[Monica@provider.com]]==`
+- `#tel ==[[Monica#phone|phone]]==` (you must have a header with name `phone` in your note `Monica`) 
+
+<br>
+
 ## Text Lines
 ![help-4](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d7bc068c-0ba2-4065-a2a6-247d5f29cb9e)
 
@@ -114,6 +125,8 @@ Words #profit ==profit== Words
 `Words Words #line-b  ==Words Words Words Words Words== Words Words`
 
 `Words Words #line-c  ==Words Words Words Words Words== Words Words` 
+
+<br>
 
 `#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
@@ -132,7 +145,7 @@ please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blo
 H1 is a special header in Dune. You can change H1 sizes in two ways:
 
 ### global
-to set your H1 size globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Custom h1 size (PC)`
+to set your H1 size globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Headers>Custom h1 size (PC)`
 
 ### local
 add one of following cssclasses to your yaml header: `cssclass: h1-3`, `cssclass: h1-4`, `cssclass: h1-5`, `cssclass: h1-6`, `cssclass: h1-7`, `cssclass: h1-8`
@@ -144,7 +157,7 @@ add one of following cssclasses to your yaml header: `cssclass: h1-3`, `cssclass
 ## Highlight current paragraph
 ![help-5](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2fdb7744-1a2d-42e8-8069-34914bda8c81)
 
-to highlight your current paragraph, activate `Preferences>Style Settings>Dune>Colors>Theme>Current Line`
+to highlight your current paragraph, activate `Preferences>Style Settings>Dune>Show UI Elements>Text Body>Current Line (edit mode)`
 
 >**Hint**: selected words are highlighted with a yellow tint (see related picture, above)
 
@@ -263,7 +276,11 @@ simple delimiter to divide chapters or paragraphs. If you want beautiful delimit
 1. First, pick a horizontal line style eg. **fade-2** and add this style to your yaml header
 2. add two paragraphs and write 3 dashes `---` 
 
-**Tip**: you can change delimiter color too, go to: **Style Settings>Dune>Colors>Extra Colors>Color for Hr**
+>**Tip**:
+>you can change the color of horizontal lines too, go to: **Style Settings>Dune>Colors>Extra Colors>Horizontal Lines Color**
+>Horizontal lines are special in Dune, in fact, each time you add a hr --- you tell Dune to add a Page Break
+
+
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
