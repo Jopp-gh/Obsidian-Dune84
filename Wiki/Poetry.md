@@ -23,7 +23,7 @@ ropcap etc.
 
 <br>
 
-You only need to pay attention to use **Uppercase** for your *very first letter*, be it D for Dropcap or R for Raisecap
+You only need to pay attention to use **Uppercase** for your *very first letter*, be it D for Dropcap or R for Raisecap. 
 Both callouts will render the very first letter in big, gothic letters, but you can choose any font you like, please see how in the list below:
 
 - to change fonts, go to **Style Settings>Dune>Fonts>Typesets>3 - Poetry** 
@@ -52,7 +52,7 @@ to resize your horizontal line style, go to **Dune>Fonts>Poetry Fonts>Resize dec
 >assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings side-by-side to your note and see in real time how your slider affects the **Line styles decoration** size
 
 ### Special features
-Horizontal lines are special in Dune, in fact, each time you add a hr `---` you tell Dune to add a **Page Break**
+Horizontal lines are special in Dune, in fact, each time you add a hr `---` you tell Dune to add a **Page Break**. Make sure to surround hr's with an empty line before and after
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
