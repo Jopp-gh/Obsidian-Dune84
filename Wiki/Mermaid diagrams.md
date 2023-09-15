@@ -18,7 +18,7 @@ smaller proportions are useful to display large mermaid diagram charts on-screen
 
 ### Zoom
 To **zoom in**, click and hold the **Left mouse button**
-Otherwise, activate **auto-zoom** on hover: `Preferences>Style Settings>Dune>Pictures>Zoom pictures / diagrams`
+Otherwise, activate **auto-zoom** on hover: `Preferences>Style Settings>Dune>Pictures>Zoom pictures>Zoom pictures / diagrams`
 
 >**Tip**:
 >to navigate zoomed mermaid diagrams: 
@@ -37,7 +37,7 @@ smaller pictures / diagrams need smaller zoom levels because they scale bigger b
 >**Note**: Please set zoom levels at least 10% higher than mermaid proportions, otherwise your diagram won't zoom
 
 #### Max zoom level (Phone) 
-to get more balanced Mermaid diagram proportions, you don't have to set up anything. If you prefer Obsidians default Mermaid proportions for zoomed Diagrams, go to `Preferences>Style Settings>Dune>Pictures>Mobile - Mermaid Proportions`
+to get more balanced Mermaid diagram proportions, keep the default settings of Dune. If you prefer Obsidians default Mermaid proportions for zoomed Diagrams, then go to `Preferences>Style Settings>Dune>Pictures>Zoom pictures>Mobile - Mermaid Proportions`
 
 >**Tip**: to exit from Mermaid Diagrams,
 >- touch the right edge of the screen, where your scrollbar is.
@@ -45,13 +45,13 @@ to get more balanced Mermaid diagram proportions, you don't have to set up anyth
 
 ### Mermaid Diagrams on-the-fly
 
-Use [Quickadd](https://github.com/chhoumann/quickadd) by **chhoumann** or any text-expander application to add custom-made mermaid templates on-the-fly. 
+Use [Quickadd](https://github.com/chhoumann/quickadd) by **chhoumann** or any text-expander application to add custom-made mermaid templates on-the-fly. Another good option is [Mermaid tools](https://github.com/dartungar/obsidian-mermaid) by dartungar.
 To learn more about diagram types, check out [mermaid-tutorials](https://mermaid.js.org/syntax/flowchart.html)
 
 ### Pdf output
 
-Dune will print exacty the same output, no matter if your current theme is dark or light. 
-See example below (A4)
+Dune will print always the same output, no matter if your current theme is dark or light. 
+See below (A4)
 
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/33ca7325-ec50-41d2-a318-75931c9e2ef4" width="400" />
 
