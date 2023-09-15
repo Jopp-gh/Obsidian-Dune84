@@ -11,18 +11,20 @@
 
 ### Dune
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
-His novels were incredibly successful and influenced **Science-fiction** and everything related to coming afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
-**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic, spectacular and cinematic transposition of Frank's novel, very well narrated and worth to see as a whole. I continue to watch **David Lynch**'s Dune from time to time and this movie is still able to move me, even after so long time. 
-Recenty, we saw more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them here as successors. 
+His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+**Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic, spectacular and cinematic transposition of Frank's novels, very well narrated and worth to see as a whole. I continue to watch **David Lynch**'s Dune from time to time and this movie is still able to catch my interest, even after so long time. 
+Recenty, we saw more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them as successors here. 
 
 ### Goal
-My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet any support for this device needs **your feedback**
+My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet myself. So any support for this device is totally dependant on **your feedback**
 
 ### Motivation
-I am very pleased with form and function of **Dune** and hope this overhaul will benefit your overall workflow, reduce friction, improve your note-making with Obsidian. 
+I am very pleased with form and function of **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian which in turn should improve and expand your experience.
 <br>
-Also, I hope to pay my lunch for sharing good content with you. Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, thank you very much.
-Finally, i would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
+Also, I hope to pay my lunch for sharing good content with you. Plugin authors, theme designers and other developers put not just skills but love in their code projects and a ton of time to realize the features you get. The bigger a code project grows, the harder this code maintenace becomes, because of the sheer amount of commands which need to cooperate as a whole. Debugging is called the process where Developers hunt errors and despite the tools at our fingertips and expertise we got to use them, we still have a hard time to search and track issues and this happens usually in long night sessions, before we release a new update of our products. The final status represents the new "normality" of a product but a lot happens under the hood to guarantee this high level of quality and smooth experience.
+
+Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy as well for all the people interested in my way to design and implement features. Thanks for you attention.
+Finally, i released this theme becaues I would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
 
 ```
 - #architecture,
@@ -52,7 +54,7 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 2. if you see a white or black theme, open `Preferences>Style Settings>Dune>Colors>Theme` and choose a color scheme for your **light theme  (Dune 1 or Dune 2)** and a color scheme for your **dark theme (Dune 3 or Dune 4)**
 3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). Open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
 4. download [this companion snippet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) to add icons to your folder tree
-5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
+5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
 <br>
 
@@ -77,12 +79,15 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 - to read movie plots / footnotes on hover, get [**Better-footnotes**](https://github.com/jancbeck/obsidian-better-footnotes) by aidenlx
 - to work with tables, get [**Advanced-tables**](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger 
  
-### Supported
+### Tweaked
 
 - Kanban
 - cMenu
 - Full Calendar
 - mySnippets
+- Mermaid Tools
+- Advanced-tables
+- Better-footnotes
 
 <br>
 
