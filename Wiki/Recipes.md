@@ -1,6 +1,6 @@
 # Recipes
 
-to create your own cookbook, i suggest you to collect your recipes with the example template below.
+if you like to collect your recipes and create your own cookbook, then use the ricepes template of Dune. To add Dune's recipe template below, activate `Preferences>Core plugins>Templates`, specify a template directory of your choice. Then paste the template below in a new note of your template directory.  
 Feel free to add and remove or place elements in a way useful to you :)
 
 ```
