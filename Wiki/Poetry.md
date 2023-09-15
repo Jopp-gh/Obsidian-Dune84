@@ -19,13 +19,12 @@ choose how you want to display the **first letter** of your document:
 ropcap etc.
 ```
 
-> **Hint**: i emphsized the first word with bold, but you have to add bold by yourself if you want the same effect as in the example above
+> **Hint**: In the pictures above, the very first word after the main Letter was emphasized with bold, but you don't need to. 
 
 <br>
 
-
-Both callouts will render its first letter in big, gothic letters (but you can choose any font you like, please see how in list below). 
-Pay attention to use **Uppercase** for your *very first letter*.
+You only need to pay attention to use **Uppercase** for your *very first letter*, be it D for Dropcap or R for Raisecap
+Both callouts will render the very first letter in big, gothic letters, but you can choose any font you like, please see how in the list below:
 
 - to change fonts, go to **Style Settings>Dune>Fonts>Typesets>3 - Poetry** 
 - to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
@@ -49,9 +48,11 @@ then add two paragraphs and write 3 dashes `---`
 
 to resize your horizontal line style, go to **Dune>Fonts>Poetry Fonts>Resize decorations**
 
-**Tip**
-<br>
-assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings side-by-side to your note and see in real time how your slider affects the **Line styles decoration** size
+>**Tip**
+>assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings side-by-side to your note and see in real time how your slider affects the **Line styles decoration** size
+
+### Special features
+Horizontal lines are special in Dune, in fact, each time you add a hr `---` you tell Dune to add a **Page Break**
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
