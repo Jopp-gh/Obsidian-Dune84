@@ -12,9 +12,9 @@ Callout floats left / right
 
 
 ### Callouts colors
-`> [!note|yellow]`, `> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|gray]`
+`> [!note|yellow]`, `> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|gray]`, `> [!note|col]`
 
-yellow / red / green / blue / gray tint
+yellow / red / green / blue / gray and favorite tint
 
 ### Text and Image alignment
 ```
@@ -156,9 +156,15 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 ### Lines
 `Words Words #line-a  ==Words Words Words Words Words== Words Words`
 
+underline
+
 `Words Words #line-b  ==Words Words Words Words Words== Words Words`
 
+double underline
+
 `Words Words #line-c  ==Words Words Words Words Words== Words Words` 
+
+strikeout
 
 ### Icon Tags
 
@@ -176,3 +182,4 @@ Words #cal ==cal== Words
 Words #idea ==idea== Words 
 Words #profit ==profit== Words
 ```
+>**Note**: replace the highlighted text part with your text
