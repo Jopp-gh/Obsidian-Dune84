@@ -24,12 +24,12 @@ stretch tables
 headless tables
 
 ### Table colors
-`cssclass: table-xyr`, `cssclass: table-xyg`, `cssclass: table-xyb`, `cssclass: table-xym`
+`cssclass: table-xyr`, `cssclass: table-xyg`, `cssclass: table-xyb`, `cssclass: table-xym`, `cssclass: table-xy-col`
 
 tint for header and first column - red / green / blue / monochrome
 
 
-`cssclass: table-r`, `cssclass: table-g`, `cssclass: table-b`
+`cssclass: table-r`, `cssclass: table-g`, `cssclass: table-b`, `cssclass: table-y`, `cssclass: table-col`
 
 tint for header - red / green / blue
 
@@ -95,8 +95,6 @@ simple hr
 `cssclass: banner-a` and `![[image.png|banner-a]]`
 `cssclass: banner-b` and `![[image.png|banner-b]]`
 
-banner
-
 ### Vector images
 
 `cssclass: svg-50`, `cssclass: svg-100`, `cssclass: svg-150`, `cssclass: svg-200`
@@ -106,7 +104,7 @@ zoom svg
 ### Image description
 `cssclass: icap-25`, `cssclass: icap-35`, `cssclass: icap-45`, `cssclass: icap-55`, `cssclass: icap-65`, `cssclass: icap-75`
 
-modifies the text block width of (simple) image descriptions
+changes the text block width of (simple) image descriptions
 
 ## Typesetting - text alignment
 
@@ -114,10 +112,14 @@ modifies the text block width of (simple) image descriptions
 `cssclass: align-a`
 `cssclass: align-b`
 
-(**Slides** needs globally enabled alignment-typesettings, see *Dune preferences*)
+(**Slides** needs globally enabled `alignment-typesettings`, see *Dune preferences*)
 
 ## Extra large h1
-`cssclass: h1-l` 
+`cssclass: h1-3`, `cssclass: h1-4`, `cssclass: h1-5`, `cssclass: h1-6`, `cssclass: h1-7`, `cssclass: h1-8`     
+
+>**Note**: there is no `h1-1` or `h1-2` Because the default h1 header size starts from 2em
 
 ## Hide note
 `cssclass: hide-note`
+
+>**Note**: to hide Obsidians User Interface, check Dune's preferences.
