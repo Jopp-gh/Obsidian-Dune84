@@ -10,23 +10,26 @@ cssclass: banner-a,
 
 <br>
 
-choose between 2 types of banners:
+choose between 2 banners types:
 
 - banner-a (top banner, height adjustable in **Style Settings**)
 - banner-b (bottom banner, height adjustable in **Style Settings**)
 
->to add a banner, you need to insert your banner type (eg `banner-a`) twice, because one value is needed to create the space, another value picks up your image and transforms it into a banner.
+to add a banner, add your desired banner type (eg `banner-a`) as cssclass to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg|banner-a]]` to transform your image into a banner.
+
+>Note :
+>to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a `![[picture.jpg|banner-b]]`-type at top page, unless your note is very short.
 
 <br>
 
-### Banner height - for `banner-a`
-to configure banner height of `cssclass: banner-a`, just go to: `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Banner height`  
+### Banner height 
+to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), go to: `Preferences>Style Settings>Dune>Pictures>Arrange  Pictures>Resize Banner`  
 
 <br>
 
 ### Banner, vertical placement - for `banner-a`
 
-To move your Banner vertically in case your image looks kind of cut, add/change following **b**anner **c**oordinates: 
+If your top banner looks cut, you can adjust its vertical coordinates, add/change following **b**anner **c**oordinates: 
 - **locally**: use 8 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
 - **globally**: see **Style Settings>Dune>Pictures>Zoom Pictures>Banner vertical placement** 
 
@@ -66,7 +69,7 @@ Frame your pictures. Load some **png** frames like [this template](https://pngim
 
 `![[Pict.png|frame-s]]`
  
-Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** and adjust frame thickness in **Style Settings>Dune>Pictures>Frame (simple)**
+Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** and adjust frame thickness in **Style Settings>Dune>Colors>Extra colors>Frame color**
 
 
 <br>
@@ -129,7 +132,7 @@ to scale your images, use: img-10, img-20, img-30, img-40, img-50, img-60, img-7
 
 **Options**: svg-20, svg-30, svg-40, svg-50, svg-60, svg-70, svg-80. eg. `cssclass: svg-50` 
 
-to zoom in **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
+to zoom **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
 
 Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
 Otherwise click and hold over an image.
