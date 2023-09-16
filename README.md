@@ -16,14 +16,12 @@ His novels were incredibly successful and influenced **Science-fiction** and eve
 Recenty, we saw more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them as successors here. 
 
 ### Goal
-My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet myself. So any support for this device is totally dependant on **your feedback**
+My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet myself. So any support for tablet devices is totally dependant on **your feedback**
 
 ### Motivation
 I am very pleased with form and function of **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian which in turn should improve and expand your experience.
-<br>
-Also, I hope to pay my lunch for sharing good content with you. Plugin authors, theme designers and other developers put not just skills but love in their code projects and a ton of time to realize the features you get. The bigger a code project grows, the harder this code maintenace becomes, because of the sheer amount of commands which need to cooperate as a whole. Debugging is called the process where Developers hunt errors and despite the tools at our fingertips and expertise we got to use them, we still have a hard time to search and track issues and this happens usually in long night sessions, before we release a new update of our products. The final status represents the new "normality" of a product but a lot happens under the hood to guarantee this high level of quality and smooth experience.
-
-Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy as well for all the people interested in using Dune and its design choices. Thanks for you attention.
+Also, i hope to pay my lunch for sharing good content with you :)
+Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy if people would send me some little appreciacion for the work i have done with Dune. Thanks for you attention.
 Finally, i released this theme also becaues I would be pleased to make new friends, interested in, but not limited to following unsorted knowledge fields:
 
 ```
@@ -132,6 +130,12 @@ Support me, if you like what you get  :)
 
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me Another Beer" height="41" width="174"></a>
+
+Seriously, plugin authors, theme designers and developers in general put not just their skills, a lot of time but also love in their code projects to design and in a second step, to implement their ideas as working code. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
+
+Debugging is called the process where Developers hunt errors and despite the tools and expertise we got to use them, this process is almost always, time consuming and complex. With every new update quality standards raise, this status quickly become a "new normality" but just autors know how much happened behind the scenes to guarantee a smooth experience. It is like in a household, no matter how often you cook or clean, after your work is done it apparently disappears from the eyes of the beholder because perceived as normality.
+
+<br>
 
 ### Collaboration
 thanks for your interest in my theme. Right now i only accept bug reports and feature requests. 
