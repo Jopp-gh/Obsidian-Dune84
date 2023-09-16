@@ -131,14 +131,14 @@ Support me, if you like what you get  :)
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me Another Beer" height="41" width="174"></a>
 
-Seriously, plugin authors, theme designers and developers in general put not just their skills, a lot of time but also love in their code projects to design and in a second step, to implement their ideas as working code. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
+Plugin authors, theme designers and developers in general put not just their skills at your service, a lot of time but also love in their code projects to design and in a second step, to implement their ideas as working code parameters. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
 
 With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver their usual quality standards. Likewise in a household, no matter how often you cook or clean, after your work is done all your effort is tagged a matter of fact, a responsibility of somebody, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
 
 <br>
 
 ### Collaboration
-thanks for your interest in my theme. Right now i only accept bug reports and feature requests. 
+thanks for your interest in my theme. Right now i look for people willing to rework my current documentation
 
 First, to accept collaborators i would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
 Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune. 
