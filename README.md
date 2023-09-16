@@ -133,7 +133,7 @@ Support me, if you like what you get  :)
 
 Seriously, plugin authors, theme designers and developers in general put not just their skills, a lot of time but also love in their code projects to design and in a second step, to implement their ideas as working code. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
 
-Debugging is called the process where Developers hunt errors and despite the tools and expertise we got to use them, this process is almost always, time consuming and complex. With every new update quality standards raise, this status quickly become a "new normality" but just autors know how much happened behind the scenes to guarantee a smooth experience. It is like in a household, no matter how often you cook or clean, after your work is done it apparently disappears from the eyes of the beholder because perceived as normality.
+With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver their usual quality standards. Likewise in a household, no matter how often you cook or clean, after your work is done all your effort is tagged a matter of fact, a responsibility of somebody, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
 
 <br>
 
