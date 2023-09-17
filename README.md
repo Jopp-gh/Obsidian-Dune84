@@ -21,8 +21,8 @@ My **goal** with this theme was to improve Obsidian by removing some distraction
 ### Motivation
 I am very pleased with form and function of **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian which in turn should improve and expand your experience.
 Also, i hope to pay my lunch for sharing good content with you :)
-Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy if people could share some little appreciacion for the work i have done with Dune. Thanks for you attention.
-Finally, I released this theme in the hope to make new friends. Private massage (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about Obsidian and our knowledge fields. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
+Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy if people could share some little appreciation for the work i have done with Dune. Thanks for you attention.
+Finally, I released this theme in the hope to make new friends. Private massage me  (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about Obsidian and our knowledge fields. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
 
 ```
 - #architecture,
