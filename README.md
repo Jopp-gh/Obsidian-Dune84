@@ -43,7 +43,7 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 ```
 → Please check out [Releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) for older versions
 
-To make sure that Dune is always up-to-date, click Obsidians the button `Check for updates` in `Preferences>Appearance>` 
+To make sure that you're always up-to-date, click the button `Check for updates` in `Preferences>Appearance>` 
 
 <br>
 
