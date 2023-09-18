@@ -37,13 +37,11 @@ Finally, I released this theme in the hope to make new friends. Private massage 
 ```
 
 ### Attention
-```
-Obsidian v1.2.8 introduced several breaking changes, therefore, 
-newer versions of Dune wont be fully backward compatible with versions older than v1.2.8
-```
-→ Please check out [Releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) for older versions
 
-To make sure that you're always up-to-date, click the button `Check for updates` in `Preferences>Appearance>` 
+To make sure you're always up-to-date, open Obsidians `Preferences>Appearance>` then click on `Check for updates` 
+
+→ If you can't run the newest version of Obsidian, then try to install older [releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) 
+of Dune. 
 
 <br>
 
