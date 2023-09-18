@@ -218,7 +218,7 @@ settings:
     step: 50
   -
     id: deco-scale
-    title: Linebreak - Poesie Decorations height
+    title: Linebreak - Decoration size
     title.de: Umbruch - Dekorationen anpassen
     description: (wave-a - wave-f)
     type: variable-number-slider
@@ -228,7 +228,7 @@ settings:
     step: 0.1
   -
     id: prg-break
-    title: Linebreaks - empty
+    title: Linebreak - empty
     description: ignore empty lines
     title.de: Umbruch - leer
     description.de: ignoriere leere Umbrüche
@@ -270,7 +270,7 @@ settings:
     description.de: außer Telefon
     type: variable-number-slider
     format: em
-    default: 2
+    default: 4
     min: 2
     max: 14
     step: 1
@@ -283,7 +283,7 @@ settings:
     type: variable-number-slider
     format: rem
     default: 1
-    min: 1
+    min: 0.4
     max: 4
     step: 0.4
   -
@@ -547,7 +547,7 @@ settings:
   -
     id: show-gifs
     title: Gif animation 
-    description: zoom and animated gifs
+    description: zoom and animate gifs
     title.de: Gif Bilder
     description.de: Vergrößere und animierte gif Bilder
     type: class-toggle
@@ -878,7 +878,7 @@ settings:
     default-dark: '#c69a00'
   -
     id: hl-col
-    title: 'Text: Font Highlight - custom'
+    title: 'Font Highlight - custom'
     description: for fonts
     title.de: Eigene Farbmarkierung
     description.de: für Characterschriften
@@ -889,7 +889,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: tables-hlcol
-    title: 'Text: Table color - custom'
+    title: 'Table color - custom'
     description: for tables
     title.de: Eigene Tabellenfarbe
     description.de: für Tabellen
@@ -900,7 +900,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: memo-hlcol
-    title: 'Text: Stickies color - custom'
+    title: 'Stickies color - custom'
     description: for stickies
     title.de: Eigene Memofarbe
     description.de: für Memos
@@ -911,7 +911,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: call-hlcol
-    title: 'Text: Callout color - custom'
+    title: 'Callout color - custom'
     description: for callouts
     title.de: Eigene 'Callout'-Farbe 
     description.de: für 'Callout'
@@ -1134,6 +1134,11 @@ settings:
     description.de: Wiederherstellung - Hervorhebung
     type: class-toggle
   -
+    id: indent-p
+    title: indent paragraphs
+    title.de: Paragraphen einrücken
+    type: class-toggle
+  -
     id: fade-op-c
     title: Graph, Canvas, Slide
     type: heading
@@ -1265,7 +1270,7 @@ body {
     --custom-fsz-4: var(--glob-fsz);
 
     --large-h1: 2em;
-    --large-headers: 1rem;
+    --large-headers: 0.4rem;
     --custom-margin-above-header: 20px;
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
@@ -1279,6 +1284,7 @@ body {
     /* --file-folding-offset: 24px; */
     --file-line-width: var(--custom-max-line-width);
 
+    --property-height: 32px;
     --FolderRadius: 4px;
     --FolderHighlight: 24px;
     --FoldText: black;
@@ -2179,6 +2185,88 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
 }
 
 /*----------------------------------------------------------------
+PROPERTIES
+----------------------------------------------------------------*/
+.markdown-preview-view.show-properties .metadata-container,
+.metadata-properties-title {
+    display: none;
+}
+
+.metadata-container .metadata-properties-heading::after {
+    content: "yaml";
+    border-radius: 12px;
+    padding: 0 6px;
+    font-size: medium;
+    border: 2px solid;
+    font-weight: bold;
+}
+
+.metadata-container .metadata-add-button .text-button-label {
+    display: none;
+}
+
+.metadata-container {
+    margin-bottom: -40px;
+}
+
+.metadata-container .metadata-add-button {
+    padding-right: var(--size-2-3);
+    height: calc(var(--property-height) - 2px);
+}
+
+.metadata-property:hover {
+    background-color: var(--background-modifier-hover);
+    box-shadow: none;
+}
+
+.metadata-property-value .multi-select-container {
+    line-height: 2;
+}
+
+.metadata-property {
+    display: flex;
+    align-items: center;
+    height: var(--property-height);
+}
+
+.metadata-property-key {
+    display: flex;
+    align-items: center;
+}
+
+.metadata-property-value {
+    height: var(--property-height);
+    padding-bottom: 12px;
+}
+
+.multi-select-pill,
+.multi-select-pill:hover {
+    background-color: transparent;
+}
+
+.multi-select-pill-content {
+    border-radius: 24px;
+    padding: 0px 6px;
+}
+
+.theme-light .multi-select-pill-content {
+    background-color: white;
+}
+
+.theme-dark .multi-select-pill-content {
+    background-color: black;
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill-content {
+    background: var(--interactive-accent-rgb);
+    color: black;
+}
+
+.multi-select-pill-content:hover {
+    color: var(--text-accent-special);
+}
+
+/*----------------------------------------------------------------
 HEADERS
 ----------------------------------------------------------------*/
 
@@ -2407,7 +2495,7 @@ scale Header size
 
 
 body:not(.is-phone) :is(h1, .HyperMD-header-1, .markdown-rendered h1) {
-    font-size: var(--large-h1);
+    font-size: calc(var(--large-h1) + var(--large-headers));
 }
 
 .h1-3 h1,
@@ -2454,11 +2542,13 @@ body:not(.is-phone) :is(h1, .HyperMD-header-1, .markdown-rendered h1) {
 }
 
 .callout[data-callout~="font-l"] .callout-content p {
-    font-size: large;
+    font-size: larger;
+    color: initial;
 }
 
 .callout[data-callout~="font-s"] .callout-content p {
     font-size: small;
+    color: initial;
 }
 
 .callout[data-callout~="font-s"] .callout-title,
@@ -2560,7 +2650,9 @@ span.cm-header.cm-formatting-header {
     color: var(--link-color);
 }
 
-/* Link local, unresolved, web */
+/* 
+Link local, unresolved, web 
+*/
 
 .markdown-rendered .internal-link.is-unresolved,
 .markdown-source-view.mod-cm6 .is-unresolved,
@@ -2629,6 +2721,10 @@ a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) strong {
 /*----------------------------------------------------------------
 SYNTAX COL
 ----------------------------------------------------------------*/
+.indent-p p,
+.indent-p .markdown-source-view .cm-line:not(.HyperMD-header.cm-line) {
+    text-indent: 4em;
+}
 
 .theme-light:is(.code-utils) .cm-active.cm-line {
     background: white;
@@ -2790,6 +2886,10 @@ highlights
 .theme-light pre:not(pre[class*="language-"]) {
     background-color: #7e756629;
     min-width: var(--min-boxwidth);
+}
+
+.is-phone .markdown-rendered pre {
+    max-width: 92vw;
 }
 
 /* manual tips */
@@ -3324,6 +3424,7 @@ div[data-callout="multi-column"].callout>.callout-content>div[data-callout-metad
         border-top-left-radius: 2px;
         background-color: rgba(var(--callout-color), 0.1);
         padding: inherit;
+        border-radius: 4px;
     }
 }
 
@@ -3612,7 +3713,8 @@ code.language-fnote.is-loaded {
 .app-container pre.language-br,
 code.language-br.is-loaded {
     margin: 0;
-    min-width: 200px;
+    padding: 0;
+    width: 95vw;
 }
 
 .app-container pre.language-br button.copy-code-button {
@@ -3685,7 +3787,7 @@ code.language-fnote.is-loaded {
 
 body:not(.is-phone) .markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
     margin-bottom: 1px;
-    margin-top: 3px;
+    margin-top: 0;
 }
 
 .is-phone .markdown-preview-view .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
@@ -3706,7 +3808,7 @@ body:not(.is-phone) .callout[data-callout="weiterlesen"] .callout-content {
 
 .callout[data-callout="read-more"] .callout-title,
 .callout[data-callout="weiterlesen"] .callout-title {
-    font-size: medium;
+    font-size: var(--glob-fsz);
     color: var(--text-accent-special);
 }
 
@@ -3716,6 +3818,7 @@ body:not(.is-phone) .callout[data-callout="weiterlesen"] .callout-content {
 
 .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title::after {
     content: "…";
+    margin-top: 2px;
 }
 
 .align-r .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title {
@@ -3736,7 +3839,7 @@ embed deeply to get text wrap
     background: none;
     text-align: center;
     box-shadow: none;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     max-width: 400px;
     position: relative;
 }
@@ -3754,14 +3857,14 @@ embed deeply to get text wrap
 body:not(.is-phone) .callout.callout[data-callout=infobox],
 body:not(.is-phone) .callout.callout[data-callout=infobox-r] {
     padding: 6px 0 6px 12px;
-    margin-right: -24px;
+    /* margin-right: -24px; */
     float: right;
     clear: right;
 }
 
 body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
     padding: 6px 12px 6px 0;
-    margin-left: -24px;
+    /* margin-left: -24px; */
     float: left;
     clear: left;
 }
@@ -3795,6 +3898,7 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
     margin-top: 0;
     padding-top: 0;
     text-align: center;
+    font-size: revert !important;
 }
 
 .callout.callout[data-callout^=infobox] h1 {
@@ -3842,7 +3946,9 @@ body:not(.is-phone) .callout.callout[data-callout=infobox-l] {
 
 .callout.callout[data-callout^=infobox] td,
 .callout.callout[data-callout^=infobox] td:hover {
-    padding: 2px;
+    padding: 4px;
+    font-size: small;
+    font-weight: bold;
 }
 
 /* .callout.callout[data-callout*=infobox] p, */
@@ -3906,8 +4012,7 @@ body:is(.prg-break) .markdown-preview-view :is(p) {
 /* default - top break */
 .break-prg .markdown-preview-view :is(p),
 body:not(.prg-break) .markdown-preview-view :is(p) {
-    /* margin-top: revert; */
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .is-live-preview .admonition-content>*:first-child {
@@ -3949,7 +4054,14 @@ footnotes normal
 
 .is-flashing {
     transition: background-color 200ms ease;
-    background-color: var(--text-accent);
+}
+
+.theme-dark .is-flashing {
+    background-color: var(--text-accent) !important;
+}
+
+.theme-light .is-flashing {
+    background-color: white !important;
 }
 
 a.footnote-link {
@@ -3962,6 +4074,10 @@ Buttons - Preferences
 .empty-state-action:hover {
     font-weight: bold;
     color: var(--text-accent-special);
+}
+
+.modal-content .community-modal-readme :is(h1, .markdown-rendered h1) {
+    font-size: 2em;
 }
 
 /* breaks full-length urls */
@@ -4541,6 +4657,7 @@ TABLES -highlights
     color: white;
     font-weight: bold;
     text-align: center;
+    font-size: revert;
 }
 
 /* Highlight col table*/
@@ -4775,6 +4892,10 @@ body:is(.is-phone) .movies.markdown-preview-view table {
 /* --------------------------------------------   
 Contact TABLES - (img, full nm, tel, mail, group relations)
 --------------------------------------------   */
+.contacts .markdown-rendered th,
+.contacts .markdown-rendered thead tr>th:nth-child(2n+2) {
+    background-color: var(--background-primary);
+}
 
 /* rem all borders */
 .contacts:is(.markdown-source-view, .markdown-preview-view) thead tr>th {
@@ -5134,6 +5255,12 @@ ASIDE NOTES
     box-shadow: 0.5em 0.5em var(--bold-color);
 }
 
+.callout[data-callout^="aside-l"] p,
+.callout[data-callout^="aside-r"] p {
+    margin: 1em auto;
+    padding-top: 1em;
+}
+
 .callout[data-callout^=aside-] :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 0;
     padding-top: 0;
@@ -5302,6 +5429,9 @@ Poetry - Preview mode - important signpost
     font-size: 5em;
 }
 
+.reveal .callout[data-callout="raisecap"] {
+    padding-bottom: 0;
+}
 
 /* Dropcap */
 .cm-embed-block.cm-callout .callout[data-callout="dropcap"] {
@@ -5317,7 +5447,7 @@ Poetry - Preview mode - important signpost
     float: left;
     min-width: fit-content;
     height: 120px;
-    margin: -2.4em 0 -1em 0;
+    margin: -2em 0 -1em 0;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout="dropcap"] {
@@ -5330,18 +5460,18 @@ Poetry - Preview mode - important signpost
     min-width: fit-content;
     float: left;
     margin-top: 0;
+    height: 5em;
 }
 
 .markdown-preview-view .callout[data-callout="dropcap"] p {
-    margin-top: -1em;
-    padding-right: 8px;
     width: fit-content;
+    padding-right: 8px;
+    margin-bottom: 0em;
+    line-height: 1;
 }
 
 .reveal .callout[data-callout="dropcap"] p {
-    margin-bottom: 1em;
-    margin-top: -2em;
-    padding-top: 1em;
+    margin-top: -1em;
 }
 
 /* realign */
@@ -5356,8 +5486,9 @@ body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropc
 }
 
 .reveal .callout[data-callout="dropcap"] .callout-content {
-    margin-right: 1em;
-    margin-bottom: -3em;
+    margin-right: 0.4em;
+    font-size: 2em;
+    height: 3em;
 }
 
 .callout[data-callout="dropcap"] p:first-letter {
@@ -5367,12 +5498,19 @@ body:is(.prg-break).is-phone .markdown-preview-view .callout[data-callout="dropc
 }
 
 .reveal .callout[data-callout="dropcap"] p:first-letter {
-    font-size: 210px;
+    font-size: 80px;
+}
+
+.reveal .callout[data-callout="dropcap"] {
+    margin-bottom: -1em;
 }
 
 /*----------------------------------------------------------------
 IMAGE PLACING
 ----------------------------------------------------------------*/
+.is-phone img {
+    max-width: 92vw !important;
+}
 
 /* pause gif */
 body:not(.show-gifs) .markdown-source-view .image-embed[src$=".gif"] img,
@@ -5692,6 +5830,10 @@ img[alt~="frame-d"] {
     color: white;
 }
 
+.reveal img[alt~='pos-c'] {
+    margin: auto;
+}
+
 /* nice gallery-view */
 .markdown-preview-view .image-embed[src*="#cap"] {
     display: inline-block;
@@ -5757,7 +5899,7 @@ image placed + description
 }
 
 .callout[data-callout^="framed"][data-callout-metadata~="bg"] {
-    padding: 8px 20px 20px;
+    padding: 12px 20px 0;
     white-space: normal;
     min-width: var(--min-boxwidth);
     margin-top: 1em;
@@ -5786,6 +5928,10 @@ image placed + description
 
 .is-phone .callout[data-callout^="framed-r"][data-callout-metadata~="bg"] {
     margin-left: 1em;
+}
+
+.callout[data-callout^="framed"][data-callout-metadata~="bg"] .callout-content {
+    padding-bottom: 1em;
 }
 
 .zoom-auto .markdown-source-view.mod-cm6 .callout[data-callout="framed-l"] .internal-embed img,
@@ -6210,7 +6356,7 @@ MERMAID - all declarations needs important
 
 .mermaid polygon.state-end,
 .mermaid .node circle.state-end {
-    fill: #d99d6d !important;
+    fill: red !important;
 }
 
 .theme-dark .mermaid circle {
@@ -6356,7 +6502,7 @@ MERMAID - all declarations needs important
 }
 
 .theme-dark .mermaid span.nodeLabel {
-    filter: contrast(1);
+    filter: invert(1);
 }
 
 .theme-dark .mermaid .edgePaths {
@@ -8054,6 +8200,7 @@ SLIDESHOW
 .reveal .slides section,
 .reveal .slides section>section {
     height: 110%;
+    padding-top: 2%;
     width: inherit;
 }
 
@@ -8081,7 +8228,6 @@ span.addtip,
 
 .reveal .addtip:hover .tiptext {
     font-size: inherit;
-    top: -30px;
     left: 20px;
 }
 
@@ -8118,10 +8264,6 @@ body:not(.is-phone) .slides-close-btn:hover {
 
 .slides-s .reveal pre {
     display: contents;
-}
-
-.reveal .slides section h1 {
-    font-size: 2em;
 }
 
 .reveal :is(h1, h2, h3, h4, h5, h6) {
@@ -8185,15 +8327,15 @@ body:not(.is-phone) .slides-close-btn:hover {
 .reveal .callout[data-callout="aside-l"],
 .reveal .callout[data-callout="aside-r"] {
     width: auto;
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .reveal .callout[data-callout="aside-l"] {
-    margin: 16px 2em 1em 0 !important;
+    margin-right: 2em;
 }
 
 .reveal .callout[data-callout="aside-r"] {
-    margin: 16px 0 1em 2em !important;
+    margin-left: 2em;
 }
 
 .reveal .callout[data-callout="aside-l"] .callout-content,
@@ -8346,14 +8488,10 @@ body:not(.is-phone) .slides-close-btn:hover {
     display: none;
 }
 
-.reveal img[alt='banner-a'] {
-    height: auto;
-    width: 100%;
-}
-
+.reveal img[alt='banner-a'],
 .reveal img[alt='banner-b'] {
     height: auto;
-    width: 100%;
+    width: 100vw !important;
 }
 
 body:is(.is-phone) .reveal .slides>section img[alt='banner-a'],
@@ -8443,7 +8581,6 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
     font-size: x-large;
 }
 
-
 .reveal .image-embed[src*="#cap"]::after {
     font-size: inherit;
     margin-bottom: 12px;
@@ -8457,7 +8594,6 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 /* bigger mermaid */
 .slides .mermaid svg {
     max-width: 50vh;
-    transform: translateX(-50%);
 }
 
 .is-phone .slides .mermaid svg {
@@ -8606,14 +8742,27 @@ body:not(.show-ls-marker) ol li::marker {
     font-size: inherit;
 }
 
+.reveal .callout[data-callout="read-more"],
+.reveal .callout[data-callout="weiterlesen"] {
+    margin-top: -1.35em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 .reveal blockquote {
     background: var(--soft-shadow);
     margin: 8px 0;
+    padding: 12px;
 }
 
 .is-phone .reveal blockquote {
     border-radius: 6px;
     padding: 0 12px;
+}
+
+.reveal div[data-callout="multi-column"].callout {
+    margin-bottom: 1em;
 }
 
 /* add some padding to infobox tables */
@@ -8684,7 +8833,8 @@ body:not(.is-phone) .reveal .callout-icon {
 .reveal .slides,
 .reveal p {
     text-align: left;
-    margin: auto;
+    margin: 0 auto;
+    padding-top: 0;
 }
 
 .align-r .reveal p {
@@ -8757,7 +8907,8 @@ PDF EXPORT
     code,
     blockquote,
     table,
-    pre {
+    pre,
+    hr {
         page-break-inside: avoid;
     }
 
@@ -8767,7 +8918,6 @@ PDF EXPORT
     }
 
     p {
-        padding: 1em 0;
         overflow-wrap: normal;
     }
 
@@ -8884,8 +9034,46 @@ PDF EXPORT
         font-size: small;
     }
 
-    .callout:is([data-callout="read-more"], [data-callout="weiterlesen"])>.callout-title {
-        margin-top: 14px;
+    .image-embed[src*="#cap"]::after {
+        overflow-wrap: normal;
+        width: fit-content;
+        min-width: var(--min-boxwidth);
+    }
+
+    [data-callout="read-more"].callout,
+    [data-callout="weiterlesen"].callout {
+        margin-top: 0;
+    }
+
+    body:is(.prg-break) .markdown-preview-view p {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    body:is(.prg-break) div.callout[data-callout="dropcap"].callout .callout-content {
+        padding-top: 1em;
+    }
+
+    body:is(.prg-break) div.callout[data-callout="raisecap"].callout .callout-content {
+        padding-top: 2em;
+    }
+
+    div.callout[data-callout="dropcap"].callout .callout-content {
+        padding-top: 1em;
+        margin-bottom: 1.4em;
+    }
+
+    div.callout[data-callout="font-l"].callout .callout-content {
+        font-size: larger;
+    }
+
+    div[data-callout="multi-column"].callout .callout-content {
+        gap: 0.4em;
+    }
+
+    div[data-callout="aside-l"].callout .callout-content,
+    div[data-callout="aside-r"].callout .callout-content {
+        padding-top: 1em;
     }
 
     div.callout[data-callout="framed-r"] {
@@ -9367,6 +9555,7 @@ dataview
     border-bottom: none;
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+    color: var(--text-normal);
 }
 
 .block-language-dataview .table-view-table>thead>tr>th,
