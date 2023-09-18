@@ -19,9 +19,10 @@ Recenty, we saw more movies/tv series related to Dune, where i appreciated *back
 My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet myself. So any support for tablet devices is totally dependant on **your feedback**
 
 ### Motivation
-I am very pleased with form and function of **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian which in turn should improve and expand your experience.
+I am very pleased with the features added to **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian.
+
 Also, i hope to pay my lunch for sharing good content with you :)
-Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy if people could share some little appreciation for the work i have done with Dune. Thanks for you attention.
+Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy, if people could share some little appreciation for the work I have done. Thanks for you attention.
 Finally, I released this theme in the hope to make new friends. Private massage me  (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about Obsidian and our knowledge fields. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
 
 ```
