@@ -43,6 +43,8 @@ newer versions of Dune wont be fully backward compatible with versions older tha
 ```
 → Please check out [Releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) for older versions
 
+To make sure that Dune is always up-to-date, click Obsidians the button `Check for updates` in `Preferences>Appearance>` 
+
 <br>
 
 
@@ -131,9 +133,9 @@ Support me, if you like what you get  :)
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me Another Beer" height="41" width="174"></a>
 
-Plugin authors, theme designers and developers in general put not just their skills at your service, a lot of time but also love in their code projects to design and in a second step, to implement their ideas as working code parameters. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
+Plugin authors, theme designers and developers in general put not just their skills at your service, a lot of time but also love to design and in a second step, to implement their ideas as working code parameters. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
 
-With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver their usual quality standards. Likewise in a household, no matter how often you cook or clean, after your work is done all your effort is tagged a matter of fact, a responsibility of somebody, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
+With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver these quality standards. Likewise in a household, no matter how often you cook or clean, after your work is done all your effort is tagged as a matter of fact, a responsibility of somebody, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
 
 <br>
 
