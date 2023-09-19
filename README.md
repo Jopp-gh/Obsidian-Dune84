@@ -13,17 +13,17 @@
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
 His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
 **Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic, spectacular and cinematic transposition of Frank's novels, very well narrated and worth to see as a whole. I continue to watch **David Lynch**'s Dune from time to time and this movie is still able to catch my interest, even after so long time. 
-Recenty, we saw more movies/tv series related to Dune, where i appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, i won't cite them as successors here. 
+Recenty, we saw more movies/tv series related to Dune, where I appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, I won't cite them as successors here. 
 
 ### Goal
-My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to adapt Dune for tablets, i did this in emulation - since i do not own a tablet myself. So any support for tablet devices is totally dependant on **your feedback**
+My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to make Dune also accessible for tablets users - since I don't own myself a tablet, any support for these devices is totally dependant on **your feedback**
 
 ### Motivation
 I am very pleased with the features added to **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian.
-
-Also, i hope to pay my lunch for sharing good content with you :)
+Also, I hope to pay my lunch for sharing good content with you :)
 Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy, if people could share some little appreciation for the work I have done. Thanks for you attention.
-Finally, I released this theme in the hope to make new friends. Private massage me  (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about Obsidian and our knowledge fields. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
+
+Finally, I released this theme in the hope to make new friends. Private massage me  (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) to talk about Obsidian and our knowledge fields. If you need support related to pkm, or creative activities as well as programming or architecture, then let's have a talk. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
 
 ```
 - #architecture,
@@ -85,8 +85,6 @@ of Dune.
 - Full Calendar
 - mySnippets
 - Mermaid Tools
-- Advanced-tables
-- Better-footnotes
 
 <br>
 
@@ -111,7 +109,7 @@ of Dune.
 ### Resources
 
 **Dune** has been developed with care over an extended period of time. Version 1 was designed for desktop only, version 2 added phone support. Just the 3rd Version of Dune was designed for the public, this version got many new additions, code rewrites, tweakings, bug fixes.
-Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons.css) added by this theme are licensed under free software licenses,
+Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) added by this theme are licensed under free software licenses,
 borrowed and reworked code comes from following sources:
 
 - Braweria - [Spectrum](https://github.com/nuttingd/spectrum-obsidian-theme)
@@ -139,11 +137,11 @@ With every new update quality standards raise, this status quickly becomes a "ne
 <br>
 
 ### Collaboration
-thanks for your interest in my theme. Right now i look for people willing to rework my current documentation to make Dune even more accessible.
+thanks for your interest in my theme. Right now I look for people interested to rework my current documentation, to make Dune even more accessible.
 
-First, to accept collaborators i would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
-Second, to accept collaborators i look for people able to integrate features which i am unable to build myself. So far i did not need very much help and I enjoyed the development of Dune. 
-I encourage you to share your ideas and issues with Dune, just open a new ticket on top page here on github or chat with me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) 
+First, to accept collaborators I would like to know you better. You are welcome to chat with me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
+Second, to accept collaborators I look for people able to integrate features difficult for me. 
+Feel free to share your ideas and issues relevant to **Dune**, just open a new ticket on top page or chat with me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) 
 
 <br>
 
