@@ -1129,14 +1129,23 @@ settings:
   -
     id: code-utils
     title: Current Line (edit mode)
-    description: restore - highlight 
-    title.de: Aktuelle Zeile (Schreibmodus)
-    description.de: Wiederherstellung - Hervorhebung
+    description: highlight active Line
+    title.de: Aktive Zeile (Schreibmodus)
+    description.de: Hervorhebung aktive Zeile
     type: class-toggle
   -
     id: indent-p
     title: indent paragraphs
     title.de: Paragraphen einrücken
+    description: applies to all paragraphs 
+    description.de: wirksam auf alle Paragrafen 
+    type: class-toggle
+  -
+    id: show-prop
+    title: Yaml header
+    title.de: Yaml Kopfzeile
+    description: needs 'Editor - Properties in document - Visible / Source' 
+    description.de: braucht 'Editor - Properties in document - Visible / Source' 
     type: class-toggle
   -
     id: fade-op-c
@@ -2180,6 +2189,7 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
     border: none;
 }
 
+/* file suffix */
 .nav-file-tag {
     line-break: strict;
 }
@@ -2187,14 +2197,33 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
 /*----------------------------------------------------------------
 PROPERTIES
 ----------------------------------------------------------------*/
-.markdown-preview-view.show-properties .metadata-container,
-.metadata-properties-title {
+body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container,
+body:not(.show-prop) .metadata-properties-title {
     display: none;
+}
+
+body:not(.show-prop) .metadata-container,
+.markdown-source-view .metadata-container {
+    margin-bottom: -40px;
+}
+
+.metadata-property-value .multi-select-input {
+    text-align: start;
+}
+
+.metadata-property[data-property-key="tags"] .metadata-property-value .multi-select-input {
+    top: 2px;
+    position: relative;
+}
+
+.metadata-properties-title {
+    visibility: collapse;
+    height: 0;
 }
 
 .metadata-container .metadata-properties-heading::after {
     content: "yaml";
-    border-radius: 12px;
+    border-radius: 4px;
     padding: 0 6px;
     font-size: medium;
     border: 2px solid;
@@ -2205,22 +2234,14 @@ PROPERTIES
     display: none;
 }
 
-.metadata-container {
-    margin-bottom: -40px;
-}
-
 .metadata-container .metadata-add-button {
     padding-right: var(--size-2-3);
-    height: calc(var(--property-height) - 2px);
+    height: calc(var(--property-height) - 4px);
 }
 
 .metadata-property:hover {
     background-color: var(--background-modifier-hover);
     box-shadow: none;
-}
-
-.metadata-property-value .multi-select-container {
-    line-height: 2;
 }
 
 .metadata-property {
@@ -2229,14 +2250,30 @@ PROPERTIES
     height: var(--property-height);
 }
 
-.metadata-property-key {
-    display: flex;
-    align-items: center;
+.metadata-property-icon,
+input.metadata-property-key-input {
+    height: var(--property-height);
+    font-size: revert;
 }
 
-.metadata-property-value {
-    height: var(--property-height);
-    padding-bottom: 12px;
+.metadata-property:not([data-property-key="tags"]) .multi-select-pill {
+    height: 24px;
+}
+
+.mod-header .metadata-property-value .multi-select-container {
+    text-align: initial;
+    font-size: initial;
+}
+
+.workspace>.workspace-split:not(.mod-root) .metadata-container .metadata-properties .metadata-property-value .multi-select-container {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 8px;
+}
+
+.workspace>.workspace-split:not(.mod-root) .metadata-container .metadata-properties .metadata-property-value .multi-select-container .multi-select-input {
+    top: 4px;
+    position: relative;
 }
 
 .multi-select-pill,
@@ -2247,6 +2284,10 @@ PROPERTIES
 .multi-select-pill-content {
     border-radius: 24px;
     padding: 0px 6px;
+}
+
+.multi-select-pill {
+    line-height: 1.2;
 }
 
 .theme-light .multi-select-pill-content {
@@ -2260,6 +2301,11 @@ PROPERTIES
 .metadata-property[data-property-key="tags"] .multi-select-pill-content {
     background: var(--interactive-accent-rgb);
     color: black;
+    padding: 2px 6px;
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+    margin-left: -10px;
 }
 
 .multi-select-pill-content:hover {
@@ -2827,7 +2873,7 @@ highlights
     color: var(--text-accent-special);
 }
 
-/* highlight search in RV */
+/* highlight search in PV */
 .cm-s-obsidian span.obsidian-search-match-highlight {
     background-color: var(--interactive-accent-rgb);
     color: black;
@@ -2870,6 +2916,10 @@ highlights
     /* vertical-align: baseline; */
     border-radius: 4px;
     padding: 2px 5px;
+}
+
+.search-results-info .dropdown:hover {
+    color: var(--text-accent-special);
 }
 
 /* todo */
@@ -3015,6 +3065,16 @@ body:is(.is-phone) blockquote p {
 .markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
     padding-right: 18px;
     right: -15px;
+}
+
+.view-content .is-collapsed .list-collapse-indicator svg.svg-icon,
+.view-content .is-collapsed .collapse-indicator svg.svg-icon {
+    color: var(--text-normal);
+}
+
+.collapse-indicator {
+    scale: 1.2;
+    top: 8px;
 }
 
 /*----------------------------------------------------------------
@@ -4637,12 +4697,11 @@ TABLES -highlights
     --table-header-border-color: gray;
 }
 
-/* Table header col :not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col)*/
-.theme-dark div.markdown-rendered:not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-dark div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: #313131;
 }
 
-.theme-light div.markdown-rendered:not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-light div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
     background: gray;
 }
 
@@ -5580,7 +5639,7 @@ img[alt="banner-b"] {
 
 /* add banner-a as cssclass to reserve space for banner */
 .banner-a .markdown-preview-section {
-    margin-top: calc(var(--banner-bh) + 1em);
+    margin-top: calc(var(--banner-bh) + 2em);
 }
 
 .banner-b .markdown-preview-section {
