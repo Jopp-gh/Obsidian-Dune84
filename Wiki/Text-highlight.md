@@ -88,6 +88,14 @@ read hidden text on hover (desktop) or touch (mobile)
 
 read hidden text on hover (desktop) or touch (mobile)
 
+## citations
+![citation–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4a66fc81-3bb5-4d10-b945-baa26963cf30)
+
+![citation–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/95e71215-e56c-4e14-82be-152c7881c438)
+
+Example
+`my #cite-br ==citation==`
+
 ## Icon tags
 ![icon-tags](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b73b0e9c-a16f-4621-97a9-ed0c4895441a)
 
@@ -137,6 +145,50 @@ please see [Callout text blocks](https://github.com/Jopp-gh/Obsidian-Dune84/blob
 
 ## Multiple line breaks
 please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
+
+<br>
+
+## Small Columns
+![columns–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4f441c9a-55d5-4b56-b372-29556ec4e0e9)
+
+```
+>[!framed-lg]
+Lorem…
+```
+
+![columns–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/53d5ba80-c273-4fbf-a579-cd3004887986)
+
+```
+>[!framed-rg]
+Lorem…
+```
+
+>Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right of your page.
+
+You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will look strange.
+Basically, with this callout you can add notes to your left or right -side gutter.
+
+##  Custom line indent
+open Obidians `preferences>Dune>Fonts>Line>Indent tabs` to specify your indentation depth. 
+
+Pick between 2 indentation modes:
+- simple mode (toggle button) - applies to all paragraphs
+- custom mode (text tag) - applies to desired paragraphs
+
+**Custom indentation**
+![indent–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326)
+![indent–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6)
+
+
+## Initials
+![tag-initials–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/46f8e2ce-6add-41e6-86bd-b6e54c7e4b78)
+![tag-initials–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c6fa1c44-0516-4763-ba37-d733648dd162)
+![tag-initials–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/06061682-c1a7-4a03-8d86-4292e32e83fe)
+![tag-initials–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/701497df-9ebd-4fef-aeb0-f75f3b81b624)
+
+**Example**
+`#raisecap ==A==` or `#dropcap ==A==` 
+German: `#Initiale ==A==` or `#Initiale-t ==A==` 
 
 ## Large H1 Title
 
