@@ -67,6 +67,18 @@ larger text bold/italic in 3 colors, red, green, blue
 
 <br>
 
+## Mixing font families
+
+First, you've to specify your desired font families, go to `Preferences>Style Settings>Dune>Fonts>Typesets` and insert whatever fonts you want to appair under 4 different choices.
+
+**Example**
+
+`Lorem #font-1 ==ipsum dolor== sit amet, consectetur #font-3 ==adipisicing== elit`
+
+**Options**: `#font-1`, `#font-2`,`#font-3`, `#font-4`
+
+<br>
+
 ## Small - Large font sizes
 
 ![new-features–01b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3d14cd11-3ddb-4698-b74e-c9278fb3d672)
