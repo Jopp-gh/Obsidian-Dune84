@@ -10,6 +10,8 @@
 
 red, green, blue, gray - fat
 
+<br>
+
 ![txt-ital](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/1cd27a55-eb76-4bc5-b62c-5d723e42bb39)
 
 `#red *Abc*`
@@ -18,6 +20,8 @@ red, green, blue, gray - fat
 `#gray *Abc*`
 
 red, green, blue, gray - italic
+
+<br>
 
 ![txt-highl](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/7d166071-1e26-4306-80a0-ed4648a88c09)
 
@@ -28,6 +32,11 @@ red, green, blue, gray - italic
 
 red, green, blue - highlight
 
+**German**
+`#rot`, `#grün`,`#blau`,`#grau`
+
+<br>
+
 ## Inline - larger & smaller text highlights
 
 ![new-features–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4e24221f-8e02-4044-bc1c-8897d9ca8d0b)
@@ -37,17 +46,34 @@ red, green, blue - highlight
 
 smaller text bold/italic in 3 colors, red, green, blue
 
+**German**
+`#rot-k`,`#grün-k`,`#blau-k`,`#grau-k`
+
+<br>
+
 `#red-l **test**`, `#green-l **test**`, `#blue-l **test**`
 `#red-l *test*`, `#green-l *test*`, `#blue-l *test*`
 
 larger text bold/italic in 3 colors, red, green, blue
 
+**German**
+`#rot-g`,`#grün-g`,`#blau-g`,`#grau-g`
+
+<br>
+
+
+### Mixing font emphasis and font sizes
+![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
+
+<br>
+
+## Small - Large font sizes
+
 ![new-features–01b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3d14cd11-3ddb-4698-b74e-c9278fb3d672)
 
 `#font-s ==Small==` Normal `#font-l ==Large==`
 
-#### Example
-![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
+<br>
 
 ### Inline text highlights - custom color
 to set your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>custom font highlight`
@@ -68,11 +94,15 @@ to set your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra
 
 `#hlcol-l **quick**` = custom coloured inline bold - large
 
+<br>
+
 ## Sub & Sup
 
 ![new-features–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dd3b865d-d8ca-4fb8-9a78-10d109053b70)
 
 Words `#sup ==sup==` Words `#sub ==sub==`
+
+<br>
 
 ## Spoiler 
 ![Spoiler-txt-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f52bcc66-3f71-4406-8f53-5ee214da3c0d)
@@ -81,6 +111,8 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 read hidden text on hover (desktop) or touch (mobile)
 
+<br>
+
 ## Tips
 ![help–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6cd9af5b-aaf0-4e0d-b619-2b1a7ea6c187)
 
@@ -88,13 +120,20 @@ read hidden text on hover (desktop) or touch (mobile)
 
 read hidden text on hover (desktop) or touch (mobile)
 
-## citations
+<br>
+
+## Citations
 ![citation–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4a66fc81-3bb5-4d10-b945-baa26963cf30)
 
 ![citation–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/95e71215-e56c-4e14-82be-152c7881c438)
 
 Example
-`my #cite-br ==citation==`
+
+`my #cite-br ==citation==`, `my #cite-de ==citation==`
+
+**German** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`
+
+<br>
 
 ## Icon tags
 ![icon-tags](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b73b0e9c-a16f-4621-97a9-ed0c4895441a)
@@ -125,6 +164,11 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 <br>
 
+**German**
+`#kontakt`,`#ort`,`#brief`,`#lese`,`#bearbeite`,`#schlüssel`,`#merke`,`#kal`,`#idee`
+
+<br>
+
 ## Text Lines
 ![help-4](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d7bc068c-0ba2-4065-a2a6-247d5f29cb9e)
 
@@ -138,10 +182,14 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 `#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
+**German** `#strich-a`, `#strich-b`, `#strich-c`
+
 <br>
 
 ## Text blocks - smaller & larger 
 please see [Callout text blocks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
+
+<br>
 
 ## Multiple line breaks
 please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
@@ -163,22 +211,31 @@ Lorem…
 Lorem…
 ```
 
->Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right of your page.
+>Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
 
 You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will look strange.
 Basically, with this callout you can add notes to your left or right -side gutter.
+
+<br>
 
 ##  Custom line indent
 open Obidians `preferences>Dune>Fonts>Line>Indent tabs` to specify your indentation depth. 
 
 Pick between 2 indentation modes:
-- simple mode (toggle button) - applies to all paragraphs
+- simple mode (toggle button) - applies to all paragraphs 
 - custom mode (text tag) - applies to desired paragraphs
+
+>Note:
+> in simple mode, you don't have to add any text tag (`#indent`) to your paragraphs. 
 
 **Custom indentation**
 ![indent–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326)
 ![indent–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6)
 
+**German**
+`#einzug ==Text==`
+
+<br>
 
 ## Initials
 ![tag-initials–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/46f8e2ce-6add-41e6-86bd-b6e54c7e4b78)
@@ -188,7 +245,10 @@ Pick between 2 indentation modes:
 
 **Example**
 `#raisecap ==A==` or `#dropcap ==A==` 
-German: `#Initiale ==A==` or `#Initiale-t ==A==` 
+
+**German**: `#Initiale ==A==` or `#Initiale-t ==A==` 
+
+<br>
 
 ## Large H1 Title
 
