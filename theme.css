@@ -17,8 +17,8 @@ settings:
     id: common-fonts
     title: Typesets
     title.de: Schriftsätze
-    description: Standard (1), Handwritten (2), Poetry (3), Dashboard (4)
-    description.de: Standard (1), Handschrift (2), Poesie (3), Startseite (4)
+    description: Standard (1), Modern (2), Poetry (3), Dashboard (4)
+    description.de: Standard (1), Modern (2), Poesie (3), Startseite (4)
     type: heading
     level: 2
     collapsed: true
@@ -70,24 +70,24 @@ settings:
     max: 24
     step: 1
   -
-    id: font-handwritten
-    title: 2 - Handwritten
-    title.de: 2 - Handschrift
+    id: font-modern
+    title: 2 - Modern
+    title.de: 2 - Modern
     type: heading
     level: 3
     collapsed: true
   - 
-    id: handwritten-font-h
+    id: modern-font-h
     title: Header Font
     title.de: Überschriften
     type: variable-text
-    default: 'Roddy-Bold, cursive, Mumsies, Helvetica'
+    default: 'Optima-ExtraBlack, HelveticaNeue-Bold, GillSans-Light'
   - 
-    id: handwritten-font-c
+    id: modern-font-c
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
-    default: 'Quikhand, cursive, Mumsies, Helvetica'
+    default: 'Optima-Regular, HelveticaNeue-Light, GillSans-Bold'
   -
     id: custom-fsz-2
     title: Custom Font size
@@ -170,7 +170,7 @@ settings:
     id: heading-spacing
     title: Spacing
     title.de: Anordnung
-    description: change spacing bw headers, characters, linebreaks
+    description: change spacing between headers, characters, lines
     description.de: Ändere den Abstand von Überschriften, Charakterschrift, Zeilenumbruch
     type: heading
     level: 2
@@ -208,8 +208,8 @@ settings:
     id: indent-l
     title: Indent tabs
     title.de: Zeileneinzug
-    description: custom paragraphs 
-    description.de: eigene Paragrafen
+    description: indent paragraphs 
+    description.de: Zeileneinzug Paragrafen
     type: variable-number-slider
     format: em
     default: 4
@@ -218,14 +218,14 @@ settings:
     step: 1
   -
     id: indent-p
-    title: indent paragraphs
+    title: Indent paragraphs
     title.de: Paragraphen einrücken
     description: all paragraphs 
     description.de: alle Paragrafen
     type: class-toggle
   -
     id: custom-max-line-width
-    title: Textbody - note width
+    title: Textbody - Line width
     description: first, activate "readable line width" in Preferences-Editor
     title.de: Textkörper - Notizbreite
     description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
@@ -237,7 +237,7 @@ settings:
     step: 50
   -
     id: deco-scale
-    title: Pagelayout - Decoration size
+    title: Page layout - Decoration sizes
     title.de: Seitengestaltung - Dekorationen anpassen
     description: (wave-a - wave-f)
     type: variable-number-slider
@@ -397,8 +397,8 @@ settings:
     id: heading-image-frames
     title: Picture frames
     title.de: Bilderrahmen
-    description: 4 Frames
-    description.de: 4 Bilderrahmen
+    description: 5 Picture frames
+    description.de: 5 Bilderrahmen
     type: heading
     level: 2
     collapsed: true
@@ -578,9 +578,9 @@ settings:
   -
     id: show-gifs
     title: Gif animation 
-    description: zoom and animate gifs
+    description: zoom and animate gifs (Performance option)
     title.de: Gif Bilder
-    description.de: Vergrößere und animierte gif Bilder
+    description.de: Vergrößere und animierte gif Bilder (Leistungsschub Option)
     type: class-toggle
   -
     id: pictwall-opt
@@ -642,16 +642,16 @@ settings:
     collapsed: true
   -
     title: Vault Profile
-    description: Square (🁢), Banner (🀰), Standard (𝑵 Normal), small (𝑵 Minimal)
+    description: Square (■), Banner (🀰), Standard (𝑵 Normal), small (𝑵 Minimal)
     title.de: Vault Profil
-    description.de: Quadrat (🁢), Banner (🀰), Standard (𝑵 Normal), klein (𝑵 Minimal)
+    description.de: Quadrat (■), Banner (🀰), Standard (𝑵 Normal), klein (𝑵 Minimal)
     id: vault-name-s
     type: class-select
     allowEmpty: false
     default: vault-name-f
     options:
         -
-            label: 🁢
+            label: ■
             value: vault-name-a
         -
             label: 🀰
@@ -953,7 +953,7 @@ settings:
     default-dark: '#CA6404'
   -
     id: prop-col
-    title: 'Text: Text-tag color - custom'
+    title: 'Text-tag color - custom'
     description: for Text-tags
     title.de: Eigene 'Schlüsselworte'-Farbe 
     description.de: für 'Schlüsselworte'
@@ -1153,8 +1153,8 @@ settings:
     type: class-toggle
   -
     id: show-ls-marker
-    title: List counter marker
-    description: restore counter marker (list)
+    title: List marker
+    description: restore original marker (list)
     title.de: Listen Aufzählzeichen
     description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
@@ -1202,9 +1202,9 @@ settings:
   -
     id: slides-s
     title: Slide - compact
-    description: restore smaller text (Desktop)
+    description: smaller Character size (Desktop)
     title.de: Slide - kompakt
-    description.de: Wiederherstellung kleinerer Text (PCs)
+    description.de: Kleinere Charactergröße (PCs)
     type: class-toggle
   -
     id: show-touch-area
@@ -2420,7 +2420,7 @@ Font models
 
 .ftheme-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
 .ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--handwritten-font-h) !important;
+    font-family: var(--modern-font-h) !important;
 }
 
 .ftheme-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
@@ -2439,7 +2439,7 @@ Font models
 }
 
 .ftheme-2 .markdown-preview-section :is(p) {
-    font-family: var(--handwritten-font-c) !important;
+    font-family: var(--modern-font-c) !important;
 }
 
 .ftheme-3 .markdown-preview-section :is(p) {
@@ -2497,17 +2497,17 @@ body:not(.is-phone) :is(div.callout-content h6 em,
     font-size: var(--custom-fsz-1);
 }
 
-/* handwritten */
+/* modern */
 .fontmod-2 .markdown-source-view :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--handwritten-font-h);
+    font-family: var(--modern-font-h);
     color: var(--header-col);
     text-align: inherit;
 }
 
 .fontmod-2 .markdown-source-view:not(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6),
 .fontmod-2 .markdown-preview-view :is(p, code, li, th, td, .callout-title-inner) {
-    font-family: var(--handwritten-font-c);
+    font-family: var(--modern-font-c);
     font-size: var(--custom-fsz-2);
 }
 
@@ -3109,7 +3109,7 @@ body:is(.is-phone) blockquote p {
  custom highlights
 ----------------------------------------------------------------*/
 
-a:is([href="#red"], [href="#green"], [href="#blue"], [href="#gray"], [href="#rot"], [href="#grün"], [href="#blau"], [href="#grau"][href="#font-s"], [href="#red-s"], [href="#green-s"], [href="#blue-s"], [href="#gray-s"], [href="#rot-k"], [href="#grün-k"], [href="#blau-k"], [href="#grau-k"], [href="#font-l"], [href="#red-l"], [href="#green-l"], [href="#blue-l"], [href="#gray-l"], [href="#rot-g"], [href="#grün-g"], [href="#blau-g"], [href="#grau-g"], [href="#hlcol"], [href="#hlcol-s"], [href="#hlcol-l"], [href="#spoiler"], [href="#tips"], [href="#cite-br"], [href="#cite-de"], [href="#zitat-br"], [href="#zitat-de"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#raisecap"], [href="#initiale"], [href="#dropcap"], [href="#initiale-t"], [href="#font-1"], [href="#font-2"], [href="#font-3"], [href="#font-4"], [href="#ppl"], [href="#loc"], [href="#tel"], [href="#edit"], [href="#promo"], [href="#read"], [href="#mail"], [href="#key"], [href="#pin"], [href="#cal"], [href="#idea"], [href="#profit"], [href="#kontakt"], [href="#ort"], [href="#brief"], [href="#lese"], [href="#bearbeite"], [href="#schlüssel"], [href="#merke"], [href="#kal"], [href="#idee"]) {
+a:is([href="#red"], [href="#green"], [href="#blue"], [href="#gray"], [href="#rot"], [href="#grün"], [href="#blau"], [href="#grau"][href="#font-s"], [href="#red-s"], [href="#green-s"], [href="#blue-s"], [href="#gray-s"], [href="#rot-k"], [href="#grün-k"], [href="#blau-k"], [href="#grau-k"], [href="#font-l"], [href="#red-l"], [href="#green-l"], [href="#blue-l"], [href="#gray-l"], [href="#rot-g"], [href="#grün-g"], [href="#blau-g"], [href="#grau-g"], [href="#hlcol"], [href="#hlcol-s"], [href="#hlcol-l"], [href="#spoiler"], [href="#tips"], [href="#cite-br"], [href="#cite-de"], [href="#zitat-br"], [href="#zitat-de"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#raisecap"], [href="#initiale"], [href="#dropcap"], [href="#initiale-t"], [href="#font-1"], [href="#font-2"], [href="#font-3"], [href="#font-4"], [href="#ppl"], [href="#loc"], [href="#tel"], [href="#edit"], [href="#promo"], [href="#read"], [href="#mail"], [href="#key"], [href="#pin"], [href="#cal"], [href="#idea"], [href="#profit"], [href="#ppl"], [href="#loc"], [href="#tel"], [href="#read"], [href="#edit"], [href="#mail"], [href="#promo"], [href="#key"], [href="#pin"], [href="#cal"], [href="#idea"], [href="#profit"], [href="#kontakt"], [href="#ort"], [href="#brief"], [href="#lese"], [href="#bearbeite"], [href="#schlüssel"], [href="#merke"], [href="#kal"], [href="#idee"]) {
     display: none !important;
 }
 
@@ -3315,7 +3315,7 @@ a[href="#font-1"]+mark {
 }
 
 a[href="#font-2"]+mark {
-    font-family: var(--handwritten-font-c);
+    font-family: var(--modern-font-c);
 }
 
 a[href="#font-3"]+mark {
@@ -7265,7 +7265,7 @@ TABLET - basic support
 
 /* test */
 .is-tablet .sidebar-toggle-button.mod-left {
-    top: 20px;
+    top: 10px;
     position: relative;
 }
 
