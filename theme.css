@@ -220,8 +220,15 @@ settings:
     id: indent-p
     title: Indent paragraphs
     title.de: Paragraphen einrücken
-    description: all paragraphs 
-    description.de: alle Paragrafen
+    description: all paragraphs (inherits from - Indent tabs)
+    description.de: alle Paragrafen (übernimmt - Zeileneinzug Paragrafen)
+    type: class-toggle
+  -
+    id: prg-break
+    title: Linebreak - empty
+    description: ignore empty lines
+    title.de: Umbruch - leer
+    description.de: ignoriere leere Umbrüche
     type: class-toggle
   -
     id: custom-max-line-width
@@ -235,23 +242,6 @@ settings:
     min: 500
     max: 1400
     step: 50
-  -
-    id: deco-scale
-    title: Page layout - Decoration sizes
-    title.de: Seitengestaltung - Dekorationen anpassen
-    description: (wave-a - wave-f)
-    type: variable-number-slider
-    default: 0.6
-    min: 0.1
-    max: 1.2
-    step: 0.1
-  -
-    id: prg-break
-    title: Linebreak - empty
-    description: ignore empty lines
-    title.de: Umbruch - leer
-    description.de: ignoriere leere Umbrüche
-    type: class-toggle
   -  
     id: header-space
     title: Headers
@@ -333,6 +323,22 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  - 
+    id: font-monospace
+    title: Monospace Font
+    description: for yaml headers, tables, codeblocks
+    title.de: Konstantschrift
+    description.de: für Yaml-Kopfzeilen, Tabellen, Befehlszeilen
+    type: variable-text
+    default: '"Source Code Pro", monospace'
+  - 
+    id: mermaid-font
+    title: Mermaid Font
+    description: for diagrams
+    title.de: Mermaid Schrift
+    description.de: für Diagramme
+    type: variable-text
+    default: 'Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   -
     id: special-fonts
     title: Special Header Fonts
@@ -361,29 +367,6 @@ settings:
     description: AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif
     type: variable-text
     default: 'AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
-  -
-    id: font-mono
-    title: Diagrams - Monospaced
-    title.de: Diagramme - Konstantschrift
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: font-monospace
-    title: Monospace Font
-    description: for yaml headers, tables, codeblocks
-    title.de: Konstantschrift
-    description.de: für Yaml-Kopfzeilen, Tabellen, Befehlszeilen
-    type: variable-text
-    default: '"Source Code Pro", monospace'
-  - 
-    id: mermaid-font
-    title: Mermaid Font
-    description: for diagrams
-    title.de: Mermaid Schrift
-    description.de: für Diagramme
-    type: variable-text
-    default: 'Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
   -
     id: img-options
     title: ✦ Pictures
@@ -556,8 +539,8 @@ settings:
     id: zoom-imgs
     title: Zoom Pictures
     title.de: Vergrößerung
-    description: zoom pictures, diagrams and gif
-    description.de: Vergrößere Bilder, Diagramme, Gif
+    description: zoom pictures, diagrams and gif, decorations
+    description.de: Vergrößere Bilder, Diagramme, Gif, Dekorationen
     type: heading
     level: 2
     collapsed: true
@@ -580,16 +563,53 @@ settings:
     title: Gif animation 
     description: zoom and animate gifs (Performance option)
     title.de: Gif Bilder
-    description.de: Vergrößere und animierte gif Bilder (Leistungsschub Option)
+    description.de: Vergrößere und animierte gif Bilder (senkt Leistung)
     type: class-toggle
   -
-    id: pictwall-opt
+    id: deco-scale
+    title: Decoration sizes
+    title.de: Dekorationen anpassen
+    description: (wave-a - wave-f)
+    type: variable-number-slider
+    default: 0.6
+    min: 0.1
+    max: 1.2
+    step: 0.1
+  -
+    id: pict-arrangm
     title: Arrange Pictures
     title.de: Arrangiere Bilder
     description: arrange your pictures - vertically and horizontally 
     description.de: arrangiere Bilder - vertikal und horizontal
     type: heading
     level: 2
+    collapsed: true
+  -
+    id: banner-ah
+    title: Resize banner-a (Top) 
+    title.de: Größe Banner-a (Oben)
+    type: variable-number-slider
+    format: px
+    default: 240
+    min: 140
+    max: 500
+    step: 20
+  -
+    id: banner-bh
+    title: Resize banner-b (Bottom)
+    title.de: Größe Banner-b (Unten)
+    type: variable-number-slider
+    format: px
+    default: 240
+    min: 140
+    max: 500
+    step: 20
+  -
+    id: pictwall-opt
+    title: Picturewall
+    title.de: Bilderwand
+    type: heading
+    level: 3
     collapsed: true
   -
     id: pictwall-height
@@ -611,26 +631,6 @@ settings:
     min: 500
     max: 3000
     step: 40
-  -
-    id: banner-ah
-    title: Resize banner-a (Top) 
-    title.de: Größe Banner-a (Oben)
-    type: variable-number-slider
-    format: px
-    default: 240
-    min: 140
-    max: 500
-    step: 20
-  -
-    id: banner-bh
-    title: Resize banner-b (Bottom)
-    title.de: Größe Banner-b (Unten)
-    type: variable-number-slider
-    format: px
-    default: 240
-    min: 140
-    max: 500
-    step: 20
   -
     id: heading-profile-pic
     title: Profile picture
@@ -699,7 +699,7 @@ settings:
   -
     id: custom-colors-scheme
     title: Custom Theme
-    description: your own color scheme
+    description: Custom color scheme
     title.de: Eigenes Thema
     description.de: Wähle eigenes Farbschema
     type: heading
@@ -822,8 +822,8 @@ settings:
     default-dark: '#4A6CB0A1'
   -
     id: interface-col-scheme
-    title: Base Colors
-    title.de: Hauptfarben
+    title: Interface colors
+    title.de: Oberflächenfarbe
     type: heading
     level: 3
     collapsed: true
@@ -856,19 +856,12 @@ settings:
     format: hex
     default-light: '#46453D'
     default-dark: '#4B4D45'
-  -
-    id: interface-col-sec
-    title: Secondary Colors
-    title.de: Nebenfarben
-    type: heading
-    level: 3
-    collapsed: true
   - 
     id: def-red
     title: Default red
     description: for tables, text highlight types
     title.de: Standard Rot
-    description.de: für Tabellen, Callout, Textmarkierungen
+    description.de: für Tabellen, Textmarkierungen
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -879,7 +872,7 @@ settings:
     title: Default green
     description: for tables, text highlight types
     title.de: Standard Grün
-    description.de: für Tabellen, Callout, Textmarkierungen
+    description.de: für Tabellen, Textmarkierungen
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -890,7 +883,7 @@ settings:
     title: Default blue
     description: for tables, text highlight types
     title.de: Standard Blau
-    description.de: für Tabellen, Callout, Textmarkierungen
+    description.de: für Tabellen, Textmarkierungen
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -901,7 +894,7 @@ settings:
     title: Default yellow
     description: for tables, text highlight types
     title.de: Standard Gelb
-    description.de: für Tabellen, Callout, Textmarkierungen
+    description.de: für Tabellen, Textmarkierungen
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -963,6 +956,103 @@ settings:
     default-light: '#0080ff'
     default-dark: '#FFAA1A'
   -
+    id: folder-colors
+    title: Folder Colors
+    title.de: Ordnerfarben
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: Fold1
+    title: Folder 1
+    title.de: Ordner 1
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#7e91e4'
+    default-dark: '#6575b9' 
+  -
+    id: Fold2
+    title: Folder 2
+    title.de: Ordner 2
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#77c3d8'
+    default-dark: '#65a6b8' 
+  -
+    id: Fold3
+    title: Folder 3
+    title.de: Ordner 3
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#69bc67'
+    default-dark: '#549953' 
+  -
+    id: Fold4
+    title: Folder 4
+    title.de: Ordner 4
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#c2d000'
+    default-dark: '#a1ac00' 
+  -
+    id: Fold5
+    title: Folder 5
+    title.de: Ordner 5
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d7bb00'
+    default-dark: '#b19a00' 
+  -
+    id: Fold6
+    title: Folder 6
+    title.de: Ordner 6
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#e1ab59'
+    default-dark: '#c1924c' 
+  -
+    id: Fold7
+    title: Folder 7
+    title.de: Ordner 7
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#ce7172'
+    default-dark: '#a75c5d' 
+  -
+    id: Fold8
+    title: Folder 8
+    title.de: Ordner 8
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#c0699e'
+    default-dark: '#9c5581' 
+  -
+    id: Fold9
+    title: Folder 9
+    title.de: Ordner 9
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#9e67bc'
+    default-dark: '#82559b' 
+  -
+    id: Fold0
+    title: Folder 0
+    title.de: Ordner 0
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#acacac'
+    default-dark: '#858585' 
+  -
     id: theme-colors-scheme
     title: Theme
     description: preset color schemes for Day-Night
@@ -1002,6 +1092,8 @@ settings:
   -
     title: Dim Pictures
     title.de: Bilder abdunkeln
+    description: Reduce strong white (dark themes)
+    description.de: Verringere starkes Weiß (Dunkle Themen)
     id: dim-pictures
     type: class-select
     allowEmpty: false
@@ -1027,7 +1119,7 @@ settings:
     title: Extra colors
     description: for simple image frames, simple delimiter
     title.de: Zusätzliche Farben
-    description.de: für einfache Bilderrahmen, Trenner, Initialien, Callouts, Memos, Tabellen, Markierungen
+    description.de: für einfache Bilderrahmen, Trenner, Initialien
     type: heading
     level: 2
     collapsed: true
@@ -1153,8 +1245,8 @@ settings:
     type: class-toggle
   -
     id: show-ls-marker
-    title: List marker
-    description: restore original marker (list)
+    title: List counter marker
+    description: restore list counter marker
     title.de: Listen Aufzählzeichen
     description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
@@ -1234,6 +1326,13 @@ settings:
     title.de: Oberfläche verstecken
     description.de: Obsidian temporär unkenntlich zeichnen
     type: class-toggle
+  -
+    id: snipp-info
+    title: Snippets
+    title.de: Schnippsel
+    description: A) [Folder icons](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) <br> B) [Mermaid-theme](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css)
+    type: info-text
+    markdown: true
 */
 
 body {
@@ -1310,6 +1409,11 @@ body {
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
 
+    --bwidth-s: 2px;
+    --bwidth-a: 10px;
+    --bwidth-b: 10px;
+    --bwidth-c: 10px;
+    --bwidth-d: 10px;
     --banner-ah: 240px;
     --banner-bh: 240px;
     --pictwall-height: 200px;
@@ -2606,23 +2710,21 @@ body:not(.is-phone) :is(h1, .HyperMD-header-1, .markdown-rendered h1) {
 .callout[data-callout="font-s"] {
     background: transparent;
     padding-left: 0;
-    color: var(--text-normal);
 }
 
 .callout[data-callout="font-l"] {
     background: transparent;
     padding-left: 0;
-    color: var(--text-normal);
 }
 
 .callout[data-callout~="font-l"] .callout-content p {
     font-size: larger;
-    color: initial;
+    color: var(--text-normal);
 }
 
 .callout[data-callout~="font-s"] .callout-content p {
     font-size: small;
-    color: initial;
+    color: var(--text-normal);
 }
 
 .callout[data-callout~="font-s"] .callout-title,
@@ -3195,9 +3297,52 @@ a[href="#hlcol"]+em {
 }
 
 /* small fonts */
+a[href="#font-s"]+mark,
+a[href="#rot-k"]+strong,
+a[href="#rot-k"]+em,
+a[href="#red-s"]+strong,
+a[href="#red-s"]+em,
+a[href="#grün-k"]+strong,
+a[href="#grün-k"]+em,
+a[href="#green-s"]+strong,
+a[href="#green-s"]+em,
+a[href="#blau-k"]+strong,
+a[href="#blau-k"]+em,
+a[href="#blue-s"]+strong,
+a[href="#blue-s"]+em,
+a[href="#grau-k"]+strong,
+a[href="#grau-k"]+em,
+a[href="#gray-s"]+strong,
+a[href="#gray-s"]+em,
+a[href="#hlcol-s"]+strong,
+a[href="#hlcol-s"]+em {
+    font-size: small !important;
+}
+
+a[href="#font-l"]+mark,
+a[href="#rot-g"]+strong,
+a[href="#rot-g"]+em,
+a[href="#red-l"]+strong,
+a[href="#red-l"]+em,
+a[href="#grün-g"]+strong,
+a[href="#grün-g"]+em,
+a[href="#green-l"]+strong,
+a[href="#green-l"]+em,
+a[href="#blau-g"]+strong,
+a[href="#blau-g"]+em,
+a[href="#blue-l"]+strong,
+a[href="#blue-l"]+em,
+a[href="#grau-g"]+strong,
+a[href="#grau-g"]+em,
+a[href="#gray-l"]+strong,
+a[href="#gray-l"]+em,
+a[href="#hlcol-l"]+strong,
+a[href="#hlcol-l"]+em {
+    font-size: large !important;
+}
+
 a[href="#font-s"]+mark {
     background-color: transparent;
-    font-size: small !important;
     color: var(--text-normal);
 }
 
@@ -3207,7 +3352,6 @@ a[href="#red-s"]+strong,
 a[href="#red-s"]+em {
     background-color: transparent;
     color: var(--def-red);
-    font-size: small !important;
     font-family: inherit;
 }
 
@@ -3217,7 +3361,6 @@ a[href="#green-s"]+strong,
 a[href="#green-s"]+em {
     background-color: transparent;
     color: var(--def-green);
-    font-size: small !important;
     font-family: inherit;
 }
 
@@ -3227,7 +3370,6 @@ a[href="#blue-s"]+strong,
 a[href="#blue-s"]+em {
     background-color: transparent;
     color: var(--def-blue);
-    font-size: small !important;
     font-family: inherit;
 }
 
@@ -3237,7 +3379,6 @@ a[href="#gray-s"]+strong,
 a[href="#gray-s"]+em {
     background-color: transparent;
     color: var(--def-blue);
-    font-size: small !important;
     font-family: inherit;
 }
 
@@ -3245,7 +3386,6 @@ a[href="#hlcol-s"]+strong,
 a[href="#hlcol-s"]+em {
     background-color: transparent;
     color: var(--hl-col);
-    font-size: small !important;
     font-family: inherit;
 }
 
@@ -3262,7 +3402,6 @@ a[href="#red-l"]+strong,
 a[href="#red-l"]+em {
     background-color: transparent;
     color: var(--def-red);
-    font-size: large !important;
     font-family: inherit;
 }
 
@@ -3272,7 +3411,6 @@ a[href="#green-l"]+strong,
 a[href="#green-l"]+em {
     background-color: transparent;
     color: var(--def-green);
-    font-size: large !important;
     font-family: inherit;
 }
 
@@ -3282,7 +3420,6 @@ a[href="#blue-l"]+strong,
 a[href="#blue-l"]+em {
     background-color: transparent;
     color: var(--def-blue);
-    font-size: large !important;
     font-family: inherit;
 }
 
@@ -3292,7 +3429,6 @@ a[href="#gray-l"]+strong,
 a[href="#gray-l"]+em {
     background-color: transparent;
     color: var(--def-blue);
-    font-size: large !important;
     font-family: inherit;
 }
 
@@ -3300,7 +3436,6 @@ a[href="#hlcol-l"]+strong,
 a[href="#hlcol-l"]+em {
     background-color: transparent;
     color: var(--hl-col);
-    font-size: large !important;
     font-family: inherit;
 }
 
@@ -3860,22 +3995,22 @@ div[data-callout-metadata*="50"].callout {
 
 .callout[data-callout-metadata~="yellow"],
 .callout[data-callout-metadata~="gelb"] {
-    background-color: var(--def-yellow);
+    background-color: #ebcb63;
 }
 
 .callout[data-callout-metadata~="red"],
 .callout[data-callout-metadata~="rot"] {
-    background-color: var(--def-red);
+    background-color: #efa37f;
 }
 
 .callout[data-callout-metadata~="green"],
 .callout[data-callout-metadata~="grün"] {
-    background-color: var(--def-green);
+    background-color: #aacc63;
 }
 
 .callout[data-callout-metadata~="blue"],
 .callout[data-callout-metadata~="blau"] {
-    background-color: var(--def-blue);
+    background-color: #a6c2df;
 }
 
 .callout[data-callout-metadata~="gray"],
@@ -3887,13 +4022,13 @@ div[data-callout-metadata*="50"].callout {
     background-color: var(--call-hlcol);
 }
 
-.theme-light .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="gras"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
+.theme-light .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
     [data-callout-metadata~="grau"], [data-callout-metadata~="col"]) {
     --callout-color: black;
     mix-blend-mode: normal;
 }
 
-.theme-dark .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="gras"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
+.theme-dark .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
     [data-callout-metadata~="grau"], [data-callout-metadata~="col"]) {
     --callout-color: white;
     mix-blend-mode: normal;
@@ -4320,6 +4455,10 @@ Buttons - Preferences
 .empty-state-action:hover {
     font-weight: bold;
     color: var(--text-accent-special);
+}
+
+.community-modal-info .markdown-rendered thead tr {
+    background-color: gray;
 }
 
 .modal-content .community-modal-readme :is(h1, .markdown-rendered h1) {
@@ -5796,6 +5935,15 @@ span.internal-embed.media-embed.image-embed[src$=".gif"].is-loaded {
     display: block;
 }
 
+.markdown-source-view .image-embed[src$=".gif"].is-loaded {
+    display: block;
+    width: 10%;
+}
+
+.markdown-source-view .image-embed[src$=".gif"].is-loaded:hover {
+    width: 90%;
+}
+
 /* add banner-a to image */
 img[alt="banner-a"] {
     position: absolute;
@@ -6262,20 +6410,6 @@ image placed + description
     max-width: 50vw;
 }
 
-/* forbid zoom in source mode */
-.markdown-source-view img:hover {
-    pointer-events: none;
-}
-
-.markdown-source-view.mod-cm6 .cm-line .internal-embed.image-embed {
-    display: block;
-    width: 10%;
-}
-
-.markdown-source-view.mod-cm6 .cm-line .internal-embed.image-embed:hover {
-    width: 90%;
-}
-
 /* align caption to bottom border */
 .callout.callout[data-callout=moodboard] .image-embed[src*="#cap"]::after {
     margin-top: auto;
@@ -6600,227 +6734,16 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 }
 
 /*----------------------------------------------------------------
-MERMAID - all declarations needs important
+MERMAID 
 ----------------------------------------------------------------*/
-
-/*mermaid resize and center*/
 .mermaid svg {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.mermaid text.titleText {
-    fill: var(--text-normal) !important;
-}
-
-.theme-light .mermaid .node path {
-    fill: lightgray !important;
-}
-
-.theme-dark .mermaid .node path {
-    fill: slategray !important;
-}
-
-.mermaid .taskText {
-    fill: darkred !important;
-}
-
-.theme-dark .mermaid text:is(.taskTextOutsideRight, .taskTextOutsideLeft) {
-    fill: lightblue !important;
-}
-
-.mermaid rect.activation0 {
-    fill: lightblue !important;
-}
-
-.theme-light .mermaid rect.basic.label-container {
-    fill: lightgray !important;
-}
-
-.theme-dark .mermaid rect.basic.label-container {
-    fill: dimgray !important;
-}
-
-.mermaid rect :not(.task) {
-    fill: rgba(173, 216, 230, 0.3) !important;
-}
-
-.theme-dark .mermaid polygon.label-container {
-    fill: #6b789b !important;
-}
-
-.theme-light .mermaid polygon.label-container {
-    fill: #9bb2c8 !important;
-}
-
-.mermaid polygon.state-start,
-.mermaid .node circle.state-start {
-    fill: cornflowerblue !important;
-}
-
-.mermaid polygon.state-end,
-.mermaid .node circle.state-end {
-    fill: red !important;
-}
-
-.theme-dark .mermaid circle {
-    fill: gray !important;
-}
-
-.theme-dark .mermaid .node rect {
-    fill: rgb(99 114 125 / 50%) !important;
-}
-
-.mermaid .node .fork-join {
-    fill: slategray !important;
-    stroke: gray;
-}
-
-/* works on desk, not on phone */
-.theme-dark .mermaid .node .label {
-    color: black !important;
-}
-
-.theme-light .mermaid .edgeLabel,
-.mermaid .label text,
-.mermaid span {
-    color: black !important;
-}
-
-.mermaid .exclude-range {
-    fill: slategray !important;
-}
-
-.theme-dark .mermaid .edgeLabel {
-    color: var(--text-normal) !important;
-}
-
-.theme-dark .mermaid .cluster rect {
-    fill: rgb(86 86 86 / 50%) !important;
-}
-
-.theme-dark .mermaid :not(span.nodeLabel) :is(.cluster span) {
-    color: var(--text-normal) !important;
-}
-
-.theme-dark .mermaid .legend text {
-    fill: white !important;
-}
-
-.theme-dark .mermaid .slice {
-    text-shadow: 0 0 white !important;
-}
-
-.theme-light .mermaid rect.er.entityBox {
-    fill: lightblue !important;
-}
-
-.theme-dark .mermaid rect.er.entityBox {
-    fill: #2c455f !important;
-}
-
-/* .mermaid .statediagram-cluster.statediagram-cluster .inner */
-.mermaid .statediagram-cluster rect {
-    fill: rgb(136 134 123 / 20%) !important;
-}
-
-.mermaid path.pieCircle {
-    stroke: transparent !important;
-}
-
-.theme-light .mermaid .loopText>tspan {
-    fill: gray !important;
-}
-
-.theme-dark .mermaid .loopText>tspan {
-    fill: white !important;
-}
-
-.theme-light .mermaid :is(rect.req.reqBox, rect.actor) {
-    stroke: black;
-    stroke: gray !important;
-}
-
-.theme-dark .mermaid :is(rect.req.reqBox, rect.actor) {
-    fill: #2c455f !important;
-    stroke: gray !important;
-}
-
-.theme-dark .mermaid .labelBox {
-    fill: #505050 !important;
-}
-
-.theme-light .mermaid .labelBox {
-    fill: lightgray !important;
-}
-
-.theme-light .mermaid .relation {
-    filter: contrast(0.9) brightness(0.1);
-}
-
-.theme-dark .mermaid .relation,
-.theme-dark .mermaid .messageLine0,
-.theme-dark .mermaid .messageLine1 {
-    filter: contrast(0.2) brightness(0.9) !important;
-}
-
-.theme-dark .mermaid .statediagram-note rect {
-    fill: #a3982b !important;
-}
-
-.theme-dark .mermaid rect.note {
-    fill: rgb(136 134 123 /80%) !important;
-}
-
-.theme-light .mermaid rect.note {
-    fill: lightgray !important;
-}
-
-.theme-light .mermaid .req-title-line {
-    stroke: black !important;
-}
-
-.theme-dark .mermaid .divider {
-    stroke: black !important;
-}
-
-.theme-dark .mermaid rect.er.attributeBoxOdd {
-    fill: dimgrey !important;
-}
-
-.theme-dark .mermaid rect.er.attributeBoxEven {
-    fill: slategrey !important;
-}
-
-.theme-light .mermaid rect.er.attributeBoxEven {
-    fill: lightgray !important;
-}
-
-.theme-dark .mermaid line.loopLine {
-    filter: invert(1) !important;
-}
-
-.theme-dark .mermaid .nodeLabel {
-    color: var(--text-normal) !important;
-    border-radius: 4px;
-}
-
-.theme-dark .mermaid span.nodeLabel {
-    filter: invert(1);
-}
-
-.theme-dark .mermaid .edgePaths {
-    filter: invert(1) !important;
-}
-
-.theme-dark .mermaid path:is(.flowchart-link, .transition) {
-    stroke: var(--text-normal) !important;
-    filter: contrast(0.2) brightness(0.2) !important;
-}
-
-.theme-dark .mermaid path:is(.relationshipLine) {
-    filter: contrast(0.2) brightness(1.4) !important;
+.mermaid svg[aria-roledescription="pie"] {
+    min-width: 500px;
 }
 
 /*----------------------------------------------------------------
@@ -8857,7 +8780,7 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 }
 
 .reveal a[href="#rot-g"]+mark,
-.reveal a[href="#gras-g"]+mark,
+.reveal a[href="#grün-g"]+mark,
 .reveal a[href="#blau-g"]+mark,
 .reveal a[href="#font-l"]+mark,
 .reveal a[href="#hlcol-l"]+mark,
@@ -8869,7 +8792,7 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 
 .reveal a[href="#font-s"]+mark,
 .reveal a[href="#rot-k"]+mark,
-.reveal a[href="#gras-k"]+mark,
+.reveal a[href="#grün-k"]+mark,
 .reveal a[href="#blau-k"]+mark,
 .reveal a[href="#hlcol-s"]+mark,
 .reveal a[href="#red-s"]+mark,
@@ -8887,10 +8810,10 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 .reveal a[href="#green-l"]+em,
 .reveal a[href="#blue-l"]+em,
 .reveal a[href="#rot-g"]+strong,
-.reveal a[href="#gras-g"]+strong,
+.reveal a[href="#grün-g"]+strong,
 .reveal a[href="#blau-g"]+strong,
 .reveal a[href="#rot-g"]+em,
-.reveal a[href="#gras-g"]+em,
+.reveal a[href="#grün-g"]+em,
 .reveal a[href="#blau-g"]+em {
     font-size: xxx-large;
 }
@@ -8904,10 +8827,10 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
 .reveal a[href="#green-s"]+em,
 .reveal a[href="#blue-s"]+em,
 .reveal a[href="#rot-k"]+strong,
-.reveal a[href="#gras-k"]+strong,
+.reveal a[href="#grün-k"]+strong,
 .reveal a[href="#blau-k"]+strong,
 .reveal a[href="#rot-k"]+em,
-.reveal a[href="#gras-k"]+em,
+.reveal a[href="#grün-k"]+em,
 .reveal a[href="#blau-k"]+em {
     font-size: x-large;
 }
@@ -9463,28 +9386,6 @@ PDF EXPORT
         page-break-inside: avoid;
     }
 
-    .mermaid .edgeLabel {
-        color: black !important;
-    }
-
-    .mermaid rect.basic.label-container,
-    .mermaid .node path,
-    .mermaid .node polygon {
-        fill: lightgray !important;
-    }
-
-    .mermaid .node circle {
-        fill: #9f9f9f !important;
-    }
-
-    .mermaid .node rect {
-        fill: #bbbbbb !important;
-    }
-
-    .mermaid .cluster rect {
-        fill: rgb(86 86 86 / 20%) !important;
-    }
-
     .markdown-rendered code {
         background: #7e756629;
         color: black;
@@ -9493,10 +9394,6 @@ PDF EXPORT
     .file-embed.mod-generic,
     .file-embed.mod-empty {
         background: lightgray;
-    }
-
-    .mermaid span.edgeLabel {
-        background: white !important;
     }
 
     .app-container pre.language-fnote,
@@ -9960,47 +9857,7 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
     background-color: dodgerblue;
 }
 
-/* mermaid tools */
-.theme-dark .mermaid-toolbar-elements-container {
-    background: rgb(255 255 255 / 20%);
-    border-radius: 4px;
-    filter: saturate(1);
-}
 
-.theme-dark .mermaid-toolbar-elements-container :is(rect.outer, rect.inner, .cluster rect, .statediagram-state rect.divider) {
-    fill: rgb(255 255 255 / 10%) !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container path.er.relationshipLine {
-    filter: contrast(0.2) brightness(3);
-}
-
-/* text.messageText */
-.theme-dark .mermaid-toolbar-elements-container :is(text.slice, text.tag-label, tspan.row) {
-    filter: invert(1) drop-shadow(2px 4px 6px gray);
-}
-
-/* arrows, lines */
-.theme-dark .mermaid-toolbar-elements-container :is(.relation, .edge-pattern-solid, line) {
-    filter: contrast(0.1) invert(1) brightness(2.5);
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxOdd {
-    fill: gray !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxEven {
-    fill: black !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.req.reqBox {
-    fill: var(--background-primary-alt) !important;
-}
-
-#mermaid-toolbar-element-UserJourneyDiagram-0 .label,
-#mermaid-toolbar-element-UserJourneyDiagram-1 .label {
-    color: black !important;
-}
 
 /*----------------------------------------------------------------
  Hide text
