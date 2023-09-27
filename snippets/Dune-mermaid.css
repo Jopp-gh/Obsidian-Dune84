@@ -1,0 +1,612 @@
+@charset "UTF-8";
+/* @settings
+
+name: DUNE - mermaid
+id: mermaid-joval-theme
+settings:
+  -
+    id: mer-diagram-shapes
+    title: Shapes
+    title.de: Formen
+    type: heading
+    level: 1
+    collapsed: true 
+  -
+    id: mer-rect-act
+    title: Rectangle
+    title.de: Rechteck
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#add8e6'
+    default-dark: '#add8e6' 
+  -
+    id: mer-rect-2
+    title: Rectangle
+    title.de: Rechteck 2
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ADD8E6'
+    default-dark: '#6EDBFF' 
+  -
+    id: mer-rect-entity
+    title: Rectangle Entity
+    title.de: Einheiten-Rechteck
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#C8DFF7'
+    default-dark: '#2c455f'
+  -
+    id: mer-rect-base
+    title: Basic Rectangle
+    title.de: Einfaches Rechteck
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d3d3d3'
+    default-dark: '#696969' 
+  -
+    id: mer-clust-rect
+    title: Cluster Rectangle
+    title.de: Gruppen Rechteck
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#9D9D9D3B'
+    default-dark: '#5656563B'    
+  -
+    id: mer-clust-rect-2
+    title: Diagram cluster rectangle
+    title.de: Diagrammgruppe Rechteck
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#88867b33'
+    default-dark: '#88867b33'      
+  -
+    id: mer-req-box
+    title: Requirement box
+    title.de: Voraussetzungen Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#C5C5C5'
+    default-dark: '#2c455f'     
+  -
+    id: mer-labl-box
+    title: Label Box
+    title.de: Etiketten-Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d3d3d3'
+    default-dark: '#858585'
+  -
+    id: mer-attr-bx-o
+    title: Attribute box odd
+    title.de: Attribute ungleiche Felder
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#BABABA'
+    default-dark: '#696969'    
+  -
+    id: mer-attr-bx-e
+    title: Attribute box even
+    title.de: Attribute gleiche Felder
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#DFDFDF'
+    default-dark: '#708090'      
+  -
+    id: mer-rect-note
+    title: Rectangle Note
+    title.de: Rechteck Notiz
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d3d3d3'
+    default-dark: '#88867bcc'    
+  -
+    id: mer-poly-1
+    title: Polygon
+    title.de: Polygon
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#9bb2c8'
+    default-dark: '#6b789b' 
+  -
+    id: mer-circle-1
+    title: Circle
+    title.de: Kreis
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#B1CEE4'
+    default-dark: '#7DA6C2'     
+  -
+    id: mer-poly-start
+    title: Start point
+    title.de: Startpunkt
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#6495ed'
+    default-dark: '#6495ed' 
+  -
+    id: mer-poly-end
+    title: End point
+    title.de: Endpunkt
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#ff0000'
+    default-dark: '#ff0000'
+  -
+    id: mer-stat-rect
+    title: State Diagram Rectangle
+    title.de: Status Diagramm Rechteck
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#E2D872'
+    default-dark: '#a3982b'
+  -
+    id: mer-diagram-conn
+    title: Connections
+    title.de: Verbindungen
+    type: heading
+    level: 1
+    collapsed: true 
+  -
+    id: mer-node-pt
+    title: Node path
+    title.de: Knotenpfad
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d3d3d3'
+    default-dark: '#708090' 
+  -
+    id: mer-fork-jn
+    title: Fork join
+    title.de: Verbindung
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#708090'
+    default-dark: '#708090'     
+  -
+    id: mer-node-lbl
+    title: Node Label
+    title.de: Knotenetikett
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#000000'     
+  -
+    id: mer-diagram-text
+    title: Text
+    title.de: Text
+    type: heading
+    level: 1
+    collapsed: true 
+  -
+    id: mer-task-text
+    title: Task text
+    title.de: Aufgabentext
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#8b0000'
+    default-dark: '#8b0000' 
+  -
+    id: mer-task-text2
+    title: Task text 2
+    title.de: Aufgabentext 2
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF' 
+  -
+    id: mer-label-txt
+    title: Label text
+    title.de: Etiketten Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
+  -
+    id: mer-excl-range
+    title: Exclude range
+    title.de: Exclude range
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#708090'
+    default-dark: '#708090'     
+  -
+    id: mer-legd-txt
+    title: Legend Text
+    title.de: Legenden Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#676767'
+    default-dark: '#ffffff'
+  -
+    id: mer-loop-txt
+    title: Loop text
+    title.de: Kreislauf Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#808080'
+    default-dark: '#ffffff'     
+  -
+    id: mer-req-title
+    title: Requirement Title
+    title.de: Voraussetzungen Titel
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
+  -
+    id: mer-mer-div
+    title: Divider
+    title.de: Trennzeichen
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
+*/
+
+
+body.theme-light {
+  --text-normal: #433721;
+  --mer-rect-act: #add8e6;
+  --mer-rect-base: #d3d3d3;
+  --mer-rect-2: #ADD8E6;
+  --mer-poly-1: #9bb2c8;
+  --mer-poly-start: #6495ed;
+  --mer-poly-end: #ff0000;
+  --mer-circle-1: #B1CEE4;
+  --mer-clust-rect: #9D9D9D3B;
+  --mer-rect-entity: #C8DFF7;
+  --mer-clust-rect-2: #88867b33;
+  --mer-req-box: #C5C5C5;
+  --mer-labl-box: #d3d3d3;
+  --mer-stat-rect: #E2D872;
+  --mer-rect-note: #d3d3d3;
+  --mer-attr-bx-o: #BABABA;
+  --mer-attr-bx-e: #DFDFDF;
+
+  --mer-node-pt: #d3d3d3;
+  --mer-fork-jn: #708090;
+  --mer-node-lbl: #000000;
+
+  --mer-task-text: #8B0000;
+  --mer-task-text2: #000000;
+  --mer-label-txt: #000000;
+  --mer-excl-range: #708090;
+  --mer-legd-txt: #676767;
+  --mer-loop-txt: #808080;
+  --mer-req-title: #000000;
+  --mer-mer-div: #000000;
+}
+
+body.theme-dark {
+  --text-normal: #f3f2e9;
+  --mer-rect-act: #add8e6;
+  --mer-rect-base: #696969;
+  --mer-rect-2: #6EDBFF;
+  --mer-poly-1: #6b789b;
+  --mer-poly-start: #6495ed;
+  --mer-poly-end: #ff0000;
+  --mer-circle-1: #7DA6C2;
+  --mer-clust-rect: #5656563B;
+  --mer-rect-entity: #2c455f;
+  --mer-clust-rect-2: #88867b33;
+  --mer-req-box: #2c455f;
+  --mer-labl-box: #858585;
+  --mer-stat-rect: #a3982b;
+  --mer-rect-note: #88867bcc;
+  --mer-attr-bx-o: #696969;
+  --mer-attr-bx-e: #708090;
+
+  --mer-node-pt: #708090;
+  --mer-fork-jn: #708090;
+  --mer-node-lbl: #000000;
+
+  --mer-task-text: #8B0000;
+  --mer-task-text2: #FFFFFF;
+  --mer-label-txt: #000000;
+  --mer-excl-range: #708090;
+  --mer-legd-txt: #ffffff;
+  --mer-loop-txt: #ffffff;
+  --mer-req-title: #FFFFFF;
+  --mer-mer-div: #FFFFFF;
+}
+
+
+/* Mermaid theme */
+.mermaid line.loopLine {
+  filter: invert(1) !important;
+}
+
+.mermaid path.pieCircle {
+  stroke: transparent !important;
+}
+
+.mermaid .node path {
+  fill: var(--mer-node-pt) !important;
+}
+
+.mermaid text.pieTitleText {
+  font-size: revert !important;
+}
+
+.mermaid text.titleText {
+  fill: var(--text-normal) !important;
+}
+
+.mermaid text:is(.taskTextOutsideRight, .taskTextOutsideLeft) {
+  fill: var(--mer-task-text2) !important;
+}
+
+.mermaid text.sequenceNumber {
+  stroke: black;
+}
+
+.mermaid .legend text {
+  fill: var(--mer-legd-txt) !important;
+}
+
+.mermaid rect.note {
+  fill: var(--mer-rect-note) !important;
+}
+
+.mermaid rect.er.attributeBoxOdd {
+  fill: var(--mer-attr-bx-o) !important;
+}
+
+.mermaid rect.er.attributeBoxEven {
+  fill: var(--mer-attr-bx-e) !important;
+}
+
+.mermaid rect.activation0 {
+  fill: var(--mer-poly-1) !important;
+}
+
+.mermaid rect :not(.task) {
+  fill: var(--mer-rect-2) !important;
+}
+
+.mermaid rect.er.entityBox {
+  fill: var(--mer-rect-entity) !important;
+}
+
+.mermaid .node rect {
+  fill: var(--mer-rect-base) !important;
+}
+
+.mermaid .cluster rect {
+  fill: var(--mer-clust-rect) !important;
+}
+
+.mermaid .statediagram-cluster rect {
+  fill: var(--mer-clust-rect-2) !important;
+}
+
+.mermaid .statediagram-note rect {
+  fill: var(--mer-stat-rect) !important;
+}
+
+.mermaid :is(rect.req.reqBox, rect.actor) {
+  fill: var(--mer-req-box) !important;
+  stroke: gray !important;
+}
+
+.mermaid polygon.label-container {
+  fill: var(--mer-poly-1) !important;
+}
+
+.mermaid polygon.state-start,
+.mermaid .node circle.state-start {
+  fill: var(--mer-poly-start) !important;
+}
+
+.mermaid polygon.state-end,
+.mermaid .node circle.state-end {
+  fill: var(--mer-poly-end) !important;
+}
+
+.mermaid circle {
+  fill: var(--mer-circle-1) !important;
+}
+
+.mermaid circle.pieOuterCircle {
+  stroke: transparent !important;
+}
+
+.mermaid .node .fork-join {
+  fill: var(--mer-fork-jn) !important;
+  stroke: gray;
+}
+
+.mermaid .node .label {
+  color: var(--mer-node-lbl) !important;
+}
+
+.mermaid .edgeLabel,
+.mermaid .label text,
+.mermaid span {
+  color: var(--mer-label-txt) !important;
+}
+
+.mermaid :not(span.nodeLabel) :is(.cluster span) {
+  color: var(--text-normal) !important;
+}
+
+.mermaid .loopText>tspan {
+  fill: var(--mer-loop-txt) !important;
+}
+
+.mermaid .exclude-range {
+  fill: var(--mer-excl-range) !important;
+}
+
+.mermaid .edgeLabel {
+  color: var(--text-normal) !important;
+}
+
+.mermaid .taskText {
+  fill: var(--mer-task-text) !important;
+}
+
+.mermaid .labelBox {
+  fill: var(--mer-labl-box) !important;
+}
+
+.mermaid .req-title-line {
+  stroke: var(--mer-req-title) !important;
+}
+
+.mermaid .divider {
+  stroke: var(--mer-mer-div) !important;
+}
+
+.mermaid .nodeLabel {
+  color: var(--text-normal) !important;
+  border-radius: 4px;
+}
+
+.theme-dark .mermaid .slice {
+  fill: black !important;
+  text-shadow: 0 0 white !important;
+}
+
+.theme-light .mermaid .relation {
+  filter: contrast(0.9) brightness(0.1);
+}
+
+.theme-dark .mermaid .relation {
+  filter: contrast(0.2) brightness(0.4) !important;
+}
+
+.theme-dark .mermaid .messageLine0,
+.theme-dark .mermaid .messageLine1 {
+  filter: contrast(0.2) brightness(1.4) !important;
+}
+
+.theme-dark .mermaid .edgePaths {
+  filter: invert(1) !important;
+}
+
+.theme-dark .mermaid polygon .theme-dark .mermaid circle,
+.theme-dark .mermaid .node rect,
+.theme-dark .mermaid rect.basic.label-container {
+  filter: brightness(0.8);
+}
+
+.theme-dark .mermaid path:is(.flowchart-link, .transition) {
+  stroke: var(--text-normal) !important;
+  filter: contrast(0.2) brightness(0.2) !important;
+}
+
+.theme-dark .mermaid path:is(.relationshipLine) {
+  filter: contrast(0.2) brightness(1.4) !important;
+}
+
+/* Pdf */
+@media print {
+
+  .mermaid .edgeLabel {
+    color: black !important;
+  }
+
+  .mermaid .node path,
+  .mermaid .node polygon,
+  .mermaid .node circle,
+  .mermaid rect.reqLabelBox {
+    fill: #a8cce7 !important;
+  }
+
+  .mermaid .node rect,
+  .mermaid rect.basic.label-container,
+  .mermaid :is(rect.req.reqBox, rect.actor) {
+    fill: #e8e8e8 !important;
+  }
+
+  .mermaid rect.er.attributeBoxOdd {
+    fill: white !important;
+  }
+
+  .mermaid .cluster rect {
+    fill: rgba(150, 150, 150, 0.2) !important;
+  }
+
+  .mermaid path.pieCircle {
+    stroke: transparent !important;
+  }
+
+  .mermaid circle.pieOuterCircle {
+    stroke: white !important;
+  }
+
+  .mermaid span.edgeLabel {
+    background: white !important;
+  }
+}
+
+/* PLUGINS */
+/* mermaid tools */
+.theme-dark .mermaid-toolbar-elements-container {
+  background: rgb(255 255 255 / 20%);
+  border-radius: 4px;
+  filter: saturate(1);
+}
+
+.theme-dark .mermaid-toolbar-elements-container :is(rect.outer, rect.inner, .cluster rect, .statediagram-state rect.divider) {
+  fill: rgb(255 255 255 / 10%) !important;
+}
+
+.theme-dark .mermaid-toolbar-elements-container path.er.relationshipLine {
+  filter: contrast(0.2) brightness(3);
+}
+
+/* text.messageText */
+.theme-dark .mermaid-toolbar-elements-container :is(text.slice, text.tag-label, tspan.row) {
+  filter: invert(1) drop-shadow(2px 4px 6px gray);
+}
+
+/* arrows, lines */
+.theme-dark .mermaid-toolbar-elements-container :is(.relation, .edge-pattern-solid, line) {
+  filter: contrast(0.1) invert(1) brightness(2.5);
+}
+
+.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxOdd {
+  fill: gray !important;
+}
+
+.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxEven {
+  fill: black !important;
+}
+
+.theme-dark .mermaid-toolbar-elements-container rect.req.reqBox {
+  fill: var(--background-primary-alt) !important;
+}
+
+#mermaid-toolbar-element-UserJourneyDiagram-0 .label,
+#mermaid-toolbar-element-UserJourneyDiagram-1 .label {
+  color: black !important;
+}
