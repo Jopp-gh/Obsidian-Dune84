@@ -168,6 +168,29 @@ to merge or break lines/paragraphs locally add following to your yaml header:
 
 If line break is enabled, pay attention on how to merge paragraphs individually: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The paragraphs using the merge callout are highlighted with  **A, B** and **C**
 
+## Columns in Gutter 
+
+![columns–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4f441c9a-55d5-4b56-b372-29556ec4e0e9)
+
+```
+>[!framed-lg]
+Lorem…
+```
+
+![columns–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/53d5ba80-c273-4fbf-a579-cd3004887986)
+
+```
+>[!framed-rg]
+Lorem…
+```
+
+>Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
+
+You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
+Basically, with this callout you can add notes to your left or right -side gutter.
+
+<br>
+
 ## Footnote
 
 ![new-features–04a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6189488d-c3d3-4061-89a6-8f2317dbfbad)
