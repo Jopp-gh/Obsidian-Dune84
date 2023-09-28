@@ -539,7 +539,7 @@ settings:
     id: zoom-imgs
     title: Zoom Pictures
     title.de: Vergrößerung
-    description: zoom pictures, diagrams and gif, decorations
+    description: zoom pictures, diagrams, gif and decorations
     description.de: Vergrößere Bilder, Diagramme, Gif, Dekorationen
     type: heading
     level: 2
@@ -1251,6 +1251,11 @@ settings:
     description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
   -
+    id: footnote-g
+    title: Footnotes - gutter
+    title.de: Fußnoten (Seitenspalte)
+    type: class-toggle
+  -
     id: code-utils
     title: Current Line (edit mode)
     description: highlight active Line
@@ -1329,7 +1334,7 @@ settings:
   -
     id: snipp-info
     title: Snippets
-    title.de: Schnippsel
+    title.de: Schnipsel
     description: A) [Folder icons](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) <br> B) [Mermaid-theme](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css)
     type: info-text
     markdown: true
@@ -1422,6 +1427,7 @@ body {
     --indent-l: 4em;
     /* --default-line-w: 900px; */
     /* --file-folding-offset: 24px; */
+    --custom-max-line-width: 700px;
     --file-line-width: var(--custom-max-line-width);
 
     --property-height: 32px;
@@ -1488,7 +1494,6 @@ body.theme-light {
     --def-green: #52a543;
     --def-blue: cornflowerblue;
     --def-yellow: #e6b300;
-
     --frame-color: #4a6cb0;
 
     --code-background: var(--background-primary);
@@ -1897,6 +1902,15 @@ NAVI BAR
 /* .mod-active */
 .workspace-tab-header.is-active .workspace-tab-header-inner-title {
     font-weight: bold;
+}
+
+.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+    display: none;
+}
+
+.workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button,
+.workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
+    color: var(--text-accent-special);
 }
 
 .workspace-ribbon {
@@ -3022,8 +3036,6 @@ highlights
 
 /* Html custom Highlight */
 .cm-s-obsidian span.cm-highlight {
-    border-radius: 16px 2px;
-    padding: 0 4px 0 4px;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
@@ -3041,9 +3053,12 @@ highlights
     color: black;
 }
 
+.theme-dark .markdown-rendered mark .external-link {
+    filter: brightness(1.4);
+}
+
 /* Quotes */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-    /* vertical-align: baseline; */
     border-radius: 4px;
     padding: 2px 5px;
 }
@@ -3066,6 +3081,10 @@ highlights
 .theme-light pre:not(pre[class*="language-"]) {
     background-color: #7e756629;
     min-width: var(--min-boxwidth);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    background: rgb(128 128 128 / 10%);
 }
 
 .is-phone .markdown-rendered pre {
@@ -4015,23 +4034,22 @@ div[data-callout-metadata*="50"].callout {
 
 .callout[data-callout-metadata~="gray"],
 .callout[data-callout-metadata~="grau"] {
-    background-color: rgba(167, 167, 167, 0.6);
+    background-color: #c9c9c9;
 }
 
 .callout[data-callout-metadata~="col"] {
     background-color: var(--call-hlcol);
 }
 
-.theme-light .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
+.callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
     [data-callout-metadata~="grau"], [data-callout-metadata~="col"]) {
-    --callout-color: black;
+    --callout-color: 0 0 139;
     mix-blend-mode: normal;
+    color: black;
 }
 
-.theme-dark .callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
-    [data-callout-metadata~="grau"], [data-callout-metadata~="col"]) {
-    --callout-color: white;
-    mix-blend-mode: normal;
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+    color: inherit;
 }
 
 /*----------------------------------------------------------------
@@ -4423,9 +4441,28 @@ body:not(.prg-break) .markdown-preview-view :is(p) {
 /*----------------------------------------------------------------
 footnotes normal
 ----------------------------------------------------------------*/
+body:not(.footnote-g) .markdown-preview-section .footnotes {
+    position: absolute;
+    width: 340px;
+    float: right;
+    top: 12%;
+    right: -30em;
+}
 
-.markdown-preview-section .footnotes {
-    font-size: 80%;
+body:not(.footnote-g) .markdown-preview-section .footnotes hr {
+    display: none;
+}
+
+body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
+    content: counter(list-item) ". ";
+    font-size: small;
+    color: var(--text-normal);
+}
+
+.footnotes li {
+    font-size: small !important;
+    border-bottom: 1px solid var(--text-normal);
+    margin-bottom: 0.4em;
 }
 
 .footnotes p {
@@ -4434,7 +4471,7 @@ footnotes normal
 }
 
 .is-flashing {
-    transition: background-color 200ms ease;
+    transition: background-color 100ms ease;
 }
 
 .theme-dark .is-flashing {
@@ -5632,19 +5669,12 @@ table :not([class*="wave"], [class*="fade"], [class*="stars"]) hr {
 ASIDE NOTES
 ----------------------------------------------------------------*/
 
-.callout[data-callout="aside-l"],
-.callout[data-callout="aside-r"] {
-    background: var(--background-secondary);
-    mix-blend-mode: normal;
-    width: auto;
-    max-width: 25vw;
-    box-shadow: 0.5em 0.5em var(--bold-color);
-}
-
-.callout[data-callout^="aside-l"] p,
-.callout[data-callout^="aside-r"] p {
-    margin: 1em auto;
-    padding-top: 1em;
+.callout[data-callout="aside-lh"] .callout-title,
+.callout[data-callout="aside-rh"] .callout-title,
+.callout[data-callout="aside-l"] .callout-title,
+.callout[data-callout="aside-r"] .callout-title {
+    padding: 0;
+    display: none;
 }
 
 .callout[data-callout^=aside-] :is(h1, h2, h3, h4, h5, h6) {
@@ -5653,22 +5683,23 @@ ASIDE NOTES
     text-align: center;
 }
 
-.callout[data-callout="aside-l"] .callout-content,
-.callout[data-callout="aside-r"] .callout-content,
-.callout[data-callout="aside-lh"] .callout-content,
-.callout[data-callout="aside-rh"] .callout-content {
-    font-size: small;
-    margin-top: -1em;
+.callout[data-callout^="aside-l"],
+.callout[data-callout^="aside-r"] {
+    background: var(--background-secondary);
+    mix-blend-mode: normal;
+    width: auto;
+    max-width: 25vw;
+    box-shadow: 0.25em 0.25em var(--bold-color);
 }
 
 .callout[data-callout="aside-l"],
-.callout[data-callout="aside-lh"]:hover {
+.callout[data-callout="aside-lh"] {
     float: left;
     clear: left;
 }
 
 .callout[data-callout="aside-r"],
-.callout[data-callout="aside-rh"]:hover {
+.callout[data-callout="aside-rh"] {
     float: right;
     clear: right;
 }
@@ -5700,14 +5731,6 @@ ASIDE NOTES
     max-width: 35vw;
 }
 
-.callout[data-callout="aside-lh"] .callout-title,
-.callout[data-callout="aside-rh"] .callout-title,
-.callout[data-callout="aside-l"] .callout-title,
-.callout[data-callout="aside-r"] .callout-title {
-    padding: 0;
-    display: none;
-}
-
 .is-phone .callout[data-callout="aside-l"],
 .is-phone .callout[data-callout="aside-r"],
 .is-phone .callout[data-callout="aside-lh"],
@@ -5715,29 +5738,13 @@ ASIDE NOTES
     max-width: 60vw !important;
 }
 
-/* hide box */
-.callout[data-callout="aside-lh"]:not(:hover),
-.callout[data-callout="aside-rh"]:not(:hover) {
-    width: 12px;
-    min-width: 12px;
-    height: 0;
-    border-radius: 0;
-    background: transparent;
-    border-bottom: 4px solid var(--bold-color);
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout="aside-lh"],
-.markdown-source-view.mod-cm6 .callout[data-callout="aside-rh"] {
-    pointer-events: none;
-}
-
 .markdown-preview-view .callout[data-callout="aside-l"],
-.markdown-preview-view .callout[data-callout="aside-lh"]:hover {
+.markdown-preview-view .callout[data-callout="aside-lh"] {
     margin: 22px 22px 22px -15px;
 }
 
 .markdown-preview-view .callout[data-callout="aside-r"],
-.markdown-preview-view .callout[data-callout="aside-rh"]:hover {
+.markdown-preview-view .callout[data-callout="aside-rh"] {
     margin: 22px -15px 22px 22px;
 }
 
@@ -5755,23 +5762,34 @@ ASIDE NOTES
     margin-top: 1em;
 }
 
-.markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-rh"]:before,
-.markdown-source-view.mod-cm6 .cm-callout[data-callout="aside-lh"]:after {
-    padding: 40px;
+.markdown-preview-view .callout.callout[data-callout="aside-lh"],
+.markdown-preview-view .callout.callout[data-callout="aside-rh"] {
+    border-bottom: 4px solid var(--bold-color);
+    border-radius: 0;
+    height: 4px;
+    width: 0;
+    min-width: 40px;
+    padding: 0;
+    box-shadow: none;
 }
 
-.markdown-preview-view .callout.callout[data-callout="aside-lh"]:hover,
-.markdown-preview-view .callout.callout[data-callout="aside-rh"]:hover {
+.markdown-preview-view .callout[data-callout="aside-lh"]:hover,
+.markdown-preview-view .callout[data-callout="aside-rh"]:hover {
     background: var(--background-secondary);
+    box-shadow: 0.25em 0.25em var(--bold-color);
     mix-blend-mode: normal;
-    max-width: 30vw;
+    max-width: 20vw;
     width: auto;
-    font-size: small;
     height: 100%;
-    box-shadow: 0.5em 0.5em var(--bold-color);
-    border-bottom: 0;
+    padding: 1em;
+    border-bottom: none;
     border-radius: 4px;
-    pointer-events: all;
+    animation: fadeIn 1s;
+}
+
+.callout[data-callout^="aside-"] .callout-content p {
+    font-size: smaller;
+    /* margin-top: -1em; */
 }
 
 /*----------------------------------------------------------------
@@ -7188,7 +7206,7 @@ TABLET - basic support
 
 /* test */
 .is-tablet .sidebar-toggle-button.mod-left {
-    top: 10px;
+    top: 5px;
     position: relative;
 }
 
