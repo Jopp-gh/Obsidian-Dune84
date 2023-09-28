@@ -198,38 +198,6 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 <br>
 
-## Text blocks - smaller & larger 
-please see [Callout text blocks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
-
-<br>
-
-## Multiple line breaks
-please see [multiple-line-breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
-
-<br>
-
-## Small Columns
-![columns–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4f441c9a-55d5-4b56-b372-29556ec4e0e9)
-
-```
->[!framed-lg]
-Lorem…
-```
-
-![columns–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/53d5ba80-c273-4fbf-a579-cd3004887986)
-
-```
->[!framed-rg]
-Lorem…
-```
-
->Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
-
-You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will look strange.
-Basically, with this callout you can add notes to your left or right -side gutter.
-
-<br>
-
 ##  Custom line indent
 open Obidians `preferences>Dune>Fonts>Line>Indent tabs` to specify your indentation depth. 
 
@@ -246,6 +214,15 @@ Pick between 2 indentation modes:
 
 **German**
 `#einzug ==Text==`
+
+<br>
+
+### Related
+#### [Text blocks - smaller & larger](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
+
+#### [Multiple line breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
+
+#### [Small columns in gutter](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Callouts.md#columns-in-gutter)
 
 <br>
 
