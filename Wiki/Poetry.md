@@ -1,6 +1,11 @@
 # Poetry
 ## Poetry Caps
-choose how you want to display the **first letter** of your document:
+
+choose how your **first letter**, your **Initial**, should look like:
+- use a [text-tag](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md#initials)
+- use a callout (please continue to read on below)
+
+<br>
 
 ![poetry-caps–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4d675282-fbe2-464f-8437-0ae931b3ea6c)
 
@@ -30,7 +35,8 @@ Both callouts will render the very first letter in big, gothic letters, but you 
 - to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
 
 <br>
-    
+
+
 ## Horizontal Line styles
 ![P2](https://user-images.githubusercontent.com/48620536/222981063-8ab2dc90-1729-46fc-a9d6-d82e1e00d878.png)
 
