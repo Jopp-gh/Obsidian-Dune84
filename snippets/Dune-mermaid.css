@@ -5,14 +5,14 @@ name: DUNE - mermaid
 id: mermaid-joval-theme
 settings:
   -
-    id: mer-diagram-shapes
-    title: Shapes
-    title.de: Formen
+    id: mer-diagram-shapes1
+    title: Shapes-1
+    title.de: Formen-1
     type: heading
     level: 1
     collapsed: true 
   -
-    id: mer-rect-act
+    id: mer-rect-1
     title: Rectangle
     title.de: Rechteck
     type: variable-themed-color
@@ -22,7 +22,7 @@ settings:
     default-dark: '#add8e6' 
   -
     id: mer-rect-2
-    title: Rectangle
+    title: Rectangle 2
     title.de: Rechteck 2
     type: variable-themed-color
     format: rgb
@@ -64,43 +64,7 @@ settings:
     format: rgb
     opacity: true
     default-light: '#88867b33'
-    default-dark: '#88867b33'      
-  -
-    id: mer-req-box
-    title: Requirement box
-    title.de: Voraussetzungen Feld
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#C5C5C5'
-    default-dark: '#2c455f'     
-  -
-    id: mer-labl-box
-    title: Label Box
-    title.de: Etiketten-Feld
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#d3d3d3'
-    default-dark: '#858585'
-  -
-    id: mer-attr-bx-o
-    title: Attribute box odd
-    title.de: Attribute ungleiche Felder
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#BABABA'
-    default-dark: '#696969'    
-  -
-    id: mer-attr-bx-e
-    title: Attribute box even
-    title.de: Attribute gleiche Felder
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#DFDFDF'
-    default-dark: '#708090'      
+    default-dark: '#88867b33'        
   -
     id: mer-rect-note
     title: Rectangle Note
@@ -154,7 +118,235 @@ settings:
     format: rgb
     opacity: true
     default-light: '#E2D872'
-    default-dark: '#a3982b'
+    default-dark: '#a3982b' 
+  -
+    id: mer-diagram-shapes2
+    title: Shapes-2
+    title.de: Formen-2
+    type: heading
+    level: 1
+    collapsed: true 
+  - 
+    id: color-blue
+    title: Default blue
+    title.de: Standard Blau
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#6495ed'
+    default-dark: '#3b71d6'
+  - 
+    id: color-cyan
+    title: Default cyan
+    title.de: Standard Cyan
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#64e5ff'
+    default-dark: '#55c1d6'
+  - 
+    id: color-green
+    title: Default green
+    title.de: Standard Grün
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#5bbe49'
+    default-dark: '#228b22'
+  - 
+    id: color-yellow
+    title: Default yellow
+    title.de: Standard Gelb
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ffc800'
+    default-dark: '#dbac01'
+  - 
+    id: color-orange
+    title: Default orange
+    title.de: Standard Orange
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ff9900'
+    default-dark: '#e68a00'
+  - 
+    id: color-pink
+    title: Default pink
+    title.de: Standard Rosa
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ff9999'
+    default-dark: '#d18080'
+  - 
+    id: color-red
+    title: Default red
+    title.de: Standard Rot
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#e73737'
+    default-dark: '#b92b2b'
+  - 
+    id: color-purple
+    title: Default purple
+    title.de: Standard Purpur
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ae5cff'
+    default-dark: '#8e4cd1'
+  -
+    id: mer-diagram-boxes
+    title: Boxes
+    title.de: Felder
+    type: heading
+    level: 1
+    collapsed: true 
+  -
+    id: mer-req-box
+    title: Requirement box
+    title.de: Voraussetzungen Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#C5C5C5'
+    default-dark: '#7395B9'     
+  -
+    id: label-bg-col
+    title: Label box
+    title.de: Etiketten Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#C5C5C5'
+    default-dark: '#3a5b7f'  
+  -
+    id: mer-labl-box
+    title: Label Box
+    title.de: Etiketten-Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#d3d3d3'
+    default-dark: '#406285'
+  -
+    id: mer-attr-bx-o
+    title: Attribute box odd
+    title.de: Attribute ungleiche Felder
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#BABABA'
+    default-dark: '#696969'    
+  -
+    id: mer-attr-bx-e
+    title: Attribute box even
+    title.de: Attribute gleiche Felder
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#DFDFDF'
+    default-dark: '#708090'   
+  -
+    id: mer-rel-box
+    title: Relationship box
+    title.de: Verhältnisse Feld
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#fab247'
+    default-dark: '#98671e'   
+  -
+    id: mer-diagram-text
+    title: Text
+    title.de: Text
+    type: heading
+    level: 1
+    collapsed: true 
+  -
+    id: mer-text
+    title: Main text
+    title.de: Haupttext
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'
+  -
+    id: mer-req-title
+    title: Requirement Title
+    title.de: Voraussetzungen Titel
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
+  -
+    id: mer-label-txt
+    title: Label text
+    title.de: Etiketten Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
+  -
+    id: mer-task-text
+    title: Task text
+    title.de: Aufgabentext
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF' 
+  -
+    id: mer-task-text2
+    title: Task text 2
+    title.de: Aufgabentext 2
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF' 
+  -
+    id: mer-excl-range
+    title: Exclude range
+    title.de: Exclude range
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#708090'
+    default-dark: '#708090'     
+  -
+    id: mer-legd-txt
+    title: Legend Text
+    title.de: Legenden Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#676767'
+    default-dark: '#ffffff'
+  -
+    id: mer-loop-txt
+    title: Loop text
+    title.de: Kreislauf Text
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#808080'
+    default-dark: '#ffffff'     
+  -
+    id: mer-mer-div
+    title: Divider
+    title.de: Trennzeichen
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#000000'
+    default-dark: '#FFFFFF'     
   -
     id: mer-diagram-conn
     title: Connections
@@ -189,91 +381,13 @@ settings:
     opacity: false
     default-light: '#000000'
     default-dark: '#000000'     
-  -
-    id: mer-diagram-text
-    title: Text
-    title.de: Text
-    type: heading
-    level: 1
-    collapsed: true 
-  -
-    id: mer-task-text
-    title: Task text
-    title.de: Aufgabentext
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#8b0000'
-    default-dark: '#8b0000' 
-  -
-    id: mer-task-text2
-    title: Task text 2
-    title.de: Aufgabentext 2
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#000000'
-    default-dark: '#FFFFFF' 
-  -
-    id: mer-label-txt
-    title: Label text
-    title.de: Etiketten Text
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#000000'
-    default-dark: '#FFFFFF'     
-  -
-    id: mer-excl-range
-    title: Exclude range
-    title.de: Exclude range
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#708090'
-    default-dark: '#708090'     
-  -
-    id: mer-legd-txt
-    title: Legend Text
-    title.de: Legenden Text
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#676767'
-    default-dark: '#ffffff'
-  -
-    id: mer-loop-txt
-    title: Loop text
-    title.de: Kreislauf Text
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#808080'
-    default-dark: '#ffffff'     
-  -
-    id: mer-req-title
-    title: Requirement Title
-    title.de: Voraussetzungen Titel
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#000000'
-    default-dark: '#FFFFFF'     
-  -
-    id: mer-mer-div
-    title: Divider
-    title.de: Trennzeichen
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#000000'
-    default-dark: '#FFFFFF'     
 */
 
 
 body.theme-light {
   --text-normal: #433721;
-  --mer-rect-act: #add8e6;
+  --mer-text: #000000;
+  --mer-rect-1: #add8e6;
   --mer-rect-base: #d3d3d3;
   --mer-rect-2: #ADD8E6;
   --mer-poly-1: #9bb2c8;
@@ -294,6 +408,8 @@ body.theme-light {
   --mer-fork-jn: #708090;
   --mer-node-lbl: #000000;
 
+  --mer-rel-box: #fab247;
+  --label-bg-col: #C5C5C5;
   --mer-task-text: #8B0000;
   --mer-task-text2: #000000;
   --mer-label-txt: #000000;
@@ -302,11 +418,21 @@ body.theme-light {
   --mer-loop-txt: #808080;
   --mer-req-title: #000000;
   --mer-mer-div: #000000;
+
+  --color-blue: #6495ed;
+  --color-cyan: #64e5ff;
+  --color-green: #5bbe49;
+  --color-yellow: #ffc800;
+  --color-orange: #ff9900;
+  --color-pink: #ff9999;
+  --color-red: #e73737;
+  --color-purple: #ae5cff;
 }
 
 body.theme-dark {
   --text-normal: #f3f2e9;
-  --mer-rect-act: #add8e6;
+  --mer-text: #FFFFFF;
+  --mer-rect-1: #add8e6;
   --mer-rect-base: #696969;
   --mer-rect-2: #6EDBFF;
   --mer-poly-1: #6b789b;
@@ -316,8 +442,8 @@ body.theme-dark {
   --mer-clust-rect: #5656563B;
   --mer-rect-entity: #2c455f;
   --mer-clust-rect-2: #88867b33;
-  --mer-req-box: #2c455f;
-  --mer-labl-box: #858585;
+  --mer-req-box: #5D7FA1;
+  --mer-labl-box: #406285;
   --mer-stat-rect: #a3982b;
   --mer-rect-note: #88867bcc;
   --mer-attr-bx-o: #696969;
@@ -327,6 +453,8 @@ body.theme-dark {
   --mer-fork-jn: #708090;
   --mer-node-lbl: #000000;
 
+  --mer-rel-box: #98671e;
+  --label-bg-col: #3a5b7f;
   --mer-task-text: #8B0000;
   --mer-task-text2: #FFFFFF;
   --mer-label-txt: #000000;
@@ -335,6 +463,15 @@ body.theme-dark {
   --mer-loop-txt: #ffffff;
   --mer-req-title: #FFFFFF;
   --mer-mer-div: #FFFFFF;
+
+  --color-blue: #3b71d6;
+  --color-cyan: #55c1d6;
+  --color-green: #228b22;
+  --color-yellow: #dbac01;
+  --color-orange: #e68a00;
+  --color-pink: #d18080;
+  --color-red: #b92b2b;
+  --color-purple: #8e4cd1;
 }
 
 
@@ -343,12 +480,37 @@ body.theme-dark {
   filter: invert(1) !important;
 }
 
+.theme-dark .mermaid .lineWrapper line {
+  stroke: white !important;
+}
+
 .mermaid path.pieCircle {
   stroke: transparent !important;
 }
 
+.mermaid g .person-man {
+  filter: brightness(2.5);
+}
+
+/* C4Context */
+/* .theme-dark .mermaid g>rect:not(.section, .task, .quadrant, .quadrants, .basic, .branchLabelBkg, .actor, .fork-join, .entityBox) {
+  fill: rgba(255, 255, 255, 0.04) !important;
+} */
+
+.mermaid g>g>circle {
+  fill: var(--color-blue) !important;
+}
+
+.mermaid circle.face {
+  fill: yellow !important;
+}
+
 .mermaid .node path {
   fill: var(--mer-node-pt) !important;
+}
+
+.mermaid text {
+  fill: var(--mer-text) !important;
 }
 
 .mermaid text.pieTitleText {
@@ -369,6 +531,61 @@ body.theme-dark {
 
 .mermaid .legend text {
   fill: var(--mer-legd-txt) !important;
+}
+
+/* .theme-dark .mermaid text.legend, */
+.theme-dark .mermaid tspan.row,
+.theme-dark .mermaid tspan .node-bkg.node-undefined {
+  filter: invert(1);
+}
+
+.theme-dark .mermaid tspan.text-inner-tspan {
+  fill: black;
+}
+
+.mermaid g:is(.taskWrapper, .eventWrapper) text {
+  fill: black !important;
+}
+
+.mermaid .quadrant text {
+  fill: black !important;
+}
+
+.theme-dark .mermaid .quadrant rect {
+  filter: saturate(0) brightness(.6) !important;
+}
+
+.theme-light .mermaid .quadrant rect {
+  filter: saturate(0) brightness(.9) !important;
+}
+
+.theme-dark .mermaid g.border {
+  filter: invert(1);
+}
+
+.theme-light .mermaid g.border {
+  filter: brightness(0.5);
+}
+
+.theme-light .mermaid .person-man rect,
+.theme-light .mermaid .person-man path {
+  filter: brightness(2);
+}
+
+/* .theme-dark .mermaid tspan {
+  fill: black;
+} */
+
+.mermaid path#node-undefined>tspan {
+  fill: black !important;
+}
+
+.theme-dark .mermaid rect.req.reqBox {
+  fill: var(--mer-req-box) !important;
+}
+
+.mermaid rect .stroke-dasharray {
+  fill: rgba(0, 0, 0, 0.2) !important;
 }
 
 .mermaid rect.note {
@@ -465,8 +682,16 @@ body.theme-dark {
   fill: var(--mer-excl-range) !important;
 }
 
+.mermaid .label {
+  background: var(--label-bg-col) !important;
+}
+
 .mermaid .edgeLabel {
   color: var(--text-normal) !important;
+}
+
+.mermaid .task {
+  fill: var(--interactive-accent-rgb) !important;
 }
 
 .mermaid .taskText {
@@ -555,6 +780,10 @@ body.theme-dark {
     fill: rgba(150, 150, 150, 0.2) !important;
   }
 
+  .mermaid .person-man rect {
+    filter: brightness(2.4) saturate(0.4) !important;
+  }
+
   .mermaid path.pieCircle {
     stroke: transparent !important;
   }
@@ -566,6 +795,10 @@ body.theme-dark {
   .mermaid span.edgeLabel {
     background: white !important;
   }
+
+  /* .mermaid rect.section {
+    width: 100% !important;
+  } */
 }
 
 /* PLUGINS */
@@ -582,6 +815,10 @@ body.theme-dark {
 
 .theme-dark .mermaid-toolbar-elements-container path.er.relationshipLine {
   filter: contrast(0.2) brightness(3);
+}
+
+.mermaid rect.req.reqLabelBox {
+  fill: var(--mer-rel-box) !important;
 }
 
 /* text.messageText */
@@ -608,5 +845,5 @@ body.theme-dark {
 
 #mermaid-toolbar-element-UserJourneyDiagram-0 .label,
 #mermaid-toolbar-element-UserJourneyDiagram-1 .label {
-  color: black !important;
+  color: var(--text-normal) !important;
 }
