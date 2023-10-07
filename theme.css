@@ -231,6 +231,20 @@ settings:
     description.de: ignoriere leere Umbrüche
     type: class-toggle
   -
+    id: page-break
+    title: Pagebreak - pdf
+    description: applies to all horizontal lines
+    title.de: Seitenumbruch - pdf
+    description.de: aktiv auf alle horizontale linien 
+    type: class-toggle
+  -
+    id: hide-hr
+    title: Hide Hr Lines - pdf
+    description: applies to all horizontal lines
+    title.de: Verstecke Hr Linien - pdf
+    description.de: aktiv auf alle horizontale linien 
+    type: class-toggle
+  -
     id: custom-max-line-width
     title: Textbody - Line width
     description: first, activate "readable line width" in Preferences-Editor
@@ -1261,6 +1275,13 @@ settings:
     description: highlight active Line
     title.de: Aktive Zeile (Schreibmodus)
     description.de: Hervorhebung aktive Zeile
+    type: class-toggle
+  -
+    id: writer-mode
+    title: Writer mode (edit mode) 
+    description: fade inactive Lines
+    title.de: Schriftsteller Modus (Schreibmodus)
+    description.de: Verschleiere inaktive Zeilen
     type: class-toggle
   -
     id: show-prop
@@ -2916,6 +2937,10 @@ SYNTAX COL
     text-indent: var(--indent-l);
 }
 
+.writer-mode .cm-line:not(.cm-active.cm-line) {
+    filter: opacity(0.2);
+}
+
 .theme-light:is(.code-utils) .cm-active.cm-line {
     background: white;
     filter: brightness(1.1);
@@ -4446,7 +4471,7 @@ body:not(.footnote-g) .markdown-preview-section .footnotes {
     width: 340px;
     float: right;
     top: 12%;
-    right: -30em;
+    right: -24em;
 }
 
 body:not(.footnote-g) .markdown-preview-section .footnotes hr {
@@ -4594,7 +4619,7 @@ Buttons - Preferences
 }
 
 /* prefs window proportins */
-body:not(.is-phone) .modal {
+body:not(.is-phone) .modal:not(.svelte-qhdq3h) {
     max-width: 75%;
     max-height: 69%;
     margin-bottom: 10%;
@@ -7690,7 +7715,7 @@ body:not(.is-phone) .document-search button.document-search-button:nth-child(2):
 body:not(.is-phone) .document-search button.document-search-button:nth-child(3)::after,
 body:not(.is-phone) .document-replace button.document-search-button:first-child::after,
 body:not(.is-phone) .document-replace button.document-search-button:nth-child(2)::after {
-    margin-top: -24px;
+    margin-top: -20px;
 }
 
 .is-phone .document-search button.document-search-button:first-child::after {
@@ -9185,8 +9210,7 @@ PDF EXPORT
     code,
     blockquote,
     table,
-    pre,
-    hr {
+    pre {
         page-break-inside: avoid;
     }
 
@@ -9459,15 +9483,21 @@ PDF EXPORT
     h6 {
         font-weight: 600;
         page-break-after: avoid;
+        text-rendering: optimizeLegibility;
     }
 
-    div hr {
+    body:not(.page-break) hr {
         page-break-after: always !important;
+        /* visibility: hidden; */
     }
 
-    div[class^="wave"] hr,
-    div[class^="fade"] hr,
-    div[class="stars"] hr {
+    .hide-hr hr {
+        visibility: hidden;
+    }
+
+    body:not(.page-break) div[class^="fade"] hr,
+    body:not(.page-break) div[class^="wave"] hr,
+    body:not(.page-break) div[class="stars"] hr {
         page-break-inside: avoid;
     }
 
