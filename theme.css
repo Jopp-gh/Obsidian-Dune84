@@ -233,9 +233,9 @@ settings:
   -
     id: page-break
     title: Pagebreak - pdf
-    description: applies to all horizontal lines
+    description: restore standard HR
     title.de: Seitenumbruch - pdf
-    description.de: aktiv auf alle horizontale linien 
+    description.de: wiederherstellung Standard HR
     type: class-toggle
   -
     id: hide-hr
