@@ -94,8 +94,8 @@ settings:
     default-dark: '#7DA6C2'
   -
     id: mer-actor0
-    title: Circle
-    title.de: Kreis
+    title: Actor
+    title.de: Akteur
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -556,6 +556,14 @@ body.theme-dark {
 .theme-light .mermaid .person-man rect,
 .theme-light .mermaid .person-man path {
   filter: brightness(2);
+}
+
+.theme-light .mermaid g.actor-man {
+  filter: brightness(0.5);
+}
+
+.theme-dark .mermaid g.actor-man {
+  filter: brightness(4);
 }
 
 /* .theme-dark .mermaid tspan {
