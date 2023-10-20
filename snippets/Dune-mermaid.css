@@ -64,7 +64,7 @@ settings:
     format: rgb
     opacity: true
     default-light: '#88867b33'
-    default-dark: '#88867b33'        
+    default-dark: '#88867b33'   
   -
     id: mer-rect-note
     title: Rectangle Note
@@ -81,8 +81,8 @@ settings:
     type: variable-themed-color
     format: hex
     opacity: false
-    default-light: '#9bb2c8'
-    default-dark: '#6b789b' 
+    default-light: '#7ba8d2'
+    default-dark: '#667ab1' 
   -
     id: mer-circle-1
     title: Circle
@@ -91,7 +91,16 @@ settings:
     format: rgb
     opacity: true
     default-light: '#B1CEE4'
-    default-dark: '#7DA6C2'     
+    default-dark: '#7DA6C2'
+  -
+    id: mer-actor0
+    title: Circle
+    title.de: Kreis
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ff4c4c'
+    default-dark: '#ff4c4c' 
   -
     id: mer-poly-start
     title: Start point
@@ -133,8 +142,8 @@ settings:
     type: variable-themed-color
     format: rgb
     opacity: true
-    default-light: '#6495ed'
-    default-dark: '#3b71d6'
+    default-light: '#7fadff'
+    default-dark: '#678ed3'
   - 
     id: color-cyan
     title: Default cyan
@@ -207,17 +216,17 @@ settings:
     collapsed: true 
   -
     id: mer-req-box
-    title: Requirement box
-    title.de: Voraussetzungen Feld
+    title: Requirements
+    title.de: Voraussetzungen
     type: variable-themed-color
     format: hex
     opacity: false
     default-light: '#C5C5C5'
-    default-dark: '#7395B9'     
+    default-dark: '#7395B9'
   -
     id: label-bg-col
-    title: Label box
-    title.de: Etiketten Feld
+    title: Labels
+    title.de: Etiketten
     type: variable-themed-color
     format: hex
     opacity: false
@@ -225,8 +234,8 @@ settings:
     default-dark: '#3a5b7f'  
   -
     id: mer-labl-box
-    title: Label Box
-    title.de: Etiketten-Feld
+    title: Labels 2
+    title.de: Etiketten 2
     type: variable-themed-color
     format: hex
     opacity: false
@@ -234,16 +243,16 @@ settings:
     default-dark: '#406285'
   -
     id: mer-attr-bx-o
-    title: Attribute box odd
+    title: Attributes odd
     title.de: Attribute ungleiche Felder
     type: variable-themed-color
     format: hex
     opacity: false
     default-light: '#BABABA'
-    default-dark: '#696969'    
+    default-dark: '#656f85'    
   -
     id: mer-attr-bx-e
-    title: Attribute box even
+    title: Attributes even
     title.de: Attribute gleiche Felder
     type: variable-themed-color
     format: hex
@@ -252,8 +261,8 @@ settings:
     default-dark: '#708090'   
   -
     id: mer-rel-box
-    title: Relationship box
-    title.de: Verhältnisse Feld
+    title: Relationships
+    title.de: Verhältnisse
     type: variable-themed-color
     format: hex
     opacity: false
@@ -283,7 +292,7 @@ settings:
     format: hex
     opacity: false
     default-light: '#000000'
-    default-dark: '#FFFFFF'     
+    default-dark: '#FFFFFF'
   -
     id: mer-label-txt
     title: Label text
@@ -292,7 +301,7 @@ settings:
     format: hex
     opacity: false
     default-light: '#000000'
-    default-dark: '#FFFFFF'     
+    default-dark: '#FFFFFF'
   -
     id: mer-task-text
     title: Task text
@@ -314,12 +323,12 @@ settings:
   -
     id: mer-excl-range
     title: Exclude range
-    title.de: Exclude range
+    title.de: Bereichsbegrenzung
     type: variable-themed-color
     format: hex
     opacity: false
     default-light: '#708090'
-    default-dark: '#708090'     
+    default-dark: '#708090'
   -
     id: mer-legd-txt
     title: Legend Text
@@ -336,8 +345,8 @@ settings:
     type: variable-themed-color
     format: hex
     opacity: false
-    default-light: '#808080'
-    default-dark: '#ffffff'     
+    default-light: '#b1361b'
+    default-dark: '#b1361b'
   -
     id: mer-mer-div
     title: Divider
@@ -346,7 +355,7 @@ settings:
     format: hex
     opacity: false
     default-light: '#000000'
-    default-dark: '#FFFFFF'     
+    default-dark: '#FFFFFF'
   -
     id: mer-diagram-conn
     title: Connections
@@ -370,8 +379,8 @@ settings:
     type: variable-themed-color
     format: hex
     opacity: false
-    default-light: '#708090'
-    default-dark: '#708090'     
+    default-light: '#8DBEEF'
+    default-dark: '#8DBEEF'
   -
     id: mer-node-lbl
     title: Node Label
@@ -380,7 +389,7 @@ settings:
     format: hex
     opacity: false
     default-light: '#000000'
-    default-dark: '#000000'     
+    default-dark: '#000000'
 */
 
 
@@ -390,7 +399,7 @@ body.theme-light {
   --mer-rect-1: #add8e6;
   --mer-rect-base: #d3d3d3;
   --mer-rect-2: #ADD8E6;
-  --mer-poly-1: #9bb2c8;
+  --mer-poly-1: #7ba8d2;
   --mer-poly-start: #6495ed;
   --mer-poly-end: #ff0000;
   --mer-circle-1: #B1CEE4;
@@ -398,14 +407,14 @@ body.theme-light {
   --mer-rect-entity: #C8DFF7;
   --mer-clust-rect-2: #88867b33;
   --mer-req-box: #C5C5C5;
-  --mer-labl-box: #d3d3d3;
+  --mer-labl-box: #dedede;
   --mer-stat-rect: #E2D872;
   --mer-rect-note: #d3d3d3;
   --mer-attr-bx-o: #BABABA;
   --mer-attr-bx-e: #DFDFDF;
 
   --mer-node-pt: #d3d3d3;
-  --mer-fork-jn: #708090;
+  --mer-fork-jn: #8DBEEF;
   --mer-node-lbl: #000000;
 
   --mer-rel-box: #fab247;
@@ -415,11 +424,12 @@ body.theme-light {
   --mer-label-txt: #000000;
   --mer-excl-range: #708090;
   --mer-legd-txt: #676767;
-  --mer-loop-txt: #808080;
+  --mer-loop-txt: #b1361b;
   --mer-req-title: #000000;
   --mer-mer-div: #000000;
+  --mer-actor0: #ff4c4c;
 
-  --color-blue: #6495ed;
+  --color-blue: #7fadff;
   --color-cyan: #64e5ff;
   --color-green: #5bbe49;
   --color-yellow: #ffc800;
@@ -427,6 +437,8 @@ body.theme-light {
   --color-pink: #ff9999;
   --color-red: #e73737;
   --color-purple: #ae5cff;
+
+  --persons-bg: rgba(0, 0, 0, 0.04)
 }
 
 body.theme-dark {
@@ -435,7 +447,7 @@ body.theme-dark {
   --mer-rect-1: #add8e6;
   --mer-rect-base: #696969;
   --mer-rect-2: #6EDBFF;
-  --mer-poly-1: #6b789b;
+  --mer-poly-1: #667ab1;
   --mer-poly-start: #6495ed;
   --mer-poly-end: #ff0000;
   --mer-circle-1: #7DA6C2;
@@ -444,13 +456,13 @@ body.theme-dark {
   --mer-clust-rect-2: #88867b33;
   --mer-req-box: #5D7FA1;
   --mer-labl-box: #406285;
-  --mer-stat-rect: #a3982b;
+  --mer-stat-rect: #d0c12f;
   --mer-rect-note: #88867bcc;
-  --mer-attr-bx-o: #696969;
+  --mer-attr-bx-o: #656f85;
   --mer-attr-bx-e: #708090;
 
   --mer-node-pt: #708090;
-  --mer-fork-jn: #708090;
+  --mer-fork-jn: #8DBEEF;
   --mer-node-lbl: #000000;
 
   --mer-rel-box: #98671e;
@@ -460,11 +472,12 @@ body.theme-dark {
   --mer-label-txt: #000000;
   --mer-excl-range: #708090;
   --mer-legd-txt: #ffffff;
-  --mer-loop-txt: #ffffff;
+  --mer-loop-txt: #b1361b;
   --mer-req-title: #FFFFFF;
   --mer-mer-div: #FFFFFF;
+  --mer-actor0: #ff4c4c;
 
-  --color-blue: #3b71d6;
+  --color-blue: #678ed3;
   --color-cyan: #55c1d6;
   --color-green: #228b22;
   --color-yellow: #dbac01;
@@ -472,16 +485,14 @@ body.theme-dark {
   --color-pink: #d18080;
   --color-red: #b92b2b;
   --color-purple: #8e4cd1;
+
+  --persons-bg: rgba(255, 255, 255, 0.04);
 }
 
 
 /* Mermaid theme */
 .mermaid line.loopLine {
   filter: invert(1) !important;
-}
-
-.theme-dark .mermaid .lineWrapper line {
-  stroke: white !important;
 }
 
 .mermaid path.pieCircle {
@@ -492,24 +503,15 @@ body.theme-dark {
   filter: brightness(2.5);
 }
 
-/* C4Context */
-/* .theme-dark .mermaid g>rect:not(.section, .task, .quadrant, .quadrants, .basic, .branchLabelBkg, .actor, .fork-join, .entityBox) {
-  fill: rgba(255, 255, 255, 0.04) !important;
-} */
-
 .mermaid g>g>circle {
   fill: var(--color-blue) !important;
-}
-
-.mermaid circle.face {
-  fill: yellow !important;
 }
 
 .mermaid .node path {
   fill: var(--mer-node-pt) !important;
 }
 
-.mermaid text {
+.mermaid text :not(.tag-label, tspan) {
   fill: var(--mer-text) !important;
 }
 
@@ -525,10 +527,6 @@ body.theme-dark {
   fill: var(--mer-task-text2) !important;
 }
 
-.mermaid text.sequenceNumber {
-  stroke: black;
-}
-
 .mermaid .legend text {
   fill: var(--mer-legd-txt) !important;
 }
@@ -537,18 +535,6 @@ body.theme-dark {
 .theme-dark .mermaid tspan.row,
 .theme-dark .mermaid tspan .node-bkg.node-undefined {
   filter: invert(1);
-}
-
-.theme-dark .mermaid tspan.text-inner-tspan {
-  fill: black;
-}
-
-.mermaid g:is(.taskWrapper, .eventWrapper) text {
-  fill: black !important;
-}
-
-.mermaid .quadrant text {
-  fill: black !important;
 }
 
 .theme-dark .mermaid .quadrant rect {
@@ -576,16 +562,8 @@ body.theme-dark {
   fill: black;
 } */
 
-.mermaid path#node-undefined>tspan {
-  fill: black !important;
-}
-
 .theme-dark .mermaid rect.req.reqBox {
   fill: var(--mer-req-box) !important;
-}
-
-.mermaid rect .stroke-dasharray {
-  fill: rgba(0, 0, 0, 0.2) !important;
 }
 
 .mermaid rect.note {
@@ -690,10 +668,6 @@ body.theme-dark {
   color: var(--text-normal) !important;
 }
 
-.mermaid .task {
-  fill: var(--interactive-accent-rgb) !important;
-}
-
 .mermaid .taskText {
   fill: var(--mer-task-text) !important;
 }
@@ -715,29 +689,25 @@ body.theme-dark {
   border-radius: 4px;
 }
 
-.theme-dark .mermaid .slice {
-  fill: black !important;
-  text-shadow: 0 0 white !important;
-}
-
 .theme-light .mermaid .relation {
   filter: contrast(0.9) brightness(0.1);
 }
 
 .theme-dark .mermaid .relation {
-  filter: contrast(0.2) brightness(0.4) !important;
+  filter: contrast(0.2) brightness(0.1) !important;
 }
 
 .theme-dark .mermaid .messageLine0,
 .theme-dark .mermaid .messageLine1 {
-  filter: contrast(0.2) brightness(1.4) !important;
+  filter: contrast(0.2) brightness(1.8) !important;
 }
 
 .theme-dark .mermaid .edgePaths {
   filter: invert(1) !important;
 }
 
-.theme-dark .mermaid polygon .theme-dark .mermaid circle,
+.theme-dark .mermaid polygon,
+.theme-dark .mermaid circle,
 .theme-dark .mermaid .node rect,
 .theme-dark .mermaid rect.basic.label-container {
   filter: brightness(0.8);
@@ -752,7 +722,70 @@ body.theme-dark {
   filter: contrast(0.2) brightness(1.4) !important;
 }
 
-/* Pdf */
+.mermaid circle:is(.actor-0, .actor-1, .actor-2, .actor-3) {
+  fill: var(--mer-actor0) !important;
+}
+
+.mermaid circle.actor-1 {
+  filter: hue-rotate(-70deg) !important;
+}
+
+.mermaid circle.actor-2 {
+  filter: hue-rotate(-140deg) !important;
+}
+
+.mermaid circle.actor-3 {
+  filter: hue-rotate(-210deg) !important;
+}
+
+/* C4Context */
+/* .mermaid rect:not(.note, .section, .task, .basic, .branchLabelBkg, .actor, .fork-join, .entityBox, .commit-label, .commit-label-bkg, .quadrant rect, .person-man rect, .node rect, .activation0, .activation1, .activation2, .attributeBoxOdd, .attributeBoxEven, .relationshipLabel, .legend rect, .reqLabelBox) {
+  fill: var(--persons-bg);
+} */
+
+/* fixed colors */
+/* gantt */
+.theme-dark .mermaid rect:is(.done0, .done1, .done2, .done3) {
+  fill: #8d8d8d !important;
+}
+
+.mermaid circle.face {
+  fill: yellow !important;
+}
+
+.mermaid path#node-undefined>tspan {
+  fill: var(--mer-node-lbl) !important;
+}
+
+.theme-dark .mermaid .lineWrapper line {
+  stroke: white !important;
+}
+
+.theme-dark .mermaid .slice {
+  fill: var(--mer-node-lbl) !important;
+  text-shadow: 0 0 white !important;
+}
+
+.theme-dark .mermaid tspan.text-inner-tspan {
+  fill: var(--mer-node-lbl);
+}
+
+.mermaid g:is(.taskWrapper, .eventWrapper) text {
+  fill: var(--mer-node-lbl) !important;
+}
+
+.mermaid .quadrant text {
+  fill: var(--mer-node-lbl) !important;
+}
+
+.mermaid text.sequenceNumber {
+  stroke: var(--mer-node-lbl);
+}
+
+
+/* 
+Pdf 
+*/
 @media print {
 
   .mermaid .edgeLabel {
@@ -795,55 +828,4 @@ body.theme-dark {
   .mermaid span.edgeLabel {
     background: white !important;
   }
-
-  /* .mermaid rect.section {
-    width: 100% !important;
-  } */
-}
-
-/* PLUGINS */
-/* mermaid tools */
-.theme-dark .mermaid-toolbar-elements-container {
-  background: rgb(255 255 255 / 20%);
-  border-radius: 4px;
-  filter: saturate(1);
-}
-
-.theme-dark .mermaid-toolbar-elements-container :is(rect.outer, rect.inner, .cluster rect, .statediagram-state rect.divider) {
-  fill: rgb(255 255 255 / 10%) !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container path.er.relationshipLine {
-  filter: contrast(0.2) brightness(3);
-}
-
-.mermaid rect.req.reqLabelBox {
-  fill: var(--mer-rel-box) !important;
-}
-
-/* text.messageText */
-.theme-dark .mermaid-toolbar-elements-container :is(text.slice, text.tag-label, tspan.row) {
-  filter: invert(1) drop-shadow(2px 4px 6px gray);
-}
-
-/* arrows, lines */
-.theme-dark .mermaid-toolbar-elements-container :is(.relation, .edge-pattern-solid, line) {
-  filter: contrast(0.1) invert(1) brightness(2.5);
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxOdd {
-  fill: gray !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.er.attributeBoxEven {
-  fill: black !important;
-}
-
-.theme-dark .mermaid-toolbar-elements-container rect.req.reqBox {
-  fill: var(--background-primary-alt) !important;
-}
-
-#mermaid-toolbar-element-UserJourneyDiagram-0 .label,
-#mermaid-toolbar-element-UserJourneyDiagram-1 .label {
-  color: var(--text-normal) !important;
 }
