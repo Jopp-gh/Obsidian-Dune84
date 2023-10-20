@@ -782,6 +782,13 @@ body.theme-dark {
   stroke: var(--mer-node-lbl);
 }
 
+.mermaid text.tag-label {
+  fill: var(--mer-node-lbl) !important;
+}
+
+.mermaid .gitTitleText {
+  transform: translateY(-10px);
+}
 
 /* 
 Pdf 
