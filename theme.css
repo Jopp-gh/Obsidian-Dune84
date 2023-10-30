@@ -265,6 +265,9 @@ settings:
         - 
             label: "•"
             value: pdf-counter-2
+        - 
+            label: ↓
+            value: pdf-counter-3
         -
             label: ↑
             value: pdf-counter-4
@@ -586,10 +589,10 @@ settings:
     type: class-toggle
   -
     id: show-gifs
-    title: Gif animation 
+    title: Gif Pictures 
     description: zoom and animate gifs (Performance option)
     title.de: Gif Bilder
-    description.de: Vergrößere und animierte gif Bilder (senkt Leistung)
+    description.de: Vergrößere und animiere gifs (senkt Leistung)
     type: class-toggle
   -
     id: deco-scale
@@ -609,6 +612,13 @@ settings:
     description.de: arrangiere Bilder - vertikal und horizontal
     type: heading
     level: 2
+    collapsed: true
+  -
+    id: banner-opt
+    title: Banners
+    title.de: Banner
+    type: heading
+    level: 3
     collapsed: true
   -
     id: banner-ah
@@ -9705,9 +9715,13 @@ PDF EXPORT
     }
 
     .pdf-counter-2 hr,
-    .pdf-counter-3 hr,
     .pdf-counter-4 hr {
         page-break-before: always;
+    }
+
+    /* btm  */
+    .pdf-counter-3 hr {
+        page-break-after: always;
     }
 
     body:is(.pdf-counter-3, .pdf-counter-4) hr::after {
@@ -9720,14 +9734,14 @@ PDF EXPORT
         visibility: visible;
     }
 
-    /* btm 
-  .pdf-counter-3 hr::after {
-    align-content: flex-end;
-    position: absolute;
-    left: 45%;
-    top: 20%;
-  }
-*/
+    /* btm  */
+    .pdf-counter-3 hr::after {
+        position: fixed;
+        left: 45%;
+        bottom: 2%;
+        background-color: white;
+    }
+
 
     /* top  */
     .pdf-counter-4 hr::after {
