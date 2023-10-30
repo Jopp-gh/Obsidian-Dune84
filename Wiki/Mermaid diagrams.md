@@ -1,8 +1,8 @@
 ## Mermaid diagrams
 
-Dune covers most, if not all mermaid diagram types for both dark / light theme.
+Dune covers proportions and scaling of mermaid diagrams only, if you want to change Mermaids colors, you need to download this companion snippet: [Dune-mermaid.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css). 
 
-If some diagram type is missing, then please let me know.
+Dune should cover most, if not all mermaid diagram types for both dark / light theme - if you notice missing diagrams or hard to read strings, then please let me know and send me a report, just click the tab **Issues** on top, thanks.
 
 ![Dune-mermaid](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/623b573a-1811-45b9-aaed-c43de4a82e69)
 
