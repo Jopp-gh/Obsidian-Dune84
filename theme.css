@@ -204,6 +204,18 @@ settings:
     type: heading
     level: 3
     collapsed: true
+  -
+    id: custom-max-line-width
+    title: Textbody - Line width
+    description: first, activate "readable line width" in Preferences-Editor
+    title.de: Textkörper - Notizbreite
+    description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
+    type: variable-number-slider
+    format: px
+    default: 700
+    min: 500
+    max: 1400
+    step: 50
   - 
     id: indent-l
     title: Indent tabs
@@ -231,13 +243,6 @@ settings:
     description.de: ignoriere leere Umbrüche
     type: class-toggle
   -
-    id: page-break
-    title: Pagebreak - pdf
-    description: restore standard HR
-    title.de: Seitenumbruch - pdf
-    description.de: wiederherstellung Standard HR
-    type: class-toggle
-  -
     id: hide-hr
     title: Hide Hr Lines - pdf
     description: applies to all horizontal lines
@@ -245,17 +250,24 @@ settings:
     description.de: aktiv auf alle horizontale linien 
     type: class-toggle
   -
-    id: custom-max-line-width
-    title: Textbody - Line width
-    description: first, activate "readable line width" in Preferences-Editor
-    title.de: Textkörper - Notizbreite
-    description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
-    type: variable-number-slider
-    format: px
-    default: 700
-    min: 500
-    max: 1400
-    step: 50
+    id: add-pdf-pages
+    title: "Page counter"
+    description: '-  default no counter,  •  break-after, without counter,  ↓  counter on bottom,  ↑  counter on top'
+    title.de: "Seitenzähler"
+    description.de:  '-  Standard, kein Zähler,  •  Umbruch Unten, ohne Zähler,  ↓  Zähler Unten,  ↑  Zähler Oben'
+    type: class-select
+    allowEmpty: false
+    default: pdf-counter-2
+    options:
+        - 
+            label: "-"
+            value: pdf-counter-1
+        - 
+            label: "•"
+            value: pdf-counter-2
+        -
+            label: ↑
+            value: pdf-counter-4
   -  
     id: header-space
     title: Headers
@@ -1237,6 +1249,13 @@ settings:
     description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
   -
+    id: slim-bars
+    title: Slim bars
+    description: restore default bar height
+    title.de: Schmale Leisten
+    description.de: Wiederherstellung normale Leisten
+    type: class-toggle
+  -
     id: fade-op-b
     title: Text body
     title.de: Textkörper
@@ -1731,7 +1750,7 @@ Vault loading
 }
 
 .progress-bar {
-    background: linear-gradient(360deg, #dcaa8b, #cb3333, var(--text-accent-special));
+    background: linear-gradient(360deg, darkred, #cb3333, rgb(57, 0, 88));
     background-size: 200% 200%;
     animation: gradient-slow 8s ease infinite;
 }
@@ -1925,14 +1944,30 @@ NAVI BAR
     font-weight: bold;
 }
 
+
+.workspace .mod-root:not(.workspace-tabs.mod-stacked).workspace-tab-header .workspace-tab-header-inner-close-button,
 .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
-    display: none;
+    width: 0;
+    visibility: hidden;
 }
 
 .workspace .mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button,
 .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
     color: var(--text-accent-special);
+    visibility: visible;
+    width: auto;
 }
+
+/* stacked */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-close-button {
+    opacity: 0;
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-close-button:hover {
+    opacity: 1;
+    color: var(--text-accent-special);
+}
+
 
 .workspace-ribbon {
     border-right: none;
@@ -2373,13 +2408,33 @@ body:not(.show-prop) .metadata-container,
     margin-bottom: -40px;
 }
 
+.is-phone .metadata-property-value {
+    min-height: 32px;
+    overflow: auto;
+}
+
+.is-phone .metadata-property-value {
+    border-bottom: none;
+}
+
+.is-phone .metadata-property-value ::-webkit-scrollbar {
+    width: 0;
+}
+
+.is-phone .metadata-property-key {
+    border-bottom: 0;
+}
+
 .metadata-property-value .multi-select-input {
     text-align: start;
 }
 
 .metadata-property[data-property-key="tags"] .metadata-property-value .multi-select-input {
-    top: 2px;
     position: relative;
+}
+
+.is-phone .metadata-property-value .multi-select-input {
+    display: contents;
 }
 
 .metadata-properties-title {
@@ -2477,6 +2532,12 @@ input.metadata-property-key-input {
 
 .multi-select-pill-content:hover {
     color: var(--text-accent-special);
+}
+
+.metadata-property .multi-select-container {
+    white-space: nowrap;
+    display: contents;
+    overflow: auto;
 }
 
 /*----------------------------------------------------------------
@@ -3193,6 +3254,11 @@ sub {
     border-radius: 4px;
 }
 
+.markdown-rendered blockquote> :first-child,
+.markdown-rendered blockquote> :last-child {
+    padding-bottom: 4px;
+}
+
 .theme-dark .cm-s-obsidian span.cm-quote {
     background-color: #7e756646;
 }
@@ -3206,8 +3272,7 @@ body:is(.is-phone) blockquote p {
     padding-right: 8px;
 }
 
-.cm-comment,
-.cm-hmd-codeblock {
+.cm-comment {
     filter: contrast(0.4) saturate(0);
 }
 
@@ -3753,6 +3818,7 @@ CALLOUT
 
 body {
     --callout-min-width: 200px;
+    --callout-nowrap-min-width: 200px;
     --callout-gap: 0.5rem;
     --callout-margin: 4px;
     --list-min-width: 200px;
@@ -4130,6 +4196,7 @@ code.language-memo-col.is-loaded {
 code.language-fnote.is-loaded {
     width: fit-content;
     font-style: italic;
+    font-size: small !important;
     color: var(--text-normal);
 }
 
@@ -4164,9 +4231,7 @@ code.language-memo-b.is-loaded,
 .app-container pre.language-memo-m,
 code.language-memo-m.is-loaded,
 .app-container pre.language-memo-col,
-code.language-memo-col.is-loaded,
-.app-container pre.language-fnote,
-code.language-fnote.is-loaded {
+code.language-memo-col.is-loaded {
     max-width: 340px;
     min-width: var(--min-boxwidth);
 }
@@ -4529,7 +4594,7 @@ Buttons - Preferences
 
 /* breaks full-length urls */
 .is-phone a {
-    word-break: break-all
+    word-break: break-word;
 }
 
 .community-modal-info ul>li.task-list-item .task-list-item-checkbox {
@@ -4713,6 +4778,14 @@ body:not(.is-phone) .style-settings-collapse-indicator {
 }
 
 /* NAVBAR - simple */
+.view-action:nth-last-child(2) svg:is(.lucide-book-open) {
+    border: 1px dashed;
+}
+
+.view-action:nth-child(1) svg:is(.lucide-bookmark) {
+    fill: transparent;
+}
+
 .is-phone .mobile-navbar-actions .clickable-icon svg.svg-icon.lucide-plus-circle,
 .is-phone button.view-action.clickable-icon.mod-left-split-toggle.mod-tappable {
     width: 0;
@@ -6030,6 +6103,9 @@ img[alt="banner-b"] {
     height: 150px;
     object-fit: cover;
     border-radius: 0;
+    left: 10px;
+    right: -10px;
+    scale: 1.06;
 }
 
 .is-phone img[alt='banner-b'] {
@@ -6037,6 +6113,9 @@ img[alt="banner-b"] {
     height: 150px;
     object-fit: cover;
     border-radius: 0;
+    left: 10px;
+    right: -10px;
+    scale: 1.06;
 }
 
 body:is(.is-phone) .banner-a .markdown-preview-section {
@@ -6190,25 +6269,25 @@ img[alt~="frame-d"] {
     border-image-slice: var(--bslice-d);
 }
 
-.is-phone [alt~="frame-a"] {
+.is-phone [alt~="frame-a"] img {
     width: 40vw;
     border: calc(var(--bwidth-a) / 2) solid;
     margin: 0;
 }
 
-.is-phone [alt~="frame-b"] {
+.is-phone [alt~="frame-b"] img {
     width: 40vw;
     border: calc(var(--bwidth-b) / 2) solid;
     margin: 0;
 }
 
-.is-phone [alt~="frame-c"] {
+.is-phone [alt~="frame-c"] img {
     width: 40vw;
     border: calc(var(--bwidth-c) / 2) solid;
     margin: 0;
 }
 
-.is-phone [alt~="frame-d"] {
+.is-phone [alt~="frame-d"] img {
     width: 40vw;
     border: calc(var(--bwidth-d) / 2) solid;
     margin: 0;
@@ -6258,6 +6337,11 @@ img[alt~="frame-d"] {
     padding: 0 4px;
 }
 
+/* tmp solution */
+.is-phone .markdown-source-view .image-embed[src*="#cap"]::after {
+    visibility: hidden;
+}
+
 /* draw label around image capture */
 .theme-light .image-embed[src*="#cap"]::after {
     border: 1px solid black;
@@ -6275,6 +6359,16 @@ img[alt~="frame-d"] {
 /* nice gallery-view */
 .markdown-preview-view .image-embed[src*="#cap"] {
     display: inline-block;
+}
+
+.markdown-source-view .image-embed[src*="#cap"]::after {
+    display: inline-block;
+    transform: translate(-130px, 20px);
+    margin-bottom: 2em;
+    width: 10%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: clip;
 }
 
 .callout h1,
@@ -7077,6 +7171,7 @@ body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .si
 body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right:hover,
 body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-left:hover {
     opacity: 1;
+    border-bottom: inherit;
 }
 
 /* places navbar */
@@ -7099,6 +7194,18 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:h
     opacity: 1;
     /* padding-left: inherit; */
     padding-left: 2.8em;
+}
+
+body:not(.slim-bars) .workspace-tab-header-container,
+body:not(.slim-bars) .workspace-ribbon.mod-left,
+body:not(.slim-bars) .workspace-ribbon.mod-left:before {
+    height: 32px;
+}
+
+body:not(.slim-bars) .sidebar-toggle-button,
+body:not(.slim-bars) .sidebar-toggle-button:hover {
+    padding: 0 auto;
+    height: 32px;
 }
 
 /* dim tabs */
@@ -9017,7 +9124,8 @@ body:not(.recipes) .theme-dark ol {
     background: rgb(126 117 102 / 30%);
 }
 
-body:not(.show-ls-marker) ol li::marker {
+body:not(.show-ls-marker) ol li::marker,
+body:not(.show-ls-marker) :is(.is-phone) ol li::marker {
     list-style-type: decimal;
     content: counter(list-item) ") ";
     display: list-item;
@@ -9231,6 +9339,12 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
+
+    a.internal-link {
+        text-decoration: none !important;
+    }
+
+
     .table-y thead tr>th,
     .table-xy thead tr>th,
     .table-xy tbody tr>td:first-child {
@@ -9389,6 +9503,10 @@ PDF EXPORT
         min-width: var(--min-boxwidth);
     }
 
+    .is-phone .image-embed[src*="#cap"]::after {
+        min-width: calc(var(--min-boxwidth) + 2em);
+    }
+
     a[href="#initiale"]+mark,
     a[href="#raisecap"]+mark,
     a[href="#initiale-t"]+mark,
@@ -9486,18 +9604,17 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
-    body:not(.page-break) hr {
+    /* body:not(.page-break) hr {
         page-break-after: always !important;
-        /* visibility: hidden; */
-    }
+    } */
 
     .hide-hr hr {
         visibility: hidden;
     }
 
-    body:not(.page-break) div[class^="fade"] hr,
-    body:not(.page-break) div[class^="wave"] hr,
-    body:not(.page-break) div[class="stars"] hr {
+    div[class^="fade"] hr,
+    div[class^="wave"] hr,
+    div[class="stars"] hr {
         page-break-inside: avoid;
     }
 
@@ -9575,15 +9692,46 @@ PDF EXPORT
         color: white !important;
     }
 
-    @page {
-        counter-increment: page !important;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 12pt;
-        padding-bottom: 3em;
+
+    /* 
+1= standard
+2= no counter + pagebreak
+3= btm counter + pagebreak
+4= top counter + pagebreak
+*/
+
+    body {
+        counter-reset: page;
     }
 
-    #pageNumber {
+    .pdf-counter-2 hr,
+    .pdf-counter-3 hr,
+    .pdf-counter-4 hr {
+        page-break-before: always;
+    }
+
+    body:is(.pdf-counter-3, .pdf-counter-4) hr::after {
+        counter-increment: page;
         content: counter(page);
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        color: gray;
+        visibility: visible;
+    }
+
+    /* btm 
+  .pdf-counter-3 hr::after {
+    align-content: flex-end;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+  }
+*/
+
+    /* top  */
+    .pdf-counter-4 hr::after {
+        position: relative;
     }
 
     ::-webkit-scrollbar {
@@ -9905,7 +10053,16 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
     background-color: dodgerblue;
 }
 
+* dice roller */
 
+/* dice roller */
+.dice-roller.no-icon {
+    display: contents;
+}
+
+.dice-roller.has-embed .internal-embed {
+    padding: 0;
+}
 
 /*----------------------------------------------------------------
  Hide text
