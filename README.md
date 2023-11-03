@@ -20,10 +20,11 @@ My **goal** with this theme was to improve Obsidian by removing some distraction
 
 ### Motivation
 I am very pleased with the features added to **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian.
-Also, I hope to pay my lunch for sharing good content with you :)
-Please support me and see the [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy, if people could share some little appreciation for the work I have done. Thanks for your attention.
 
-Finally, I released this theme in the hope to make new friends. Private massage me  (`Jopp`) on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) to talk about Obsidian and our knowledge fields. If you need support related to pkm, or creative activities as well as programming or architecture, then let's have a talk. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
+Also, I hope to pay my lunch for sharing good content with you :)
+Please support me and see  [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy, if people could share some little appreciation for the work I have done. Thanks for your attention! 
+
+Finally, I released this theme in the hope to make new friends. Private massage me  `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) to talk about Obsidian and our knowledge fields. If you need support related to pkm, or creative activities as well as programming or architecture, then let's have a talk. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
 
 ```
 - #architecture,
@@ -84,7 +85,6 @@ of Dune.
 - cMenu
 - Full Calendar
 - mySnippets
-- Mermaid Tools
 
 <br>
 
@@ -130,9 +130,9 @@ Support me, if you like what you get  :)
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
 <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me Another Beer" height="41" width="174"></a>
 
-Plugin authors, theme designers and developers in general put not just their skills at your service, a lot of time but also love to design and in a second step, to implement their ideas as working code parameters. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
+Plugin authors, theme designers and developers put not just skills and a lot of their time at your service because we want to add value to this interconnected world. We also put a lot of love to design and in a second step, to implement our and your ideas and feedbacks as working code parameters. The bigger code projects grow, the harder this code maintenace becomes, because of the sheer amount of commands which need to work together as a whole. 
 
-With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver these quality standards. Likewise in a household, no matter how often you cook or clean, after your work is done all your effort is tagged as a matter of fact, a responsibility of somebody, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
+With every new update quality standards raise, this status quickly becomes a "new normality" and only autors know how much happened behind the scenes to deliver high quality standards. Likewise in a household, no matter how often you cook or clean, after you're done, all your effort is tagged as a matter of fact, a responsibility of somebody else, for which "the others" don't need to care. Let's make this world a better place and start to support consciously benefactors to become in turn, benefactors ourselves. 
 
 <br>
 
