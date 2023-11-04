@@ -212,9 +212,9 @@ settings:
     description.de: aktiviere zuerst "lesbare Zeilenlänge" in Einstellungen-Editor
     type: variable-number-slider
     format: px
-    default: 700
+    default: 750
     min: 500
-    max: 1400
+    max: 1150
     step: 50
   - 
     id: indent-l
@@ -271,6 +271,16 @@ settings:
         -
             label: ↑
             value: pdf-counter-4
+  -  
+    id: max-width-tabs
+    title: Tabs - width
+    title.de: Reiter - Breite
+    type: variable-number-slider
+    format: px
+    default: 120
+    min: 60
+    max: 200
+    step: 20
   -  
     id: header-space
     title: Headers
@@ -1266,6 +1276,13 @@ settings:
     description.de: Wiederherstellung normale Leisten
     type: class-toggle
   -
+    id: grid-mobile-tb
+    title: Grid toolbar (phone)
+    description: restore default toolbar
+    title.de: Raster Werkzeugleiste (Tel)
+    description.de: Wiederherstellung normale Werkzeugleiste
+    type: class-toggle
+  -
     id: fade-op-b
     title: Text body
     title.de: Textkörper
@@ -1473,7 +1490,7 @@ body {
     --banner-bh: 240px;
     --pictwall-height: 200px;
     --pictwall-width: 1400px;
-
+    --max-width-tabs: 120px;
     --indent-l: 4em;
     /* --default-line-w: 900px; */
     /* --file-folding-offset: 24px; */
@@ -1592,7 +1609,6 @@ body.theme-dark {
     --def-yellow: #c69a00;
 
     --frame-color: #c66102;
-
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
     --code-comment: var(--code-color);
@@ -2353,6 +2369,22 @@ body:not(.is-phone) .nav-file-title.recent-files-title:hover .tree-item-inner.na
     color: white;
 }
 
+/* grid toolbars */
+body:not(.grid-mobile-tb) .mobile-toolbar-options-list {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+}
+
+body:not(.grid-mobile-tb) .mobile-toolbar-option {
+    height: 30px !important;
+}
+
+.is-phone .mobile-toolbar-options-container {
+    height: 60px;
+}
+
 /* folder tree highlight */
 .is-phone .tree-item-self .nav-folder>.nav-folder-title:active,
 .is-phone .tree-item-self .nav-folder>.nav-folder-title:hover {
@@ -2433,6 +2465,10 @@ body:not(.show-prop) .metadata-container,
 
 .is-phone .metadata-property-key {
     border-bottom: 0;
+}
+
+.is-phone .metadata-input-longtext:not(:empty) {
+    padding-top: 28px;
 }
 
 .metadata-property-value .multi-select-input {
@@ -3100,9 +3136,6 @@ ALIGNMENT
     text-align: initial;
 }
 
-.setting-item-info>.setting-item-description div {
-    font-size: medium;
-}
 
 /*----------------------------------------------------------------
 highlights
@@ -3286,6 +3319,10 @@ body:is(.is-phone) blockquote p {
     filter: contrast(0.4) saturate(0);
 }
 
+div.internal-embed.media-embed.image-embed .cm-comment {
+    filter: saturate(0.0);
+}
+
 .cm-s-obsidian .cm-comment.cm-inline-code {
     background-color: transparent;
 }
@@ -3334,14 +3371,14 @@ a:is([href="#red"], [href="#green"], [href="#blue"], [href="#gray"], [href="#rot
     display: none !important;
 }
 
-.theme-light a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#gray"], [href="#grau"], [href="#red-s"], [href="#rot-k"], [href="#green-s"], [href="#grün-k"], [href="#blue-s"], [href="#blau-k"], [href="#gray-s"], [href="#grau-k"], [href="#red-l"], [href="#rot-g"], [href="#green-l"], [href="#grün-g"], [href="#blue-l"], [href="#blau-g"], [href="#gray-l"], [href="#grau-g"], [href="#hlcol"])+mark {
+/* .theme-light a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#gray"], [href="#grau"], [href="#red-s"], [href="#rot-k"], [href="#green-s"], [href="#grün-k"], [href="#blue-s"], [href="#blau-k"], [href="#gray-s"], [href="#grau-k"], [href="#red-l"], [href="#rot-g"], [href="#green-l"], [href="#grün-g"], [href="#blue-l"], [href="#blau-g"], [href="#gray-l"], [href="#grau-g"], [href="#hlcol"])+mark {
     filter: contrast(1.2) brightness(1.2);
 }
 
 .theme-light a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#gray"], [href="#grau"], [href="#red-s"], [href="#rot-k"], [href="#green-s"], [href="#grün-k"], [href="#blue-s"], [href="#blau-k"], [href="#gray-s"], [href="#grau-k"], [href="#red-l"], [href="#rot-g"], [href="#green-l"], [href="#grün-g"], [href="#blue-l"], [href="#blau-g"], [href="#gray-l"], [href="#grau-g"])+strong,
 .theme-light a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#gray"], [href="#grau"], [href="#red-s"], [href="#rot-k"], [href="#green-s"], [href="#grün-k"], [href="#blue-s"], [href="#blau-k"], [href="#gray-s"], [href="#grau-k"], [href="#red-l"], [href="#rot-g"], [href="#green-l"], [href="#grün-g"], [href="#blue-l"], [href="#blau-g"], [href="#gray-l"], [href="#grau-g"])+em {
     filter: contrast(1.5) brightness(0.8);
-}
+} */
 
 a[href="#red"]+mark,
 a[href="#rot"]+mark {
@@ -4546,7 +4583,20 @@ body:not(.footnote-g) .markdown-preview-section .footnotes {
     width: 340px;
     float: right;
     top: 12%;
+}
+
+body:not(.footnote-g) .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-section .footnotes,
+body:not(.footnote-g) .markdown-source-view:not(.is-readable-line-width) .markdown-preview-section .footnotes {
     right: -24em;
+}
+
+body:not(.footnote-g) .is-phone .markdown-preview-section .footnotes {
+    right: -4em
+}
+
+body:not(.footnote-g) .markdown-preview-view:is(.is-readable-line-width) .markdown-preview-section .footnotes,
+body:not(.footnote-g) .markdown-source-view:is(.is-readable-line-width) .markdown-preview-section .footnotes {
+    left: calc(var(--custom-max-line-width) + 26em);
 }
 
 body:not(.footnote-g) .markdown-preview-section .footnotes hr {
@@ -4584,6 +4634,10 @@ body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
 
 a.footnote-link {
     color: var(--text-normal);
+}
+
+.is-phone a.footnote-link {
+    vertical-align: bottom;
 }
 
 /*----------------------------------------------------------------
@@ -7210,6 +7264,7 @@ body:not(.slim-bars) .workspace-tab-header-container,
 body:not(.slim-bars) .workspace-ribbon.mod-left,
 body:not(.slim-bars) .workspace-ribbon.mod-left:before {
     height: 32px;
+    border-bottom: 0;
 }
 
 body:not(.slim-bars) .sidebar-toggle-button,
@@ -7273,6 +7328,11 @@ body:not(.is-phone).is-focused .view-header:hover .view-header-title {
     --tab-stacked-header-width: 24px;
 }
 
+/* normalize folder col */
+.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--icon-color);
+}
+
 .theme-light .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
     content: var(--grabnote-icon);
 }
@@ -7310,6 +7370,10 @@ Menu icon colors - Context menu
     color: inherit;
 }
 
+.is-mobile .menu.mod-tab-list .menu-item:first-child .menu-item-title {
+    font-weight: bold;
+}
+
 /* trash icon */
 .theme-light .menu-item.is-warning:hover,
 .theme-light .menu-item.is-warning.selected,
@@ -7331,6 +7395,13 @@ Menu icon colors - Context menu
 /*----------------------------------------------------------------
 TABLET - basic support
 ----------------------------------------------------------------*/
+
+.is-tablet .view-header-title,
+.is-tablet .view-actions {
+    top: 1em;
+    position: relative;
+}
+
 /* todo */
 .is-tablet .view-action {
     padding-top: 1.4em;
@@ -7629,12 +7700,16 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
     border: 1px solid lightgray;
 }
 
-.is-phone .plugin-list-plugins :is(.setting-item.mod-toggle .setting-item-control),
-.is-phone .installed-plugins-container :is(.setting-item-control) {
+/* plugins options */
+.is-phone .plugin-list-plugins :is(.setting-item.mod-toggle .setting-item-control) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 12px !important;
+}
+
+.is-phone .installed-plugins-container .setting-item-description {
+    font-size: var(--font-ui-smaller);
 }
 
 .is-phone .menu {
@@ -7661,8 +7736,8 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
     background-color: var(--background-modifier-hover);
 }
 
-.is-tablet.theme-dark .community-item,
-.is-tablet.theme-dark .vertical-tab-content {
+.is-mobile.theme-dark .community-item,
+.is-mobile.theme-dark .vertical-tab-content {
     background: var(--background-primary);
 }
 
@@ -7999,14 +8074,24 @@ body.is-focused .workspace-tabs.mod-top {
 
 .workspace .mod-root .workspace-tab-header {
     width: 0;
-    min-width: 130px;
-    max-width: 200px;
+    min-width: var(--max-width-tabs);
+    max-width: calc(var(--max-width-tabs) + 80px);
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
     min-width: initial;
 }
 
+.workspace-tab-header-container {
+    border-bottom: 0;
+}
+
+.workspace-tab-header.is-active,
+.workspace-split.mod-root .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header.is-active::after {
+    /* box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color); */
+    box-shadow: none;
+}
 
 /*----------------------------------------------------------------
 Custom Checkboxes - mini admonitions
@@ -9716,35 +9801,38 @@ PDF EXPORT
 
     .pdf-counter-2 hr,
     .pdf-counter-4 hr {
+        counter-increment: page;
         page-break-before: always;
     }
 
-    /* btm  */
+    /* btm */
     .pdf-counter-3 hr {
+        counter-increment: page;
         page-break-after: always;
     }
 
     body:is(.pdf-counter-3, .pdf-counter-4) hr::after {
-        counter-increment: page;
-        content: counter(page);
         font-size: small;
-        display: flex;
-        justify-content: center;
         color: gray;
         visibility: visible;
+        content: counter(page);
     }
 
     /* btm  */
-    .pdf-counter-3 hr::after {
-        position: fixed;
+    .pdf-counter-3 hr::after:nth-last-child(1) {
+        position: absolute;
         left: 45%;
-        bottom: 2%;
+        bottom: 1px;
         background-color: white;
+        display: flex;
+        justify-content: center;
     }
 
 
     /* top  */
     .pdf-counter-4 hr::after {
+        display: flex;
+        justify-content: center;
         position: relative;
     }
 
@@ -9757,6 +9845,11 @@ PDF EXPORT
 /*----------------------------------------------------------------
 PLUGINS
 ----------------------------------------------------------------*/
+/* commander */
+.is-phone .cmdr-setting-modal>.modal {
+    height: revert;
+    width: revert;
+}
 
 /* kanban tags */
 .kanban-plugin__item-tags:not(:empty) {
@@ -10067,7 +10160,6 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
     background-color: dodgerblue;
 }
 
-* dice roller */
 
 /* dice roller */
 .dice-roller.no-icon {
