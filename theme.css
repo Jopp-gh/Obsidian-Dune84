@@ -205,6 +205,23 @@ settings:
     level: 3
     collapsed: true
   -
+    id: unified-width
+    title: Unified Boxes
+    description: Callouts, Memo, Framed, Fnote, Quotes, Mini admonitions
+    title.de: Einheitliche Felder
+    type: class-toggle
+  - 
+    id: max-width-boxes
+    title: Unified Boxes-width
+    title.de: Einheitliche Felder-Breite
+    description: toggle 'Unified Boxes' on and define a desired width
+    description.de: schalte 'Einheitliche Felder' an und bestimme eine erwünschte Breite
+    type: variable-number-slider
+    default: 20
+    min: 20
+    max: 60
+    step: 2
+  -
     id: custom-max-line-width
     title: Textbody - Line width
     description: first, activate "readable line width" in Preferences-Editor
@@ -1496,6 +1513,7 @@ body {
     /* --file-folding-offset: 24px; */
     --custom-max-line-width: 700px;
     --file-line-width: var(--custom-max-line-width);
+    --max-width-boxes: 10vw;
 
     --property-height: 32px;
     --FolderRadius: 4px;
@@ -2479,10 +2497,6 @@ body:not(.show-prop) .metadata-container,
     position: relative;
 }
 
-.is-phone .metadata-property-value .multi-select-input {
-    display: contents;
-}
-
 .metadata-properties-title {
     visibility: collapse;
     height: 0;
@@ -2495,6 +2509,7 @@ body:not(.show-prop) .metadata-container,
     font-size: medium;
     border: 2px solid;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .metadata-container .metadata-add-button .text-button-label {
@@ -2701,25 +2716,25 @@ Font models
 body:not(.is-phone) :is(div.callout-content h2 em,
     .HyperMD-header.HyperMD-header-2.cm-line,
     .markdown-preview-section h2) {
-    font-size: calc(var(--h2-size) + var(--large-headers));
+    font-size: calc(var(--h2-size) + 18px + var(--large-headers));
 }
 
 body:not(.is-phone) :is(div.callout-content h3 em,
     .HyperMD-header.HyperMD-header-3.cm-line,
     .markdown-preview-section h3) {
-    font-size: calc(var(--h3-size) + var(--large-headers));
+    font-size: calc(var(--h3-size) + 12px + var(--large-headers));
 }
 
 body:not(.is-phone) :is(div.callout-content h4 em,
     .HyperMD-header.HyperMD-header-4.cm-line,
     .markdown-preview-section h4) {
-    font-size: calc(var(--h4-size) + var(--large-headers));
+    font-size: calc(var(--h4-size) + 6px + var(--large-headers));
 }
 
 body:not(.is-phone) :is(div.callout-content h5 em,
     .HyperMD-header.HyperMD-header-5.cm-line,
     .markdown-preview-section h5) {
-    font-size: calc(var(--h5-size) + var(--large-headers));
+    font-size: calc(var(--h5-size) + 3px + var(--large-headers));
 }
 
 body:not(.is-phone) :is(div.callout-content h6 em,
@@ -3136,6 +3151,10 @@ ALIGNMENT
     text-align: initial;
 }
 
+.is-phone .setting-item-control button {
+    padding: 10px;
+    width: fit-content;
+}
 
 /*----------------------------------------------------------------
 highlights
@@ -3153,7 +3172,7 @@ highlights
 }
 
 /* Html custom Highlight */
-.markdown-source-view.mod-cm6 mark,
+body:not(.callout).markdown-source-view.mod-cm6 mark,
 .markdown-rendered mark {
     border-radius: 16px 2px;
     padding: 0 4px 0 4px;
@@ -5565,12 +5584,8 @@ RECIPE TABLES
     border-bottom: 1px solid var(--text-normal);
 }
 
-.theme-dark .recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
-    color: white;
-}
-
-.theme-light .recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
-    color: black;
+.recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
+    color: var(--text-normal);
 }
 
 .recipes:is(.markdown-source-view, .markdown-preview-view) tbody tr>td {
@@ -6383,6 +6398,12 @@ img[alt~="frame-d"] {
 
 .icap-85 .image-embed[src*="#cap"]::after {
     max-width: 85vw;
+}
+
+/* max width boxes */
+.unified-width :is(.cm-s-obsidian div.HyperMD-codeblock-bg, .callout, .markdown-source-view.mod-cm6, .markdown-rendered blockquote, .markdown-rendered pre) {
+    width: calc(1vw * var(--max-width-boxes)) !important;
+    max-width: 100%;
 }
 
 /*Image descriptions - breaks text after 500px */
@@ -7289,6 +7310,10 @@ body:not(.show-tooltips) .follow-link-popover {
     visibility: hidden;
 }
 
+.theme-dark .tooltip {
+    filter: invert(1);
+}
+
 .is-phone .workspace-drawer.mod-left .workspace-drawer-header-info {
     line-break: auto;
     width: 106px;
@@ -8121,9 +8146,11 @@ input[type=checkbox]:checked:hover {
     vertical-align: bottom;
 }
 
-/* Color label also for subtaskts in Preview mode only .is-checked */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]),
-ul>li.task-list-item[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
+.unified-width :is(.markdown-source-view.mod-cm6 .HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
+    width: calc(1vw * var(--max-width-boxes)) !important;
+}
+
+:is(.markdown-source-view.mod-cm6 .HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
     text-decoration: none;
     border-radius: 4px;
     margin-left: -30px;
@@ -9433,7 +9460,6 @@ PDF EXPORT
     code {
         text-rendering: optimizeLegibility;
     }
-
 
     a.internal-link {
         text-decoration: none !important;
