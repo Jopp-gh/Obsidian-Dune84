@@ -7277,15 +7277,17 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner {
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner:hover,
 body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:hover {
     opacity: 1;
-    /* padding-left: inherit; */
     padding-left: 2.8em;
 }
 
 body:not(.slim-bars) .workspace-tab-header-container,
-body:not(.slim-bars) .workspace-ribbon.mod-left,
 body:not(.slim-bars) .workspace-ribbon.mod-left:before {
     height: 32px;
     border-bottom: 0;
+}
+
+body:not(.slim-bars) .workspace-ribbon.mod-left {
+    margin-top: 32px;
 }
 
 body:not(.slim-bars) .sidebar-toggle-button,
