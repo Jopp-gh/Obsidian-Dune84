@@ -205,23 +205,6 @@ settings:
     level: 3
     collapsed: true
   -
-    id: unified-width
-    title: Unified Boxes
-    description: Callouts, Memo, Framed, Fnote, Quotes, Mini admonitions
-    title.de: Einheitliche Felder
-    type: class-toggle
-  - 
-    id: max-width-boxes
-    title: Unified Boxes-width
-    title.de: Einheitliche Felder-Breite
-    description: toggle 'Unified Boxes' on and define a desired width
-    description.de: schalte 'Einheitliche Felder' an und bestimme eine erwünschte Breite
-    type: variable-number-slider
-    default: 20
-    min: 20
-    max: 60
-    step: 2
-  -
     id: custom-max-line-width
     title: Textbody - Line width
     description: first, activate "readable line width" in Preferences-Editor
@@ -288,6 +271,23 @@ settings:
         -
             label: ↑
             value: pdf-counter-4
+  -
+    id: unified-width
+    title: Unified Boxes
+    description: Callouts, Memo, Framed, Fnote, Quotes, Mini admonitions
+    title.de: Einheitliche Felder
+    type: class-toggle
+  - 
+    id: max-width-boxes
+    title: Unified Boxes-width
+    title.de: Einheitliche Felder-Breite
+    description: toggle 'Unified Boxes' on and define a desired width
+    description.de: schalte 'Einheitliche Felder' an und bestimme eine erwünschte Breite
+    type: variable-number-slider
+    default: 20
+    min: 10
+    max: 60
+    step: 2
   -  
     id: max-width-tabs
     title: Tabs - width
@@ -6401,7 +6401,7 @@ img[alt~="frame-d"] {
 }
 
 /* max width boxes */
-.unified-width :is(.cm-s-obsidian div.HyperMD-codeblock-bg, .callout, .markdown-source-view.mod-cm6, .markdown-rendered blockquote, .markdown-rendered pre) {
+.unified-width :is(div.HyperMD-codeblock-bg, .callout, .markdown-rendered blockquote, .markdown-rendered pre) {
     width: calc(1vw * var(--max-width-boxes)) !important;
     max-width: 100%;
 }
@@ -8146,11 +8146,11 @@ input[type=checkbox]:checked:hover {
     vertical-align: bottom;
 }
 
-.unified-width :is(.markdown-source-view.mod-cm6 .HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
+.unified-width :is(.HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
     width: calc(1vw * var(--max-width-boxes)) !important;
 }
 
-:is(.markdown-source-view.mod-cm6 .HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
+:is(.HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
     text-decoration: none;
     border-radius: 4px;
     margin-left: -30px;
