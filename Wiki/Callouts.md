@@ -206,7 +206,7 @@ A typical **timeline callout** looks like this:
 ### LINE 1: CALLOUT TAGS AND METATAGS
 Line 1= defines this kind of callout, use `>[!tline]` and add a pipe symbol followed by `v1` or `v2` as metadata, eg. `[!tline|v1]`
 
-- Timeline callout v1, or `>[!tline|v1]` adds a soft background shadow, this way your time units are diversified and easier readable. 
+- Timeline callout v1, or `>[!tline|v1]` adds a soft background shadow, this way your time blocks are more diverse and easier readable. 
 - Timeline callout v2, or `>[!tline|v2]` is without background shadow
 
 >Mix them or use one of both callouts to build your timeline
@@ -229,7 +229,7 @@ Line 3 or 4= add your bullet lists, checklists or reminder text blocks
 #### USAGE
 Ideally, a Timeline template is made of **two callouts** to create an *easy-to-read alternating row flow*. On desktop you can vary the distance from the left note margin to the red line, to give longer **time unit names** more space. To do so, go to Obsidians `Settings>Style Settings>Dune>Fonts>Spacing>Line` or type in "Unified" in the search mask of **Style Settings**
 
->Note: Basically, with each new line in a timeline callout you are going to add new columns (reading flow is aligned horizontally) like in a **Kanban** but all inside a **time frame defined by your heading** at the beginning of your timeline callout. You can even add a picture a line before your time unit with `> ## January` and after the callout heading `>[!tline|v1]`, to add visual references to your timeline callout.
+>Note: Basically, with each new line in a timeline callout you are going to add new columns (reading flow is aligned horizontally) like in a **Kanban** but all inside a **time frame defined by your heading** at the beginning of your timeline callout. You can even add a picture a line before your time unit `> ## January` and after the callout heading `>[!tline|v1]`, to add a visual reference to your timeline progress.
 
 To use this timeline callout, copy the following template and save it in your templates folder:
 
