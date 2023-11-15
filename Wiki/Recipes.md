@@ -36,8 +36,12 @@ cssclass: recipes,
 
 ```
 
-### Example:
+### Example: (PC)
 ![Bon-Appetit](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/a25578a4-5a2a-4590-bb34-99c2adbcde3a)
+
+### Example: (Phone)
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/1761f21a-5c9e-46e9-8800-3344261e0ad7" alt="Recipes" width="260px">
+
 
 ### bon appétit! 
 
