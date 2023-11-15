@@ -3,34 +3,9 @@
 
 choose how your **first letter**, your **Initial**, should look like:
 - use a [text-tag](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md#initials)
-- use a callout (please continue to read on below)
+- ~~use a callout~~ (obsolete - superseded by text tags)
 
-<br>
-
-![poetry-caps–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4d675282-fbe2-464f-8437-0ae931b3ea6c)
-
-
-```
->[!raisecap]
-> Raisecaps etc.
-```
-
-![poetry-caps–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cc877a0-5c6f-4874-aec5-70ed2286c42a)
-
-```
->[!dropcap]
-> D
-
-ropcap etc.
-```
-
-> **Hint**: In the pictures above, the very first word after the main Letter was emphasized with bold, but you don't need to. 
-
-<br>
-
-You only need to pay attention to use **Uppercase** for your *very first letter*, be it D for Dropcap or R for Raisecap. 
-Both callouts will render the very first letter in big, gothic letters, but you can choose any font you like, please see how in the list below:
-
+### Settings
 - to change fonts, go to **Style Settings>Dune>Fonts>Typesets>3 - Poetry** 
 - to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
 
