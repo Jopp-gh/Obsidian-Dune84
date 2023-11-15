@@ -26,7 +26,7 @@ to move between slides,
 ## Pdf export
 - replaced dark themed backgrounds with white, printer-friendly backgrounds
 - all text is optimized for readablility
-- Horizontal lines are special in Dune, in fact, each time you add a hr `---` to your note, you tell Dune to add a **Page Break**. Please do not forget to surround each hr with an empty line above and below
+- Horizontal lines are special in Dune, in fact, each time you add a hr `---` to your note, you tell Dune to add a **Page Break**. Please do not forget to surround each hr with an empty line above and below. If you want to keep Obsidians default hr so that pages (pdf export) do not break with a hr in place, then go to Obsidians `Settings>Dune>Fonts>Spacing>Line>Page counter` and choose the first option in the dropdown button.
 
 
 
