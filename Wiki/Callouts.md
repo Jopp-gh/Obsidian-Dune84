@@ -15,8 +15,7 @@ to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>
 
 <br>
 
-## Aside notes
-## Aside-hide
+## Aside notes (hidden)
 
 ![B1](https://user-images.githubusercontent.com/48620536/222979880-64b7d178-7804-4d3b-b089-2375df712e94.png)
 
@@ -33,7 +32,7 @@ To edit your callout box in `Live Preview`, select the text before and/or after 
 
 <br>
 
-## Aside-in
+## Aside-in (visible)
 ![B2](https://user-images.githubusercontent.com/48620536/222979913-e8e15146-725f-47d4-8126-b7c4055d261e.png)
 
 ```
@@ -109,7 +108,7 @@ Callout to shorten longer documents.
 
 <br>
 
-### Callouts alignment
+## Callouts alignment
 
 `> [!note|300]`, `> [!note|400]`, `> [!note|500]`, `> [!note|600]`, `> [!note|700]`, `> [!note|800]`
 max Callout width in pixels
@@ -123,7 +122,7 @@ Callout floats right
 
 <br>
 
-### Text blocks - Small & Large
+## Text blocks - Small & Large
 
 ![new-features–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/a6fc8aa0-42bf-4859-b5a0-b4596fb5417f)
 
@@ -188,6 +187,71 @@ Lorem…
 
 You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
 Basically, with this callout you can add notes to your left or right -side gutter.
+
+<br>
+
+## TIMELINE
+**Upgrade your bullet lists, checklists and text blocks and put them in a chronological order**. 
+**Timeline** is available *for Desktop, phone, the core plugin slide and pdf export*. Now let's understand how **Timeline** is structured. Please read on.
+
+A typical **timeline callout** looks like this:
+```
+>[!tline|v1]
+> ## January
+> **Project A**
+> - [ ] a
+> - [ ] b
+> - [ ] c
+```
+### LINE 1: CALLOUT TAGS AND METATAGS
+Line 1= defines this kind of callout, use `>[!tline]` and add a pipe symbol followed by `v1` or `v2` as metadata, eg. `[!tline|v1]`
+
+- Timeline callout v1, or `>[!tline|v1]` adds a soft background shadow, this way your time units are diversified and easier readable. 
+- Timeline callout v2, or `>[!tline|v2]` is without background shadow
+
+>Mix them or use one of both callouts to build your timeline
+
+### LINE 2: TIME UNIT
+Line 2= **defines a time unit**, in our example `> ## January`. *Use any time unit useful for you*, example:
+
+- hourly (morning/noon/afternoon/evening or 6:00/8:00/10:00/14:00, etc)
+- daily (1 Nov, 15 Nov, 20 Nov, etc)
+- weekly (mon, tue, wed, thu, fri, sat, sun or week 12, week 18, week 35, etc)
+- monthly (Jan, Feb, Mar or September, December, etc)
+- Yearly (2023, 2024, etc)
+
+### LINE 3: PROJECT (OPTIONAL)
+Line 3= Add a project name (Optional)
+
+### LINE 4: TASKS
+Line 3 or 4= add your bullet lists, checklists or reminder text blocks
+
+#### USAGE
+Ideally, a Timeline template is made of **two callouts** to create an *easy-to-read alternating row flow*. On desktop you can vary the distance from the left note margin to the red line, to give longer **time unit names** more space. To do so, go to Obsidians `Settings>Style Settings>Dune>Fonts>Spacing>Line` or type in "Unified" in the search mask of **Style Settings**
+
+>Note: Basically, with each new line in a timeline callout you are going to add new columns (reading flow is aligned horizontally) like in a **Kanban** but all inside a **time frame defined by your heading** at the beginning of your timeline callout. You can even add a picture a line before your time unit with `> ## January` and after the callout heading `>[!tline|v1]`, to add visual references to your timeline callout.
+
+To use this timeline callout, copy the following template and save it in your templates folder:
+
+```
+>[!tline|v1]
+> ## January
+> **Project A**
+> - [ ] a
+> - [ ] b
+> - [ ] c
+
+>[!tline|v2]
+> ## January
+> **Project B**
+> - [ ] a
+> - [ ] b
+> - [ ] c
+```
+
+**Result**:
+![Timeline-](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/96ccfa12-1ee0-4355-a4e3-7d363864ad97)
+
 
 <br>
 
