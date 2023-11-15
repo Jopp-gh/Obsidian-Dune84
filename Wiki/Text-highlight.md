@@ -226,19 +226,6 @@ Pick between 2 indentation modes:
 
 <br>
 
-## Initials
-![tag-initials–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/46f8e2ce-6add-41e6-86bd-b6e54c7e4b78)
-![tag-initials–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c6fa1c44-0516-4763-ba37-d733648dd162)
-![tag-initials–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/06061682-c1a7-4a03-8d86-4292e32e83fe)
-![tag-initials–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/701497df-9ebd-4fef-aeb0-f75f3b81b624)
-
-**Example**
-`#raisecap ==A==` or `#dropcap ==A==` 
-
-**German**: `#Initiale ==A==` or `#Initiale-t ==A==` 
-
-<br>
-
 ## Large H1 Title
 
 ![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
