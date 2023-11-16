@@ -2693,22 +2693,26 @@ Font models
 
 /* local - needs important */
 .ftheme-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+.ftheme-1 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.ftheme-1 a:is(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
     font-family: var(--default-font-h) !important;
 }
 
 .ftheme-2 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+.ftheme-2 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.ftheme-2 a:is(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
     font-family: var(--modern-font-h) !important;
 }
 
 .ftheme-3 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+.ftheme-3 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.ftheme-3 a:is(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
     font-family: var(--poetry-font-h) !important;
 }
 
 .ftheme-4 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
-.ftheme-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+.ftheme-4 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.ftheme-4 a:is(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
     font-family: var(--custom-font-h) !important;
 }
 
@@ -4410,14 +4414,9 @@ embed deeply to get text wrap
     background: none;
     text-align: center;
     box-shadow: none;
-    /* font-weight: bolder; */
     max-width: 400px;
     position: relative;
 }
-
-/* .callout[data-callout^=infobox] thead tr>th {
-  background-color: gray;
-} */
 
 .is-phone .callout[data-callout^=infobox] {
     width: calc(400px / 2);
@@ -4427,15 +4426,13 @@ embed deeply to get text wrap
 
 body:not(.is-phone) .callout[data-callout=infobox],
 body:not(.is-phone) .callout[data-callout=infobox-r] {
-    padding: 6px 0 6px 12px;
-    /* margin-right: -24px; */
+    padding: 6px 0 6px 14px;
     float: right;
     clear: right;
 }
 
 body:not(.is-phone) .callout[data-callout=infobox-l] {
-    padding: 6px 12px 6px 0;
-    /* margin-left: -24px; */
+    padding: 6px 14px 6px 0;
     float: left;
     clear: left;
 }
@@ -6304,8 +6301,9 @@ img[alt~="frame-d"] {
 }
 
 /* max width boxes */
-.unified-width :is(.callout, .markdown-rendered blockquote),
-.unified-width pre:not(pre.language-br) {
+.unified-width .callout:not([data-callout="aside-lh"], [data-callout="aside-rh"], [data-callout=moodboard], [data-callout="multi-column"], [data-callout^=infobox], [data-callout="framed-rg"], [data-callout="framed-lg"]),
+.unified-width pre:is([class^="language-memo"], pre.language-fnote),
+.unified-width .markdown-rendered blockquote {
     width: calc(1vw * var(--max-width-boxes)) !important;
     max-width: 100%;
 }
