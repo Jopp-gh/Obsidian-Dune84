@@ -3014,7 +3014,6 @@ Link local, unresolved, web
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
     color: var(--text-muted);
     text-decoration-color: var(--text-muted);
-    filter: brightness(0.5);
 }
 
 .markdown-rendered .internal-link:not(.is-unresolved),
@@ -3391,8 +3390,8 @@ div.internal-embed.media-embed.image-embed .cm-comment {
 }
 
 .markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
-    padding-right: 18px;
-    right: -15px;
+    padding-right: 4px;
+    right: 8px;
 }
 
 .view-content .is-collapsed .list-collapse-indicator svg.svg-icon,
@@ -3833,6 +3832,10 @@ a[href="#idee"]+mark {
     white-space: nowrap;
     color: black;
     font-weight: bold;
+}
+
+a+mark>a.internal-link.is-unresolved {
+    filter: brightness(0.5) !important;
 }
 
 a[href="#ppl"]+mark::before,
@@ -4318,7 +4321,7 @@ code.language-memo-b.is-loaded,
 code.language-memo-m.is-loaded,
 .app-container pre.language-memo-col,
 code.language-memo-col.is-loaded {
-    max-width: 340px;
+    /* max-width: 340px; */
     min-width: var(--min-boxwidth);
 }
 
@@ -4657,6 +4660,7 @@ body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
 
 .theme-dark .is-flashing {
     background-color: var(--text-accent) !important;
+    color: black;
 }
 
 .theme-light .is-flashing {
@@ -6301,7 +6305,7 @@ img[alt~="frame-d"] {
 }
 
 /* max width boxes */
-.unified-width .callout:not([data-callout="aside-lh"], [data-callout="aside-rh"], [data-callout=moodboard], [data-callout="multi-column"], [data-callout^=infobox], [data-callout="framed-rg"], [data-callout="framed-lg"]),
+.unified-width .callout:not([data-callout="aside-lh"], [data-callout="aside-rh"], [data-callout=moodboard], [data-callout="multi-column"], [data-callout^=infobox], [data-callout^="framed"]),
 .unified-width pre:is([class^="language-memo"], pre.language-fnote),
 .unified-width .markdown-rendered blockquote {
     width: calc(1vw * var(--max-width-boxes)) !important;
@@ -9576,7 +9580,6 @@ PDF EXPORT
     img,
     .image-embed,
     .callout,
-    .callout-content,
     code,
     blockquote,
     table,
@@ -9603,7 +9606,6 @@ PDF EXPORT
 
     .callout {
         page-break-after: avoid;
-        page-break-before: auto;
     }
 
 
@@ -10319,7 +10321,7 @@ dataview
 }
 
 .theme-dark .block-language-dataview .table-view-table>tbody>tr:hover {
-    background-color: var(--button-background);
+    background-color: rgba(255, 171, 26, 0.3);
 }
 
 input.dataview.task-list-item-checkbox {
