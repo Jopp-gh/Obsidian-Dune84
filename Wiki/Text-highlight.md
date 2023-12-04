@@ -119,7 +119,7 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 ## Spoiler 
 ![Spoiler-txt-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f52bcc66-3f71-4406-8f53-5ee214da3c0d)
 
-`Words Words #spoiler ==Words== Words Words`
+`Words Words #-spoiler ==Words== Words Words`
 
 read hidden text on hover (desktop) or touch (mobile)
 
@@ -128,7 +128,7 @@ read hidden text on hover (desktop) or touch (mobile)
 ## Tips
 ![help–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6cd9af5b-aaf0-4e0d-b619-2b1a7ea6c187)
 
-`Words Words #tips ==Words Words Words Words Words== Words Words`
+`Words Words #-tips ==Words Words Words Words Words== Words Words`
 
 read hidden text on hover (desktop) or touch (mobile)
 
@@ -141,9 +141,9 @@ read hidden text on hover (desktop) or touch (mobile)
 
 Example
 
-`my #cite-br ==citation==`, `my #cite-de ==citation==`
+`my #cite-br ==citation==`, `my #cite-de ==citation==`, `my #cite-fr ==citation==`
 
-**German** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`
+**German** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
 
 <br>
 
@@ -151,18 +151,18 @@ Example
 ![icon-tags](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b73b0e9c-a16f-4621-97a9-ed0c4895441a)
 
 ```
-Words #ppl ==ppl== Words 
-Words #mail ==mail== Words
-Words #tel ==tel== Words 
-Words #read ==read== Words
-Words #edit ==edit== Words 
-Words #promo ==promo== Words
-Words #loc ==loc== Words 
-Words #key ==key== Words 
-Words #pin ==pin== Words 
-Words #cal ==cal== Words 
-Words #idea ==idea== Words 
-Words #profit ==profit== Words
+Words #-ppl ==ppl== Words 
+Words #-mail ==mail== Words
+Words #-tel ==tel== Words 
+Words #-read ==read== Words
+Words #-edit ==edit== Words 
+Words #-promo ==promo== Words
+Words #-loc ==loc== Words 
+Words #-key ==key== Words 
+Words #-pin ==pin== Words 
+Words #-cal ==cal== Words 
+Words #-idea ==idea== Words 
+Words #-profit ==profit== Words
 ```
 
 ### Usage
@@ -170,14 +170,16 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 **Examples:** 
 
-- `#ppl ==[[Monica]]==`
-- `#mail ==[[Monica@provider.com]]==`
-- `#tel ==[[Monica#phone|phone]]==` (you must have a header with name `phone` in your note `Monica`) 
+- `#-ppl ==[[Monica]]==`
+- `#-mail ==[[Monica@provider.com]]==`
+- `#-tel ==[[Monica#phone|phone]]==` (you must have a header with name `phone` in your note `Monica`) 
 
 <br>
 
 **German**
-`#kontakt`,`#ort`,`#brief`,`#lese`,`#bearbeite`,`#schlüssel`,`#merke`,`#kal`,`#idee`
+`#-kontakt`,`#-ort`,`#-brief`,`#-lese`,`#-bearbeite`,`#-schlüssel`,`#-merke`,`#-kal`,`#-idee`
+
+> pay attention **special text tags** start with a hyphen to distinguish them from common tags. **Special text tags** are only visible in edit mode and get replaced in Preview mode with an icon.
 
 <br>
 
