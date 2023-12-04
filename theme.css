@@ -963,6 +963,28 @@ settings:
     opacity: true
     default-light: '#e6b300'
     default-dark: '#c69a00'
+  - 
+    id: def-orange
+    title: Default orange
+    description: for text tags
+    title.de: Standard Orange
+    description.de: für Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#ff8400'
+    default-dark: '#cb6900'
+  - 
+    id: def-violet
+    title: Default violet
+    description: for text tags
+    title.de: Standard Violett
+    description.de: für Textmarkierungen
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: '#c08cff'
+    default-dark: '#844cc8'
   -
     id: hl-col
     title: 'Font Highlight - custom'
@@ -1007,17 +1029,6 @@ settings:
     format: rgb
     default-light: '#00B3ED'
     default-dark: '#CA6404'
-  -
-    id: prop-col
-    title: 'Text-tag color - custom'
-    description: for Text-tags
-    title.de: Eigene 'Schlüsselworte'-Farbe 
-    description.de: für 'Schlüsselworte'
-    type: variable-themed-color
-    opacity: false
-    format: rgb
-    default-light: '#0080ff'
-    default-dark: '#FFAA1A'
   -
     id: folder-colors
     title: Folder Colors
@@ -1236,6 +1247,13 @@ settings:
     level: 2
     collapsed: true
   -
+    id: show-ui-btns
+    title: Buttons
+    description: restore buttons
+    title.de: Tasten 
+    description.de: Wiederherstellung Tasten
+    type: class-toggle
+  -
     id: show-ribbon-l
     title: Sidebar, left
     description: restore left sidebar
@@ -1243,6 +1261,41 @@ settings:
     description.de: Wiederherstellung Seitenleiste
     type: class-toggle
     default: true
+  -
+    id: show-status-bar
+    title: Status bar
+    description: restore statusbar
+    title.de: Statusleiste
+    description.de: Wiederherstellung Statusleiste
+    type: class-toggle
+  -
+    id: show-tab-name
+    title: Tabs
+    description: restore inactive tabs
+    title.de: Reiter
+    description.de: Wiederherstellung inaktiver Reiter
+    type: class-toggle
+  -
+    id: slim-bars
+    title: Slim bars
+    description: restore default tab-view
+    title.de: Schmale Leisten
+    description.de: Wiederherstellung normale Reiteransicht
+    type: class-toggle
+  -
+    id: stacked-tabs-focused
+    title: Stacked notes
+    description: restore default stacked-view
+    title.de: Stapelansicht
+    description.de: Wiederherstellung normale Stapelansicht
+    type: class-toggle
+  -
+    id: dim-notes
+    title: Dim secondary Notes
+    description: restore default Note brightness
+    title.de: Abdunkeln sekundärer Notizen
+    description.de: Wiederherstellung Notizen-Helligkeit
+    type: class-toggle
   -
     id: show-title-name
     title: Note title
@@ -1256,41 +1309,6 @@ settings:
     description: restore path in title bar
     title.de: Notizpfad
     description.de: Wiederherstellung Pfad (Titelleiste)
-    type: class-toggle
-  -
-    id: show-tab-name
-    title: Tabs
-    description: restore inactive tabs
-    title.de: Reiter
-    description.de: Wiederherstellung inaktiver Reiter
-    type: class-toggle
-  -
-    id: show-status-bar
-    title: Status bar
-    description: restore statusbar
-    title.de: Statusleiste
-    description.de: Wiederherstellung Statusleiste
-    type: class-toggle
-  -
-    id: show-ui-btns
-    title: Buttons
-    description: restore buttons
-    title.de: Tasten 
-    description.de: Wiederherstellung Tasten
-    type: class-toggle
-  -
-    id: stacked-tabs-focused
-    title: Stacked notes
-    description: restore default stacked-view
-    title.de: Stapelansicht
-    description.de: Wiederherstellung normale Stapelansicht
-    type: class-toggle
-  -
-    id: slim-bars
-    title: Slim bars
-    description: restore default bar height
-    title.de: Schmale Leisten
-    description.de: Wiederherstellung normale Leisten
     type: class-toggle
   -
     id: grid-mobile-tb
@@ -1307,11 +1325,11 @@ settings:
     level: 2
     collapsed: true
   -
-    id: edgy-tables
-    title: Tables, edgy
-    description: restore edgy tables (colored, monochrome)
-    title.de: Tabellen, eckig 
-    description.de: Wiederherstellung eckige Tabellen (farbige, monochrome)
+    id: show-prop
+    title: Yaml header
+    title.de: Yaml Kopfzeile
+    description: needs 'Editor - Properties in document - Visible / Source' 
+    description.de: braucht 'Editor - Properties in document - Visible / Source' 
     type: class-toggle
   -
     id: show-strikeout
@@ -1328,9 +1346,25 @@ settings:
     description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
   -
+    id: edgy-tables
+    title: Tables, edgy
+    description: restore edgy tables (colored, monochrome)
+    title.de: Tabellen, eckig 
+    description.de: Wiederherstellung eckige Tabellen (farbige, monochrome)
+    type: class-toggle
+  -
     id: footnote-g
-    title: Footnotes - gutter
-    title.de: Fußnoten (Seitenspalte)
+    title: Footnotes
+    title.de: Fußnoten
+    description: Right gutter
+    description.de: Rechte Seitenspalte
+    type: class-toggle
+  -
+    id: show-search
+    title: Obsidians 'Query' Context
+    title.de: Obsidians 'Query' Kontext
+    description: Unfold Obsidians 'query'-context on hover
+    description.de: Obsidians 'query'-Kontext beim überfahren aufklappen 
     type: class-toggle
   -
     id: code-utils
@@ -1342,16 +1376,27 @@ settings:
   -
     id: writer-mode
     title: Writer mode (edit mode) 
-    description: fade inactive Lines
+    description: fade inactive Lines and shortens inactive Lines
     title.de: Schriftsteller Modus (Schreibmodus)
-    description.de: Verschleiere inaktive Zeilen
+    description.de: Verschleiere inaktive Zeilen und kürzt inaktive Zeilen
     type: class-toggle
   -
-    id: show-prop
-    title: Yaml header
-    title.de: Yaml Kopfzeile
-    description: needs 'Editor - Properties in document - Visible / Source' 
-    description.de: braucht 'Editor - Properties in document - Visible / Source' 
+    id: monoch-ttag
+    title: Monochrome text tag labels
+    title.de: Monochrome Stichwort Felder
+    description: -ppl, -tel, -mail, -read, -edit, -promo, -loc, -key, -pin, -cal, -idea, profit, check
+    description.de: -kontakt, -tel, -brief, -lese, -arbeit, -promo, -ort, -schlüssel, -merke, -kal, -idee, profit, prüfe
+    type: class-toggle
+  -
+    id: monoch-admo
+    title: 'Mini Admonitions'
+    description: Remove text and background colors
+    description.de: Entferne Text und Feld-farben 
+    type: class-toggle
+  -
+    id: show-footnote
+    title: Hide Footnotes
+    title.de: Verstecke Fußnoten
     type: class-toggle
   -
     id: fade-op-c
@@ -1541,7 +1586,15 @@ body {
     --h4-color: var(--header-col);
     --h5-color: var(--h4-color);
     --h6-color: var(--h4-color);
+
+    --azure-sh: rgb(240 255 255 / 50%);
+    --txt-tagc1: var(--def-red);
+    --txt-tagc2: var(--def-orange);
+    --txt-tagc3: var(--def-yellow);
+    --txt-tagc4: var(--def-blue);
+    --txt-tagc5: var(--def-violet);
 }
+
 
 :root,
 body.is-phone {
@@ -1567,8 +1620,6 @@ body.theme-light {
     --table-accent: rgb(255, 255, 255, 0.5);
 
     --drop-cap-col: #800000;
-    --prop-col: var(--text-accent-special);
-
     --light-cust-hl: #00B3ED;
     --hl-col: var(--light-cust-hl);
     --tables-hlcol: var(--light-cust-hl);
@@ -1579,6 +1630,8 @@ body.theme-light {
     --def-green: #52a543;
     --def-blue: cornflowerblue;
     --def-yellow: #e6b300;
+    --def-orange: #ff8400;
+    --def-violet: #c08cff;
     --frame-color: #4a6cb0;
 
     --code-background: var(--background-primary);
@@ -1613,8 +1666,6 @@ body.theme-dark {
     --table-accent: rgb(255, 255, 255, 0.5);
 
     --drop-cap-col: #b60000;
-    --prop-col: var(--interactive-accent-rgb);
-
     --dark-cust-hl: #ff7029;
     --hl-col: var(--dark-cust-hl);
     --tables-hlcol: var(--dark-cust-hl);
@@ -1625,8 +1676,10 @@ body.theme-dark {
     --def-green: forestgreen;
     --def-blue: #3b71d6;
     --def-yellow: #c69a00;
-
+    --def-orange: #cb6900;
+    --def-violet: #844cc8;
     --frame-color: #c66102;
+
     --code-background: var(--background-primary);
     --code-normal: var(--text-muted);
     --code-comment: var(--code-color);
@@ -1956,7 +2009,6 @@ body.profile-pic-mono:is(.is-phone.theme-dark) .workspace-drawer.mod-left .works
     filter: invert(1);
 }
 
-
 .workspace-ribbon.mod-left:before {
     background-color: var(--background-secondary);
 }
@@ -2126,12 +2178,13 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-ico
 
 .markdown-source-view.mod-cm6 .collapse-indicator,
 .markdown-preview-view .heading-collapse-indicator {
-    scale: 1.8;
+    transform: translateX(-4px) scale(1.5);
+    padding-right: 4px !important;
 }
 
 .is-phone :is(.markdown-source-view.mod-cm6 .collapse-indicator,
     .markdown-preview-view .heading-collapse-indicator) {
-    transform: translateX(0.2em);
+    transform: translateX(0.2em) scale(1.8);
 }
 
 .is-phone .menu-item-icon .svg-icon {
@@ -3074,7 +3127,7 @@ a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) strong {
 }
 
 /*----------------------------------------------------------------
-SYNTAX COL
+Gutter
 ----------------------------------------------------------------*/
 .indent-p p,
 .indent-p .markdown-source-view .cm-line:not(.HyperMD-header.cm-line) {
@@ -3083,6 +3136,12 @@ SYNTAX COL
 
 .writer-mode .cm-line:not(.cm-active.cm-line) {
     filter: opacity(0.2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 400px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .theme-light:is(.code-utils) .cm-active.cm-line {
@@ -3191,6 +3250,17 @@ highlights
 .cm-s-obsidian span.obsidian-search-match-highlight {
     background-color: var(--interactive-accent-rgb);
     color: black;
+}
+
+/* collapse search queries */
+body:not(.show-search) .search-result:not(.is-collapsed) .search-result-file-matches {
+    display: none;
+    /* transition-delay: 1s; */
+}
+
+/* expand search queries on demand*/
+body:not(.show-search) .search-result:not(.is-collapsed):hover .search-result-file-matches {
+    display: revert;
 }
 
 /* Html custom Highlight */
@@ -3407,8 +3477,12 @@ div.internal-embed.media-embed.image-embed .cm-comment {
 /*----------------------------------------------------------------
  custom highlights
 ----------------------------------------------------------------*/
+/* defects with inline hashes */
+a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#grau"], [href="#gray"], [href="#gray"], [href="#grau"], [href="#hlcol"], [href="#mfarbe"], [href="#cite-de"], [href="#cite-br"], [href="#cite-fr"], [href="#zitat-de"], [href="#zitat-br"], [href="#zitat-fr"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#initiale"], [href="#raisecap"], [href="#initiale-t"], [href="#dropcap"], [href="#font-1"], [href="#font-2"], [href="#font-3"], [href="#font-4"]) {
+    display: none !important;
+}
 
-a:is([href="#red"], [href="#green"], [href="#blue"], [href="#gray"], [href="#rot"], [href="#grün"], [href="#blau"], [href="#grau"][href="#font-s"], [href="#red-s"], [href="#green-s"], [href="#blue-s"], [href="#gray-s"], [href="#rot-k"], [href="#grün-k"], [href="#blau-k"], [href="#grau-k"], [href="#font-l"], [href="#red-l"], [href="#green-l"], [href="#blue-l"], [href="#gray-l"], [href="#rot-g"], [href="#grün-g"], [href="#blau-g"], [href="#grau-g"], [href="#hlcol"], [href="#hlcol-s"], [href="#hlcol-l"], [href="#spoiler"], [href="#tips"], [href="#cite-br"], [href="#cite-de"], [href="#zitat-br"], [href="#zitat-de"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#raisecap"], [href="#initiale"], [href="#dropcap"], [href="#initiale-t"], [href="#font-1"], [href="#font-2"], [href="#font-3"], [href="#font-4"], [href="#ppl"], [href="#loc"], [href="#tel"], [href="#edit"], [href="#promo"], [href="#read"], [href="#mail"], [href="#key"], [href="#pin"], [href="#cal"], [href="#idea"], [href="#profit"], [href="#ppl"], [href="#loc"], [href="#tel"], [href="#read"], [href="#edit"], [href="#mail"], [href="#promo"], [href="#key"], [href="#pin"], [href="#cal"], [href="#idea"], [href="#profit"], [href="#kontakt"], [href="#ort"], [href="#brief"], [href="#lese"], [href="#bearbeite"], [href="#schlüssel"], [href="#merke"], [href="#kal"], [href="#idee"]) {
+a:is([href="#-ppl"], [href="#-loc"], [href="#-tel"], [href="#-read"], [href="#-check"], [href="#-edit"], [href="#-mail"], [href="#-promo"], [href="#-key"], [href="#-pin"], [href="#-cal"], [href="#-idea"], [href="#-profit"], [href="#-spoiler"], [href="#-kontakt"], [href="#-ort"], [href="#-brief"], [href="#-lese"], [href="#-prüfe"], [href="#-arbeit"], [href="#-schlüssel"], [href="#-merke"], [href="#-kal"], [href="#-idee"], [href="#-tips"], [href="#-geheim"]) {
     display: none !important;
 }
 
@@ -3472,13 +3546,17 @@ a[href="#grau"]+em {
     font-size: inherit;
 }
 
+/* user col */
+a[href="#mfarbe"]+mark,
 a[href="#hlcol"]+mark {
     background-color: var(--hl-col);
     color: var(--text-normal);
 }
 
 a[href="#hlcol"]+strong,
-a[href="#hlcol"]+em {
+a[href="#mfarbe"]+strong,
+a[href="#hlcol"]+em,
+a[href="#mfarbe"]+em {
     color: var(--hl-col);
     font-family: inherit;
     font-size: inherit;
@@ -3566,7 +3644,7 @@ a[href="#grau-k"]+em,
 a[href="#gray-s"]+strong,
 a[href="#gray-s"]+em {
     background-color: transparent;
-    color: var(--def-blue);
+    color: rgb(128, 128, 128);
     font-family: inherit;
 }
 
@@ -3616,7 +3694,7 @@ a[href="#grau-g"]+em,
 a[href="#gray-l"]+strong,
 a[href="#gray-l"]+em {
     background-color: transparent;
-    color: var(--def-blue);
+    color: rgb(128, 128, 128);
     font-family: inherit;
 }
 
@@ -3665,26 +3743,36 @@ a[href="#sub"]+mark {
 
 a[href="#zitat-de"]+mark::before,
 a[href="#cite-de"]+mark::before {
-    content: "❞";
+    content: "❞ ";
     top: 6px;
     position: relative;
 }
 
 a[href="#zitat-de"]+mark::after,
 a[href="#cite-de"]+mark::after {
-    content: "❝";
+    content: " ❝";
     position: relative;
     top: -2px;
 }
 
 a[href="#zitat-br"]+mark::before,
 a[href="#cite-br"]+mark::before {
-    content: "❝";
+    content: "❝ ";
 }
 
 a[href="#zitat-br"]+mark::after,
 a[href="#cite-br"]+mark::after {
-    content: "❞";
+    content: " ❞";
+}
+
+a[href="#zitat-fr"]+mark::before,
+a[href="#cite-fr"]+mark::before {
+    content: "« ";
+}
+
+a[href="#zitat-fr"]+mark::after,
+a[href="#cite-fr"]+mark::after {
+    content: " »";
 }
 
 a[href^="#zitat-"]+mark,
@@ -3733,19 +3821,21 @@ a[href="#dropcap"]+mark {
     padding-left: 0;
 }
 
-a[href="#spoiler"]+mark {
+a[href="#-geheim"]+mark,
+a[href="#-spoiler"]+mark {
     background-color: #454545;
     border-radius: 0;
     color: transparent;
 }
 
-a[href="#spoiler"]+mark:hover {
+a[href="#-geheim"]+mark:hover,
+a[href="#-spoiler"]+mark:hover {
     background-color: transparent;
     color: var(--text-normal);
 }
 
 /* help */
-a[href="#tips"]+mark {
+a[href="#-tips"]+mark {
     color: transparent;
     background-color: transparent;
     width: 26px;
@@ -3753,16 +3843,16 @@ a[href="#tips"]+mark {
     line-height: 0px;
 }
 
-a[href="#tips"]+mark::after {
+a[href="#-tips"]+mark::after {
     content: "💬";
     color: var(--text-normal);
 }
 
-a[href="#tips"]+mark:hover::after {
+a[href="#-tips"]+mark:hover::after {
     content: "";
 }
 
-a[href="#tips"]+mark:hover {
+a[href="#-tips"]+mark:hover {
     width: max-content !important;
     background-color: gray;
     color: white;
@@ -3772,7 +3862,7 @@ a[href="#tips"]+mark:hover {
     animation: fadeIn 1s;
 }
 
-.is-mobile a[href="#tips"]+mark:hover {
+.is-mobile a[href="#-tips"]+mark:hover {
     display: inline;
     animation: fadeIn 1s;
 }
@@ -3803,96 +3893,162 @@ a[href="#strich-c"]+mark {
     text-decoration: line-through;
 }
 
+.monoch-ttag {
+    --txt-tagc1: var(--azure-sh);
+    --txt-tagc2: var(--azure-sh);
+    --txt-tagc3: var(--azure-sh);
+    --txt-tagc4: var(--azure-sh);
+    --txt-tagc5: var(--azure-sh);
+}
+
+
 /* icon tag */
-a[href="#ppl"]+mark,
-a[href="#loc"]+mark,
-a[href="#tel"]+mark,
-a[href="#read"]+mark,
-a[href="#edit"]+mark,
-a[href="#mail"]+mark,
-a[href="#promo"]+mark,
-a[href="#key"]+mark,
-a[href="#pin"]+mark,
-a[href="#cal"]+mark,
-a[href="#idea"]+mark,
-a[href="#profit"]+mark,
-a[href="#kontakt"]+mark,
-a[href="#ort"]+mark,
-a[href="#brief"]+mark,
-a[href="#lese"]+mark,
-a[href="#bearbeite"]+mark,
-a[href="#schlüssel"]+mark,
-a[href="#merke"]+mark,
-a[href="#kal"]+mark,
-a[href="#idee"]+mark {
-    background-color: azure;
-    color: var(--prop-col);
-    padding: 4px 2px 2px 4px;
+/* rot */
+a[href="#-loc"]+mark,
+a[href="#-ort"]+mark,
+a[href="#-pin"]+mark,
+a[href="#-merke"]+mark,
+a[href="#-cal"]+mark,
+a[href="#-kal"]+mark {
+    background-color: var(--txt-tagc1);
+}
+
+/* orange */
+a[href="#-ppl"]+mark,
+a[href="#-kontakt"]+mark,
+a[href="#-tel"]+mark,
+a[href="#-mail"]+mark,
+a[href="#-brief"]+mark {
+    background-color: var(--txt-tagc2);
+}
+
+/* gelb */
+a[href="#-edit"]+mark,
+a[href="#-arbeit"]+mark,
+a[href="#-key"]+mark,
+a[href="#-schlüssel"]+mark,
+a[href="#-idea"]+mark,
+a[href="#-idee"]+mark {
+    background-color: var(--txt-tagc3);
+}
+
+/* blau */
+a[href="#-check"]+mark,
+a[href="#-prüfe"]+mark,
+a[href="#-read"]+mark,
+a[href="#-lese"]+mark {
+    background-color: var(--txt-tagc4);
+}
+
+/* violett */
+a[href="#-profit"]+mark,
+a[href="#-promo"]+mark {
+    background-color: var(--txt-tagc5);
+}
+
+
+a[href="#-ppl"]+mark,
+a[href="#-loc"]+mark,
+a[href="#-tel"]+mark,
+a[href="#-read"]+mark,
+a[href="#-edit"]+mark,
+a[href="#-mail"]+mark,
+a[href="#-promo"]+mark,
+a[href="#-key"]+mark,
+a[href="#-pin"]+mark,
+a[href="#-cal"]+mark,
+a[href="#-check"]+mark,
+a[href="#-idea"]+mark,
+a[href="#-profit"]+mark,
+a[href="#-kontakt"]+mark,
+a[href="#-ort"]+mark,
+a[href="#-brief"]+mark,
+a[href="#-lese"]+mark,
+a[href="#-arbeit"]+mark,
+a[href="#-schlüssel"]+mark,
+a[href="#-merke"]+mark,
+a[href="#-kal"]+mark,
+a[href="#-prüfe"]+mark,
+a[href="#-idee"]+mark {
+    padding: 2px;
     border-radius: 4px;
-    white-space: nowrap;
     color: black;
     font-weight: bold;
+    min-width: 100px;
 }
 
-a+mark>a.internal-link.is-unresolved {
-    filter: brightness(0.5) !important;
+.theme-light a+mark>a.internal-link.is-unresolved {
+    filter: brightness(0.4) !important;
 }
 
-a[href="#ppl"]+mark::before,
-a[href="#kontakt"]+mark::before {
-    content: "👤 ";
+.theme-dark a+mark>a.internal-link.is-unresolved {
+    filter: brightness(1.4) !important;
 }
 
-a[href="#loc"]+mark::before,
-a[href="#ort"]+mark::before {
-    content: "📍 ";
+a[href^="#-"]+mark::before {
+    filter: drop-shadow(0px 0px 2px black);
 }
 
-a[href="#tel"]+mark::before {
-    content: "📞 ";
+a[href="#-ppl"]+mark::before,
+a[href="#-kontakt"]+mark::before {
+    content: "\1F464\ ";
 }
 
-a[href="#mail"]+mark::before,
-a[href="#brief"]+mark::before {
-    content: "✉️ ";
+a[href="#-loc"]+mark::before,
+a[href="#-ort"]+mark::before {
+    content: "\1F4CD\ ";
 }
 
-a[href="#lese"]+mark::before,
-a[href="#read"]+mark::before {
-    content: "📖 ";
+a[href="#-tel"]+mark::before {
+    content: "\1F4DE\ ";
 }
 
-a[href="#edit"]+mark::before,
-a[href="#bearbeite"]+mark::before {
-    content: "🖋 ";
+a[href="#-mail"]+mark::before,
+a[href="#-brief"]+mark::before {
+    content: "\2709 \FE0F\ ";
 }
 
-a[href="#promo"]+mark::before {
-    content: "📢 ";
+a[href="#-check"]+mark::before,
+a[href="#-prüfe"]+mark::before {
+    content: "\1F50D\ ";
 }
 
-a[href="#schlüssel"]+mark::before,
-a[href="#key"]+mark::before {
-    content: "🔑 ";
+a[href="#-lese"]+mark::before,
+a[href="#-read"]+mark::before {
+    content: "\1F4D6\ ";
 }
 
-a[href="#merke"]+mark::before,
-a[href="#pin"]+mark::before {
-    content: "📌 ";
+a[href="#-edit"]+mark::before,
+a[href="#-arbeit"]+mark::before {
+    content: "\1F58B\ ";
 }
 
-a[href="#kal"]+mark::before,
-a[href="#cal"]+mark::before {
-    content: "📅 ";
+a[href="#-promo"]+mark::before {
+    content: "\1F4E2\ ";
 }
 
-a[href="#idee"]+mark::before,
-a[href="#idea"]+mark::before {
-    content: "💡 ";
+a[href="#-schlüssel"]+mark::before,
+a[href="#-key"]+mark::before {
+    content: "\1F511\ ";
 }
 
-a[href="#profit"]+mark::before {
-    content: "💰 ";
+a[href="#-merke"]+mark::before,
+a[href="#-pin"]+mark::before {
+    content: "\1F4CC\ ";
+}
+
+a[href="#-kal"]+mark::before,
+a[href="#-cal"]+mark::before {
+    content: "\1F4C5\ ";
+}
+
+a[href="#-idee"]+mark::before,
+a[href="#-idea"]+mark::before {
+    content: "\1F4A1\ ";
+}
+
+a[href="#-profit"]+mark::before {
+    content: "\1F4B0\ ";
 }
 
 /*----------------------------------------------------------------
@@ -4028,7 +4184,6 @@ div[data-callout="multi-column"] .callout {
 }
 
 /* === Blank Container "DIV"'s - can be used with Main Multi-Column layout above === */
-
 div[data-callout="blank-container"].callout>.callout-title {
     display: none;
 }
@@ -4216,16 +4371,49 @@ div[data-callout-metadata*="50"].callout {
     background-color: #c9c9c9;
 }
 
-.callout[data-callout-metadata~="col"] {
+.callout[data-callout-metadata~="col"],
+.callout[data-callout-metadata~="farbe"] {
     background-color: var(--call-hlcol);
 }
 
-.callout[data-callout]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
-    [data-callout-metadata~="grau"], [data-callout-metadata~="col"]) {
-    --callout-color: 0 0 139;
-    /* mix-blend-mode: normal; */
-    color: black;
+.callout[data-callout-metadata]:is([data-callout-metadata~="yellow"], [data-callout-metadata~="gelb"], [data-callout-metadata~="red"], [data-callout-metadata~="rot"], [data-callout-metadata~="green"], [data-callout-metadata~="grün"], [data-callout-metadata~="blue"], [data-callout-metadata~="blau"], [data-callout-metadata~="gray"],
+    [data-callout-metadata~="grau"], [data-callout-metadata~="col"], [data-callout-metadata~="farbe"]) :is(.callout-title, .callout-icon .svg-icon, .callout-content) {
+    filter: brightness(0.3);
 }
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="gelb"], [data-callout-metadata~="yellow"]) {
+    border: 4px solid #ebcb63;
+    padding: 4px;
+}
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="rot"], [data-callout-metadata~="red"]) {
+    border: 4px solid #efa37f;
+    padding: 4px;
+}
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="grün"], [data-callout-metadata~="green"]) {
+    border: 4px solid #aacc63;
+    padding: 4px;
+}
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="blau"], [data-callout-metadata~="blue"]) {
+    border: 4px solid #a6c2df;
+    padding: 4px;
+}
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="grau"], [data-callout-metadata~="gray"]) {
+    border: 4px solid #c9c9c9;
+    padding: 4px;
+}
+
+div[data-callout="multi-column"][data-callout-metadata]:is([data-callout-metadata~="farbe"], [data-callout-metadata~="col"]) {
+    border: var(--call-hlcol);
+    padding: 4px;
+}
+
+/* .callout[data-callout="note"] p {
+  color: black;
+} */
 
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
     color: inherit;
@@ -4612,6 +4800,7 @@ body:not(.prg-break) .markdown-preview-view :is(p) {
 /*----------------------------------------------------------------
 footnotes normal
 ----------------------------------------------------------------*/
+
 body:not(.footnote-g) .markdown-preview-section .footnotes {
     position: absolute;
     width: 340px;
@@ -4665,6 +4854,10 @@ body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
 
 .theme-light .is-flashing {
     background-color: white !important;
+}
+
+.show-footnote .footnotes {
+    display: none;
 }
 
 a.footnote-link {
@@ -4783,9 +4976,9 @@ Buttons - Preferences
 }
 
 /* prefs window proportins */
-body:not(.is-phone) .modal:not(.svelte-qhdq3h) {
-    max-width: 75%;
-    max-height: 69%;
+body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
+    min-width: 75%;
+    height: 70%;
     margin-bottom: 10%;
     animation: fadeIn 1.2s;
 }
@@ -5386,7 +5579,6 @@ table {
     table-layout: auto;
     width: unset;
     max-width: 100%;
-    /* width: fit-content; */
 }
 
 .table-c table {
@@ -5992,6 +6184,7 @@ ASIDE NOTES
 /*----------------------------------------------------------------
 IMAGE PLACING
 ----------------------------------------------------------------*/
+
 .is-phone img {
     max-width: 92vw !important;
     width: 100%;
@@ -6305,11 +6498,10 @@ img[alt~="frame-d"] {
 }
 
 /* max width boxes */
-.unified-width .callout:not([data-callout="aside-lh"], [data-callout="aside-rh"], [data-callout=moodboard], [data-callout="multi-column"], [data-callout^=infobox], [data-callout^="framed"]),
+.unified-width .callout[data-callout]:not([data-callout="aside-lh"], [data-callout="aside-rh"], [data-callout=moodboard], [data-callout="multi-column"], [data-callout^=infobox], [data-callout^="framed"]),
 .unified-width pre:is([class^="language-memo"], pre.language-fnote),
 .unified-width .markdown-rendered blockquote {
     width: calc(1vw * var(--max-width-boxes)) !important;
-    max-width: 100%;
 }
 
 /*Image descriptions - breaks text after 500px */
@@ -7187,6 +7379,7 @@ EMBEDS - check
 .theme-dark .file-embed.mod-empty:hover {
     color: black;
 }
+
 
 /*----------------------------------------------------------------
 CANVAS
@@ -8273,6 +8466,10 @@ input[type=checkbox] {
     margin: 0;
 }
 
+input[type=checkbox]:not(:checked) {
+    background: var(--text-accent-special);
+}
+
 /* removes checkmark sign for custom icons */
 input[type=checkbox]:checked:after {
     content: none;
@@ -8289,8 +8486,14 @@ input[type=checkbox]:checked:hover {
     vertical-align: bottom;
 }
 
-.unified-width :is(.HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
-    width: calc(1vw * var(--max-width-boxes)) !important;
+.unified-width :is(.HyperMD-task-line, ul>li.task-list-item)[data-task]:not([data-task=''], [data-task=x], [data-task=X]) {
+    max-width: calc(1.4vw * var(--max-width-boxes)) !important;
+    min-width: calc(1.1vw * var(--max-width-boxes));
+}
+
+li.task-list-item[data-task]:not([data-task='']) .task-list-item-checkbox {
+    margin-right: 4px;
+    margin-left: -1.6em;
 }
 
 :is(.HyperMD-task-line, ul>li.task-list-item)[data-task]:is([data-task="."], [data-task="!"], [data-task="?"], [data-task="+"], [data-task="-"], [data-task="/"], [data-task=">"], [data-task=n], [data-task=i], [data-task="<"], [data-task=q], [data-task=l], [data-task=b], [data-task="#"], [data-task=p], [data-task=e], [data-task=g], [data-task=h], [data-task=s], [data-task=w], [data-task=t], [data-task=a], [data-task=d], [data-task=f], [data-task=m]) {
@@ -8509,54 +8712,91 @@ li.task-list-item[data-task=m] .task-list-item-checkbox {
 }
 
 
+.monoch-admo {
+    --yellow-bg: transparent;
+    --yellow-color: revert;
+    --orange-bg: transparent;
+    --orange-color: revert;
+    --red-bg: transparent;
+    --red-color: revert;
+    --blue-bg: transparent;
+    --blue-color: revert;
+    --gray-bg: transparent;
+    --gray-color: revert;
+    --sea-bg: transparent;
+    --sea-color: revert;
+    --green-bg: transparent;
+    --green-color: revert;
+    --violet-bg: transparent;
+    --violet-color: revert;
+}
+
+body:not(.monoch-admo) {
+    --yellow-bg: rgba(211, 166, 0, 0.2);
+    --yellow-color: #aa8500;
+    --orange-bg: rgba(210, 114, 40, 0.2);
+    --orange-color: #b85000;
+    --red-bg: rgba(195, 32, 105, 0.2);
+    --red-color: #c32069;
+    --blue-bg: rgba(32, 157, 207, 0.2);
+    --blue-color: #0091ca;
+    --gray-bg: rgba(115, 115, 115, 0.2);
+    --gray-color: #737373;
+    --sea-bg: rgba(36, 174, 166, 0.2);
+    --sea-color: #009d95;
+    --green-bg: rgba(50, 163, 30, 0.2);
+    --green-color: #32a31e;
+    --violet-bg: rgba(155, 93, 255, 0.2);
+    --violet-color: #9b5dff;
+}
+
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task='!'], [data-task=l], [data-task=h]),
 ul>li.task-list-item[data-task]:is([data-task='!'], [data-task=l], [data-task=h]) {
-    background-color: rgba(211, 166, 0, 0.2);
-    color: #aa8500;
-    /* color: rgb(211, 166, 0); */
+    background-color: var(--yellow-bg);
+    color: var(--yellow-color);
 }
 
 /*border-radius: 4px;*/
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task='#'], [data-task=e], [data-task=p]),
 ul>li.task-list-item[data-task]:is([data-task='#'], [data-task=e], [data-task=p]) {
-    background-color: rgba(210, 114, 40, 0.2);
-    color: #b85000;
+    background-color: var(--orange-bg);
+    color: var(--orange-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task='<'], [data-task='-'], [data-task=b]),
 ul>li.task-list-item[data-task]:is([data-task='<'], [data-task='-'], [data-task=b]) {
-    background-color: rgba(203, 42, 56, 0.2);
-    color: #c32069;
+    background-color: var(--red-bg);
+    color: var(--red-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=d], [data-task=f], [data-task=m]),
 ul>li.task-list-item[data-task]:is([data-task=d], [data-task=f], [data-task=m]) {
-    background-color: rgba(36, 174, 166, 0.2);
-    color: #009d95;
+    background-color: var(--sea-bg);
+    color: var(--sea-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=q], [data-task=i], [data-task=n]),
 ul>li.task-list-item[data-task]:is([data-task=q], [data-task=i], [data-task=n]) {
-    background-color: rgba(32, 157, 207, 0.2);
-    color: #0091ca;
+    background-color: var(--blue-bg);
+    color: var(--blue-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task='?'], [data-task=s], [data-task='/']),
 ul>li.task-list-item[data-task]:is([data-task='?'], [data-task=s], [data-task='/']) {
-    background-color: rgba(115, 115, 115, 0.2);
-    color: #737373;
+    background-color: var(--gray-bg);
+    color: var(--gray-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=g], [data-task='+'], [data-task=w]),
 ul>li.task-list-item[data-task]:is([data-task=g], [data-task='+'], [data-task=w]) {
-    background-color: rgba(50, 163, 30, 0.2);
-    color: #32a31e;
+    background-color: var(--green-bg);
+    color: var(--green-color);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=t], [data-task=a], [data-task='>']),
 ul>li.task-list-item[data-task]:is([data-task=t], [data-task=a], [data-task='>']) {
-    background-color: rgba(155, 93, 255, 0.2);
-    color: rgb(155, 93, 255);
+    background-color: var(--violet-bg);
+    color: var(--violet-color);
 }
 
 
@@ -8658,11 +8898,11 @@ DIM Windows - toggle
 ----------------------------------------------------------------*/
 /* Dim non-active markdown panes 
 Give the parent element a background color so overlapping panes don't show through */
-/* .workspace-leaf {
-  background-color: inherit;
-} 
+.workspace-leaf {
+    background-color: inherit;
+}
 
- .dim-notes .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] {
+.dim-notes .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] {
     filter: blur(3px) grayscale(50%);
     opacity: 0.35;
 }
@@ -8672,8 +8912,8 @@ Give the parent element a background color so overlapping panes don't show throu
 .dim-notes .workspace-drawer-backdrop {
     opacity: 1 !important;
     backdrop-filter: blur(3px) !important;
-} 
-*/
+}
+
 
 .modal-bg {
     backdrop-filter: brightness(0.4);
@@ -8748,6 +8988,7 @@ div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
 .u-pop {
     color: darkred;
 }
+
 
 /*----------------------------------------------------------------
 Graph 
@@ -9194,25 +9435,25 @@ body:is(.is-phone) .reveal code.language-fnote.is-loaded {
     font-size: x-large;
 }
 
-.reveal a[href="#rot-g"]+mark,
-.reveal a[href="#grün-g"]+mark,
-.reveal a[href="#blau-g"]+mark,
 .reveal a[href="#font-l"]+mark,
 .reveal a[href="#hlcol-l"]+mark,
 .reveal a[href="#red-l"]+mark,
 .reveal a[href="#green-l"]+mark,
-.reveal a[href="#blue-l"]+mark {
+.reveal a[href="#blue-l"]+mark,
+.reveal a[href="#rot-g"]+mark,
+.reveal a[href="#grün-g"]+mark,
+.reveal a[href="#blau-g"]+mark {
     font-size: xxx-large;
 }
 
 .reveal a[href="#font-s"]+mark,
-.reveal a[href="#rot-k"]+mark,
-.reveal a[href="#grün-k"]+mark,
-.reveal a[href="#blau-k"]+mark,
 .reveal a[href="#hlcol-s"]+mark,
 .reveal a[href="#red-s"]+mark,
 .reveal a[href="#green-s"]+mark,
-.reveal a[href="#blue-s"]+mark {
+.reveal a[href="#blue-s"]+mark,
+.reveal a[href="#rot-k"]+mark,
+.reveal a[href="#grün-k"]+mark,
+.reveal a[href="#blau-k"]+mark {
     font-size: x-large;
 }
 
@@ -9554,9 +9795,10 @@ PDF EXPORT
     body .css-settings-manager {
         --background-primary: white;
         --text-normal: black;
+        --text-tag-col: white;
     }
 
-    body.theme-dark code {
+    code {
         --code-normal: #797979;
         --code-comment: #797979;
         --code-function: #008b90;
@@ -9919,7 +10161,6 @@ PDF EXPORT
         page-break-after: avoid;
         text-rendering: optimizeLegibility;
     }
-
 
     /* hr */
     .hide-hr hr {
