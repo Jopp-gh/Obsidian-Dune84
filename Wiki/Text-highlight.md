@@ -8,7 +8,7 @@
 `#blue **Abc**`
 `#gray **Abc**`
 
-red, green, blue, gray - fat
+>red, green, blue, gray - fat
 
 <br>
 
@@ -19,7 +19,7 @@ red, green, blue, gray - fat
 `#blue *Abc*`
 `#gray *Abc*`
 
-red, green, blue, gray - italic
+>red, green, blue, gray - italic
 
 <br>
 
@@ -30,10 +30,12 @@ red, green, blue, gray - italic
 `#blue ==text==`
 `#gray ==text==`
 
-red, green, blue - highlight
-
 **German**
+
 `#rot`, `#grün`,`#blau`,`#grau`
+
+>red, green, blue - highlight
+
 
 <br>
 
@@ -44,9 +46,10 @@ red, green, blue - highlight
 `#red-s **test**` , `#green-s **test**`, `#blue-s **test**`
 `#red-s *test*` , `#green-s *test*`, `#blue-s *test*`
 
-smaller text bold/italic in 3 colors, red, green, blue
+>smaller text bold/italic in 3 colors, red, green, blue
 
 **German**
+
 `#rot-k`,`#grün-k`,`#blau-k`,`#grau-k`
 
 <br>
@@ -54,9 +57,10 @@ smaller text bold/italic in 3 colors, red, green, blue
 `#red-l **test**`, `#green-l **test**`, `#blue-l **test**`
 `#red-l *test*`, `#green-l *test*`, `#blue-l *test*`
 
-larger text bold/italic in 3 colors, red, green, blue
+>larger text bold/italic in 3 colors, red, green, blue
 
 **German**
+
 `#rot-g`,`#grün-g`,`#blau-g`,`#grau-g`
 
 <br>
@@ -121,7 +125,11 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `Words Words #-spoiler ==Words== Words Words`
 
-read hidden text on hover (desktop) or touch (mobile)
+**German**
+
+`Words Words #-geheim ==Words== Words Words`
+
+>read hidden text on hover (desktop) or touch (mobile)
 
 <br>
 
@@ -130,7 +138,7 @@ read hidden text on hover (desktop) or touch (mobile)
 
 `Words Words #-tips ==Words Words Words Words Words== Words Words`
 
-read hidden text on hover (desktop) or touch (mobile)
+>read hidden text on hover (desktop) or touch (mobile)
 
 <br>
 
@@ -139,11 +147,11 @@ read hidden text on hover (desktop) or touch (mobile)
 
 ![citation–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/95e71215-e56c-4e14-82be-152c7881c438)
 
-Example
-
 `my #cite-br ==citation==`, `my #cite-de ==citation==`, `my #cite-fr ==citation==`
 
-**German** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
+**German** 
+
+`mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
 
 <br>
 
@@ -155,6 +163,7 @@ Words #-ppl ==ppl== Words
 Words #-mail ==mail== Words
 Words #-tel ==tel== Words 
 Words #-read ==read== Words
+Words #-check ==check== Words
 Words #-edit ==edit== Words 
 Words #-promo ==promo== Words
 Words #-loc ==loc== Words 
@@ -177,7 +186,8 @@ to add icons to wiki-links or simple text, check out the examples below.
 <br>
 
 **German**
-`#-kontakt`,`#-ort`,`#-brief`,`#-lese`,`#-bearbeite`,`#-schlüssel`,`#-merke`,`#-kal`,`#-idee`
+
+`#-kontakt`,`#-ort`,`#-brief`,`#-lese`, `#-prüfe`, `#-arbeit`,`#-schlüssel`,`#-merke`,`#-kal`,`#-idee`, `#-promo`, `#-profit`
 
 > pay attention **special text tags** start with a hyphen to distinguish them from common tags. **Special text tags** are only visible in edit mode and get replaced in Preview mode with an icon.
 
@@ -196,7 +206,9 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 `#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
-**German** `#strich-a`, `#strich-b`, `#strich-c`
+**German** 
+
+`#strich-a`, `#strich-b`, `#strich-c`
 
 <br>
 
@@ -215,6 +227,7 @@ Pick between 2 indentation modes:
 ![indent–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6)
 
 **German**
+
 `#einzug ==Text==`
 
 <br>
@@ -232,7 +245,7 @@ Pick between 2 indentation modes:
 
 ![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
 
-H1 is a special header in Dune. You can change H1 sizes in two ways:
+>H1 is a special header in Dune. You can change H1 sizes in two ways:
 
 ### global
 to set your H1 size globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Headers>Custom h1 size (PC)`
@@ -258,7 +271,7 @@ to highlight your current paragraph, activate `Preferences>Style Settings>Dune>S
 
 ![help bubbles](https://user-images.githubusercontent.com/48620536/228632119-35088c88-6138-4787-ad7a-f7109edeef33.png)
 
-help bubbles on hover.
+>help bubbles on hover.
 
 ### Usage 
 
