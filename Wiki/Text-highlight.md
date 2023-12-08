@@ -249,9 +249,9 @@ Pick between 2 indentation modes:
 
 **Custom indentation**
 
-![indent–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326)
-
-![indent–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6)
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326" alt="indent–02" width="900">
+<br>
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6" alt="indent–01" width="900">
 
 **German**
 
@@ -322,6 +322,16 @@ Next time you want to add help bubbles to your word(s):
 4. Now, click on this word(s) to expand the html tag and replace  **Insert here your custom help text** in`tiptext">Insert here your custom help text</span></span>` with your own help bubble text. 
 
 **Note**: you cannot style text in **help bubbles**, like bold, italic and so on wont work. Just keep things simple.
+
+<br>
+
+#### Zoom Math formulas
+
+<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f167710b-a114-4b64-936a-ad7f0f16892d" alt="math-zoom" height="300">
+
+just hover over your formulas
+
+>Note: to activate zoom, go to **Settings>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
 
 <br>
 
