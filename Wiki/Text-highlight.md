@@ -325,7 +325,7 @@ Next time you want to add help bubbles to your word(s):
 
 <br>
 
-#### Zoom Math formulas
+## Zoom Math formulas
 
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f167710b-a114-4b64-936a-ad7f0f16892d" alt="math-zoom" height="300">
 
