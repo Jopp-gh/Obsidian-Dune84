@@ -11,8 +11,8 @@ Choose between:
 
 ### Phone
 you can add a profile icon to your phone like so:
-- [custom profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md#Custom-profile-picture)
-- [generic profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md#generic-profile-icon)
+- [custom profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md#Custom-profile-picture)
+- [generic profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md#generic-profile-icon)
 
 <br>
 
