@@ -1,17 +1,5 @@
 # UI improvements
-## phone / tablet
-- new **find-and-replace** dialog
-- bigger buttons, overall more space on screen
-- to **open Obsidians preferences**, swipe from left to right, to open the Right sidepanel, swipe from right to left.
-- to **rename** a note, use the command palette or touch the top-left area on your display
 
-## desktop
-- **rename** your notes with right-click on your active tab and confirm to rename or hover-over your note header, then click to edit or right-click on your file/folder in the *folder-tree view*
-- #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
-- clean interface - most buttons are hidden / semi-hidden by default
-
-  
-## both devices
 - new **find-and-replace** dialog
 - **typesetting alignment** allows you to shape and move your text blocks to the **Right**, the middle **Axis**, **Block** (justified). 
 - **svg mermaid diagrams** -readable diagram elements (arrows, labels, etc) in both dark and light themes. In addition you'll be able to scale and zoom diagrams. Learn more about mermaid diagrams in [this tutorial](https://mermaid.js.org/syntax/flowchart.html), to see some examples [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Mermaid%20diagrams.md)
@@ -31,7 +19,30 @@
 - pick up to **4 theme color schemes** (2 for day and 2 for night) or make your own theme colors, see **Style Settings>Dune>Colors>Custom color**
 - and much more… please see a full list of features [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 
-### Garble Interface
+### Phone / Tablet
+- new **find-and-replace** dialog
+- bigger buttons, overall more space on screen
+- to **open Obsidians preferences**, swipe from left to right, to open the Right sidepanel, swipe from right to left.
+- to **rename** a note, use the command palette or touch the top-left area on your display
+
+### Desktop
+- **rename** your notes with right-click on your active tab and confirm to rename or hover-over your note header, then click to edit or right-click on your file/folder in the *folder-tree view*
+- #desktop: to display your **status bar**, hover over the bottom-right corner (re-enable in **Style Settings>Dune>Show ui elements>show status bar**, if desired)
+- clean interface - most buttons are hidden / semi-hidden by default
+
+<br>
+
+## Font activation / refresh (STYLE SETTINGS)
+if your fonts do not load in your notes, refresh the relative font by deleting and re-entering some character in `Preferences>Style Settings>Dune>Fonts>Typesets` or `Preferences>Style Settings>Dune>Fonts>Extra Fonts`
+
+> use the popup button to switch quickly bw your font presets
+
+### Global
+to change headers and character fonts to your preferred types, go to : `Preferences>Style Settings>Dune>Fonts>Typesets>`
+
+<br>
+
+## GARBLE INTERFACE
 If you get lost with a garbled interface, follow this steps: 
 
 > 1. Always use keyboard shortcuts to open Obsidians Preferences, otherwise select **Preferences** from the top menu bar of Obsidian
