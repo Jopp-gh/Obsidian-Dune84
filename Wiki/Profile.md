@@ -1,16 +1,27 @@
 # Profile
-## Pick your profile style
+## Pick your profile style 
 
+### Desktop / Tablet
 Choose between:
 
 - profile picture (**squared**)
 - profile picture (**banner**)
 - compact Vault Name (**small Name**)
-- standard Vault Name (**default**)
+- standard Vault Name (**default**) 
+
+### Phone
+you can add a profile icon to your phone like so:
+- [custom profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md#Custom-profile-picture)
+- [generic profile icon](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Profile.md#generic-profile-icon)
 
 <br>
 
-### how to add a profile picture
+#### Generic profile Icon
+to add a generic icon to your phone profile, go to **Style Settings>Dune>Pictures>Profile picture>Vault Profile - (Mobile)**
+
+<br>
+
+#### Custom profile picture
 
 1. find a *black & white icon* / *color icon*, **png file**
 2. Make sure your url is correct and if you are allowed to link icons back to Obsidian. To check, type in `![my Pict](https://url/to/your/pic.png)` in a note and give Obsidian a few moments to load some icon from the web (pay attention to the "!" In front of your link)
@@ -22,6 +33,7 @@ Choose between:
 ### Drag n Drop area
 
 If you activated a profile picture (eg. simple / banner type), drag your file(s) on top of your *profile picture* and a blue drag n drop area will appear, where you can release your files/folders.
+
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
