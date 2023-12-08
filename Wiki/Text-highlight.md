@@ -81,6 +81,10 @@ First, you've to specify your desired font families, go to `Preferences>Style Se
 
 **Options**: `#font-1`, `#font-2`,`#font-3`, `#font-4`
 
+**German**
+
+`#schrift-1`, `#schrift-2`,`#schrift-3`, `#schrift-4`
+
 <br>
 
 ## Small - Large font sizes
@@ -88,6 +92,10 @@ First, you've to specify your desired font families, go to `Preferences>Style Se
 ![new-features–01b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3d14cd11-3ddb-4698-b74e-c9278fb3d672)
 
 `#font-s ==Small==` Normal `#font-l ==Large==`
+
+**German**
+
+`#schrift-k ==klein==` `#schrift-g ==GROSS==`
 
 <br>
 
@@ -109,6 +117,22 @@ to set your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra
 `#hlcol-l *quick*` = custom coloured inline italic - large
 
 `#hlcol-l **quick**` = custom coloured inline bold - large
+
+**German**
+
+`#mfarbe *quick*` = custom coloured inline italic 
+
+`#mfarbe **lazy log**` = custom coloured inline bold
+
+`#mfarbe ==brown==` = custom inline marker highlight
+
+`#mfarbe-k *quick*` = custom coloured inline italic - small
+
+`#mfarbe-k **quick**` = custom coloured inline bold - small
+
+`#mfarbe-g *quick*` = custom coloured inline italic - large
+
+`#mfarbe-g **quick**` = custom coloured inline bold - large
 
 <br>
 
@@ -156,22 +180,23 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 <br>
 
 ## Icon tags
-![icon-tags](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/b73b0e9c-a16f-4621-97a9-ed0c4895441a)
+
+![icontags-leg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/89dc4b88-a354-4a4a-8db5-32c6cd4cde14)
 
 ```
-Words #-ppl ==ppl== Words 
-Words #-mail ==mail== Words
-Words #-tel ==tel== Words 
-Words #-read ==read== Words
-Words #-check ==check== Words
-Words #-edit ==edit== Words 
-Words #-promo ==promo== Words
-Words #-loc ==loc== Words 
-Words #-key ==key== Words 
-Words #-pin ==pin== Words 
-Words #-cal ==cal== Words 
-Words #-idea ==idea== Words 
-Words #-profit ==profit== Words
+Words #-ppl ==Andrea== 
+Words #-mail ==some@provider.com== 
+Words #-tel ==0034 658945== 
+Words #-read ==novel X== 
+Words #-edit ==journal== 
+Words #-promo ==newsletter== 
+Words #-loc ==restaurant X==
+Words #-key ==keywords== 
+Words #-pin ==remember X==
+Words #-cal ==today X== 
+Words #-idea ==new product==
+Words #-profit ==ROI== 
+Words #-check ==research X== 
 ```
 
 ### Usage
@@ -223,7 +248,9 @@ Pick between 2 indentation modes:
 > in simple mode, you don't have to add any text tag (`#indent`) to your paragraphs. 
 
 **Custom indentation**
+
 ![indent–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326)
+
 ![indent–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6)
 
 **German**
