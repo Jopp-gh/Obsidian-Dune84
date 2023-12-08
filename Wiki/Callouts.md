@@ -82,16 +82,54 @@ Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callou
 ```
 Sidebox to visualize quickly most important details, like pictures, text and links. **Options:** `infobox-l`, `infobox-r`
 
-## Framed
+<br>
+
+## Columns in Gutter 
+
+![columns–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4f441c9a-55d5-4b56-b372-29556ec4e0e9)
 
 ```
-> [!framed-l] 
+>[!framed-lg]
+Lorem…
+```
+
+![columns–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/53d5ba80-c273-4fbf-a579-cd3004887986)
+
+```
+>[!framed-rg]
+Lorem…
+```
+
+>Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
+
+You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
+Basically, with this callout you can add notes to your left or right -side gutter.
+
+<br>
+
+## Callout Boxes
+
+![framed-cite](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2be78884-c3a0-4e84-8a72-6c3419e5d67b)
+
+```
+> [!framed-r | cite] 
 >  description
 ```
 
-Options: framed-r, framed-l
+Options: `framed-r`, `framed-l`/`framed`
 
-embed your descriptions in boxes and place them on the left or right side of your note. You can add a soft background too, eg >[[!framed-r | bg]]
+ <br>
+ 
+embed your descriptions in boxes and place them on the left or right side of your note. <br>
+By default, this callout has no background, but you can add a background if you add following meta-tags:
+
+- add a soft background: `>[[!framed | bg]]`,`>[[!framed-r | bg]]`
+- add a soft background and a citation Symbol:  `>[[!framed | cite]]`,`>[[!framed-r | bg]]`
+
+ <br>
+ 
+>Note: if Autozoom is active you can zoom into your `>[[!framed-r | bg]]` or `>[[!framed-r | cite]]` <br>
+>to activate Autozoom go to `Settings>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams`
 
 <br>
 
@@ -102,7 +140,10 @@ embed your descriptions in boxes and place them on the left or right side of you
 > Lorem ipsum etc
 ```
 Callout to shorten longer documents. 
-**Options:** `> [!read-more]-`, `> [!weiterlesen]-`
+
+**German**
+
+`> [!weiterlesen]-`
 
 > **Tip**: do not forget to add the minus after the callout, othewise this callout won't fold
 
@@ -131,6 +172,11 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
+
+**German**
+
+`>[schrift-g]`
+
 ![new-features–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/32ad5dea-1489-421a-b529-81725fc66b17)
 
 ```
@@ -138,6 +184,12 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
+
+**German**
+
+`>[schrift-k]`
+
+<br>
 
 ## Continuous text flow (around boxes, images)
 for a continuous text flow, you can use 2 methods to deal with line breaks:  **merge** (ignore line breaks) or **break**  (respect line breaks) 
@@ -153,7 +205,6 @@ to merge or break lines/paragraphs locally add following to your yaml header:
 - add `cssclass: break-prg` (in combination with `Line break` **off**)
 - or merge paragraphs individually, using the `>[!merge]` callout (in combination with `Line break` **on**)
 
-
 <br>
 
 ## Merge Paragraphs Callout
@@ -166,27 +217,6 @@ to merge or break lines/paragraphs locally add following to your yaml header:
 ```
 
 If line break is enabled, pay attention on how to merge paragraphs individually: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The paragraphs using the merge callout are highlighted with  **A, B** and **C**
-
-## Columns in Gutter 
-
-![columns–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4f441c9a-55d5-4b56-b372-29556ec4e0e9)
-
-```
->[!framed-lg]
-Lorem…
-```
-
-![columns–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/53d5ba80-c273-4fbf-a579-cd3004887986)
-
-```
->[!framed-rg]
-Lorem…
-```
-
->Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
-
-You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
-Basically, with this callout you can add notes to your left or right -side gutter.
 
 <br>
 
