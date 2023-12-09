@@ -1,11 +1,11 @@
-# Cheatsheet - cssclasses
+# CHEATSHEET - CSSCLASSES
 ```
-cssclasses are case sensitive eg. Banner-a ≠ banner-a
+cssclasses are case sensitive eg. `Banner-a` ≠ `banner-a`
 ```
 
-## Tables
+## TABLES
 
-### Table alignment
+### TABLE ALIGNMENT
 
 `cssclass: table-c`
 
@@ -15,27 +15,25 @@ center tables
 
 equally distribuited columns
 
-`cssclass: table-wide` 
+`cssclass: table-wide`
 
 stretch tables
 
-`cssclass: table-hl` 
+`cssclass: table-hl`
 
 headless tables
 
-### Table colors
-`cssclass: table-xyr`, `cssclass: table-xyg`, `cssclass: table-xyb`, `cssclass: table-xym`, `cssclass: table-xy-col`
+### TABLE COLORS
 
-tint for header and first column - red / green / blue / monochrome
+`cssclass: table-r`, `cssclass: table-g`, `cssclass: table-b`, `cssclass: table-m`, `cssclass: table-y`, `cssclass: table-col`
 
+classic header tint - red / green / blue / monochrome / yellow / custom
 
-`cssclass: table-r`, `cssclass: table-g`, `cssclass: table-b`, `cssclass: table-y`, `cssclass: table-col`
+`cssclass: table-xyr`, `cssclass: table-xyg`, `cssclass: table-xyb`, `cssclass: table-xym`, `cssclass: table-xy`, `cssclass: table-xy-col`
 
-tint for header - red / green / blue
+double-header tint - red / green / blue / monochrome / yellow / custom
 
-
-
-### Table highlights
+### TABLE HIGHLIGHTS
 
 `cssclass: table-fc`
 
@@ -54,15 +52,15 @@ highlight alternate columns
 highlight last row
 
 
-### Special tables
-`cssclass: contacts` 
+### SPECIAL TABLES
+`cssclass: contacts`
 
 Contacts
 
-`cssclass: recipes` 
+`cssclass: recipes`
 
 Recipes
- 
+
 `cssclass: movies`
 
 Movies
@@ -73,53 +71,67 @@ Academia
 
 <br>
 
-## Poetry
+## FONTS
 
-`cssclass: poetry`
+`cssclass: ftheme-1` , `cssclass: ftheme-2`, `cssclass: ftheme-3`, `cssclass: ftheme-4`
 
-changes font and text alignment
+change font family of your active note
 
-`cssclass: wave-a`, `cssclass: wave-b`, `cssclass: wave-c`, `cssclass: wave-d`, `cssclass: wave-e`,`cssclass: wave-f`, `cssclass: wave-g`
+`cssclass: center-header`
 
-poetry - horizontal line styles
+center all headers of your active note
 
-## Simple Horizontal lines
+`cssclass: h1-3`,`cssclass: h1-4`,`cssclass: h1-5`,`cssclass: h1-6`,`cssclass: h1-7`,`cssclass: h1-8`,`cssclass: h1-9`,
 
-`cssclass: fade` , `cssclass: fade-2`, `cssclass: fade-3`, `cssclass: stars` 
+scale h1 levels
 
-simple hr
-
-## Images
-
-### Banner
-`cssclass: banner-a` and `![[image.png|banner-a]]`
-`cssclass: banner-b` and `![[image.png|banner-b]]`
-
-### Vector images
-
-`cssclass: svg-50`, `cssclass: svg-100`, `cssclass: svg-150`, `cssclass: svg-200`
-
-zoom svg
-
-### Image description
-`cssclass: icap-25`, `cssclass: icap-35`, `cssclass: icap-45`, `cssclass: icap-55`, `cssclass: icap-65`, `cssclass: icap-75`
-
-changes the text block width of (simple) image descriptions
-
-## Typesetting - text alignment
+### TYPESETTING - TEXT ALIGNMENT
 
 `cssclass: align-r`
 `cssclass: align-a`
 `cssclass: align-b`
 
-(**Slides** needs globally enabled `alignment-typesettings`, see *Dune preferences*)
+(**Slides** needs globally enabled alignment-typesettings, see *Dune preferences*)
 
-## Extra large h1
-`cssclass: h1-3`, `cssclass: h1-4`, `cssclass: h1-5`, `cssclass: h1-6`, `cssclass: h1-7`, `cssclass: h1-8`     
+<br>
 
->**Note**: there is no `h1-1` or `h1-2` Because the default h1 header size starts from 2em
+### HORIZONTAL LINES
 
-## Hide note
+`cssclass: fade` , `cssclass: fade-2`, `cssclass: fade-3`, `cssclass: stars`
+
+simple horizontal lines
+
+`cssclass: wave-a`, `cssclass: wave-b`, `cssclass: wave-c`, `cssclass: wave-d`, `cssclass: wave-e`,`cssclass: wave-f`, `cssclass: wave-g`
+
+beautiful decorations
+
+<br>
+
+## IMAGES
+
+### BANNER
+`cssclass: banner-a` and `![[image.png|banner-a]]`
+`cssclass: banner-b` and `![[image.png|banner-b]]`
+
+banner
+
+### PICTURE CAPTURE
+
+`cssclass: icap-25`, `cssclass: icap-35`, `cssclass: icap-45`, `cssclass: icap-55`, `cssclass: icap-65`, `cssclass: icap-75`, `cssclass: icap-85`,
+
+adjust max line length before carriage return of picture captions
+
+### VECTOR IMAGES
+
+`cssclass: svg-20`,`cssclass: svg-30`,`cssclass: svg-40`,`cssclass: svg-50`,`cssclass: svg-60`,`cssclass: svg-70`,`cssclass: svg-80`,`cssclass: svg-90`
+
+scale svg diagrams
+
+`cssclass: zoom-50`, `cssclass: zoom-60`,`cssclass: zoom-70`,`cssclass: zoom-80`,`cssclass: zoom-90`
+
+zoom levels for diagrams
+
+## MISC
 `cssclass: hide-note`
 
->**Note**: to hide Obsidians User Interface, check Dune's preferences.
+Hides your active note.
