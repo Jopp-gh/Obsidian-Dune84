@@ -1363,8 +1363,8 @@ settings:
     id: show-prop
     title: Yaml header
     title.de: Yaml Kopfzeile
-    description: needs 'Editor - Properties in document - Visible / Source' 
-    description.de: braucht 'Editor - Properties in document - Visible / Source' 
+    description: restores standard, otherwise 'Editor - Properties in document - Visible / Source' must be active
+    description.de: Wiederherstellung Standard, ansonsten muss 'Editor - Properties in document - Visible / Source' aktiv sein
     type: class-toggle
   -
     id: show-strikeout
@@ -1416,9 +1416,9 @@ settings:
   -
     id: writer-mode
     title: Writer mode (edit mode) 
-    description: fade inactive Lines and shortens inactive Lines
+    description: fades and shortens inactive Lines
     title.de: Schriftsteller Modus (Schreibmodus)
-    description.de: Verschleiere inaktive Zeilen und kürzt inaktive Zeilen
+    description.de: Verschleiere und kürze inaktive Zeilen
     type: class-toggle
   -
     id: monoch-ttag
@@ -5113,12 +5113,17 @@ body:not(.is-phone) .style-settings-collapse-indicator {
 }
 
 /* NAVBAR - simple */
-.view-action:nth-last-child(2) svg:is(.lucide-book-open) {
-    border: 1px dashed;
+.view-action svg:is(.lucide-book-open) {
+    color: var(--text-accent-special);
 }
 
 .view-action svg:is(.lucide-bookmark) {
-    fill: transparent;
+    fill: none;
+}
+
+.view-action.mod-bookmark {
+    --icon-color: var(--text-muted);
+    --icon-color-hover: var(--text-muted);
 }
 
 .is-phone .mobile-navbar-actions .clickable-icon svg.svg-icon.lucide-plus-circle,
@@ -9184,6 +9189,15 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-animate:hover,
 body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-open:hover {
     opacity: 1;
+}
+
+.is-mobile .graph-controls {
+    top: 2.5em;
+    right: 0;
+}
+
+.is-mobile .graph-controls-button {
+    opacity: 0.5;
 }
 
 /*----------------------------------------------------------------
