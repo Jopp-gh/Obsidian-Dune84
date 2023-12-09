@@ -1,23 +1,24 @@
 # UI improvements
 
-- **typesetting alignment** allows you to shape and move your text blocks to the **Right**, the middle **Axis**, **Block** (justified). 
-- **svg mermaid diagrams** -readable diagram elements (arrows, labels, etc) in both dark and light themes. In addition you'll be able to scale and zoom diagrams. Learn more about mermaid diagrams in [this tutorial](https://mermaid.js.org/syntax/flowchart.html), to see some examples [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Mermaid%20diagrams.md)
-- innovative **tag modifiers** to change font size, font color, font highlight, add subscript and superscript strings, [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md)
-- innovative actionable **list bullets** - forget your old-fashion list bullets, because you wont need them anymore. Now, Checkmark buttons look similar. `- [ ] some text`. 
-- **checkboxes without strikeout** - Dune disables strikeout for completed tasks, if you prefer default looks, go to `Preferences>Style Settings>Dune>Show ui elements>Show strikeout line (checklists)`
+- **Banners, picture placements and picture arrangements** eg. add footer or top -banners, add moodboards masonry, place pictures on page and more: [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
+- auto-zoom on images, diagrams (mermaid, svg), math formulas `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams`
+- new **typesetting alignment** allows you to shape and move your text blocks to the **Right**, the middle **Axis** or justified **Block** 
+- add **linebreak** placeholders, [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
+- add **pagebreak** placeholders. This feature is enabled by default, just add a new paragraph, 3 hypens and then again a paragraph. To check, go to: `Preferences>Style Settings>Dune>Fonts>Spacing>Line>Page counter - Pdf`
+- innovative **tag modifiers** to change font size, font color, font highlight, add subscript and superscript strings and much, much more. [See here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md)
+- innovative actionable **list bullets** - forget your old-fashion list bullets, because you wont need them anymore. Checkmark buttons replace them completely, they look similar, now `- [ ] some text`
+- new **checkboxes without strikeout** - Dune disables strikeout for completed tasks, if you prefer default looks, go to `Preferences>Style Settings>Dune>Show ui elements>Show strikeout line (checklists)`
 - A powerful **Timeline callout** to take your checklists and notes to the next level - [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#timeline)
-- **Banners, picture placements and picture arrangements** eg. add footer or top banners, add moodboards masonry, place pictures and more: [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Pictures.md)
-- auto-zoom on images and diagrams `Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams`
-- add linebreak placeholders
-- add **pagebreak** placeholders
-- add beautiful horizontal lines, (decorations) to break chapters, paragraphs. For examples, [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
-- variety of **table configurations** to change colors, table highlights (Highlight first, last, alternate column or the last row), special tables (recipes, movie list, contact list) [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md) 
+- **svg mermaid diagrams** -readable diagram elements (arrows, labels, etc) in both dark and light themes. In addition you'll be able to scale and zoom diagrams. Learn more about mermaid diagrams in [this tutorial](https://mermaid.js.org/syntax/flowchart.html), to see some examples [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Mermaid%20diagrams.md). To enable this feature, you need to install the [Dune-Mermaid.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css) snippet
+- add a variety of **table configurations** to change colors, table highlights (Highlight first, last, alternate column or the last row), special tables (recipes, movie list, contact list) [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Tables.md) 
+- add a variety of **beautiful decorations** (horizontal lines) to break chapters, paragraphs. For examples, [see here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md)
 - **semantic folder tree** (icons and colors) to visually structure your folders in Obsidian, [see here ](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Folders.md)
-- to **garble** your note add `cssclass: hide-note` as cssclass and to garble your App interface, see `Preferences>Style Settings>Dune>Show ui elements>Extra toggles`
+- **garble** your notes, to do so, add `cssclass: hide-note` as cssclass and to garble your App interface, see `Preferences>Style Settings>Dune>Show ui elements>Extra toggles`
 - personalize your vault with a true [**Profile picture**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Profile.md) (see **Style Settings>Dune>Pictures**)
 - try between 4 varied **theme color schemes** (2 for day and 2 for night) or make it your own, simply go to: **Settings>Style Settings>Dune>Colors>Custom color**
-- and much more… for a full list of features, see [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
 - new **find-and-replace** dialog
+- and much more… for a full list of features, see [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and [here](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
+
 
 ### Phone / Tablet
 - bigger buttons, overall more space on screen
