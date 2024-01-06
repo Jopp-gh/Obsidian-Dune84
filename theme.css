@@ -6,9 +6,9 @@ id: obsidian-joval-theme
 settings:
   -
     id: all-fonts
-    title: 𝞪 Fonts
+    title: "𝞪 Fonts"
     description: manage fonts
-    title.de: 𝞪 Schriften
+    title.de: "𝞪 Schriften"
     description.de: Schriften verwalten
     type: heading
     level: 1
@@ -17,8 +17,8 @@ settings:
     id: common-fonts
     title: Typesets
     title.de: Schriftsätze
-    description: Obsidian (–), Standard (1), Modern (2), Poetry (3), Dashboard (4)
-    description.de: Obsidian (–), Standard (1), Modern (2), Poesie (3), Startseite (4)
+    description: (–) Obsidian, (1) Standard, (2) Modern, (3) Poetry, (4) Dashboard
+    description.de: (–) Obsidian, (1) Standard, (2) Modern, (3) Poesie, (4) Startseite
     type: heading
     level: 2
     collapsed: true
@@ -30,19 +30,19 @@ settings:
     default: fontmod-0
     options:
         - 
-            label: –
+            label: "–"
             value: fontmod-0
         - 
-            label: 𝞪-1
+            label: "𝞪-1"
             value: fontmod-1
         - 
-            label: 𝞪-2
+            label: "𝞪-2"
             value: fontmod-2
         -
-            label: 𝞪-3
+            label: "𝞪-3"
             value: fontmod-3
         -
-            label: 𝞪-4
+            label: "𝞪-4"
             value: fontmod-4
   -
     id: font-standard
@@ -54,7 +54,7 @@ settings:
     id: standard-initial
     title: Initial
     description: (default = Louis George Cafe)
-    title.de: Initialie
+    title.de: Initiale
     description.de: (Standard = "Louis George Cafe")
     type: variable-text
     default: '"Louis George Cafe", "Century Gothic", Inter, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
@@ -91,7 +91,7 @@ settings:
     id: modern-initial
     title: Initial
     description: (default = Optima-ExtraBlack)
-    title.de: Initialie
+    title.de: Initiale
     description.de: (Standard = Optima-ExtraBlack)
     type: variable-text
     default: 'Optima-ExtraBlack, HelveticaNeue-Bold, GillSans-Light' 
@@ -128,7 +128,7 @@ settings:
     id: poetry-initial
     title: Initial
     description: (default = DieterCaps)
-    title.de: Initialie
+    title.de: Initiale
     description.de: (Standard = "Manuskript Gothisch")
     type: variable-text
     default: '"Manuskript Gothisch", DieterCaps, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"' 
@@ -167,7 +167,7 @@ settings:
     id: custom-initial
     title: Initial
     description: (default = Sengoa)
-    title.de: Initialie
+    title.de: Initiale
     description.de: (Standard = Sengoa)
     type: variable-text
     default: 'Sengoa, "Century Gothic", Inter, Roboto, Helvetica' 
@@ -180,7 +180,7 @@ settings:
   - 
     id: custom-font-c
     title: Character Font
-    title.de: Characterschrift
+    title.de: Charakterschrift
     type: variable-text
     default: '"Century Gothic", Inter, Roboto, Helvetica'
   -
@@ -204,51 +204,51 @@ settings:
     collapsed: true
   -
     title: Typesetting alignment (global)
-    description: left ●●○, right ○●●, axis ○●○, block ●●●
+    description: '(●●○) left, (○●●) right, (○●○) axis, (●●●) block'
     title.de: Schriftsatzart (global)
-    description.de: Linksbündiger ●●○, Rechtsbündiger ○●● -Flattersatz, Axialsatz ○●○, Blocksatz ●●●
+    description.de: '(●●○) Linksbündiger, (○●●) Rechtsbündiger -Flattersatz, (○●○) Axialsatz, (●●●) Blocksatz'
     id: glob-align
     type: class-select
     allowEmpty: false
     default: align-l
     options:
         - 
-            label: ●●○
+            label: "●●○"
             value: align-l
         - 
-            label: ○●●
+            label: "○●●"
             value: align-r
         -
-            label: ○●○
+            label: "○●○"
             value: align-a
         -
-            label: ●●●
+            label: "●●●"
             value: align-b
   -
     id: add-pdf-pages
     title: Page counter - Pdf
-    description: '-  default (Obsidian),  ↩︎  pagebreak (no counter),  ↑  pagebreak (counter on top)'
+    description: '(–) Obsidian, (↩︎) pagebreak - no counter, (↑) pagebreak - counter on top'
     title.de: Seitenzahl - Pdf
-    description.de:  '-  Standard (Obsidian),  ↩︎  Umbruch (keine Zahl),  ↑  Umbruch (Zahl Oben)'
+    description.de:  '(–) Obsidian, (↩︎) Umbruch - keine Zahl, (↑) Umbruch - Zahl Oben'
     type: class-select
     allowEmpty: false
     default: pdf-counter-2
     options:
         - 
-            label: "-"
+            label: "–"
             value: pdf-counter-1
         - 
             label: "↩︎"
             value: pdf-counter-2
         -
-            label: ↑
+            label: "↑"
             value: pdf-counter-3
   -
     id: pdf-pagebr
     title: Pagebreak - Pdf
     title.de: Seitenumbruch - Pdf
     description: Note, to insert a pagebreak, add 3 hypens (minus - symbol) surrounded by a blank paragraph before and after. <br><br> The Option **Page counter - Pdf** uses horizontal lines to break pages, if the switch is set to **↩︎** or **↑**.<br><br>Default is **↩︎** (pagebreak without page counter)
-    description.de: Beachte, um einen Seitenumbruch einzufügen schreibe drei Trennstriche (Minus - Symbol) umgeben von einer Leerzeile bevor und danach. <br><br>Die Option **Seitenzahl - Pdf** nutzt horizontale Linien um zu bestimmen, wo ein Seitenumbruch erfolgen soll, falls der Schalter auf **↩︎** oder **↑** eingestellt wurde.<br><br>Standard ist **↩︎** (Seitenumbruch ohne Seitenzahl)
+    description.de: Beachte, um einen Seitenumbruch einzufügen, schreibe drei Trennstriche (Minus - Symbol) umgeben von je einer Leerzeile bevor und danach. <br><br>Die Option **Seitenzahl - Pdf** benutzt horizontale Linien um zu bestimmen, wo ein Seitenumbruch erfolgen soll, falls der Schalter auf **↩︎** oder **↑** eingestellt wurde.<br><br>Standard ist **↩︎** (Seitenumbruch ohne Seitenzahl)
     type: info-text
     markdown: true
   -  
@@ -307,7 +307,7 @@ settings:
   -
     id: scale-smaller-f
     title: Scale small character fonts
-    title.de: Kleine Characterschriften skalieren
+    title.de: Kleine Charakterschriften skalieren
     type: variable-number-slider
     format: px
     default: 12
@@ -366,6 +366,42 @@ settings:
     max: 200
     step: 20
   -  
+    id: header-space
+    title: Headers
+    title.de: Kopfzeilen
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: custom-margin-above-header
+    title: Custom Margin Above Header
+    title.de: Überschriften Abstand-Oben
+    description: (20)
+    type: variable-number-slider
+    format: px
+    default: 0
+    min: 0
+    max: 30
+    step: 2
+  -
+    id: custom-margin-below-header
+    title: Custom Margin Below Header
+    title.de: Überschriften Abstand-Unten
+    description: (14)
+    type: variable-number-slider
+    format: px
+    default: 0
+    min: 0
+    max: 30
+    step: 2
+  -
+    id: center-header
+    title: Centered headers
+    description: center all headers 
+    title.de: Überschriften mittig
+    description.de: alle Überschriften mittig ausrichten
+    type: class-toggle
+  -  
     id: break-space
     title: Line
     title.de: Zeilen
@@ -409,42 +445,6 @@ settings:
     description: ignore blank lines
     title.de: Umbruch - Leerzeile
     description.de: ignoriere Leerzeilen
-    type: class-toggle
-  -  
-    id: header-space
-    title: Headers
-    title.de: Kopfzeilen
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: custom-margin-above-header
-    title: Custom Margin Above Header
-    title.de: Überschriften Abstand-Oben
-    description: (20)
-    type: variable-number-slider
-    format: px
-    default: 0
-    min: 0
-    max: 30
-    step: 2
-  -
-    id: custom-margin-below-header
-    title: Custom Margin Below Header
-    title.de: Überschriften Abstand-Unten
-    description: (14)
-    type: variable-number-slider
-    format: px
-    default: 0
-    min: 0
-    max: 30
-    step: 2
-  -
-    id: center-header
-    title: Centered headers
-    description: center all headers
-    title.de: Überschriften mittig
-    description.de: alle Überschriften mittig ausrichten
     type: class-toggle
   -
     id: extra-fonts
@@ -503,9 +503,9 @@ settings:
     default: 'AbadiMT-CondensedLight, Helvetica, "Century Gothic", Roboto, Arial, sans-serif'
   -
     id: img-options
-    title: ✦ Pictures
+    title: "✦ Pictures"
     description: manage pictures
-    title.de: ✦ Bilder
+    title.de: "✦ Bilder"
     description.de: Bilder verwalten
     type: heading
     level: 1
@@ -558,7 +558,7 @@ settings:
     title: Svg zoom factor (on hover or click)
     title.de: Svg Vergrößerung (beim überfahren oder anklicken)
     description: keep Svg zoom factor higher than Svg scale 
-    description.de: Svg Vergrößerung muss höher sein als Svg Größe 
+    description.de: Svg Vergrößerungsfaktor muss höher sein als die Svg-Größe 
     type: variable-number-slider
     default: 80
     min: 50
@@ -814,25 +814,25 @@ settings:
     collapsed: true
   -
     title: Vault Profile
-    description: Square (■), Banner (🀰), Standard (𝑵 Normal), small (𝑵 Minimal)
+    description: '(■) Square, (🀰) Banner, (𝑵 Normal) Standard , (𝑵 Minimal) Small'
     title.de: Vault Profil
-    description.de: Quadrat (■), Banner (🀰), Standard (𝑵 Normal), klein (𝑵 Minimal)
+    description.de: '(■) Quadrat, (🀰) Banner, (𝑵 Normal) Standard, (𝑵 Minimal) Klein' 
     id: vault-name-s
     type: class-select
     allowEmpty: false
     default: vault-name-f
     options:
         -
-            label: ■
+            label: "■"
             value: vault-name-a
         -
-            label: 🀰
+            label: "🀰"
             value: vault-name-b
         -
-            label: 𝑵 Normal
+            label: "𝑵 Normal"
             value: vault-name-e
         -
-            label: 𝑵 Minimal
+            label: "𝑵 Minimal"
             value: vault-name-f
   -
     title: Vault Profile - (Mobile)
@@ -899,9 +899,9 @@ settings:
     default: "url('')"
   -
     id: all-colors
-    title: ⫸ Colors
+    title: "⫸ Colors"
     description: manage colors
-    title.de: ⫸ Farben
+    title.de: "⫸ Farben"
     description.de: Farben verwalten
     type: heading
     level: 1
@@ -1283,38 +1283,38 @@ settings:
     level: 2
     collapsed: false
   -
-    title: ○ Light Theme colors
-    title.de: ○ Helle Farben
+    title: "○ Light Theme colors"
+    title.de: "○ Helle Farben"
     id: switch-dcol
     type: class-select
     allowEmpty: false
     default: col-mod-a
     options: 
         - 
-            label: Dune-1
+            label: "Dune-1"
             value: col-mod-a
         -
-            label: Dune-2
+            label: "Dune-2"
             value: col-mod-b
         -
-            label: Dune-3
+            label: "Dune-3"
             value: col-mod-c
   -
-    title: ● Dark Theme colors
-    title.de: ● Dunkle Farben
+    title: "● Dark Theme colors"
+    title.de: "● Dunkle Farben"
     id: switch-lcol
     type: class-select
     allowEmpty: false
     default: col-mod-d
     options: 
         -
-            label: Dune-4
+            label: "Dune-4"
             value: col-mod-d
         -
-            label: Dune-5
+            label: "Dune-5"
             value: col-mod-e
         -
-            label: Dune-6
+            label: "Dune-6"
             value: col-mod-f
   -
     title: Dim Pictures
@@ -1327,26 +1327,26 @@ settings:
     default: dark-1
     options: 
         - 
-            label: ● 1
+            label: "● 1"
             value: dark-1
         -
-            label: ● 2
+            label: "● 2"
             value: dark-2
         - 
-            label: ● 3
+            label: "● 3"
             value: dark-3
         -
-            label: ● 4
+            label: "● 4"
             value: dark-4
         -
-            label: ● 5
+            label: "● 5"
             value: dark-5
   -
     id: extra-col-palette
     title: Extra colors
     description: for simple image frames, simple delimiter
     title.de: Zusätzliche Farben
-    description.de: für einfache Bilderrahmen, Trenner, Initialien
+    description.de: für einfache Bilderrahmen, Trenner, Initialen
     type: heading
     level: 2
     collapsed: true
@@ -1376,7 +1376,7 @@ settings:
     id: drop-cap-col
     title: 'Text: Initial'
     description: for paragraph Initials
-    title.de: Initialie
+    title.de: Initiale
     description.de: Großbuchstabe
     type: variable-themed-color
     opacity: false
@@ -1528,16 +1528,16 @@ settings:
   -
     id: dim-notes
     title: Zen - Dim secondary Notes
-    description: restore default note brightness
+    description: Pull secundary notes in the background
     title.de: Zen - Abdunkeln sekundärer Notizen
-    description.de: Wiederherstellung Notizen-Helligkeit
+    description.de: Sekundäre Notizen in den Hintergrund drängen
     type: class-toggle
   -
     id: monoch-ttag
     title: Simple text-tag-labels
     title.de: Einfache Stichwort-Felder
-    description: removes color for text-tags like -ppl, -tel, -mail, -read, -edit, -promo, -loc, -key, -pin, -cal, -idea, profit, -check
-    description.de: Entfernt Farben für Text-schlüsselworte wie -kontakt, -tel, -brief, -lese, -arbeit, -promo, -ort, -schlüssel, -merke, -kal, -idee, -profit, -prüfe
+    description: 'removes color for text-tags like -ppl, -tel, -mail, -read, -edit, -promo, -loc, -key, -pin, -cal, -idea, profit, -check'
+    description.de: 'Entfernt Farben für Text-schlüsselworte wie -kontakt, -tel, -brief, -lese, -arbeit, -promo, -ort, -schlüssel, -merke, -kal, -idee, -profit, -prüfe'
     type: class-toggle
   -
     id: monoch-admo
@@ -1730,7 +1730,7 @@ body {
     --FolderRadius: 4px;
     --FolderHighlight: 24px;
     --FoldText: black;
-    --svg-scale: 100;
+    --svg-scale: 60;
     --svg-zoom: 80;
 
     --hr-color: #808080;
@@ -2073,10 +2073,11 @@ Vault loading
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    transform: translateY(-30%);
 }
 
 .is-phone :not(.default-loading-page) .progress-bar-message:before {
-    font-size: 4em;
+    font-size: 4.2em;
 }
 
 .progress-bar {
@@ -2454,7 +2455,6 @@ NAVI BAR
     padding-bottom: 12px;
 }
 
-/*  .workspace-drawer.mod-left */
 .is-phone .workspace-drawer.mod-left .workspace-drawer-active-tab-header {
     padding: 6px 12px;
 }
@@ -2584,34 +2584,45 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-ico
 }
 
 /* same indicator for headings and lists */
+.view-content .is-collapsed .list-collapse-indicator svg.svg-icon,
+.view-content .is-collapsed .collapse-indicator svg.svg-icon {
+    color: var(--text-normal);
+}
+
 .markdown-source-view .cm-fold-indicator .collapse-indicator {
-    transform: translateY(10px);
-    scale: 2;
     max-height: 20px;
-}
-
-body:not(.is-phone) .heading-collapse-indicator {
-    position: relative;
-    height: 20px;
     scale: 2;
-    transform-origin: 50% -14%;
+    transform: translateY(4px);
 }
 
-body:not(.is-phone) .list-collapse-indicator {
-    position: relative;
+body:not(.is-phone) .markdown-preview-view .heading-collapse-indicator {
+    height: 20px;
+    margin-top: 0.3em;
+    transform: scale(2);
+}
+
+body:not(.is-phone) .markdown-preview-view .list-collapse-indicator {
     height: 20px;
     left: 8px;
     padding-right: 20px;
-    scale: 2;
-}
-
-.is-phone :is(.heading-collapse-indicator, .list-collapse-indicator) {
-    position: relative;
-    height: 20px;
     transform: scale(2);
-    transform-origin: 20% 60%;
 }
 
+.is-phone .heading-collapse-indicator {
+    height: 20px;
+    margin-top: 0.4em;
+    transform: scale(2) translateX(5px);
+}
+
+.is-phone .list-collapse-indicator {
+    height: 20px;
+    transform: scale(2) translateX(10px, 2px);
+}
+
+/* fix offset for headers on phone */
+.is-phone .markdown-preview-view .heading-collapse-indicator {
+    padding: 0 6px 0 0;
+}
 
 .is-phone .menu-item-icon .svg-icon {
     --icon-size: 22px;
@@ -3427,27 +3438,27 @@ div.callout-content :is(h1 em, h2 em, h3 em, h4 em, h5 em h6 em) {
 
 /* phone headers */
 .is-phone :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
-    font-size: calc(var(--h1-size) + (var(--custom-ph-sz) * 2.2));
+    font-size: calc(var(--h1-size) + (var(--custom-ph-sz) * 1.8));
 }
 
 .is-phone :is(.HyperMD-header-2, .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + (var(--custom-ph-sz) * 2));
+    font-size: calc(var(--h2-size) + (var(--custom-ph-sz) * 1.6));
 }
 
 .is-phone :is(.HyperMD-header-3, .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + (var(--custom-ph-sz) * 1.8));
+    font-size: calc(var(--h3-size) + (var(--custom-ph-sz) * 1.4));
 }
 
 .is-phone :is(.HyperMD-header-4, .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + (var(--custom-ph-sz) * 1.6));
+    font-size: calc(var(--h4-size) + (var(--custom-ph-sz) * 1.2));
 }
 
 .is-phone :is(.HyperMD-header-5, .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + (var(--custom-ph-sz) * 1.4));
+    font-size: calc(var(--h5-size) + (var(--custom-ph-sz) * 1.1));
 }
 
 .is-phone :is(.HyperMD-header-6, .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + (var(--custom-ph-sz) * 1.2));
+    font-size: calc(var(--h6-size) + (var(--custom-ph-sz) * 1));
 }
 
 .is-phone :is(h1, h2, h3, h4, h5, h6) {
@@ -3596,11 +3607,6 @@ overwrite H1 size
     margin-bottom: var(--custom-margin-below-header);
 }
 
-/* fix offset for headers on phone */
-.is-phone .markdown-preview-view .heading-collapse-indicator {
-    padding: 0 6px 0 0;
-}
-
 /* Comments label sidebox */
 .theme-dark .file-embed {
     background-color: darkgray;
@@ -3714,6 +3720,7 @@ a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) em {
 /*----------------------------------------------------------------
 Gutter
 ----------------------------------------------------------------*/
+
 .indent-p p,
 .indent-p .markdown-source-view .cm-line:not(.HyperMD-header.cm-line) {
     text-indent: var(--indent-l);
@@ -3774,10 +3781,12 @@ ALIGNMENT
     clear: right;
 }
 
+/* exclude list */
 .workspace-leaf,
 .modal.mod-settings .vertical-tab-header,
 .setting-item,
-.menu {
+.menu,
+.callout[data-callout="tline"] {
     text-align: initial;
 }
 
@@ -3804,11 +3813,13 @@ highlights
 /* collapse search queries */
 body:not(.show-search) .search-result:not(.is-collapsed) .search-result-file-matches {
     display: none;
+    height: 0;
 }
 
 /* expand search queries on demand*/
 body:not(.show-search) .search-result:not(.is-collapsed):hover .search-result-file-matches {
     display: revert;
+    height: initial;
 }
 
 /* Html custom Highlight */
@@ -3985,21 +3996,6 @@ span.cm-comment.cm-string.cm-url {
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
     font-size: medium;
-}
-
-.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
-    padding-right: 4px;
-    right: 8px;
-}
-
-.view-content .is-collapsed .list-collapse-indicator svg.svg-icon,
-.view-content .is-collapsed .collapse-indicator svg.svg-icon {
-    color: var(--text-normal);
-}
-
-.collapse-indicator {
-    scale: 1.2;
-    top: 8px;
 }
 
 /*----------------------------------------------------------------
@@ -4184,12 +4180,6 @@ a[href="#hlcol-l"]+em {
     font-size: var(--scale-larger-f) !important;
 }
 
-a[href="#schrift-k"]+mark,
-a[href="#font-s"]+mark {
-    background-color: transparent;
-    color: var(--text-normal);
-}
-
 a[href="#rot-k"]+strong,
 a[href="#rot-k"]+em,
 a[href="#red-s"]+strong,
@@ -4249,14 +4239,6 @@ a[href="#hlcol-s"]+em {
     background-color: transparent;
     color: var(--hl-col);
     font-family: inherit;
-}
-
-/* large */
-a[href="#schrift-g"]+mark,
-a[href="#font-l"]+mark {
-    background-color: transparent;
-    font-size: large !important;
-    color: var(--text-normal);
 }
 
 a[href="#rot-g"]+strong,
@@ -4474,6 +4456,9 @@ a[href="#-tips"]+mark:not(:hover) {
 a[href="#-tips"]+mark::after {
     content: "💬";
     color: var(--text-normal);
+    background: var(--background-primary);
+    position: relative;
+    margin-left: -2px;
 }
 
 a[href="#-tips"]+mark:hover::after {
@@ -5163,18 +5148,6 @@ code.language-memo-farbe.is-loaded {
     width: fit-content;
 }
 
-.align-a pre[class^="language-memo"],
-.align-a pre[class="language-fnote"] {
-    display: flex;
-    justify-content: center;
-}
-
-.align-r pre[class^="language-memo"],
-.align-r pre[class="language-fnote"] {
-    justify-content: flex-end;
-    display: flex;
-}
-
 /* .read-more */
 .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
     background: transparent;
@@ -5516,6 +5489,11 @@ a.footnote-link {
 /*----------------------------------------------------------------
 Buttons - Preferences
 ----------------------------------------------------------------*/
+
+.vertical-tab-content :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 34px !important;
+}
+
 .empty-state-action:hover {
     font-weight: bold;
     color: var(--text-accent-special);
@@ -5620,6 +5598,7 @@ Buttons - Preferences
     background-color: var(--button-background);
 }
 
+body:not(.is-phone) .modal.mod-community-modal.mod-sidebar-layout.mod-community-plugin,
 body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
     min-width: 75%;
     height: 70%;
@@ -5660,6 +5639,8 @@ body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
     margin-left: 10px;
 }
 
+
+/* Theme Title */
 /* level 1 header */
 .setting-item.setting-item-heading.style-settings-heading[data-level="1"] {
     margin-left: -14px;
@@ -5678,6 +5659,10 @@ body:not(.is-phone) .style-settings-collapse-indicator {
 .is-phone .style-settings-heading[data-level="0"] {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.style-settings-heading[data-level="0"] {
+    margin-bottom: 20px;
 }
 
 /* level 2 header */
@@ -5760,7 +5745,7 @@ body:not(.is-phone) .view-header {
 
 .is-phone .modal-setting-back-button {
     margin-left: 10px;
-    scale: 1.3;
+    transform: scale(1.4);
 }
 
 .theme-light select.dropdown,
@@ -5939,8 +5924,13 @@ body:not(.is-grabbing) .nav-file-title:hover,
     background-color: transparent;
 }
 
+.u-pop,
 .mod-warning {
     color: darkred;
+    background: #ffa69c;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 /*----------------------------------------------------------------
@@ -6654,8 +6644,12 @@ STYLED TABLES
     padding: 8px 9px 5px 9px;
 }
 
-.academia tr:nth-child(even) {
+.theme-light .academia tr:nth-child(even) {
     background-color: darkgray;
+}
+
+.theme-dark .academia tr:nth-child(even) {
+    background-color: #4d4d4d;
 }
 
 .academia tbody tr:hover td {
@@ -6875,7 +6869,7 @@ img[alt="banner-a"] {
     left: 0;
     width: 100%;
     height: var(--banner-ah);
-    object-fit: initial;
+    object-fit: cover;
     -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
     mask-image: none;
     object-position: 50% 0;
@@ -6887,7 +6881,7 @@ img[alt="banner-b"] {
     left: 0;
     width: 100%;
     height: var(--banner-bh);
-    object-fit: initial;
+    object-fit: cover;
     -webkit-mask-image: linear-gradient(360deg, white, white, white, transparent);
     mask-image: none;
     object-position: 50% 0%;
@@ -6900,7 +6894,7 @@ img[alt="banner-b"] {
 }
 
 .banner-a .markdown-preview-section {
-    margin-top: var(--banner-bh);
+    margin-top: var(--banner-ah);
 }
 
 .banner-b .markdown-preview-section {
@@ -7115,6 +7109,7 @@ body:not(.uniform-tables-tg) {
 .uniform-width :not(.contacts, .movies, .recipes) table {
     width: var(--uniform-tables);
 }
+
 
 /* fences */
 body:not(.uniform-code-tg) {
@@ -7893,6 +7888,7 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 /*----------------------------------------------------------------
 MERMAID 
 ----------------------------------------------------------------*/
+
 .mermaid svg {
     display: block;
     margin-left: auto;
@@ -8616,6 +8612,10 @@ PHONE
 .workspace-leaf.mod-active .nav-folder.has-focus>.nav-folder-title:focus-within,
 .workspace-leaf.mod-active .nav-file.has-focus>.nav-file-title:focus-within {
     box-shadow: none;
+}
+
+.workspace-leaf.mod-active .setting-item-info {
+    font-size: 14px;
 }
 
 /* toggles */
@@ -9604,10 +9604,6 @@ div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
 .is-mobile .markdown-source-view.mod-cm6 .cm-content,
 .is-mobile .mod-cm6 .cm-line {
     caret-color: darkred;
-}
-
-.u-pop {
-    color: darkred;
 }
 
 
@@ -11239,8 +11235,7 @@ PDF EXPORT
 
 1= standard
 2= no counter + pagebreak
-3= btm counter + pagebreak
-4= top counter + pagebreak
+3= top counter + pagebreak
  */
 
     body:is(.prg-break) .markdown-preview-view p {
@@ -11249,14 +11244,14 @@ PDF EXPORT
     }
 
     /* page number */
-    .pdf-counter-4 [class*="wave"] hr {
+    .pdf-counter-3 [class*="wave"] hr {
         transform: none !important;
         filter: none;
         background-image: none;
         height: 16px;
     }
 
-    .pdf-counter-4 :is(.fade, .fade-2, .fade-3) hr {
+    .pdf-counter-3 :is(.fade, .fade-2, .fade-3) hr {
         background-image: none;
         height: 16px;
         text-align: center;
@@ -11480,25 +11475,6 @@ body:not(.is-phone) .kanban-plugin__lane-form-wrapper {
 }
 
 /* 
-cal 
-*/
-.year.svelte-1vwr9dd.svelte-1vwr9dd,
-.month.svelte-1vwr9dd.svelte-1vwr9dd,
-.today.svelte-q3wqg9 {
-    font-weight: 600 !important;
-}
-
-.theme-light .year.svelte-1vwr9dd.svelte-1vwr9dd,
-.theme-light .today.svelte-q3wqg9 {
-    color: darkred !important;
-}
-
-.theme-dark .year.svelte-1vwr9dd.svelte-1vwr9dd,
-.theme-dark .today.svelte-q3wqg9 {
-    color: red !important;
-}
-
-/* 
 advanced-tables
 */
 
@@ -11512,6 +11488,38 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
 
 .theme-dark [data-type="advanced-tables-toolbar"] .nav-buttons-container .nav-action-button:hover {
     background-color: var(--text-accent-special);
+}
+
+/* 
+cal 
+*/
+.year.svelte-1vwr9dd.svelte-1vwr9dd,
+.month.svelte-1vwr9dd.svelte-1vwr9dd,
+.today.svelte-q3wqg9 {
+    font-weight: 600 !important;
+}
+
+.title.svelte-1vwr9dd.svelte-1vwr9dd {
+    font-size: 2em !important;
+}
+
+.theme-light .year.svelte-1vwr9dd.svelte-1vwr9dd,
+.theme-light .today.svelte-q3wqg9 {
+    color: darkred !important;
+}
+
+.theme-dark .year.svelte-1vwr9dd.svelte-1vwr9dd,
+.theme-dark .today.svelte-q3wqg9 {
+    color: red !important;
+}
+
+.today.svelte-q3wqg9 {
+    color: var(--color-text-today);
+    font-size: inherit !important;
+}
+
+.calendar.svelte-pcimu8 {
+    width: 100% !important;
 }
 
 /* 
@@ -11583,7 +11591,6 @@ body:is(.uniform-width) .block-language-dataview .table-view-table {
     margin-left: 2px;
 }
 
-/* todo */
 .block-language-dataview .table-view-table>thead>tr>th {
     border-top-right-radius: initial;
     border-top-left-radius: initial;
@@ -11704,7 +11711,6 @@ buttons
 .hide-gui .menu,
 .hide-gui .vertical-tab-header-group-title,
 .hide-gui .vertical-tab-nav-item:not(.is-active),
-.hide-gui textarea,
 .hide-gui body>div.suggestion-container.mod-search-suggestion {
     margin: 0 !important;
     -webkit-text-security: square !important;
@@ -11732,7 +11738,7 @@ body:not(.is-phone).hide-gui .vertical-tab-content {
 .hide-gui .vertical-tab-content h4,
 .hide-gui .vertical-tab-content h5,
 .hide-gui .vertical-tab-content h6 {
-    letter-spacing: -5px;
+    letter-spacing: -16px;
 }
 
 .hide-gui .dropdown,
@@ -11753,7 +11759,7 @@ body:not(.is-phone).hide-gui .vertical-tab-content {
 
 .hide-gui input:is([type='text'], [type='search'], [type='email'], [type='password'], [type='number']),
 .hide-gui :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner,
-.hide-gui :is(.sidebar-toggle-button, .nav-header) {
+.hide-gui :is(.sidebar-toggle-button, .nav-header, textarea) {
     filter: blur(3px);
 }
 
@@ -11773,6 +11779,18 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
     -webkit-text-security: square;
     width: 120px;
     letter-spacing: -6px;
+}
+
+.hide-gui .setting-item.mod-toggle[data-id="hide-gui"] {
+    background: gray;
+    border-radius: 4px;
+    -webkit-text-security: none;
+    letter-spacing: normal;
+}
+
+.hide-gui .style-settings-heading[data-level="0"] {
+    -webkit-text-security: none;
+    letter-spacing: normal;
 }
 
 /* cssclass hide note content */
