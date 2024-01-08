@@ -203,11 +203,11 @@ settings:
     level: 2
     collapsed: true
   -
+    id: glob-align
     title: Typesetting alignment (global)
     description: '(●●○) left, (○●●) right, (○●○) axis, (●●●) block'
     title.de: Schriftsatzart (global)
     description.de: '(●●○) Linksbündiger, (○●●) Rechtsbündiger -Flattersatz, (○●○) Axialsatz, (●●●) Blocksatz'
-    id: glob-align
     type: class-select
     allowEmpty: false
     default: align-l
@@ -266,8 +266,8 @@ settings:
     description.de: außer Telefon
     type: variable-number-slider
     format: px
-    default: 64
-    min: 64
+    default: 48
+    min: 48
     max: 120
     step: 8
   -
@@ -278,9 +278,9 @@ settings:
     description.de: außer Telefon
     type: variable-number-slider
     format: px
-    default: 16
-    min: 16
-    max: 32
+    default: 0
+    min: 0
+    max: 40
     step: 4
   -
     id: initial-sz
@@ -813,14 +813,14 @@ settings:
     level: 2
     collapsed: true
   -
+    id: vault-name-s
     title: Vault Profile
     description: '(■) Square, (🀰) Banner, (𝑵 Normal) Standard , (𝑵 Minimal) Small'
     title.de: Vault Profil
     description.de: '(■) Quadrat, (🀰) Banner, (𝑵 Normal) Standard, (𝑵 Minimal) Klein' 
-    id: vault-name-s
     type: class-select
     allowEmpty: false
-    default: vault-name-f
+    default: vault-name-e
     options:
         -
             label: "■"
@@ -835,9 +835,9 @@ settings:
             label: "𝑵 Minimal"
             value: vault-name-f
   -
+    id: simple-profile
     title: Vault Profile - (Mobile)
     title.de: Vault Profil - (Mobilgerät)
-    id: simple-profile
     type: class-select
     allowEmpty: false
     default: no-prof
@@ -1283,13 +1283,16 @@ settings:
     level: 2
     collapsed: false
   -
+    id: switch-dcol
     title: "○ Light Theme colors"
     title.de: "○ Helle Farben"
-    id: switch-dcol
     type: class-select
     allowEmpty: false
-    default: col-mod-a
-    options: 
+    default: col-mod-0
+    options:
+        - 
+            label: "–"
+            value: col-mod-0
         - 
             label: "Dune-1"
             value: col-mod-a
@@ -1300,13 +1303,16 @@ settings:
             label: "Dune-3"
             value: col-mod-c
   -
+    id: switch-lcol
     title: "● Dark Theme colors"
     title.de: "● Dunkle Farben"
-    id: switch-lcol
     type: class-select
     allowEmpty: false
-    default: col-mod-d
-    options: 
+    default: col-mod-1
+    options:
+        - 
+            label: "–"
+            value: col-mod-1
         -
             label: "Dune-4"
             value: col-mod-d
@@ -1317,29 +1323,29 @@ settings:
             label: "Dune-6"
             value: col-mod-f
   -
+    id: dim-pictures
     title: Dim Pictures
     title.de: Bilder abdunkeln
     description: reduce brightness (dark themes)
     description.de: Verringere Helligkeit (Dunkle Themen)
-    id: dim-pictures
     type: class-select
     allowEmpty: false
     default: dark-1
     options: 
         - 
-            label: "● 1"
+            label: "–"
             value: dark-1
         -
-            label: "● 2"
+            label: "● 1"
             value: dark-2
         - 
-            label: "● 3"
+            label: "● 2"
             value: dark-3
         -
-            label: "● 4"
+            label: "● 3"
             value: dark-4
         -
-            label: "● 5"
+            label: "● 4"
             value: dark-5
   -
     id: extra-col-palette
@@ -1435,6 +1441,7 @@ settings:
     title.de: Schmale Leisten
     description.de: Wiederherstellung normale Reiteransicht
     type: class-toggle
+    default: true
   -
     id: stacked-tabs-focused
     title: Stacked notes
@@ -1449,6 +1456,7 @@ settings:
     title.de: Notizname
     description.de: Wiederherstellung Notizname (Titelleiste)
     type: class-toggle
+    default: true
   -
     id: show-title-parent
     title: Note path 
@@ -1705,8 +1713,8 @@ body {
     --scale-larger-f: 20px;
     --scale-smaller-f: 12px;
 
-    --large-h1: 64px;
-    --large-headers: 16px;
+    --large-h1: 48px;
+    --large-headers: 0px;
     --custom-margin-above-header: 20px;
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
@@ -1746,9 +1754,9 @@ body {
     --nav-item-background-selected: rgb(244 155 31 / 40%);
     --checklist-done-color: gray;
     --text-selection: rgb(239 206 116 / 70%);
-    --header-col: #c66102;
     --azure-sh: rgb(240 255 255 / 50%);
 
+    --header-col: #c66102;
     --h1-color: var(--header-col);
     --h2-color: var(--header-col);
     --h3-color: var(--header-col);
@@ -1815,8 +1823,11 @@ body.theme-light {
     --code-string: #17294e;
     --code-tag: var(--color-red);
     --code-value: #2f74ba;
+
     --intro-dune: linear-gradient(to left, #390058, #8b0000, #ff8c00, #ffe89e);
     --logo-grad: linear-gradient(to bottom, #ff8c00 0%, #8b0000 100%);
+    --prefs-grad: linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary));
+    --prefs-title: var(--h1-color);
 }
 
 body.theme-dark {
@@ -1864,8 +1875,59 @@ body.theme-dark {
     --code-string: #d8c07f;
     --code-tag: var(--color-red);
     --code-value: #d86f42;
+
     --intro-dune: linear-gradient(to right, black, black, #390058, #8b0000);
     --logo-grad: linear-gradient(to bottom, #f2e79c 0%, #11438a 100%);
+    --prefs-grad: linear-gradient(180deg, var(--background-primary), var(--background-secondary), var(--background-secondary), var(--background-primary));
+    --prefs-title: var(--h1-color);
+}
+
+/* Default theme */
+body.col-mod-0 .theme-light,
+body.col-mod-0.theme-light,
+body.col-mod-1 .theme-dark,
+body.col-mod-1.theme-dark {
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
+    --background-secondary: var(--color-base-20);
+    --background-secondary: var(--color-base-20);
+    --background-modifier-border: gray;
+
+    --text-selection: hsla(var(--color-accent-hsl), 0.2);
+    --text-accent: var(--color-accent);
+
+    --text-normal: var(--color-base-100);
+    --text-muted: var(--color-base-70);
+    --text-faint: var(--color-base-50);
+    --link-color: var(--text-accent);
+
+    --button-background: var(--interactive-accent);
+    --prefs-shadow: var(--background-primary);
+    --prefs-grad: var(--background-primary);
+}
+
+body.col-mod-0 .theme-light,
+body.col-mod-0.theme-light {
+    --light-base-c: #433721;
+    --header-col: var(--light-base-c);
+    --bold-color: var(--light-base-c);
+    --italic-color: var(--light-base-c);
+    --btn-col: var(--light-base-c);
+
+    --menu-btn-color: var(--soft-shadow);
+    --prefs-title: var(--light-base-c);
+}
+
+body.col-mod-1 .theme-dark,
+body.col-mod-1.theme-dark {
+    --dark-base-c: #F3F2E9;
+    --header-col: var(--dark-base-c);
+    --bold-color: var(--dark-base-c);
+    --italic-color: var(--dark-base-c);
+    --btn-col: black;
+
+    --menu-btn-color: gray;
+    --prefs-title: var(--dark-base-c);
 }
 
 /* Color Models */
@@ -1874,6 +1936,7 @@ body.col-mod-a.theme-light {
     --text-selection: rgb(239 206 116 / 70%);
     --text-accent: #DD9417;
     --header-col: #CE651E;
+    --menu-btn-color: initial;
 
     --background-primary: #DCD9C0;
     --background-primary-alt: #DCD9C0;
@@ -1881,19 +1944,14 @@ body.col-mod-a.theme-light {
     --background-secondary-alt: #B1AD97;
     --background-modifier-border: #88867b;
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #433721;
     --text-muted: #466585;
     --text-faint: #466585;
     --link-color: #707070;
     --bold-color: #3F3F3F;
     --italic-color: #3F3F3F;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 body.col-mod-b .theme-light,
@@ -1901,6 +1959,7 @@ body.col-mod-b.theme-light {
     --text-selection: rgb(247 224 159 / 70%);
     --text-accent: #D4B138;
     --header-col: #a08052;
+    --menu-btn-color: initial;
 
     --background-primary: #EECB9B;
     --background-primary-alt: #EECB9B;
@@ -1908,19 +1967,14 @@ body.col-mod-b.theme-light {
     --background-secondary-alt: #BDA584;
     --background-modifier-border: rgb(136, 134, 123);
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #432B21;
     --text-muted: #607081;
     --text-faint: #607081;
     --link-color: #294A7F;
     --bold-color: #411414;
     --italic-color: #411414;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 body.col-mod-c .theme-light,
@@ -1928,6 +1982,7 @@ body.col-mod-c.theme-light {
     --text-selection: rgb(247 224 159 / 70%);
     --text-accent: #D4B138;
     --header-col: #C1442C;
+    --menu-btn-color: initial;
 
     --background-primary: #E5BFA5;
     --background-primary-alt: #E5BFA5;
@@ -1935,19 +1990,14 @@ body.col-mod-c.theme-light {
     --background-secondary-alt: #CA9F83;
     --background-modifier-border: rgb(136, 134, 123);
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #432A19;
     --text-muted: #603F30;
     --text-faint: #603F30;
     --link-color: #85332C;
     --bold-color: #142D41;
     --italic-color: #142D41;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 body.col-mod-d .theme-dark,
@@ -1963,19 +2013,14 @@ body.col-mod-d.theme-dark {
     --background-secondary-alt: #2F2F2F;
     --background-modifier-border: rgb(54, 54, 54);
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #CAD3EB;
     --text-muted: #B6B6B6;
     --text-faint: #B6B6B6;
     --link-color: #C87003;
     --bold-color: #cba670;
     --italic-color: #cba670;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 body.col-mod-e .theme-dark,
@@ -1991,19 +2036,14 @@ body.col-mod-e.theme-dark {
     --background-secondary-alt: #2F2F2F;
     --background-modifier-border: #77736A;
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #EBE5CA;
     --text-muted: #B6B6B6;
     --text-faint: #B6B6B6;
     --link-color: darkorange;
     --bold-color: #cba670;
     --italic-color: #cba670;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 body.col-mod-f .theme-dark,
@@ -2019,19 +2059,14 @@ body.col-mod-f.theme-dark {
     --background-secondary-alt: #2F2F2F;
     --background-modifier-border: rgb(54, 54, 54);
 
-    --h1-color: var(--header-col);
-    --h2-color: var(--header-col);
-    --h3-color: var(--header-col);
-    --h4-color: var(--header-col);
-    --h5-color: var(--h4-color);
-    --h6-color: var(--h4-color);
-
     --text-normal: #f3f2e9;
     --text-muted: #B6B6B6;
     --text-faint: #B6B6B6;
     --link-color: #e08229;
     --bold-color: #cba670;
     --italic-color: #cba670;
+    --btn-col: black;
+    --prefs-shadow: transparent;
 }
 
 /* scrollbar phone */
@@ -3256,27 +3291,27 @@ body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD
 
 body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD-header.HyperMD-header-2.cm-line,
     .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + var(--large-headers) + 32px);
+    font-size: calc(var(--h2-size) + var(--large-headers) + 30px);
 }
 
 body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD-header.HyperMD-header-3.cm-line,
     .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + var(--large-headers) + 21px);
+    font-size: calc(var(--h3-size) + var(--large-headers) + 20px);
 }
 
 body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD-header.HyperMD-header-4.cm-line,
     .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + var(--large-headers) + 9px);
+    font-size: calc(var(--h4-size) + var(--large-headers) + 10px);
 }
 
 body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD-header.HyperMD-header-5.cm-line,
     .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + var(--large-headers) + 5px);
+    font-size: calc(var(--h5-size) + var(--large-headers) + 6px);
 }
 
 body:not(.fontmod-1, .fontmod-2, .fontmod-3, .fontmod-4, .is-phone) :is(.HyperMD-header.HyperMD-header-6.cm-line,
     .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + var(--large-headers));
+    font-size: calc(var(--h6-size) + var(--large-headers) + 3px);
 }
 
 /* small fix for text box */
@@ -4446,8 +4481,6 @@ a[href="#-spoiler"]+mark:hover {
 
 /* help */
 a[href="#-tips"]+mark:not(:hover) {
-    color: transparent;
-    background-color: transparent;
     display: inline-block;
     line-height: 0px;
     width: 26px;
@@ -5491,7 +5524,7 @@ Buttons - Preferences
 ----------------------------------------------------------------*/
 
 .vertical-tab-content :is(h1, h2, h3, h4, h5, h6) {
-    font-size: 34px !important;
+    font-size: 28px !important;
 }
 
 .empty-state-action:hover {
@@ -5517,14 +5550,12 @@ Buttons - Preferences
 }
 
 /* top & bottom bars */
-.theme-light .modal-container.mod-dim .modal,
-.theme-light .modal.mod-settings .vertical-tab-header {
-    background: linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary));
-}
+/*Light - linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary)); */
+/* dark - background: linear-gradient(180deg, var(--background-primary), var(--background-secondary), var(--background-secondary), var(--background-primary)); */
 
-.theme-dark .modal-container.mod-dim .modal,
-.theme-dark .modal.mod-settings .vertical-tab-header {
-    background: linear-gradient(180deg, var(--background-primary), var(--background-secondary), var(--background-secondary), var(--background-primary));
+.modal-container.mod-dim .modal,
+.modal.mod-settings .vertical-tab-header {
+    background: var(--prefs-grad);
 }
 
 .is-phone.theme-dark .modal.mod-settings .modal-title {
@@ -5769,7 +5800,7 @@ body:not(.is-phone) .view-header {
 .theme-dark select.dropdown,
 .is-phone.theme-dark select.dropdown {
     background-color: var(--menu-btn-color);
-    color: black;
+    color: var(--btn-col);
 }
 
 .theme-dark select.dropdown:hover {
@@ -5907,7 +5938,7 @@ a:hover {
 /* scrollbar bg transparent */
 .horizontal-tab-content,
 .vertical-tab-content {
-    background-color: transparent;
+    background-color: var(--prefs-shadow);
 }
 
 /* test - name highlight -rename */
@@ -5931,6 +5962,7 @@ body:not(.is-grabbing) .nav-file-title:hover,
     border-radius: 4px;
     padding-left: 4px;
     padding-right: 4px;
+    width: fit-content;
 }
 
 /*----------------------------------------------------------------
@@ -8362,10 +8394,18 @@ TABLET - basic support
     position: relative;
 }
 
+.is-tablet .view-actions {
+    margin-top: 14px;
+}
+
 /* todo */
-.is-tablet .view-action {
+/* .is-tablet .view-action {
     padding-top: 1.4em;
     color: var(--text-normal) !important;
+} */
+
+.is-tablet .view-header .view-action {
+    --icon-color: none;
 }
 
 .is-tablet .sidebar-toggle-button.mod-right .clickable-icon,
@@ -8979,7 +9019,7 @@ BUTTONS
 }
 
 .theme-light button:not(.clickable-icon, .mod-cta) {
-    background-color: darkgray;
+    background-color: var(--soft-shadow);
 }
 
 .theme-dark button:not(.clickable-icon, .mod-cta) {
@@ -9004,14 +9044,13 @@ BUTTONS
     font-size: initial;
 }
 
-.theme-dark .vertical-tab-header-group-title {
+.vertical-tab-header-group-title {
     color: var(--h1-color);
     border-bottom: 2px solid var(--h1-color);
 }
 
-.theme-light .vertical-tab-header-group-title {
-    color: var(--slant-blue);
-    border-bottom: 2px solid var(--slant-blue);
+.setting-item-name {
+    color: var(--h1-color);
 }
 
 .themed-color-wrapper .pickr-reset>button:hover {
@@ -9075,10 +9114,6 @@ input[type=checkbox] {
     width: 1.8em;
     height: 1.8em;
     margin: 0;
-}
-
-input[type=checkbox]:not(:checked) {
-    background: var(--text-accent-special);
 }
 
 /* removes checkmark sign for custom icons */
@@ -9457,16 +9492,25 @@ li:not(.task-list-item) {
 }
 
 input[type=checkbox]:not(:checked) {
-    transform: scale(.3);
+    transform: scale(.2);
     vertical-align: text-bottom;
     transition: scale .4s ease-in-out;
-    background: var(--color-blue);
-    background-image: none !important;
+    background: var(--text-accent-special);
+    background-image: none;
 }
 
 input[type=checkbox]:checked {
     vertical-align: text-bottom;
     transition: scale .2s ease-in-out;
+}
+
+body:not(.is-phone) input[type=checkbox]:not(:checked) {
+    transform: scale(.2);
+}
+
+.is-phone input[type=checkbox]:not(:checked) {
+    transform: scale(.3);
+    background-image: none !important;
 }
 
 /* numbers - max width */
@@ -11753,13 +11797,18 @@ body:not(.is-phone).hide-gui .vertical-tab-content {
     letter-spacing: -3px;
 }
 
+.hide-gui .search-result-container:before,
+.hide-gui .mod-fade:not(.mod-at-end):after,
+.hide-gui .tree-item-self .tree-item-icon:before,
+.hide-gui .tree-item-self:before,
+.hide-gui .metadata-property-icon:before,
 .hide-gui :is(.tooltip, .follow-link-popover) {
     display: none;
 }
 
 .hide-gui input:is([type='text'], [type='search'], [type='email'], [type='password'], [type='number']),
 .hide-gui :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner,
-.hide-gui :is(.sidebar-toggle-button, .nav-header, textarea) {
+.hide-gui :is(.sidebar-toggle-button, textarea) {
     filter: blur(3px);
 }
 
@@ -11782,7 +11831,7 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
 }
 
 .hide-gui .setting-item.mod-toggle[data-id="hide-gui"] {
-    background: gray;
+    background: var(--soft-shadow);
     border-radius: 4px;
     -webkit-text-security: none;
     letter-spacing: normal;
@@ -11792,6 +11841,11 @@ body:is(.is-phone) .hide-gui button:not(.clickable-icon) {
     -webkit-text-security: none;
     letter-spacing: normal;
 }
+
+.hide-gui .nav-header .clickable-icon {
+    filter: blur(3px);
+}
+
 
 /* cssclass hide note content */
 .hide-note :is(p, pre) {
