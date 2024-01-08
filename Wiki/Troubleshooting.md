@@ -1,7 +1,7 @@
 ## Troubleshooting
 ### Dune hides everything
 
-Please install the **Style Settings** plugin by mgmeyer from within Obsidan's extension repo or go to [Style Settings - Github](https://github.com/mgmeyers/obsidian-style-settings) so you can access all features of Dune. Without this plugin, Dune won't work correctly.
+Please install the **Style Settings** plugin by mgmeyer from Obsidan's extension repo or go to [Style Settings - Github](https://github.com/mgmeyers/obsidian-style-settings) so you can access all features of Dune. Without this plugin, Dune won't work correctly.
 
 ### Problems with Dune's configuration
 
@@ -9,7 +9,7 @@ With the `Style Settings` extension installed, open the command palette, then ty
 
 ### Missing something in Dune's interface? 
 
-Open `Settings>Style Settings>Dune>Show ui elements`to unhide Obsidians default interface hidden in Dune by default. Dune hides interface elements is to help you focus on your notes, this helps advanced users. Beginners need to familiarize first with Obsidian, so feel free to restore the default look of Obsidian.
+Open `Settings>Style Settings>Dune>Show ui elements`to reveal Obsidians default interface elements hidden in Dune by default. Dune hides interface elements to help you focus on your notes, this is ideal for more advanced users of Obsidian. Beginners need to familiarize first with Obsidian, so feel free to restore the default look of Obsidian.
 
 ### Slow interface
 
@@ -17,11 +17,11 @@ Please use the latest version of **Obsidian**, **Style Settings** and **Dune**. 
 
 ### Change the Color accent
 
-if you use the **flat light / flat dark** theme of Dune, navigate to `Settings>Appearance>Accent color` like normally and change the **color accent** to your liking
+if you use the **flat light / flat dark** theme of Dune (first appearance in Dune v2.5.4), navigate to `Settings>Appearance>Accent color` like normally and change the **color accent** to your liking
 
 ### Problems with margins
 
-is there a big margin on the left side of your note? try to deactivate `Settings>Editor>Readable line lenght` which is toggled on by default.
+is there a big margin on the left side of your note ? try to deactivate `Settings>Editor>Readable line lenght`, which is toggled on by default.
 
 ### Problems with fonts
 
@@ -29,14 +29,14 @@ open `Settings>Style Settings>Dune>Fonts`, then look for the right options (Type
 
 ### Problems with colors
 
-if Dune is unable to display a color, find the missing color under `Settings>Style Settings>Dune>Colors`, click a color and press `Save`. Alternatively, click the `Restore default` Button.
+if Dune is unable to display some color, find this missing color under `Settings>Style Settings>Dune>Colors`, then click your color and press `Save`. Alternatively, click the `Restore default` Button.
 
 ### Stuck in Dune's garbled interface?
 
-Open Obsidian's Settings and you will see a column on the left with a larger area on the right. Now hover over the left column and click on some line at the bottom left. You will see that Dune reveals the name of Extensions if you click on them. Check the first letter of "some extension" to understand where in the alphabet you are. **Style Settings** begins with **S** and must be somewhere close to the bottom of your extension list. Just click through the extensions till you find **Style Settings**. In there, click on Dune, expand the last section of Dune and you will see **Hide App UI** revealed. Deactivate that toggle. 
+Open Obsidian's Settings and you will see a column on the left and a larger area on the right. Now hover over the left column and click on some line at the bottom left. You will see that Dune reveals the name of Extensions if you click on them. Check the first letter of "some extension" to understand where in the alphabet you are. **Style Settings** begins with **S** and must be somewhere close to the bottom of your extension list. Just click through the extensions till you find **Style Settings**. In there, click on Dune, expand the last section of Dune and you will see **Hide App UI** revealed. Deactivate that toggle. 
 
 ### Interface issues on tablets
-Send me screenshots and a clear descriptions of your issue and I try to fix your bug. Since I do not have a tablet, you need to be precise and patient. 
+Send me screenshots and clear descriptions of your issue and I'll try to fix your bug. Since I don't have a tablet, be precise and patient with your requests. 
 
 ### Something else 
 open a bug report and I will see if I can fix your issue. Please explain in easy-to-follow, step-by-step examples how to reproduce your issue. You can add screenshots as well. 
