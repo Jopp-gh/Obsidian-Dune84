@@ -12,19 +12,32 @@
 ### Dune
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
 His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm).
+
 **Dune from 1984** was a relatively tight-budget movie but nevertheless, a very artistic, spectacular and cinematic transposition of Frank's novels, very well narrated and worth to see as a whole. I continue to watch **David Lynch**'s Dune from time to time and this movie is still able to catch my interest, even after so long time. 
 Recenty, we saw more movies/tv series related to Dune, where I appreciated *background scenery* and *costume design*, but this aspects alone don't make a movie, so unfortunately, I won't cite them as successors here. 
 
+<br>
+
 ### Goal
-My **goal** with this theme was to improve Obsidian by removing some distractions / annoyances, adding missing features, improving, expanding on available features. Last but not least, I needed a change of colors, less extreme black - white values and everything printer friendly, no matter what theme (light / dark) I decided to use. Both core functions - printing and presentation (Export as PDF / Slide) got a refreshed look and were adapted to work on smaller interfaces too (phone). I tried my best to make Dune also accessible for tablets users - since I don't own myself a tablet, any support for these devices is totally dependant on **your feedback**
+My goal with this theme was to improve Obsidian by **removing some distractions / annoyances, adding missing features and improving, expanding on available features**. Last but not least, I needed a change of colors, **less extreme black - white values** and **everything printer friendly**, no matter what theme (light / dark) I decided to use. 
+
+Both core functions - printing and presentation **Export as PDF / Slide** got some cleanup and were adapted to work on smaller interfaces too (phone). Also, I tried my best to make Dune accessible to tablets users - since I don't own a tablet myself, any support for these devices relies on **your feedback**. 
+
+_I am very pleased with the features added_ to **Dune** and hope this overhaul will **benefit your workflow** _to compose nice and useful page layouts_, **reduce friction** _with the features installed_ and **improve your overall note-making** in Obsidian _with the regular use of Dune_.
+
+<br>
 
 ### Motivation
-I am very pleased with the features added to **Dune** and hope this overhaul will benefit your workflow, reduce friction and improve your overall note-making in Obsidian.
+Also, would you be so nice to treat me with a breakfast or lunch? :) 
 
-Also, I hope to pay my lunch for sharing good content with you :)
-Please support me and see  [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute) at bottom page, if you want Dune to grow. I would enjoy, if people could share some little appreciation for the work I have done. Thanks for your attention! 
+**It's not just about the good deed, but to connect with other people**, _like you connect useful and interesting data in Obsidian!_
+Please show me your gratitude for the work I have done and smash that [**Buy me a coffee**](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/README.md#contribute)-button at bottom page, this would mean a lot to me! 
 
-Finally, I released this theme in the hope to make new friends. Private massage me  `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) to talk about Obsidian and our knowledge fields. If you need support related to pkm, or creative activities as well as programming or architecture, then let's have a talk. Only serious messages will be accepted, for feature/bug reports please open a ticket on top page, under `Issues`. I'm interested in following unsorted topics:
+Of course I've build Dune for myself at first, however later I added many nice features for a larger audience. At times it wasn't an easy task to code but a true endurance test ! **Thanks for your attention !**
+
+**I released this theme in the hope to make new friends**. _Private massage me_  `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about Obsidian and our knowledge fields. If you need support or you wanna share ideas and interests related to pkm, creative activities, programming or architecture, feel free to contact me. Only serious messages will be accepted, for bug reports please open a ticket on top page, under `Issues`. 
+
+**I'm interested in following topics, in no particular order**:
 
 ```
 - #architecture,
@@ -38,11 +51,10 @@ Finally, I released this theme in the hope to make new friends. Private massage 
 - #world #languages,
 ```
 
-### Attention
+### Updates
 
 To make sure you're always up-to-date, open Obsidians `Preferences>Appearance>` then click on `Check for updates` 
-
-→ If you can't run the newest version of Obsidian, then try to install older [releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) 
+> → If you can't run the newest version of Obsidian, then try to install older [releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) 
 of Dune. 
 
 <br>
@@ -50,11 +62,10 @@ of Dune.
 
 ## First steps
 
-1. to display "Dune-1984" correctly and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-2. if you see a white or black theme, open `Preferences>Style Settings>Dune>Colors>Theme` and choose a color scheme for your **light theme  (Dune 1 or Dune 2)** and a color scheme for your **dark theme (Dune 3 or Dune 4)**
-3. Dune offers a clean, clutter-free experience, so most buttons are semi-hidden by default (desktop). Open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians.
-4. download [this companion snippet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) to add icons to your folder tree
-5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md)
+1. **to display "Dune-1984" correctly** and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
+2. Dune offers a **clean, clutter-free experience**, so most buttons are semi-hidden by default (desktop). Open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians. Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
+3. download [this companion snippet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) to **add icons to your folder tree**
+5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md) 
 
 <br>
 
