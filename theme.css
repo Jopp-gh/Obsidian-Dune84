@@ -1413,14 +1413,6 @@ settings:
     description.de: Wiederherstellung Tasten
     type: class-toggle
   -
-    id: show-ribbon-l
-    title: Sidebar, left
-    description: restore left sidebar
-    title.de: Seitenleiste, Links
-    description.de: Wiederherstellung Seitenleiste
-    type: class-toggle
-    default: true
-  -
     id: show-status-bar
     title: Status bar
     description: restore statusbar
@@ -1435,17 +1427,9 @@ settings:
     description.de: Wiederherstellung inaktiver Reiter
     type: class-toggle
   -
-    id: slim-bars
-    title: Slim bars
-    description: restore default tab-view
-    title.de: Schmale Leisten
-    description.de: Wiederherstellung normale Reiteransicht
-    type: class-toggle
-    default: true
-  -
     id: stacked-tabs-focused
     title: Stacked notes
-    description: restore default stacked-view
+    description: restore defaults for stacked-view
     title.de: Stapelansicht
     description.de: Wiederherstellung normale Stapelansicht
     type: class-toggle
@@ -1475,8 +1459,8 @@ settings:
     id: show-prop
     title: Yaml header
     title.de: Yaml Kopfzeile
-    description: restores standard, otherwise 'Editor - Properties in document - Visible / Source' must be active
-    description.de: Wiederherstellung Standard, ansonsten muss 'Editor - Properties in document - Visible / Source' aktiv sein
+    description: restores standard. Pay attention, 'Editor > Properties in document > Visible / Source' must be active
+    description.de: Wiederherstellung Standard. Beachte, 'Editor > Properties in document > Visible / Source' muss aktiv sein
     type: class-toggle
   -
     id: show-strikeout
@@ -1487,8 +1471,8 @@ settings:
     type: class-toggle
   -
     id: show-ls-marker
-    title: List counter marker
-    description: restore list counter marker
+    title: List marker
+    description: restore list marker
     title.de: Listen Aufzählzeichen
     description.de: Wiederherstellung Aufzählzeichen
     type: class-toggle
@@ -1572,6 +1556,7 @@ settings:
     title.de: Canvas Tasten
     description.de: Wiederherstellung Canvas Tasten
     type: class-toggle
+    default: true
   -
     id: show-canvas-nl
     title: Canvas node labels 
@@ -1593,6 +1578,15 @@ settings:
     title.de: Graph Tasten (PC)
     description.de: Wiederherstellung Graph Tasten
     type: class-toggle
+    default: true
+  -
+    id: slim-bars
+    title: Slim bars
+    description: restore default tab-height
+    title.de: Schmale Leisten
+    description.de: Wiederherstellung normale Reiterhöhe
+    type: class-toggle
+    default: false
   -
     id: show-search
     title: Obsidians 'Query' context
@@ -1600,6 +1594,7 @@ settings:
     description: restore default unfolded context view
     description.de: Wiederherstellung aufgeklappte Kontext Ansicht 
     type: class-toggle
+    default: true
   -
     id: grid-mobile-tb
     title: Grid toolbar (phone)
@@ -1615,19 +1610,28 @@ settings:
     level: 2
     collapsed: false
   -
+    id: show-ribbon-l
+    title: Sidebar, left
+    description: hide left sidebar
+    title.de: Seitenleiste, Links
+    description.de: Verstecke Seitenleiste 
+    type: class-toggle
+    default: false
+  -
+    id: hide-gui
+    title: anonymize Obsidian
+    description: garble Obsidan's workspace
+    title.de: Anonymisiere Obsidian
+    description.de: Verstecke Obsidians Arbeitsfläche
+    type: class-toggle
+  -
     id: show-tooltips
     title: Tooltips 
     description: restore help bubbles
     title.de: Hilfeblasen
     description.de: Wiederherstellung Hilfeblasen
     type: class-toggle
-  -
-    id: hide-gui
-    title: Hide App UI
-    description: garble ui text, buttons, etc.
-    title.de: Oberfläche verstecken
-    description.de: Obsidian temporär unkenntlich zeichnen
-    type: class-toggle
+    default: true
   -
     id: snipp-info
     title: Snippets
@@ -1718,6 +1722,7 @@ body {
     --custom-margin-above-header: 20px;
     --custom-margin-below-header: 8px;
     --deco-scale: 0.5;
+    --pad-c-btn: 4em;
 
     --bwidth-s: 2px;
     --bwidth-a: 10px;
@@ -2633,14 +2638,14 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover>.tree-item-ico
 body:not(.is-phone) .markdown-preview-view .heading-collapse-indicator {
     height: 20px;
     margin-top: 0.3em;
-    transform: scale(2);
+    transform: scale(1.4);
 }
 
 body:not(.is-phone) .markdown-preview-view .list-collapse-indicator {
     height: 20px;
     left: 8px;
-    padding-right: 20px;
-    transform: scale(2);
+    padding-right: 8px;
+    transform: scale(1.4);
 }
 
 .is-phone .heading-collapse-indicator {
@@ -3473,27 +3478,27 @@ div.callout-content :is(h1 em, h2 em, h3 em, h4 em, h5 em h6 em) {
 
 /* phone headers */
 .is-phone :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
-    font-size: calc(var(--h1-size) + (var(--custom-ph-sz) * 1.8));
+    font-size: calc(var(--h1-size) + (var(--custom-ph-sz) * 1.6));
 }
 
 .is-phone :is(.HyperMD-header-2, .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + (var(--custom-ph-sz) * 1.6));
+    font-size: calc(var(--h2-size) + (var(--custom-ph-sz) * 1.4));
 }
 
 .is-phone :is(.HyperMD-header-3, .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + (var(--custom-ph-sz) * 1.4));
+    font-size: calc(var(--h3-size) + (var(--custom-ph-sz) * 1.2));
 }
 
 .is-phone :is(.HyperMD-header-4, .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + (var(--custom-ph-sz) * 1.2));
+    font-size: calc(var(--h4-size) + (var(--custom-ph-sz) * 1));
 }
 
 .is-phone :is(.HyperMD-header-5, .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + (var(--custom-ph-sz) * 1.1));
+    font-size: calc(var(--h5-size) + (var(--custom-ph-sz) * 0.8));
 }
 
 .is-phone :is(.HyperMD-header-6, .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + (var(--custom-ph-sz) * 1));
+    font-size: calc(var(--h6-size) + (var(--custom-ph-sz) * 0.6));
 }
 
 .is-phone :is(h1, h2, h3, h4, h5, h6) {
@@ -3673,7 +3678,7 @@ Link local, unresolved, web
     text-decoration-color: var(--text-muted);
 }
 
-.markdown-rendered .internal-link:not(.is-unresolved),
+.markdown-rendered .internal-link:not(.is-unresolved) :not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a),
 .markdown-source-view.mod-cm6 :not(.is-unresolved) .cm-s-obsidian:not(span.cm-formatting-link.cm-url, span.cm-url) .cm-underline {
     text-decoration-color: var(--link-color);
 }
@@ -3708,8 +3713,8 @@ Link local, unresolved, web
     color: var(--link-color);
 }
 
-.cm-s-obsidian span.cm-formatting-link.cm-url:hover,
-.cm-s-obsidian span.cm-url:hover,
+span.cm-formatting-link.cm-url:hover,
+span.cm-url:hover,
 a.external-link strong:hover,
 a.external-link:hover {
     text-decoration-style: solid;
@@ -3717,21 +3722,29 @@ a.external-link:hover {
 }
 
 /* LP */
+span.cm-header.cm-header-1.cm-link,
+span.cm-formatting-link .cm-header-1,
 .markdown-rendered h1 a,
 a.external-link h1 a {
     color: var(--h1-color);
 }
 
+span.cm-header.cm-header-2.cm-link,
+span.cm-formatting-link .cm-header-2,
 .markdown-rendered h2 a,
 a.external-link h2 a {
     color: var(--h2-color);
 }
 
+span.cm-header.cm-header-3.cm-link,
+span.cm-formatting-link .cm-header-3,
 .markdown-rendered h3 a,
 a.external-link h3 a {
     color: var(--h3-color);
 }
 
+span.cm-header:is(.cm-header-4, .cm-header-5, .cm-header-6).cm-link,
+span.cm-formatting-link :is(.cm-header-4, .cm-header-5, .cm-header-6),
 .markdown-rendered :is(h4 a, h5 a, h6 a),
 a.external-link :is(h4 a, h5 a, h6 a) {
     color: var(--h4-color);
@@ -3751,6 +3764,21 @@ a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) strong,
 a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) em {
     color: var(--link-color);
 }
+
+.markdown-rendered .internal-link {
+    color: inherit;
+    text-decoration-color: inherit;
+}
+
+span.cm-formatting-link :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6) {
+    color: inherit;
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link,
+.cm-s-obsidian span.cm-formatting-link {
+    color: unset;
+}
+
 
 /*----------------------------------------------------------------
 Gutter
@@ -4697,8 +4725,8 @@ a[href="#-profit"]+mark::before {
 }
 
 del {
-    text-decoration: 4px line-through;
-    text-decoration-color: black;
+    text-decoration: 2px line-through;
+    text-decoration-color: var(--text-normal);
 }
 
 /*----------------------------------------------------------------
@@ -8139,57 +8167,43 @@ body:not(.is-phone) :is(.nav-buttons-container, .side-dock-settings, .side-dock-
 
 /* hide status bar */
 body:not(.show-status-bar) .status-bar {
-    font-size: 11px;
+    font-size: 12px;
     opacity: 0;
     background-color: var(--background-primary);
 }
 
 body:not(.show-status-bar) .status-bar:hover {
     opacity: 1;
-    transition: opacity .40s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
 }
 
-.sidebar-toggle-button.mod-left {
+.show-ribbon-l .workspace-tab-header-container:before,
+.show-ribbon-l .workspace-ribbon.mod-left {
+    margin-left: calc(-1 * var(--ribbon-width));
+}
+
+.mod-left-split .workspace-tab-header-container-inner {
+    margin-left: var(--ribbon-width);
+}
+
+.show-ribbon-l .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tab-header-container-inner {
+    margin-left: 4em;
+}
+
+.show-ribbon-l .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    left: 4.8em;
     position: fixed;
-    top: 0;
-}
-
-body:not(.show-ribbon-l) .mod-left-split .workspace-tab-header-container-inner {
-    margin-left: 2em;
-}
-
-body:not(.show-ribbon-l) .workspace-ribbon.mod-left,
-body:not(.show-ribbon-l) .workspace-tab-header-container:before {
-    margin-left: -44px;
-}
-
-body:not(.show-ribbon-l) .sidebar-toggle-button.mod-left {
-    margin-left: 2em;
-    left: auto;
-    padding-left: 14px;
-}
-
-body:not(.show-ribbon-l) .sidebar-toggle-button.mod-left :not(.is-fullscreen) {
-    margin-left: -0.2em;
-}
-
-body:not(.show-ribbon-l).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
-    left: auto;
-    width: calc(var(--frame-left-space) + 24px);
-}
-
-.workspace:not(.is-left-sidedock-open) .mod-root .workspace-tab-header-container-inner {
-    margin-left: 6em;
-    margin-right: 1em;
-}
-
-.workspace:is(.is-left-sidedock-open) .mod-root :not(.workspace-tabs.mod-stacked) .workspace-tab-header-container-inner {
-    margin-left: 1em;
-    margin-right: 1em;
 }
 
 .workspace:not(.is-left-sidedock-open) .workspace-tab-header-new-tab {
     margin-left: 3.8em;
+}
+
+
+/* stacked*/
+.workspace:is(.is-left-sidedock-open) .mod-root :not(.workspace-tabs.mod-stacked) .workspace-tab-header-container-inner {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 /* stacked - close button visible */
@@ -8215,46 +8229,38 @@ body:not(.show-ui-btns).mod-macos.is-hidden-frameless:not(.is-popout-window) .si
 }
 
 /* places navbar */
-.show-ui-btns .mod-left-split .workspace-tab-header-container-inner,
-.show-ui-btns .mod-right-split .workspace-tab-header-container-inner,
-.show-ui-btns .mod-left-split .workspace-tab-header-container-inner:hover,
-.show-ui-btns .mod-right-split .workspace-tab-header-container-inner:hover {
-    padding-left: 2.8em;
-}
-
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner,
 body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner {
     opacity: 0.2;
-    padding-left: 2.8em;
     transition: opacity 0.4s ease-in;
 }
 
 body:not(.show-ui-btns) .mod-left-split .workspace-tab-header-container-inner:hover,
 body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:hover {
     opacity: 1;
-    padding-left: 2.8em;
 }
 
-body:not(.slim-bars) .workspace-tab-header-container,
-body:not(.slim-bars) .workspace-ribbon.mod-left:before {
-    height: 32px;
-    border-bottom: 0;
-}
-
-body:not(.slim-bars) .workspace-ribbon.mod-left {
-    margin-top: 32px;
-    border-bottom: 0;
-}
-
-body:not(.slim-bars) .sidebar-toggle-button,
-body:not(.slim-bars) .sidebar-toggle-button:hover {
-    padding: 0 auto;
-    height: 32px;
-}
-
+.slim-bars .workspace-tab-header-container,
 .slim-bars .workspace-ribbon.mod-left:before {
+    height: 30px;
     border-bottom: 0;
 }
+
+.slim-bars .workspace-ribbon.mod-left {
+    margin-top: 30px;
+    border-bottom: 0;
+}
+
+.slim-bars .sidebar-toggle-button,
+.slim-bars .sidebar-toggle-button:hover {
+    padding: 0;
+    height: 30px;
+}
+
+body:not(.slim-bars) .workspace-ribbon.mod-left:before {
+    border-bottom: 0;
+}
+
 
 /* dim tabs */
 body:not(.show-tab-name) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title:not(.is-active) {
@@ -8643,7 +8649,7 @@ PHONE
 }
 
 /* highlight col folders -dragged items first line for backwd comp*/
-.nav-folder-title.is-being-dragged-over,
+.nav-folder.is-being-dragged-over,
 .tree-item-self.mod-collapsible.is-being-dragged-over {
     background: hsla(var(--interactive-accent-hsl), 0.4);
 }
@@ -9492,25 +9498,28 @@ li:not(.task-list-item) {
 }
 
 input[type=checkbox]:not(:checked) {
-    transform: scale(.2);
-    vertical-align: text-bottom;
-    transition: scale .4s ease-in-out;
+    /* vertical-align: text-bottom; */
     background: var(--text-accent-special);
     background-image: none;
+    border: none;
 }
 
 input[type=checkbox]:checked {
-    vertical-align: text-bottom;
-    transition: scale .2s ease-in-out;
+    /* vertical-align: text-bottom; */
+    transition: .2s ease-in-out;
+    transform: scale(1);
 }
 
 body:not(.is-phone) input[type=checkbox]:not(:checked) {
+    background: var(--text-accent-special);
+    transition: .2s ease-out;
     transform: scale(.2);
 }
 
 .is-phone input[type=checkbox]:not(:checked) {
-    transform: scale(.3);
+    transition: .2s ease-out;
     background-image: none !important;
+    transform: scale(.3);
 }
 
 /* numbers - max width */
@@ -11373,10 +11382,6 @@ kanban
     scale: 1.2;
 }
 
-.clickable-icon {
-    color: var(--icon-color) !important;
-}
-
 /* add card btn */
 .kanban-plugin__new-item-button:hover {
     color: white;
@@ -11699,14 +11704,19 @@ dice roller
 /* 
 Quickadd space btw btns 
 */
-.quickAddModal .modal-content div {
-    gap: 4px;
+.is-phone .quickAddModal .modal-content div {
+    padding-left: 4px;
 }
 
-.is-phone .quickAddModal .modal textarea {
-    min-height: 200px;
-    max-height: 200px;
+.is-phone .modal .macroContainer {
+    display: block;
+    padding: 1em;
 }
+
+.is-phone .addMacroBarContainer {
+    margin: 0;
+}
+
 
 /* cMenu 
 flat colors
