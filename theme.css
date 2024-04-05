@@ -145,7 +145,7 @@ settings:
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
-    default: 'Pecita, cursive, Mumsies, sans-serif, "Microsoft YaHei Light"'
+    default: 'cursive, Pecita, Mumsies, sans-serif, "Microsoft YaHei Light"'
   -
     id: custom-fsz-3
     title: Font size
@@ -176,7 +176,7 @@ settings:
     title: Header Font
     title.de: Überschriften
     type: variable-text
-    default: '"Century Gothic", Inter, Roboto, Helvetica'
+    default: 'Sengoa, "Century Gothic", Inter, Roboto, Helvetica'
   - 
     id: custom-font-c
     title: Character Font
@@ -285,7 +285,7 @@ settings:
   -
     id: initial-sz
     title: Initial size
-    title.de: Initiale Größe
+    title.de: Initiale Vergrößern
     description: resize first letter
     description.de: Größenveränderung
     type: variable-number-slider
@@ -298,6 +298,8 @@ settings:
     id: scale-larger-f
     title: Scale large character fonts
     title.de: Große Characterschriften skalieren
+    description: words with tags '#font-l' 
+    description.de: Wörter mit Stichwort '#schrift-g'
     type: variable-number-slider
     format: px
     default: 20
@@ -308,6 +310,8 @@ settings:
     id: scale-smaller-f
     title: Scale small character fonts
     title.de: Kleine Charakterschriften skalieren
+    description: words with tags '#font-s' 
+    description.de: Wörter mit Stichwort '#schrift-k'
     type: variable-number-slider
     format: px
     default: 12
@@ -550,15 +554,15 @@ settings:
     description.de: Svg Größe muss niederer sein als Svg Vergrößerung
     type: variable-number-slider
     default: 60
-    min: 20
-    max: 100
+    min: 40
+    max: 140
     step: 10
   -
     id: svg-zoom
     title: Svg zoom factor (on hover or click)
     title.de: Svg Vergrößerung (beim überfahren oder anklicken)
     description: keep Svg zoom factor higher than Svg scale 
-    description.de: Svg Vergrößerungsfaktor muss höher sein als die Svg-Größe 
+    description.de: Svg Vergrößerung (-faktor) muss höher sein als die Svg-Größe 
     type: variable-number-slider
     default: 80
     min: 50
@@ -577,7 +581,7 @@ settings:
     title.de: Dekorationen anpassen
     description: wave-a, wave-b, wave-c, wave-d, wave-e, wave-f
     type: variable-number-slider
-    default: 0.6
+    default: 0.4
     min: 0.1
     max: 1.2
     step: 0.1
@@ -1391,9 +1395,9 @@ settings:
     default-dark: '#800000'
   -
     id: fade-options
-    title: ❨ ❩ Show ui elements
+    title: ( ) Show ui elements
     description: visibility buttons, text, boxes, etc.
-    title.de: ❨ ❩ Einblenden
+    title.de: ( ) Einblenden
     description.de: Sichtbarkeit Tasten, Text, Felder, usw.
     type: heading
     level: 1
@@ -1427,6 +1431,13 @@ settings:
     description.de: Wiederherstellung inaktiver Reiter
     type: class-toggle
   -
+    id: slim-bars
+    title: Slim bars
+    description: restore default tab-height
+    title.de: Schmale Leisten
+    description.de: Wiederherstellung normale Reiterhöhe
+    type: class-toggle
+  -
     id: stacked-tabs-focused
     title: Stacked notes
     description: restore defaults for stacked-view
@@ -1448,12 +1459,6 @@ settings:
     title.de: Notizpfad
     description.de: Wiederherstellung Pfad (Titelleiste)
     type: class-toggle
-  -
-    id: slim-bars
-    title: Slim tabs
-    title.de: Schmale Reiter
-    type: class-toggle
-    default: false
   -
     id: fade-op-b
     title: Text body
@@ -1490,11 +1495,11 @@ settings:
     description.de: Wiederherstellung eckige Tabellen (farbige, monochrome)
     type: class-toggle
   -
-    id: footnote-g
-    title: Footnotes - R gutter
-    title.de: Fußnoten - R Spalte
-    description: restore default footnote (footer)
-    description.de: Wiederherstellung Standard Fußnoten (Fußzeile)
+    id: hide-cp-btn
+    title: Copy button - (Phone)
+    description: restore copy-button (codeblocks, inline code)
+    title.de: Kopieren-Taste (Telefon)
+    description.de: Wiederherstellung Kopieren-Taste (Befehlszeilenblöcke, Befehlszeilen)
     type: class-toggle
   -
     id: zen-view
@@ -1526,9 +1531,12 @@ settings:
   -
     id: dim-notes
     title: Zen - Dim secondary Notes
-    description: Pull secundary notes in the background
     title.de: Zen - Abdunkeln sekundärer Notizen
-    description.de: Sekundäre Notizen in den Hintergrund drängen
+    type: class-toggle
+  -
+    id: zen-toggle
+    title: Zen - Dim title bar & ribbon
+    title.de: Zen - Titelleiste & Seitenleiste ausblenden
     type: class-toggle
   -
     id: monoch-ttag
@@ -1545,11 +1553,6 @@ settings:
     description.de: entfernt Textfarbe und Hintergrundfarbe
     type: class-toggle
   -
-    id: show-footnote
-    title: Hide Footnotes
-    title.de: Verstecke Fußnoten
-    type: class-toggle
-  -
     id: fade-op-c
     title: Canvas, Slide, Query
     type: heading
@@ -1562,7 +1565,6 @@ settings:
     title.de: Canvas Tasten
     description.de: Wiederherstellung Canvas Tasten
     type: class-toggle
-    default: true
   -
     id: show-canvas-nl
     title: Canvas node labels 
@@ -1584,15 +1586,6 @@ settings:
     title.de: Graph Tasten (PC)
     description.de: Wiederherstellung Graph Tasten
     type: class-toggle
-    default: true
-  -
-    id: show-search
-    title: Obsidians 'Query' context
-    title.de: Obsidians 'Query' Kontext
-    description: restore default unfolded context view
-    description.de: Wiederherstellung aufgeklappte Kontext Ansicht 
-    type: class-toggle
-    default: true
   -
     id: grid-mobile-tb
     title: Grid toolbar (phone)
@@ -1922,7 +1915,6 @@ body.col-mod-1 .theme-dark,
 body.col-mod-1.theme-dark {
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
-    --background-secondary: var(--color-base-20);
     --background-secondary: var(--color-base-20);
     --background-modifier-border: gray;
 
@@ -2384,6 +2376,10 @@ Zen Mode
     transition: opacity 4s linear;
 }
 
+.zen-mode:is(.mod-linux, .mod-windows) .titlebar-button-container.mod-right {
+    background-color: var(--background-primary) !important;
+}
+
 .zen-mode :not(.is-mobile) .workspace-tabs .workspace-leaf {
     background: var(--background-primary);
 }
@@ -2392,7 +2388,8 @@ Zen Mode
     background: none;
 }
 
-.zen-mode .workspace-ribbon.mod-left:before {
+.zen-mode .workspace-ribbon.mod-left:before,
+.zen-mode :is(.side-dock-settings, .side-dock-actions) {
     opacity: 0;
 }
 
@@ -2504,6 +2501,7 @@ Give the parent element a background color so overlapping panes don't show throu
 NAVI BAR
 ----------------------------------------------------------------*/
 
+/* phone Navi Tree */
 .is-phone .workspace-drawer .nav-buttons-container .nav-action-button {
     z-index: 3;
 }
@@ -2722,7 +2720,7 @@ body:not(.is-phone) .markdown-preview-view .list-collapse-indicator {
     border-radius: var(--FolderRadius);
 }
 
-/* General Nav Folder Children (this is the part that expands from each top level folder) */
+
 .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
     margin-left: auto;
     border-radius: 0px 0px var(--FolderRadius) var(--FolderRadius);
@@ -3087,7 +3085,7 @@ body:not(.show-prop) .metadata-container,
     content: "yaml";
     border-radius: 4px;
     padding: 0 6px;
-    font-size: medium;
+    /* font-size: medium; */
     border: 2px solid;
     font-weight: bold;
     font-size: 12px;
@@ -3273,7 +3271,6 @@ h6,
     margin-left: auto;
     margin-right: auto;
     display: table;
-    width: 80%;
 }
 
 
@@ -3321,7 +3318,6 @@ Font models
 .ftheme-4 .markdown-preview-section :is(p) {
     font-family: var(--custom-font-c) !important;
 }
-
 
 
 /* global */
@@ -3685,7 +3681,7 @@ overwrite H1 size
 
 /* Comments label sidebox */
 .theme-dark .file-embed {
-    background-color: darkgray;
+    background: navajowhite;
     color: var(--background-primary);
 }
 
@@ -3908,18 +3904,6 @@ highlights
     color: black;
 }
 
-/* collapse search queries */
-body:not(.show-search) .search-result:not(.is-collapsed) .search-result-file-matches {
-    display: none;
-    height: 0;
-}
-
-/* expand search queries on demand*/
-body:not(.show-search) .search-result:not(.is-collapsed):hover .search-result-file-matches {
-    display: revert;
-    height: initial;
-}
-
 /* Html custom Highlight */
 body:not(.callout).markdown-source-view.mod-cm6 mark,
 .markdown-rendered mark {
@@ -3958,6 +3942,13 @@ body:not(.callout).markdown-source-view.mod-cm6 mark,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     border-radius: 4px;
     padding: 2px 5px;
+    background-color: rgb(128 128 128 / 10%);
+    font-size: initial;
+}
+
+.markdown-rendered code {
+    background-color: rgb(128 128 128 / 10%);
+    font-size: initial;
 }
 
 body:not(.is-mobile) .cm-s-obsidian span.cm-inline-code {
@@ -4547,6 +4538,7 @@ a[href="#-tips"]+mark:not(:hover) {
     display: inline-block;
     line-height: 0px;
     width: 26px;
+    color: transparent;
 }
 
 a[href="#-tips"]+mark::after {
@@ -4759,10 +4751,6 @@ a[href="#-profit"]+mark::before {
     content: "\1F4B0\ ";
 }
 
-del {
-    text-decoration: 2px line-through;
-    text-decoration-color: var(--text-normal);
-}
 
 /*----------------------------------------------------------------
 CALLOUTS 
@@ -5515,32 +5503,23 @@ body:not(.prg-break) .markdown-preview-view :is(p) {
 footnotes normal
 ----------------------------------------------------------------*/
 
-body:not(.footnote-g) .markdown-preview-section .footnotes {
-    position: absolute;
-    width: 340px;
-    float: right;
-    top: 12%;
+.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-section .footnotes ol {
+    padding-top: 6px;
+    margin-top: 2em;
+    border-radius: inherit;
+    border-top: 1px solid;
 }
 
-body:not(.footnote-g) .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-section .footnotes,
-body:not(.footnote-g) .markdown-source-view:not(.is-readable-line-width) .markdown-preview-section .footnotes {
-    right: -24em;
+.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-section .footnotes ol>li {
+    border-bottom: 0;
 }
 
-body:not(.footnote-g) .is-phone .markdown-preview-section .footnotes {
-    right: -4em
-}
-
-body:not(.footnote-g) .markdown-preview-view:is(.is-readable-line-width) .markdown-preview-section .footnotes,
-body:not(.footnote-g) .markdown-source-view:is(.is-readable-line-width) .markdown-preview-section .footnotes {
-    left: calc(var(--custom-max-line-width) + 26em);
-}
-
-body:not(.footnote-g) .markdown-preview-section .footnotes hr {
+/* remove delimiter */
+.markdown-preview-section .footnotes hr {
     display: none;
 }
 
-body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
+.markdown-preview-section .footnotes ol>li::marker {
     content: counter(list-item) ". ";
     font-size: small;
     color: var(--text-normal);
@@ -5570,17 +5549,10 @@ body:not(.footnote-g) .markdown-preview-section .footnotes ol>li::marker {
     background-color: white !important;
 }
 
-.show-footnote .footnotes {
-    display: none;
-}
-
 a.footnote-link {
     color: var(--text-normal);
 }
 
-.is-phone a.footnote-link {
-    vertical-align: bottom;
-}
 
 /*----------------------------------------------------------------
 Buttons - Preferences
@@ -5613,9 +5585,6 @@ Buttons - Preferences
 }
 
 /* top & bottom bars */
-/*Light - linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary)); */
-/* dark - background: linear-gradient(180deg, var(--background-primary), var(--background-secondary), var(--background-secondary), var(--background-primary)); */
-
 .modal-container.mod-dim .modal,
 .modal.mod-settings .vertical-tab-header {
     background: var(--prefs-grad);
@@ -5631,7 +5600,12 @@ Buttons - Preferences
     background: var(--background-secondary);
 }
 
-/* search mask */
+/* search mask  */
+.theme-light [type='search'] {
+    background: lightgray;
+}
+
+
 .is-phone.theme-light .setting-item-control input {
     background: var(--background-modifier-hover);
 }
@@ -5842,6 +5816,11 @@ body:not(.is-phone) .view-header {
     transform: scale(1.4);
 }
 
+/* Linux*/
+.dropdown option {
+    background: dimgray;
+}
+
 .theme-light select.dropdown,
 .is-phone.theme-light select.dropdown {
     background-color: var(--background-secondary);
@@ -5986,6 +5965,10 @@ a:hover {
 /* place copy btn of callouts */
 .is-phone .markdown-source-view.mod-cm6 .code-block-flair {
     right: 0;
+}
+
+body:not(.hide-cp-btn).is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
+    opacity: 0;
 }
 
 /* min callout height - source mode */
@@ -6140,7 +6123,6 @@ hr:is([class*="wave"] hr, [class*="fade"] hr) {
 /* Shine */
 .theme-light .fade-3 hr {
     height: 20px;
-    width: 60%;
     background-image: radial-gradient(farthest-side at 50% -50%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     position: relative;
 }
@@ -6156,7 +6138,6 @@ hr:is([class*="wave"] hr, [class*="fade"] hr) {
 
 .theme-dark .fade-3 hr {
     height: 20px;
-    width: 60%;
     background-image: radial-gradient(farthest-side at 50% -50%, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
     position: relative;
 }
@@ -6502,7 +6483,7 @@ Contact TABLES - (img, full nm, tel, mail, group relations)
 /* --------------------------------------------   
 RECIPE TABLES
 --------------------------------------------   */
-.recipes table {
+body:not(.is-phone) .recipes table {
     max-width: 50vw;
 }
 
@@ -6552,7 +6533,6 @@ RECIPE TABLES
 .recipes hr {
     height: 1px;
     border: none;
-    height: auto;
     color: var(--hr-color);
     text-align: center;
 }
@@ -6908,10 +6888,10 @@ ASIDE NOTES
 IMAGE PLACING
 ----------------------------------------------------------------*/
 
-.is-phone img {
+/* .is-phone img {
     max-width: 92vw !important;
     width: 100%;
-}
+} */
 
 /* pause gif */
 body:not(.show-gifs) .image-embed[src$=".gif"].is-loaded:not(:hover) img,
@@ -7276,7 +7256,6 @@ image placed + description
 */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     max-width: var(--file-line-width);
-    margin-left: 16vw;
 }
 
 .callout {
@@ -7481,8 +7460,16 @@ framed
     display: flex;
     padding: 6px;
     justify-content: center;
-    left: 30%;
     position: relative;
+}
+
+.is-phone .callout[data-callout="framed-c"] {
+    left: -24%;
+}
+
+body:not(.is-phone) .callout[data-callout="framed-c"] {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* axial center */
@@ -7515,9 +7502,6 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
 .callout[data-callout="framed-rg"] {
     background: transparent;
     position: absolute;
-    width: 210px;
-    margin: 0;
-    padding: 0;
 }
 
 .callout[data-callout="framed-lg"] .callout-content p,
@@ -7525,6 +7509,7 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
     font-size: small;
     text-align: justify;
     word-break: break-all;
+    width: 300px;
 }
 
 .markdown-source-view.mod-cm6 .cm-embed-block div.callout:is([data-callout="framed-lg"]) {
@@ -7539,14 +7524,37 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
     width: 10vw;
 }
 
+/* left margin works but scrolling inside not */
+.is-phone .callout[data-callout="framed-lg"] {
+    position: inherit;
+}
+
+/* readable line width */
 .callout[data-callout="framed-lg"] {
-    right: var(--file-line-width);
-    left: 20px;
+    padding-right: 2em;
+    left: 10px;
+}
+
+/* .callout[data-callout="framed-lg"], */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    margin-left: 19vw;
+    margin-right: 19vw;
 }
 
 .callout[data-callout="framed-rg"] {
-    left: calc(var(--custom-max-line-width) + 22vw);
+    padding-left: 2em;
+    right: 10px;
+}
+
+.callout[data-callout="framed-rg"] .markdown-preview-section {
+    /* left: calc(var(--custom-max-line-width) + 22vw); */
+    right: -20em;
     padding-right: 6px;
+}
+
+.is-phone .callout[data-callout="framed-rg"] {
+    left: 100vw;
+    padding-right: 12px;
 }
 
 .callout[data-callout^="framed"]:is([data-callout-metadata~="bg"],
@@ -7795,9 +7803,8 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
     height: calc(1% * var(--svg-zoom));
 }
 
-.mermaid svg:not(:hover, :active) {
+.mermaid svg:not(:active) {
     width: calc(1% * var(--svg-scale));
-    height: calc(1% * var(--svg-scale));
 }
 
 /* default zoom level mermaids */
@@ -7988,8 +7995,6 @@ MERMAID
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: calc(1% * var(--svg-scale));
-    height: calc(1% * var(--svg-scale));
 }
 
 .mermaid svg[aria-roledescription="pie"] {
@@ -8023,7 +8028,6 @@ EMBEDS - check
 
 .markdown-source-view .markdown-embed-link,
 .markdown-source-view .file-embed-link {
-    right: -18px;
     background: lightgray;
     color: black;
 }
@@ -8060,7 +8064,7 @@ EMBEDS - check
 }
 
 .file-embed {
-    background-color: var(--soft-bg-col);
+    background-color: var(--soft-shadow);
 }
 
 .markdown-preview-section div>br {
@@ -8178,6 +8182,10 @@ body:not(.show-canvas-nl) .canvas-wrapper:not(.mod-readonly) .canvas-node-label:
     border: 2px solid var(--slant-blue);
 }
 
+.canvas-control-item.is-disabled:hover :is(svg) {
+    stroke: white;
+}
+
 .canvas-empty-embed-action-list .empty-state-action:hover {
     color: white;
 }
@@ -8191,7 +8199,7 @@ STATUS-BAR - L Ribbon - UI Elements
 ----------------------------------------------------------------*/
 
 /* hide L ribbon */
-body:not(.is-phone):not(.show-ui-btns) :is(.side-dock-settings, .side-dock-actions, .nav-buttons-container) {
+body:not(.is-phone):not(.show-ui-btns, .zen-mode) :is(.side-dock-settings, .side-dock-actions, .nav-buttons-container) {
     opacity: 0.2;
     transition: opacity 0.8s ease-in-out;
 }
@@ -8259,6 +8267,40 @@ body:not(.show-status-bar) .status-bar:hover {
     color: var(--text-accent-special);
 }
 
+/* slim-bars */
+body:not(.slim-bars) .sidebar-toggle-button.mod-right,
+body:not(.slim-bars) .sidebar-toggle-button.mod-right:hover {
+    height: var(--slim-bar);
+}
+
+body:not(.slim-bars) .sidebar-toggle-button.mod-left,
+body:not(.slim-bars) .sidebar-toggle-button.mod-left:hover {
+    height: var(--slim-bar);
+    z-index: 14;
+}
+
+body:not(.slim-bars) .workspace-tab-header-container,
+body:not(.slim-bars) .workspace-ribbon.mod-left:before {
+    height: var(--slim-bar);
+    border-bottom: 0;
+}
+
+body:not(.slim-bars) .workspace-ribbon.mod-left {
+    margin-top: var(--slim-bar);
+    border-bottom: 0;
+}
+
+.slim-bars .workspace-ribbon.mod-left:before {
+    border-bottom: 0;
+}
+
+/* Linux & Win */
+.is-hidden-frameless.mod-windows .titlebar-button-container,
+.is-hidden-frameless.mod-linux .titlebar-button-container {
+    pointer-events: auto;
+    height: var(--slim-bar);
+}
+
 /* sidebar-toggle-button mod */
 body:not(.show-ui-btns) .sidebar-toggle-button.mod-right,
 body:not(.show-ui-btns) .sidebar-toggle-button.mod-left {
@@ -8283,38 +8325,6 @@ body:not(.show-ui-btns) .mod-right-split .workspace-tab-header-container-inner:h
     opacity: 1;
 }
 
-/* slim-bars */
-.slim-bars .sidebar-toggle-button.mod-right,
-.slim-bars .sidebar-toggle-button.mod-right:hover {
-    height: var(--slim-bar);
-}
-
-.slim-bars .sidebar-toggle-button.mod-left,
-.slim-bars .sidebar-toggle-button.mod-left:hover {
-    height: var(--slim-bar);
-    z-index: 14;
-}
-
-.slim-bars .workspace-tab-header-container,
-.slim-bars .workspace-ribbon.mod-left:before {
-    height: var(--slim-bar);
-    border-bottom: 0;
-}
-
-.slim-bars .workspace-ribbon.mod-left {
-    margin-top: var(--slim-bar);
-    border-bottom: 0;
-}
-
-body:not(.slim-bars) .workspace-ribbon.mod-left:before {
-    border-bottom: 0;
-}
-
-/* .slim-bars .sidebar-toggle-button,
-.slim-bars .sidebar-toggle-button:hover {
-    padding: 0;
-    height: 32px;
-} */
 
 /* dim tabs */
 body:not(.show-tab-name) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title:not(.is-active) {
@@ -8427,16 +8437,17 @@ Menu icon colors - Context menu
 }
 
 /* trash icon */
-.theme-light .menu-item.is-warning:hover,
-.theme-light .menu-item.is-warning.selected,
-.theme-light svg.svg-icon.lucide-trash-2 {
+svg.svg-icon.lucide-trash-2 {
+    stroke: #b30000;
+}
+
+.menu-item.is-warning .menu-item-title,
+.menu-item.is-warning.selected .menu-item-title {
     color: #b30000;
 }
 
-.theme-dark .menu-item.is-warning:hover,
-.theme-dark .menu-item.is-warning.selected,
-.theme-dark svg.svg-icon.lucide-trash-2 {
-    color: #e20202;
+.menu-item.is-warning.selected:hover {
+    background-color: #b92b2b3d;
 }
 
 .menu svg.svg-icon.lucide-x {
@@ -9184,7 +9195,7 @@ input[type=checkbox]:checked:after {
 input[type=checkbox]:checked,
 input[type=checkbox]:checked:hover {
     background-color: transparent;
-    border: transparent;
+    border: none;
 }
 
 /* align icons */
@@ -11412,28 +11423,6 @@ kanban
     font-size: medium;
 }
 
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
-    background-color: white;
-    color: var(--checkbox-border-color) !important;
-    background-image: var(--checkbox-icon);
-    background-repeat: no-repeat;
-    background-position: -4px -5px;
-}
-
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox],
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked,
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked:hover {
-    filter: hue-rotate(0deg);
-}
-
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:not(:checked) {
-    scale: 0.5;
-}
-
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
-    scale: 1.2;
-}
-
 /* add card btn */
 .kanban-plugin__new-item-button:hover {
     color: white;
@@ -11510,7 +11499,7 @@ div.kanban-plugin__lane-title-count {
 .is-phone .workspace-leaf-content[data-type="kanban"] .view-header .view-action {
     background: var(--background-primary);
     scale: 1.1;
-    border-radius: inherit;
+    /*  border-radius: inherit; */
     margin-right: -2px;
     margin-left: 2px;
     border-radius: 50%;
@@ -11551,7 +11540,7 @@ div.kanban-plugin__lane-title-count {
     width: 1000px;
     height: 100%;
     padding-bottom: 44px;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
     overflow: scroll;
     grid-gap: 10px;
 }
