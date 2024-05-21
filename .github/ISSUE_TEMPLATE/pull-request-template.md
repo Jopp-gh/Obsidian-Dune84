@@ -1,5 +1,5 @@
 ---
-name: Pull request
+name: Pull request template
 about: Suggest features or submit a patch
 title: ''
 labels: ''
