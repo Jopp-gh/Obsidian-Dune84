@@ -38,7 +38,7 @@ Please show me your gratitude for the work I have done and smash that [**Buy me 
 First I've build Dune for myself; only later I added many nice features for a larger audience. At times it wasn't an easy task to code but a true endurance test ! 
 
 **I released this theme in the hope to make new friends too**. If you need support or you wanna share ideas and interests related to pkm, creative activities, programming or architecture, feel free to contact me. 
-_Private massage me_  `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about some of following topics (sorted in no particular order):
+_Private Message_ `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) and let's talk about following topics (sorted in no particular order):
 
 ```
 - #architecture,
@@ -55,8 +55,8 @@ _Private massage me_  `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/
 ### Updates
 
 To make sure you're always up-to-date, open Obsidians `Preferences>Appearance>` then click on `Check for updates` 
-> → If you can't run the newest version of Obsidian, then try to install older [releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) 
-of Dune. Note, you should prefer to install Dune directly from your Obsidian app as the files under **releases** are older versions and only made available for backward compatibiliy purposes.
+> → _If you can't run the newest version of Obsidian_, then try to install older [releases](https://github.com/Jopp-gh/Obsidian-Dune84/releases) 
+of Dune. Note, you should prefer to install Dune directly from within your Obsidian app as the files under **releases** here are older versions and available for the only purpose to add backwards compatibiliy to older versions of Obsidian.
 
 <br>
 
@@ -64,8 +64,8 @@ of Dune. Note, you should prefer to install Dune directly from your Obsidian app
 ## First steps
 
 1. **to display "Dune-1984" correctly** and to get all options added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-2. Dune offers a **clean, clutter-free experience**, so most buttons are semi-hidden by default (desktop). Open `Preferences>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidians. Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
-3. download [this companion snippet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) to **add icons to your folder tree**
+2. Dune offers a **clean, clutter-free experience**, so most buttons are semi-hidden by default (desktop). Open `Settings>Style Settings>Dune>Show ui elements` if you want re-enable buttons / tabs and restore default looks of Obsidian. Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
+3. download Dune's **folder icons** and **supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). Some community plugins were adapted for Dune, eg. Kanban or Dataview. See the list [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
 5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md) 
 
 <br>
@@ -92,11 +92,10 @@ of Dune. Note, you should prefer to install Dune directly from your Obsidian app
 - to work with tables, get [**Advanced-tables**](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger 
  
 ### Tweaked
-
-- Kanban
-- cMenu
-- Full Calendar
-- mySnippets
+- Dataview (Michael Brenan)
+- Kanban (mgmeyers)
+- Calendar (Liam Cain)
+- Full Calendar (Davis Haupt)
 
 <br>
 
@@ -106,7 +105,7 @@ of Dune. Note, you should prefer to install Dune directly from your Obsidian app
 - [x] MacOs
 - [x] Android
 - [x] clean embeds
-- [x] Tablet (user support needed)
+- [x] Tablet (pull requests are welcome)
 - [x] some features 
 - [ ] minor fixes
 
@@ -155,8 +154,7 @@ This "Normality" or "Standard" is nothing cheap and needs more attention. Let's 
 ### Collaboration
 **thanks for your interest in my theme**. Right now I'm looking for people interested to rework my current documentation, to make my theme **Dune** even more accessible. Also, feel free to open a ticket on top page to ask me questions and if you want to contribute in some way, you're welcome.
 
-You find me on Discord (Obsidians Member Group) or the official forums (https://forum.obsidian.md)
-Feel free to share your ideas and issues relevant to **Dune**, just open a new ticket on top page or chat with me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) 
+Feel free to share your ideas and issues relevant to **Dune**, Private message me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) 
 
 <br>
 
