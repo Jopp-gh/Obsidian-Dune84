@@ -1,7 +1,8 @@
 # Recipes
 
-if you like to collect your recipes and create your own cookbook, then use the ricepes template of Dune. To add Dune's recipe template below, activate `Preferences>Core plugins>Templates`, specify a template directory of your choice. Then paste the template below in a new note of your template directory.  
-Feel free to add and remove or place elements in a way useful to you :)
+if you like to collect recipes and create your own cookbook, you are welcome to use the **recipes template** down below and cssclass `recipes` of Dune. 
+To add Dune's recipe template below, activate `Preferences>Core plugins>Templates`, then specify a template directory of your choice. Finally, paste the template below in a new note of your template directory.  
+Feel free to add and remove or place elements on the template :)
 
 ```
 ---
