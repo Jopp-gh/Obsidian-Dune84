@@ -2,163 +2,18 @@
 Dune PLUGIN SUPPORT
 ----------------------------------------------------------------*/
 
-/* 
-kanban
-*/
-.kanban-plugin__item-tags:not(:empty) {
-    font-size: medium;
+body {
+    --text-accent-special: #0080ff;
+    --soft-shadow: rgba(0, 0, 0, 0.1);
+    --light-tone: white;
+    --dark-tone: black;
 }
 
-/* add card btn */
-.kanban-plugin__new-item-button:hover {
-    color: white;
-    background-color: var(--text-accent-special) !important;
-}
-
-.theme-light .kanban-plugin__lane {
-    background: var(--soft-shadow);
-}
-
-.kanban-plugin__item-button-wrapper {
-    border-top: none;
-}
-
-.kanban-plugin__lane-header-wrapper {
-    border-radius: 4px;
-    border: none;
-}
-
-.theme-dark .kanban-plugin__item-title-wrapper {
-    background: black;
-}
-
-.theme-light .kanban-plugin__item-title-wrapper {
-    background: initial;
-}
-
-.kanban-plugin__item-prefix-button-wrapper {
-    position: relative;
-}
-
-.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
-    /* filter: none;
-    border: none; */
-    margin-right: 8px;
-    position: relative;
-}
-
-body:not(.is-phone) .kanban-plugin__item-title-wrapper input[type=checkbox] {
-    background-size: cover;
-    background-position: center;
-}
-
-/* checkboxes -main */
-.kanban-plugin__item-title-wrapper ul.contains-task-list input[type=checkbox]:checked,
-.kanban-plugin__item-title-wrapper ul.contains-task-list input[type=checkbox]:not(:checked) {
-    width: 15px;
-    height: 15px;
-}
-
-/* chbx main */
-.kanban-plugin__item-title-wrapper input[type=checkbox]:checked {
-    background-image: var(--checkbox-icon);
-    background-color: snow;
-    background-repeat: no-repeat;
-}
-
-
-.theme-dark .kanban-plugin__item-title-wrapper input[type=checkbox]:checked {
-    filter: brightness(1.4);
-}
-
-.choices__list--single {
-    background: var(--soft-shadow);
-}
-
-.is-phone .kanban-plugin__markdown-preview-view input.task-list-item-checkbox {
-    margin-left: -24px;
-}
-
-.is-phone .kanban-plugin__item-title-wrapper input[type=checkbox] {
-    background-size: auto;
-    background-position: center;
-}
-
-.is-phone .modal.kanban-plugin__board-settings-modal .modal-content {
-    padding: 8px;
-}
-
-.is-phone .workspace-leaf-content.node-insert-event[data-type="kanban"] .view-header-title-parent {
-    display: none;
-}
-
-.is-phone .kanban-plugin__lane {
-    margin-top: 28px;
-}
-
-.is-phone .kanban-plugin__item-title .markdown-preview-view {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.is-phone .workspace-leaf-content[data-type="kanban"] .view-actions {
-    margin-left: -130px;
-}
-
-.is-phone .workspace-leaf-content[data-type="kanban"] .view-header .view-action {
-    background: var(--background-primary);
-    scale: 1.1;
-    margin-right: -2px;
-    margin-left: 2px;
-    border-radius: 50%;
-}
-
-.is-phone .workspace-leaf-content[data-type="kanban"] .clickable-icon svg.svg-icon.lucide-plus-circle {
-    visibility: visible;
-    width: auto;
-}
-
-.is-phone .kanban-plugin__search-wrapper input[type='text'] {
-    height: 50%;
-}
-
-.is-phone .kanban-plugin .kanban-plugin__search-wrapper input[type='text'] {
-    width: 100%;
-    margin-top: 38px;
-}
-
-.is-phone .kanban-plugin__icon[data-icon="lucide-x"] {
-    display: inline-block;
-    line-height: 1;
-    margin-top: 40px;
-    scale: 1.4;
-}
-
-.is-phone .kanban-plugin__lane-wrapper {
-    margin-top: 2%;
-}
-
-.is-phone .kanban-plugin input[type='text'] {
-    padding: 0;
-}
-
-.is-phone .kanban-plugin__board>div {
-    display: grid;
-    height: 100%;
-    padding-bottom: 44px;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
-    overflow: scroll;
-    grid-gap: 10px;
-}
-
-.is-phone .kanban-plugin__lane-form-wrapper {
-    top: 2.6rem;
-    width: 280px;
-}
 
 /* 
-advanced-tables
-*/
+  advanced-tables
+  */
+
 body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-container {
     opacity: 1;
 }
@@ -171,41 +26,26 @@ body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-contai
     background-color: var(--text-accent-special);
 }
 
-/* 
-cal 
-*/
-.year.svelte-1vwr9dd.svelte-1vwr9dd,
-.month.svelte-1vwr9dd.svelte-1vwr9dd,
-.today.svelte-q3wqg9 {
-    font-weight: 600 !important;
-}
 
-.title.svelte-1vwr9dd.svelte-1vwr9dd {
-    font-size: 2em !important;
-}
+/* 
+  cal 
+  */
 
 .theme-light .year.svelte-1vwr9dd.svelte-1vwr9dd,
 .theme-light .today.svelte-q3wqg9 {
-    color: darkred !important;
+    color: darkred;
 }
 
 .theme-dark .year.svelte-1vwr9dd.svelte-1vwr9dd,
 .theme-dark .today.svelte-q3wqg9 {
-    color: red !important;
+    color: red;
 }
 
-.today.svelte-q3wqg9 {
-    color: var(--color-text-today);
-    font-size: inherit !important;
-}
-
-.calendar.svelte-pcimu8 {
-    width: 100% !important;
-}
 
 /* 
-Full Calendar 
-*/
+  Full Calendar 
+  */
+
 .fc-icon {
     height: 0;
     line-height: 0;
@@ -215,32 +55,39 @@ Full Calendar
     line-height: 0;
 }
 
-.focus-mode .workspace-ribbon,
-.focus-mode .sidebar-toggle-button {
-    visibility: visible;
-}
-
-.is-phone .clickable-icon.setting-editor-extra-setting-button svg.svg-icon.lucide-plus-circle {
-    width: 30px;
-    height: 30px;
-    visibility: visible;
-}
-
-.is-phone .setting-item input[type="color"] {
-    margin-top: 8px;
-}
 
 /* 
-fantasy cal
-*/
+  fantasy cal
+  */
+
 .OFCGDetails {
     background-color: transparent;
     border-radius: 6px;
 }
 
+
 /* 
-dataview 
-*/
+  time ruler 
+  */
+
+#time-ruler :is(.bg-accent) {
+    background-color: gray;
+    filter: contrast(2) saturate(0);
+}
+
+#time-ruler svg.svg-icon.lucide-plus {
+    stroke-width: 4px;
+}
+
+#time-ruler :is(.child\:h-full > *):last-child {
+    padding: 2px;
+}
+
+
+/* 
+  dataview 
+  */
+
 .block-language-dataview progress {
     --background-secondary: transparent;
 }
@@ -249,88 +96,55 @@ body:is(.uniform-width) .block-language-dataview .table-view-table {
     width: 100%;
 }
 
-
-.table-xy .block-language-dataview tbody tr>td:first-child,
-.table-xyr .block-language-dataview tbody tr>td:first-child,
-.table-xyg .block-language-dataview tbody tr>td:first-child,
-.table-xyb .block-language-dataview tbody tr>td:first-child,
-.table-xyo .block-language-dataview tbody tr>td:first-child,
-.table-xyv .block-language-dataview tbody tr>td:first-child,
-.table-xym .block-language-dataview tbody tr>td:first-child {
-    background-color: revert;
-}
-
-.table-xy-col .block-language-dataview tbody tr>td:first-child {
-    background-color: revert !important;
-}
-
 .callout .block-language-dataview table {
-    width: initial;
+    margin-bottom: 0 !important;
+    margin-top: 0;
 }
 
-.dataview.small-text,
-.block-language-dataview .table-view-table>thead>tr>th {
-    color: white !important;
+div[data-callout="multi-column"].callout>.callout-content :is(.markdown-rendered blockquote) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.dataview.small-text {
-    font-size: smaller;
-    margin-left: 2px;
+
+/* 
+  kanban
+  */
+
+.kanban-plugin__item {
+    border: 0;
 }
 
-.block-language-dataview .table-view-table>thead>tr>th {
-    border-top-right-radius: initial;
-    border-top-left-radius: initial;
+.kanban-plugin__item-button-wrapper {
+    border-top: 0;
 }
 
-.block-language-dataview table tr:last-child td:last-child {
-    border-bottom: none;
-    border-bottom-right-radius: initial;
-    border-bottom-left-radius: initial;
+.kanban-plugin__lane-header-wrapper {
+    border-bottom: 0;
+}
+
+button.kanban-plugin__new-item-button:hover {
     color: var(--text-normal);
 }
 
-.block-language-dataview .table-view-table>thead>tr>th,
-.dataview.small-text {
-    border-bottom: none;
-    color: white;
+.theme-light .kanban-plugin__lane {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.theme-light .block-language-dataview .table-view-table>thead>tr>th {
-    border-bottom: none;
+.theme-dark .kanban-plugin__lane {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.table-view-table>tbody>tr:hover {
-    background-color: var(--text-accent);
+button.kanban-plugin__new-item-button {
+    color: inherit;
 }
 
-.theme-dark .markdown-rendered .block-language-dataview .internal-link:hover {
-    color: var(--text-accent-special);
-}
-
-.theme-dark .block-language-dataview .table-view-table>tbody>tr:hover {
-    background-color: rgba(255, 171, 26, 0.3);
-}
-
-input.dataview.task-list-item-checkbox {
-    margin-right: 6px;
-}
-
-.table-xy .block-language-dataview tbody tr>td:first-child,
-.table-xyr .block-language-dataview tbody tr>td:first-child,
-.table-xyg .block-language-dataview tbody tr>td:first-child,
-.table-xyb .block-language-dataview tbody tr>td:first-child,
-.table-xym .block-language-dataview tbody tr>td:first-child {
-    background-color: revert;
-}
-
-.table-xy-col .block-language-dataview tbody tr>td:first-child {
-    background-color: revert !important;
-}
 
 /* 
-dice roller 
-*/
+  dice roller
+  */
+
 .dice-roller.no-icon {
     display: contents;
 }
@@ -340,32 +154,31 @@ dice roller
 }
 
 /* 
-Quickadd space btw btns 
-*/
-.is-phone .quickAddModal .modal-content div {
-    padding-left: 4px;
-}
+  card view switcher 
+  */
 
-.is-phone .modal .macroContainer {
-    display: block;
-    padding: 1em;
-}
-
-.is-phone .addMacroBarContainer {
-    margin: 0;
-}
-
-/* 
-buttons
- */
-.button-maker {
-    padding-right: 22px;
+.modal-background.svelte-qhdq3h {
+    position: fixed;
 }
 
 /*
- commander 
-*/
+  commander 
+  */
+
 .is-phone .cmdr-setting-modal>.modal {
     height: revert;
     width: revert;
+}
+
+
+/* 
+  obs camera (mobile) 
+  */
+
+.modal input[accept="image/*,video/*"]::before {
+    content: "\1F4F9";
+}
+
+.modal input[accept="image/*"]::before {
+    content: "\1F4F7";
 }

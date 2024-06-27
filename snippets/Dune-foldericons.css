@@ -50,231 +50,13 @@
 
 }
 
-.theme-dark .nav-folder-title .nav-folder-title-content::after {
+/*----------------------------------------------------------------
+FOLDER ICONS SETTINGS - do not edit
+----------------------------------------------------------------*/
+
+.theme-dark .nav-folder-title .nav-folder-title-content::before {
     filter: invert(1);
 }
-
-.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title:hover>.nav-folder-title-content::after {
-    filter: invert(1) !important;
-}
-
-/*----------------------------------------------------------------
-FOLDERs
-----------------------------------------------------------------*/
-
-/* Workbench */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Workbench"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Workbench"] .nav-folder-title-content::after {
-    content: var(--inbox-icon);
-}
-
-/* Journal, Education, Training */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]) .nav-folder-title-content::after {
-    content: var(--openbook-icon);
-}
-
-
-/* Design, Draft */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]) .nav-folder-title-content::after {
-    content: var(--design-icon);
-}
-
-
-/* Read */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Read"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Read"] .nav-folder-title-content::after {
-    content: var(--bookmark-icon);
-}
-
-
-/* Game */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Game"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Game"] .nav-folder-title-content::after {
-    content: var(--game-icon);
-}
-
-
-/* Portfolio */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Portfolio"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Portfolio"] .nav-folder-title-content::after {
-    content: var(--portfolio-icon);
-}
-
-
-/* Photo */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Photo"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Photo"] .nav-folder-title-content::after {
-    content: var(--camera-icon);
-}
-
-
-/* Software, Linux, Mac, Win */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]) .nav-folder-title-content::after {
-    content: var(--computer-icon);
-}
-
-
-/* Entertainment, Movie */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]) .nav-folder-title-content::after {
-    content: var(--movie-icon);
-}
-
-
-/* Study, Research */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Study"], [data-path$="Research"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Study"], [data-path$="Research"]) .nav-folder-title-content::after {
-    content: var(--compass-icon);
-}
-
-
-/* Contact */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Contact"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Contact"] .nav-folder-title-content::after {
-    content: var(--contacts-icon);
-}
-
-
-/* Society, Social */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Society"], [data-path$="Social"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Society"], [data-path$="Social"]) .nav-folder-title-content::after {
-    content: var(--people-icon);
-}
-
-
-/* Health */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Health"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Health"] .nav-folder-title-content::after {
-    content: var(--heart-icon);
-}
-
-
-/* Network */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Network"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Network"] .nav-folder-title-content::after {
-    content: var(--globe-icon);
-}
-
-
-/* Travel */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Travel"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Travel"] .nav-folder-title-content::after {
-    content: var(--takeoff-icon);
-}
-
-
-/* Sport */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Sport"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Sport"] .nav-folder-title-content::after {
-    content: var(--dumbbell-icon);
-}
-
-
-/* Code, Shell, JS */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]) .nav-folder-title-content::after {
-    content: var(--code-icon);
-}
-
-
-/* Project */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Project"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
-    content: var(--calendar-icon);
-}
-
-
-/* Responsibility, Area */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]):hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
-    content: var(--key-icon);
-}
-
-
-/* Archive */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
-    content: var(--box-icon);
-}
-
-
-/* Resources */
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Resources"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
-}
-
-.nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
-    content: var(--node-icon);
-}
-
-
-
-/*----------------------------------------------------------------
-ICON placement
-----------------------------------------------------------------*/
 
 .nav-folder-title-content::after {
     background-color: transparent !important;
@@ -288,36 +70,152 @@ ICON placement
     position: relative;
 }
 
-/* 
-EXAMPLE HANDLER 1
+/*----------------------------------------------------------------
+FOLDER ICONS - editable
+----------------------------------------------------------------*/
 
---single keyword, unique icon--
-*/
-
-/* 
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Archive"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
+/* Workbench */
+.nav-folder-title[data-path$="Workbench"] .nav-folder-title-content::after {
+    content: var(--inbox-icon);
 }
 
-.nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
-    content: var(--box-icon);
-
-}
-*/
-
-/* 
-EXAMPLE HANDLER 2
-
---multiple keywords sharing the same icon--
-*/
-
-/* 
-body:not(.is-mobile).theme-dark .tree-item-self.is-clickable.nav-folder-title[data-path$="Responsibility"]:hover>.tree-item-inner.nav-folder-title-content::after {
-    filter: inherit;
+/* Journal, Education, Training */
+.nav-folder-title:is([data-path$="Journal"], [data-path$="Education"], [data-path$="Training"]) .nav-folder-title-content::after {
+    content: var(--openbook-icon);
 }
 
+
+/* Design, Draft */
+.nav-folder-title:is([data-path$="Design"], [data-path$="Draft"]) .nav-folder-title-content::after {
+    content: var(--design-icon);
+}
+
+
+/* Read */
+.nav-folder-title[data-path$="Read"] .nav-folder-title-content::after {
+    content: var(--bookmark-icon);
+}
+
+
+/* Game */
+.nav-folder-title[data-path$="Game"] .nav-folder-title-content::after {
+    content: var(--game-icon);
+}
+
+
+/* Portfolio */
+.nav-folder-title[data-path$="Portfolio"] .nav-folder-title-content::after {
+    content: var(--portfolio-icon);
+}
+
+
+/* Photo */
+.nav-folder-title[data-path$="Photo"] .nav-folder-title-content::after {
+    content: var(--camera-icon);
+}
+
+
+/* Software, Linux, Mac, Win */
+.nav-folder-title:is([data-path$="Software"], [data-path$="Linux"], [data-path$="Mac"], [data-path$="Win"]) .nav-folder-title-content::after {
+    content: var(--computer-icon);
+}
+
+
+/* Entertainment, Movie */
+.nav-folder-title:is([data-path$="Entertainment"], [data-path$="Movie"]) .nav-folder-title-content::after {
+    content: var(--movie-icon);
+}
+
+
+/* Study, Research */
+.nav-folder-title:is([data-path$="Study"], [data-path$="Research"]) .nav-folder-title-content::after {
+    content: var(--compass-icon);
+}
+
+
+/* Contact */
+.nav-folder-title[data-path$="Contact"] .nav-folder-title-content::after {
+    content: var(--contacts-icon);
+}
+
+
+/* Society, Social */
+.nav-folder-title:is([data-path$="Society"], [data-path$="Social"]) .nav-folder-title-content::after {
+    content: var(--people-icon);
+}
+
+
+/* Health */
+.nav-folder-title[data-path$="Health"] .nav-folder-title-content::after {
+    content: var(--heart-icon);
+}
+
+
+/* Network */
+.nav-folder-title[data-path$="Network"] .nav-folder-title-content::after {
+    content: var(--globe-icon);
+}
+
+
+/* Travel */
+.nav-folder-title[data-path$="Travel"] .nav-folder-title-content::after {
+    content: var(--takeoff-icon);
+}
+
+
+/* Sport */
+.nav-folder-title[data-path$="Sport"] .nav-folder-title-content::after {
+    content: var(--dumbbell-icon);
+}
+
+
+/* Code, Shell, JS */
+.nav-folder-title:is([data-path$="Code"], [data-path$="Shell"], [data-path$="JS"]) .nav-folder-title-content::after {
+    content: var(--code-icon);
+}
+
+
+/* Project */
+.nav-folder-title[data-path$="Project"] .nav-folder-title-content::after {
+    content: var(--calendar-icon);
+}
+
+
+/* Responsibility, Area */
 .nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
     content: var(--key-icon);
-
 }
+
+
+/* Archive */
+.nav-folder-title[data-path$="Archive"] .nav-folder-title-content::after {
+    content: var(--box-icon);
+}
+
+
+/* Resources */
+.nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
+    content: var(--node-icon);
+}
+
+
+
+/* 
+--EXAMPLES--
+
+1. pick a icon from the top: eg. '--heart-icon'
+2. copy the 'single-keyword' rule below without slash and asterisk and pay attention to the closing parentesis '}'
+3. replace the keyword in there '--node-icon' with '--heart-icon'
+$. if you want to add more keywords to the same icon, use the example below with --multiple-keywords
+*/
+
+/* 
+.nav-folder-title[data-path$="Resources"] .nav-folder-title-content::after {
+  content: var(--node-icon);
+} 
+
+
+.nav-folder-title:is([data-path$="Responsibility"], [data-path$="Area"]) .nav-folder-title-content::after {
+  content: var(--key-icon);
+} 
 */
