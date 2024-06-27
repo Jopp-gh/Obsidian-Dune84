@@ -5,14 +5,12 @@
 
 ```
 ---
-cssclass: movies, align-a, h1-7, fade
+cssclass: movies, fade
 tags: 
 ---
 ```
 >legend: 
 >- movies = loads this **movies** layout
->- align-a = aligns text around a central axis
->- h1-7 = increases header 1 size
 >- fade = adds some horizontal lines to relax multiple tables in a nicer layout on the same page
 
 my goal was to build a compact Movie list / overview to remember watched movies, or to bookmark movies i would like to watch. I love good entertainment but keep informations pretty basic. This simple movie-catalog should help you skim through your favorites and movies you want to watch in future. To start with, add some basic descriptions (of course you can add much more informations if you wish):
@@ -36,7 +34,7 @@ my goal was to build a compact Movie list / overview to remember watched movies,
 |          |                      |                      |                      |                      |
 | -------- | -------------------- | -------------------- | -------------------- | -------------------- |
 | cover    | ![[pict-1.jpg]]      | ![[pict-2.jpg]]      | ![[pict-3.jpg]]      | ![[pict-4.jpg]]      |
-| title    | Title (Year) [^pca]  | Title (Year) [^pca]  | Title (Year) [^pca]  | Title (Year) [^pca]  |
+| title    | Title (Year) [^1]  | Title (Year) [^2]  | Title (Year) [^3]  | Title (Year) [^pca]  |
 | duration | 100 min              | 100 min              | 100 min              | 100 min              |
 | genre    | #tag1 #tag2 #tag3    | #tag1 #tag2 #tag3    | #tag1 #tag2 #tag3    | #tag1 #tag2 #tag3    |
 | director | Name                 | Name                 | Name                 | Name                 |
@@ -49,31 +47,21 @@ As you can see, the very first column is special and just a guide to tell you wh
 <br>
 
 1. **cover**: add a local cover picture, eg `![[your-picture.jpg]]` 
-2. **title**: add a movie name, ideally followed by the release year and a footnote to read plots eg. `MovieName (Year) [^pca]` TIP: since Obsidian does not support *popover previews* for footnotes, get [obsidian-better-footnotes](https://github.com/jancbeck/obsidian-better-footnotes) by aidenlx this way you can read plots directly from your footnote link 
+2. **title**: add a movie name, ideally followed by the release year and a footnote to read plots eg. `MovieName (Year) [^1]` 
 3. **duration, genre, director and rating** are optional values. You can remove some or all of these rows altogether or replace them with values you prefer 
+4. **expand** your movie table with more rows for more keywords,  or add another movie table below (keep at least an empty line between tables). Just remember to put a short description in the very first column in your movie table template
 
-> **TIP**: add as many columns as you like, for a clean overview i suggest 6 to 8 movies. If you want to add much more movies, go ahead an paste yet another movie template below your current table. Just pay attention to keep at least an empty line between table templates
+> **TIP**: add as many columns as you like, for a clean overview i suggest 4 in a row for phone and 6 to 8 movies in a row for desktop pcs.
 
 <br>
 
-### Plot popup and zoomed view 
-![movie–05](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/cd0f03ce-e2d3-4c42-bb0b-03d07719e0cb)
-
-plot popup view
+### Zoomed view 
 
 ![movie–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ba18c607-0e57-4f84-8054-5fa020307a84)
 
-zoomed view (press and keep left mouse button or activate auto-zoom in preferences)
+zoomed view (press and keep left mouse button)
 
-<br>
 
-### Working with tables
-
-Markdown Tables are, what they are, just get used to them.
-However, to simplify your task with tables, i suggest you to:
-- toggle on `Source mode`
-- get [Advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) by tgrosinger. With this plugin, you will actually enjoy again to work with tables :)
-- if you want to add more informations in your movie table, remember to put a short description in the very first column of your movie table template
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
