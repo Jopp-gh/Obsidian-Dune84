@@ -12,16 +12,16 @@
 
 <br>
 
-Choose how your **first letter**, your **Initial**, should look like: 
-- Dropcaps  (half submerged and surrounded by a text block)
-- Raisecaps (on the same baseline with the first line but bigger First Letter)
+Choose how your **first letter**, your **Initial**, looks: 
+- **Dropcaps**  (half submerged and surrounded by a text block)
+- **Raisecaps** (on the same baseline with the first line but bigger First Letter)
 
->**Obsolete**: 
-Callouts are obsolete and have been superseded by text tags
 
 ### Related Settings
-- to change fonts, go to **Style Settings>Dune>Fonts>Typesets>3 - Poetry** 
-- to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial**
+- to change fonts, go to **Style Settings>Dune>Fonts>Typesets>2 - Poetry** 
+- to change font colors for poetry, go to  **Style Settings>Dune>Colors>Custom Theme>Extra Colors>Initial**
+
+>You can add typesettings to notes in **Preview View** if you add one of the following cssclasses: `ftheme-1`, `ftheme-2`, `ftheme-3`, `ftheme-4`
 
 <br>
 
@@ -36,18 +36,16 @@ these are pretty delimiters to divide chapters, paragraphs or to add a little de
 <br>
 
 ### Usage
-First, pick a horizontal line style (see Options above) eg. `cssclass: wave-a` for your yaml header, 
+First, pick a horizontal line style (see Options above) eg. `cssclass: wave-a` for your properties, 
 then add two paragraphs and write 3 dashes `---`
 
 ### Resize Line styles
 
-to resize your horizontal line style, go to **Dune>Fonts>Poetry Fonts>Resize decorations**
+to resize your horizontal line style, go to **Dune>Pictures>Zoom>Resize decorations**
 
 >**Tip**
->assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings side-by-side to your note and see in real time how your slider affects the **Line styles decoration** size
+>assign a shortcut to **Style Settings: Show style settings view** in Obsidian's **Preferences>Shortcuts**, so you can open Style Settings as a note. Drag this note in your panels on the left or right and see in real time how your slider affects the **Line styles decoration** size
 
-### Special features
-Horizontal lines are special in Dune, in fact, each time you add a hr `---` you tell Dune to add a **Page Break**. Make sure to surround hr's with an empty line before and after. If you want to keep Obsidians default hr so that pages (pdf export) do not break with a hr in place, then go to Obsidians `Settings>Dune>Fonts>Spacing>Line>Page counter` and choose the first option in the dropdown button.
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
