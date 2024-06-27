@@ -1,47 +1,10 @@
 ## Mermaid diagrams
 
-Dune covers proportions and scaling of mermaid diagrams only, if you want to change Mermaids colors, you need to download this companion snippet: [Dune-mermaid.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css). 
-
+if you want to change Mermaids colors, you need to download this companion snippet: [Dune-mermaid.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-mermaid.css). 
 Dune should cover most, if not all mermaid diagram types for both dark / light theme - if you notice missing diagrams or hard to read strings, then please let me know and send me a report, just click the tab **Issues** on top, thanks.
 
 ![Dune-mermaid](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/623b573a-1811-45b9-aaed-c43de4a82e69)
 
-Default mermaid diagram proportions. 
-
-### Resize Mermaid Diagrams
-
-![Mm-35](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/217aeac8-ab5d-4e37-b18f-8c296cebdc51)
-
-`cssclass: svg-20`,  `cssclass: svg-30`, `cssclass: svg-40`, `cssclass: svg-50`, `cssclass: svg-60`, `cssclass: svg-70`, `cssclass: svg-80`, `cssclass: svg-90`
-
-smaller proportions are useful to display large mermaid diagram charts on-screen. To zoom in, move your mouse over your diagram with auto-zoom on or press and hold the Left mouse button
-
-### Zoom
-To **zoom in**, click and hold the **Left mouse button**
-Otherwise, activate **auto-zoom** on hover: `Preferences>Style Settings>Dune>Pictures>Zoom pictures>Zoom pictures / diagrams`
-
->**Tip**:
->to navigate zoomed mermaid diagrams: 
->- use the **arrow keys** on your keyboard
->- shift-mousewheel to **scroll horizontally** (auto-zoom mode only)
->- mousewheel to **scroll vertically** (auto-zoom mode only)
-
-#### Max zoom level (Desktop)
-`cssclass: zoom-50`, `cssclass: zoom-60`, `cssclass: zoom-70`, `cssclass: zoom-80`, `cssclass: zoom-90`
-smaller pictures / diagrams need smaller zoom levels because they scale bigger by default
-
-#### Combined values
-`cssclass: svg-30, zoom-70`
-**resized diagram** (30%) and **max zoom level** (70%). 
-
->**Note**: Please set zoom levels at least 10% higher than mermaid proportions, otherwise your diagram won't zoom
-
-#### Max zoom level (Phone) 
-to get more balanced Mermaid diagram proportions, keep the default settings of Dune. If you prefer Obsidians default Mermaid proportions for zoomed Diagrams, then go to `Preferences>Style Settings>Dune>Pictures>Zoom pictures>Mobile - Mermaid Proportions`
-
->**Tip**: to exit from Mermaid Diagrams,
->- touch the right edge of the screen, where your scrollbar is.
->- Otherwise, click on the buttons on the bottom of the screen 
 
 ### Mermaid Diagrams on-the-fly
 
