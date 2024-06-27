@@ -30,109 +30,10 @@
 `#blue ==text==`
 `#gray ==text==`
 
-**German**
-
-`#rot`, `#grün`,`#blau`,`#grau`
-
 >red, green, blue - highlight
 
+**German** `#rot`, `#grün`,`#blau`,`#grau`
 
-<br>
-
-## Inline - larger & smaller text highlights
-
-![new-features–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/4e24221f-8e02-4044-bc1c-8897d9ca8d0b)
-
-`#red-s **test**` , `#green-s **test**`, `#blue-s **test**`
-`#red-s *test*` , `#green-s *test*`, `#blue-s *test*`
-
->smaller text bold/italic in 3 colors, red, green, blue
-
-**German**
-
-`#rot-k`,`#grün-k`,`#blau-k`,`#grau-k`
-
-<br>
-
-`#red-l **test**`, `#green-l **test**`, `#blue-l **test**`
-`#red-l *test*`, `#green-l *test*`, `#blue-l *test*`
-
->larger text bold/italic in 3 colors, red, green, blue
-
-**German**
-
-`#rot-g`,`#grün-g`,`#blau-g`,`#grau-g`
-
-<br>
-
-
-### Mixing font emphasis and font sizes
-![new-features–01a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0cae9a50-52f9-42bc-b081-2c6ce8553bc7)
-
-<br>
-
-## Mixing font families
-
-First, you've to specify your desired font families, go to `Preferences>Style Settings>Dune>Fonts>Typesets` and insert whatever fonts you want to appair under 4 different choices.
-
-**Example**
-
-`Lorem #font-1 ==ipsum dolor== sit amet, consectetur #font-3 ==adipisicing== elit`
-
-**Options**: `#font-1`, `#font-2`,`#font-3`, `#font-4`
-
-**German**
-
-`#schrift-1`, `#schrift-2`,`#schrift-3`, `#schrift-4`
-
-<br>
-
-## Small - Large font sizes
-
-![new-features–01b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/3d14cd11-3ddb-4698-b74e-c9278fb3d672)
-
-`#font-s ==Small==` Normal `#font-l ==Large==`
-
-**German**
-
-`#schrift-k ==klein==` `#schrift-g ==GROSS==`
-
-<br>
-
-### Inline text highlights - custom color
-to set your preferred color, go to `Preferences>Style Settings>Dune>Colors>Extra colors>custom font highlight`
-
-![custom-col--font](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8408875c-83c5-496a-a0ea-805d456b1b62)
-
-`#hlcol *quick*` = custom coloured inline italic 
-
-`#hlcol **lazy log**` = custom coloured inline bold
-
-`#hlcol ==brown==` = custom inline marker highlight
-
-`#hlcol-s *quick*` = custom coloured inline italic - small
-
-`#hlcol-s **quick**` = custom coloured inline bold - small
-
-`#hlcol-l *quick*` = custom coloured inline italic - large
-
-`#hlcol-l **quick**` = custom coloured inline bold - large
-
-**German**
-
-`#mfarbe *quick*` = custom coloured inline italic 
-
-`#mfarbe **lazy log**` = custom coloured inline bold
-
-`#mfarbe ==brown==` = custom inline marker highlight
-
-`#mfarbe-k *quick*` = custom coloured inline italic - small
-
-`#mfarbe-k **quick**` = custom coloured inline bold - small
-
-`#mfarbe-g *quick*` = custom coloured inline italic - large
-
-`#mfarbe-g **quick**` = custom coloured inline bold - large
 
 <br>
 
@@ -149,11 +50,10 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `Words Words #-spoiler ==Words== Words Words`
 
-**German**
-
-`Words Words #-geheim ==Words== Words Words`
-
 >read hidden text on hover (desktop) or touch (mobile)
+
+**German**`Words Words #-geheim ==Words== Words Words`
+
 
 <br>
 
@@ -173,48 +73,10 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `my #cite-br ==citation==`, `my #cite-de ==citation==`, `my #cite-fr ==citation==`
 
-**German** 
-
-`mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
+**German** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
 
 <br>
 
-## Icon tags
-
-![icontags-leg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/89dc4b88-a354-4a4a-8db5-32c6cd4cde14)
-
-```
-Words #-ppl ==Andrea== 
-Words #-mail ==some@provider.com== 
-Words #-tel ==0034 658945== 
-Words #-read ==novel X== 
-Words #-edit ==journal== 
-Words #-promo ==newsletter== 
-Words #-loc ==restaurant X==
-Words #-key ==keywords== 
-Words #-pin ==remember X==
-Words #-cal ==today X== 
-Words #-idea ==new product==
-Words #-profit ==ROI== 
-Words #-check ==research X== 
-```
-
-### Usage
-to add icons to wiki-links or simple text, check out the examples below. 
-
-**Examples:** 
-
-- `#-ppl ==[[Monica]]==`
-- `#-mail ==[[Monica@provider.com]]==`
-- `#-tel ==[[Monica#phone|phone]]==` (you must have a header with name `phone` in your note `Monica`) 
-
-<br>
-
-**German**
-
-`#-kontakt`,`#-ort`,`#-brief`,`#-lese`, `#-prüfe`, `#-arbeit`,`#-schlüssel`,`#-merke`,`#-kal`,`#-idee`, `#-promo`, `#-profit`
-
-> pay attention **special text tags** start with a hyphen to distinguish them from common tags. **Special text tags** are only visible in edit mode and get replaced in Preview mode with an icon.
 
 <br>
 
@@ -231,21 +93,15 @@ to add icons to wiki-links or simple text, check out the examples below.
 
 `#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
-**German** 
-
-`#strich-a`, `#strich-b`, `#strich-c`
+**German** `#strich-a`, `#strich-b`, `#strich-c`
 
 <br>
 
 ##  Custom line indent
 open Obidians `preferences>Dune>Fonts>Line>Indent tabs` to specify your indentation depth. 
 
-Pick between 2 indentation modes:
-- simple mode (toggle button) - applies to all paragraphs 
 - custom mode (text tag) - applies to desired paragraphs
 
->Note:
-> in simple mode, you don't have to add any text tag (`#indent`) to your paragraphs. 
 
 **Custom indentation**
 
@@ -253,9 +109,7 @@ Pick between 2 indentation modes:
 <br>
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6" alt="indent–01" width="900">
 
-**German**
-
-`#einzug ==Text==`
+**German**`#einzug ==Text==`
 
 <br>
 
@@ -267,74 +121,7 @@ Pick between 2 indentation modes:
 #### [Small columns in gutter](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Callouts.md#columns-in-gutter)
 
 <br>
-
-## Large H1 Title
-
-![new-features–07](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/bf78ad58-7916-4d9b-9093-28243bd3bb2f)
-
->H1 is a special header in Dune. You can change H1 sizes in two ways:
-
-### global
-to set your H1 size globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Headers>Custom h1 size (PC)`
-
-### local
-add one of following cssclasses to your yaml header: `cssclass: h1-3`, `cssclass: h1-4`, `cssclass: h1-5`, `cssclass: h1-6`, `cssclass: h1-7`, `cssclass: h1-8`
-
->**info**: the count begins with `h1-3` (3 stands for 3em) because 2em is the default size for H1
-
 <br>
-
-## Highlight current paragraph
-![help-5](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2fdb7744-1a2d-42e8-8069-34914bda8c81)
-
-to highlight your current paragraph, activate `Preferences>Style Settings>Dune>Show UI Elements>Text Body>Current Line (edit mode)`
-
->**Hint**: selected words are highlighted with a yellow tint (see related picture, above)
-
-<br>
-
-
-## help bubbles
-
-![help bubbles](https://user-images.githubusercontent.com/48620536/228632119-35088c88-6138-4787-ad7a-f7109edeef33.png)
-
->help bubbles on hover.
-
-### Usage 
-
-**Tip**: To quickly instert help bubbles, use [Quickadd](https://github.com/chhoumann/quickadd) by chhoumann
-
-a) open **Quickadd** and create a new **Capture** and call your action "help bubbles" 
-<br>
-b) toggle **Capture to active note** on, paste the **code template** below as it is in the bottom field called **Capture format**
-<br>
-c) then *restart Obsidian* to get your new Quickadd capture available in your command palette.
-
-#### code template
-`<span class="addtip">{{VALUE}}<span class="tiptext">Insert here your custom help text</span></span>`
-
-<br>
-
-Next time you want to add help bubbles to your word(s): 
-1. select the target word(s) in your note
-2. launch the command palette and type "help bubbles"
-3. apply. Done this, your target word(s) will get a dotted underline.
-4. Now, click on this word(s) to expand the html tag and replace  **Insert here your custom help text** in`tiptext">Insert here your custom help text</span></span>` with your own help bubble text. 
-
-**Note**: you cannot style text in **help bubbles**, like bold, italic and so on wont work. Just keep things simple.
-
-<br>
-
-## Zoom Math formulas
-
-<img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/f167710b-a114-4b64-936a-ad7f0f16892d" alt="math-zoom" height="300">
-
-just hover over your formulas
-
->Note: to activate zoom, go to **Settings>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
-
-<br>
-
 ## Mini Admonitions
 
 `- [t] t`
@@ -415,11 +202,6 @@ simple delimiter to divide chapters or paragraphs. If you want beautiful delimit
 ### Usage
 1. First, pick a horizontal line style eg. **fade-2** and add this style to your yaml header
 2. add two paragraphs and write 3 dashes `---` 
-
->**Tip**:
->you can change the color of horizontal lines too, go to: **Style Settings>Dune>Colors>Extra Colors>Horizontal Lines Color**
->Horizontal lines are special in Dune, in fact, each time you add a hr --- you tell Dune to add a Page Break
-
 
 
 ---
