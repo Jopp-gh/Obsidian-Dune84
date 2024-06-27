@@ -6,7 +6,7 @@
 cssclass: banner-a,
 ---
 ```
-`![[picture.jpg|banner-a]]`
+`![[picture.jpg | banner-a]]`
 
 <br>
 
@@ -15,10 +15,12 @@ choose between 2 banners types:
 - banner-a (top banner, height adjustable in **Style Settings**)
 - banner-b (bottom banner, height adjustable in **Style Settings**)
 
-to add a banner, add your desired banner type (eg `banner-a`) as cssclass to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg|banner-a]]` to transform your image into a banner.
+<br>
+
+to add a banner, add your desired banner type (eg `banner-a`) as cssclass to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
 
 >Note :
->to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a `![[picture.jpg|banner-b]]`-type at top page, unless your note is very short.
+>to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a `![[picture.jpg | banner-b]]`-type at top page, unless your note is very short.
 
 <br>
 
@@ -27,11 +29,11 @@ to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), 
 
 <br>
 
-### Banner, vertical placement - for `banner-a`
+### Banner, vertical placement
+only for `banner-a`
 
-If your top banner looks cut, you can adjust its vertical coordinates, add/change following **b**anner **c**oordinates: 
+If your top banner looks cut, you can use following **b**anner **c**oordinates: 
 - **locally**: use 8 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
-- **globally**: see **Style Settings>Dune>Pictures>Zoom Pictures>Banner vertical placement** 
 
 <br>
 
@@ -39,35 +41,24 @@ If your top banner looks cut, you can adjust its vertical coordinates, add/chang
 
 ![I-02](https://user-images.githubusercontent.com/48620536/222981873-06037136-9876-45eb-b0a8-468ed5227443.png)
 
-`![[Pict.png|portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
+`![[Pict.png | portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
 
 <br>
 
 ### Left, Right and Center side
 
-`![[Pict.png|pos-l]]`, `![[Pict.png|pos-r]]`, `![[Pict.png|pos-c]]`
+`![[Pict.png | pos-l]]`, `![[Pict.png | pos-r]]`, `![[Pict.png | pos-c]]`
 
 place your images on the **Left**, **Right** or at the **Center** of your note
 
 <br>
 
-## Picture Frames
-
-![I–03](https://user-images.githubusercontent.com/48620536/222982094-4943ac34-34be-4587-8365-78408b671aff.png)
-
-`![[Pict.png|frame-a]]` 
-
-**Options**: `frame-a`, `frame-b`, `frame-c`,`frame-d`
-
-Frame your pictures. Load some **png** frames like [this template](https://pngimg.com/image/91008). Customize your frames under **Style Settings>Dune>Pictures>Picture frames**
-
-<br>
 
 ### Simple Frames
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
-`![[Pict.png|frame-s]]`
+`![[Pict.png | frame-s]]`
  
 Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** and adjust frame thickness in **Style Settings>Dune>Colors>Extra colors>Frame color**
 
@@ -76,11 +67,9 @@ Change picture frame colors under **Style Settings>Dune>Colors>Extra colors>** a
 
 ## Book pictures
 
-![I–05](https://user-images.githubusercontent.com/48620536/222982159-2f481d4c-634e-491f-9ac6-8b73ecbda539.png)
-
 ```
 > [!framed-l] 
->  ![[Pict.png|frame-b | 250]]
+>  ![[Pict.png | frame-b | 250]]
 >  description
 ```
 **Options**: `framed-r`, `framed-l`
@@ -95,49 +84,6 @@ If you want a soft background too (ideally for text blocks), add bg as metadata 
 ![I–06](https://user-images.githubusercontent.com/48620536/222982200-63caf748-6a65-42e3-a927-f262103943e6.png)
 
 `![[Pict.png#cap|capture]]`
-
-to control the max width of simple picture descriptions, and its frame under your pictures, pick a range from 15,25,35,45,55,65,75,85, eg. `cssclass: icap-25`
-
-<br>
-
-## Moodboard
-
-![I-10](https://user-images.githubusercontent.com/48620536/223212661-17a473b1-8151-4aac-b558-42c7fafe59a1.jpg)
-
-```
-> [!moodboard]
-> ![[pic1.jpeg]] ![[Pict2.jpeg]]![[Pict3.jpeg]]
-> 
-> ![[Pict4.jpeg]] ![[Pict5.jpeg]] ![[Pict6.jpeg]] 
-> 
-> ![[Pict7.jpeg]] ![[Pict8.jpeg]] ![[Pict9.jpeg]] 
-```
-
-**Options**: Configure height and width, see **Style Settings>Pictures>Image Wall**
-
-the more pictures you put in a picture wall, the more your picture wall will look seamless. To remove empty spaces and get a neat-looking picture wall, (see **Style Settings>Dune>Pictures>Image Wall**) adjust both H/W sliders accordingly. Remember to keep an empty line between each line of pictures (see template above).
-
-<br>
-
-## Scale images
-`![[picture.png | img-50]]`
-
-to scale your images, use: img-10, img-20, img-30, img-40, img-50, img-60, img-70, img-80, img-90
-
-<br>
-
-## Zoom Pictures
-### Zoom Svg diagrams
-
-
-**Options**: svg-20, svg-30, svg-40, svg-50, svg-60, svg-70, svg-80. eg. `cssclass: svg-50` 
-
-to zoom **mermaid diagrams**, adjust your zoom size, see options above. Embedded diagrams and phone diagrams may require smaller sizes, (eg. svg-50) 
-
-Activate automatic-zoom in **Preferences>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams**
-Otherwise click and hold over an image.
-
->**Phone**: To exit from zoomed diagrams, tab on the thin, albeit visible scrollbar on the right edge of your phone
 
 
 <br>
