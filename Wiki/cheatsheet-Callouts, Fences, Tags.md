@@ -3,22 +3,11 @@
 ### CALLOUTS ALIGNMENT
 
 ```
-> [!note|300]
-> [!note|400]
-> [!note|500]
-> [!note|600]
-> [!note|700]
-> [!note|800]
-```
-
-Callout width defined in pixels
-
-```
 > [!note|left]
 > [!note|right]
 ```
 
-**German**
+**Deutsch**
 
 ```
 > [!note|links]
@@ -32,25 +21,21 @@ Callout floats left / right
 ### CALLOUTS COLORS
 
 ```
-> [!note|yellow]
 > [!note|red]
 > [!note|green]
 > [!note|blue]
 > [!note|gray]
-> [!note|col]
 ```
 
 5 callout tints
 
-**German**
+**Deutsch**
 
 ```
-> [!note|gelb]
 > [!note|rot]
 > [!note|grün]
 > [!note|blau]
 > [!note|grau]
-> [!note|farbe]
 ```
 
 <br>
@@ -68,11 +53,11 @@ Callout floats left / right
 ```
 
 ```
->[!framed-c]
+>[!framed-a]
 > abc
 ```
 
-align images or text to the left, right or at the center
+align images or text to the left, right or around the middle axis 
 
 <br>
 
@@ -87,27 +72,33 @@ align images or text to the left, right or at the center
 >> [!blank-container]
 >> abc
 ```
-
+Add blank sub-callouts
+```
+> [!multi-column]
+>
+>> [!note]
+>> abc
+>
+>> [!caution]
+>> abc
+```
+add common sub-callouts inside your callout box
 #### MULTICOLUMN - COLORS
 
 ```
-> [!multi-column|yellow]
 > [!multi-column|red]
 > [!multi-column|green]
 > [!multi-column|blue]
 > [!multi-column|gray]
-> [!multi-column|col]
 ```
 
-**German**
+**Deutsch**
 
 ```
-> [!multi-column|gelb]
 > [!multi-column|rot]
 > [!multi-column|grün]
 > [!multi-column|blau]
 > [!multi-column|grau]
-> [!multi-column|farbe]
 ```
 
 colors for the `multi-column` callout
@@ -120,8 +111,12 @@ colors for the `multi-column` callout
 >[!framed | bg]
 >[!framed | cite]
 ```
+```
+>[!framed-l | bg]
+>[!framed-r | cite]
+```
 
-add **background shadow** or add a **citation symbol** and a background shadow
+add **background shadow** or add a **citation symbol** and a background shadow. Additionally, place your box on the left or right.
 
 ```
 >[!framed-lg]
@@ -159,12 +154,6 @@ accepts a mix of headers, text, tables
 
 <br>
 
-### PICTURE BOXES
-
-`>[!moodboard]`
-
-create moodboard masonry
-
 
 ### SMALLER AND LARGER TEXT BLOCKS
 
@@ -182,7 +171,7 @@ decrease font size
 
 increase font size
 
-**German**
+**Deutsch**
 
 ```
 >[!schrift-g]
@@ -191,33 +180,11 @@ increase font size
 
 <br>
 
-### MERGE TEXT BLOCKS
-
-`>[!merge]`
-
-merge text blocks if *Linebreak - blank* are activated
-
-### TLINE
-
-```
->[!tline | v1]
->[!tline | v2]
-```
-
-alternating time-frame callouts
 
 <br>
 
 ## FENCES
 ### MEMO COLORS
-
-````
-```memo
-notes
-```
-````
-
-yellow
 
 ````
 ```memo-r
@@ -256,10 +223,11 @@ monochrome
 ````
 ```br
 
+
 ```
 ````
 
-add -n paragraphs linebreak
+add -n paragraphs of linebreak
 
 <br>
 
@@ -273,7 +241,6 @@ Bold
 #green **Abc**
 #blue **Abc**
 #gray **Abc**
-#hlcol **Abc**
 ```
 
 colored - **bold**
@@ -285,7 +252,6 @@ Italic
 #green *Abc*
 #blue *Abc*
 #gray *Abc*
-#hlcol *Abc*
 ```
 
 colored - *italic*
@@ -297,94 +263,15 @@ highlight
 #green ==Abc==
 #blue ==Abc==
 #gray ==Abc==
-#hlcol ==Abc==
 ```
 
 colored - highlight
 
-```
-Bold
 
-#red-s **Abc** ,
-#green-s **Abc**,
-#blue-s **Abc**
-#hlcol-s **Abc**
-
-Italic
-
-#red-s *Abc* ,
-#green-s *Abc*,
-#blue-s *Abc*
-#hlcol-s *Abc*
+**Deutsch**
 
 ```
-
-smaller colored text
-
-```
-Bold
-
-#red-l **Abc**,
-#green-l **Abc**,
-#blue-l **Abc**
-#hlcol-l *Abc*
-
-Italic
-
-#red-l *Abc*,
-#green-l *Abc*,
-#blue-l *Abc*
-#hlcol-l *Abc*
-```
-
-larger colored text
-
-**German**
-
-```
-Bold
-
-#rot-k **Abc** 
-#grün-k **Abc**
-#blau-k **Abc**
-#grau-k **Abc**
-#mfarbe-k **Abc**
-
-Italic
-
-#rot-k *Abc* 
-#grün-k *Abc*
-#blau-k *Abc*
-#grau-k *Abc*
-#mfarbe-k *Abc*
-
-```
-
-smaller colored text
-
-```
-Bold
-
-#rot-g **Abc** 
-#grün-g **Abc**
-#blau-g **Abc**
-#grau-g **Abc**
-#mfarbe-g **Abc**
-
-Italic
-
-#rot-g *Abc* , 
-#grün-g *Abc*, 
-#blau-g *Abc*
-#grau-g *Abc*
-#mfarbe-g *Abc*
-
-```
-
-larger colored text
-
-```
-highlight
+Markiert. Auch mit Fett und Kursiv möglich.
 
 #rot ==Abc==
 #grün ==Abc==
@@ -401,16 +288,14 @@ highlight
 #font-1 ==Abc==
 #font-2 ==Abc==
 #font-3 ==Abc==
-#font-4 ==Abc==
 ```
 
-**German**
+**Deutsch**
 
 ```
 #schrift-1 ==Abc==
 #schrift-2 ==Abc==
 #schrift-3 ==Abc==
-#schrift-4 ==Abc==
 ```
 
 Inline font change
@@ -441,7 +326,7 @@ decrease inline font size
 
 increase inline font size
 
-**German**
+**Deutsch**
 
 ```
 #schrift-g ==Abc==
@@ -456,7 +341,7 @@ increase inline font size
 #cite-fr ==Abc==
 ```
 
-**German**
+**Deutsch**
 
 ```
 #zitat-de ==Abc==`
@@ -479,7 +364,7 @@ Words #sub ==sub==
 
 `#-spoiler ==Abc==`
 
-**German**
+**Deutsch**
 
 `#-geheim ==Abc==`
 
@@ -498,7 +383,7 @@ hide text, short version
 #line-c ==Abc==
 ```
 
-**German**
+**Deutsch**
 
 ```
 #strich-a ==Abc==
@@ -514,46 +399,10 @@ underlined, double underlined, strikeout
 
 `#indent ==Abc==`
 
-**German**
+**Deutsch**
 
 `#einzug ==Abc== `
 
 Indent sentences
 
 <br>
-
-### TAG ICONS
-
-```
-#-ppl ==Abc== 
-#-mail ==Abc== 
-#-tel ==Abc45== 
-#-read ==Abc== 
-#-edit ==Abc== 
-#-promo ==Abc== 
-#-loc ==Abc==
-#-key ==Abc== 
-#-pin ==Abc==
-#-cal ==Abc== 
-#-idea ==Abc==
-#-profit ==Abc== 
-#-check ==Abc== 
-```
-
-**German**
-
-```
-#-kontakt ==Abc== 
-#-brief ==Abc== 
-#-tel ==Abc45== 
-#-lese ==Abc== 
-#-arbeit ==Abc== 
-#-promo ==Abc== 
-#-ort ==Abc==
-#-schlüssel ==Abc== 
-#-merke ==Abc==
-#-kal ==Abc== 
-#-idee ==Abc==
-#-profit ==Abc== 
-#-prüfe ==Abc== 
-```
