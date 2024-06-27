@@ -7,11 +7,9 @@
 > [!red callout|red]
 > note
 ```
-### Options:
-`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|yellow]`, `> [!note|gray]`, `> [!note|col]`
+Tint any callout in: red, green, blue, gray
 
-red tint, green tint, blue tint, yellow tint, gray and favorite tint
-to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>Custom Theme>Secondary Colors>Callout color - custom`. Back to your note, add "col" after the pipe symbol, eg `> [!note|col]` 
+**Options:**`> [!note|red]`, `> [!note|green]`, `> [!note|blue]`, `> [!note|gray]`
 
 <br>
 
@@ -22,23 +20,24 @@ to add your own tint, set your color in `Preferences>Style Settings>Dune>Colors>
 ```
 > [!aside-rh]
 ```
-Hidden box with a visual reference on your right or left side, 
-**callout options:**  `[!aside-rh]` or  `[!aside-lh]`
+Hidden box with a visual reference to open your side note. 
+To display your box, hover over its thin, button on your right/left note border
 
-**Tip**
-<br>
-to show your hidden box, hover over the thin bar on your right/left side 
-To edit your callout box in `Live Preview`, select the text before and/or after the callout box so that you select your callout too. Otherwise, switch to `Source mode` to see your callout entry. Hover in edit mode is deactivated, because this callout box is too jittery to select, as it is just a thin bar.
+**Options:**  `[!aside-rh]` or  `[!aside-lh]`
+
+>Hover in `edit mode` is deactivated, to prevent visual glitches.
 
 <br>
 
 ## Aside-in (visible)
+
 ![B2](https://user-images.githubusercontent.com/48620536/222979913-e8e15146-725f-47d4-8126-b7c4055d261e.png)
 
 ```
 > [!aside-r]
 ```
-Visible box on your right or left side, **callout options:**  `[!aside-r]` or  `[!aside-l]`
+Box on your right or left side. 
+**Options:**  `[!aside-r]` or  `[!aside-l]`
 
 <br>
 
@@ -57,12 +56,25 @@ Visible box on your right or left side, **callout options:**  `[!aside-r]` or  `
 >> [!info]+ Title 2
 >> - words words **words**
 ```
+**Common Callouts**
 
-a multi-purpose callout column box to organize multiple nested callouts, pictures, embeds. 
+```
+> [!multi-column]
+>
+>> [!blank-container]
+>>
+>> - words words words  
+>> - words words words  
+>
+>> [!blank-container]
+>> - words words **words**
+```
+**Horizontal Lists**
 
-**Tip**
-<br>
-Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) or generate custom callouts (use [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195)
+A multi-purpose callout column box to organize nested callouts, pictures, embeds. 
+ **Options:** Use either callout box tags or `[!blank-container]` if you want a blank callout (without colors, title). 
+
+>Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts) or generate custom callouts (use [**Admonition**](https://github.com/valentine195/obsidian-admonition) by valentine195)
 
 
 <br>
@@ -80,7 +92,9 @@ Use [predefined Callouts](https://help.obsidian.md/Editing+and+formatting/Callou
 > ---|---|
 > Text| ([Links](https://en.wikipedia.org/wiki/Frank_Herbert)) |
 ```
-Sidebox to visualize quickly most important details, like pictures, text and links. **Options:** `infobox-l`, `infobox-r`
+Sidebox to summarize most important details of a topic. Accepted formats: pictures, text and links. 
+
+**Options:** `infobox-l`, `infobox-r`
 
 <br>
 
@@ -100,9 +114,11 @@ Lorem…
 Lorem…
 ```
 
->Note: the `g` of `>[!framed-rg]` refers to the gutter on the far left and right side of your page.
+The `rg` in `>[!framed-rg]` refers to the *right gutter* on the far right of your page, `lg` moves text blocks to the *left gutter*.
 
-You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
+**Options:** `framed-lg`, `framed-rg`
+
+>You must enable `Readable line length` under `preferences>editor>display` for this feature to work, otherwise your layout will overlap.
 Basically, with this callout you can add notes to your left or right -side gutter.
 
 <br>
@@ -115,23 +131,15 @@ Basically, with this callout you can add notes to your left or right -side gutte
 > [!framed-r | cite] 
 >  description
 ```
-
-Options: `framed-r`, `framed-l`/`framed`
-
- <br>
  
-embed your descriptions in boxes and place them on the left or right side of your note. <br>
+embed citations in boxes and place them on the left or right side of your note.
 By default, this callout has no background, but you can add a background if you add following meta-tags:
 
-- add a soft background: `>[[!framed | bg]]`,`>[[!framed-r | bg]]`
-- add a soft background and a citation Symbol:  `>[[!framed | cite]]`,`>[[!framed-r | bg]]`
+**Options:**
+- add a soft background: `>[[!framed-l | bg]]`,`>[[!framed-r | bg]]`
+- add a soft background and a citation Symbol:  `>[[!framed-l | cite]]`,`>[[!framed-r | cite]]`
 
  <br>
- 
->Note: if Autozoom is active you can zoom into your `>[[!framed-r | bg]]` or `>[[!framed-r | cite]]` <br>
->to activate Autozoom go to `Settings>Style Settings>Dune>Pictures>Zoom Pictures>Zoom pictures / diagrams`
-
-<br>
 
 ## Read more…
 
@@ -141,19 +149,13 @@ By default, this callout has no background, but you can add a background if you 
 ```
 Callout to shorten longer documents. 
 
-**German**
+**Options** `>[!read-more]-`, `> [!weiterlesen]-`
 
-`> [!weiterlesen]-`
-
-> **Tip**: do not forget to add the minus after the callout, othewise this callout won't fold
+>do not forget to add the minus after the callout, othewise this callout won't fold as expected
 
 <br>
 
 ## Callouts alignment
-
-`> [!note|300]`, `> [!note|400]`, `> [!note|500]`, `> [!note|600]`, `> [!note|700]`, `> [!note|800]`
-max Callout width in pixels
-
 
 `> [!note|left]`
 Callout floats left
@@ -172,10 +174,11 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
+`l` in `font-l]`  stands for large
 
-**German**
+**Options** `>[font-l]`, `>[schrift-g]`
 
-`>[schrift-g]`
+
 
 ![new-features–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/32ad5dea-1489-421a-b529-81725fc66b17)
 
@@ -184,118 +187,18 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
+`s` in `font-s]`  stands for small
 
-**German**
-
-`>[schrift-k]`
+**Options** `>[font-s]`, `>[schrift-k]`
 
 <br>
 
 ## Continuous text flow (around boxes, images)
-for a continuous text flow, you can use 2 methods to deal with line breaks:  **merge** (ignore line breaks) or **break**  (respect line breaks) 
-
-> By default, Dune ignores line breaks, so the toggle is off.
 
 ### global
-to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>New Line>Linebreaks - empty` and toggle linebreak on, toggle it off to merge lines/paragraphs
-
-### local
-to merge or break lines/paragraphs locally add following to your yaml header:
-- add  `cssclass: merge-prg`  (in combination with `Line break` **on**)
-- add `cssclass: break-prg` (in combination with `Line break` **off**)
-- or merge paragraphs individually, using the `>[!merge]` callout (in combination with `Line break` **on**)
+to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Linebreak - blank` and toggle linebreaks on, to ignore empty lines and merge lines/paragraphs
 
 <br>
-
-## Merge Paragraphs Callout
-
-![mergePP-align-l](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/0758e68e-c0d1-47ed-935b-034286c7abca)
-
-```
->[!merge]
-> Abc
-```
-
-If line break is enabled, pay attention on how to merge paragraphs individually: the first and the last paragraph are normal paragraphs, both are highlighted just for this example, in bold. The paragraphs using the merge callout are highlighted with  **A, B** and **C**
-
-<br>
-
-## TIMELINE
-**Upgrade your bullet lists, checklists and text blocks and put them in a chronological order**. 
-**Timeline** is available *for Desktop, phone, the core plugin slide and pdf export*. Now let's understand how **Timeline** is structured. Please read on.
-
-A typical **timeline callout** looks like this:
-```
->[!tline|v1]
-> ## January
-> **Project A**
-> - [ ] a
-> - [ ] b
-> - [ ] c
-```
-### LINE 1: CALLOUT TAGS AND METATAGS
-Line 1= defines this kind of callout, use `>[!tline]` and add a pipe symbol followed by `v1` or `v2` as metadata, eg. `[!tline|v1]`
-
-- Timeline callout v1, or `>[!tline|v1]` adds a soft background shadow, this way your time blocks are more diverse and easier readable. 
-- Timeline callout v2, or `>[!tline|v2]` is without background shadow
-
->Mix them or use one of both callouts to build your timeline
-
-### LINE 2: TIME UNIT
-Line 2= **defines a time unit**, in our example `> ## January`. *Use any time unit useful for you*, example:
-
-- hourly (morning/noon/afternoon/evening or 6:00/8:00/10:00/14:00, etc)
-- daily (1 Nov, 15 Nov, 20 Nov, etc)
-- weekly (mon, tue, wed, thu, fri, sat, sun or week 12, week 18, week 35, etc)
-- monthly (Jan, Feb, Mar or September, December, etc)
-- Yearly (2023, 2024, etc)
-
-### LINE 3: PROJECT (OPTIONAL)
-Line 3= Add a project name (Optional)
-
-### LINE 4: TASKS
-Line 3 or 4= add your bullet lists, checklists or reminder text blocks
-
-#### USAGE
-Ideally, a Timeline template is made of **two callouts** to create an *easy-to-read alternating row flow*. On desktop you can vary the distance from the left note margin to the red line, to give longer **time unit names** more space. To do so, go to Obsidians `Settings>Style Settings>Dune>Fonts>Spacing>Line` or type in "Unified" in the search mask of **Style Settings**
-
->Note: Basically, with each new line in a timeline callout you are going to add new columns (reading flow is aligned horizontally) like in a **Kanban** but all inside a **time frame defined by your heading** at the beginning of your timeline callout. You can even add a picture a line before your time unit `> ## January` and after the callout heading `>[!tline|v1]`, to add a visual reference to your timeline progress.
-
-To use this timeline callout, copy the following template and save it in your templates folder:
-
-```
->[!tline|v1]
-> ## January
-> **Project A**
-> - [ ] a
-> - [ ] b
-> - [ ] c
-
->[!tline|v2]
-> ## January
-> **Project B**
-> - [ ] a
-> - [ ] b
-> - [ ] c
-```
-
-**Result**:
-![Timeline-](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/96ccfa12-1ee0-4355-a4e3-7d363864ad97)
-
-
-<br>
-
-## Footnote
-
-![new-features–04a](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/6189488d-c3d3-4061-89a6-8f2317dbfbad)
-
-Kind of footnote fields
-````
-```fnote
-words words words words 
-```
-````
-
 ## Multiple Line breaks
 
 ````
@@ -304,7 +207,7 @@ words words words words
 
 ```
 ````
-inside this fence, add as many linebreaks as needed (The example above breaks two lines).
+add as many linebreaks as you want to control empty lines (the example above breaks two lines).
 
 <br>
 
@@ -316,20 +219,7 @@ inside this fence, add as many linebreaks as needed (The example above breaks tw
 words words words words 
 ```
 ````
-Kind of memo notes, `memo` uses by default the color yellow
-
-### more color variations
-![note-blue](https://user-images.githubusercontent.com/48620536/230743600-678dbdc6-1aee-40bc-b892-199823340726.png)
-
-````
-```memo-b
-note
-```
-````
-
-to add more color variations, use: red, green, blue, gray (monochrome) eg. `memo-r`, `memo-g`, `memo-b`, `memo-m`
-
-if you want to add your own color, go to `Preferences>Style Settings>Dune>Colors>Custom Theme>Secondary Colors>Stickies color - custom`, pick a color for light / dark themes and add `memo-col` to your fences
+to add more color variations, use: red, green, blue. **Options**: `memo-r`, `memo-g`, `memo-b`,
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
