@@ -1,5 +1,5 @@
 # Dune
-![promo–big-2](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/24702c5c-5efc-4c01-914a-239be4cb9013)
+![promo–gh](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8bbcf942-3fc9-4d92-a0b5-952e9faa5182)
 
 
 ## 🔍 Jump
@@ -15,7 +15,7 @@
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
 His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm). I still enjoy to watch Dune from 1984, - both Frank and David created an epic, evergreen artwork.
 
-The daylight palette is a **warm** _wood - sand - rosé tint,_ meanwhile the nighttime palette is a **fresh**, _dusk -midnight - blacky tint_ one, plus two flat tones resembling the default Obsidian b/w theme. Additionally, you can change colors in Dune's preferences, so there should be enough variety for everbody's taste.
+The daylight palette is a **warm** _wood - sand - rosé tint,_ meanwhile the nighttime palette is a **fresh**, _dusk - midnight - blacky tint_ one, plus two flat tones resembling the default Obsidian b/w theme. Additionally, you can change colors in Dune's preferences, so there should be enough variety for everbody's taste.
 
 <br>
 
@@ -24,7 +24,8 @@ I spent a hundred of hours in the development, design and implementation of feat
 
 _It's not just about the good deed, but to connect with each other, like to connect useful and interesting data in Obsidian and get new, inspiring and awesome insights!_
 
-If you want to support this project and honor the continuous work behind Dune then visit me on my Buymeacoffe shop. You will get **Dune-Gold** which has much more features than the free version, aka Dune-Silver. If you are interested now, go ahead and check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras) :)
+If you want to support this project and honor the continuous work behind Dune then visit me on my Buymeacoffe shop. You will get **Dune-Gold** which has much more features than the free version, aka Dune-Silver. If you are interested now, feel free to check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras) 
+
 
 <br>
 
@@ -130,4 +131,4 @@ Dune for Obsidian (desktop & phone) is licensed under the GPL-2.0 License, follo
 - State changes
 - Disclose source
 - Same license
-- Also, please keep my **Buy me a coffee** -link in your Readme. Thank you very much :)
+- Also, please keep my **Buy me a coffee** -link to my shop in your Readme. Thank you very much :)
