@@ -177,8 +177,8 @@ settings:
     id: initial-sz
     title: Initial size
     title.de: Initiale Vergrößern
-    description: resize first letter "#raisecap ==first Character=="
-    description.de: Größenveränderung "#initiale ==erster Buchstabe=="
+    description: Resize Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
+    description.de: Vergrößere Großbuchstabe "#initiale ==W==ort", "#initiale-t ==W==ort"
     type: variable-number-slider
     format: px
     default: 110
@@ -674,9 +674,9 @@ settings:
   - 
     id: hr-color
     title: Deco Horizontal lines
-    description: for some horizontal dividers
+    description: for some horizontal dividers  "---"
     title.de: Deko Trennzeichen
-    description.de: für Trennzeichen
+    description.de: für Trennzeichen "---"
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -685,9 +685,9 @@ settings:
   - 
     id: hr-stars
     title: Deco Stars
-    description: for some horizontal dividers
+    description: for some horizontal dividers "---"
     title.de: Deko Sterne 
-    description.de: für Trennzeichen
+    description.de: für Trennzeichen "---"
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -696,9 +696,9 @@ settings:
   -
     id: drop-cap-col
     title: 'Text: Initial'
-    description: for paragraph Initials
-    title.de: Initiale
-    description.de: Großbuchstabe
+    description: Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
+    title.de: "Text: Initiale'
+    description.de: Großbuchstabe "#initiale ==W==ort", "#initiale-t ==W==ort"
     type: variable-themed-color
     opacity: false
     format: hex
@@ -1680,6 +1680,161 @@ NAVI BAR
     background-color: rgb(95, 95, 95);
 }
 
+/*----------------------------------------------------------------
+ BIG find-replace fix
+----------------------------------------------------------------*/
+
+.is-phone.theme-dark .document-replace-buttons button:not(.clickable-icon),
+.is-phone.theme-dark .document-search-buttons button:not(.clickable-icon) {
+    color: transparent;
+    width: 30px;
+}
+
+.is-phone .document-search .document-search-buttons {
+    min-width: 98px;
+}
+
+.is-phone .document-replace .document-replace-buttons {
+    min-width: 68px;
+}
+
+.is-phone .document-search .document-search-close-button {
+    transform: translate(-8px, -6px);
+}
+
+/* bigger search text mask */
+.is-phone input.document-search-input {
+    min-width: 68%;
+    height: 30px;
+}
+
+/* bigger replace text mask */
+.is-phone input.document-replace-input {
+    min-width: 82%;
+    height: 30px;
+}
+
+/* place btns at the L side, not middle */
+.is-phone .document-replace-buttons,
+.is-phone .document-search-buttons {
+    gap: 4px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.is-phone .document-search,
+.is-phone .document-replace {
+    gap: 4px;
+}
+
+/* reduce large gap bw search & replace lines on phone */
+.is-phone .document-search-container {
+    gap: inherit;
+}
+
+.is-phone .document-search .document-search-button,
+.is-phone .document-replace .document-replace-buttons {
+    width: 30px;
+    height: 30px;
+}
+
+.is-phone.theme-light input.document-replace-input,
+.is-phone.theme-light input.document-search-input {
+    background: var(--dark-shadow-l);
+}
+
+.is-phone.theme-dark input.document-replace-input,
+.is-phone.theme-dark input.document-search-input {
+    background: var(--light-shadow-l);
+}
+
+.is-phone .document-search-container {
+    margin-bottom: -3em;
+}
+
+.is-phone .document-search button.document-search-button:first-child,
+.is-phone .document-search button.document-search-button:nth-child(2),
+.is-phone .document-search button.document-search-button:nth-child(3),
+.is-phone .document-replace button.document-search-button:first-child,
+.is-phone .document-replace button.document-search-button:nth-child(2) {
+    color: transparent !important;
+    background: var(--button-background);
+}
+
+.is-phone .document-search button.document-search-button:first-child::after,
+.is-phone .document-search button.document-search-button:nth-child(2)::after {
+    padding-bottom: 6px;
+}
+
+.is-phone .document-search button.document-search-button:first-child::after {
+    content: "<";
+    font-size: 1.6em;
+}
+
+.is-phone .document-search button.document-search-button:nth-child(2)::after {
+    content: ">";
+    font-size: 1.6em;
+}
+
+.is-phone .document-search button.document-search-button:nth-child(3)::after {
+    content: "\229A";
+    font-size: 1.6em;
+}
+
+.is-phone .document-replace button.document-search-button:first-child::after {
+    content: "⧺";
+    font-size: 1.6em;
+}
+
+.is-phone .document-replace button.document-search-button:nth-child(2)::after {
+    content: "⧻";
+    font-size: 1.6em;
+
+}
+
+.is-phone .document-search button.document-search-button:first-child::after,
+.is-phone .document-search button.document-search-button:nth-child(2)::after,
+.is-phone .document-search button.document-search-button:nth-child(3)::after,
+.is-phone .document-replace button.document-search-button:first-child::after,
+.is-phone .document-replace button.document-search-button:nth-child(2)::after {
+    position: sticky;
+    color: var(--dark-tone);
+}
+
+.is-phone .document-search button.document-search-button:first-child::after {
+    margin-left: -3.4em;
+}
+
+.is-phone .document-search button.document-search-button:nth-child(2)::after {
+    margin-left: -2.8em;
+}
+
+.is-phone .document-search button.document-search-button:nth-child(3)::after {
+    margin-left: -1.2em;
+}
+
+.is-phone .document-replace button.document-search-button:first-child::after {
+    margin-left: -3em;
+}
+
+.is-phone .document-replace button.document-search-button:nth-child(2)::after {
+    margin-left: -4.4em;
+}
+
+/* default btn col */
+body:is(.theme-dark, .theme-light).is-phone .document-search button.document-search-button:hover,
+body:is(.theme-dark, .theme-light).is-phone .document-replace button.document-search-button:hover {
+    background-color: var(--interactive-accent);
+}
+
+
+.is-phone .document-search-close-button:hover {
+    background-color: transparent;
+}
+
+.is-phone .document-search-close-button:before {
+    font-size: 1.6em;
+}
 
 /* --------------------------------------------
 collapse indicators 
