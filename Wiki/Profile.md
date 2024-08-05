@@ -1,6 +1,6 @@
 # Profile
 ### Phone
-you can change your vault name to an icon.
+swap your vault name with an icon.
 
 <br>
 
@@ -17,7 +17,7 @@ to add a icon, go to **Style Settings>Dune>Pictures>Profile picture  - (phone)**
 4. If you got a *black and white icon*, enable "monochrome vault profile" so you can see your icon also in dark theme mode.
 
 
->Obsolete: Profile Pictures on desktop don't work anymore starting with Obsidian 1.6.0+. Maybe, I will re-implement Profile pictures for desktop in the future.
+>Obsolete: Profile Pictures on desktop don't work anymore starting from Obsidian 1.6.0+. Maybe, I will re-implement again Profile pictures for desktops, in the future.
 
 ---
 [go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
