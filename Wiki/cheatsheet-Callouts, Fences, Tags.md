@@ -223,7 +223,6 @@ monochrome
 ````
 ```br
 
-
 ```
 ````
 
@@ -282,24 +281,6 @@ Markiert. Auch mit Fett und Kursiv möglich.
 
 <br>
 
-### FONT FAMILY
-
-```
-#font-1 ==Abc==
-#font-2 ==Abc==
-#font-3 ==Abc==
-```
-
-**Deutsch**
-
-```
-#schrift-1 ==Abc==
-#schrift-2 ==Abc==
-#schrift-3 ==Abc==
-```
-
-Inline font change
-
 ### POETRY
 
 ```
@@ -307,31 +288,17 @@ Inline font change
 #dropcap ==Abc==
 ```
 
-Initial Letters - raisecap and dropcap
-
-```
-#initiale ==Abc==
-#initiale-t==Abc==
-```
-
-Initiale - hoch und tiefgestellt
-
-### FONT SIZE
-
-`#font-s ==Abc==`
-
-decrease inline font size
-
-`#font-l ==Abc==`
-
-increase inline font size
+raisecap and dropcap
 
 **Deutsch**
 
 ```
-#schrift-g ==Abc==
-#schrift-k ==Abc==
+#maiuskel ==Abc==
+#initiale ==Abc==
 ```
+
+Majuskel und Initiale
+
 
 ### CITATION QUOTE
 
@@ -364,15 +331,17 @@ Words #sub ==sub==
 
 `#-spoiler ==Abc==`
 
-**Deutsch**
-
-`#-geheim ==Abc==`
-
 hide text, long version
 
 `#tips ==Abc==`
 
 hide text, short version
+
+**Deutsch**
+`#-geheim ==Abc==`
+
+
+
 
 <br>
 
