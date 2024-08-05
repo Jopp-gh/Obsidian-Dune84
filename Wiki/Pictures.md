@@ -17,7 +17,7 @@ choose between 2 banners types:
 
 <br>
 
-to add a banner, add your desired banner type (eg `banner-a`) as cssclass to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
+to insert a banner, choose a banner type (eg `cssclasses: banner-a`) to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
 
 >Note :
 >to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a `![[picture.jpg | banner-b]]`-type at top page, unless your note is very short.
@@ -25,14 +25,14 @@ to add a banner, add your desired banner type (eg `banner-a`) as cssclass to res
 <br>
 
 ### Banner height 
-to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), go to: `Preferences>Style Settings>Dune>Pictures>Arrange  Pictures>Resize Banner`  
+to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), go to: `Preferences>Style Settings>Dune>Pictures>Arrange Pictures>Banners>Resize Banner`  
 
 <br>
 
 ### Banner, vertical placement
 only for `banner-a`
 
-If your top banner looks cut, you can use following **b**anner **c**oordinates: 
+If your top banner looks cut, you can use **b**anner **c**oordinates: 
 - **locally**: use 8 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` 
 
 <br>
@@ -81,7 +81,7 @@ If you want a soft background too (ideally for text blocks), add bg as metadata 
 
 ## Simple description
 
-![I–06](https://user-images.githubusercontent.com/48620536/222982200-63caf748-6a65-42e3-a927-f262103943e6.png)
+![Img-capt](https://github.com/user-attachments/assets/35a656e9-9d15-4687-b377-4762db269f72)
 
 `![[Pict.png#cap|capture]]`
 
