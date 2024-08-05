@@ -52,17 +52,17 @@ settings:
     title: Header Font
     title.de: Überschriften
     type: variable-text
-    default: '"Louis George Cafe", Optima-ExtraBlack, HelveticaNeue-Bold, GillSans-Light'
+    default: '"Louis George Cafe", "DejaVu Serif", sans-serif'
   - 
     id: modern-font-c
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
-    default: '"Louis George Cafe", Optima-Regular, HelveticaNeue-Light, GillSans-Bold'
+    default: '"Louis George Cafe", "Liberation Serif", sans-serif'
   - 
     id: custom-fsz-1
     title: Custom Font size
-    title.de: Eigene Größe
+    title.de: Eigene Schriftgröße
     type: variable-number-slider
     format: px
     default: 16
@@ -83,13 +83,13 @@ settings:
     title.de: Überschriften
     description.de: (Standard = Manuskript Gothisch)
     type: variable-text
-    default: '"Manuskript Gothisch", cursive, Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei Light"'
+    default: '"Manuskript Gothisch", Pecita, Mumsies, sans-serif'
   - 
     id: poetry-font-c
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
-    default: 'cursive, Pecita, Mumsies, sans-serif, "Microsoft YaHei Light"'
+    default: 'cursive, Pecita, Mumsies, sans-serif'
   -
     id: custom-fsz-2
     title: Font size
@@ -112,13 +112,13 @@ settings:
     title: Header Font
     title.de: Überschriften
     type: variable-text
-    default: 'Helvetica, Sengoa, "Century Gothic", Roboto'
+    default: 'Helvetica, Sengoa, Optima-Regular, GillSans'
   - 
     id: custom-font-c
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
-    default: 'Helvetica, "Century Gothic", Roboto'
+    default: 'Helvetica, Sengoa, Optima-Regular, GillSans'
   -
     id: custom-fsz-3
     title: Font size
@@ -159,10 +159,10 @@ settings:
     type: class-toggle
   -
     id: add-link-space
-    title: Spacing links
-    description: blank space before between words and internal as well external -links
-    title.de: Anordnung Verweise
-    description.de: Leerraum zwischen Worten und interne sowie externe Verweise
+    title: Empty space between links
+    description: empty space before and after links
+    title.de: Leerzeichen zwischen Verweise
+    description.de: Leerraum vor und nach Verweisen
     type: class-toggle
   -
     id: special-fonts
@@ -176,9 +176,9 @@ settings:
   -
     id: initial-sz
     title: Initial size
-    title.de: Initiale Vergrößern
+    title.de: Majuskel/Initiale Vergrößern
     description: resize Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
-    description.de: Vergrößere Großbuchstabe "#initiale ==W==ort", "#initiale-t ==W==ort"
+    description.de: Vergrößere Großbuchstabe "#majuskel ==W==ort", "#initiale ==W==ort"
     type: variable-number-slider
     format: px
     default: 110
@@ -209,7 +209,7 @@ settings:
   -
     id: poetry-initial
     title: Initial  
-    title.de: Initiale
+    title.de: Majuskel/Initiale
     type: variable-text
     default: 'Manuskript Gothisch, "Century Gothic",  Helvetica, Arial, sans-serif'
   -
@@ -282,11 +282,19 @@ settings:
     id: heading-image-frames
     title: Picture frames
     title.de: Bilderrahmen
-    description: simple frame for images.
-    description.de: einfacher Rahmen für Bilder.
+    description: frames for images, simple or elegant.
+    description.de: Rahmen für Bilder, einfach oder elegant
     type: heading
     level: 3
     collapsed: true
+  -
+    id: img-border
+    title: Hairline frame 
+    description: frames for bright pictures on bright background
+    title.de: Haarlinien Rahmen 
+    description.de: für helle Bilder auf hellen Hintergrund 
+    type: class-toggle    
+    default: true
   -
     id: bwidth-a
     title: Simple 1 - frame thickness 
@@ -679,9 +687,9 @@ settings:
     collapsed: true
   - 
     id: hr-color
-    title: Deco Horizontal lines
+    title: Horizontal lines
     description: for some horizontal dividers  "---"
-    title.de: Deko Trennzeichen
+    title.de: Trennzeichen
     description.de: für Trennzeichen "---"
     type: variable-themed-color
     format: rgb
@@ -690,9 +698,9 @@ settings:
     default-dark: '#808080'
   - 
     id: hr-stars
-    title: Deco Stars
-    description: for some horizontal dividers "---"
-    title.de: Deko Sterne 
+    title: Stars
+    description: for some horizontal dividers  "---"
+    title.de: Sterne 
     description.de: für Trennzeichen "---"
     type: variable-themed-color
     format: rgb
@@ -701,10 +709,10 @@ settings:
     default-dark: '#808080'
   -
     id: drop-cap-col
-    title: 'Text: Initial'
+    title: 'Initial'
     description: Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
-    title.de: "Text: Initiale'
-    description.de: Großbuchstabe "#initiale ==W==ort", "#initiale-t ==W==ort"
+    title.de: "Majuskel/Initiale'
+    description.de: Großbuchstabe "#majuskel ==W==ort", "#initiale ==W==ort"
     type: variable-themed-color
     opacity: false
     format: hex
@@ -807,6 +815,7 @@ settings:
     title.de: Rolleiste 
     description.de: Wiederherstellung Rolleiste (Seiten blättern)
     type: class-toggle
+    default: true
   -
     id: fade-op-b
     title: Text body
@@ -839,7 +848,7 @@ settings:
     id: monoch-admo
     title: Simple Mini-Admonitions
     title.de: Einfache Mini-Admonitions
-    description: checkbox tags "- [!], - [?], - [n], .."
+    description: checkbox tags "- [!], - [?], - [n], etc.."
     type: class-toggle
     default: true
   -
@@ -1017,25 +1026,28 @@ body {
 :root,
 body {
     /* --ui-font-family: "Louis George Cafe"; */
-    --poetry-initial: "Manuskript Gothisch";
-    --recipes-font: "Mumsies", Helvetica, sans-serif;
+    --recipes-font: "Mumsies", "cursive", Helvetica, sans-serif;
     --movies-font: "AbadiMT-CondensedLight", Helvetica, sans-serif;
     --contacts-font: Helvetica, sans-serif;
 
-    --poetry-font-h: "Manuskript Gothisch";
-    --poetry-font-c: var(--poetry-font-h);
     --modern-font-h: "Louis George Cafe";
     --modern-font-c: var(--modern-font-h);
+    --poetry-font-h: "Manuskript Gothisch";
+    --poetry-font-c: var(--poetry-font-h);
     --custom-font-h: Helvetica;
     --custom-font-c: var(--custom-font-h);
 
+    --modern-initial: var(--modern-font-h);
+    --poetry-initial: var(--poetry-font-h);
+    --custom-initial: var(--custom-font-h);
+
+    --initial-sz: 110px;
     --slim-bar: 32px;
     --property-height: 32px;
     --checkm-btn: 1.4em;
     --min-boxwidth: 230px;
     --indent-l: 4em;
 
-    --initial-sz: 110px;
     --bwidth-a: 6px;
     --bwidth-b: 6px;
     --banner-ah: 240px;
@@ -1121,12 +1133,14 @@ body.theme-light {
     --code-string: #17294e;
     --code-tag: var(--color-red);
     --code-value: #2f74ba;
+    --codebg-col: rgb(255 255 255 / 30%);
 
     --intro-dune: linear-gradient(to left, #390058, #8b0000, #ff8c00, #ffe89e);
     --logo-grad: linear-gradient(to bottom, #ff8c00 0%, #8b0000 100%);
     --prefs-grad: linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary));
     --prefs-title: var(--h1-color);
     --link-unresolved-color: dimgray;
+    --input-bg: lightgray;
 }
 
 body.theme-dark {
@@ -1162,6 +1176,7 @@ body.theme-dark {
     --code-string: #d8c07f;
     --code-tag: var(--color-red);
     --code-value: #d86f42;
+    --codebg-col: rgb(0 0 0 / 50%);
 
     --intro-dune: linear-gradient(to right, black, black, #390058, #8b0000);
     --logo-grad: linear-gradient(to bottom, #f2e79c 0%, #11438a 100%);
@@ -1187,11 +1202,11 @@ body.col-mod-1.theme-dark {
     --text-muted: var(--color-base-70);
     --text-faint: var(--color-base-50);
 
-
     --button-background: var(--interactive-accent);
     --prefs-shadow: var(--background-primary);
     --prefs-grad: var(--background-primary);
-    --wm-b-col: var(--color-base-05);
+    --wm-b-col: var(--color-base-20);
+    --input-bg: var(--background-secondary);
 }
 
 body.col-mod-0 .theme-light,
@@ -1697,7 +1712,6 @@ NAVI BAR
     background: var(--background-primary);
 }
 
-
 /*----------------------------------------------------------------
  BIG find-replace fix
 ----------------------------------------------------------------*/
@@ -1853,6 +1867,7 @@ body:is(.theme-dark, .theme-light).is-phone .document-replace button.document-se
 .is-phone .document-search-close-button:before {
     font-size: 1.6em;
 }
+
 
 /* --------------------------------------------
 collapse indicators 
@@ -2186,7 +2201,7 @@ body:not(.is-phone) .view-header {
 }
 
 /* Note */
-.is-phone .markdown-rendered pre code {
+.is-phone .markdown-rendered pre:not(pre[class*="language-"]) code {
     font-size: small;
 }
 
@@ -2353,6 +2368,7 @@ HEADERS
     h6) {
     filter: brightness(0.8);
 }
+
 
 /* tint hashtags and headers*/
 span.cm-header.cm-formatting-header-1,
@@ -3029,13 +3045,19 @@ Quotes
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     border-radius: 4px;
     padding: 2px 5px;
-    background-color: rgb(128 128 128 / 10%);
+    background-color: var(--codebg-col);
     font-size: 14px;
+    border: 1px solid gray;
 }
 
 .markdown-rendered code {
-    background-color: rgb(128 128 128 / 10%);
-    font-size: initial;
+    background-color: var(--codebg-col);
+    border: 1px solid gray;
+}
+
+.markdown-rendered pre:not(pre[class*="language-"]):not(pre[class*="language-"]) {
+    background-color: var(--codebg-col);
+    border: 1px solid gray;
 }
 
 body:not(.is-mobile) .cm-s-obsidian span.cm-inline-code {
@@ -3061,11 +3083,11 @@ body:not(.is-mobile) .cm-s-obsidian span.cm-inline-code {
 }
 
 /* smaller boxes */
-.markdown-rendered pre {
+.markdown-rendered pre:not(pre[class*="language-"]) {
     width: fit-content;
 }
 
-.is-phone .markdown-rendered pre {
+.is-phone .markdown-rendered pre:not(pre[class*="language-"]) {
     max-width: 92vw;
 }
 
@@ -3144,7 +3166,7 @@ blockquote p {
  custom highlights
 ----------------------------------------------------------------*/
 
-a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#grau"], [href="#gray"], [href="#cite-de"], [href="#cite-br"], [href="#cite-fr"], [href="#zitat-de"], [href="#zitat-br"], [href="#zitat-fr"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#initiale"], [href="#raisecap"], [href="#initiale-t"], [href="#dropcap"]) {
+a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#grau"], [href="#gray"], [href="#cite-de"], [href="#cite-br"], [href="#cite-fr"], [href="#zitat-de"], [href="#zitat-br"], [href="#zitat-fr"], [href="#sub"], [href="#sup"], [href="#line-a"], [href="#line-b"], [href="#line-c"], [href="#strich-a"], [href="#strich-b"], [href="#strich-c"], [href="#indent"], [href="#einzug"], [href="#majuskel"], [href="#raisecap"], [href="#initiale"], [href="#dropcap"]) {
     display: none !important;
 }
 
@@ -3288,7 +3310,7 @@ a[href="#indent"]+mark {
 }
 
 /* raisecap */
-a[href="#initiale"]+mark,
+a[href="#majuskel"]+mark,
 a[href="#raisecap"]+mark {
     background-color: transparent;
     font-family: var(--poetry-initial);
@@ -3300,7 +3322,7 @@ a[href="#raisecap"]+mark {
 }
 
 /* dropcap */
-a[href="#initiale-t"]+mark,
+a[href="#initiale"]+mark,
 a[href="#dropcap"]+mark {
     background-color: transparent;
     font-family: var(--poetry-initial);
@@ -3312,6 +3334,7 @@ a[href="#dropcap"]+mark {
     position: relative;
     padding-left: 0;
 }
+
 
 a[href="#-geheim"]+mark,
 a[href="#-spoiler"]+mark {
@@ -3871,11 +3894,21 @@ body:is(.simple-aside) .callout[data-callout^="aside-"] {
     display: flex;
 }
 
+.theme-dark .markdown-source-view.mod-cm6 .callout[data-callout^="aside-"] {
+    background: var(--background-secondary);
+}
+
+.theme-light .markdown-source-view.mod-cm6 .callout[data-callout^="aside-"] {
+    background: var(--dark-shadow-l);
+}
+
+.markdown-preview-view :is(.callout[data-callout="aside-lh"], .callout[data-callout="aside-rh"]):not(:hover) .callout-content {
+    display: none;
+}
 
 body:not(.simple-aside).theme-dark .callout:is([data-callout="aside-l"], [data-callout="aside-lh"]:hover, [data-callout="aside-r"], [data-callout="aside-rh"]:hover) {
     box-shadow: 0.25em 0.25em navajowhite;
     background: var(--background-secondary);
-
 }
 
 body:not(.simple-aside).theme-light .callout:is([data-callout="aside-l"], [data-callout="aside-lh"]:hover, [data-callout="aside-r"], [data-callout="aside-rh"]:hover) {
@@ -4138,7 +4171,7 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
 
 .theme-light .callout[data-callout^="framed"]:is([data-callout-metadata~="bg"],
     [data-callout-metadata~="cite"]) {
-    background-color: var(--dark-shadow-l);
+    background-color: rgb(90 90 90 / 10%);
 }
 
 .theme-dark .callout[data-callout^="framed"]:is([data-callout-metadata~="bg"],
@@ -4159,7 +4192,6 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
 
 .callout[data-callout^="framed"]:is([data-callout-metadata~="cite"], [data-callout-metadata~="bg"]) .callout-content {
     padding-bottom: 1em;
-    line-height: normal;
 }
 
 .callout[data-callout^="framed"]:is([data-callout-metadata~="pic"], [data-callout-metadata~="pic-l"]) .internal-embed img {
@@ -4244,6 +4276,10 @@ code.language-br.is-loaded {
     display: none;
 }
 
+.is-phone .markdown-rendered button.copy-code-button {
+    height: 30px;
+    width: 30px;
+}
 
 .app-container pre.language-memo-r,
 code.language-memo-r.is-loaded,
@@ -4288,7 +4324,7 @@ Nav
 .theme-light input[type='number'],
 .theme-light textarea,
 .theme-light [type='search'] {
-    background: lightgray;
+    background: var(--input-bg);
 }
 
 .is-phone input[type="text"] {
@@ -4528,16 +4564,20 @@ table hr {
     top: 10px;
 }
 
+.markdown-reading-view table {
+    margin-top: auto;
+}
+
 .theme-dark .markdown-rendered table {
     --table-border-color: gray;
     --table-header-border-color: gray;
 }
 
-.theme-dark div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-dark div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .contacts, .movies, .recipes) thead {
     background: #313131;
 }
 
-.theme-light div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .table-xy, .table-xy-col, .contacts, .movies, .recipes) thead {
+.theme-light div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .contacts, .movies, .recipes) thead {
     background: gray;
 }
 
@@ -4657,6 +4697,32 @@ table {
     min-width: 100%;
 }
 
+/* --------------------------------------------   
+PIC grid tables
+--------------------------------------------   */
+.table-grid:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th {
+    display: none;
+    height: 0;
+}
+
+.table-grid:is(.markdown-preview-view, .markdown-source-view.mod-cm6) table:not([class]) tr {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+}
+
+.table-grid.markdown-rendered tbody tr:hover,
+.table-grid tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.table-grid.markdown-preview-view td {
+    border: none;
+}
+
+.table-grid table tr>td {
+    text-align: center;
+}
 
 /* --------------------------------------------   
 MOVIE tables
@@ -4989,10 +5055,7 @@ STYLED TABLES
 
 .table-xyr tbody tr>td:first-child,
 .table-xyg tbody tr>td:first-child,
-.table-xyb tbody tr>td:first-child,
-.table-xyo tbody tr>td:first-child,
-.table-xyv tbody tr>td:first-child,
-.table-xy-col tbody tr>td:first-child {
+.table-xyb tbody tr>td:first-child {
     color: var(--light-tone);
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -5000,30 +5063,30 @@ STYLED TABLES
 
 
 /* round tables */
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) table {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table {
     border-collapse: separate;
     border-spacing: 0px;
     margin-bottom: 1em;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) tr:not(:last-child)>td {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) tr:not(:last-child)>td {
     border-bottom: transparent;
 }
 
 /* edges */
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) table th:first-of-type {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table th:first-of-type {
     border-top-left-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) table th:last-of-type {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table th:last-of-type {
     border-top-right-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) table tr:last-child td:first-child {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table tr:last-child td:first-child {
     border-bottom-left-radius: 6px;
 }
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .table-v, .table-m, .table-col, .table-farbe, .table-xy, .table-xyr, .table-xyg, .table-xyb, .table-xyo, .table-xyv, .table-xym, .table-xy-col) table tr:last-child td:last-child {
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table tr:last-child td:last-child {
     border-bottom-right-radius: 6px;
 }
 
@@ -5031,6 +5094,13 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .ta
 /*----------------------------------------------------------------
 IMAGE PLACING
 ----------------------------------------------------------------*/
+.theme-light .img-border img:not(.callout img) {
+    border: 1px solid gray;
+}
+
+.theme-dark .img-border img:not(.callout img) {
+    border: 1px solid white;
+}
 
 /* add banner-a to image */
 img[alt="banner-a"] {
@@ -5216,6 +5286,33 @@ img[alt~='frame-b'] {
     border-radius: 0 !important;
 }
 
+.capt-10 .image-embed[src*="#cap"]::after {
+    width: 100px;
+}
+
+.capt-15 .image-embed[src*="#cap"]::after {
+    width: 150px;
+}
+
+.capt-20 .image-embed[src*="#cap"]::after {
+    width: 200px;
+}
+
+.capt-25 .image-embed[src*="#cap"]::after {
+    width: 250px;
+}
+
+.capt-30 .image-embed[src*="#cap"]::after {
+    width: 300px;
+}
+
+.capt-35 .image-embed[src*="#cap"]::after {
+    width: 350px;
+}
+
+.capt-40 .image-embed[src*="#cap"]::after {
+    width: 400px;
+}
 
 .image-embed[src*="#cap"]::after {
     display: flex;
@@ -5467,7 +5564,7 @@ EMBEDS - check
 }
 
 /* correct code for printing */
-.markdown-rendered pre code {
+.markdown-rendered pre:not(pre[class*="language-"]) code {
     font-size: initial;
 }
 
@@ -5948,9 +6045,7 @@ ul>li.task-list-item[data-task="X"] .task-list-item-checkbox:checked {
     text-decoration: line-through;
     text-indent: -8px;
     background-position: center;
-    background-color: var(--background-primary);
 }
-
 
 input[data-task]:is([data-task="x"], [data-task="X"]):checked,
 ul>li.task-list-item[data-task="x"] .task-list-item-checkbox:checked,
@@ -6273,12 +6368,6 @@ body:not(.show-ls-marker) :is(.is-phone) ol li::marker {
     display: list-item;
 }
 
-body:not(.show-ls-marker) .markdown-source-view.mod-cm6 .cm-formatting-list-ol .list-number::after {
-    content: ")";
-    padding-right: 4px;
-    margin-left: -8px;
-}
-
 .is-phone .markdown-rendered.show-indentation-guide li>ul {
     padding-left: 1.4em;
 }
@@ -6478,18 +6567,28 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 BUTTONS
 ----------------------------------------------------------------*/
 
-.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning) {
+.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+button.mod-destructive {
+    font-weight: bold;
+    color: var(--dark-tone);
+    background-color: var(--light-red);
+}
+
+button.mod-destructive:hover {
+    background-color: var(--background-modifier-error-hover);
+}
+
 /* .theme-light  */
-.theme-dark button:not(.clickable-icon, .mod-cta, .mod-warning):hover,
-.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning):hover {
+.theme-dark button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
+.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover {
     background-color: var(--light-shadow-l);
 }
 
 
-.theme-dark button:not(.clickable-icon, .mod-cta, .mod-warning) {
+.theme-dark button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -6528,6 +6627,11 @@ BUTTONS
 .is-phone .pickr {
     margin-left: 10px;
     width: 30px;
+}
+
+.themed-color-wrapper>div[class="theme-dark"] button {
+    color: white;
+    background: #515151;
 }
 
 /* pc */
@@ -6589,7 +6693,7 @@ body:not(.is-phone).theme-light .setting-item-control input[type='text'] {
 }
 
 
-.theme-dark .modal-container button:not(.clickable-icon, .mod-cta, .mod-warning):hover,
+.theme-dark .modal-container button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 .theme-dark .setting-item-control select:hover {
     text-overflow: ellipsis;
     color: navajowhite;
@@ -6745,7 +6849,7 @@ body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
     right: 0;
 }
 
-.is-mobile .markdown-rendered pre.language-br>button.copy-code-button {
+.is-mobile .markdown-rendered pre:not(pre[class*="language-"]).language-br>button.copy-code-button {
     display: none;
 }
 
@@ -6761,7 +6865,7 @@ body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
 
 
 /*----------------------------------------------------------------
-PDF EXPORT - Teste
+PDF EXPORT
 ----------------------------------------------------------------*/
 
 @media print {
@@ -6783,6 +6887,10 @@ PDF EXPORT - Teste
         --code-string: #867443;
         --code-tag: var(--color-red);
         --code-value: #94421f;
+    }
+
+    .markdown-rendered pre:not(pre[class*="language-"]) {
+        background-color: rgb(128 128 128 / 20%);
     }
 
     em,
@@ -7026,7 +7134,6 @@ PDF EXPORT - Teste
         display: flex;
         flex-wrap: wrap;
         white-space: normal;
-        line-height: normal;
         padding-bottom: 16px;
     }
 
@@ -7039,7 +7146,7 @@ PDF EXPORT - Teste
         color: var(--dark-tone);
     }
 
-    .markdown-rendered pre {
+    .markdown-rendered pre:not(pre[class*="language-"]) {
         padding: var(--size-4-3) var(--size-4-4) !important;
         min-height: 38px;
     }
@@ -7068,9 +7175,9 @@ PDF EXPORT - Teste
     }
 
     /* text tags */
-    a[href="#initiale"]+mark,
+    a[href="#majuskel"]+mark,
     a[href="#raisecap"]+mark,
-    a[href="#initiale-t"]+mark,
+    a[href="#initiale"]+mark,
     a[href="#dropcap"]+mark {
         color: var(--drop-cap-col) !important;
     }
@@ -7109,9 +7216,14 @@ PDF EXPORT - Teste
     }
 
     /* codeblocks */
+    .markdown-rendered pre:not(pre[class*="language-"]):not(pre[class*="language-"]),
     .markdown-rendered code {
-        background-color: #7e756629;
+        background-color: rgb(240, 240, 240);
         color: var(--dark-tone);
+    }
+
+    .markdown-rendered pre:not(pre[class*="language-"]) code {
+        font-size: small;
     }
 
     .app-container pre.language-memo-r,
@@ -7138,7 +7250,7 @@ PDF EXPORT - Teste
 
     /* Print - resize fontsize in codeblocks */
     .cm-s-obsidian div.HyperMD-codeblock-bg,
-    .markdown-rendered pre {
+    .markdown-rendered pre:not(pre[class*="language-"]) {
         font-size: medium;
     }
 
@@ -7150,6 +7262,10 @@ PDF EXPORT - Teste
         width: fit-content;
     }
 
+    input[type=checkbox]:checked {
+        background-color: var(--light-tone);
+    }
+
     /* headers */
     h1,
     h2,
@@ -7159,13 +7275,8 @@ PDF EXPORT - Teste
     h6 {
         page-break-after: avoid;
         text-rendering: optimizeLegibility;
-        /* margin-top: 0 !important; */
     }
 
-    .shade-Hd.theme-light,
-    .shade-Hd.theme-dark {
-        filter: none;
-    }
 
     /* hide frontmatter */
     pre.frontmatter,
@@ -7182,12 +7293,6 @@ PDF EXPORT - Teste
 
     .is-phone .image-embed[src*="#cap"]::after {
         min-width: calc(var(--min-boxwidth) + 2em);
-    }
-
-    .image-embed[src*="#cap"]::after {
-        overflow-wrap: normal;
-        width: fit-content;
-        min-width: var(--min-boxwidth);
     }
 
     .file-embed.mod-generic,
@@ -7413,6 +7518,7 @@ body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
 
 
 .modal.mod-settings .vertical-tab-header,
+.modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-content {
     background: var(--prefs-grad);
 }
@@ -7724,4 +7830,8 @@ body:not(.is-phone) .tree-item.nav-file.recent-files-file {
     scale: 0.7;
     border-radius: 50px;
     background-color: var(--light-tone);
+}
+
+.dataview.small-text {
+    color: var(--light-tone);
 }
