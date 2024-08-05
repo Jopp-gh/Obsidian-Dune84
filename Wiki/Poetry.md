@@ -1,14 +1,12 @@
 # Poetry
 ## Initials
 ![tag-initials–01](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/46f8e2ce-6add-41e6-86bd-b6e54c7e4b78)
-![tag-initials–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c6fa1c44-0516-4763-ba37-d733648dd162)
 ![tag-initials–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/06061682-c1a7-4a03-8d86-4292e32e83fe)
-![tag-initials–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/701497df-9ebd-4fef-aeb0-f75f3b81b624)
 
 **Example**
 `#dropcap ==A==`  or `#raisecap ==A==` or 
 
-**German**: `#Initiale-t ==A==` oder `#Initiale ==A==` 
+**German**: `#initiale ==A==` oder `#majuskel ==A==` 
 
 <br>
 
