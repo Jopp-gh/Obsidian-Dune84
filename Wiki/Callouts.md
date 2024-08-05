@@ -1,10 +1,10 @@
 # Callouts
 ## Callouts colors
 
-![callout-col](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/48e2d47b-873a-483c-ac83-e5c19eed47db)
+![B0](https://github.com/user-attachments/assets/c5dfd9c9-2f03-401b-9dd1-07e9c3dccf36)
 
 ```
-> [!red callout|red]
+> [!note|red]
 > note
 ```
 Tint any callout in: red, green, blue, gray
@@ -15,7 +15,7 @@ Tint any callout in: red, green, blue, gray
 
 ## Aside notes (hidden)
 
-![B1](https://user-images.githubusercontent.com/48620536/222979880-64b7d178-7804-4d3b-b089-2375df712e94.png)
+![B1](https://github.com/user-attachments/assets/75bb1f17-9e9f-4f3b-985d-ad261b4744ba)
 
 ```
 > [!aside-rh]
@@ -31,7 +31,7 @@ To display your box, hover over its thin, button on your right/left note border
 
 ## Aside-in (visible)
 
-![B2](https://user-images.githubusercontent.com/48620536/222979913-e8e15146-725f-47d4-8126-b7c4055d261e.png)
+![B2](https://github.com/user-attachments/assets/fe3006fc-3b1f-4c95-9bb9-e64e50e6dbda)
 
 ```
 > [!aside-r]
@@ -42,8 +42,8 @@ Box on your right or left side.
 <br>
 
 ## Multi-column
+![B3](https://github.com/user-attachments/assets/a4478499-5ef3-403d-8388-d0bfbe26b124)
 
-![B3](https://user-images.githubusercontent.com/48620536/222980074-7f5294b8-d4ad-4cf5-8436-97f909303e86.png)
 
 ```
 > [!multi-column]
@@ -174,7 +174,7 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
-`l` in `font-l]`  stands for large
+`l` in `font-l]`  equals to large
 
 **Options** `>[font-l]`, `>[schrift-g]`
 
@@ -187,7 +187,7 @@ Callout floats right
 > Words Words Words Words
 > Words Words Words Words
 ```
-`s` in `font-s]`  stands for small
+`s` in `font-s]`   equals to small
 
 **Options** `>[font-s]`, `>[schrift-k]`
 
@@ -199,6 +199,7 @@ Callout floats right
 to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spacing>Linebreak - blank` and toggle linebreaks on, to ignore empty lines and merge lines/paragraphs
 
 <br>
+
 ## Multiple Line breaks
 
 ````
@@ -207,16 +208,18 @@ to change line breaks globally, go to `Preferences>Style Settings>Dune>Fonts>Spa
 
 ```
 ````
-add as many linebreaks as you want to control empty lines (the example above breaks two lines).
+for smaller line breaks, you don't need to add any line breaks to this code block. For bigger breaks,
+add as many line breaks as you need inside the code fence.
 
 <br>
 
 ## Memo
-![note-yell](https://user-images.githubusercontent.com/48620536/230743665-6075fa26-ad47-4d4a-b3e0-f2d9dbcb0a0d.png)
+
+![Memo-b](https://github.com/user-attachments/assets/1b0f1486-6fd9-438d-8211-a69be9dc9625)
 
 ````
-```memo
-words words words words 
+```memo-b
+abc
 ```
 ````
 to add more color variations, use: red, green, blue. **Options**: `memo-r`, `memo-g`, `memo-b`,
