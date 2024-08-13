@@ -845,6 +845,14 @@ settings:
     description.de: Wiederherstellung eckige Tabellen (farbige, monochrome)
     type: class-toggle
   -
+    id: edgy-banners
+    title: Banners, edgy 
+    description: restore edgy banners
+    title.de: Banner, eckig
+    description.de: Wiederherstellung eckige Banner
+    type: class-toggle
+    default: true
+  -
     id: monoch-admo
     title: Simple Mini-Admonitions
     title.de: Einfache Mini-Admonitions
@@ -2386,28 +2394,29 @@ div.callout-content :is(h1 em, h2 em, h3 em, h4 em, h5 em h6 em) {
 TYPESETTING
 ----------------------------------------------------------------*/
 
-body.fontmod-1:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
-    font-size: calc(var(--h1-size) + (var(--custom-fsz-1) * 1.4));
+/* modern */
+body:not(.large-h1).fontmod-1:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
+    font-size: calc(var(--h1-size) + (var(--custom-fsz-1)));
 }
 
 body.fontmod-1:not(.is-phone) :is(.HyperMD-header-2, .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + (var(--custom-fsz-1) * 1.2));
+    font-size: calc(var(--h2-size) + (var(--custom-fsz-1) / 2));
 }
 
 body.fontmod-1:not(.is-phone) :is(.HyperMD-header-3, .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + (var(--custom-fsz-1) * 1));
+    font-size: calc(var(--h3-size) + (var(--custom-fsz-1) / 2.5));
 }
 
 body.fontmod-1:not(.is-phone) :is(.HyperMD-header-4, .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + (var(--custom-fsz-1) * 0.8));
+    font-size: calc(var(--h4-size) + (var(--custom-fsz-1) / 3));
 }
 
 body.fontmod-1:not(.is-phone) :is(.HyperMD-header-5, .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + (var(--custom-fsz-1) * 0.6));
+    font-size: calc(var(--h5-size) + (var(--custom-fsz-1) / 3.5));
 }
 
 body.fontmod-1:not(.is-phone) :is(.HyperMD-header-6, .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + (var(--custom-fsz-1) * 0.4));
+    font-size: calc(var(--h6-size) + (var(--custom-fsz-1) / 4));
 }
 
 body.fontmod-1 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .contacts),
@@ -2419,33 +2428,33 @@ body.fontmod-1 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .
 body.fontmod-1 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
 .fontmod-1 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
     font-family: var(--modern-font-c);
-    font-size: var(--custom-fsz-1);
+    font-size: calc(1px * var(--custom-fsz-1));
 }
 
 
 /* poetry */
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
-    font-size: calc(var(--h1-size) + (var(--custom-fsz-2) * 1.4));
+    font-size: calc(var(--h1-size) + (var(--custom-fsz-2)));
 }
 
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-2, .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + (var(--custom-fsz-2) * 1.2));
+    font-size: calc(var(--h2-size) + (var(--custom-fsz-2) / 2));
 }
 
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-3, .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + (var(--custom-fsz-2) * 1));
+    font-size: calc(var(--h3-size) + (var(--custom-fsz-2) / 2.5));
 }
 
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-4, .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + (var(--custom-fsz-2) * 0.8));
+    font-size: calc(var(--h4-size) + (var(--custom-fsz-2) / 3));
 }
 
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-5, .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + (var(--custom-fsz-2) * 0.6));
+    font-size: calc(var(--h5-size) + (var(--custom-fsz-2) / 3.5));
 }
 
 body.fontmod-2:not(.is-phone) :is(.HyperMD-header-6, .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + (var(--custom-fsz-2) * 0.4));
+    font-size: calc(var(--h6-size) + (var(--custom-fsz-2) / 4));
 }
 
 body.fontmod-2 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .contacts),
@@ -2457,33 +2466,33 @@ body.fontmod-2 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .
 body.fontmod-2 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
 .fontmod-2 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
     font-family: var(--poetry-font-c);
-    font-size: var(--custom-fsz-2);
+    font-size: calc(1px * var(--custom-fsz-2));
 }
 
 
 /* custom */
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
-    font-size: calc(var(--h1-size) + (var(--custom-fsz-3) * 1.4));
+    font-size: calc(var(--h1-size) + (var(--custom-fsz-3)));
 }
 
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-2, .markdown-preview-section h2, h2) {
-    font-size: calc(var(--h2-size) + (var(--custom-fsz-3) * 1.2));
+    font-size: calc(var(--h2-size) + (var(--custom-fsz-3) / 2));
 }
 
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-3, .markdown-preview-section h3, h3) {
-    font-size: calc(var(--h3-size) + (var(--custom-fsz-3) * 1));
+    font-size: calc(var(--h3-size) + (var(--custom-fsz-3) / 2.5));
 }
 
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-4, .markdown-preview-section h4, h4) {
-    font-size: calc(var(--h4-size) + (var(--custom-fsz-3) * 0.8));
+    font-size: calc(var(--h4-size) + (var(--custom-fsz-3) / 3));
 }
 
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-5, .markdown-preview-section h5, h5) {
-    font-size: calc(var(--h5-size) + (var(--custom-fsz-3) * 0.6));
+    font-size: calc(var(--h5-size) + (var(--custom-fsz-3) / 3.5));
 }
 
 body.fontmod-3:not(.is-phone) :is(.HyperMD-header-6, .markdown-preview-section h6, h6) {
-    font-size: calc(var(--h6-size) + (var(--custom-fsz-3) * 0.4));
+    font-size: calc(var(--h6-size) + (var(--custom-fsz-3) / 4));
 }
 
 body.fontmod-3 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .contacts),
@@ -2495,7 +2504,7 @@ body.fontmod-3 .markdown-source-view.mod-cm6 .cm-header:not(.recipes, .movies, .
 body.fontmod-3 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
 .fontmod-3 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
     font-family: var(--custom-font-c);
-    font-size: var(--custom-fsz-3);
+    font-size: calc(1px * var(--custom-fsz-3));
 }
 
 /* 
@@ -2924,6 +2933,11 @@ Quotes
 
 body:not(.is-mobile) .cm-s-obsidian span.cm-inline-code {
     font-size: revert;
+}
+
+span.cm-inline-code {
+    line-height: normal;
+    display: inline-table;
 }
 
 .search-results-info .dropdown:hover {
@@ -4971,9 +4985,11 @@ img[alt="banner-a"] {
     width: 100%;
     height: var(--banner-ah);
     object-fit: cover;
-    -webkit-mask-image: linear-gradient(180deg, white, white, white, transparent);
-    mask-image: none;
     object-position: 50% 0;
+}
+
+.edgy-banners img[alt="banner-a"]{
+    mask-image: linear-gradient(180deg, white, white, white, transparent);
 }
 
 /* padding for footnotes */
@@ -4984,11 +5000,14 @@ img[alt="banner-b"] {
     width: 100%;
     height: var(--banner-bh);
     object-fit: cover;
-    -webkit-mask-image: linear-gradient(360deg, white, white, white, transparent);
-    mask-image: none;
     object-position: 50% 0%;
     padding-top: 2em;
 }
+
+.edgy-banners img[alt="banner-b"]{
+    mask-image: linear-gradient(360deg, white, white, white, transparent);
+}
+
 
 img[alt="banner-a"],
 img[alt="banner-b"] {
@@ -6305,7 +6324,6 @@ div.popover.hover-popover {
 
 .popover.hover-popover .markdown-embed {
     width: 950px;
-    height: 25rem;
 }
 
 .popover.hover-popover .markdown-embed-content {
