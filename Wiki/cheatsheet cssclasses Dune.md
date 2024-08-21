@@ -130,5 +130,6 @@ beautiful decorations
 
 `cssclass: banner-b` and `![[image.png|banner-b]]`
 
-banner
 
+### Simple image descriptions
+cssclass: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`
