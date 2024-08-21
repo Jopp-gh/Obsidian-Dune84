@@ -85,6 +85,8 @@ If you want a soft background too (ideally for text blocks), add bg as metadata 
 
 `![[Pict.png#cap|capture]]`
 
+you can adjust the max width of "simple descriptions" by adding following cssclass: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`. 
+`capt-10` means max string width is 100px. 
 
 <br>
 
