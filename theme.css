@@ -204,8 +204,8 @@ settings:
     id: initial-sz
     title: Initial size
     title.de: Majuskel/Initiale Vergrößern
-    description: resize Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
-    description.de: Vergrößere Großbuchstabe "#majuskel ==W==ort", "#initiale ==W==ort"
+    description: "#raisecap ==W==ord, #dropcap ==W==ord"
+    description.de: "#majuskel ==W==ort, #initiale ==W==ort"
     type: variable-number-slider
     format: px
     default: 110
@@ -709,10 +709,10 @@ settings:
     default-dark: '#808080'
   -
     id: drop-cap-col
-    title: 'Initial'
-    description: Initials "#raisecap ==W==ord", "#dropcap ==W==ord"
-    title.de: "Majuskel/Initiale'
-    description.de: Großbuchstabe "#majuskel ==W==ort", "#initiale ==W==ort"
+    title: Initial
+    description: "#raisecap ==W==ord #dropcap ==W==ord"
+    title.de: Majuskel/Initiale
+    description.de: "#majuskel ==W==ort, #initiale ==W==ort"
     type: variable-themed-color
     opacity: false
     format: hex
@@ -808,6 +808,14 @@ settings:
     description: restores standard. Pay attention, 'Editor > Display > Properties in document > Visible / Source' must be active
     description.de: Wiederherstellung Standard. Beachte, 'Editor > Display > Properties in document > Visible / Source' muss aktiv sein
     type: class-toggle
+  -
+    id: hide-sidepanels
+    title: Writer mode
+    description: Hide panels 
+    title.de: Schriftsteller Modus
+    description.de: Verstecke Panele 
+    type: class-toggle
+    default: false 
   -
     id: show-scrollbars
     title: Scrollbars 
@@ -2174,6 +2182,56 @@ body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container 
 }
 
 
+/* --------------------------------------------
+quick hide 
+-------------------------------------------- */
+
+body:is(.hide-sidepanels) .mod-left-split .workspace-tab-header-container-inner:not(:hover),
+body:is(.hide-sidepanels) .mod-right-split .workspace-tab-header-container-inner:not(:hover),
+body:is(.hide-sidepanels) .workspace-tab-header-container-inner:not(:hover),
+body:is(.hide-sidepanels) .workspace-leaf-content[data-type]:not([data-type="markdown"])>*:not(:hover),
+body:is(.hide-sidepanels) :is(.is-hidden-frameless.mod-windows:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right, .is-hidden-frameless.mod-linux:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right):not(:hover),
+body:is(.hide-sidepanels) .side-dock-actions:not(:hover),
+body:is(.hide-sidepanels) .workspace-sidedock-vault-profile:not(:hover) :is(.workspace-drawer-vault-actions, .workspace-drawer-vault-switcher) {
+    opacity: 0;
+    transition: opacity 4s linear;
+}
+
+/* new tab */
+body:is(.hide-sidepanels) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list):not(:hover) {
+    opacity: 0.3;
+}
+
+/* wm btns,  vault profile, dock, new tab */
+body:is(.hide-sidepanels) :is(.is-hidden-frameless.mod-windows:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right, .is-hidden-frameless.mod-linux:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right):hover,
+body:is(.hide-sidepanels) .workspace-sidedock-vault-profile:hover :is(.workspace-drawer-vault-actions, .workspace-drawer-vault-switcher),
+body:is(.hide-sidepanels) .side-dock-actions:hover,
+body:is(.hide-sidepanels) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list):hover {
+    opacity: 1;
+}
+
+body:is(.hide-sidepanels) .workspace-split.mod-left-split .workspace-tab-header-container {
+    background: linear-gradient(270deg, transparent, var(--background-primary));
+}
+
+body:is(.hide-sidepanels) .workspace-split.mod-left-split .workspace-tab-header-container {
+    background: linear-gradient(270deg, var(--background-primary), transparent);
+}
+
+body:is(.hide-sidepanels) .workspace-tab-header-container {
+    background: linear-gradient(270deg, transparent, var(--background-primary));
+}
+
+
+body:is(.hide-sidepanels) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+body:is(.hide-sidepanels) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    border-top: 0;
+}
+
+body:not(.is-phone):not(.show-ui-btns, .hide-sidepanels) :is(.side-dock-settings, .side-dock-actions, .workspace-drawer-vault-actions) {
+    opacity: 0.2;
+    transition: opacity 1s ease-out;
+}
 
 /*----------------------------------------------------------------
 HEADERS
