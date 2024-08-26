@@ -114,10 +114,10 @@ inspiration from following sources:
 
 Support me, if you like what you get  :)
 
- **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. The bigger code projects grow, the harder the code maintenace becomes. With every new update **quality standards raise** and this effort needs to get much more attention. Let's make this world a better place and start to support benefactors to become in turn, benefactors ourselves. Every - little - donation **is valuable**. 
+ **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. But this takes a lot of time and effort too. Let's make this world a better place and start to support benefactors to become in turn, benefactors ourselves. 
 
-Furthermore, I've spent more than a hundred of hours in the development, design and implementation of features in Dune - over the past 3 years. So…Would you be so nice to support me with a breakfast or lunch ? :) <br>
-To support this project and honor the continuous work behind Dune, have a look at [Dune Gold](https://buymeacoffee.com/jopp.gh/extras). Dune-Silver(the free version) comes already with a lot of goodies, but it offers only half the features of Dune-Gold.
+So…would you be so nice to support me with a breakfast or lunch ? :) <br>
+To support this project and honor the continuous work behind Dune, check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras). Dune-Silver(the free version) is already loaded with a lot of goodies, but offers only half the features of Dune-Gold.
 
 <a href="bmc_qr"><img src="https://github.com/user-attachments/assets/b25d85d8-345d-43b7-aef7-a97ea9e2bded" align="left" height="150" width="150" ></a>
 
