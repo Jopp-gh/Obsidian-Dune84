@@ -15,16 +15,31 @@
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. 
 His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/?ref_=nm_ov_bio_lk), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio?ref_=nm_ov_bio_sm). I still enjoy to watch Dune from 1984, - both Frank and David created an epic, evergreen artwork.
 
-The daylight palette is a **warm** _wood - sand - rosé tint,_ meanwhile the nighttime palette is a **fresh**, _dusk - midnight - blacky tint_ one, plus two flat tones resembling the default Obsidian b/w theme. Additionally, you can change colors in Dune's preferences, so there should be enough variety for everbody's taste.
+The daylight palette is a **warm** _wood - sand - rosé tint,_ meanwhile the nighttime palette is a **fresh**, _dusk - midnight - blacky tint_ one, plus two flat tones resembling the default Obsidian b/w theme. Additionally, you can change colors in Dune's preferences, so there should be enough variety for everbody's taste. If you read further, you will discover Dune is not just a color play, but adds a ton of new features too! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
+
+Please support this project! Check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras) too! 
+
 
 <br>
 
 ### 🔑 Motivation
-I spent a hundred of hours in the development, design and implementation of features in Dune - over the past 3 years. So…Would you be so nice to support me with a breakfast or lunch ? :) 
+The reason why I share my theme with you is that I'm interested to connect with other, like-minded people.
 
-_It's not just about the good deed, but to connect with each other, like to connect useful and interesting data in Obsidian and get new, inspiring and awesome insights!_
+_to connect with each other is like to connect useful and interesting data in Obsidian to get new, inspiring and awesome insights!_
 
-If you want to support this project and honor the continuous work behind Dune then visit me on my Buymeacoffe shop. You will get **Dune-Gold** which has much more features than the free version, aka Dune-Silver. If you are interested now, feel free to check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras) 
+Feel free to contact me and _Private Message_ `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433). My interests are related to:
+
+```
+- #architecture,
+- #furniture #design,
+- #workflow #code #design,
+- #cultural #events,
+- #entertainment #art,
+- #drawing,
+- #photography,
+- #economy,
+- #world #languages,
+```
 
 
 <br>
@@ -74,19 +89,6 @@ _MOBILE_
 - **[SlRvb](https://github.com/SlRvb)**
 - everyone else helping me  
 
-Also, I release this theme in the hope to make new friends. Feel free to contact me and _Private Message_ `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433). My interests are related to:
-
-```
-- #architecture,
-- #furniture #design,
-- #workflow #code #design,
-- #cultural #events,
-- #entertainment #art,
-- #drawing,
-- #photography,
-- #economy,
-- #world #languages,
-```
 
 <br>
 
@@ -114,13 +116,22 @@ Support me, if you like what you get  :)
 
  **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. The bigger code projects grow, the harder the code maintenace becomes. With every new update **quality standards raise** and this effort needs to get much more attention. Let's make this world a better place and start to support benefactors to become in turn, benefactors ourselves. Every - little - donation **is valuable**. 
 
-<br>
+Furthermore, I've spent more than a hundred of hours in the development, design and implementation of features in Dune - over the past 3 years. So…Would you be so nice to support me with a breakfast or lunch ? :) <br>
+To support this project and honor the continuous work behind Dune, have a look at [Dune Gold](https://buymeacoffee.com/jopp.gh/extras). Dune-Silver(the free version) comes already with a lot of goodies, but it offers only half the features of Dune-Gold.
+
+<a href="bmc_qr"><img src="https://github.com/user-attachments/assets/b25d85d8-345d-43b7-aef7-a97ea9e2bded" align="left" height="150" width="150" ></a>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
 
 ### 👔 Collaboration
 **thanks for your interest in my theme**. Right now I'm looking for people interested to :
 - rework my current documentation, to make **Dune** even more accessible. Private message me on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433) to contact me.
-- Feel free to contribute with code for tablets and optimisations for iPhone and Linux.
-- If you have ideas  relevant to **Dune** or you want to report issues, open a ticked at the top page
+- Feel free to contribute with git pulls for tablets and optimisations for iPhone and Linux.
+- If you have ideas relevant to **Dune** or you want to report issues, open a ticked at the top page
 
 <br>
 
