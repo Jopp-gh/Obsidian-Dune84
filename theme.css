@@ -272,7 +272,7 @@ settings:
     id: deco-scale
     title: Decoration sizes
     title.de: Dekorationen anpassen
-    description: cssclass "wave-a", "wave-b", "wave-c", "wave-d", "wave-e", "wave-f"
+    description: fence, cssclass "wave-a", "wave-b", "wave-c", "wave-d", "wave-e", "wave-f"
     type: variable-number-slider
     default: 0.4
     min: 0.1
@@ -687,10 +687,10 @@ settings:
     collapsed: true
   - 
     id: hr-color
-    title: Horizontal lines
-    description: for some horizontal dividers  "---"
-    title.de: Trennzeichen
-    description.de: für Trennzeichen "---"
+    title: Decorative lines
+    description: for some decorative dividers "wave-a"
+    title.de: Dekorative Trenner
+    description.de: für dekorative Trenner "wave-a"
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -698,10 +698,10 @@ settings:
     default-dark: '#808080'
   - 
     id: hr-stars
-    title: Stars
-    description: for some horizontal dividers  "---"
-    title.de: Sterne 
-    description.de: für Trennzeichen "---"
+    title: Decorative Stars
+    description: for some decorative dividers "stars"
+    title.de: Dekorative Sterne
+    description.de: für dekorative Trenner "stars"
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -983,7 +983,7 @@ settings:
   -
     id: update-dune
     title: Dune-Gold
-    description: <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
+    description: <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
     type: info-text
     markdown: true
 */
@@ -4330,31 +4330,6 @@ button.mod-warning,
 /*----------------------------------------------------------------
 Fancy Horizontal Rulers
 ----------------------------------------------------------------*/
-
-.top-br hr::before {
-    height: calc(16px * 4);
-    display: block;
-    content: "";
-}
-
-.bottom-br hr::after {
-    height: calc(16px * 4);
-    display: block;
-    content: "";
-}
-
-.tb-br hr::before,
-.tb-br hr::after {
-    height: calc(16px * 2);
-    display: block;
-    content: "";
-}
-
-.hr-break hr {
-    display: block;
-    width: 100%;
-}
-
 hr {
     max-width: 100%;
     background-position: 50%;
@@ -4499,21 +4474,9 @@ table hr {
     font-size: var(--table-text-size);
 }
 
-.markdown-reading-view table {
-    margin-top: auto;
-}
-
 .theme-dark .markdown-rendered table {
     --table-border-color: gray;
     --table-header-border-color: gray;
-}
-
-.theme-dark div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .contacts, .movies, .recipes) thead {
-    background: #313131;
-}
-
-.theme-light div:is(.markdown-preview-view, .markdown-source-view):not(.table-xyr, .table-xyg, .table-xyb, .contacts, .movies, .recipes) thead {
-    background: gray;
 }
 
 /* Highlight - keep text readable */
@@ -4629,33 +4592,6 @@ table {
 /* Make tables width same as default note width   */
 .table-wide table {
     min-width: 100%;
-}
-
-/* --------------------------------------------   
-PIC grid tables
---------------------------------------------   */
-.table-grid:is(.markdown-preview-view, .markdown-source-view.mod-cm6) thead tr>th {
-    display: none;
-    height: 0;
-}
-
-.table-grid:is(.markdown-preview-view, .markdown-source-view.mod-cm6) table:not([class]) tr {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-}
-
-.table-grid.markdown-rendered tbody tr:hover,
-.table-grid tr:nth-child(even) {
-    background-color: transparent;
-}
-
-.table-grid.markdown-preview-view td {
-    border: none;
-}
-
-.table-grid table tr>td {
-    text-align: center;
 }
 
 /* --------------------------------------------   
@@ -4859,13 +4795,17 @@ body:not(.is-phone) .recipes table {
     min-width: var(--min-boxwidth);
 }
 
-.recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
-    border: 0;
+.recipes:is(.markdown-source-view, .markdown-preview-view) th {
+    border: none;
     text-align: left;
-    border-collapse: collapse;
-    background: transparent;
-    font-weight: bold;
-    border-bottom: 1px solid var(--text-normal);
+    border-bottom: 2px solid;
+}
+
+.recipes:is(.markdown-source-view, .markdown-preview-view) thead,
+.recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th,
+.recipes:is(.markdown-source-view, .markdown-preview-view) thead th,
+.recipes:is(.markdown-source-view, .markdown-preview-view) tr:nth-child(even) {
+    background-color: transparent;
 }
 
 .recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th {
@@ -4881,11 +4821,6 @@ body:not(.is-phone) .recipes table {
 .recipes:is(.markdown-source-view, .markdown-preview-view) tbody td:last-child,
 .recipes:is(.markdown-source-view, .markdown-preview-view) thead th:last-child {
     padding-left: 30px;
-}
-
-.recipes:is(.markdown-source-view, .markdown-preview-view) thead th,
-.recipes:is(.markdown-source-view, .markdown-preview-view) tr:nth-child(even) {
-    background: transparent;
 }
 
 .recipes tbody tr:nth-child(odd):hover,
@@ -4923,20 +4858,31 @@ body:not(.is-phone) .recipes table {
 STYLED TABLES
 --------------------------------------------*/
 
-.table-r thead tr,
-.table-r thead tr:hover {
+.markdown-preview-view thead,
+table.table-editor thead {
+    background: gray;
+}
+
+.table-r thead,
+.table-r th,
+.table-r th:hover,
+.table-r .markdown-rendered thead tr>th:nth-child(2n+2) {
     background: var(--dark-red);
     text-rendering: optimizeLegibility;
 }
 
-.table-g thead tr,
-.table-g thead tr:hover {
+.table-g thead,
+.table-g th,
+.table-g th:hover,
+.table-g .markdown-rendered thead tr>th:nth-child(2n+2) {
     background: var(--dark-green);
     text-rendering: optimizeLegibility;
 }
 
-.table-b thead tr,
-.table-b thead tr:hover {
+.table-b thead,
+.table-b th,
+.table-b th:hover,
+.table-b .markdown-rendered thead tr>th:nth-child(2n+2) {
     background: var(--dark-blue);
     text-rendering: optimizeLegibility;
 }
@@ -5079,7 +5025,7 @@ img[alt="banner-b"] {
 }
 
 .banner-b .markdown-preview-section {
-    margin-bottom: calc(var(--banner-bh) + 1em);
+    margin-top: var(--banner-ah);
 }
 
 .is-phone img[alt='banner-a'],
@@ -6804,6 +6750,7 @@ body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
     background-color: rgb(197 197 197 / 80%);
 }
 
+
 /*----------------------------------------------------------------
 PDF EXPORT
 ----------------------------------------------------------------*/
@@ -6837,7 +6784,6 @@ PDF EXPORT
         color: var(--dark-tone);
     }
 
-    hr,
     img,
     table,
     .image-embed,
@@ -6877,7 +6823,7 @@ PDF EXPORT
 
     .footnotes {
         border-top: 1px solid;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .contacts table {
@@ -6892,22 +6838,27 @@ PDF EXPORT
         text-decoration-color: var(--bold-color) !important;
     }
 
-    .table-r thead tr>th,
+
+    .table-r th,
+    .table-r .markdown-rendered thead tr>th:nth-child(2n+2),
     .table-xyr :is(thead tr>th, tbody tr>td:first-child) {
         background: var(--dark-red);
     }
 
-    .table-g thead tr>th,
+    .table-g th,
+    .table-g .markdown-rendered thead tr>th:nth-child(2n+2),
     .table-xyg :is(thead tr>th, tbody tr>td:first-child) {
         background: var(--dark-green);
     }
 
-    .table-b thead tr>th,
+    .table-b th,
+    .table-b .markdown-rendered thead tr>th:nth-child(2n+2),
     .table-xyb :is(thead tr>th, tbody tr>td:first-child) {
         background: var(--dark-blue);
     }
 
-    .table-m thead tr>th,
+    .table-m th,
+    .table-m .markdown-rendered thead tr>th:nth-child(2n+2),
     .table-xym :is(thead tr>th, tbody tr>td:first-child) {
         background: gray;
     }
@@ -7028,11 +6979,11 @@ PDF EXPORT
 
     /* framed */
     div.callout[data-callout="framed-r"] {
-        margin-right: -30px;
+        margin-right: 0px;
     }
 
     div.callout[data-callout="framed-l"] {
-        margin-left: -30px;
+        margin-left: 0px;
     }
 
     div.callout[data-callout="framed-a"] li.task-list-item {
@@ -7091,13 +7042,6 @@ PDF EXPORT
     div[data-callout="multi-column"].callout {
         margin-bottom: 1em;
     }
-
-    /* break content normally */
-    div[data-callout="multi-column"] .callout-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
 
     div[data-callout="multi-column"] .callout-content {
         padding-right: 1em;
@@ -7180,8 +7124,8 @@ PDF EXPORT
         left: 0;
     }
 
-    .recipes.banner-a p:has(ul, li, a.tag) {
-        margin-top: calc(var(--banner-ah) / 4 * 3);
+    .recipes.banner-a ul:has(li.task-list-item.is-checked) {
+        margin-top: calc(var(--banner-ah) / 8 * 5);
     }
 
     img[alt="banner-b"] {
@@ -7383,6 +7327,16 @@ PDF EXPORT
     /* phone */
     .is-phone .markdown-rendered :is(blockquote, pre) {
         margin-bottom: 1em;
+    }
+
+    .markdown-rendered pre code,
+    .markdown-rendered pre:not(pre[class*="language-"]) {
+        scale: 0.9;
+    }
+
+    .markdown-rendered .internal-link,
+    .markdown-rendered .external-link {
+        text-decoration-line: none !important;
     }
 
     ::-webkit-scrollbar {
