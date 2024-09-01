@@ -272,7 +272,7 @@ settings:
     id: deco-scale
     title: Decoration sizes
     title.de: Dekorationen anpassen
-    description: fence, cssclass "wave-a", "wave-b", "wave-c", "wave-d", "wave-e", "wave-f"
+    description: cssclass "wave-a", "wave-b", "wave-c", "wave-d", "wave-e", "wave-f"
     type: variable-number-slider
     default: 0.4
     min: 0.1
@@ -290,15 +290,22 @@ settings:
   -
     id: img-border
     title: Hairline frame 
-    description: frames for bright pictures on bright background
+    description: frames for pictures with white background on white note background.
     title.de: Haarlinien Rahmen 
     description.de: für helle Bilder auf hellen Hintergrund 
     type: class-toggle    
     default: true
   -
+    id: simple-frames-a
+    title: Picture frame 1
+    title.de: Bilderrahmen 1
+    type: heading
+    level: 4
+    collapsed: true
+  -
     id: bwidth-a
-    title: Simple 1 - frame thickness 
-    title.de: Einfach 1 - Rahmenstärke 
+    title: frame thickness 
+    title.de: Rahmenstärke 
     description: "![[image.png | frame-a]]"
     type: variable-number-slider
     format: px
@@ -308,17 +315,25 @@ settings:
     step: 2
   - 
     id: frame-color-a
-    title: Simple 1 - frame color
-    title.de: Einfach 1 - Rahmenfarbe
+    title: frame color
+    title.de: Rahmenfarbe
+    description: "![[image.png | frame-a]]"
     type: variable-themed-color
     format: rgb
     opacity: true
     default-light: '#4a6cb0'
     default-dark: '#ff7029'
   -
+    id: simple-frames-b
+    title: Picture frame 2
+    title.de: Bilderrahmen 2
+    type: heading
+    level: 4
+    collapsed: true
+  -
     id: bwidth-b
-    title: Simple 2 - frame thickness 
-    title.de: Einfach 2 - Rahmenstärke 
+    title: frame thickness 
+    title.de: Rahmenstärke 
     description: "![[image.png | frame-b]]"
     type: variable-number-slider
     format: px
@@ -328,8 +343,9 @@ settings:
     step: 2
   - 
     id: frame-color-b
-    title: Simple 2 - frame color
-    title.de: Einfach 2 - Rahmenfarbe
+    title: frame color
+    title.de: Rahmenfarbe
+    description: "![[image.png | frame-b]]"
     type: variable-themed-color
     format: rgb
     opacity: true
@@ -904,9 +920,9 @@ settings:
     type: class-toggle
   - 
     id: show-graph-btns
-    title: Graph buttons (PC)
+    title: Graph buttons
     description: restore buttons
-    title.de: Graph Tasten (PC)
+    title.de: Graph Tasten
     description.de: Wiederherstellung Graph Tasten
     type: class-toggle
   -
@@ -1115,6 +1131,8 @@ body {
     --light-green: #ace573;
     --light-blue: #99ccff;
     --light-gray: #bfbfbf;
+    --hr-stars: rgb(237, 188, 52);
+
 }
 
 body.theme-light {
@@ -2064,11 +2082,7 @@ body:not(.is-phone) .view-header {
 }
 
 
-/* margin top needed for F&R - Footer&Header */
-.is-phone :is(.markdown-source-view .cm-scroller .cm-sizer) {
-    margin-top: 3em;
-}
-
+/* F&R - Footer&Header */
 .is-phone .markdown-preview-view {
     padding-top: 2em;
 }
@@ -2374,6 +2388,16 @@ span.cm-header:is(.cm-formatting-header-4, .cm-formatting-header-5, .cm-formatti
     display: table;
 }
 
+/* spacing */
+.markdown-rendered :is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6) {
+    padding-top: 0;
+}
+
 /* 
 Font models 
 */
@@ -2453,7 +2477,7 @@ TYPESETTING
 ----------------------------------------------------------------*/
 
 /* modern */
-body:not(.large-h1).fontmod-1:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
+body.fontmod-1:not(.is-phone) :is(.HyperMD-header-1, .markdown-preview-section h1, h1) {
     font-size: calc(var(--h1-size) + (var(--custom-fsz-1)));
 }
 
@@ -2794,19 +2818,11 @@ a.external-link :is(h4 a, h5 a, h6 a) em {
     color: var(--link-color-dune);
 }
 
-.theme-dark .markdown-rendered .internal-link.is-unresolved {
-    color: lightgray;
-}
-
 .markdown-rendered .internal-link.is-unresolved,
 .cm-s-obsidian span.cm-hmd-internal-link {
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-color: inherit;
-}
-
-.theme-dark .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
-    color: lightgray;
 }
 
 .cm-s-obsidian span.cm-hmd-internal-link.is-unresolved {
@@ -2964,7 +2980,6 @@ Quotes
 */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     border-radius: 4px;
-    padding: 2px 5px;
     background-color: var(--codebg-col);
     font-size: 14px;
     border: 1px solid gray;
@@ -4101,6 +4116,8 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout^="framed"
     background-position: bottom;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-left: 5px;
+    scale: 1.2;
 }
 
 .theme-light .callout[data-callout^="framed"]:is([data-callout-metadata~="bg"],
@@ -4207,6 +4224,11 @@ code.language-br.is-loaded {
     border: none;
 }
 
+/* content invisible */
+code.language-br.is-loaded {
+    opacity: 0;
+}
+
 .app-container pre.language-br button.copy-code-button {
     display: none;
 }
@@ -4260,6 +4282,10 @@ Nav
 .theme-light textarea,
 .theme-light [type='search'] {
     background: var(--input-bg);
+}
+
+.internal-query .search-result-container {
+    background-color: var(--light-shadow-l);
 }
 
 .theme-dark .mod-left-split :is(.workspace-tab-header.has-active-menu:hover, .workspace-tab-header.is-active:hover),
@@ -4474,22 +4500,19 @@ table hr {
     font-size: var(--table-text-size);
 }
 
-.theme-dark .markdown-rendered table {
-    --table-border-color: gray;
-    --table-header-border-color: gray;
-}
-
 /* Highlight - keep text readable */
 .markdown-rendered td,
 .markdown-rendered td:hover {
     color: var(--text-normal);
 }
 
-/* table titles */
-.markdown-rendered th {
+/* table, default - very imp */
+.markdown-rendered th,
+.markdown-rendered thead tr>th:nth-child(2n+2) {
     color: var(--light-tone);
     font-weight: bold;
     text-align: center;
+    background-color: var(--table-header-border-color);
 }
 
 /* table Highlight col */
@@ -4516,7 +4539,6 @@ table tr td:nth-child(1) {
 .table-alt table tr th:nth-child(even),
 .table-alt table tr td:nth-child(even) {
     background-color: var(--table-accent);
-    color: var(--dark-tone);
 }
 
 .table-lr table tbody tr:nth-last-child(1) {
@@ -4858,15 +4880,14 @@ body:not(.is-phone) .recipes table {
 STYLED TABLES
 --------------------------------------------*/
 
-.markdown-preview-view thead,
-table.table-editor thead {
-    background: gray;
+body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb .table-xym) table thead {
+    background: transparent;
 }
 
 .table-r thead,
 .table-r th,
 .table-r th:hover,
-.table-r .markdown-rendered thead tr>th:nth-child(2n+2) {
+.table-r thead tr>th:nth-child(2n+2) {
     background: var(--dark-red);
     text-rendering: optimizeLegibility;
 }
@@ -4874,7 +4895,7 @@ table.table-editor thead {
 .table-g thead,
 .table-g th,
 .table-g th:hover,
-.table-g .markdown-rendered thead tr>th:nth-child(2n+2) {
+.table-g thead tr>th:nth-child(2n+2) {
     background: var(--dark-green);
     text-rendering: optimizeLegibility;
 }
@@ -4882,18 +4903,13 @@ table.table-editor thead {
 .table-b thead,
 .table-b th,
 .table-b th:hover,
-.table-b .markdown-rendered thead tr>th:nth-child(2n+2) {
+.table-b thead tr>th:nth-child(2n+2) {
     background: var(--dark-blue);
     text-rendering: optimizeLegibility;
 }
 
-
 .theme-light .table-m thead tr {
     text-rendering: optimizeLegibility;
-}
-
-.theme-dark .table-m thead {
-    filter: invert(1);
 }
 
 .table-xyr thead tr,
@@ -4917,21 +4933,13 @@ table.table-editor thead {
     text-rendering: optimizeLegibility;
 }
 
-.theme-light .table-xym thead tr>th,
-.theme-light .table-xym thead tr>th:hover,
-.theme-light .table-xym tbody tr>td:first-child {
-    background: #808080;
-    color: var(--light-tone);
+.table-xym thead tr>th,
+.table-xym thead tr>th:hover,
+.table-xym tbody tr>td:first-child {
+    background: var(--table-header-border-color);
     font-weight: bold;
     text-rendering: optimizeLegibility;
-}
-
-.theme-dark .table-xym thead tr>th,
-.theme-dark .table-xym thead tr>th:hover,
-.theme-dark .table-xym tbody tr>td:first-child {
-    background: #313131;
-    font-weight: bold;
-    filter: invert(1);
+    color: var(--light-tone);
 }
 
 .table-xyr tbody tr>td:first-child,
@@ -4975,11 +4983,11 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .
 /*----------------------------------------------------------------
 IMAGE PLACING
 ----------------------------------------------------------------*/
-.theme-light .img-border img:not(.callout img) {
+.theme-light.img-border img:not(.callout-content img) {
     border: 1px solid gray;
 }
 
-.theme-dark .img-border img:not(.callout img) {
+.theme-dark.img-border img:not(.callout-content img) {
     border: 1px solid white;
 }
 
@@ -5096,6 +5104,33 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
 .bc-80 img[alt="banner-a"] {
     object-position: 50% 80%;
 }
+
+/* med val */
+
+.bc-25 img[alt="banner-a"] {
+    object-position: 50% 25%;
+}
+
+.bc-35 img[alt="banner-a"] {
+    object-position: 50% 35%;
+}
+
+.bc-45 img[alt="banner-a"] {
+    object-position: 50% 45%;
+}
+
+.bc-55 img[alt="banner-a"] {
+    object-position: 50% 55%;
+}
+
+.bc-65 img[alt="banner-a"] {
+    object-position: 50% 65%;
+}
+
+.bc-75 img[alt="banner-a"] {
+    object-position: 50% 75%;
+}
+
 
 img {
     margin-top: 4px;
@@ -6699,10 +6734,6 @@ body:not(.is-phone) span.code-block-flair :is(svg.svg-icon.lucide-copy) {
     opacity: 1;
 }
 
-.markdown-rendered button.copy-code-button:hover {
-    background-color: cornflowerblue;
-}
-
 .theme-dark .markdown-rendered button.copy-code-button::after {
     filter: invert(1);
 }
@@ -6806,6 +6837,7 @@ PDF EXPORT
         text-rendering: optimizeLegibility;
     }
 
+    .callout,
     code {
         page-break-before: avoid;
     }
@@ -6826,41 +6858,15 @@ PDF EXPORT
         margin-top: 1em;
     }
 
-    .contacts table {
-        page-break-before: avoid;
-    }
-
-
     a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) strong,
     a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) em,
     a.external-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
         color: var(--bold-color);
-        text-decoration-color: var(--bold-color) !important;
     }
 
-
-    .table-r th,
-    .table-r .markdown-rendered thead tr>th:nth-child(2n+2),
-    .table-xyr :is(thead tr>th, tbody tr>td:first-child) {
-        background: var(--dark-red);
-    }
-
-    .table-g th,
-    .table-g .markdown-rendered thead tr>th:nth-child(2n+2),
-    .table-xyg :is(thead tr>th, tbody tr>td:first-child) {
-        background: var(--dark-green);
-    }
-
-    .table-b th,
-    .table-b .markdown-rendered thead tr>th:nth-child(2n+2),
-    .table-xyb :is(thead tr>th, tbody tr>td:first-child) {
-        background: var(--dark-blue);
-    }
-
-    .table-m th,
-    .table-m .markdown-rendered thead tr>th:nth-child(2n+2),
-    .table-xym :is(thead tr>th, tbody tr>td:first-child) {
-        background: gray;
+    .markdown-preview-view thead:first-child,
+    .markdown-preview-view thead:last-child {
+        background: transparent;
     }
 
     .table-xyr tbody tr>td:first-child,
@@ -6869,6 +6875,14 @@ PDF EXPORT
     .table-xym tbody tr>td:first-child {
         font-weight: bold;
         color: var(--light-tone);
+    }
+
+    .contacts table {
+        page-break-before: avoid;
+    }
+
+    div[data-callout="multi-column"] .callout {
+        min-width: 44.4vw;
     }
 
     table:not(.recipes) tr:nth-child(even) {
@@ -6923,6 +6937,7 @@ PDF EXPORT
         position: relative;
         margin-top: -0.4em;
         scale: 0.7;
+        pointer-events: none;
     }
 
     .contacts :is(thead tr th, tbody tr td) {
@@ -7094,7 +7109,7 @@ PDF EXPORT
 
     a[href="#-tips"]+mark::after {
         content: '\1F4AC\ ';
-        background: white;
+        background-color: white;
     }
 
     ul>li,
@@ -7160,12 +7175,10 @@ PDF EXPORT
         background-color: white;
     }
 
-
     code[class*="language-"] {
         font-weight: 600;
         font-size: small;
     }
-
 
     .markdown-rendered blockquote {
         width: fit-content;
@@ -7343,7 +7356,6 @@ PDF EXPORT
         width: 0;
         height: 0;
     }
-
 }
 
 
@@ -7787,6 +7799,18 @@ body:not(.is-phone) .tree-item.nav-file.recent-files-file {
     scale: 0.7;
     border-radius: 50px;
     background-color: var(--light-tone);
+}
+
+.kanban-plugin__table-wrapper thead tr>th .kanban-plugin__table-cell-wrapper {
+    background: gray;
+}
+
+.kanban-plugin__table-wrapper tr:nth-child(even) {
+    background: revert;
+}
+
+.kanban-plugin__item-content-wrapper>*:hover {
+    background-color: var(--light-shadow-l);
 }
 
 .dataview.small-text {
