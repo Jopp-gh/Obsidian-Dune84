@@ -15,17 +15,29 @@ copy this template:
 
 ### Table highlights
 
-
 ![table-hl–02](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8657f42d-3d19-422b-9e60-6abb866ef7c6) ![table-hl–03](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/23dd85f2-f057-4912-81a1-81616bdcf8a8) ![table-hl–04](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/26df94c6-d06c-41b9-9477-ef5007bb1546) ![table-hl–05](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/c0666afa-5173-4697-baff-fdb2d37a8e62)
 
 
 `cssclass: table-fc`, `cssclass: table-lc`, `cssclass: table-alt`, `cssclass: table-lr`
+
 fc = first column, lc = last column, alt = alternating columns, lr = last row
-**Deutsch**
-`cssclass: tabelle-es`, `cssclass: tabelle-ls`, `cssclass: tabelle-alt`, `cssclass: tabelle-lr`
-es = erste Spalte, ls = letzte Spalte, alt = alternierende Spalte, lr = letzte Reihe
+
 <br>
+
+#### Deutsch
+
+`cssclass: tabelle-es`, `cssclass: tabelle-ls`, `cssclass: tabelle-alt`, `cssclass: tabelle-lr`
+
+es = erste Spalte, ls = letzte Spalte, alt = alternierende Spalte, lr = letzte Reihe
+
+<br>
+
 ## Monochrome tables
+replaces default tables with slightly updated versions. Dune's custom tables are available both with edgy or rounded (default) corners 
+
+>`m` = monochrome
+>`xy` = cartesian definition of x and y axes
+
 
 ![table-m–1](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/d5dce96f-4437-461e-bdea-2f21532001cb)
 
@@ -35,23 +47,27 @@ use `cssclass: table-m`
 
 use `cssclass: table-xym`
 
-replaces default tables with slightly updated versions. Dune's custom tables are available both with edgy or rounded (default) corners 
-`m` = monochrome
-`xy` = cartesian definition of x and y axes
+<br>
 
-**Deutsch**
+#### Deutsch
+
 `cssclass: tabelle-m`, `cssclass: tabelle-xym`
 
+
 ## Table colors
+header in red, green, blue (r,g,b)
+**Options**: `cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`
 
 ![table–r](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/e0ab79c1-86af-46cb-a88e-ecc140d5727b)
 ![table–g](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/275ea630-fb3b-48a7-8f0c-f1b9a8a2fc88)
 ![table–b](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/5ff1adf7-acf2-4bd2-9046-36b5f3921775)
 
-`cssclass: table-r`,`cssclass: table-g`,`cssclass: table-b`
+<br>
 
-**Options**: header in red, green, blue (r,g,b)
-**Deutsch** `cssclass: tabelle-r`,`cssclass: tabelle-g`,`cssclass: tabelle-b`
+#### Deutsch 
+`cssclass: tabelle-r`,`cssclass: tabelle-g`,`cssclass: tabelle-b`
+
+**Options**: 2 axes in red, green, blue, monochrome (xyr, xyg, xyb, xym)
 
 ![table–xyr](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/ebfb71d0-bd61-42d5-9011-2d56a9bdbee1)
 ![table–xyg](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/dc4f72ff-9896-4b54-97da-c6236e1328ba)
@@ -59,36 +75,46 @@ replaces default tables with slightly updated versions. Dune's custom tables are
 
 `cssclass: table-xyr`,`cssclass: table-xyg`,`cssclass: table-xyb`, `cssclass: table-xym`
 
-**Options**: 2 axes in red, green, blue, monochrome (xyr, xyg, xyb, xym)
-**Deutsch** `cssclass: tabelle-xyr`,`cssclass: tabelle-xyg`,`cssclass: tabelle-xyb`, `cssclass: tabelle-xym`
 
+#### Deutsch 
+`cssclass: tabelle-xyr`,`cssclass: tabelle-xyg`,`cssclass: tabelle-xyb`, `cssclass: tabelle-xym`
+
+<br>
 
 ## Table alignment
-
-`cssclass: table-c`
 center tables
 
-`cssclass: table-eq`
+`cssclass: table-c`
 equally distribuited columns
 
-`cssclass: table-wide`
+`cssclass: table-eq`
 stretch tables to cover the whole page
 
-`cssclass: table-hl`
+`cssclass: table-wide`
 headless tables
 
-**Deutsch**
-`cssclass: tabelle-m`
+`cssclass: table-hl`
+
+<br>
+
+#### Deutsch
 m = Mitte
 
-`cssclass: tabelle-gs`
+`cssclass: tabelle-m`
+
 gs = gleiche Spalten(weite)
 
-`cssclass: tabelle-weit`
+`cssclass: tabelle-gs`
+
 weit = ganze Weite
 
-`cssclass: tabelle-kl`
+`cssclass: tabelle-weit`
+
 kl = Kopflos
+
+`cssclass: tabelle-kl`
+
+<br>
 
 ## More Tables
 
