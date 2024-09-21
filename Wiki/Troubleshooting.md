@@ -5,8 +5,6 @@
 2. Download/update Dune-Silver or Dune Gold
 3. Download/update Dune's companion snippets (Dune's mermaid theme, Dune's folder icons, Dune's supported plugins) *-optional-*
 
-```br
-```
 
 ### Dune configuration
 Have `Style Settings` installed and activated, then open the command palette with `Ctrl+P` (Win, Linux) or `Cmd+P` (Mac) and type `style settings` to get `style settings: show style settings view` and confirm. Now, Style settings will open as a note. Grab and drag its tab to the right or left side dock of Obsidian. From now on, you can tweak Dune's interface to your hearts content, Nice!
