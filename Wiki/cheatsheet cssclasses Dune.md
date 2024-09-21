@@ -1,50 +1,51 @@
 # CHEATSHEET - CSSCLASSES
-```
 cssclasses are case sensitive eg. `Banner-a` ≠ `banner-a`
-```
 
 <br>
 
 ## TABLES
 
 ### TABLE ALIGNMENT
+center tables
 
 `cssclass: table-c`
 
-center tables
+equally distribuited columns
 
 `cssclass: table-eq`
 
-equally distribuited columns
+stretch tables
 
 `cssclass: table-wide`
 
-stretch tables
+headless tables
 
 `cssclass: table-hl`
 
-headless tables
+<br>
 
-**Deutsch**
-`cssclass: tabelle-m`
-
+#### Deutsch
 m = Mitte
 
-`cssclass: tabelle-gs`
+`cssclass: tabelle-m`
 
 gs = gleiche Spalten(weite)
 
-`cssclass: tabelle-weit`
+`cssclass: tabelle-gs`
 
 weit = ganze Breite
 
-`cssclass: tabelle-kl`
+`cssclass: tabelle-weit`
 
 kl = kopflos
+
+`cssclass: tabelle-kl`
+
 
 <br>
 
 ### TABLE COLORS
+classic header tint - red / green / blue / monochrome
 
 ```
 cssclass: table-r
@@ -53,7 +54,7 @@ cssclass: table-b
 cssclass: table-m
 ```
 
-classic header tint - red / green / blue / monochrome
+double-header tint - red / green / blue / monochrome
 
 ```
 cssclass: table-xyr
@@ -62,16 +63,19 @@ cssclass: table-xyb
 cssclass: table-xym
 ```
 
-double-header tint - red / green / blue / monochrome
+<br>
 
-**Deutsch**
+#### Deutsch
+klassische Tabelle
+
 ```
 cssclass: tabelle-r
 cssclass: tabelle-g
 cssclass: tabelle-b
 cssclass: tabelle-m
 ```
-klassische Tabelle
+
+doppelköpfige Tabelle
 
 ```
 cssclass: tabelle-xyr
@@ -79,71 +83,72 @@ cssclass: tabelle-xyg
 cssclass: tabelle-xyb
 cssclass: tabelle-xym
 ```
-doppelköpfige Tabelle
 
 <br>
 
 ### TABLE HIGHLIGHTS
+highlight first column
 
 `cssclass: table-fc`
 
-highlight first column
+highlight last column
 
 `cssclass: table-lc`
 
-highlight last column
+highlight alternate columns
 
 `cssclass: table-alt`
 
-highlight alternate columns
+highlight last row
 
 `cssclass: table-lr`
 
-highlight last row
+<br>
 
-**Deutsch**
+#### Deutsch
+es= erste Spalte
 
 `cssclass: tabelle-es`
 
-es= erste Spalte
+ls = letzte Spalte
 
 `cssclass: tabelle-ls`
 
-ls = letzte Spalte
+alt = alternierend
 
 `cssclass: tabelle-alt`
 
-alt = alternierend
+letzte Reihe
 
 `cssclass: tabelle-lr`
 
-letzte Reihe
 
 <br>
 
 ### SPECIAL TABLES
-`cssclass: contacts`
-
 Contacts
 
-`cssclass: recipes`
+`cssclass: contacts`
 
 Recipes
 
-`cssclass: movies`
+`cssclass: recipes`
 
 Movies
+
+`cssclass: movies`
+
 
 
 <br>
 
 ## FONTS
+change font family of your active note
 
 `cssclass: ftheme-1`
 `cssclass: ftheme-2`
 `cssclass: ftheme-3`
 
-change font family of your active note
 
 
 <br>
