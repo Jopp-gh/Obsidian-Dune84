@@ -12,7 +12,8 @@
 
 <br>
 
-![txt-ital](https://github.com/Jopp48620536/1cd27a55-eb76-4bc5-b62c-5d723e42bb39)
+![textCol–03](https://github.com/user-attachments/assets/adf6c0e3-10aa-429e-a765-3a8ee5a67803)
+
 
 `#red *Abc*`
 `#green *Abc*`
@@ -62,7 +63,7 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `#-tips ==Words Words Words Words Words==`
 
->read hidden text on hover (desktop) or touch (mobile)
+>redact text - view on hover (desktop) or touch (mobile)
 
 <br>
 
@@ -98,7 +99,7 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 <br>
 
 ##  Custom line indent
-open Obidians `Dune>Fonts>Line>Indent tabs` to specify your indentation depth. 
+open Obidians `Dune>Fonts>Text layout>Indent line` to specify your indentation depth. 
 
 - custom mode (text tag) - applies to desired paragraphs
 
@@ -108,6 +109,8 @@ open Obidians `Dune>Fonts>Line>Indent tabs` to specify your indentation depth.
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/fdf76b01-883c-4dd8-a9f6-d75ce2569326" alt="indent–02" width="900">
 <br>
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6" alt="indent–01" width="900">
+
+**Options**`#indent ==Text==`
 
 **Deutsch**`#einzug ==Text==`
 
@@ -192,9 +195,10 @@ to enable strikeout for completed tasks, go to `Dune>Show ui elements>Show strik
 <br>
 
 ## Simple Horizontal lines
-`fade`, `fade2`, `fade3`, `stars`
+**Options**: `fade`, `fade2`, `fade3`, `stars`
 
 **Deutsch**: `trenner`, `trenner2`, `trenner3`, `sterne`
+
 simple delimiter to divide chapters or paragraphs. If you want beautiful delimiters, check out [Poetry delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Poetry.md#horizontal-line-styles)
 
 ### Usage
