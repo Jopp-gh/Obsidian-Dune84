@@ -32,6 +32,7 @@ Choose how your **first letter**, your **Initial**, looks:
 ````
 
 **Options**: `wave`, `wave2,` `wave3`, `wave4`
+
 **Deutsch**: `deko`, `deko2,` `deko3`, `deko4`
 
 these are pretty delimiters to divide chapters, relax paragraphs or to add a little design to your pages. If you want simple delimiters, check out [simple delimiters](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Text-highlight.md#simple-horizontal-lines)
