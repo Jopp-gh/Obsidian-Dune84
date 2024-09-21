@@ -1,16 +1,15 @@
 ## CALLOUTS
 
 ### CALLOUTS ALIGNMENT
-
+Callout floats left / right
 
 `> [!note|l]`
 `> [!note|r]`
 
-Callout floats left / right
-
 <br>
 
 ### CALLOUTS COLORS
+5 callout tints
 
 ```
 > [!note|red]
@@ -19,9 +18,8 @@ Callout floats left / right
 > [!note|gray]
 ```
 
-5 callout tints
+#### Deutsch
 
-**Deutsch**
 ```
 > [!note|rot]
 > [!note|grün]
@@ -32,21 +30,23 @@ Callout floats left / right
 <br>
 
 ### TEXT AND IMAGE ALIGNMENT
-
+align columns to the left, right or around the middle axis
 
 `>[!column|l]`, 
 `>[!column|r]`,
 `>[!column|a]`
 
-align columns to the left, right or around the middle axis
 
-**Deutsch**
+#### Deutsch
+
 `>[!spalte|l]`, 
 `>[!spalte|r]`,
 `>[!spalte|a]`
+
 <br>
 
 ### MULTICOLUMN
+Add a multi-column box and blank sub-callouts or custom callouts
 
 ```
 > [!multi-column]
@@ -57,7 +57,7 @@ align columns to the left, right or around the middle axis
 >> [!blank-container]
 >> abc
 ```
-Add blank sub-callouts
+
 ```
 > [!multi-column]
 >
@@ -67,9 +67,9 @@ Add blank sub-callouts
 >> [!caution]
 >> abc
 ```
-add common sub-callouts inside your callout box
 
-**Deutsch**
+#### Deutsch
+
 ```
 > [!mehrspaltig]
 >
@@ -81,6 +81,7 @@ add common sub-callouts inside your callout box
 ```
 
 #### MULTICOLUMN - COLORS
+colors for the `multi-column` callout
 
 ```
 > [!multi-column|red]
@@ -89,7 +90,7 @@ add common sub-callouts inside your callout box
 > [!multi-column|gray]
 ```
 
-**Deutsch**
+#### Deutsch
 
 ```
 > [!mehrspaltig|rot]
@@ -98,62 +99,75 @@ add common sub-callouts inside your callout box
 > [!mehrspaltig|grau]
 ```
 
-colors for the `multi-column` callout
 
 <br>
 
 ### TEXT BOXES
+add a **citation callout** and place it on the left of right hand side. 
 
 `>[!citation]`
 `>[!citation|l]`
 `>[!citation|r]`
 
-**Deutsch**
+#### Deutsch
+
 `>[!zitat]`
 `>[!zitat|l]`
 `>[!zitat|r]`
 
-add a **citation callout** and place it on the left of right hand side. 
+
+#### Aside box
+
+add a **aside callout** and place it on the left of right hand side. 
 
 ```
 >[!aside-l]
 >[!aside-r]
 ```
-**Deutsch**
+
+#### Deutsch
+
 ```
 >[!seite-l]
 >[!seite-r]
 ```
 
-**visible text boxes** on the left / right on-page
+#### Hidden aside boxes
+on the left / right on-page
 
 ```
 >[!aside-lh]
 >[!aside-rh]
 ```
-**Deutsch**
+
+#### Deutsch
+
 ```
 >[!seite-lv]
 >[!seite-rv]
 ```
 
-**hidden text boxes** on the left / right on-page.
+#### Read-more
+shortens long documents. Dig into details on demand
 
 `>[!read-more]`
 
-**Deutsch**
+#### Deutsch
+
 `>[!weiterlesen]`
 
 
-shortens long documents. Dig into details on demand
+#### Infobox
+accepts a mix of headers, text, tables
 
 `>[!infobox|l]`
 `>[!infobox|r]`
 
-accepts a mix of headers, text, tables
 
 <br>
+
 ### HIGHLIGHT TEXT BLOCKS
+highlight a paragraph with a left-hand-side colored border
 
 `>[!column|hl]`
 `>[!column|hlr]`
@@ -161,32 +175,29 @@ accepts a mix of headers, text, tables
 `>[!column|hlb]`
 `>[!column|hlm]`
 
-**Deutsch**
+#### Deutsch
+
 `>[!spalte|w]`
 `>[!spalte|wr]`
 `>[!spalte|wg]`
 `>[!spalte|wb]`
 `>[!spalte|wm]`
 
-highlight a paragraph with a left-hand-side colored border
 
 ### SMALLER AND LARGER TEXT BLOCKS
+decrease  or increase font size
 
 ```
 >[!font-s]
 > abc
 ```
 
-decrease font size
-
 ```
 >[!font-l]
 > abc
 ```
 
-increase font size
-
-**Deutsch**
+#### Deutsch
 
 ```
 >[!schrift-g]
@@ -194,8 +205,10 @@ increase font size
 ```
 
 <br>
+
 ## FENCES
-### MEMO COLORS
+#### Memo colors
+red, green, blue, monochrome
 
 ````
 ```memo-r
@@ -203,7 +216,7 @@ notes
 ```
 ````
 
-red
+
 
 ````
 ```memo-g
@@ -211,7 +224,7 @@ notes
 ```
 ````
 
-green
+
 
 ````
 ```memo-b
@@ -219,17 +232,18 @@ notes
 ```
 ````
 
-blue
 
 ````
 ```memo-m
 notes
 ```
 ````
-monochrome
+
 
 
 ### PARAGRAPH BREAK
+add -n paragraphs of linebreak
+
 
 ````
 ```br
@@ -237,10 +251,10 @@ monochrome
 ```
 ````
 
-add -n paragraphs of linebreak
-
 <br>
+
 ### HORIZONTAL LINES
+simple delimiters
 
 ````
 ```fade
@@ -258,7 +272,10 @@ add -n paragraphs of linebreak
 ```stars
 ```
 ````
-simple delimiters
+
+#### Deutsch
+einfache Trenner
+
 ````
 ```trenner
 ```
@@ -275,9 +292,10 @@ simple delimiters
 ```sterne
 ```
 ````
-beautiful delimiters
 
-**Deutsch**
+
+**beautiful delimiters**
+
 ````
 ```wave-a
 ```
@@ -295,7 +313,9 @@ beautiful delimiters
 ```
 ````
 
-einfache Trenner
+#### Deutsch
+schöne Trenner
+
 ````
 ```deko
 ```
@@ -312,10 +332,10 @@ einfache Trenner
 ```deko4
 ```
 ````
-schöne Trenner
 
 ## TAGS
 ### TEXT COLORS
+colored - **bold**, colored - *italic*, colored - highlight
 
 ```
 Bold
@@ -326,7 +346,6 @@ Bold
 #gray **Abc**
 ```
 
-colored - **bold**
 
 ```
 Italic
@@ -337,7 +356,6 @@ Italic
 #gray *Abc*
 ```
 
-colored - *italic*
 
 ```
 highlight
@@ -348,10 +366,8 @@ highlight
 #gray ==Abc==
 ```
 
-colored - highlight
 
-
-**Deutsch**
+#### Deutsch
 
 ```
 Markiert. Auch mit Fett und Kursiv möglich.
@@ -366,25 +382,27 @@ Markiert. Auch mit Fett und Kursiv möglich.
 <br>
 
 ### POETRY
+raisecap and dropcap
 
 ```
 #raisecap ==Abc==
 #dropcap ==Abc==
 ```
 
-raisecap and dropcap
 
-**Deutsch**
+#### Deutsch
+
+Majuskel und Initiale
 
 ```
 #maiuskel ==Abc==
 #initiale ==Abc==
 ```
 
-Majuskel und Initiale
 
 
 ### CITATION QUOTE
+citation marks for sentences, words
 
 ```
 #cite-de ==Abc==
@@ -392,7 +410,7 @@ Majuskel und Initiale
 #cite-fr ==Abc==
 ```
 
-**Deutsch**
+#### Deutsch
 
 ```
 #zitat-de ==Abc==`
@@ -400,7 +418,6 @@ Majuskel und Initiale
 #zitat-fr ==Abc==`
 ```
 
-citation marks for sentences, words
 
 <br>
 
@@ -412,31 +429,30 @@ Words #sub ==sub==
 ```
 
 ### SPOILER
+hide text, short and long version
 
 `#-spoiler ==Abc==`
 
-hide text, long version
-
 `#-tips ==Abc==`
 
-hide text, short version
 
-**Deutsch**
+#### Deutsch
+
 `#-geheim ==Abc==`
-
-
 
 
 <br>
 
 ### LINES
+underlined, double underlined, strikeout
+
 ```
 #line-a ==Abc==
 #line-b ==Abc==
 #line-c ==Abc==
 ```
 
-**Deutsch**
+#### Deutsch
 
 ```
 #strich-a ==Abc==
@@ -444,18 +460,14 @@ hide text, short version
 #strich-c ==Abc==
 ```
 
-underlined, double underlined, strikeout
 
 <br>
 
 ### SENTENCE INDENT
+Indent sentences
 
 `#indent ==Abc==`
 
-**Deutsch**
+#### Deutsch
 
 `#einzug ==Abc== `
-
-Indent sentences
-
-<br>
