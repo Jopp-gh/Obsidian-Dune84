@@ -5,7 +5,7 @@
 
 ```
 ---
-cssclass: movies, fade
+cssclass: movies
 tags: 
 ---
 ```
