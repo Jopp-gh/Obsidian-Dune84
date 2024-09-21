@@ -42,6 +42,7 @@ If your top banner looks cut, you can use **b**anner **c**oordinates:
 ![I-02](https://user-images.githubusercontent.com/48620536/222981873-06037136-9876-45eb-b0a8-468ed5227443.png)
 
 `![[Pict.png | portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
+
 **Deutsch**: `![[bild.png|rund]]`
 
 
@@ -61,16 +62,19 @@ place your images on the **Left**, **Right** or at the **Center** of your note
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
 **Options**: `![[Pict.png | frame-s1]]`, `![[Pict.png | frame-s2]]`
+
 **Deutsch**: `![[bild.png | rahmen-s1]]`, `![[bild.png | rahmen-s2]]`
 
 Change picture frame colors under **Style Settings>Dune>Pictures>Picture frames**
 
 <br>
+
 ### Beautiful Frames
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
 **Options**: `![[Pict.png | frame-a]]`, `![[Pict.png | frame-b]]`
+
 **Deutsch**: `![[bild.png | rahmen-a]]`, `![[bild.png | rahmen-b]]`
 
 To apply beautiful frames, you need to use a online url pointing to a png frame. Unfortunately, Obsidian restricts users from loading local images into **Style Settings** for security issues. 
@@ -84,8 +88,10 @@ To apply beautiful frames, you need to use a online url pointing to a png frame.
 >  ![[Pict.png | frame-b | 250]]
 >  description
 ```
-**Options**: `pict|l`, `pict|r`
-**Deutsch**: `bild|l`, `bild|r`
+**Options**: `> [!pict|l]`, `> [!pict|r]`
+
+**Deutsch**: `> [!bild|l]`, `> [!bild|r]`
+
 place your images, add a picture frame and description. 
 
 
