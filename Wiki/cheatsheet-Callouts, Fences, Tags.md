@@ -80,6 +80,8 @@ Add a multi-column box and blank sub-callouts or custom callouts
 >> abc
 ```
 
+<br>
+
 #### MULTICOLUMN - COLORS
 colors for the `multi-column` callout
 
@@ -99,7 +101,6 @@ colors for the `multi-column` callout
 > [!mehrspaltig|grau]
 ```
 
-
 <br>
 
 ### TEXT BOXES
@@ -115,8 +116,9 @@ add a **citation callout** and place it on the left of right hand side.
 `>[!zitat|l]`
 `>[!zitat|r]`
 
+<br>
 
-#### Aside box
+#### ASIDE BOX
 
 add a **aside callout** and place it on the left of right hand side. 
 
@@ -132,7 +134,9 @@ add a **aside callout** and place it on the left of right hand side.
 >[!seite-r]
 ```
 
-#### Hidden aside boxes
+<br>
+
+#### HIDDEN ASIDE BOX
 on the left / right on-page
 
 ```
@@ -147,7 +151,9 @@ on the left / right on-page
 >[!seite-rv]
 ```
 
-#### Read-more
+<br>
+
+#### READ_MORE
 shortens long documents. Dig into details on demand
 
 `>[!read-more]`
@@ -156,8 +162,9 @@ shortens long documents. Dig into details on demand
 
 `>[!weiterlesen]`
 
+<br>
 
-#### Infobox
+#### INFOBOX
 accepts a mix of headers, text, tables
 
 `>[!infobox|l]`
@@ -183,6 +190,7 @@ highlight a paragraph with a left-hand-side colored border
 `>[!spalte|wb]`
 `>[!spalte|wm]`
 
+<br>
 
 ### SMALLER AND LARGER TEXT BLOCKS
 decrease  or increase font size
@@ -239,7 +247,7 @@ notes
 ```
 ````
 
-
+<br>
 
 ### PARAGRAPH BREAK
 add -n paragraphs of linebreak
@@ -297,19 +305,19 @@ einfache Trenner
 **beautiful delimiters**
 
 ````
-```wave-a
+```wave
 ```
 ````
 ````
-```wave-b
+```wave2
 ```
 ````
 ````
-```wave-c
+```wave3
 ```
 ````
 ````
-```wave-d
+```wave4
 ```
 ````
 
@@ -332,6 +340,8 @@ schöne Trenner
 ```deko4
 ```
 ````
+
+<br>
 
 ## TAGS
 ### TEXT COLORS
@@ -399,7 +409,7 @@ Majuskel und Initiale
 #initiale ==Abc==
 ```
 
-
+<br>
 
 ### CITATION QUOTE
 citation marks for sentences, words
@@ -427,6 +437,8 @@ citation marks for sentences, words
 Words #sup ==sup==
 Words #sub ==sub==
 ```
+
+<br>
 
 ### SPOILER
 hide text, short and long version
