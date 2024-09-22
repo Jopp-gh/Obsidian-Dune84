@@ -52,6 +52,9 @@ if Dune is unable to display some color, go to`Dune>Colors`, click on the color 
 ### About the accent color
 you can switch to Dunes default accent color if you activate `Dune>Show>Main window>Dune accent`.
 
+### Feature X doesn't work anymore
+please check Dune's wiki to see if the feature in question changed the way to work (new metadata keywords or names). Dune's wiki reflects always the leatest state of Dunes features and covers everything in detail. Some feature may be missing because broken in newer versions of Obsidian. Also, please check the cheatsheets to get a quick overview.
+
 ### Other Issues
 Check your CSS snippets under `Settings>Appearance>CSS snippets` and deactivate them all to see if this solves your issue.
 If you're using my companion snippets, try to download them again, to make sure you have the latest version of these snippets.
