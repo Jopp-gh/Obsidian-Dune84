@@ -48,6 +48,17 @@ Box on your right or left side.
 
 <br>
 
+## COLUMN HIGHLIGHT
+Tint column blocks with a rgbm highlight.
+
+![empph-parag](https://github.com/user-attachments/assets/4c756e7e-8bbb-4bb7-a4b2-d68ccf4696c6)
+
+**Options:**  `> [!column|hl]` ,  `> [!column|hlr]`,  `> [!column|hlg]`,  `> [!column|hlb]`,  `> [!column|hlm]`
+
+**Deutsch**: `> [!spalte|w]` or  `> [!spalte|wr]`, `> [!spalte|wg]`, `> [!spalte|wb]`, `> [!spalte|wm]`
+
+<br>
+
 ## Multi-column
 A multi-purpose callout column box to organize nested callouts, pictures, embeds. 
 
@@ -122,7 +133,8 @@ Sidebox to summarize most important details of a topic. Accepted formats: pictur
 ## Citation
 embed citations in boxes and place them on the left or right side of your note.
 
-![framed-cite](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2be78884-c3a0-4e84-8a72-6c3419e5d67b)
+![citeblock](https://github.com/user-attachments/assets/bae4f744-fe83-40c7-a326-4b5d0d53b890)
+
 
 ```
 > [!citation] 
