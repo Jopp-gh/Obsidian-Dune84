@@ -1,5 +1,5 @@
-# Pictures
-## Banner
+# PICTURES
+## BANNER
 
 ```
 ---
@@ -10,14 +10,14 @@ cssclass: banner-a,
 
 <br>
 
-choose between 2 banners:
+there are 2 banner types:
 
 - banner-a (**top** banner, height adjustable in **Style Settings**)
 - banner-b (**bottom** banner, height adjustable in **Style Settings**)
 
 <br>
 
-to insert a banner, choose a banner type (eg `cssclasses: banner-a`) to reserve a top/bottom space, then add the same value `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
+to insert a banner, choose a banner type (eg `cssclasses: banner-a`) to reserve a top/bottom spot, then add the same tag `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
 
 >Note :
 >to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a footer banner `![[picture.jpg | banner-b]]` at top page, unless your note is very short.
@@ -29,7 +29,7 @@ to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), 
 
 <br>
 
-### Banner, vertical placement
+### Banner, vertical shift
 only for `banner-a`
 
 If your top banner looks cut, you can use **b**anner **c**oordinates: 
@@ -37,7 +37,7 @@ If your top banner looks cut, you can use **b**anner **c**oordinates:
 
 <br>
 
-## Portrait, Avatar, Round
+## PICTURE LAYOUT
 
 ![I-02](https://user-images.githubusercontent.com/48620536/222981873-06037136-9876-45eb-b0a8-468ed5227443.png)
 
@@ -48,7 +48,7 @@ If your top banner looks cut, you can use **b**anner **c**oordinates:
 
 <br>
 
-### Left, Right and Center side
+### IMAGE POSITION
 
 `![[Pict.png | pos-l]]`, `![[Pict.png | pos-r]]`, `![[Pict.png | pos-c]]`
 
@@ -57,7 +57,8 @@ place your images on the **Left**, **Right** or at the **Center** of your note
 <br>
 
 
-### Simple Frames
+## IMAGE FRAMES
+### SIMPLE IMAGE FRAMES
 
 ![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
 
@@ -69,9 +70,10 @@ Change picture frame colors under **Style Settings>Dune>Pictures>Picture frames*
 
 <br>
 
-### Beautiful Frames
+### BEAUTIFUL IMAGE FRAMES
 
-![I–04](https://user-images.githubusercontent.com/48620536/222982126-2f17ba6c-9df1-4d13-8bad-9738f3072cc6.png)
+![I–03 (Kopie)](https://github.com/user-attachments/assets/147f2ddf-47cb-49d3-895d-fc9c2a9fd5a0)
+
 
 **Options**: `![[Pict.png | frame-a]]`, `![[Pict.png | frame-b]]`
 
@@ -81,7 +83,7 @@ To apply beautiful frames, you need to use a online url pointing to a png frame.
 
 <br>
 
-## Book pictures
+## BOOK PICTURES
 
 ```
 > [!pict|l] 
@@ -97,7 +99,7 @@ place your images, add a picture frame and description.
 
 <br>
 
-## Simple description
+## SIMPLE IMAGE DESCRIPTION
 
 ![Img-capt](https://github.com/user-attachments/assets/35a656e9-9d15-4687-b377-4762db269f72)
 
@@ -108,7 +110,7 @@ you can adjust the max width of "simple descriptions" by adding following csscla
 
 <br>
 
-### Video size 
+## VIDEO SIZE
 
 ![I-08](https://user-images.githubusercontent.com/48620536/222982358-5d0eefcd-435a-4871-b73f-dcb46f973c96.png)
 
