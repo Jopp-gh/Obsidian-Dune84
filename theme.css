@@ -924,6 +924,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: simple-border
+    title: Simple highlights 
+    description: restore normal highlights "#red ==Text==", "#green ==Text==", etc
+    title.de: Einfache Markierungen
+    description.de: Wiederherstellung normale Markierungen "#rot ==Text==", "#grün ==Text==", etc
+    type: class-toggle
+    default: false
+  -
     id: shade-Hd
     title: Shaded Headers
     title.de: Schattierte Titel
@@ -1121,7 +1129,7 @@ body {
 
   --svg-scale: 60;
   --wave-sz: 150px;
-  --deco-scale: 0.6;
+  --deco-scale: 0.5;
   --scale-larger-f: 20px;
   --scale-smaller-f: 12px;
 
@@ -1354,7 +1362,7 @@ body.col-mod-a.theme-light {
   --text-faint: #466585;
 
   --text-accent: #17418b;
-  --link-color-dune: #17418b;
+  --link-color-dune: var(--text-accent-special);
   --subsup-col: #17418b;
 
   --bold-color: #1b3f5b;
@@ -1378,7 +1386,7 @@ body.col-mod-b.theme-light {
   --text-faint: #607081;
 
   --text-accent: #313884;
-  --link-color-dune: #313884;
+  --link-color-dune: var(--text-accent-special);
   --subsup-col: #313884;
 
   --bold-color: #411414;
@@ -1402,7 +1410,7 @@ body.col-mod-c.theme-light {
   --text-faint: #603F30;
 
   --text-accent: #2b547e;
-  --link-color-dune: #2b547e;
+  --link-color-dune: var(--text-accent-special);
   --subsup-col: #2b547e;
 
   --bold-color: #142D41;
@@ -1803,6 +1811,10 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
     background: var(--background-primary);
 }
 
+body:not(.is-grabbing).theme-light .tree-item-self.is-clickable:hover {
+    color: var(--text-accent-special);
+}
+
 body:not(.is-grabbing).theme-dark .tree-item-self.is-clickable:hover {
     color: navajowhite;
 }
@@ -1811,16 +1823,13 @@ body.is-grabbing *:not(.workspace-leaf-resize-handle) {
     filter: none;
 }
 
-body:not(.is-phone) .tree-item .tree-item-self.is-clickable:hover,
-body:not(.is-phone) .tree-item .nav-file-title.is-clickable:hover,
+/* underline selections */
 .tree-item .tree-item-self:not(.is-being-dragged).is-clickable.is-active,
 .tree-item .nav-file-title:not(.is-being-dragged).is-clickable.is-active,
 .tree-item .tree-item-self.is-clickable.is-active:hover,
 .tree-item .nav-file-title.is-clickable.is-active:hover {
     background: var(--background-primary);
-    border-bottom: 2px solid gray;
     border-radius: 0;
-    padding-bottom: 2px;
 }
 
 body:not(.is-grabbing) .nav-file-title.is-being-dragged,
@@ -1831,9 +1840,22 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
     color: var(--text-normal);
 }
 
+.is-phone .tree-item .tree-item-self.is-clickable:hover,
+.is-phone .tree-item .nav-file-title.is-clickable:hover,
 .is-phone .tree-item-self.is-active:hover,
 .is-phone .tree-item-self.is-active {
     padding-bottom: 4px;
+    border-bottom: 2px solid gray;
+    border-radius: 0;
+}
+
+body:not(.is-phone) .tree-item .tree-item-self.is-clickable:hover,
+body:not(.is-phone) .tree-item .nav-file-title.is-clickable:hover,
+body:not(.is-phone) .tree-item-self.is-active:hover,
+body:not(.is-phone) .tree-item-self.is-active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid gray;
+    border-radius: 0;
 }
 
 .is-phone .tree-item-self:not(:hover) {
@@ -1848,9 +1870,6 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
     color: var(--light-tone);
 }
 
-.theme-light .tree-item-self.is-clickable:hover div.tree-item-inner>.tree-item-inner-subtext {
-    color: darkorange;
-}
 
 /*----------------------------------------------------------------
 Main wind
@@ -2311,9 +2330,6 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover .tree-item-inn
     color: var(--light-tone);
 }
 
-.theme-light .tree-item-self.is-clickable:hover .tree-item-inner-subtext {
-    color: var(--dark-tone);
-}
 
 .theme-dark .tree-item-self:hover .tree-item-flair {
     color: var(--light-tone);
@@ -2349,6 +2365,14 @@ Context menu
     white-space: pre-wrap;
 }
 
+.theme-dark .menu-item:hover {
+    color: navajowhite;
+}
+
+.theme-light .menu-item:hover {
+    color: var(--text-accent-special);
+}
+
 svg.svg-icon.lucide-trash-2 {
     stroke: #b30000;
 }
@@ -2368,6 +2392,14 @@ svg.svg-icon.lucide-trash-2 {
 
 .menu-item.selected:not(.is-label):not(.is-disabled) {
     background-color: var(--background-primary);
+}
+
+.theme-dark .menu-item.selected:not(.is-label):not(.is-disabled) {
+    color: navajowhite;
+}
+
+.theme-light .menu-item.selected:not(.is-label):not(.is-disabled) {
+    color: var(--text-accent-special);
 }
 
 /* phone */
@@ -2692,10 +2724,6 @@ body:not(.is-phone).theme-light .setting-item-control input[type='text'] {
 
 .theme-light .checkbox-container:not(.is-enabled) {
     background-color: var(--accent-h);
-}
-
-.theme-dark .workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
-    background: var(--med-shadow-l);
 }
 
 .theme-light .workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
@@ -3560,6 +3588,10 @@ a:is([href="#-tips"], [href="#-geheim"], [href="#-spoiler"]) {
     display: none !important;
 }
 
+.simple-border a:is([href="#red"], [href="#rot"], [href="#green"], [href="#grün"], [href="#blue"], [href="#blau"], [href="#gray"], [href="#grau"])+mark {
+    border-radius: 4px;
+}
+
 a[href="#red"]+mark,
 a[href="#rot"]+mark {
     background-color: var(--hl-mark-red);
@@ -3972,7 +4004,7 @@ button.mod-warning,
 }
 
 /*----------------------------------------------------------------
-  Fancy Horizontal Rulers
+  Horizontal Rulers
   ----------------------------------------------------------------*/
 
 .is-phone hr {
@@ -4180,10 +4212,14 @@ a.external-link :is(h4 a, h5 a, h6 a) em {
     color: var(--h4-color);
 }
 
-
-.markdown-rendered .internal-link {
+.markdown-rendered .internal-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a):hover {
     text-decoration-color: inherit;
     color: var(--link-color-dune);
+}
+
+.markdown-rendered .internal-link:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a):hover {
+    text-decoration-color: inherit;
+    color: var(--text-normal);
 }
 
 .is-phone a {
@@ -5061,8 +5097,6 @@ body:not(.simple-aside).theme-light :is(.callout[data-callout="seite"][data-call
 }
 
 
-
-
 /*----------------------------------------------------------------
   pict 
   ----------------------------------------------------------------*/
@@ -5082,6 +5116,9 @@ body:not(.simple-aside).theme-light :is(.callout[data-callout="seite"][data-call
     float: left;
     width: 20vw;
     margin-right: 1em;
+    margin-left: 0px;
+    transform: translateX(-2em);
+    /* clear: left; */
 }
 
 .callout[data-callout="pict"][data-callout-metadata~="r"],
@@ -5089,6 +5126,9 @@ body:not(.simple-aside).theme-light :is(.callout[data-callout="seite"][data-call
     float: right;
     width: 20vw;
     margin-left: 1em;
+    margin-right: 0px;
+    transform: translateX(-2em);
+    /* clear: right; */
 }
 
 /*----------------------------------------------------------------
@@ -5193,7 +5233,7 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout="spalte"]
     display: none;
 }
 
-.callout[data-callout="column"] [data-callout-metadata^="hl"] p,
+.callout[data-callout="column"][data-callout-metadata^="hl"] p,
 .callout[data-callout="spalte"][data-callout-metadata^="w"] p {
     margin-bottom: 0;
     margin-top: 0;
@@ -5679,6 +5719,10 @@ table hr {
     color: var(--light-tone);
     font-weight: bold;
     text-align: center;
+}
+
+.markdown-rendered thead tr,
+.markdown-rendered thead tr:hover {
     background-color: var(--background-modifier-border);
 }
 
@@ -5918,7 +5962,7 @@ body:not(.is-phone) .movies.markdown-preview-view td {
     background-color: transparent;
 }
 
-.contacts:is(.markdown-source-view, .markdown-preview-view) thead {
+.contacts:is(.markdown-source-view, .markdown-preview-view) thead tr {
     background-color: transparent;
 }
 
@@ -5993,7 +6037,7 @@ body:not(.is-phone) .recipes table {
     border-bottom: 2px solid;
 }
 
-.recipes:is(.markdown-source-view, .markdown-preview-view) thead,
+.recipes:is(.markdown-source-view, .markdown-preview-view) thead tr,
 .recipes:is(.markdown-source-view, .markdown-preview-view) thead tr th,
 .recipes:is(.markdown-source-view, .markdown-preview-view) thead th,
 .recipes:is(.markdown-source-view, .markdown-preview-view) tr:nth-child(even) {
@@ -6050,15 +6094,10 @@ body:not(.is-phone) .recipes table {
   STYLED TABLES
   --------------------------------------------*/
 
-body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb, .table-xym, .tabelle-r, .tabelle-g, .tabelle-b, .tabelle-m, .tabelle-xyr, .tabelle-xyg, .tabelle-xyb, .tabelle-xym, .tabelle-r, .tabelle-g, .tabelle-b, .tabelle-m, .tabelle-xyr, .tabelle-xyg, .tabelle-xyb, .tabelle-xym) table thead {
-    background: transparent;
-}
-
-
-.table-r .markdown-rendered thead tr>th,
-.tabelle-r .markdown-rendered thead tr>th,
-.table-xyr .markdown-rendered thead tr>th,
-.tabelle-xyr .markdown-rendered thead tr>th {
+.table-r :is(thead tr, thead tr:hover),
+.tabelle-r :is(thead tr, thead tr:hover),
+.table-xyr :is(thead tr, thead tr:hover),
+.tabelle-xyr :is(thead tr, thead tr:hover) {
     background-color: var(--dark-red);
 }
 
@@ -6068,10 +6107,10 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .
     text-rendering: optimizeLegibility;
 }
 
-.table-g .markdown-rendered thead tr>th,
-.tabelle-g .markdown-rendered thead tr>th,
-.table-xyg .markdown-rendered thead tr>th,
-.tabelle-xyg .markdown-rendered thead tr>th {
+.table-g :is(thead tr, thead tr:hover),
+.tabelle-g :is(thead tr, thead tr:hover),
+.table-xyg :is(thead tr, thead tr:hover),
+.tabelle-xyg :is(thead tr, thead tr:hover) {
     background-color: var(--dark-green);
 }
 
@@ -6081,10 +6120,10 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .
     text-rendering: optimizeLegibility;
 }
 
-.table-b .markdown-rendered thead tr>th,
-.tabelle-b .markdown-rendered thead tr>th,
-.table-xyb .markdown-rendered thead tr>th,
-.tabelle-xyb .markdown-rendered thead tr>th {
+.table-b :is(thead tr, thead tr:hover),
+.tabelle-b :is(thead tr, thead tr:hover),
+.table-xyb :is(thead tr, thead tr:hover),
+.tabelle-xyb :is(thead tr, thead tr:hover) {
     background-color: var(--dark-blue);
 }
 
@@ -6094,10 +6133,10 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .
     text-rendering: optimizeLegibility;
 }
 
-.table-m .markdown-rendered thead tr>th,
-.tabelle-m .markdown-rendered thead tr>th,
-.table-xym .markdown-rendered thead tr>th,
-.tabelle-xym .markdown-rendered thead tr>th {
+.table-m :is(thead tr, thead tr:hover),
+.tabelle-m :is(thead tr, thead tr:hover),
+.table-xym :is(thead tr, thead tr:hover),
+.tabelle-xym :is(thead tr, thead tr:hover) {
     background-color: var(--background-modifier-border);
 }
 
@@ -6985,7 +7024,7 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
     .tabelle-xyr tbody tr>td:first-child,
     .tabelle-xyg tbody tr>td:first-child,
     .tabelle-xyb tbody tr>td:first-child,
-    .tabelle-xym tbody tr>td:first-child ,
+    .tabelle-xym tbody tr>td:first-child,
     .table-xyr tbody tr>td:first-child,
     .table-xyg tbody tr>td:first-child,
     .table-xyb tbody tr>td:first-child,
@@ -7082,7 +7121,11 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
     }
 
     .callout {
-        max-width: 650px;
+        max-width: 700px;
+    }
+
+    .callout-icon {
+        scale: 0.8;
     }
 
     /* small fix for text box */
@@ -7142,23 +7185,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         background: #dfdfd2;
     }
 
-    /* bild */
-    .callout[data-callout="pict"][data-callout-metadata~="l"],
-    .callout[data-callout="bild"][data-callout-metadata~="l"] {
-        margin-left: 0px;
-        width: 40vw !important;
-        clear: left;
-        transform: translateX(-2em);
-    }
-
-    .callout[data-callout="pict"][data-callout-metadata~="r"],
-    .callout[data-callout="bild"][data-callout-metadata~="r"] {
-        margin-right: 0px;
-        width: 40vw !important;
-        clear: right;
-        transform: translateX(-2em);
-    }
-
 
     /* infobox */
     .callout[data-callout=infobox][data-callout-metadata~="l"] {
@@ -7189,10 +7215,10 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
     div[data-callout="mehrspaltig"].callout .callout-content,
     div[data-callout="multi-column"].callout .callout-content {
         gap: 0.4em;
-        display: block !important;
+        display: contents !important;
     }
 
-    div[data-callout="mehrspaltig"].callout .callout-content p ,
+    div[data-callout="mehrspaltig"].callout .callout-content p,
     div[data-callout="multi-column"].callout .callout-content p {
         font-size: small;
         margin: 2px;
@@ -7233,10 +7259,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 
     .markdown-rendered blockquote {
         width: fit-content;
-    }
-
-    .callout {
-        width: 700px;
     }
 
 
