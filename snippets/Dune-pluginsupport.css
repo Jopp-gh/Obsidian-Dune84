@@ -1,184 +1,227 @@
+@charset "UTF-8";
+/* @settings
+
+name: DUNE - Plugin-Support
+id: obsidian-plugins
+settings:
+  -
+    id: show-dataview
+    title: Dataview 
+    description: Author ~ Blacksmithgu
+    type: class-toggle
+    default: false
+  -
+    id: show-kanban
+    title: Kanban 
+    description: Author ~ mgMeyers
+    type: class-toggle
+    default: false
+  -
+    id: show-svelte-cal
+    title: Calendar 
+    description: Author ~ Liam Cain
+    type: class-toggle
+    default: false
+  -
+    id: show-Full-Calendar
+    title: Full Calendar 
+    description: Author ~ Davis Haupt
+    type: class-toggle
+    default: false
+  -
+    id: show-dice-roller
+    title: Dice Roller  
+    description: Author ~ Jeremy Valentine
+    type: class-toggle
+    default: false
+  -
+    id: show-HKcode-styler
+    title: HKcode Styler 
+    description: Author ~ Heekang Park
+    type: class-toggle
+    default: false
+  -
+    id: show-cardview-switcher
+    title: Cardview Switcher 
+    description: Author ~ qawatake
+    type: class-toggle
+    default: false
+  -
+    id: mobile-tweaks
+    title: "Mobile"
+    description: Tel, Tablet
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: show-obsidian-camera
+    title: Obsidian Camera (Mobile)
+    description: Author ~ Aldrin Jenson
+    type: class-toggle
+    default: false
+  -
+    id: show-commander
+    title: Commander 
+    description: Author ~ Jonny & phibr0
+    type: class-toggle
+    default: false
+*/
+
+
 /*----------------------------------------------------------------
 Dune PLUGIN SUPPORT
 ----------------------------------------------------------------*/
 
-body {
-    --text-accent-special: #0080ff;
-    --soft-shadow: rgba(0, 0, 0, 0.1);
-    --light-tone: white;
-    --dark-tone: black;
+/* 
+cal - Do 3. Okt 14:03:51 CEST 2024 
+*/
+
+.theme-light.show-svelte-cal .year.svelte-1vwr9dd.svelte-1vwr9dd,
+.theme-light.show-svelte-cal .today.svelte-q3wqg9 {
+  color: darkred;
+}
+
+.theme-dark.show-svelte-cal .year.svelte-1vwr9dd.svelte-1vwr9dd,
+.theme-dark.show-svelte-cal .today.svelte-q3wqg9 {
+  color: red;
 }
 
 
 /* 
-  advanced-tables
-  */
+Full Calendar 
+*/
 
-body:not(.show-ui-btns) .advanced-tables-buttons>.nav-header>.nav-buttons-container {
-    opacity: 1;
+.show-Full-Calendar .fc-icon {
+  height: 0;
+  line-height: 0;
 }
 
-.theme-light [data-type="advanced-tables-toolbar"] .nav-buttons-container .nav-action-button:hover {
-    background-color: var(--interactive-accent-rgb);
-}
-
-.theme-dark [data-type="advanced-tables-toolbar"] .nav-buttons-container .nav-action-button:hover {
-    background-color: var(--text-accent-special);
+.show-Full-Calendar .fc .fc-button {
+  line-height: 0;
 }
 
 
 /* 
-  cal 
-  */
+dataview - Do 3. Okt 14:03:00 CEST 2024 
+*/
 
-.theme-light .year.svelte-1vwr9dd.svelte-1vwr9dd,
-.theme-light .today.svelte-q3wqg9 {
-    color: darkred;
+.show-dataview .block-language-dataview progress {
+  --background-secondary: transparent;
 }
 
-.theme-dark .year.svelte-1vwr9dd.svelte-1vwr9dd,
-.theme-dark .today.svelte-q3wqg9 {
-    color: red;
+.show-dataview .callout .block-language-dataview table {
+  margin-bottom: 0 !important;
+  margin-top: 0;
 }
 
-
-/* 
-  Full Calendar 
-  */
-
-.fc-icon {
-    height: 0;
-    line-height: 0;
-}
-
-.fc .fc-button {
-    line-height: 0;
+.show-dataview div[data-callout="mehrspaltig"].callout>.callout-content :is(.markdown-rendered blockquote),
+.show-dataview div[data-callout="multi-column"].callout>.callout-content :is(.markdown-rendered blockquote) {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 
 /* 
-  fantasy cal
-  */
+kanban - Do 3. Okt 14:02:20 CEST 2024 
+*/
 
-.OFCGDetails {
-    background-color: transparent;
-    border-radius: 6px;
+.show-kanban .kanban-plugin__item {
+  border: 0;
+}
+
+.show-kanban .kanban-plugin__item-button-wrapper {
+  border-top: 0;
+}
+
+.show-kanban .kanban-plugin__lane-header-wrapper {
+  border-bottom: 0;
+}
+
+.show-kanban button.kanban-plugin__new-item-button:hover {
+  color: var(--text-normal);
+}
+
+.theme-light.show-kanban .kanban-plugin__lane {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark.show-kanban .kanban-plugin__lane {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.show-kanban button.kanban-plugin__new-item-button {
+  color: inherit;
 }
 
 
 /* 
-  time ruler 
-  */
+dice roller
+*/
 
-#time-ruler :is(.bg-accent) {
-    background-color: gray;
-    filter: contrast(2) saturate(0);
+.show-dice-roller .dice-roller.no-icon {
+  display: contents;
 }
 
-#time-ruler svg.svg-icon.lucide-plus {
-    stroke-width: 4px;
-}
-
-#time-ruler :is(.child\:h-full > *):last-child {
-    padding: 2px;
+.show-dice-roller .dice-roller.has-embed .internal-embed {
+  padding: 0;
 }
 
 
 /* 
-  dataview 
-  */
+card view switcher - 3yo
+*/
 
-.block-language-dataview progress {
-    --background-secondary: transparent;
-}
-
-body:is(.uniform-width) .block-language-dataview .table-view-table {
-    width: 100%;
-}
-
-.callout .block-language-dataview table {
-    margin-bottom: 0 !important;
-    margin-top: 0;
-}
-
-div[data-callout="multi-column"].callout>.callout-content :is(.markdown-rendered blockquote) {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+.show-cardview-switcher .modal-background.svelte-qhdq3h {
+  position: fixed;
 }
 
 
 /* 
-  kanban
-  */
+HK code styler - Do 3. Okt 14:01:35 CEST 2024
+*/
 
-.kanban-plugin__item {
-    border: 0;
+.show-HKcode-styler .hk-codeblock-linenos.show-splitter>* {
+  display: block;
 }
 
-.kanban-plugin__item-button-wrapper {
-    border-top: 0;
+.show-HKcode-styler .hk-codeblock pre code.hk-codeblock-code {
+  background-color: transparent;
 }
 
-.kanban-plugin__lane-header-wrapper {
-    border-bottom: 0;
+.show-HKcode-styler .hk-codeblock pre {
+  border-radius: 4px;
 }
 
-button.kanban-plugin__new-item-button:hover {
-    color: var(--text-normal);
+.show-HKcode-styler .hk-codeblock.hk-codeblock-show-copybtn pre .copy-code-button {
+  font-size: 0;
 }
 
-.theme-light .kanban-plugin__lane {
-    background-color: rgba(0, 0, 0, 0.1);
+.app-container pre.language-br:not(.hk-codeblock-linenos.show-splitter) {
+  visibility: hidden;
 }
 
-.theme-dark .kanban-plugin__lane {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-button.kanban-plugin__new-item-button {
-    color: inherit;
-}
-
-
-/* 
-  dice roller
-  */
-
-.dice-roller.no-icon {
-    display: contents;
-}
-
-.dice-roller.has-embed .internal-embed {
-    padding: 0;
-}
-
-/* 
-  card view switcher 
-  */
-
-.modal-background.svelte-qhdq3h {
-    position: fixed;
-}
-
+/*------------------------------------------------------
+ MOBILE
+------------------------------------------------------*/
 /*
-  commander 
-  */
+commander 
+*/
 
-.is-phone .cmdr-setting-modal>.modal {
-    height: revert;
-    width: revert;
+.show-commander .is-phone .cmdr-setting-modal>.modal {
+  height: revert;
+  width: revert;
 }
 
 
 /* 
-  obs camera (mobile) 
-  */
+obs camera (mobile) 
+*/
 
-.modal input[accept="image/*,video/*"]::before {
-    content: "\1F4F9";
+.show-obsidian-camera .modal input[accept="image/*,video/*"]::before {
+  content: "\1F4F9";
 }
 
-.modal input[accept="image/*"]::before {
-    content: "\1F4F7";
+.show-obsidian-camera .modal input[accept="image/*"]::before {
+  content: "\1F4F7";
 }
