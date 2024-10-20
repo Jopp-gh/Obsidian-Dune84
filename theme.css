@@ -340,7 +340,7 @@ settings:
     id: bframe-a
     title: "picture.png | frame-a"
     title.de: "![[bild.png | rahmen-a]]"
-    description: load (png) image-frames from online.
+    description: load (png) image frames from the web.
     description.de: es werden (png)-Bilderrahmen aus dem Netz geladen.
     type: variable-text
     default: "url('')"
@@ -377,7 +377,7 @@ settings:
     id: bframe-b
     title: "picture.png | frame-b"
     title.de: "![[bild.png | rahmen-b]]"
-    description: load (png) image-frames from online.
+    description: load (png) image frames from the web.
     description.de: es werden (png)-Bilderrahmen aus dem Netz geladen.
     type: variable-text
     default: "url('')"
@@ -1232,6 +1232,16 @@ body.theme-light {
   --var-bg-col: var(--background-primary);
   --var-tone-sw: var(--dark-tone);
   --filetree-bb: hwb(var(--header-cco) 50%);
+
+  --callout-bg-r: var(--light-red);
+  --callout-bg-g: var(--light-green);
+  --callout-bg-b: var(--light-blue);
+  --callout-bg-m: var(--light-gray);
+
+  --callout-title-r: var(--dark-red);
+  --callout-title-g: var(--dark-green);
+  --callout-title-b: var(--dark-blue);
+  --callout-title-m: var(--dark-gray);
 }
 
 body.theme-dark {
@@ -1279,6 +1289,16 @@ body.theme-dark {
   --var-bg-col: var(--light-shadow-l);
   --var-tone-sw: var(--light-tone);
   --filetree-bb: navajowhite;
+
+  --callout-bg-r: hsl(0deg 69.87% 53.14% / 50%);
+  --callout-bg-g: hsl(111deg 42% 45% / 50%);
+  --callout-bg-b: hsl(214deg 100% 61% / 50%);
+  --callout-bg-m: var(--dark-gray);
+
+  --callout-title-r: var(--light-red);
+  --callout-title-g: var(--light-green);
+  --callout-title-b: var(--light-blue);
+  --callout-title-m: var(--light-gray);
 }
 
 /* Flat theme */
@@ -1534,7 +1554,7 @@ body.is-focused .workspace-tabs.mod-top {
   font-size: 8em;
   font-weight: inherit;
   display: block;
-  animation: fadeIn 10s;
+  animation: fadeIn 5s;
   background: var(--logo-grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1547,9 +1567,10 @@ body.is-focused .workspace-tabs.mod-top {
 }
 
 .progress-bar {
+  height: 100%;
   background: var(--intro-dune);
   background-size: 200% 200%;
-  animation: gradient-slow 8s steps(60) forwards;
+  animation: gradient-slow 8s steps(30) forwards;
 }
 
 @keyframes gradient-slow {
@@ -2201,11 +2222,6 @@ body:not(.is-phone) .view-header {
     scale: 1.4;
 }
 
-.is-phone.theme-light .menu {
-    background: var(--background-primary);
-}
-
-
 /* phone */
 /* grid toolbars phone */
 body:not(.grid-mobile-tb).is-phone .mobile-toolbar-options-list {
@@ -2417,12 +2433,17 @@ svg.svg-icon.lucide-trash-2 {
 }
 
 /* phone */
+
+.is-mobile .menu {
+    background-color: var(--background-secondary);
+}
+
 .is-mobile .menu.mod-tab-list .menu-item:first-child .menu-item-title {
     font-weight: bold;
 }
 
-.is-phone .menu {
-    background: var(--background-secondary);
+.mobile-tab-switcher-menu-spacer .clickable-icon {
+    color: var(--text-accent-special);
 }
 
 /* menu-item */
@@ -4280,6 +4301,12 @@ a strong:hover {
 /*----------------------------------------------------------------
 Misc note boxes
 ----------------------------------------------------------------*/
+.app-container pre.language-memo,
+code.language-memo.is-loaded {
+    color: darkblue;
+    background: var(--light-yellow);
+    width: fit-content;
+}
 
 .app-container pre.language-memo-r,
 code.language-memo-r.is-loaded {
@@ -4334,6 +4361,8 @@ code.language-br.is-loaded {
     width: 30px;
 }
 
+.app-container pre.language-memo,
+code.language-memo.is-loaded,
 .app-container pre.language-memo-r,
 code.language-memo-r.is-loaded,
 .app-container pre.language-memo-g,
@@ -4345,6 +4374,7 @@ code.language-memo-m.is-loaded {
     min-width: var(--min-boxwidth);
     margin-bottom: 0.4em;
     margin-top: 0.4em;
+    padding: 6px;
 }
 
 /*----------------------------------------------------------------
@@ -4484,7 +4514,7 @@ span.cm-hmd-codeblock.cm-meta {
 }
 
 /* commented stuff */
-.cm-comment,
+.cm-s-obsidian span.cm-comment,
 .cm-meta {
     color: gray;
 }
@@ -4723,45 +4753,46 @@ body[class*="minimal-tab-title"].contextual-typography .minimal-float.markdown-p
     color: inherit;
 }
 
+
 .callout[data-callout-metadata~="red"] .callout-title,
 .callout[data-callout-metadata~="rot"] .callout-title {
-    color: var(--dark-red);
+    color: var(--callout-title-r);
 }
 
 .callout[data-callout-metadata~="green"] .callout-title,
 .callout[data-callout-metadata~="grün"] .callout-title {
-    color: var(--dark-green);
+    color: var(--callout-title-g);
 }
 
 .callout[data-callout-metadata~="blue"] .callout-title,
 .callout[data-callout-metadata~="blau"] .callout-title {
-    color: var(--dark-blue);
+    color: var(--callout-title-b);
 }
 
 .callout[data-callout-metadata~="gray"] .callout-title,
 .callout[data-callout-metadata~="grau"] .callout-title {
-    color: var(--dark-gray);
+    color: var(--callout-title-m);
 }
 
 
 .callout[data-callout-metadata~="red"],
 .callout[data-callout-metadata~="rot"] {
-    background-color: var(--light-red);
+    background-color: var(--callout-bg-r);
 }
 
 .callout[data-callout-metadata~="green"],
 .callout[data-callout-metadata~="grün"] {
-    background-color: var(--light-green);
+    background-color: var(--callout-bg-g);
 }
 
 .callout[data-callout-metadata~="blue"],
 .callout[data-callout-metadata~="blau"] {
-    background-color: var(--light-blue);
+    background-color: var(--callout-bg-b);
 }
 
 .callout[data-callout-metadata~="gray"],
 .callout[data-callout-metadata~="grau"] {
-    background-color: var(--light-gray);
+    background-color: var(--callout-bg-m);
 }
 
 
@@ -5279,7 +5310,7 @@ div.cm-embed-block.cm-callout .markdown-rendered .callout[data-callout="spalte"]
     margin-top: 0;
 }
 
-.callout[data-callout="column"] [data-callout-metadata^="hl"],
+.callout[data-callout="column"][data-callout-metadata^="hl"],
 .callout[data-callout="spalte"][data-callout-metadata^="w"] {
     margin-bottom: 0;
     padding-top: 0;
@@ -6199,6 +6230,7 @@ body:not(.is-phone) .recipes table {
     text-rendering: optimizeLegibility;
 }
 
+
 /* round tables */
 body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-m, .table-xyr, .table-xyg, .table-xyb, .table-xym, .tabelle-r, .tabelle-g, .tabelle-b, .tabelle-m, .tabelle-xyr, .tabelle-xyg, .tabelle-xyb, .tabelle-xym) table {
     border-collapse: separate;
@@ -6772,18 +6804,12 @@ div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
     margin-right: auto;
 }
 
-mjx-math.MJX-TEX:hover {
+mjx-container.MathJax:hover {
     scale: 2;
+    padding: 4px;
+    border: 1px solid var(--text-normal);
     background: var(--background-primary);
-    backdrop-filter: blur(4px);
-}
-
-.theme-light mjx-math.MJX-TEX:hover {
-    text-shadow: 0 0 black;
-}
-
-.theme-dark mjx-math.MJX-TEX:hover {
-    text-shadow: 0 0 white;
+    animation: fadeIn 1s;
 }
 
 /*----------------------------------------------------------------
@@ -7386,6 +7412,8 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         color: var(--dark-tone);
     }
 
+    .app-container pre.language-memo,
+    code.language-memo.is-loaded,
     .app-container pre.language-memo-r,
     code.language-memo-r.is-loaded,
     .app-container pre.language-memo-g,
@@ -7564,14 +7592,22 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 /*----------------------------------------------------------------
  Settings
 ----------------------------------------------------------------*/
-.setting-item {
+.setting-item:not(.setting-item-heading) {
     border-bottom: 1px dashed var(--background-modifier-border);
     border-top: none;
+}
+
+.setting-item:is(.setting-item-heading) {
+    border-bottom: 2px solid hwb(var(--header-cco) 40%);
 }
 
 .is-phone .modal.mod-settings .vertical-tab-nav-item:hover {
     border-radius: inherit;
     filter: none;
+}
+
+.is-phone .modal.mod-settings .modal-header {
+    background-color: var(--background-secondary);
 }
 
 .setting-item-name,
@@ -8062,10 +8098,6 @@ body:not(.is-phone) .tree-item.nav-file.recent-files-file {
 
 ul.dataview.list-view-ul {
     margin-top: 0;
-}
-
-.code-styler pre.code-styler-pre>code {
-    padding-right: 6px !important;
 }
 
 
