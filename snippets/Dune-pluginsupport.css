@@ -154,6 +154,14 @@ dataview - Do 3. Okt 14:03:00 CEST 2024
   padding-right: 0;
 }
 
+.show-dataview .block-language-dataview table th:first-of-type {
+  border-top-left-radius: 0px;
+}
+
+.show-dataview .block-language-dataview table th:last-of-type {
+  border-top-right-radius: 0px;
+}
+
 /* limit max height if not hover */
 .show-dataview-blocks .block-language-dataview.node-insert-event:not(:hover) {
   height: 14vh;
@@ -249,15 +257,17 @@ HK code styler - Do 3. Okt 14:01:35 CEST 2024
   font-size: 0;
 }
 
-.show-HKcode-styler .hk-codeblock.hk-codeblock-show-linenos pre[class*="memo"] .hk-codeblock-linenos.show-splitter {
-  visibility: hidden;
-  margin-right: 0;
-}
-
 .show-HKcode-styler .app-container pre.language-br:not(.hk-codeblock-linenos.show-splitter) {
   visibility: hidden;
 }
 
+.show-HKcode-styler .hk-codeblock.hk-codeblock-show-linenos pre:is([class="memo"], [class*="sterne"], [class*="stars"], [class*="fade"], [class*="wave"], [class*="trenner"], [class*="deko"]) .hk-codeblock-linenos.show-splitter {
+  visibility: hidden;
+}
+
+.show-HKcode-styler .hk-codeblock pre:is([class*="sterne"], [class*="stars"]) {
+  display: block;
+}
 
 /*------------------------------------------------------
  MOBILE
