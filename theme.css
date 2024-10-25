@@ -25,6 +25,8 @@ settings:
   -
     id: glob-fonts
     title: ""
+    description: please click the "reset" button of "Font size" of (1 - Modern, 2 - Poetry, 3 - Dashboard) on first use.
+    description.de: Bitte drücke die "wiederherstellen" Taste von "Schriftgröße" von (1 - Modern, 2 - Poesie, 3 - Startseite) vor den ersten Gebrauch.
     type: class-select
     allowEmpty: false
     default: fontmod-0
@@ -61,8 +63,8 @@ settings:
     default: '"Louis George Cafe", "Liberation Serif", sans-serif'
   - 
     id: custom-fsz-1
-    title: Custom Font size
-    title.de: Eigene Schriftgröße
+    title: Font size
+    title.de: Schriftgröße
     type: variable-number-slider
     format: px
     default: 16
@@ -93,7 +95,7 @@ settings:
   -
     id: custom-fsz-2
     title: Font size
-    title.de: Eigene Größe
+    title.de: Schriftgröße
     type: variable-number-slider
     format: px
     default: 16
@@ -122,7 +124,7 @@ settings:
   -
     id: custom-fsz-3
     title: Font size
-    title.de: Eigene Größe
+    title.de: Schriftgröße
     type: variable-number-slider
     format: px
     default: 16
@@ -940,6 +942,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: show-textHL
+    title: Line highlight
+    title.de: Zeilenmarkierung
+    description: highlight active line (edit mode)
+    description.de: Aktuelle Zeile hervorheben (Bearbeitungs-Modus)
+    type: class-toggle
+    default: false
+  -
     id: fade-op-c
     title: Core plugins
     title.de: Kernerweiterungen
@@ -1113,6 +1123,9 @@ body {
   --initial-font: var(--poetry-font-h);
   --initial-sz: 110px;
 
+  --custom-fsz-1: 16px;
+  --custom-fsz-2: 16px;
+  --custom-fsz-3: 16px;
   --slim-bar: 32px;
   --property-height: 32px;
   --checkm-btn: 1.4em;
@@ -2605,6 +2618,14 @@ body:is(.hide-sidepanels) .workspace-split.mod-left-split .workspace-tabs:not(.m
     border-top: 0;
 }
 
+.show-textHL.theme-light .cm-active.cm-line {
+    background: rgb(255 255 255 / 50%);
+}
+
+.show-textHL.theme-dark .cm-active.cm-line {
+    background: rgb(255 255 255 / 25%);
+}
+
 /* --------------------------------------------
 resize Handler 
 -------------------------------------------- */
@@ -2947,7 +2968,7 @@ body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
 
 .markdown-source-view .cm-fold-indicator .collapse-indicator {
     max-height: 20px;
-    scale: 2;
+    scale: 1.4;
     transform: translateY(4px);
 }
 
@@ -3557,7 +3578,6 @@ body:not(.callout).markdown-source-view.mod-cm6 mark,
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight {
     background-color: rgba(255, 243, 163, 1.4);
-    color: var(--dark-tone);
 }
 
 .theme-dark .markdown-rendered mark .external-link {
@@ -3585,22 +3605,28 @@ a.tag {
 .theme-dark :is(a.tag, .editor .cm-hashtag),
 .theme-dark .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     background-color: var(--interactive-accent);
-    color: var(--dark-tone) !important;
+    color: var(--dark-tone);
 }
 
 .theme-light :is(a.tag, .editor .cm-hashtag),
 .theme-light .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     background-color: var(--interactive-accent);
-    color: var(--text-normal);
 }
 
 .theme-dark :is(a.tag, .editor .cm-hashtag):hover {
     background-color: var(--interactive-accent);
-    color: var(--background-primary);
 }
 
 .theme-light :is(a.tag, .editor .cm-hashtag):hover {
     background-color: var(--interactive-accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
+    color: inherit;
+}
+
+.markdown-source-view a.cm-underline {
+    color: inherit;
 }
 
 /* phone */
@@ -3743,12 +3769,19 @@ pre[class*="language-deko"] button.copy-code-button {
 .theme-light pre[class*="language-wave"]::after {
     filter: sepia(1) contrast(0.5) saturate(14);
     transform: scale(var(--deco-scale), var(--deco-scale));
+    width: 100%;
 }
 
 .theme-dark pre[class*="language-deko"]::after,
 .theme-dark pre[class*="language-wave"]::after {
     filter: contrast(0.1) sepia(1);
     transform: scale(var(--deco-scale), var(--deco-scale));
+    width: 100%;
+}
+
+pre[class*="language-trenner"]::after,
+pre[class*="language-fade"]::after {
+    width: 100%;
 }
 
 pre.language-trenner::after,
@@ -4514,8 +4547,7 @@ span.cm-hmd-codeblock.cm-meta {
 }
 
 /* commented stuff */
-.cm-s-obsidian span.cm-comment,
-.cm-meta {
+.cm-s-obsidian span.cm-comment {
     color: gray;
 }
 
@@ -5790,10 +5822,6 @@ table hr {
     color: var(--light-tone);
     font-weight: bold;
     text-align: center;
-}
-
-.markdown-rendered thead tr,
-.markdown-rendered thead tr:hover {
     background-color: var(--background-modifier-border);
 }
 
@@ -6165,10 +6193,10 @@ body:not(.is-phone) .recipes table {
   STYLED TABLES
   --------------------------------------------*/
 
-.table-r :is(thead tr, thead tr:hover),
-.tabelle-r :is(thead tr, thead tr:hover),
-.table-xyr :is(thead tr, thead tr:hover),
-.tabelle-xyr :is(thead tr, thead tr:hover) {
+.table-r :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-r :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.table-xyr :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-xyr :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover) {
     background-color: var(--dark-red);
 }
 
@@ -6178,10 +6206,10 @@ body:not(.is-phone) .recipes table {
     text-rendering: optimizeLegibility;
 }
 
-.table-g :is(thead tr, thead tr:hover),
-.tabelle-g :is(thead tr, thead tr:hover),
-.table-xyg :is(thead tr, thead tr:hover),
-.tabelle-xyg :is(thead tr, thead tr:hover) {
+.table-g :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-g :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.table-xyg :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-xyg :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover) {
     background-color: var(--dark-green);
 }
 
@@ -6191,10 +6219,10 @@ body:not(.is-phone) .recipes table {
     text-rendering: optimizeLegibility;
 }
 
-.table-b :is(thead tr, thead tr:hover),
-.tabelle-b :is(thead tr, thead tr:hover),
-.table-xyb :is(thead tr, thead tr:hover),
-.tabelle-xyb :is(thead tr, thead tr:hover) {
+.table-b :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-b :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.table-xyb :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-xyb :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover) {
     background-color: var(--dark-blue);
 }
 
@@ -6204,10 +6232,10 @@ body:not(.is-phone) .recipes table {
     text-rendering: optimizeLegibility;
 }
 
-.table-m :is(thead tr, thead tr:hover),
-.tabelle-m :is(thead tr, thead tr:hover),
-.table-xym :is(thead tr, thead tr:hover),
-.tabelle-xym :is(thead tr, thead tr:hover) {
+.table-m :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-m :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.table-xym :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
+.tabelle-xym :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover) {
     background-color: var(--background-modifier-border);
 }
 
@@ -7426,7 +7454,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         margin-bottom: 1em;
     }
 
-
     .markdown-preview-view pre {
         background-color: white;
     }
@@ -7598,7 +7625,7 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 }
 
 .setting-item:is(.setting-item-heading) {
-    border-bottom: 2px solid hwb(var(--header-cco) 40%);
+    border-bottom: 2px solid var(--header-col);
 }
 
 .is-phone .modal.mod-settings .vertical-tab-nav-item:hover {
@@ -7738,9 +7765,8 @@ body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
     min-width: 75%;
     height: 70%;
     margin-bottom: 10%;
-    animation: fadeIn 1.2s;
+    animation: fadeIn 1s;
 }
-
 
 .modal.mod-settings .vertical-tab-header,
 .modal.mod-settings .vertical-tab-content-container,
@@ -7768,14 +7794,6 @@ body:not(.show-scrollbars) .modal.mod-settings ::-webkit-scrollbar {
 }
 
 
-body:not(.is-phone) .modal.mod-community-modal.mod-sidebar-layout.mod-community-plugin,
-body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
-    min-width: 75%;
-    height: 70%;
-    margin-bottom: 10%;
-    animation: fadeIn 1.2s;
-}
-
 .setting-item.setting-item-heading:not(.style-settings-heading) .setting-item-name {
     font-size: 1.6em;
 }
@@ -7785,7 +7803,7 @@ body:not(.is-phone) .modal.mod-settings.mod-sidebar-layout {
 }
 
 .theme-dark .setting-item.setting-item-heading:not(.style-settings-heading) .setting-item-name {
-    color: navajowhite;
+    color: var(--header-col);
 }
 
 
