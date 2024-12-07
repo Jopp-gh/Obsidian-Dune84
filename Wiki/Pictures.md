@@ -14,6 +14,7 @@ there are 2 banner types:
 
 - banner-a (**top** banner, height adjustable in **Style Settings**)
 - banner-b (**bottom** banner, height adjustable in **Style Settings**)
+- banner-m ( **everywhere** on your page, placeholder for decorations, height is fixed)
 
 <br>
 
@@ -68,6 +69,15 @@ place your images on the **Left**, **Right** or at the **Center** of your note
 
 Change picture frame colors under **Style Settings>Dune>Pictures>Picture frames**
 
+### SIMPLE IMAGE GRID
+
+![Img-grid](https://github.com/user-attachments/assets/dbef3eb5-1229-46f2-9b8b-3f72c82b3d8d)
+
+**Cssclass**: `grid-10, grid-20, grid-30, grid-40, grid-15, grid-25, grid-35, grid-45`
+
+Perfect to arrange any pictures on your page. Pictures will use all the same height and keep the full aspect ratio.
+Just throw in all your images and forget to fiddle around with spacings or new line breaks between images. 
+
 <br>
 
 ### BEAUTIFUL IMAGE FRAMES
@@ -80,6 +90,7 @@ Change picture frame colors under **Style Settings>Dune>Pictures>Picture frames*
 **Deutsch**: `![[bild.png | rahmen-a]]`, `![[bild.png | rahmen-b]]`
 
 To apply beautiful frames, you need to use a online url pointing to a png frame. Unfortunately, Obsidian restricts users from loading local images into **Style Settings** for security issues. 
+Sidenote. The image is just for illustration purposes. (If you want to find out more about the image, check out Mira tools for Blender)
 
 <br>
 
