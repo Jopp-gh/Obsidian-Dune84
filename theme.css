@@ -1583,7 +1583,7 @@ body.is-focused .workspace-tabs.mod-top {
   height: 100%;
   background: var(--intro-dune);
   background-size: 200% 200%;
-  animation: gradient-slow 8s steps(30) forwards;
+  animation: gradient-slow 8s steps(60) forwards;
 }
 
 @keyframes gradient-slow {
@@ -1666,6 +1666,7 @@ body.col-mod-1 .theme-dark .workspace-tab-header-container {
     background-color: transparent;
 }
 
+
 /*----------------------------------------------------------------
 Slim tabs
 ----------------------------------------------------------------*/
@@ -1699,6 +1700,31 @@ body:not(.slim-bars) .workspace-ribbon.mod-left {
 
 .workspace-tab-header-status-icon.mod-pinned {
     color: darkred;
+}
+
+/* phone */
+.slim-bars.is-phone :is(.mobile-tab-switcher-scroll, .mobile-tab-switcher-inner-scroll) {
+    background-color: var(--background-primary);
+}
+
+.slim-bars.is-phone .mobile-tab-title {
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 4px;
+    text-align: left;
+    overflow-x: scroll;
+    text-overflow: inherit;
+    max-width: 146px;
+}
+
+.slim-bars.is-phone .mobile-tab-group-container {
+    row-gap: 8px;
+    margin-bottom: 8px;
+}
+
+.slim-bars.is-phone .mobile-tab-preview {
+    position: relative;
+    height: 0;
 }
 
 
@@ -2446,7 +2472,6 @@ svg.svg-icon.lucide-trash-2 {
 }
 
 /* phone */
-
 .is-mobile .menu {
     background-color: var(--background-secondary);
 }
@@ -2675,7 +2700,7 @@ BUTTONS
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover {
+.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover {
     background: var(--light-shadow-l);
 }
 
@@ -2785,7 +2810,6 @@ body:not(.is-phone).theme-light .setting-item-control input[type='text'] {
 .theme-light .workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
     background: var(--background-primary);
 }
-
 
 .theme-dark .modal-container button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 .theme-dark .setting-item-control select:hover {
@@ -3028,10 +3052,6 @@ body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container 
     display: none;
 }
 
-.metadata-property {
-    height: 30px;
-}
-
 .metadata-properties-heading {
     transform: scale(0.8);
     padding-left: 0;
@@ -3113,6 +3133,11 @@ body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container 
 /*----------------------------------------------------------------
   HEADERS
   ----------------------------------------------------------------*/
+  .inline-title {
+    color: var(--text-accent-special);
+    font-size: 1.4em;
+}
+
 /* light */
 :not(.shade-Hd).theme-light :is(.HyperMD-header-1, .HyperMD-header-1 .cm-link,
     .HyperMD-header-1 a, h1, h1 a) {
@@ -3568,6 +3593,10 @@ body:not(.callout).markdown-source-view.mod-cm6 mark,
     box-decoration-break: clone;
 }
 
+.simple-border .markdown-rendered mark {
+    border-radius: 4px;
+}
+
 /* Html custom Highlight */
 .cm-s-obsidian span.cm-highlight {
     -webkit-box-decoration-break: clone;
@@ -3577,7 +3606,8 @@ body:not(.callout).markdown-source-view.mod-cm6 mark,
 /* force custom default highlight */
 .cm-s-obsidian span.cm-formatting-highlight,
 .cm-s-obsidian span.cm-highlight {
-    background-color: rgba(255, 243, 163, 1.4);
+    background-color: rgba(255, 243, 163, 1.4) !important;
+    color: var(--dark-tone);
 }
 
 .theme-dark .markdown-rendered mark .external-link {
@@ -3600,25 +3630,6 @@ a.tag {
 
 .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
     font-size: inherit;
-}
-
-.theme-dark :is(a.tag, .editor .cm-hashtag),
-.theme-dark .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
-    background-color: var(--interactive-accent);
-    color: var(--dark-tone);
-}
-
-.theme-light :is(a.tag, .editor .cm-hashtag),
-.theme-light .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
-    background-color: var(--interactive-accent);
-}
-
-.theme-dark :is(a.tag, .editor .cm-hashtag):hover {
-    background-color: var(--interactive-accent);
-}
-
-.theme-light :is(a.tag, .editor .cm-hashtag):hover {
-    background-color: var(--interactive-accent);
 }
 
 .markdown-source-view.mod-cm6 .cm-hashtag.cm-meta {
@@ -4334,6 +4345,7 @@ a strong:hover {
 /*----------------------------------------------------------------
 Misc note boxes
 ----------------------------------------------------------------*/
+
 .app-container pre.language-memo,
 code.language-memo.is-loaded {
     color: darkblue;
@@ -4784,7 +4796,6 @@ body[class*="minimal-tab-title"].contextual-typography .minimal-float.markdown-p
 .callout-icon .svg-icon {
     color: inherit;
 }
-
 
 .callout[data-callout-metadata~="red"] .callout-title,
 .callout[data-callout-metadata~="rot"] .callout-title {
@@ -6193,6 +6204,15 @@ body:not(.is-phone) .recipes table {
   STYLED TABLES
   --------------------------------------------*/
 
+  /* remove superflous top space */
+.markdown-source-view .el-table {
+    margin-top: -1em;
+}
+
+.markdown-preview-view div.el-table {
+    margin-top: -16px;
+}
+
 .table-r :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
 .tabelle-r :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
 .table-xyr :is(thead th, thead tr>th:nth-child(2n+2), thead th:hover),
@@ -6344,6 +6364,21 @@ img[alt="banner-b"] {
     margin-top: var(--banner-ah);
 }
 
+img[alt="banner-m"],
+body:not(.is-phone) .markdown-preview-view img[alt="banner-m"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 150px;
+    pointer-events: none;
+    margin-bottom: 1em;
+}
+
+.is-phone img[alt='banner-m'] {
+    max-height: 100px;
+    pointer-events: none;
+}
+
 .is-phone img[alt='banner-a'],
 .is-phone img[alt='banner-b'] {
     display: block;
@@ -6414,7 +6449,6 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
 }
 
 /* med val */
-
 .bc-25 img[alt="banner-a"] {
     object-position: 50% 25%;
 }
@@ -6438,6 +6472,57 @@ body:is(.is-phone) .banner-b .markdown-preview-section {
 .bc-75 img[alt="banner-a"] {
     object-position: 50% 75%;
 }
+
+
+.grid-10 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 10vw;
+    margin-right: 4px;
+}
+
+.grid-20 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 20vw;
+    margin-right: 4px;
+}
+
+.grid-30 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 30vw;
+    margin-right: 4px;
+}
+
+.grid-40 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 40vw;
+    margin-right: 4px;
+}
+
+/* med val */
+.grid-15 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 15vw;
+    margin-right: 4px;
+}
+
+.grid-25 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 25vw;
+    margin-right: 4px;
+}
+
+.grid-35 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 35vw;
+    margin-right: 4px;
+}
+
+.grid-45 img[alt]:not([alt="banner-a"], [alt="banner-b"], [alt="banner-m"]) {
+    vertical-align: middle;
+    height: 45vw;
+    margin-right: 4px;
+}
+
 
 
 img {
@@ -7454,6 +7539,7 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         margin-bottom: 1em;
     }
 
+
     .markdown-preview-view pre {
         background-color: white;
     }
@@ -7633,8 +7719,12 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
     filter: none;
 }
 
-.is-phone .modal.mod-settings .modal-header {
+.is-phone.theme-light .modal.mod-settings .modal-header {
     background-color: var(--background-secondary);
+}
+
+.is-phone.theme-dark .modal.mod-settings .modal-header {
+    background-color: var(--background-primary);
 }
 
 .setting-item-name,
@@ -8095,10 +8185,6 @@ body:not(.is-phone) .tree-item.nav-file.recent-files-file {
 }
 
 /* dataview */
-/* .dataview.small-text {
-    color: var(--dark-tone);
-  } */
-
 .block-language-dataview th.table-view-th:nth-child(even),
 .block-language-dataview th.table-view-th:nth-child(odd) {
     color: revert;
