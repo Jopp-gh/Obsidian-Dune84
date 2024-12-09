@@ -10,7 +10,7 @@ cssclass: banner-a,
 
 <br>
 
-there are 2 banner types:
+there are 3 banner types:
 
 - banner-a (**top** banner, height adjustable in **Style Settings**)
 - banner-b (**bottom** banner, height adjustable in **Style Settings**)
@@ -18,22 +18,23 @@ there are 2 banner types:
 
 <br>
 
-to insert a banner, choose a banner type (eg `cssclasses: banner-a`) to reserve a top/bottom spot, then add the same tag `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
+to insert a top or bottom -page banner, choose a banner type (eg `cssclasses: banner-a` or `cssclasses: banner-b`) to reserve a top/bottom spot, then add the same tag `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
+Banner `banner-m` doesn't need a cssclass, just add `![[picture.jpg | banner-m]]` to your picture. 
 
 >Note :
->to get bottom banners working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a footer banner `![[picture.jpg | banner-b]]` at top page, unless your note is very short.
+>to get **bottom banners** working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a footer banner `![[picture.jpg | banner-b]]` at top page, unless your note is very short.
 
 <br>
 
 ### Banner height 
-to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), go to: `Dune>Pictures>Banners>Resize Banner`  
+to configure your banner height (`cssclass: banner-a` or `cssclass: banner-b`), go to: `Dune>Pictures>Banners>Resize Banner` . Banner `banner-m` has a fixed height.
 
 <br>
 
 ### Banner, vertical shift
 only for `banner-a`
 
-If your top banner looks cut, you can use **b**anner **c**oordinates: 
+If your top banner looks truncated, you can use **b**anner **c**oordinates: 
 - **locally**: use 15 different placements in your yaml header (10, 20, 30, 40, 50, 60, 70, 80), eg. `cssclass: bc-10` and median values, eg. `cssclass: bc-15`
 
 <br>
@@ -90,7 +91,7 @@ Just throw in all your images and forget to fiddle around with spacings or new l
 **Deutsch**: `![[bild.png | rahmen-a]]`, `![[bild.png | rahmen-b]]`
 
 To apply beautiful frames, you need to use a online url pointing to a png frame. Unfortunately, Obsidian restricts users from loading local images into **Style Settings** for security issues. 
-Sidenote. The image is just for illustration purposes. (If you want to find out more about the image, check out Mira tools for Blender)
+Sidenote. 
 
 <br>
 
