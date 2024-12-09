@@ -156,10 +156,16 @@ change font family of your active note
 ## IMAGES
 
 ### BANNER
+top
 `cssclass: banner-a` and `![[image.png|banner-a]]`
-
+bottom
 `cssclass: banner-b` and `![[image.png|banner-b]]`
-
+everywhere 
+`![[image.png|banner-m]]`
 
 ### Simple image descriptions
 cssclass: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`
+
+### Simple Image grid 
+
+Cssclass: `grid-10`, `grid-20`, `grid-30`, `grid-40`, `grid-15`, `grid-25`, `grid-35`, `grid-45`
