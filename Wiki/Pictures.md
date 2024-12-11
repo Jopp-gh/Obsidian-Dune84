@@ -96,6 +96,7 @@ Sidenote.
 <br>
 
 ## BOOK PICTURES
+![I–05](https://github.com/user-attachments/assets/c653b175-3fad-43b4-9260-40288641a57b)
 
 ```
 > [!pict|l] 
