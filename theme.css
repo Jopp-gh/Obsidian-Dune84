@@ -2691,16 +2691,16 @@ resize Handler
 BUTTONS
 ----------------------------------------------------------------*/
 
-.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
+.theme-light .modal.mod-settings button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.theme-dark button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
+.theme-dark .modal.mod-settings button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive) {
     color: var(--text-normal);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.theme-light button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover {
+.theme-light .modal.mod-settings button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover {
     background: var(--light-shadow-l);
 }
 
