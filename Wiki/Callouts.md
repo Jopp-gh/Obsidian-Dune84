@@ -172,6 +172,22 @@ Callout floats right
 
 `> [!note|r]`
 
+Callout columns, left, right, axis (centered)
+```
+> [!column|l]
+> [!column|r]
+> [!column|a]
+```
+
+**Deutsch**
+
+Ausruffeld Spalte links, rechts, Axis (Mitte)
+```
+> [!spalte|l]
+> [!spalte|r]
+> [!spalte|a]
+```
+
 <br>
 
 ## Text blocks - Small & Large
