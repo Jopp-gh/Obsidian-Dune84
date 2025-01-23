@@ -803,17 +803,17 @@ settings:
     type: class-toggle
   -
     id: slim-bars
-    title: Slim bars
+    title: Slim bars (Phone & Desktop)
     description: restore default tab-height
-    title.de: Schmale Leisten
+    title.de: Schmale Leisten (Telefon & Rechner)
     description.de: Wiederherstellung normale Reiterhöhe
     type: class-toggle
   -
     id: stacked-tabs-focused
-    title: Stacked notes
-    description: restore defaults for stacked-view
-    title.de: Stapelansicht
-    description.de: Wiederherstellung normale Stapelansicht
+    title: Stacked notes (One page)
+    description: restore defaults for stacked-view (2 pages)
+    title.de: Stapelansicht (Eine Seite)
+    description.de: Wiederherstellung normale Stapelansicht (2 Seiten)
     type: class-toggle
   -
     id: show-title-name
@@ -866,6 +866,14 @@ settings:
     description: restore color-accent
     title.de: Dune Akzent 
     description.de: Wiederherstellung Farbakzent
+    type: class-toggle    
+    default: true
+  -
+    id: show-action-bar
+    title: Show action-bar (Phone)
+    description: restore opacity of action-bar or long press on the book-symbol to keep the action-bar in edit mode visible
+    title.de: Werkzeugleiste (Tel)
+    description.de: Wiederherstellung Werkzeugleiste (Deckkraft) oder halte das Buchsymbol im Bearbeitunsmodus ein wenig, um die Sichtbarkeit der Werkzeugleiste zu erhalten.
     type: class-toggle    
     default: true
   -
@@ -937,6 +945,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: short-Hs
+    title: Header hash
+    title.de: Titel Raute
+    description: restore Header hash or click on the header placeholder to add/remove hashes. 
+    description.de: Wiederherstellung der Titel Raute(n) oder klicke auf den Titel-Platzhalter um daraufhin Rauten zu subtrahieren/addieren. 
+    type: class-toggle
+    default: true
+  -
     id: show-textHL
     title: Line highlight
     title.de: Zeilenmarkierung
@@ -979,13 +995,6 @@ settings:
     description: restore default proportions
     title.de: Mermaid Proportionen (Mobilgerät)
     description.de: Wiederherstellung Standard Proportionen
-    type: class-toggle
-  -
-    id: hide-cp-btn
-    title: Copy button - (phone)
-    description: restore copy-button (codeblocks, inline code)
-    title.de: Kopieren-Taste (Tel)
-    description.de: Wiederherstellung Kopieren-Taste (Befehlszeilenblöcke, Befehlszeilen)
     type: class-toggle
   -
     id: fade-op-d
@@ -1200,6 +1209,7 @@ body:not(.dune-accent-col) {
 }
 
 body.theme-light {
+  color-scheme: light;
   --table-hdcol: rgb(150, 150, 150);
   --table-bgcol: rgb(211, 211, 211);
   --table-accent: rgb(255, 255, 255, 0.5);
@@ -1259,6 +1269,7 @@ body.theme-light {
 }
 
 body.theme-dark {
+  color-scheme: dark;
   --table-hdcol: rgb(60, 60, 60);
   --table-bgcol: rgb(90, 90, 90);
   --table-accent: rgb(255, 255, 255, 0.5);
@@ -1398,7 +1409,6 @@ body.col-mod-a.theme-light {
   --text-muted: #466585;
   --text-faint: #466585;
 
-  --text-accent: #17418b;
   --link-color-dune: hwb(var(--header-cco) 50%);
   --subsup-col: #17418b;
 
@@ -1422,7 +1432,6 @@ body.col-mod-b.theme-light {
   --text-muted: #607081;
   --text-faint: #607081;
 
-  --text-accent: #313884;
   --link-color-dune: hwb(var(--header-cco) 50%);
   --subsup-col: #313884;
 
@@ -1446,7 +1455,6 @@ body.col-mod-c.theme-light {
   --text-muted: #603F30;
   --text-faint: #603F30;
 
-  --text-accent: #2b547e;
   --link-color-dune: hwb(var(--header-cco) 50%);
   --subsup-col: #2b547e;
 
@@ -1473,7 +1481,6 @@ body.col-mod-d.theme-dark {
 
   --link-color-dune: navajowhite;
   --subsup-col: navajowhite;
-  --text-accent: navajowhite;
 
   --bold-color: #fff;
   --italic-color: #dfb06b;
@@ -1497,7 +1504,6 @@ body.col-mod-e.theme-dark {
 
   --link-color-dune: navajowhite;
   --subsup-col: navajowhite;
-  --text-accent: navajowhite;
 
   --bold-color: #fff;
   --italic-color: #95c1ff;
@@ -1521,7 +1527,6 @@ body.col-mod-f.theme-dark {
 
   --link-color-dune: navajowhite;
   --subsup-col: navajowhite;
-  --text-accent: navajowhite;
 
   --bold-color: #fff;
   --italic-color: #efb36b;
@@ -1884,6 +1889,10 @@ body.is-grabbing *:not(.workspace-leaf-resize-handle) {
     filter: none;
 }
 
+body.is-grabbing .tree-item-self.is-clickable:is(:active, :hover) {
+    border-bottom: 2px solid transparent;
+}
+
 body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
     background: var(--background-primary);
@@ -1892,14 +1901,12 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
 body:not(.is-grabbing).theme-light .tree-item-self.is-clickable:hover {
     color: hwb(var(--header-cco) 40%);
     text-shadow: 0 0 hwb(var(--header-cco) 50%);
-    padding-bottom: 2px;
     border-bottom: 2px solid var(--text-accent);
     border-radius: 0;
 }
 
 body:not(.is-grabbing).theme-dark .tree-item-self.is-clickable:hover {
     color: navajowhite;
-    padding-bottom: 2px;
     border-bottom: 2px solid var(--text-accent);
     border-radius: 0;
 }
@@ -1908,7 +1915,6 @@ body:not(.is-grabbing).theme-dark .tree-item-self.is-clickable:hover {
 .tree-item-self:not(.is-being-dragged).is-clickable.is-active,
 .tree-item-self.is-clickable.is-active:hover {
     background: var(--background-primary);
-    padding-bottom: 2px;
     border-bottom: 2px solid var(--text-accent);
     border-radius: 0;
 }
@@ -1921,13 +1927,16 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
     color: var(--text-normal);
 }
 
+.tree-item-self:not(.is-phone).is-clickable:hover,
+.tree-item-self:not(.is-phone).is-active:hover,
+.tree-item-self:not(.is-phone).is-active {
+    padding-bottom: 2px;
+}
+
 .is-phone .tree-item-self.is-clickable:hover,
-.is-phone .tree-item .nav-file-title.is-clickable:hover,
 .is-phone .tree-item-self.is-active:hover,
 .is-phone .tree-item-self.is-active {
     padding-bottom: 4px;
-    border-bottom: 2px solid var(--text-accent);
-    border-radius: 0;
 }
 
 .is-phone .tree-item-self:not(:hover) {
@@ -2094,6 +2103,10 @@ body:not(.is-phone).is-focused .view-header:hover .view-header-title {
 .is-phone button.view-action.clickable-icon.mod-left-split-toggle.mod-tappable {
     width: 0;
     visibility: hidden;
+}
+
+body:not(.show-action-bar).is-phone .view-actions:not(:active, :hover) {
+    opacity: 0.2;
 }
 
 /* F&R - Footer&Header */
@@ -2535,55 +2548,55 @@ body:not(.is-mobile, .show-ui-btns) .workspace-drawer-vault-name:not(:hover) {
 
 body.study-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F50D';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.design-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F3A8';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.work-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F4D0';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.promo-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F4E2';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.profit-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F4B0';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.health-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F496';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.recipes-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F37D';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.music-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F3B5';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
 body.game-prof:is(.is-mobile) .workspace-drawer.mod-left .workspace-drawer-header-name::before {
     content: '\1F579';
-    transform: scale(1.4) translate(2px, 2px);
+    transform: scale(1.4) translate(2px, 4px);
     margin-right: 8px;
 }
 
@@ -2922,11 +2935,13 @@ body:not(.is-phone).theme-light .setting-item-control input[type='text'] {
 
 .markdown-rendered button.copy-code-button {
     font-size: 0;
-    top: -4px;
-    margin: 4px 0 0 0;
     content: "";
     box-shadow: none;
     position: absolute;
+}
+
+body:not(.is-phone) .markdown-rendered button.copy-code-button {
+    transform: translate(12px, -12px) scale(0.8);
 }
 
 body:not(.is-phone) span.code-block-flair :is(svg.svg-icon.lucide-copy) {
@@ -2934,12 +2949,12 @@ body:not(.is-phone) span.code-block-flair :is(svg.svg-icon.lucide-copy) {
     position: relative;
 }
 
-.markdown-rendered button.copy-code-button::after {
+body:not(.is-phone) .markdown-rendered button.copy-code-button::after {
     content: var(--copy-btn-icon);
     opacity: 0.5;
 }
 
-.markdown-rendered button.copy-code-button:hover::after {
+.markdown-rendered button.copy-code-button:is(:active, :hover)::after {
     opacity: 1;
 }
 
@@ -2947,53 +2962,28 @@ body:not(.is-phone) span.code-block-flair :is(svg.svg-icon.lucide-copy) {
     filter: invert(1);
 }
 
-pre.language-br button.copy-code-button {
+pre.language-br button.copy-code-button,
+.markdown-rendered :is(pre[class^="language-wave"], pre[class="language-br"])>button.copy-code-button {
     display: none;
 }
 
-/* phone */
-body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button:not(:active, :hover) {
-    transform: scale(0.4);
-}
-
-body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button:not(:active, :hover)::after {
-    opacity: 0;
-}
-
-body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
-    height: 30px;
-    width: 30px;
-}
-
-.is-phone .markdown-source-view.mod-cm6 .edit-block-button {
-    opacity: 1;
-    background: var(--button-background);
-    color: var(--light-tone);
-    top: 0px;
-    right: 4px;
-}
-
-.is-phone .markdown-rendered button.copy-code-button::after {
-    position: relative;
-    top: 4px;
-}
-
-.is-phone .markdown-source-view.mod-cm6 .code-block-flair {
-    right: 0;
-}
-
-.is-mobile .markdown-rendered :is(pre[class^="language-wave"], pre[class="language-br"])>button.copy-code-button {
-    display: none;
-}
-
-.theme-dark.is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
+.theme-dark .markdown-rendered button.copy-code-button:not(:active, :hover) {
     background-color: rgb(128 128 128 / 80%);
 }
 
-.theme-light.is-mobile .markdown-rendered button.copy-code-button:not(:active, :hover) {
+.theme-light .markdown-rendered button.copy-code-button:not(:active, :hover) {
     background-color: rgb(197 197 197 / 80%);
 }
 
+/* phone */
+.is-phone .markdown-rendered button.copy-code-button {
+    top: -4px;
+    margin: 4px 0 0 0;
+}
+
+.is-phone .markdown-rendered button.copy-code-button:not(:active, :hover) {
+    scale: 0.6;
+}
 
 /* --------------------------------------------
   collapse indicators 
@@ -3006,9 +2996,9 @@ body:not(.hide-cp-btn).is-phone .markdown-rendered button.copy-code-button {
 }
 
 .markdown-source-view .cm-fold-indicator .collapse-indicator {
-    max-height: 20px;
-    scale: 1.4;
-    transform: translateY(4px);
+    max-height: 28px;
+    min-height: 28px;
+    scale: 1.6;
 }
 
 body:not(.is-phone) .markdown-preview-view .heading-collapse-indicator {
@@ -3097,6 +3087,7 @@ body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container 
 .multi-select-pill,
 .multi-select-pill:hover {
     background-color: transparent;
+    padding: 0;
 }
 
 .multi-select-pill-content {
@@ -3142,7 +3133,47 @@ body:not(.show-prop) .markdown-preview-view.show-properties .metadata-container 
 /*----------------------------------------------------------------
   HEADERS
   ----------------------------------------------------------------*/
-  .inline-title {
+
+body:not(.short-Hs) .cm-formatting.cm-formatting-header:is(.cm-formatting-header-1.cm-header.cm-header-1,
+    .cm-formatting-header-2.cm-header.cm-header-2,
+    .cm-formatting-header-3.cm-header.cm-header-3,
+    .cm-formatting-header-4.cm-header.cm-header-4,
+    .cm-formatting-header-5.cm-header.cm-header-5,
+    .cm-formatting-header-6.cm-header.cm-header-6) {
+    font-size: 0px !important;
+ }
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header:before {
+    color: var(--text-faint);
+    font-size: 20px;
+    margin-right: 1.4rem;
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-1:before {
+    content: "H1";
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-2:before {
+    content: "H2";
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-3:before {
+    content: "H3";
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-4:before {
+    content: "H4";
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-5:before {
+    content: "H5";
+}
+
+body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header-6:before {
+    content: "H6";
+}
+
+.inline-title {
     color: var(--text-accent-special);
     font-size: 1.4em;
 }
@@ -4473,14 +4504,8 @@ span.cm-inline-code {
     color: var(--code-color) !important;
 }
 
-/* Style code-block */
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-light pre:not(pre[class*="language-"]) {
-    min-width: var(--min-boxwidth);
-}
-
 /* smaller boxes */
-.markdown-rendered pre:not(pre[class*="language-"]) {
+.markdown-rendered pre:not(pre[class*="language-"], .is-phone) {
     width: fit-content;
 }
 
@@ -4561,6 +4586,17 @@ blockquote p {
 .indent-p p,
 .indent-p .markdown-source-view .cm-line:not(.HyperMD-header.cm-line) {
     text-indent: var(--indent-l);
+}
+
+/* formatting codeblocks */
+.HyperMD-codeblock {
+    white-space: nowrap;
+}
+
+.markdown-preview-view code[class*="language-"] {
+    overflow-x: scroll;
+    white-space: pre;
+    padding: 14px 0px;
 }
 
 /* prevent code comments to break - check performance */
@@ -6203,7 +6239,7 @@ body:not(.is-phone) .recipes table {
   STYLED TABLES
   --------------------------------------------*/
 
-  /* remove superflous top space */
+/* remove superflous top space */
 .markdown-source-view .el-table {
     margin-top: -1em;
 }
@@ -6633,31 +6669,31 @@ img[alt~="frame-b"] {
     margin: 0;
 }
 
-.capt-10 .image-embed[src*="#cap"]::after {
+.capt-10 .image-embed[src*="#cap"]::before {
     width: 100px;
 }
 
-.capt-15 .image-embed[src*="#cap"]::after {
+.capt-15 .image-embed[src*="#cap"]::before {
     width: 150px;
 }
 
-.capt-20 .image-embed[src*="#cap"]::after {
+.capt-20 .image-embed[src*="#cap"]::before {
     width: 200px;
 }
 
-.capt-25 .image-embed[src*="#cap"]::after {
+.capt-25 .image-embed[src*="#cap"]::before {
     width: 250px;
 }
 
-.capt-30 .image-embed[src*="#cap"]::after {
+.capt-30 .image-embed[src*="#cap"]::before {
     width: 300px;
 }
 
-.capt-35 .image-embed[src*="#cap"]::after {
+.capt-35 .image-embed[src*="#cap"]::before {
     width: 350px;
 }
 
-.capt-40 .image-embed[src*="#cap"]::after {
+.capt-40 .image-embed[src*="#cap"]::before {
     width: 400px;
 }
 
@@ -6667,11 +6703,10 @@ img[alt~="frame-b"] {
     background: var(--rev-fontcol);
     font-size: smaller;
     position: absolute;
-    white-space: nowrap;
     border-radius: 4px;
     padding-left: 4px;
     padding-right: 4px;
-    z-index: 8;
+    z-index: 2;
     bottom: 4px;
     overflow: visible;
 }
@@ -6681,18 +6716,8 @@ img[alt~="frame-b"] {
     display: inline-block;
 }
 
-.is-phone .image-embed[src*="#cap"]::after {
+.is-phone .image-embed[src*="#cap"]::before {
     padding: 0 4px;
-}
-
-.is-phone .markdown-source-view .image-embed[src*="#cap"]::after,
-.is-phone .markdown-preview-view .image-embed[src*="#cap"]::after {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.callout[data-callout=moodboard] .image-embed[src*="#cap"]::after {
-    margin-top: auto;
 }
 
 
@@ -7468,11 +7493,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         background-color: #ede4b7 !important;
     }
 
-    .markdown-rendered blockquote {
-        width: fit-content;
-    }
-
-
     a.internal-link:not(h1, h1 a, h1 em, h2, h2 a, h2 em, h3, h3 a, h3 em, h4, h4 a, h4 em, h5, h5 a, h5 em, h6, h6 a, h6 em) {
         color: inherit;
     }
@@ -7560,10 +7580,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 
     .markdown-preview-view pre {
         background-color: white;
-    }
-
-    .markdown-rendered blockquote {
-        width: fit-content;
     }
 
     input[type=checkbox]:checked {
@@ -7688,10 +7704,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
 
     .image-embed {
         padding: 0 auto;
-    }
-
-    .markdown-rendered blockquote {
-        width: auto;
     }
 
     /* phone */
@@ -8127,11 +8139,11 @@ body:not(.is-phone) .style-settings-collapse-indicator {
     padding-bottom: 0;
 }
 
+.is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="0"],
 .is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="2"],
 .is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="3"],
 .is-phone .setting-item.setting-item-heading.style-settings-heading[data-level="4"] {
-    padding: inherit;
-    margin-top: 0.5em;
+    padding: 4px 0;
     margin-bottom: 0;
 }
 
