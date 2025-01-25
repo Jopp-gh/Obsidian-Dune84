@@ -1328,7 +1328,6 @@ body.theme-dark {
 }
 
 /* Flat theme */
-body.col-mod-0 .theme-light,
 body.col-mod-0.theme-light {
   --light-base-c: #433721;
 
@@ -1342,7 +1341,6 @@ body.col-mod-0.theme-light {
   --text-selection: var(--text-selection-c);
 }
 
-body.col-mod-1 .theme-dark,
 body.col-mod-1.theme-dark {
   --dark-base-c: #F3F2E9;
 
@@ -1356,9 +1354,7 @@ body.col-mod-1.theme-dark {
   --text-selection: var(--text-selection-c);
 }
 
-body.col-mod-0 .theme-light,
 body.col-mod-0.theme-light,
-body.col-mod-1 .theme-dark,
 body.col-mod-1.theme-dark {
   --text-accent: var(--color-accent);
   --button-background: var(--interactive-accent);
@@ -1394,7 +1390,6 @@ body.col-mod-1.theme-dark {
 }
 
 /* Color Models */
-body.col-mod-a .theme-light,
 body.col-mod-a.theme-light {
   --header-col: #3f78a4;
   --header-cco: 206 25%;
@@ -1417,7 +1412,6 @@ body.col-mod-a.theme-light {
   --prefs-shadow: transparent;
 }
 
-body.col-mod-b .theme-light,
 body.col-mod-b.theme-light {
   --header-col: #cc8f39;
   --header-cco: 35 22%;
@@ -1440,7 +1434,6 @@ body.col-mod-b.theme-light {
   --prefs-shadow: transparent;
 }
 
-body.col-mod-c .theme-light,
 body.col-mod-c.theme-light {
   --header-col: #b64a36;
   --header-cco: 9 21%;
@@ -1464,7 +1457,6 @@ body.col-mod-c.theme-light {
 }
 
 /* dark */
-body.col-mod-d .theme-dark,
 body.col-mod-d.theme-dark {
   --header-col: orange;
   --header-cco: 39 0%;
@@ -1487,7 +1479,6 @@ body.col-mod-d.theme-dark {
   --prefs-shadow: transparent;
 }
 
-body.col-mod-e .theme-dark,
 body.col-mod-e.theme-dark {
   --header-col: hsl(43, 63%, 62%);
   --header-cco: 43 43%;
@@ -1510,7 +1501,6 @@ body.col-mod-e.theme-dark {
   --prefs-shadow: transparent;
 }
 
-body.col-mod-f .theme-dark,
 body.col-mod-f.theme-dark {
   --header-col: #ff824d;
   --header-cco: 18 30%;
