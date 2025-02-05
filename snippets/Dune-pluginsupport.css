@@ -11,12 +11,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: show-dataview-blocks
-    title: Dataview max block height
-    description: Author ~ Blacksmithgu
-    type: class-toggle
-    default: false
-  -
     id: show-kanban
     title: Kanban 
     description: Author ~ mgMeyers
@@ -73,15 +67,6 @@ settings:
     default: false
 */
 
-/* 
-  -
-    id: show-time-ruler
-    title: Time Ruler 
-    description: Author ~ Joshua Tazman
-    type: class-toggle
-    default: false
-*/
-
 /*----------------------------------------------------------------
 Dune PLUGIN SUPPORT
 ----------------------------------------------------------------*/
@@ -113,6 +98,9 @@ cal - Do 3. Okt 14:03:51 CEST 2024
   color: red;
 }
 
+th.svelte-pcimu8:nth-child(odd) {
+  color: darkgoldenrod;
+}
 
 /* 
 Full Calendar 
@@ -129,23 +117,20 @@ Full Calendar
 
 
 /* 
-dataview - Do 16. Jan 20:00:54 CET 2025
+dataview - Do 3. Okt 14:03:00 CEST 2024 
 */
-
-th.svelte-pcimu8:nth-child(odd) {
-  background-color: var(--table-header-border-color);
-  color: navajowhite;
-}
 
 table.dataview.table-view-table th,
 table.dataview.table-view-table thead tr>th:nth-child(2n+2) {
   color: revert;
-  background: revert;
+  /* background: revert; */
 }
 
-.today.svelte-q3wqg9 {
+.dataview.markdown-rendered blockquote,
+.theme-dark .cm-s-obsidian span.cm-quote :not(mark) .today.svelte-q3wqg9 {
   font-weight: bold;
 }
+
 
 /* head transparent */
 .show-dataview .block-language-dataview progress {
@@ -156,10 +141,6 @@ table.dataview.table-view-table thead tr>th:nth-child(2n+2) {
 .show-dataview .block-language-dataview th.table-view-th {
   text-align-last: justify;
 }
-
-/* body:is(.uniform-width).show-dataview .block-language-dataview .table-view-table {
-  width: 100%;
-} */
 
 /* spacing */
 .show-dataview .callout .block-language-dataview table {
@@ -183,24 +164,6 @@ table.dataview.table-view-table thead tr>th:nth-child(2n+2) {
   border-top-right-radius: 0px;
 }
 
-/* limit max height if not hover */
-.show-dataview-blocks .block-language-dataview.node-insert-event:not(:hover) {
-  height: 14vh;
-}
-
-.show-dataview-blocks .block-language-dataview.node-insert-event:hover {
-  animation: shutter 0.2s ease-out;
-}
-
-@keyframes shutter {
-  from {
-    height: 14vh;
-  }
-
-  to {
-    height: 25vh;
-  }
-}
 
 /* 
 kanban - Do 3. Okt 14:02:20 CEST 2024 
@@ -290,19 +253,6 @@ HK code styler - Do 3. Okt 14:01:35 CEST 2024
   display: block;
 }
 
-/* 
-Excalidraw
-uses its own dark theme
-*/
-/* .theme-light .excalidraw .dropdown-menu .dropdown-menu-container,
-.theme-light .excalidraw .sidebar-tabs-root,
-.theme-light .excalidraw .App-menu__left,
-.theme-light .excalidraw .App-toolbar,
-.theme-light .excalidraw .Island {
-  background: var(--background-primary);
-} */
-
-/* , [class*="fade"], [class*="wave"], [class*="trenner"], [class*="deko"] */
 /*------------------------------------------------------
  MOBILE
 ------------------------------------------------------*/
