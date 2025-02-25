@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* @settings
 
-name: DUNE - mermaid
+name: DUNE-mermaid
 id: mermaid-joval-theme
 settings:
   -
@@ -393,7 +393,7 @@ settings:
 */
 
 
-body.theme-light {
+.theme-light {
   --text-normal: #433721;
   --mer-text: #000000;
   --mer-rect-1: #add8e6;
@@ -441,7 +441,7 @@ body.theme-light {
   --persons-bg: rgba(0, 0, 0, 0.04)
 }
 
-body.theme-dark {
+.theme-dark {
   --text-normal: #f3f2e9;
   --mer-text: #FFFFFF;
   --mer-rect-1: #add8e6;
@@ -746,11 +746,6 @@ body.theme-dark {
   filter: hue-rotate(-210deg) !important;
 }
 
-/* C4Context */
-/* .mermaid rect:not(.note, .section, .task, .basic, .branchLabelBkg, .actor, .fork-join, .entityBox, .commit-label, .commit-label-bkg, .quadrant rect, .person-man rect, .node rect, .activation0, .activation1, .activation2, .attributeBoxOdd, .attributeBoxEven, .relationshipLabel, .legend rect, .reqLabelBox) {
-  fill: var(--persons-bg);
-} */
-
 /* fixed colors */
 /* gantt */
 .theme-dark .mermaid rect:is(.done0, .done1, .done2, .done3) {
@@ -803,44 +798,44 @@ Pdf
 */
 @media print {
 
-  .mermaid .edgeLabel {
+  .print .mermaid .edgeLabel {
     color: black !important;
   }
 
-  .mermaid .node path,
-  .mermaid .node polygon,
-  .mermaid .node circle,
-  .mermaid rect.reqLabelBox {
+  .print .mermaid .node path,
+  .print .mermaid .node polygon,
+  .print .mermaid .node circle,
+  .print .mermaid rect.reqLabelBox {
     fill: #a8cce7 !important;
   }
 
-  .mermaid .node rect,
-  .mermaid rect.basic.label-container,
-  .mermaid :is(rect.req.reqBox, rect.actor) {
+  .print .mermaid .node rect,
+  .print .mermaid rect.basic.label-container,
+  .print .mermaid :is(rect.req.reqBox, rect.actor) {
     fill: #e8e8e8 !important;
   }
 
-  .mermaid rect.er.attributeBoxOdd {
+  .print .mermaid rect.er.attributeBoxOdd {
     fill: white !important;
   }
 
-  .mermaid .cluster rect {
+  .print .mermaid .cluster rect {
     fill: rgba(150, 150, 150, 0.2) !important;
   }
 
-  .mermaid .person-man rect {
+  .print .mermaid .person-man rect {
     filter: brightness(2.4) saturate(0.4) !important;
   }
 
-  .mermaid path.pieCircle {
+  .print .mermaid path.pieCircle {
     stroke: transparent !important;
   }
 
-  .mermaid circle.pieOuterCircle {
+  .print .mermaid circle.pieOuterCircle {
     stroke: white !important;
   }
 
-  .mermaid span.edgeLabel {
+  .print .mermaid span.edgeLabel {
     background: white !important;
   }
 }
