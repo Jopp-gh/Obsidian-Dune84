@@ -1,4 +1,4 @@
-# CHEATSHEET - CSSCLASSES
+# CHEATSHEET - cssclasses
 cssclasses are case sensitive eg. `Banner-a` ≠ `banner-a`
 
 <br>
@@ -8,38 +8,38 @@ cssclasses are case sensitive eg. `Banner-a` ≠ `banner-a`
 ### TABLE ALIGNMENT
 center tables
 
-`cssclass: table-c`
+`cssclasses: table-c`
 
 equally distribuited columns
 
-`cssclass: table-eq`
+`cssclasses: table-eq`
 
 stretch tables
 
-`cssclass: table-wide`
+`cssclasses: table-wide`
 
 headless tables
 
-`cssclass: table-hl`
+`cssclasses: table-hl`
 
 <br>
 
 #### Deutsch
 m = Mitte
 
-`cssclass: tabelle-m`
+`cssclasses: tabelle-m`
 
 gs = gleiche Spalten(weite)
 
-`cssclass: tabelle-gs`
+`cssclasses: tabelle-gs`
 
 weit = ganze Breite
 
-`cssclass: tabelle-weit`
+`cssclasses: tabelle-weit`
 
 kl = kopflos
 
-`cssclass: tabelle-kl`
+`cssclasses: tabelle-kl`
 
 
 <br>
@@ -48,19 +48,19 @@ kl = kopflos
 classic header tint - red / green / blue / monochrome
 
 ```
-cssclass: table-r
-cssclass: table-g
-cssclass: table-b
-cssclass: table-m
+cssclasses: table-r
+cssclasses: table-g
+cssclasses: table-b
+cssclasses: table-m
 ```
 
 double-header tint - red / green / blue / monochrome
 
 ```
-cssclass: table-xyr
-cssclass: table-xyg
-cssclass: table-xyb
-cssclass: table-xym
+cssclasses: table-xyr
+cssclasses: table-xyg
+cssclasses: table-xyb
+cssclasses: table-xym
 ```
 
 <br>
@@ -69,19 +69,19 @@ cssclass: table-xym
 klassische Tabelle
 
 ```
-cssclass: tabelle-r
-cssclass: tabelle-g
-cssclass: tabelle-b
-cssclass: tabelle-m
+cssclasses: tabelle-r
+cssclasses: tabelle-g
+cssclasses: tabelle-b
+cssclasses: tabelle-m
 ```
 
 doppelköpfige Tabelle
 
 ```
-cssclass: tabelle-xyr
-cssclass: tabelle-xyg
-cssclass: tabelle-xyb
-cssclass: tabelle-xym
+cssclasses: tabelle-xyr
+cssclasses: tabelle-xyg
+cssclasses: tabelle-xyb
+cssclasses: tabelle-xym
 ```
 
 <br>
@@ -89,38 +89,38 @@ cssclass: tabelle-xym
 ### TABLE HIGHLIGHTS
 highlight first column
 
-`cssclass: table-fc`
+`cssclasses: table-fc`
 
 highlight last column
 
-`cssclass: table-lc`
+`cssclasses: table-lc`
 
 highlight alternate columns
 
-`cssclass: table-alt`
+`cssclasses: table-alt`
 
 highlight last row
 
-`cssclass: table-lr`
+`cssclasses: table-lr`
 
 <br>
 
 #### Deutsch
 es= erste Spalte
 
-`cssclass: tabelle-es`
+`cssclasses: tabelle-es`
 
 ls = letzte Spalte
 
-`cssclass: tabelle-ls`
+`cssclasses: tabelle-ls`
 
 alt = alternierend
 
-`cssclass: tabelle-alt`
+`cssclasses: tabelle-alt`
 
 letzte Reihe
 
-`cssclass: tabelle-lr`
+`cssclasses: tabelle-lr`
 
 
 <br>
@@ -128,15 +128,15 @@ letzte Reihe
 ### SPECIAL TABLES
 Contacts
 
-`cssclass: contacts`
+`cssclasses: contacts`
 
 Recipes
 
-`cssclass: recipes`
+`cssclasses: recipes`
 
 Movies
 
-`cssclass: movies`
+`cssclasses: movies`
 
 
 
@@ -145,9 +145,9 @@ Movies
 ## FONTS
 change font family of your active note
 
-`cssclass: ftheme-1`
-`cssclass: ftheme-2`
-`cssclass: ftheme-3`
+`cssclasses: ftheme-1`
+`cssclasses: ftheme-2`
+`cssclasses: ftheme-3`
 
 
 
@@ -157,15 +157,15 @@ change font family of your active note
 
 ### BANNER
 top
-`cssclass: banner-a` and `![[image.png|banner-a]]`
+`cssclasses: banner-a` and `![[image.png|banner-a]]`
 bottom
-`cssclass: banner-b` and `![[image.png|banner-b]]`
+`cssclasses: banner-b` and `![[image.png|banner-b]]`
 everywhere 
 `![[image.png|banner-m]]`
 
 ### Simple image descriptions
-cssclass: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`
+cssclasses: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`
 
 ### Simple Image grid 
 
-Cssclass: `grid-10`, `grid-20`, `grid-30`, `grid-40`, `grid-15`, `grid-25`, `grid-35`, `grid-45`
+cssclasses: `grid-10`, `grid-20`, `grid-30`, `grid-40`, `grid-15`, `grid-25`, `grid-35`, `grid-45`
