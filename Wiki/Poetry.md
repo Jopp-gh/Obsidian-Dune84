@@ -19,6 +19,7 @@ Choose how your **first letter**, your **Initial**, looks:
 - to change fonts, go to **Style Settings>Dune>Fonts>Typesets>2 - Poetry** 
 - to change font colors for poetry, go to  **Style Settings>Dune>Colors>Extra Colors>Initial (Poetry)**
 
+>[!tip]
 >You can add typesettings to notes in **Preview View** if you add one of the following cssclasses: `ftheme-1`, `ftheme-2`, `ftheme-3`, `ftheme-4`
 
 <br>
@@ -40,4 +41,4 @@ these are pretty delimiters to divide chapters, relax paragraphs or to add a lit
 <br>
 
 ---
-[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
+[Back to ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
