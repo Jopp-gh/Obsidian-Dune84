@@ -2,6 +2,9 @@
 
 ## Folders Icons
 
+>[!important]
+>This companion plugin is obsolete by now. I wrote **Folders Icons** years ago, to add icons to folders in absence of suitable plugins. You can still use **Folders Icons** if you want, but I recommend you to download and use the community plugin **Iconic** by Holo
+
 to use **folder icons**, *add special keywords* to folder names, eg. `Project`, `Area`, `Resources`, `Archive`
 
 ### Usage
