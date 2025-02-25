@@ -1,7 +1,6 @@
 # Dune
 ![promo–gh](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8bbcf942-3fc9-4d92-a0b5-952e9faa5182)
 
-
 ## 🔍 Jump
 - [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#first-steps)
 - [Features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
@@ -23,11 +22,11 @@ Please support this project! Check out [Dune Gold](https://buymeacoffee.com/jopp
 <br>
 
 ### 🔑 Motivation
-The reason why I share my theme with you is that I'm interested to connect with other, like-minded people.
+The reason why I share my theme is because I'm interested to connect with like-minded people.
 
-_to connect with each other is like to connect useful and interesting data in Obsidian to get new, inspiring and awesome insights!_
+_to connect with each other is like to connect useful and interesting data in Obsidian to get grow new inspiring and awesome insights!_
 
-Feel free to contact me and _Private Message_ `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433). My interests are related to:
+Feel free to  _Private Message_ `Jopp` on [Forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433). My interests are related to:
 
 ```
 - #architecture,
@@ -48,7 +47,7 @@ Feel free to contact me and _Private Message_ `Jopp` on [Forum.obsidian.md](http
 
 1. **to display "Dune" correctly** and to get the preferences added by my theme, get [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
 2. Dune offers a **clean, clutter-free experience**, so most buttons are semi-hidden by default (desktop). Open `Settings>Style Settings>Dune>Show` if you want re-enable buttons / tabs and restore default looks of Obsidian. 
-3. download Dune's **Mermaid theme**, **Folder Icons** and tweaks for **supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of plugins tweaked for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
+3. download Dune's **Mermaid theme** and tweaks for **supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of plugins tweaked for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
 5. get a complete overview of Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
 <br>
@@ -70,13 +69,14 @@ Feel free to contact me and _Private Message_ `Jopp` on [Forum.obsidian.md](http
 ### 📎 Plugins
 
 _PC_
-- Dataview (Michael Brenan)
-- Kanban (mgmeyers)
 - Calendar (Liam Cain)
-- Full Calendar (Davis Haupt)
-- Time ruler (Joshua Tazman)
-- Advanced Tables (Tony Grosinger)
+- Commander (Jonny & phibr0)
+- Dataview (Michael Brenan)
 - Dice roller (Jeremy Valentine)
+- Full Calendar (Davis Haupt)
+- HKcode Styler (Heekang Park)
+- Kanban (mgmeyers)
+- QuickAdd (BB.Houmann)
 
 _MOBILE_
 - Obsidian Camera
@@ -114,18 +114,18 @@ inspiration from following sources:
 
 Support me, if you like what you get  :)
 
- **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. But this takes a lot of time and effort too. Let's make this world a better place and start to support benefactors to become in turn, benefactors ourselves. 
+ **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. But projects like this take a lot of time and effort. Let's make this world a better place and start to support benefactors to become in turn, benefactors ourselves. 
 
 So…would you be so nice to support me with a breakfast or lunch ? :) <br>
-To support this project and honor the continuous work behind Dune, check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras). Dune-Silver(the free version) is already loaded with a lot of goodies, but offers only half the features of Dune-Gold.
+Another way to support this project and honor the continuous work behind Dune, is to check out [Dune Gold](https://buymeacoffee.com/jopp.gh/extras). Dune-Silver (the free version) is already loaded with a lot, but offers only half the features of Dune-Gold.
+
+<br>
 
 <a href="bmc_qr"><img src="https://github.com/user-attachments/assets/b25d85d8-345d-43b7-aef7-a97ea9e2bded" align="left" height="150" width="150" ></a>
 
 <br><br>
 <br><br>
 <br><br>
-<br><br>
-
 
 ### 👔 Collaboration
 **thanks for your interest in my theme**. Right now I'm looking for people interested to :
