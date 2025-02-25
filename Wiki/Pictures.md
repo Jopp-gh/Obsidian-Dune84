@@ -3,7 +3,7 @@
 
 ```
 ---
-cssclass: banner-a,
+cssclass: banner-a
 ---
 ```
 `![[picture.jpg | banner-a]]`
@@ -21,7 +21,7 @@ there are 3 banner types:
 to insert a top or bottom -page banner, choose a banner type (eg `cssclasses: banner-a` or `cssclasses: banner-b`) to reserve a top/bottom spot, then add the same tag `banner-a` to your image metadata, eg. `![[picture.jpg | banner-a]]` to transform your image into a banner.
 Banner `banner-m` doesn't need a cssclass, just add `![[picture.jpg | banner-m]]` to your picture. 
 
->Note :
+>[!Note]
 >to get **bottom banners** working, put your image at bottom page, so Obsidian and Dune know where to load your banner. Do not put a footer banner `![[picture.jpg | banner-b]]` at top page, unless your note is very short.
 
 <br>
@@ -45,6 +45,8 @@ If your top banner looks truncated, you can use **b**anner **c**oordinates:
 
 `![[Pict.png | portrait]]`, `![[Pict.png|avatar]]`,  `![[Pict.png|round]]`
 
+shape and resize your pictures as you like.
+
 **Deutsch**: `![[bild.png|rund]]`
 
 
@@ -54,7 +56,7 @@ If your top banner looks truncated, you can use **b**anner **c**oordinates:
 
 `![[Pict.png | pos-l]]`, `![[Pict.png | pos-r]]`, `![[Pict.png | pos-c]]`
 
-place your images on the **Left**, **Right** or at the **Center** of your note
+place your images on your **Left**, **Right** or at the **Center** of your note
 
 <br>
 
@@ -76,8 +78,8 @@ Change picture frame colors under **Style Settings>Dune>Pictures>Picture frames*
 
 **Cssclass**: `grid-10, grid-20, grid-30, grid-40, grid-15, grid-25, grid-35, grid-45`
 
-Perfect to arrange any pictures on your page. Pictures will use all the same height and keep the full aspect ratio.
-Just throw in all your images and forget to fiddle around with spacings or new line breaks between images. 
+Perfect to arrange any pictures on your page. All pictures will use the same height and keep their full aspect ratio.
+Just throw in all your images and forget about spacings or new line breaks between images. 
 
 <br>
 
@@ -90,8 +92,7 @@ Just throw in all your images and forget to fiddle around with spacings or new l
 
 **Deutsch**: `![[bild.png | rahmen-a]]`, `![[bild.png | rahmen-b]]`
 
-To apply beautiful frames, you need to use a online url pointing to a png frame. Unfortunately, Obsidian restricts users from loading local images into **Style Settings** for security issues. 
-Sidenote. 
+To apply beautiful frames, you have to use a online url pointing to a png frame. Unfortunately, Obsidian restricts users from loading local images into **Style Settings** for security issues.  
 
 <br>
 
@@ -118,7 +119,7 @@ place your images, add a picture frame and description.
 
 `![[Pict.png#cap|capture]]`
 
-you can adjust the max width of "simple descriptions" by adding following cssclass: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`. 
+you can adjust the max width of "simple descriptions" by adding cssclasses: `capt-10`, `capt-15`, `capt-20`, `capt-25`, `capt-30`, `capt-35`, `capt-40`. 
 `capt-10` means max string width is 100px. 
 
 <br>
@@ -136,4 +137,4 @@ you can adjust the max width of "simple descriptions" by adding following csscla
 
 
 ---
-[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
+[Back to ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
