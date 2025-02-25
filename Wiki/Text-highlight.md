@@ -33,7 +33,8 @@
 
 >red, green, blue - highlight
 
-**Deutsch** `#rot`, `#grün`,`#blau`,`#grau`
+**Deutsch** 
+`#rot`, `#grün`,`#blau`,`#grau`
 
 
 <br>
@@ -51,9 +52,10 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `#-spoiler ==Words==`
 
->read hidden text on hover (desktop) or touch (mobile)
+>redact text - view on hover (desktop) or touch (mobile)
 
-**Deutsch** `#-geheim ==Words==`
+**Deutsch** 
+`#-geheim ==Words==`
 
 
 <br>
@@ -63,7 +65,7 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `#-tips ==Words Words Words Words Words==`
 
->redact text - view on hover (desktop) or touch (mobile)
+>read hidden text on hover (desktop) or touch (mobile)
 
 <br>
 
@@ -74,7 +76,8 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `my #cite-br ==citation==`, `my #cite-de ==citation==`, `my #cite-fr ==citation==`
 
-**Deutsch** `mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
+**Deutsch**
+`mein #zitat-de ==Zitat==`, `mein #zitat-br ==Zitat==`, `mein #zitat-fr ==Zitat==`
 
 <br>
 
@@ -94,7 +97,8 @@ Words `#sup ==sup==` Words `#sub ==sub==`
 
 `#line-c` may be a quicker solution for mobile users than adding the default shortcut key double tilde, eg. `~~Words~~`
 
-**Deutsch** `#strich-a`, `#strich-b`, `#strich-c`
+**Deutsch** 
+`#strich-a`, `#strich-b`, `#strich-c`
 
 <br>
 
@@ -110,9 +114,11 @@ open Obidians `Dune>Fonts>Text layout>Indent line` to specify your indentation d
 <br>
 <img src="https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/2c9746d2-1add-4c51-beb2-683b34f78fb6" alt="indent–01" width="900">
 
-**Options**`#indent ==Text==`
+**Options**
+`#indent ==Text==`
 
-**Deutsch**`#einzug ==Text==`
+**Deutsch**
+`#einzug ==Text==`
 
 <br>
 
@@ -120,8 +126,6 @@ open Obidians `Dune>Fonts>Text layout>Indent line` to specify your indentation d
 #### [Text blocks - smaller & larger](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#word-blocks---small--large)
 
 #### [Multiple line breaks](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Callouts.md#multiple-line-breaks)
-
-#### [Small columns in gutter](https://github.com/Jopp-gh/Obsidian-Dune84/edit/main/Wiki/Callouts.md#columns-in-gutter)
 
 <br>
 <br>
@@ -212,4 +216,4 @@ simple delimiter to divide chapters or paragraphs. If you want beautiful delimit
 ````
 
 ---
-[go back to the ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
+[Back to ReadMe](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main)
