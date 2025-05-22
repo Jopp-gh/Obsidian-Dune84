@@ -929,6 +929,14 @@ settings:
     type: class-toggle
     default: true
   -
+    id: codeblock-dev
+    title: Codeblocks full length
+    title.de: Befehlszeilen ganze Länge
+    description: for developers
+    description.de: Für Entwickler
+    type: class-toggle
+    default: false
+  -
     id: show-textHL
     title: Line highlight
     title.de: Zeilenmarkierung
@@ -4582,7 +4590,7 @@ blockquote p {
 }
 
 /* formatting codeblocks */
-body:not(.is-phone).HyperMD-codeblock {
+.codeblock-dev:not(.is-phone).HyperMD-codeblock {
     white-space: nowrap;
 }
 
@@ -4732,6 +4740,12 @@ div[data-callout="multi-column"].callout:not(.is-collapsed) {
 div[data-callout="mehrspaltig"] .callout,
 div[data-callout="multi-column"] .callout {
     width: auto;
+}
+
+div[data-callout="mehrspaltig"].callout:not(.is-collapsed),
+div[data-callout="multi-column"] .callout-content p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* === Blank Container "DIV"'s - can be used with Main Multi-Column layout above === */
@@ -5010,20 +5024,15 @@ body:not(.is-phone) .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
     text-align: center;
     scale: 0.6;
     margin-bottom: auto;
-}
-
-.is-phone .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
-    padding-bottom: 0.5em;
-    scale: 0.6;
-    margin: 0;
+    max-width: 16vw;
 }
 
 .markdown-preview-view .callout[data-callout=infobox] p {
-    text-align: center;
     padding-bottom: 6px;
     width: initial;
+    margin-top: 0;
+    max-width: 16vw;
 }
-
 
 /* tables */
 .callout[data-callout=infobox] table {
@@ -5044,17 +5053,6 @@ body:not(.is-phone) .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
     font-size: 12px;
 }
 
-.is-phone .callout[data-callout=infobox] thead th {
-    font-size: 14px;
-}
-
-.is-phone .callout[data-callout=infobox] .callout-content tbody td {
-    font-size: 12px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-
 /* no xy or bold in other tables */
 .callout[data-callout=infobox] tbody tr>td:first-child {
     background: revert !important;
@@ -5068,7 +5066,9 @@ body:not(.is-phone) .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
     pointer-events: none;
     margin: auto;
     padding: 0;
-    max-width: 140px;
+    max-height: max-content;
+    max-width: 10vw;
+    margin-bottom: 10px;
 }
 
 .callout[data-callout=infobox] :is(.internal-embed, img):hover {
@@ -5080,10 +5080,19 @@ body:not(.is-phone) .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
     contain: paint;
 }
 
-
 /* phone */
 .is-phone .callout[data-callout=infobox] {
-    width: 240px;
+    max-width: 12vw;
+}
+
+.is-phone .callout[data-callout=infobox] thead th {
+    font-size: 14px;
+}
+
+.is-phone .callout[data-callout=infobox] .callout-content tbody td {
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .is-phone .markdown-preview-view .callout[data-callout=infobox][data-callout-metadata~="r"] {
@@ -5096,6 +5105,12 @@ body:not(.is-phone) .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
     padding: 8px;
 }
 
+.is-phone .callout[data-callout=infobox] :is(h1, h2, h3, h4, h5, h6) {
+    padding-bottom: 0.5em;
+    scale: 0.6;
+    margin: 0;
+    max-width: 12vw;
+}
 
 /*----------------------------------------------------------------
   ASIDE NOTES
@@ -5900,7 +5915,6 @@ ol {
 table hr {
     margin: 0;
     position: relative;
-    top: 10px;
 }
 
 .cm-active.cm-line table {
@@ -6310,7 +6324,7 @@ body:not(.is-phone) .recipes table {
     margin-top: -1em;
 }
 
-.markdown-preview-view div.el-table {
+.markdown-rendered table {
     margin-top: 0px;
 }
 
@@ -6784,6 +6798,10 @@ img[alt~="frame-b"] {
     border: 1px solid gray;
 }
 
+.markdown-source-view .image-embed[src*="#cap"]::before {
+    display: none;
+}
+
 .image-embed[src*="#cap"] {
     position: relative;
     display: inline-block;
@@ -7061,7 +7079,13 @@ body:not(.show-canvas-ui) .canvas-card-menu:hover,
 body:not(.show-canvas-nl) .canvas-wrapper:not(.mod-readonly) .canvas-node-label {
     opacity: 0;
     transition: opacity 1s ease-out;
+    font-weight: bold;
+    background: gray;
+    color: white;
+    padding: 0 4px;
+    border-radius: 4px;
 }
+
 
 body:not(.show-canvas-nl) .canvas-wrapper:not(.mod-readonly) .canvas-node-label:hover {
     opacity: 1;
@@ -7247,7 +7271,6 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
         --code-value: #94421f;
         --code-color: gray;
     }
-
 
     .print :is(img,
         table,
@@ -7708,6 +7731,11 @@ body:not(.show-graph-btns) .graph-controls.is-close .graph-controls-button.mod-o
     .print code.is-loaded {
         background-color: transparent;
         margin-top: 0;
+    }
+
+    /* break code to fit on pdf */
+    .print .markdown-preview-view pre code {
+        white-space: pre-line;
     }
 
     /* break code to fit into pdf */
@@ -8379,6 +8407,10 @@ body:not(.is-phone) .tree-item.nav-file.recent-files-file {
 
 ul.dataview.list-view-ul {
     margin-top: 0;
+}
+
+.dataview.dataview-container li.task-list-item:not(.is-checked) {
+    text-indent: revert;
 }
 
 
