@@ -20,7 +20,7 @@ The color palette of Dune offers:
 > [!tip]
 > 
 > If you read further, you will discover this theme is not just a color play, but **Dune adds a ton of new features** as well! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
->Please support this project! Get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR) too! 
+>Please support this project! Get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR) too! After receiving your donation, you'll get an email with **Dune Gold**, this includes a 70 pages-long Manual, 3 add-ons and Dune-Gold, the theme.
 
 
 <br>
@@ -118,7 +118,7 @@ inspiration from following sources:
 
 Support me, if you like what you get  :)
 
-To honor the continuous work behind Dune, get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR). Dune-Silver (the free version) is loaded with lots of features, but offers less options than Dune-Gold. If you encounter any errors with donations, please send me a private message on [Jopp](https://forum.obsidian.md/u/jopp/summary)
+To honor the continuous work behind Dune, get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR). Dune-Silver (the free version) is loaded with lots of features, but offers less options than Dune-Gold. After receiving your donation, you'll get an email with **Dune Gold**, this includes a 70 pages-long Manual, 3 add-ons and Dune-Gold, the theme.
 
 <br>
 
