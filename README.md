@@ -9,19 +9,17 @@
 - [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
 ---
-
+### Intro
 My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio). I still enjoy to watch Dune from 1984, - both Frank and David created an epic, evergreen artwork. 
 
-The color palette of Dune offers:
-- **daylight palette** with warm colors: _wood - sand - rosé_,
-- **nighttime palette** with fresh colors: _dusk - midnight - blacky_,  
-- **flat tones** resembling Obsidian's default b/w theme. You can customize both "flat tones" with the colors you like! 
+> Dune's color palette:
+> - **daylight palette** with warm colors: _wood - sand - rosé_,
+> - **nighttime palette** with fresh colors: _dusk - midnight - blacky_,  
+> - **flat tones** resembling Obsidian's default b/w theme. You can customize both "flat tones" with the colors you like! 
 
 > [!tip]
 > 
 > If you read further, you will discover this theme is not just a color play, but **Dune adds a ton of new features** as well! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
->Please support this project! Get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR) too! After receiving your donation, you'll get an email with **Dune Gold**, this includes a 70 pages-long Manual, 3 add-ons and Dune-Gold, the theme.
-
 
 <br>
 
@@ -43,14 +41,26 @@ Apart from developing this theme, feel free to  _Private Message / Direct Messag
 - #world #languages,
 ```
 
+### ⭐ Project
+> Support me, if you like what you get with this project :)
+
+**Dune-Silver** (the free version) is loaded with lots of features, but offers less options than **Dune-Gold**.
+Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
+- 70 pages strong, user-friendly manual,
+- 2 add-ons (Dune Marmaid, Dune Plugin-support)
+- Dune-Gold, the theme.
+
+<a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 144px !important;" ></a>
+
 <br>
 
 ### 📋 First steps
 
-1. **to display "Dune" correctly** and to change all preferences added by my theme, install the community plugin [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
-2. Dune offers a **clean, clutter-free experience**. Open `Settings>Style Settings>Dune>Show` if you want re-enable buttons / tabs and restore default looks of Obsidian. 
-3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of tweaked plugins for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
-4. I highly reccomend to download Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
+> [!important]
+> 1. **to display "Dune" correctly** and to change all preferences added by my theme, install the community plugin [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
+> 2. Dune offers a **clean, clutter-free experience**. Open `Settings>Style Settings>Dune>Show` if you want re-enable buttons / tabs and restore default looks of Obsidian. 
+> 3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of tweaked plugins for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
+> 4. I highly reccomend to download Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
 <br>
 
@@ -85,7 +95,7 @@ _MOBILE_
 
 <br>
 
-## ❤️ Thanks
+### ❤️ Thanks
 
 - **[Sailkite](https://github.com/sailKiteV)**
 - **[SlRvb](https://github.com/SlRvb)**
@@ -109,17 +119,6 @@ inspiration from following sources:
 - **BB.Houmann** - [Quickadd](https://github.com/chhoumann/quickadd)
 - **Nick Milo** [Youtube Tutorials](https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA)
   
-<br>
-
-## 📢 Contribute
-
-> **Plugin authors, theme designers and developers** _want to add value to this interconnected world and share with you their passions_. But projects like this take a lot of time and effort.
-> Let's make this world a better place and start to support benefactors to become in turn, benefactors yourself. 
-
-Support me, if you like what you get  :)
-
-To honor the continuous work behind Dune, get [Dune Gold](https://www.paypal.com/donate/?business=SGUAFT97D8E2A&no_recurring=0&currency_code=EUR). Dune-Silver (the free version) is loaded with lots of features, but offers less options than Dune-Gold. After receiving your donation, you'll get an email with **Dune Gold**, this includes a 70 pages-long Manual, 3 add-ons and Dune-Gold, the theme.
-
 <br>
 
 ### 👔 Collaboration
