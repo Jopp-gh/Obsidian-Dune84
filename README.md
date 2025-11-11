@@ -1,10 +1,12 @@
 # Dune
-![promo–gh](https://github.com/Jopp-gh/Obsidian-Dune84/assets/48620536/8bbcf942-3fc9-4d92-a0b5-952e9faa5182)
+![promo–big-2](https://github.com/user-attachments/assets/ec0aa915-2022-48a7-9ec2-30d930f30027)
+
+
 
 ## 🔍 Jump
-- [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#first-steps)
-- [Features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
-- [Contribute](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#contribute)
+- [First steps](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-first-steps)
+- [Features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-features)
+- [Project](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-project)
 - [License](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#license)
 - [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
@@ -19,7 +21,7 @@ My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank
 
 > [!tip]
 > 
-> If you read further, you will discover this theme is not just a color play, but **Dune adds a ton of new features** as well! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#features)
+> If you read further, you'll discover this theme is not just a color play, **Dune adds a ton of new features** too! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-features)
 
 <br>
 
@@ -27,7 +29,7 @@ My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank
 
 > To connect with each other is like to connect useful and interesting data in Obsidian and grow new, inspiring and awesome insights!
 
-Apart from developing this theme, feel free to  _Private Message / Direct Message_ [Jopp](https://forum.obsidian.md/u/jopp/summary) and chat with me about topics related to:
+Apart from developing Dune, feel free to  _Private Message / Direct Message_ [Jopp](https://forum.obsidian.md/u/jopp/summary) and chat with me about topics related to:
 
 ```
 - #architecture,
@@ -44,7 +46,7 @@ Apart from developing this theme, feel free to  _Private Message / Direct Messag
 ### ⭐ Project
 > Support me, if you like what you get with this project :)
 
-**Dune-Silver** (the free version) is loaded with lots of features, but offers less options than **Dune-Gold**.
+**Dune-Silver** (the free version available on this page) is loaded with a lot of features, still it offers less options than **Dune-Gold**.
 Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
 - 70 pages strong, user-friendly manual,
 - 2 add-ons (Dune Marmaid, Dune Plugin-support)
@@ -59,8 +61,8 @@ Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
 > [!important]
 > 1. **to display "Dune" correctly** and to change all preferences added by my theme, install the community plugin [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
 > 2. Dune offers a **clean, clutter-free experience**. Open `Settings>Style Settings>Dune>Show` if you want re-enable buttons / tabs and restore default looks of Obsidian. 
-> 3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of tweaked plugins for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84#tweaked)
-> 4. I highly reccomend to download Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
+> 3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of tweaked plugins for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-plugins)
+> 4. I highly reccomend to download Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md#cheatsheet---cssclasses) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md#callouts). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
 <br>
 
@@ -124,8 +126,8 @@ inspiration from following sources:
 ### 👔 Collaboration
 **thanks for your interest in my theme**. Right now I'm looking for people interested to :
 - rework my current documentation, to make **Dune** even more accessible. Send me a message in private on [Jopp](https://forum.obsidian.md/t/theme-dune/60433), thanks!
-- Feel free to contribute with git pulls for tablets and optimisations for iPhone.
-- If you have ideas relevant to **Dune** or you want to report bugs, open a ticked at the top page under [issues](https://github.com/Jopp-gh/Obsidian-Dune84/issues)
+- Feel free to contribute with git pulls for tablets and other optimisations.
+- If you've any ideas relevant to **Dune** or want to report bugs, then feel free to open a ticked on top, under [issues](https://github.com/Jopp-gh/Obsidian-Dune84/issues)
 
 <br>
 
