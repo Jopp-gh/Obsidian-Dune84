@@ -48,11 +48,12 @@ Apart from developing Dune, feel free to  _Private Message / Direct Message_ [Jo
 
 **Dune-Silver** (the free version available on this page) is loaded with a lot of features, still it offers less options than **Dune-Gold**.
 Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
-- 70 pages strong, user-friendly manual,
+- 70 pages in depth, user-friendly PDF-manual,
 - 2 add-ons (Dune Marmaid, Dune Plugin-support)
 - Dune-Gold, the theme.
 
-<a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 144px !important;" ></a>
+
+<a href='https://ko-fi.com/s/d76641798f' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 <br>
 
