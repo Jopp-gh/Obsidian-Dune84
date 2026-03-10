@@ -53,7 +53,7 @@ Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
 - Dune-Gold, the theme.
 
 
-<a href='https://ko-fi.com/s/d76641798f' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> <a href="https://www.buymeacoffee.com/jopp.gh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 144px !important;" ></a>
+<a href='https://ko-fi.com/s/d76641798f' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> 
 
 <br>
 
