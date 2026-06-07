@@ -1190,7 +1190,7 @@ body.theme-dark {
     --initial-col: #b60000;
     --text-accent-special: #378dff;
     --text-accent-sw: navajowhite;
-    --background-modifier-hover: #835511d1;
+    --background-modifier-hover: #30509fb3;
     --link-external-color-hover: darkorange;
 
     --ddef-red: var(--light-red);
@@ -1407,7 +1407,6 @@ body.theme-dark {
 
 .theme-light {
     --prefs-grad: linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary));
-    /* --prefs-grad: var(--background-secondary); */
     ;
     --dune-bases-sh: #4d4d4d;
     --dune-bases-hl: var(--text-accent);
@@ -1420,7 +1419,6 @@ body.theme-dark {
 
 .theme-dark {
     --prefs-grad: linear-gradient(180deg, var(--background-primary), var(--background-secondary), var(--background-secondary), var(--background-primary));
-    /* --prefs-grad: var(--background-primary); */
 
     --dune-bases-sh: #959595;
     --dune-bases-hl: navajowhite;
@@ -1540,14 +1538,8 @@ Tabs
 }
 
 .theme-light .workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
-    /* background: var(--background-primary); */
     background: var(--background-modifier-hover);
 }
-
-/* .workspace-tab-header-container-inner .workspace-tab-header,
-.clickable-icon.side-dock-ribbon-action {
-    margin: -1px;
-} */
 
 /* new tab, stacked */
 .workspace-tab-header-tab-list .clickable-icon:hover,
@@ -1559,24 +1551,9 @@ Tabs
     --tab-text-color-focused: var(--link-color-dune);
 }
 
-.workspace-split.mod-vertical.mod-root .workspace-tab-header {
-    border-left: 1px solid var(--background-secondary);
-    border-right: 1px solid var(--background-secondary);
-    border-top: 1px solid var(--background-secondary);
-}
-
 body.is-focused .workspace-tab-header-container .workspace-tab-header.is-active {
     border-radius: 4px;
 }
-
-/* .workspace-tab-header-container-inner .workspace-tab-header:is(:hover, .is-active),
-.clickable-icon.side-dock-ribbon-action:hover {
-    background-color: var(--toolbar-bg-sw);
-} */
-
-/* .workspace-tab-header-container-inner .workspace-tab-header {
-    margin-bottom: -2px;
-} */
 
 .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
     color: var(--text-normal);
@@ -1719,6 +1696,10 @@ body:not(.show-tab-name) .workspace-tab-header:not(.is-active, :hover) .workspac
     font-weight: bold;
 }
 
+.workspace-tab-header.tappable.is-active {
+    margin: auto;
+}
+
 /* dim inactive notes - split view */
 .inactive-notes .workspace-tab-header.tappable.is-active:not(.mod-active),
 .inactive-notes .workspace-leaf:not(.mod-active) .view-header,
@@ -1829,13 +1810,11 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
 body:not(.is-grabbing).theme-light .tree-item-self.is-clickable:hover {
     border-bottom: 2px solid hwb(var(--header-cco) 40%);
     border-radius: 0;
-    /* background-color: var(--background-modifier-hover); */
 }
 
 body:not(.is-grabbing).theme-dark .tree-item-self.is-clickable:hover {
     border-bottom: 2px solid navajowhite;
     border-radius: 0;
-    /* background-color: var(--background-modifier-hover); */
 }
 
 body:not(.is-grabbing).theme-light .tree-item-self.is-clickable:hover {
@@ -1845,6 +1824,7 @@ body:not(.is-grabbing).theme-light .tree-item-self.is-clickable:hover {
 
 body:not(.is-grabbing).theme-dark .tree-item-self.is-clickable:hover {
     color: navajowhite;
+    border-radius: 0;
 }
 
 /* underline selections */
@@ -1912,11 +1892,11 @@ Main wind
     background-color: var(--wm-b-col);
 }
 
-/* .workspace-tab-header.is-active,
+.workspace-tab-header.is-active,
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
     box-shadow: none;
-} */
+}
 
 .nav-header {
     border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
@@ -1963,7 +1943,6 @@ body:not(.show-status-bar) .status-bar:hover {
 
 .status-bar-item.mod-clickable:hover,
 .status-bar-item:hover {
-    /* background: var(--stat-bar-hl); */
     background-color: var(--background-modifier-hover);
 }
 
@@ -1975,10 +1954,6 @@ body:not(.show-status-bar) .status-bar:hover {
 /* --------------------------------------------
 suggestion
 -------------------------------------------- */
-
-.theme-dark .suggestion-item.mod-complex:hover {
-    background-color: var(--color-base-50);
-}
 
 .theme-light .suggestion-item.mod-complex:hover {
     background: var(--dark-shadow-l);
@@ -2225,10 +2200,6 @@ Sidebar
     color: var(--text-normal);
 }
 
-/* body:not(.show-ui-btns) .sidebar-toggle-button.mod-right svg:not(:hover),
-body:not(.show-ui-btns) .sidebar-toggle-button.mod-left svg:not(:hover) {
-    opacity: 0.2;
-} */
 
 body:not(.show-ui-btns) .sidebar-toggle-button.mod-right svg:hover,
 body:not(.show-ui-btns) .sidebar-toggle-button.mod-left svg:hover {
@@ -2267,20 +2238,8 @@ body:not(.is-phone):not(.show-nav-btns) .nav-buttons-container:hover {
 }
 
 /* sidebar btn */
-.sidebar-toggle-button.mod-left .clickable-icon:hover,
-.sidebar-toggle-button.mod-right .clickable-icon:hover {
-    background: var(--var-bg-col);
-    color: var(--var-tone-sw);
-}
-
-.theme-light .setting-item-control .clickable-icon:hover,
-.theme-light .sidebar-toggle-button .clickable-icon:hover {
-    /* background-color: var(--background-primary); */
-    background-color: var(--background-modifier-hover);
-}
-
-.theme-dark.setting-item-control .clickable-icon:hover,
-.theme-dark .sidebar-toggle-button .clickable-icon:hover {
+.setting-item-control .clickable-icon:hover,
+.sidebar-toggle-button .clickable-icon:hover {
     background-color: var(--background-modifier-hover);
 }
 
@@ -2288,7 +2247,6 @@ body:not(.is-phone):not(.show-nav-btns) .nav-buttons-container:hover {
     background: var(--background-primary);
 }
 
-/* body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile  */
 .workspace-split.mod-left-split :is(.nav-files-container .nav-header),
 .workspace-split.mod-left-split .workspace-leaf-content {
     background: var(--background-primary);
@@ -2405,7 +2363,6 @@ Context menu
 }
 
 svg.svg-icon.lucide-trash-2 {
-    /* stroke: #b30000; */
     stroke: darkred;
 }
 
@@ -2461,7 +2418,7 @@ svg.svg-icon.lucide-trash-2 {
     padding: 8px 0;
     overflow: scroll;
     scrollbar-width: none;
-    background: transparent;
+    /* background: transparent; */
 }
 
 .is-mobile .menu,
@@ -2608,7 +2565,6 @@ body:not(.is-mobile, .hard-shadow).hide-sidepanels .workspace-split.mod-left-spl
     border-top: 0;
 }
 
-/* .hide-sidepanels .view-header  */
 .hide-sidepanels .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container>*:not(:hover),
 .hide-sidepanels .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container>*:not(:hover),
 .hide-sidepanels .workspace-split.mod-left-split .workspace-leaf-content>*:not(:hover),
@@ -2622,29 +2578,29 @@ body:not(.is-mobile, .hard-shadow).hide-sidepanels .workspace-split.mod-left-spl
     background-color: var(--background-secondary);
 }
 
-.theme-dark.hard-shadow:not(.hide-sidepanels) .workspace-split:is(.mod-left-split, .mod-right-split):not(:hover) .view-content,
-.theme-dark.hard-shadow:not(.hide-sidepanels) .nav-files-container:not(:hover),
-.theme-dark.hard-shadow:not(.hide-sidepanels) .nav-header:not(:hover) {
+body:is(.hard-shadow, .hide-sidepanels) :is(.sidebar-toggle-button.mod-left, .sidebar-toggle-button.mod-right) {
     opacity: 0.3;
-} 
+    transition: opacity 2s linear;
+}
+
+.hard-shadow .workspace-split:is(.mod-left-split, .mod-right-split) div:is(.view-content, .nav-files-container, .nav-header):not(:hover) {
+    opacity: 0.3;
+    transition: opacity 2s linear;
+}
 
 .hard-shadow .mod-root .workspace-tabs .workspace-leaf-content {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 
-.hard-shadow .tree-item-self.nav-file-title.tappable.is-clickable.is-active {
-    background: revert;
-}
 
-body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-sidedock-vault-profile:hover {
-    border-top-left-radius: 4px;
+body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split:not(.nav-files-container) .workspace-sidedock-vault-profile:hover {
+    background: var(--background-secondary);
 }
 
 body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-sidedock-vault-profile:not(:hover),
 .hard-shadow .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
     background: transparent;
-    border: transparent;
 }
 
 .hard-shadow .workspace-split.mod-left-split :is(.nav-files-container .nav-header, .workspace-leaf-content):not(:hover),
@@ -2662,8 +2618,8 @@ body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-side
     background: linear-gradient(270deg, var(--background-secondary), var(--background-primary));
 }
 
-.hard-shadow:not(.hide-sidepanels) .workspace>.workspace-split:hover {
-    background: var(--background-primary);
+.hard-shadow .workspace-split.mod-left-split .nav-files-container:not(:hover) .tree-item-self:not(.is-being-dragged).is-clickable.is-active {
+    background: transparent;
 }
 
 body:not(.is-mobile) .workspace-drawer-vault-switcher:hover {
@@ -2678,14 +2634,30 @@ body:not(.is-mobile) .workspace-drawer-vault-switcher:hover {
     background: rgb(255 255 255 / 25%);
 }
 
+.is-mobile .view-header .view-action,
+.is-mobile .workspace-drawer-active-tab-container,
+.is-mobile .view-content.node-insert-event,
+.is-mobile .workspace-drawer .nav-header,
+.is-mobile .nav-files-container {
+    background: var(--background-secondary);
+}
+
 .menu-item.tappable.mobile-tap {
     --interactive-hover: rgb(255 255 255 / 25%);
 }
 
+.is-phone .workspace-drawer .workspace-leaf-content:after,
+.is-phone .workspace-drawer .nav-buttons-container:after {
+    display: none;
+}
 
-.is-phone .menu,
-.is-mobile .menu {
+.is-mobile .workspace-drawer .nav-buttons-container .nav-action-button {
     background-color: transparent;
+}
+
+.is-mobile .nav-buttons-container {
+    background-color: var(--background-secondary);
+    height: 40px;
 }
 
 
@@ -2709,13 +2681,11 @@ resize Handler
 
 /* hide mid bars */
 .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    /* background: linear-gradient(270deg, transparent, var(--background-primary)); */
     background: var(--background-primary);
     border-top: 1px solid var(--background-modifier-border);
 }
 
 .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    /* background: linear-gradient(270deg, var(--background-primary), transparent); */
     background: var(--background-primary);
     border-top: 1px solid gray;
 }
@@ -2741,7 +2711,7 @@ BUTTONS
 .theme-dark .modal-container button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 .theme-dark .setting-item-control select:hover {
     text-overflow: ellipsis;
-    color: var(--background-modifier-hover);
+    color: var(--text-accent-sw);
 }
 
 .modal.mod-settings button.mod-destructive {
@@ -2856,7 +2826,7 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
 
 .theme-dark select.dropdown:hover {
     background-color: var(--light-shadow-l);
-    color: var(--background-modifier-hover);
+    color: var(--text-accent-sw);
 }
 
 .theme-light select.dropdown:hover {
@@ -3093,7 +3063,7 @@ PROPERTIES
   ----------------------------------------------------------------*/
 
 body:not(.short-Hs) .cm-formatting-header {
-    display: none;
+    font-size: 0 !important;
 }
 
 body:not(.short-Hs) .cm-active.HyperMD-header.HyperMD-header:before {
@@ -4217,6 +4187,11 @@ hr {
     overflow: visible;
 }
 
+.inline-embed .markdown-embed-content .callout {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
 .inline-embed .markdown-embed-content div:last-child {
     margin-right: auto;
 }
@@ -4680,7 +4655,7 @@ div.bases-cards-cover {
 .bases-toolbar-menu-item:hover :is(.bases-toolbar-menu-item-info>*),
 .bases-toolbar-menu-item:hover,
 .bases-sort-container .text-icon-button:hover {
-    color: var(--background-modifier-hover);
+    color: var(--text-accent-sw);
 }
 
 
@@ -7003,9 +6978,10 @@ img[alt~='frame-s'] {
   IMAGES
   ----------------------------------------------------------------*/
 
-/* Desk */
+/* Desk - for callouts, imgs grouped */
 body:not(.is-phone) .markdown-preview-view img {
     cursor: zoom-in;
+    display: inline;
 }
 
 body:not(.is-phone) .markdown-preview-view img:active {
@@ -8029,10 +8005,6 @@ body:not(.show-graph-btns) .graph-controls.is-close:hover {
     color: #656565;
 }
 
-/* .theme-dark .setting-item-name {
-    color: var(--text-muted);
-} */
-
 .vertical-tab-header-group-title {
     display: inline-block;
     width: -webkit-fill-available;
@@ -8095,11 +8067,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 body:not(.is-phone).theme-light .vertical-tab-nav-item.is-active {
     color: var(--dark-tone);
-}
-
-body:not(.is-phone).theme-dark .vertical-tab-nav-item.is-active {
-    color: var(--dark-tone);
-    background-color: var(--color-accent);
 }
 
 body:not(.is-phone).theme-light .vertical-tab-nav-item:not(.is-active) {
@@ -8186,7 +8153,6 @@ body:not(.show-scrollbars) .modal.mod-settings ::-webkit-scrollbar {
     font-size: 1.6em;
 }
 
-/* .theme-light .setting-item .style-settings-heading[data-level="1"], */
 .theme-light .setting-item.setting-item-heading:not(.style-settings-heading) .setting-item-name {
     color: hwb(var(--header-cco) 40%);
 }
@@ -8319,7 +8285,6 @@ a.style-settings-import {
 
 .setting-item:first-child,
 .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-    padding-top: 8px;
     background: revert;
 }
 
@@ -8335,19 +8300,11 @@ a.style-settings-import {
     padding-bottom: 0;
 }
 
-.style-settings-container .setting-item-control select {
-    top: 6px;
-    position: relative;
-}
 
 .style-settings-heading[data-level="0"] {
     margin-left: -20px;
     border-bottom: 1px dashed gray;
 }
-
-/* .theme-dark .setting-item .style-settings-heading[data-level="0"] {
-    color: navajowhite;
-} */
 
 .setting-item .style-settings-heading[data-level="2"],
 .setting-item .style-settings-heading[data-level="3"],
@@ -8383,12 +8340,6 @@ a.style-settings-import {
     padding-top: 4px;
     padding-right: 1em;
 }
-
-
-/* themed */
-/* .theme-dark .setting-item.setting-item-heading.style-settings-heading .setting-item-name {
-    color: var(--azure-sh);
-} */
 
 .search-input-container input:focus {
     box-shadow: initial;
