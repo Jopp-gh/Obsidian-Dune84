@@ -552,8 +552,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#D5975F'
-    default-dark: '#33362D'
+    default-light: '#977759'
+    default-dark: '#3B2B36'
   -
     id: background-modifier-border-c
     title: 'Background Modifier: Border'
@@ -993,7 +993,6 @@ body {
 
 @font-face {
     font-family: "LiberationSerifRegular";
-    /* Add other properties here, as needed. For example: */
     /*
     font-weight: 100 900;
     font-style: normal italic;
@@ -1067,6 +1066,7 @@ body {
     --slant-blue: #566370;
     --table-highl-col: rgba(255, 166, 0, 0.5);
     --azure-sh: rgba(240, 255, 255, 0.5);
+    --link-color: var(--text-accent-special);
 
     --text-highlight-bg: rgba(255, 243, 163, 0.8);
     --nav-item-background-selected: rgba(244, 155, 31, 0.4);
@@ -1094,15 +1094,17 @@ body {
     --hr-stars: rgb(237, 188, 52);
     --radius-l: 6px;
 
-    --wm-b-col: var(--background-secondary);
+    /* --wm-b-col: var(--background-secondary); */
     --link-external-color: var(--link-color-dune);
     --code-color: var(--text-muted);
     --toolbar-bg-sw: var(--background-primary);
     --fraction-sm: 8px;
     --fraction-lg: 30px;
-
+    --hr-thickness: 1px;
     word-spacing: -0.04rem;
     letter-spacing: 0.01rem;
+
+    --frame-col: rgb(0 0 0 / 20%);
 }
 
 body:not(.dune-accent-col) {
@@ -1120,6 +1122,7 @@ body.theme-light {
     --text-accent-sw: hwb(var(--header-cco) 40%);
     --background-modifier-hover: navajowhite;
     --link-external-color-hover: var(--text-accent);
+    --text-warning: #c00000;
 
     --ddef-red: var(--dark-red);
     --ddef-green: var(--dark-green);
@@ -1149,7 +1152,6 @@ body.theme-light {
     --progr-col: #f2e79c;
 
     --link-unresolved-color: dimgray;
-    --link-color: var(--text-accent-special);
     --rev-fontcol: var(--light-tone);
     --text-selection: rgba(239, 206, 116, 0.7);
     --input-bg: lightgray;
@@ -1179,6 +1181,9 @@ body.theme-light {
     --hl-mark-blue: hsl(var(--dune-blue), 60%, 80%);
     --hl-mark-gray: hsl(var(--dune-red), 0%, 70%);
     --phone-tree-col: rgb(0 0 0 / 6%);
+
+    --nn-theme-nav-bg: #bbbaaa;
+    --nn-theme-list-bg: #bbbaaa;
 }
 
 body.theme-dark {
@@ -1192,6 +1197,7 @@ body.theme-dark {
     --text-accent-sw: navajowhite;
     --background-modifier-hover: #30509fb3;
     --link-external-color-hover: darkorange;
+    --text-warning: darkorange;
 
     --ddef-red: var(--light-red);
     --ddef-green: var(--light-green);
@@ -1221,7 +1227,6 @@ body.theme-dark {
     --progr-col: #8b0000;
 
     --link-unresolved-color: #e4e4e4;
-    --link-color: navajowhite;
     --rev-fontcol: #515151;
     --text-selection: rgba(255, 110, 47, 0.3);
     --var-bg-col: var(--light-shadow-l);
@@ -1249,6 +1254,9 @@ body.theme-dark {
     --hl-mark-blue: var(--callout-title-b);
     --hl-mark-gray: var(--callout-title-m);
     --phone-tree-col: rgb(255 255 255 / 6%);
+
+    --nn-theme-nav-bg: var(--background-secondary);
+    --nn-theme-list-bg: var(--background-secondary);
 }
 
 /* Flat theme */
@@ -1407,7 +1415,7 @@ body.theme-dark {
 
 .theme-light {
     --prefs-grad: linear-gradient(180deg, var(--background-secondary), var(--background-primary), var(--background-primary), var(--background-secondary));
-    ;
+
     --dune-bases-sh: #4d4d4d;
     --dune-bases-hl: var(--text-accent);
     --math-grad: hsl(0deg 0% 100% / 60%);
@@ -1549,10 +1557,19 @@ Tabs
 
 .workspace-tab-header:not(.is-active):hover {
     --tab-text-color-focused: var(--link-color-dune);
+    background-color: var(--background-modifier-hover);
 }
 
 body.is-focused .workspace-tab-header-container .workspace-tab-header.is-active {
     border-radius: 4px;
+}
+
+.mod-top .workspace-tab-header-container {
+    border-bottom: 1px solid gray;
+}
+
+.workspace-split {
+    background-color: revert;
 }
 
 .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
@@ -1696,7 +1713,7 @@ body:not(.show-tab-name) .workspace-tab-header:not(.is-active, :hover) .workspac
     font-weight: bold;
 }
 
-.workspace-tab-header.tappable.is-active {
+.workspace-split:not(.mod-root) .workspace-tab-header.tappable.is-active {
     margin: auto;
 }
 
@@ -1889,7 +1906,12 @@ Main wind
 
 .is-hidden-frameless.mod-windows:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right,
 .is-hidden-frameless.mod-linux:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
-    background-color: var(--wm-b-col);
+    background-color: revert;
+}
+
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right,
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+    background-color: revert;
 }
 
 .workspace-tab-header.is-active,
@@ -2297,6 +2319,8 @@ search mask
 .search-result-file-matched-text {
     background-color: var(--interactive-accent);
     color: var(--dark-tone);
+    border-radius: 4px;
+    padding: 2px;
 }
 
 .tree-item-self.tag-pane-tag.is-clickable:hover,
@@ -2330,6 +2354,10 @@ Context menu
     white-space: pre-wrap;
 }
 
+.menu-scroll {
+    background: var(--background-primary);
+}
+
 .menu-item.is-disabled:hover .menu-item-title,
 .menu-item.is-disabled,
 .menu-item.is-disabled .menu-item-icon {
@@ -2341,7 +2369,7 @@ Context menu
 }
 
 .menu-item.selected:not(.is-label):not(.is-disabled) {
-    background-color: var(--background-primary);
+    background-color: var(--background-modifier-border-hover);
 }
 
 .theme-dark .menu-item.selected:not(.is-label):not(.is-disabled) {
@@ -2537,26 +2565,25 @@ body:not(.is-mobile, .show-ui-btns) .workspace-drawer-vault-name:not(:hover) {
 quick hide 
 ----------------------------------------------------------------*/
 
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 body:not(.hide-sidepanels, .hard-shadow) .workspace-ribbon.side-dock-ribbon.mod-left {
-    background: var(--background-primary);
+    background-color: var(--background-primary);
 }
 
 .workspace-split.mod-left-split :is(.nav-files-container .nav-header),
-.workspace-split.mod-left-split .workspace-leaf-content,
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+.workspace-split.mod-left-split .workspace-leaf-content {
     background: var(--background-primary);
 }
 
 /* hide panels */
 .hide-sidepanels .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
 .hide-sidepanels .workspace-split.mod-right-split .workspace-leaf-content {
-    background: linear-gradient(270deg, transparent, var(--background-primary));
+    background: linear-gradient(270deg, var(--background-secondary), var(--background-primary));
 }
 
-body:not(.is-mobile, .hard-shadow).hide-sidepanels .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 .hide-sidepanels .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
 .hide-sidepanels .workspace-split.mod-left-split .workspace-leaf-content {
-    background: linear-gradient(270deg, var(--background-primary), transparent);
+    background: linear-gradient(270deg, var(--background-primary), var(--background-secondary));
 }
 
 /* hide borders */
@@ -2573,18 +2600,26 @@ body:not(.is-mobile, .hard-shadow).hide-sidepanels .workspace-split.mod-left-spl
     transition: opacity 2s linear;
 }
 
+body:not(.hard-shadow, .hide-sidepanels) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+body:not(.hard-shadow, .hide-sidepanels) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-primary);
+}
+
 /* hard shadow */
 .hard-shadow .mod-root .workspace-tabs .workspace-leaf {
     background-color: var(--background-secondary);
 }
 
 body:is(.hard-shadow, .hide-sidepanels) :is(.sidebar-toggle-button.mod-left, .sidebar-toggle-button.mod-right) {
-    opacity: 0.3;
-    transition: opacity 2s linear;
+    opacity: 0.2;
+}
+
+body:is(.hard-shadow, .hide-sidepanels) :is(.sidebar-toggle-button.mod-left, .sidebar-toggle-button.mod-right):hover {
+    opacity: 1;
 }
 
 .hard-shadow .workspace-split:is(.mod-left-split, .mod-right-split) div:is(.view-content, .nav-files-container, .nav-header):not(:hover) {
-    opacity: 0.3;
+    opacity: 0.2;
     transition: opacity 2s linear;
 }
 
@@ -2593,14 +2628,9 @@ body:is(.hard-shadow, .hide-sidepanels) :is(.sidebar-toggle-button.mod-left, .si
     border-top-right-radius: 4px;
 }
 
-
-body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split:not(.nav-files-container) .workspace-sidedock-vault-profile:hover {
-    background: var(--background-secondary);
-}
-
-body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-sidedock-vault-profile:not(:hover),
-.hard-shadow .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background: transparent;
+body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.hide-sidepanels).hard-shadow .workspace-ribbon.side-dock-ribbon.mod-left {
+    background-color: var(--background-secondary);
 }
 
 .hard-shadow .workspace-split.mod-left-split :is(.nav-files-container .nav-header, .workspace-leaf-content):not(:hover),
@@ -2610,12 +2640,24 @@ body:not(.is-mobile).hard-shadow .workspace-split.mod-left-split .workspace-side
     background: var(--background-secondary);
 }
 
+.hide-sidepanels .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 .hide-sidepanels .workspace>.workspace-split.mod-left-split:hover {
     background: linear-gradient(270deg, var(--background-primary), var(--background-secondary));
 }
 
+.hide-sidepanels .workspace-split.mod-right-split .workspace-leaf-content,
 .hide-sidepanels .workspace>.workspace-split.mod-right-split:hover {
     background: linear-gradient(270deg, var(--background-secondary), var(--background-primary));
+}
+
+/* hide mid bars */
+body:not(.hide-sidepanels) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+body:not(.hide-sidepanels) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background: var(--background-primary);
+    border-top: 1px solid gray;
 }
 
 .hard-shadow .workspace-split.mod-left-split .nav-files-container:not(:hover) .tree-item-self:not(.is-being-dragged).is-clickable.is-active {
@@ -2634,14 +2676,6 @@ body:not(.is-mobile) .workspace-drawer-vault-switcher:hover {
     background: rgb(255 255 255 / 25%);
 }
 
-.is-mobile .view-header .view-action,
-.is-mobile .workspace-drawer-active-tab-container,
-.is-mobile .view-content.node-insert-event,
-.is-mobile .workspace-drawer .nav-header,
-.is-mobile .nav-files-container {
-    background: var(--background-secondary);
-}
-
 .menu-item.tappable.mobile-tap {
     --interactive-hover: rgb(255 255 255 / 25%);
 }
@@ -2655,7 +2689,12 @@ body:not(.is-mobile) .workspace-drawer-vault-switcher:hover {
     background-color: transparent;
 }
 
-.is-mobile .nav-buttons-container {
+.theme-light.is-mobile .nav-buttons-container {
+    background-color: var(--background-primary);
+    height: 40px;
+}
+
+.theme-dark.is-mobile.nav-buttons-container {
     background-color: var(--background-secondary);
     height: 40px;
 }
@@ -2679,17 +2718,6 @@ resize Handler
     border: none;
 }
 
-/* hide mid bars */
-.workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background: var(--background-primary);
-    border-top: 1px solid var(--background-modifier-border);
-}
-
-.workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background: var(--background-primary);
-    border-top: 1px solid gray;
-}
-
 
 /*----------------------------------------------------------------
 BUTTONS
@@ -2711,7 +2739,8 @@ BUTTONS
 .theme-dark .modal-container button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 .theme-dark .setting-item-control select:hover {
     text-overflow: ellipsis;
-    color: var(--text-accent-sw);
+    color: var(--background-primary);
+    background: lightgrey;
 }
 
 .modal.mod-settings button.mod-destructive {
@@ -3033,10 +3062,6 @@ PROPERTIES
     color: var(--dark-tone);
     border-radius: 24px;
     padding: 0px 6px;
-}
-
-.multi-select-pill-content:hover {
-    background-color: var(--interactive-accent);
 }
 
 .metadata-property[data-property-key="tags"] .multi-select-pill-content {
@@ -3416,8 +3441,9 @@ body.fontmod-1 .markdown-source-view.mod-cm6 .cm-header:not(.recipes .cm-header,
     text-align: inherit;
 }
 
-body.fontmod-1 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
-.fontmod-1 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
+/* th, td, */
+.fontmod-1 .markdown-source-view.mod-cm6 div.cm-line:not(table div.cm-active, .cm-header),
+.fontmod-1 .markdown-preview-view :is(p, li, .callout-title-inner) {
     font-family: var(--modern-font-c);
     font-size: var(--custom-fsz-1);
 }
@@ -3454,8 +3480,8 @@ body.fontmod-2 .markdown-source-view.mod-cm6 .cm-header:not(.recipes .cm-header,
     text-align: inherit;
 }
 
-body.fontmod-2 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
-.fontmod-2 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
+.fontmod-2 .markdown-source-view.mod-cm6 div.cm-line:not(table div.cm-active, .cm-header),
+.fontmod-2 .markdown-preview-view :is(p, li, .callout-title-inner) {
     font-family: var(--poetry-font-c);
     font-size: var(--custom-fsz-2);
 }
@@ -3492,8 +3518,8 @@ body.fontmod-3 .markdown-source-view.mod-cm6 .cm-header:not(.recipes .cm-header,
     text-align: inherit;
 }
 
-body.fontmod-3 .markdown-source-view.mod-cm6 .cm-scroller:not(.cm-header, .is-phone),
-.fontmod-3 .markdown-preview-view :is(p, li, th, td, .callout-title-inner) {
+.fontmod-3 .markdown-source-view.mod-cm6 div.cm-line:not(table div.cm-active, .cm-header),
+.fontmod-3 .markdown-preview-view :is(p, li, .callout-title-inner) {
     font-family: var(--custom-font-c);
     font-size: var(--custom-fsz-3);
 }
@@ -4078,6 +4104,8 @@ a.footnote-link {
 /* keep font size after finding */
 .is-flashing {
     font-size: inherit;
+    color: black;
+    padding: 2px;
 }
 
 a:hover {
@@ -4132,7 +4160,7 @@ button.mod-warning,
 hr {
     clear: both;
     margin: 10px auto;
-    border-top: 1px solid;
+    /* border-top: 1px solid; */
 }
 
 /*----------------------------------------------------------------
@@ -5934,10 +5962,6 @@ table hr {
     position: relative;
 }
 
-.cm-active.cm-line table {
-    font-size: var(--table-text-size);
-}
-
 /* Highlight - keep text readable */
 .markdown-rendered td,
 .markdown-rendered td:hover {
@@ -6572,6 +6596,7 @@ img[alt="banner-b"] {
 
 span.internal-embed .banner-a .markdown-preview-section {
     padding-top: calc(var(--banner-ah) + 1em);
+    margin-top: auto;
 }
 
 img[alt="banner-m"],
@@ -6979,7 +7004,7 @@ img[alt~='frame-s'] {
   ----------------------------------------------------------------*/
 
 /* Desk - for callouts, imgs grouped */
-body:not(.is-phone) .markdown-preview-view img {
+body:not(.is-phone) .markdown-preview-view img:not([alt~='a']) {
     cursor: zoom-in;
     display: inline;
 }
@@ -7778,6 +7803,8 @@ body:not(.show-graph-btns) .graph-controls.is-close:hover {
         position: sticky;
         margin-left: -4em;
         margin-bottom: 2em;
+        break-before: avoid;
+        transform: translateY(-1rem);
         scale: 1.1;
     }
 
