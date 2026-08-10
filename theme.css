@@ -4692,7 +4692,7 @@ div.bases-cards-cover {
   ----------------------------------------------------------------*/
 
 .callout {
-    background-color: rgba(var(--callout-color), 0.24);
+    background-color: color-mix(in srgb, var(--callout-color) 24%, transparent);
     mix-blend-mode: normal;
 }
 
@@ -4847,7 +4847,7 @@ div[data-callout="multi-column"].callout>.callout-content>*:is(div, ul) {
     div[data-callout="mehrspaltig"].callout>div.callout-content .callout.is-collapsed .callout-title,
     div[data-callout="multi-column"].callout>div.callout-content .callout.is-collapsed .callout-title {
         border-top-left-radius: 2px;
-        background-color: rgba(var(--callout-color), 0.1);
+        background-color: color-mix(in srgb, var(--callout-color) 10%, transparent);
         padding: inherit;
         border-radius: 4px;
     }
