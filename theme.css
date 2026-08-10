@@ -7205,7 +7205,7 @@ body:not(.show-canvas-ui) .canvas-card-menu:hover,
 }
 
 .canvas-node.is-themed .canvas-node-content {
-    background-color: rgba(var(--canvas-color), 0.15);
+    background-color: color-mix(in srgb, var(--canvas-color) 15%, transparent);
 }
 
 .canvas-menu {
