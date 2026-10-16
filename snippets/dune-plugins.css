@@ -17,6 +17,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: single-line
+    title: Dataview max line height
+    description: Author ~ Blacksmithgu
+    type: class-toggle
+    default: false
+  -
     id: show-kanban
     title: Kanban 
     description: Author ~ mgMeyers
@@ -211,11 +217,56 @@ table.dataview.table-view-table thead tr>th:nth-child(2n+2) {
   overflow-y: scroll;
 }
 
+.dv-20 .block-language-dataview.node-insert-event {
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+.dv-30 .block-language-dataview.node-insert-event {
+  max-height: 30vh;
+  overflow-y: scroll;
+}
+
+.dv-40 .block-language-dataview.node-insert-event {
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+
+.dv-50 .block-language-dataview.node-insert-event {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.dv-60 .block-language-dataview.node-insert-event {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.dv-70 .block-language-dataview.node-insert-event {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.dv-80 .block-language-dataview.node-insert-event {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.dv-00 .block-language-dataview.node-insert-event {
+  max-height: initial;
+  overflow-y: scroll;
+}
+
+.single-line .block-language-dataview tbody.table-view-tbody td :is(ul, li) {
+  padding-top: 0;
+  height: 22px;
+}
+
 .show-dataview-blocks li.dataview-result-list-li {
   border-radius: 4px;
-  padding: 0 4px;
   border: 1px solid var(--var-tone-sw);
   width: fit-content;
+  padding: 0px 2px;
 }
 
 .dataview.task-list-item,
