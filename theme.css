@@ -25,22 +25,22 @@ settings:
   -
     id: glob-fonts
     title: ""
-    description: please click the "reset" button of "Font size" of (1 - Modern, 2 - Poetry, 3 - Dashboard) on first use (overwrites "Special Fonts"). 
+    description: please click the "reset" button of "Font size" of (1 - Modern, 2 - Poetry, 3 - Dashboard) on first use (overwrites "Special Fonts").
     description.de: Bitte drücke die "wiederherstellen" Taste von "Schriftgröße" von (1 - Modern, 2 - Poesie, 3 - Hauptseite) vor den ersten Gebrauch (Überschreibt "Spezielle Schriften").
     type: class-select
     allowEmpty: false
     default: fontmod-0
     options:
-        - 
+        -
             label: "–"
             value: fontmod-0
-        - 
+        -
             label: "𝚨-1"
             value: fontmod-1
-        - 
+        -
             label: "𝚨-2"
             value: fontmod-2
-        - 
+        -
             label: "𝚨-3"
             value: fontmod-3
   -
@@ -49,19 +49,19 @@ settings:
     type: heading
     level: 3
     collapsed: true
-  - 
+  -
     id: modern-font-h
     title: Header Font
     title.de: Überschriften
     type: variable-text
     default: '"Louis George Cafe", Roboto, sans-serif'
-  - 
+  -
     id: modern-font-c
     title: Character Font
     title.de: Charakterschrift
     type: variable-text
     default: '"Louis George Cafe", Roboto, sans-serif'
-  - 
+  -
     id: custom-fsz-1
     title: Font size
     title.de: Schriftgröße
@@ -78,7 +78,7 @@ settings:
     type: heading
     level: 3
     collapsed: true
-  - 
+  -
     id: poetry-font-h
     title: Header Font
     description: (default = Manuskript Gothisch)
@@ -86,7 +86,7 @@ settings:
     description.de: (Standard = Manuskript Gothisch)
     type: variable-text
     default: '"Manuskript Gothisch", Pecita, Mumsies'
-  - 
+  -
     id: poetry-font-c
     title: Character Font
     title.de: Charakterschrift
@@ -109,13 +109,13 @@ settings:
     type: heading
     level: 3
     collapsed: true
-  - 
+  -
     id: custom-font-h
     title: Header Font
     title.de: Überschriften
     type: variable-text
     default: 'Helvetica, Sengoa, Optima-Regular, GillSans'
-  - 
+  -
     id: custom-font-c
     title: Character Font
     title.de: Charakterschrift
@@ -131,7 +131,7 @@ settings:
     min: 12
     max: 24
     step: 1
-  -  
+  -
     id: line-layout
     title: Lines
     title.de: Zeilen
@@ -154,7 +154,7 @@ settings:
     title.de: Leerzeichen zwischen Verweise
     description.de: Leerraum vor und nach [Url/Wiki]
     type: class-toggle
-  - 
+  -
     id: indent-l
     title: Indent line
     title.de: Zeileneinzug
@@ -166,7 +166,7 @@ settings:
     min: 2
     max: 10
     step: 1
-  -  
+  -
     id: mod-lines-fonts
     title: Headers
     title.de: Kopfzeilen
@@ -178,7 +178,7 @@ settings:
     title: Initial size
     title.de: Initiale/Majuskel Größe
     description: "#raisecap ==L==orem - #dropcap ==L==orem"
-    description.de: "#majuskel ==L==orem - #initiale ==L==orem" 
+    description.de: "#majuskel ==L==orem - #initiale ==L==orem"
     type: variable-number-slider
     format: px
     default: 110
@@ -212,18 +212,18 @@ settings:
     default: 'cursive, Mumsies, sans-serif'
   -
     id: movies-font
-    title: Header - Movies  
+    title: Header - Movies
     title.de: Überschrift - Filme
     description: cssclass "movies"
     description.de: cssclass "filme"
     type: variable-text
     default: 'AbadiMT-CondensedLight, Roboto, Arial'
-  - 
+  -
     id: initial-font
     title: Initial Font
     title.de: Initiale/Majuskelschrift
     type: variable-text
-    default: '"Manuskript Gothisch", Pecita, Mumsies, Helvetica, Sengoa, Optima-Regular' 
+    default: '"Manuskript Gothisch", Pecita, Mumsies, Helvetica, Sengoa, Optima-Regular'
   -
     id: img-options
     title: "＊ Pictures"
@@ -275,8 +275,8 @@ settings:
     collapsed: true
   -
     id: bwidth-sm
-    title: Frame, simple - frame thickness 
-    title.de: Rahmen, einfach - Rahmenstärke 
+    title: Frame, simple - frame thickness
+    title.de: Rahmen, einfach - Rahmenstärke
     description: "![[image.png | frame-s]] Options: s, d"
     description.de: "![[bild.png | rahmen-s]] Options: s, d"
     type: variable-number-slider
@@ -285,7 +285,7 @@ settings:
     min: 2
     max: 14
     step: 2
-  - 
+  -
     id: frame-color-sm
     title: Frame, simple - frame color
     title.de: Rahmen, einfach - Rahmenfarbe
@@ -305,19 +305,19 @@ settings:
     collapsed: true
   -
     id: simple-profile
-    title: Colored Profile 
+    title: Colored Profile
     title.de: Farbiges Profil
     type: class-select
     allowEmpty: false
     default: no-prof
     options:
-        - 
+        -
             label: –
             value: no-prof
-        - 
+        -
             label: 🔍
             value: study-prof
-        - 
+        -
             label: 🎨
             value: design-prof
         -
@@ -348,7 +348,7 @@ settings:
     title.de: Profil - Schwarzweiß
     description.de: S/W Schalter (dunkles Thema)
     type: class-toggle
-  - 
+  -
     id: profile-path
     title: Alternative profile image
     description: image must be an equilateral png (requires live connection)
@@ -382,10 +382,10 @@ settings:
     allowEmpty: false
     default: col-mod-0
     options:
-        - 
+        -
             label: "–"
             value: col-mod-0
-        - 
+        -
             label: "Dune-1"
             value: col-mod-a
         -
@@ -402,7 +402,7 @@ settings:
     allowEmpty: false
     default: col-mod-1
     options:
-        - 
+        -
             label: "–"
             value: col-mod-1
         -
@@ -423,14 +423,14 @@ settings:
     type: class-select
     allowEmpty: false
     default: dark-1
-    options: 
-        - 
+    options:
+        -
             label: "–"
             value: dark-1
         -
             label: "● 1"
             value: dark-2
-        - 
+        -
             label: "● 2"
             value: dark-3
         -
@@ -464,7 +464,7 @@ settings:
     opacity: false
     default-light: '#866A49'
     default-dark: '#DA8924'
-  - 
+  -
     id: text-normal-c
     title: 'Text: Normal'
     title.de: Charakterschrift
@@ -565,7 +565,7 @@ settings:
     format: hex
     default-light: '#B1B1B1'
     default-dark: '#4B4D45'
-  - 
+  -
     id: ddef-red
     title: Default red
     title.de: Standard Rot
@@ -576,7 +576,7 @@ settings:
     opacity: true
     default-light: '#db3434'
     default-dark: '#b92b2b'
-  - 
+  -
     id: ddef-green
     title: Default green
     title.de: Standard Grün
@@ -587,7 +587,7 @@ settings:
     opacity: true
     default-light: '#328d22'
     default-dark: '#29ab29'
-  - 
+  -
     id: ddef-blue
     title: Default blue
     title.de: Standard Blau
@@ -605,7 +605,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: hr-color
     title: Simple delimiters
     description: decorative fences "fade, fade2"
@@ -638,7 +638,7 @@ settings:
     format: hex
     default-light: '#800000'
     default-dark: '#c11616'
-  - 
+  -
     id: checkB-col
     title: Checkbox color
     title.de: Ankreuzfeld - Farbe
@@ -648,7 +648,7 @@ settings:
     min: 0
     max: 360
     step: 10
-  - 
+  -
     id: cite-accent
     title: Citation accent color
     title.de: Zitat Akzentfarbe
@@ -660,7 +660,7 @@ settings:
     step: 10
   -
     id: fade-options
-    title: ( ) Show 
+    title: ( ) Show
     description: manage ui elements
     title.de: ( ) Einblenden
     description.de: Bedienelemente verwalten
@@ -690,7 +690,7 @@ settings:
     default: false
   -
     id: show-tooltips
-    title: Tooltips 
+    title: Tooltips
     description: restore help bubbles
     title.de: Hilfeblasen
     description.de: Wiederherstellung Hilfeblasen
@@ -698,9 +698,9 @@ settings:
     default: true
   -
     id: show-ui-btns
-    title: Buttons 
+    title: Buttons
     description: restore buttons
-    title.de: Tasten 
+    title.de: Tasten
     description.de: Wiederherstellung Tasten
     type: class-toggle
   -
@@ -750,26 +750,26 @@ settings:
     default: false
   -
     id: show-title-parent
-    title: Note path 
+    title: Note path
     description: restore path in title bar
     title.de: Notizpfad
     description.de: Wiederherstellung Pfad (Titelleiste)
     type: class-toggle
   -
     id: show-scrollbars
-    title: Scrollbars 
+    title: Scrollbars
     description: restore scrollbars (page browsing)
-    title.de: Rolleiste 
+    title.de: Rolleiste
     description.de: Wiederherstellung Rolleiste (Seiten blättern)
-    type: class-toggle    
+    type: class-toggle
     default: true
   -
     id: dune-accent-col
-    title: Dune accent 
+    title: Dune accent
     description: restore color-accent
-    title.de: Dune Akzent 
+    title.de: Dune Akzent
     description.de: Wiederherstellung Farbakzent
-    type: class-toggle    
+    type: class-toggle
     default: true
   -
     id: fade-op-b
@@ -788,20 +788,20 @@ settings:
   -
     id: show-ls-marker
     title: List marker
-    description: restore list enumeration
+    description: restore list enumeration (PV)
     title.de: Listen Aufzählung
-    description.de: Wiederherstellung Punkt anstatt Klammer
+    description.de: Wiederherstellung Punkt anstatt Klammer (Vorschau)
     type: class-toggle
   -
     id: edgy-tables
     title: Tables, edgy
     description: restore edgy tables (colored, monochrome tables)
-    title.de: Tabellen, eckig 
+    title.de: Tabellen, eckig
     description.de: Wiederherstellung eckige Tabellen (farbige, monochrome Tabellen)
     type: class-toggle
   -
     id: edgy-banners
-    title: Banners, edgy 
+    title: Banners, edgy
     description: restore edgy banners
     title.de: Banner, eckig
     description.de: Wiederherstellung eckige Banner
@@ -819,13 +819,13 @@ settings:
     id: simple-aside
     title: Simple Aside-boxes
     title.de: Einfache Seiten-Felder
-    description: restore aside boxes "aside|l, aside|lh, aside|r, aside|rh" 
-    description.de: Wiederherstellung Seitenfelder "seite|l, seite|lv, seite|r, seite|rv" 
+    description: restore aside boxes "aside|l, aside|lh, aside|r, aside|rh"
+    description.de: Wiederherstellung Seitenfelder "seite|l, seite|lv, seite|r, seite|rv"
     type: class-toggle
     default: false
   -
     id: simple-border
-    title: Simple highlights 
+    title: Simple highlights
     description: restore normal highlights "#red ==Text==", "#green ==Text==", etc
     title.de: Einfache Markierungen
     description.de: Wiederherstellung normale Markierungen "#rot ==Text==", "#grün ==Text==", etc
@@ -885,7 +885,7 @@ settings:
     description.de: Wiederherstellung Canvas Tasten
     type: class-toggle
     default: true
-  - 
+  -
     id: show-graph-btns
     title: Graph - buttons
     description: restore buttons
@@ -903,10 +903,18 @@ settings:
     id: compact-bases-ls
     title: Bases - compact view
     description: restore default height (embedded)
-    title.de: Bases - kompakte Ansicht 
+    title.de: Bases - kompakte Ansicht
     description.de: Wiederherstellung Standard Höhe (eingebettet)
     type: class-toggle
     default: false
+  -
+    id: lightbox-off
+    title: Quick Preview
+    title.de: Schnelle Vorschau
+    description: restore slow preview (lightbox)
+    description.de: Wiederherstellung langsame Vorschau (Leuchttisch)
+    type: class-toggle
+    default: true
   -
     id: fade-op-d
     title: Extra toggles
@@ -916,7 +924,7 @@ settings:
     collapsed: true
   -
     id: show-tooltips
-    title: Tooltips 
+    title: Tooltips
     description: restore help bubbles
     title.de: Hilfeblasen
     description.de: Wiederherstellung Hilfeblasen
@@ -1033,7 +1041,7 @@ body {
     --custom-fsz-3: 16px;
     --initial-sz: 110px;
     --deco-scale: 0.5;
-    --slim-bar: 32px;
+    --slim-bar: 30px;
     --checkm-btn: 1.4em;
     --min-boxwidth: 230px;
     --contacts-alh: 50px;
@@ -1094,7 +1102,6 @@ body {
     --callout-bg-r: hsl(0deg 80% 70% / 20%);
     --callout-bg-g: hsl(90deg 80% 70% / 20%);
     --callout-bg-b: hsl(214deg 80% 80%/ 20%);
-    --callout-bg-m: hsl(0deg 0% 0% /20%);
 
     --bases-cards-shadow-hover: 0 0 0 1px darkgray;
     --hr-stars: rgb(237, 188, 52);
@@ -1176,6 +1183,7 @@ body.theme-light {
     --callout-title-g: hsl(var(--dune-green), 60%, 45%);
     --callout-title-b: hsl(var(--dune-blue), 60%, 55%);
     --callout-title-m: hsl(var(--dune-red), 0%, 45%);
+    --callout-bg-m: hsl(0deg 0% 0% / 10%);
 
     --hl-mark-red: hsl(var(--dune-red), 60%, 70%);
     --hl-mark-green: hsl(var(--dune-green), 60%, 70%);
@@ -1241,6 +1249,7 @@ body.theme-dark {
     --callout-title-g: hsl(var(--dune-green), 60%, 40%);
     --callout-title-b: hsl(var(--dune-blue), 60%, 60%);
     --callout-title-m: hsl(var(--dune-red), 0%, 50%);
+    --callout-bg-m: hsl(0deg 0% 0% / 20%);
 
     --hl-mark-red: var(--callout-title-r);
     --hl-mark-green: var(--callout-title-g);
@@ -1512,6 +1521,15 @@ body.show-scrollbars ::-webkit-scrollbar {
 Tabs
 ----------------------------------------------------------------*/
 
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+    min-width: 0;
+    overflow: auto;
+}
+
+body.is-focused .workspace-tab-header-container .workspace-tab-header {
+    padding-bottom: 0;
+}
+
 .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button,
 .workspace .mod-root:not(.workspace-tabs.mod-stacked).workspace-tab-header .workspace-tab-header-inner-close-button {
     width: 0;
@@ -1544,6 +1562,10 @@ Tabs
 .workspace-tab-header:not(.is-active):hover {
     --tab-text-color-focused: var(--link-color-dune);
     background-color: var(--background-modifier-hover);
+}
+
+body.is-focused .workspace-tab-header.tappable:hover {
+    background: var(--background-primary);
 }
 
 .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
@@ -1588,6 +1610,33 @@ body:not(.slim-bars) .workspace-ribbon.mod-left {
 .slim-bars .workspace-tab-header-container,
 .slim-bars .workspace-ribbon.mod-left:before {
     border-bottom: 0;
+}
+
+.workspace-ribbon.mod-primary:before {
+    border-bottom: none;
+    height: var(--slim-bar);
+}
+
+body:not(.hide-sidepanels) .workspace-ribbon.mod-primary {
+    background: var(--background-primary);
+}
+
+body:not(.hide-sidepanels) .workspace {
+    background: var(--background-primary);
+}
+
+.hide-sidepanels .workspace {
+    background: var(--background-secondary);
+}
+
+body:is(.hard-shadow) .workspace,
+body:is(.hard-shadow) .workspace-ribbon.mod-primary {
+    background: var(--background-secondary);
+}
+
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active:before,
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active:after {
+    box-shadow: none;
 }
 
 .workspace-tab-header-status-icon.mod-pinned {
@@ -1712,7 +1761,7 @@ body:not(.show-tab-name) .workspace-tab-header:not(.is-active, :hover) .workspac
 
 
 /* --------------------------------------------
-Nav Folder Tree 
+Nav Folder Tree
 -------------------------------------------- */
 
 .tree-item-inner.nav-folder-title-content {
@@ -1886,8 +1935,8 @@ Main wind
     font-weight: bold;
 }
 
-/* 
-note name 
+/*
+note name
 */
 body:not(.show-title-name) .view-header-title {
     display: none;
@@ -1903,8 +1952,8 @@ body:not(.is-phone) .view-header-title-container:focus-within>.view-header-title
     width: auto;
 }
 
-/* 
-status bar 
+/*
+status bar
 */
 body:not(.show-status-bar) .status-bar {
     font-size: 12px;
@@ -1968,7 +2017,7 @@ body:not(.show-tooltips) .follow-link-popover {
 
 
 /* --------------------------------------------
-Nav phone 
+Nav phone
 -------------------------------------------- */
 
 body:not(.is-phone).is-focused .view-header:hover .view-header-title {
@@ -2251,8 +2300,8 @@ body:not(.is-phone):not(.show-nav-btns) .nav-buttons-container:hover {
     color: var(--var-tone-sw);
 }
 
-/* 
-search mask  
+/*
+search mask
 */
 .theme-light .modal.mod-settings input[type="text"],
 .theme-light input[type='number'],
@@ -2300,8 +2349,8 @@ body:not(.is-phone).theme-dark .tree-item-self.is-clickable:hover .tree-item-inn
     color: var(--light-tone);
 }
 
-/* 
-Vault btns 
+/*
+Vault btns
 */
 .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon:hover {
     background-color: var(--toolbar-bg-sw);
@@ -2530,10 +2579,10 @@ body:not(.is-mobile, .show-ui-btns) .workspace-drawer-vault-name:not(:hover) {
 
 
 /* ----------------------------------------------------------------
-quick hide 
+quick hide
 ----------------------------------------------------------------*/
 
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.is-mobile, .hard-shadow) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 body:not(.hide-sidepanels, .hard-shadow) .workspace-ribbon.side-dock-ribbon.mod-left {
     background-color: var(--background-primary);
 }
@@ -2544,12 +2593,12 @@ body:not(.hide-sidepanels, .hard-shadow) .workspace-ribbon.side-dock-ribbon.mod-
 }
 
 /* hide panels */
-.hide-sidepanels .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+:not(.hard-shadow).hide-sidepanels .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
 .hide-sidepanels .workspace-split.mod-right-split .workspace-leaf-content {
     background: linear-gradient(270deg, var(--background-secondary), var(--background-primary));
 }
 
-.hide-sidepanels .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+:not(.hard-shadow).hide-sidepanels .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
 .hide-sidepanels .workspace-split.mod-left-split .workspace-leaf-content {
     background: linear-gradient(270deg, var(--background-primary), var(--background-secondary));
 }
@@ -2564,7 +2613,7 @@ body:not(.hide-sidepanels, .hard-shadow) .workspace-ribbon.side-dock-ribbon.mod-
 .hide-sidepanels .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container>*:not(:hover),
 .hide-sidepanels .workspace-split.mod-left-split .workspace-leaf-content>*:not(:hover),
 .hide-sidepanels .workspace-split.mod-right-split .workspace-leaf-content>*:not(:hover) {
-    opacity: 0;
+    opacity: 0.2;
     transition: opacity 2s linear;
 }
 
@@ -2608,7 +2657,7 @@ body:not(.hide-sidepanels).hard-shadow .workspace-ribbon.side-dock-ribbon.mod-le
     background: var(--background-secondary);
 }
 
-.hide-sidepanels .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.hard-shadow).hide-sidepanels .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 .hide-sidepanels .workspace>.workspace-split.mod-left-split:hover {
     background: linear-gradient(270deg, var(--background-primary), var(--background-secondary));
 }
@@ -2675,7 +2724,7 @@ body:not(.is-mobile) .workspace-drawer-vault-switcher:hover {
 
 
 /* --------------------------------------------
-resize Handler 
+resize Handler
 -------------------------------------------- */
 
 /* Handle to resize folder tree */
@@ -2901,8 +2950,8 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
 }
 
 
-/* 
-  copy btn 
+/*
+  copy btn
 */
 
 /* phone */
@@ -2915,7 +2964,7 @@ body:not(.is-phone) .setting-item-control input[type='text'] {
 
 
 /*
-  collapse indicators 
+  collapse indicators
 */
 
 /* same indicator for headings and lists */
@@ -3310,8 +3359,8 @@ span.cm-header:is(.cm-formatting-header-4, .cm-formatting-header-5, .cm-formatti
     margin-bottom: 0;
 }
 
-/* 
-  Font models 
+/*
+  Font models
 */
 
 .ftheme-1 .markdown-preview-section :is(h1, h2, h3, h4, h5, h6),
@@ -3508,8 +3557,8 @@ body.fontmod-3:not(.is-phone) .markdown-source-view.mod-cm6 .cm-scroller,
     font-size: revert;
 }
 
-/* 
-  small - large text 
+/*
+  small - large text
   */
 
 .fontmod-1 .callout[data-callout="schrift-g"] .callout-content p,
@@ -4415,14 +4464,6 @@ Misc note boxes
     width: fit-content;
 }
 
-code.language-memo.is-loaded,
-code.language-memo-r.is-loaded,
-code.language-memo-g.is-loaded,
-code.language-memo-b.is-loaded,
-code.language-memo-m.is-loaded {
-    color: darkblue;
-}
-
 /* add empty paragraphs */
 .el-pre pre.language-br,
 code.language-br.is-loaded {
@@ -4685,7 +4726,7 @@ div.bases-cards-cover {
 
 
 /*----------------------------------------------------------------
-  CALLOUTS 
+  CALLOUTS
   ----------------------------------------------------------------*/
 
 .callout:has(img) {
@@ -5030,7 +5071,7 @@ div[data-callout="multi-column"][data-callout-metadata~="gray"] {
 
 
 /*----------------------------------------------------------------
-  Read-more 
+  Read-more
   ----------------------------------------------------------------*/
 
 .callout:is([data-callout="read-more"], [data-callout="weiterlesen"]) {
@@ -5335,7 +5376,7 @@ body:not(.simple-aside):is(.callout[data-callout="seite"][data-callout-metadata~
 
 
 /*----------------------------------------------------------------
-  pict 
+  pict
   ----------------------------------------------------------------*/
 
 /* float works together with width */
@@ -5927,14 +5968,6 @@ ul>li.task-list-item[data-task]:is([data-task=t], [data-task=a], [data-task='>']
     padding-right: 4px;
 }
 
-body:not(.recipes) .theme-light ol {
-    background: #7e756629;
-}
-
-body:not(.recipes) .theme-dark ol {
-    background: rgb(126 117 102 / 30%);
-}
-
 body:not(.show-ls-marker) ol li::marker,
 body:not(.show-ls-marker) :is(.is-phone) ol li::marker {
     list-style-type: decimal;
@@ -6099,7 +6132,7 @@ table {
 }
 
 
-/* --------------------------------------------   
+/* --------------------------------------------
   MOVIE tables
   --------------------------------------------   */
 
@@ -6262,7 +6295,7 @@ body:not(.is-phone) .movies.markdown-preview-view td {
 }
 
 
-/* --------------------------------------------   
+/* --------------------------------------------
   Contact TABLES - (img, full-nm, tel, mail, group relations)
   --------------------------------------------   */
 
@@ -6358,7 +6391,8 @@ body:not(.is-phone) .movies.markdown-preview-view td {
     scale: 1.3;
 }
 
-/* --------------------------------------------   
+
+/* --------------------------------------------
   RECIPE TABLES
   --------------------------------------------   */
 
@@ -6447,7 +6481,7 @@ body:not(.is-phone) .recipes table {
     display: none;
 }
 
-/* --------------------------------------------   
+/* --------------------------------------------
   STYLED TABLES
   --------------------------------------------*/
 
@@ -6562,6 +6596,10 @@ body:not(.edgy-tables) :is(.table-r, .table-g, .table-b, .table-y, .table-o, .ta
   IMAGE PLACING
   ----------------------------------------------------------------*/
 /* tweaking lightbox */
+body:not(.lightbox-off) .lightbox {
+    display: none;
+}
+
 .lightbox .media-wrapper {
     align-items: normal;
 }
@@ -6957,7 +6995,7 @@ img[alt~='frame-s'] {
 
 
 /*----------------------------------------------------------------
-  MERMAID 
+  MERMAID
   ----------------------------------------------------------------*/
 
 .mermaid svg {
@@ -7031,22 +7069,18 @@ body:not(.is-phone) .markdown-preview-view img:not([alt~='a'], [alt="banner-m"])
 }
 
 body:not(.is-phone) .markdown-preview-view img:active {
-    cursor: zoom-out;
-    top: 47%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 3;
-    transform: translateY(-47%);
-    max-width: 100%;
-    text-align: center;
     margin: 0 auto;
     border: none;
-    height: 100%;
-    width: 100%;
-    position: fixed;
     object-fit: contain;
     backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    background: none;
 }
 
 /*----------------------------------------------------------------
@@ -7132,10 +7166,6 @@ span.internal-embed.media-embed.video-embed.is-loaded[alt^="vid-"] {
 
 .popover.hover-popover .markdown-embed-content {
     width: 900px;
-}
-
-div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
-    padding: 0rem;
 }
 
 .popover.hover-popover>.markdown-embed>.markdown-embed-content .markdown-preview-view {
@@ -7233,10 +7263,6 @@ body:not(.show-canvas-ui) .canvas-card-menu:hover,
     color: var(--interactive-accent);
 }
 
-.canvas-control-item {
-    background: transparent;
-}
-
 .canvas-control-item:hover {
     color: var(--light-tone);
     background-color: var(--interactive-accent);
@@ -7291,7 +7317,7 @@ body:not(.show-canvas-ui) .canvas-card-menu:hover,
 
 
 /*----------------------------------------------------------------
-  Graph 
+  Graph
   ----------------------------------------------------------------*/
 
 .theme-dark,
@@ -7420,14 +7446,9 @@ body:not(.show-graph-btns) .graph-controls.is-close:hover {
         text-rendering: optimizeLegibility;
     }
 
-    .print .markdown-rendered pre,       
+    .print .markdown-rendered pre,
     .print .callout {
         page-break-before: avoid;
-    }
-
-    .print sub a,
-    .print sup a {
-        color: var(--dark-tone);
     }
 
     .print li.task-list-item.is-checked,
@@ -7436,6 +7457,12 @@ body:not(.show-graph-btns) .graph-controls.is-close:hover {
         page-break-inside: avoid;
     }
 
+    .print sub a,
+    .print sup a {
+        color: var(--dark-tone);
+    }
+
+    /* footnotes */
     .print .footnotes {
         border-top: 1px solid;
         margin-top: 1em;
@@ -7679,6 +7706,13 @@ body:not(.show-graph-btns) .graph-controls.is-close:hover {
     .print div.callout[data-callout="font-l"].callout .callout-content,
     .print div.callout[data-callout="schrift-g"].callout .callout-content {
         font-size: larger;
+    }
+
+    .print .callout[data-callout="pict"][data-callout-metadata~="l"] :not([data-callout-metadata~="row"]),
+    .print .callout[data-callout="bild"][data-callout-metadata~="l"] :not([data-callout-metadata~="reihe"]),
+    .print .callout[data-callout="pict"][data-callout-metadata~="r"] :not([data-callout-metadata~="row"]),
+    .print .callout[data-callout="bild"][data-callout-metadata~="r"] :not([data-callout-metadata~="reihe"]) {
+        max-width: 50vw;
     }
 
     /* hide aside-hint */
@@ -8085,6 +8119,11 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     flex-direction: row-reverse;
 }
 
+.workspace-leaf-content[data-type="style-settings"] .view-content>.setting-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: initial;
+}
 
 .setting-item.setting-item-heading.style-settings-heading:not([data-level="0"]):hover,
 .style-settings-container .setting-item:hover {
@@ -8316,6 +8355,8 @@ body:not(.show-scrollbars) .modal.mod-settings ::-webkit-scrollbar {
 
 a.style-settings-export,
 a.style-settings-import {
+    display: inline-block;
+    margin-right: 16px;
     color: var(--text-normal);
 }
 
