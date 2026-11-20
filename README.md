@@ -12,7 +12,7 @@
 
 ---
 ### Intro
-My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [**Dune** from 1984](https://www.imdb.com/title/tt0087182/), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio). I still enjoy to watch Dune from 1984, - both Frank and David created an epic, evergreen artwork. 
+My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank_Herbert)'s eponymous novel cycle. His novels were incredibly successful and influenced **Science-fiction** and everything related afterwards, so nobody dared to portray his universe on big screen until [Dune from 1984](https://www.imdb.com/title/tt0087182), directed by [**David Lynch**](https://www.imdb.com/name/nm0000186/bio). I still enjoy to watch Dune from 1984, - both Frank and David created an epic, evergreen artwork. 
 
 > Dune's color palette:
 > - **daylight palette** with warm colors: _wood - sand - rosé_,
@@ -21,7 +21,7 @@ My theme is called after [**Frank Herbert**](https://en.wikipedia.org/wiki/Frank
 
 > [!tip]
 > 
-> If you read further, you'll discover this theme is not just a color play, **Dune adds a ton of new features** too! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-features)
+> If you read further, you'll discover this theme is not just a color play, **Dune adds a ton of new features** too! Check out its [features](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-first-steps)
 
 <br>
 
@@ -47,7 +47,7 @@ Apart from developing Dune, feel free to  _Private Message / Direct Message_ [Jo
 > Support me, if you like what you get with this project :)
 
 **Dune-Silver** (the free version available on this page) is loaded with a lot of features, still it offers less options than **Dune-Gold**.
-Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
+Get [Dune Gold](https://ko-fi.com/s/d76641798f) now! This includes:
 - 70 pages in depth, user-friendly PDF-manual,
 - 2 add-ons (Dune Marmaid, Dune Plugin-support)
 - Dune-Gold, the theme.
@@ -62,7 +62,7 @@ Get [Dune Gold](https://buymeacoffee.com/jopp.gh) now! This includes:
 > [!important]
 > 1. **to display "Dune" correctly** and to change all preferences added by my theme, install the community plugin [**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) by mgMeyers
 > 2. Dune offers a **clean, clutter-free experience**. Open `Settings>Style Settings>Dune>Show` if you want re-enable buttons / tabs and restore default looks of Obsidian. 
-> 3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See the list of tweaked plugins for Dune [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main#-plugins)
+> 3. download Dune's **Mermaid theme** and **tweaks for supported community plugins** from [here](https://github.com/Jopp-gh/Obsidian-Dune84/tree/main/snippets). See a list of supported plugins [here](https://github.com/Jopp-gh/Obsidian-Dune84#-plugins)
 > 4. I highly reccomend to download Dune's [cssclass cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet%20cssclasses%20Dune.md#cheatsheet---cssclasses) and Dune's [callout-fences-tags cheatsheet](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/cheatsheet-Callouts%2C%20Fences%2C%20Tags.md#callouts). Also take a look at Dune's quick [Troubleshooting](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/Wiki/Troubleshooting.md#troubleshooting) 
 
 <br>
@@ -110,7 +110,7 @@ _MOBILE_
 ### 📦 Resources
 
 **Dune** has been developed with care over an extended period of time!
-Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font), [LiberationSerifRegular](https://www.dafont.com/liberation-serif.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/folder-icons-v2.css) added by this theme are licensed under free software licenses, borrowed and reworked code comes from following sources:
+Fonts [Louis George Cafe](https://www.dafont.com/louis-george-caf.font), [Manuskript Gothisch](https://www.dafont.com/manuskript-gotisch.font), [LiberationSerifRegular](https://www.dafont.com/liberation-serif.font) and [icons](https://boxicons.com/) in [folder-icons.css](https://github.com/Jopp-gh/Obsidian-Dune84/blob/main/snippets/Dune-foldericons.css) added by this theme are licensed under free software licenses, borrowed and reworked code comes from following sources:
 
 - **Braweria** - [Spectrum](https://github.com/nuttingd/spectrum-obsidian-theme)
 - **Slrvb** - [In-the-Shadows](https://github.com/SlRvb/Obsidian--ITS-Theme)
@@ -126,7 +126,7 @@ inspiration from following sources:
 
 ### 👔 Collaboration
 **thanks for your interest in my theme**. Right now I'm looking for people interested to :
-- rework my current documentation, to make **Dune** even more accessible. Send me a message in private on [Jopp](https://forum.obsidian.md/t/theme-dune/60433), thanks!
+- rework my current documentation, to make **Dune** even more accessible. Send me a message on the support page of [forum.obsidian.md](https://forum.obsidian.md/t/theme-dune/60433), thanks!
 - Feel free to contribute with git pulls for tablets and other optimisations.
 - If you've any ideas relevant to **Dune** or want to report bugs, then feel free to open a ticked on top, under [issues](https://github.com/Jopp-gh/Obsidian-Dune84/issues)
 
